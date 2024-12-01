@@ -18,6 +18,7 @@ export function FilePreview() {
     const path = activeFile.path.startsWith("@/")
       ? activeFile.path.replace("@", "src")
       : `src/blocks/${block}/${activeFile.path}`;
+    console.log("path :", path);
     getFileContent(path).then((code) => setCode(code));
   }, [activeFile, block]);
 
