@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeToggle } from "@/components/app-sidebar/theme-toggle";
 import { CSPostHogProvider } from "@/providers/posthog-provider";
 import { WebSite, WithContext } from "schema-dts";
+import NextTopLoader from "nextjs-toploader";
 
 const dmSans = DM_Sans({
   weight: ["400", "500", "600", "700", "800", "900"],
@@ -100,6 +101,7 @@ export default function RootLayout({
         <CSPostHogProvider>
           <ThemeProvider attribute="class">
             <TooltipProvider>
+              <NextTopLoader />
               {children}
               <div className="fixed bottom-6 right-6">
                 <ThemeToggle />
