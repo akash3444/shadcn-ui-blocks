@@ -15,7 +15,7 @@ import { Label } from "@/components/ui/label";
 
 export function CardsCreateAccount() {
   return (
-    <Card>
+    <Card className="shadow-none">
       <CardHeader className="space-y-1">
         <CardTitle className="text-2xl">Create an account</CardTitle>
         <CardDescription>
@@ -45,11 +45,16 @@ export function CardsCreateAccount() {
         </div>
         <div className="grid gap-2">
           <Label htmlFor="email">Email</Label>
-          <Input id="email" type="email" placeholder="m@example.com" />
+          <Input
+            id="email"
+            type="email"
+            placeholder="m@example.com"
+            className="bg-background"
+          />
         </div>
         <div className="grid gap-2">
           <Label htmlFor="password">Password</Label>
-          <Input id="password" type="password" />
+          <Input id="password" type="password" className="bg-background" />
         </div>
       </CardContent>
       <CardFooter>

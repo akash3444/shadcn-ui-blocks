@@ -72,7 +72,7 @@ export function CardsActivityGoal() {
   }
 
   return (
-    <Card>
+    <Card className="shadow-none">
       <CardHeader className="pb-4">
         <CardTitle>Move Goal</CardTitle>
         <CardDescription>Set your daily activity goal.</CardDescription>

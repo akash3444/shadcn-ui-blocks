@@ -23,7 +23,7 @@ import {
 
 export function CardsPaymentMethod() {
   return (
-    <Card>
+    <Card className="shadow-none">
       <CardHeader>
         <CardTitle>Payment Method</CardTitle>
         <CardDescription>
@@ -92,21 +92,25 @@ export function CardsPaymentMethod() {
         </RadioGroup>
         <div className="grid gap-2">
           <Label htmlFor="name">Name</Label>
-          <Input id="name" placeholder="First Last" />
+          <Input id="name" placeholder="First Last" className="bg-background" />
         </div>
         <div className="grid gap-2">
           <Label htmlFor="city">City</Label>
-          <Input id="city" placeholder="" />
+          <Input id="city" placeholder="" className="bg-background" />
         </div>
         <div className="grid gap-2">
           <Label htmlFor="number">Card number</Label>
-          <Input id="number" placeholder="" />
+          <Input id="number" placeholder="" className="bg-background" />
         </div>
         <div className="grid grid-cols-3 gap-4">
           <div className="grid gap-2">
             <Label htmlFor="month">Expires</Label>
             <Select>
-              <SelectTrigger id="month" aria-label="Month">
+              <SelectTrigger
+                id="month"
+                aria-label="Month"
+                className="bg-background"
+              >
                 <SelectValue placeholder="Month" />
               </SelectTrigger>
               <SelectContent>
@@ -128,7 +132,11 @@ export function CardsPaymentMethod() {
           <div className="grid gap-2">
             <Label htmlFor="year">Year</Label>
             <Select>
-              <SelectTrigger id="year" aria-label="Year">
+              <SelectTrigger
+                id="year"
+                aria-label="Year"
+                className="bg-background"
+              >
                 <SelectValue placeholder="Year" />
               </SelectTrigger>
               <SelectContent>
@@ -142,7 +150,7 @@ export function CardsPaymentMethod() {
           </div>
           <div className="grid gap-2">
             <Label htmlFor="cvc">CVC</Label>
-            <Input id="cvc" placeholder="CVC" />
+            <Input id="cvc" placeholder="CVC" className="bg-background" />
           </div>
         </div>
       </CardContent>

@@ -22,7 +22,7 @@ import { Separator } from "@/components/ui/separator";
 
 export function CardsShare() {
   return (
-    <Card>
+    <Card className="shadow-none">
       <CardHeader className="pb-3">
         <CardTitle>Share this document</CardTitle>
         <CardDescription>
@@ -38,6 +38,7 @@ export function CardsShare() {
             id="link"
             value="http://example.com/link/to/document"
             readOnly
+            className="bg-background"
           />
           <Button className="shrink-0">Copy Link</Button>
         </div>
@@ -59,7 +60,10 @@ export function CardsShare() {
                 </div>
               </div>
               <Select defaultValue="edit">
-                <SelectTrigger className="ml-auto w-[110px]" aria-label="Edit">
+                <SelectTrigger
+                  className="ml-auto w-[110px] bg-background"
+                  aria-label="Edit"
+                >
                   <SelectValue placeholder="Select" />
                 </SelectTrigger>
                 <SelectContent>
@@ -82,7 +86,10 @@ export function CardsShare() {
                 </div>
               </div>
               <Select defaultValue="view">
-                <SelectTrigger className="ml-auto w-[110px]" aria-label="Edit">
+                <SelectTrigger
+                  className="ml-auto w-[110px] bg-background"
+                  aria-label="Edit"
+                >
                   <SelectValue placeholder="Select" />
                 </SelectTrigger>
                 <SelectContent>
@@ -105,7 +112,10 @@ export function CardsShare() {
                 </div>
               </div>
               <Select defaultValue="view">
-                <SelectTrigger className="ml-auto w-[110px]" aria-label="Edit">
+                <SelectTrigger
+                  className="ml-auto w-[110px] bg-background"
+                  aria-label="Edit"
+                >
                   <SelectValue placeholder="Select" />
                 </SelectTrigger>
                 <SelectContent>

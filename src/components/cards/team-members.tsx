@@ -27,7 +27,7 @@ import {
 
 export function CardsTeamMembers() {
   return (
-    <Card>
+    <Card className="shadow-none">
       <CardHeader>
         <CardTitle>Team Members</CardTitle>
         <CardDescription>

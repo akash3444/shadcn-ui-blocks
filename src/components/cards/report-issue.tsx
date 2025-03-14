@@ -26,7 +26,7 @@ export function CardsReportIssue() {
   const id = React.useId();
 
   return (
-    <Card>
+    <Card className="shadow-none">
       <CardHeader>
         <CardTitle>Report an issue</CardTitle>
         <CardDescription>
@@ -38,7 +38,11 @@ export function CardsReportIssue() {
           <div className="grid gap-2">
             <Label htmlFor={`area-${id}`}>Area</Label>
             <Select defaultValue="billing">
-              <SelectTrigger id={`area-${id}`} aria-label="Area">
+              <SelectTrigger
+                id={`area-${id}`}
+                aria-label="Area"
+                className="bg-background"
+              >
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
               <SelectContent>
@@ -55,7 +59,7 @@ export function CardsReportIssue() {
             <Select defaultValue="2">
               <SelectTrigger
                 id={`security-level-${id}`}
-                className="w-full truncate whitespace-nowrap overflow-hidden"
+                className="w-full truncate whitespace-nowrap overflow-hidden bg-background"
                 aria-label="Security Level"
               >
                 <SelectValue placeholder="Select level" />
@@ -71,13 +75,18 @@ export function CardsReportIssue() {
         </div>
         <div className="grid gap-2">
           <Label htmlFor={`subject-${id}`}>Subject</Label>
-          <Input id={`subject-${id}`} placeholder="I need help with..." />
+          <Input
+            id={`subject-${id}`}
+            placeholder="I need help with..."
+            className="bg-background"
+          />
         </div>
         <div className="grid gap-2">
           <Label htmlFor={`description-${id}`}>Description</Label>
           <Textarea
             id={`description-${id}`}
             placeholder="Please include all information relevant to your issue."
+            className="bg-background"
           />
         </div>
       </CardContent>

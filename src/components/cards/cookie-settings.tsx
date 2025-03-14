@@ -14,7 +14,7 @@ import { Switch } from "@/components/ui/switch";
 
 export function CardsCookieSettings() {
   return (
-    <Card>
+    <Card className="shadow-none">
       <CardHeader>
         <CardTitle>Cookie Settings</CardTitle>
         <CardDescription>Manage your cookie settings here.</CardDescription>

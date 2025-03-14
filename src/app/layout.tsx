@@ -100,7 +100,7 @@ export default function RootLayout({
         />
 
         <CSPostHogProvider>
-          <ThemeProvider attribute="class">
+          <ThemeProvider attribute="class" disableTransitionOnChange>
             <TooltipProvider>
               {children}
               <div className="fixed bottom-6 right-6">

@@ -197,7 +197,7 @@ export function CardsDataTable() {
   });
 
   return (
-    <Card>
+    <Card className="shadow-none">
       <CardHeader>
         <CardTitle className="text-xl">Payments</CardTitle>
         <CardDescription>Manage your payments.</CardDescription>

@@ -93,7 +93,7 @@ export function CardsChat() {
 
   return (
     <>
-      <Card>
+      <Card className="shadow-none">
         <CardHeader className="flex flex-row items-center">
           <div className="flex items-center space-x-4">
             <Avatar>
@@ -158,7 +158,7 @@ export function CardsChat() {
             <Input
               id="message"
               placeholder="Type your message..."
-              className="flex-1"
+              className="flex-1 bg-background"
               autoComplete="off"
               value={input}
               onChange={(event) => setInput(event.target.value)}

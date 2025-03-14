@@ -60,7 +60,7 @@ const chartConfig = {
 
 export function CardsMetric() {
   return (
-    <Card>
+    <Card className="shadow-none">
       <CardHeader>
         <CardTitle>Exercise Minutes</CardTitle>
         <CardDescription>
