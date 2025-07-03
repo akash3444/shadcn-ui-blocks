@@ -27,7 +27,7 @@ export function AppSidebar() {
         </Link>
         {/* <SidebarTrigger className="group-data-[state=collapsed]:absolute group-data-[state=collapsed]:left-[calc(100%+0.2rem)]" /> */}
       </SidebarHeader>
-      <SidebarContent className="pb-60">
+      <SidebarContent>
         {groups.map(({ label, items }) => (
           <SidebarGroup key={label}>
             <SidebarGroupLabel>{label}</SidebarGroupLabel>
@@ -40,8 +40,8 @@ export function AppSidebar() {
             </SidebarGroupContent>
           </SidebarGroup>
         ))}
+        <CarbonAd className="sticky bottom-0" id="carbon-ad-sidebar" />
       </SidebarContent>
-      <CarbonAd />
     </Sidebar>
   );
 }
