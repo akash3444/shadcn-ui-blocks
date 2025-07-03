@@ -6,10 +6,10 @@ import {
   SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
-  SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { groups } from "@/description/app-sidebar";
 import Link from "next/link";
+import CarbonAd from "../carbon-ads";
 import { Logo } from "../logo";
 import AppSidebarMenuItem from "./sidebar-menu-item";
 
@@ -25,9 +25,9 @@ export function AppSidebar() {
             </span>
           </div>
         </Link>
-        <SidebarTrigger className="group-data-[state=collapsed]:absolute group-data-[state=collapsed]:left-[calc(100%+0.2rem)]" />
+        {/* <SidebarTrigger className="group-data-[state=collapsed]:absolute group-data-[state=collapsed]:left-[calc(100%+0.2rem)]" /> */}
       </SidebarHeader>
-      <SidebarContent>
+      <SidebarContent className="pb-60">
         {groups.map(({ label, items }) => (
           <SidebarGroup key={label}>
             <SidebarGroupLabel>{label}</SidebarGroupLabel>
@@ -41,6 +41,7 @@ export function AppSidebar() {
           </SidebarGroup>
         ))}
       </SidebarContent>
+      <CarbonAd />
     </Sidebar>
   );
 }
