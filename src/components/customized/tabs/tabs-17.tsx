@@ -23,7 +23,7 @@ const VerticalBorderedTabs = () => {
     <Tabs
       defaultValue={tabs[0].value}
       orientation="vertical"
-      className="w-full flex items-start justify-center gap-2"
+      className="w-full flex flex-row items-start justify-center gap-2"
     >
       <TabsList className="grid grid-cols-1 h-auto w-fit p-0 divide-y border shrink-0">
         {tabs.map((item) => (

@@ -29,7 +29,7 @@ export default function VerticalSeparatedTabsDemo() {
     <Tabs
       orientation="vertical"
       defaultValue={tabs[0].value}
-      className="max-w-md w-full flex items-start gap-4 justify-center"
+      className="max-w-md w-full flex flex-row items-start gap-4 justify-center"
     >
       <TabsList className="shrink-0 grid grid-cols-1 gap-1 p-0 bg-background">
         {tabs.map((tab) => (
@@ -45,7 +45,11 @@ export default function VerticalSeparatedTabsDemo() {
 
       <div className="h-40 flex items-center justify-center max-w-xs w-full border rounded-md font-medium text-muted-foreground">
         {tabs.map((tab) => (
-          <TabsContent key={tab.value} value={tab.value}>
+          <TabsContent
+            key={tab.value}
+            value={tab.value}
+            className="flex items-center justify-center h-full"
+          >
             {tab.name} Content
           </TabsContent>
         ))}
