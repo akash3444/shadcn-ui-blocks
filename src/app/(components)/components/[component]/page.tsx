@@ -7,6 +7,8 @@ import { generateOgImageUrl } from "@/lib/og";
 import { absoluteUrl, cn } from "@/lib/utils";
 import { notFound } from "next/navigation";
 
+export const dynamicParams = false;
+
 export const generateStaticParams = async () => {
   return Object.keys(componentsMap).map((component) => ({
     component,
