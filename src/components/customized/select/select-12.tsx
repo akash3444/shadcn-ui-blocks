@@ -61,11 +61,11 @@ export default function FancyMultiSelect() {
 
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLInputElement>) => {
-      if (e.key === "Backspace" && selected.length > 0) {
+      if (e.key === "Backspace" && inputValue === '' && selected.length > 0) {
         setSelected((prev) => prev.slice(0, -1));
       }
     },
-    [selected]
+    [selected, inputValue]
   );
 
   const filteredCountries = useMemo(
