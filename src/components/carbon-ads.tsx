@@ -18,7 +18,7 @@ export default function CarbonAd({
     reference.current.innerHTML = "";
     const s = document.createElement("script");
     s.id = "_carbonads_js";
-    s.src = `//cdn.carbonads.com/carbon.js?serve=CW7ILKQL&placement=wwwshadcnui-blockscom&format=cover`;
+    s.src = `//cdn.carbonads.com/carbon.js?serve=CW7ILKQL&placement=wwwshadcnui-blockscom`;
     reference.current.appendChild(s);
 
     if (mounted.current) {

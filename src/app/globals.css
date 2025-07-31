@@ -138,24 +138,15 @@ html.dark .shiki span {
 }
 
 /* Components page sidebar carbon ad */
-#carbon-ad-sidebar #carbonads {
-  @apply hidden md:block group-data-[state=collapsed]:hidden z-20 w-fit;
+#carbonads {
+  @apply hidden md:block group-data-[state=collapsed]:hidden z-20 w-fit bg-neutral-50 border-t py-4 text-center;
 }
-#carbon-ad-sidebar #carbon-responsive {
-  @apply !bg-neutral-50 !border-t py-2;
+#carbonads .carbon-wrap img {
+  @apply flex-col w-fit max-w-80 border-none rounded-lg mx-auto mb-4;
 }
-#carbon-ad-sidebar .carbon-responsive-wrap {
-  @apply flex-col w-fit max-w-60 !border-none rounded-lg !pb-1.5;
+#carbonads .carbon-text {
+  @apply basis-auto text-center text-xs font-medium leading-tight inline-block;
 }
-#carbon-ad-sidebar #carbon-responsive .carbon-img {
-  @apply !flex-auto;
-}
-#carbon-ad-sidebar #carbon-responsive .carbon-img img {
-  @apply mx-auto rounded-md;
-}
-#carbon-ad-sidebar #carbon-responsive .carbon-text {
-  @apply !basis-auto !text-center !text-xs font-medium;
-}
-#carbon-ad-sidebar #carbon-responsive .carbon-poweredby {
-  @apply !text-center mb-1 uppercase font-medium;
+#carbonads .carbon-poweredby {
+  @apply text-center mt-2 uppercase font-medium text-xs block text-muted-foreground;
 }
