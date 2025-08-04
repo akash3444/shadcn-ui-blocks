@@ -12,6 +12,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import registry from "../../../../registry.json";
 import BlockDetails from "@/components/blocks/block-details";
+import { ProBanner } from "@/components/layout/pro-banner";
 
 export const generateMetadata = async (props: {
   params: Promise<{ block: string }>;
@@ -45,6 +46,7 @@ const BlockPage = async (props: { params: Promise<{ block: string }> }) => {
 
   return (
     <BlockProvider>
+      <ProBanner />
       <Navbar />
       <div className="max-w-screen-2xl mx-auto py-8 px-4">
         <MainHeading>{title}</MainHeading>

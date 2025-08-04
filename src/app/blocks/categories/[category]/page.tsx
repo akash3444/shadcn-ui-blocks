@@ -2,6 +2,7 @@ import { blockCategories, categorizedBlocks } from "@/blocks";
 import BlockCategoryJsonLd from "@/components/blocks/category/block-category-json-ld";
 import BlockPreviewList from "@/components/blocks/category/block-preview-list";
 import { Navbar } from "@/components/layout/navbar";
+import { ProBanner } from "@/components/layout/pro-banner";
 import { constructMetadata } from "@/lib/metadata";
 import { generateOgImageUrl } from "@/lib/og";
 import { absoluteUrl, capitalize } from "@/lib/utils";
@@ -35,11 +36,9 @@ export const generateStaticParams = async () => {
   }));
 };
 
-export const generateMetadata = async (
-  props: {
-    params: Promise<{ category: string }>;
-  }
-): Promise<Metadata> => {
+export const generateMetadata = async (props: {
+  params: Promise<{ category: string }>;
+}): Promise<Metadata> => {
   const params = await props.params;
   const { category } = params;
   const blocks = categorizedBlocks[category];
@@ -79,18 +78,17 @@ export const generateMetadata = async (
   });
 };
 
-const BlockCategoryPage = async (
-  props: {
-    params: Promise<{ category: string }>;
-    searchParams: Promise<{ columns: string; q: string }>;
-  }
-) => {
+const BlockCategoryPage = async (props: {
+  params: Promise<{ category: string }>;
+  searchParams: Promise<{ columns: string; q: string }>;
+}) => {
   const searchParams = await props.searchParams;
   const params = await props.params;
   const { category } = params;
 
   return (
     <>
+      <ProBanner />
       <Navbar />
       <div className="max-w-screen-2xl mx-auto py-12 sm:py-16">
         <BlockPreviewList category={category} {...searchParams} />

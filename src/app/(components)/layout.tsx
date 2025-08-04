@@ -1,5 +1,6 @@
 import { AppSidebar } from "@/components/app-sidebar";
 import { Navbar } from "@/components/layout/navbar";
+import { ProBanner } from "@/components/layout/pro-banner";
 import { SidebarProvider } from "@/components/ui/sidebar";
 
 export default function RootLayout({
@@ -14,7 +15,10 @@ export default function RootLayout({
       </div>
       <SidebarProvider>
         <AppSidebar />
-        <main className="w-full p-10">{children}</main>
+        <main className="w-full">
+          <ProBanner />
+          <div className="w-full p-10">{children}</div>
+        </main>
       </SidebarProvider>
     </div>
   );
