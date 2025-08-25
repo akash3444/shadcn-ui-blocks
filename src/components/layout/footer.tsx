@@ -29,6 +29,20 @@ const footerSections = [
       href: `/blocks/categories/${name}`,
     })),
   },
+  {
+    className: "col-span-full xl:col-span-2",
+    title: "Products",
+    links: [
+      {
+        title: "Shadcn UI Blocks Pro",
+        href: "https://pro.shadcnui-blocks.com/",
+      },
+      {
+        title: "basecn",
+        href: "https://basecn.dev/",
+      },
+    ],
+  },
 ];
 
 const Footer = () => {
@@ -36,7 +50,7 @@ const Footer = () => {
     <footer className="bg-muted/50 border-t">
       <div className="max-w-screen-xl mx-auto">
         <div className="py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-x-8 gap-y-10 px-6 xl:px-0">
-          <div className="col-span-full xl:col-span-2">
+          <div className="col-span-full lg:col-span-2">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
               <Logo />
@@ -49,8 +63,8 @@ const Footer = () => {
             </p>
           </div>
 
-          {footerSections.map(({ title, links }, index) => (
-            <div key={index}>
+          {footerSections.map(({ title, links, className }, index) => (
+            <div key={index} className={className}>
               <h6 className="font-semibold">{title}</h6>
               <ul className="mt-6 space-y-4">
                 {links.map(({ title, href }) => (
