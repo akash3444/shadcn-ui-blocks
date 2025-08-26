@@ -52,7 +52,7 @@ const changelog = [
 
 export default function Timeline() {
   return (
-    <div className="max-w-screen-sm md:mx-auto py-12 md:py-20 px-6">
+    <div className="max-w-(--breakpoint-sm) md:mx-auto py-12 md:py-20 px-6">
       <div className="relative">
         {/* Timeline line */}
         {/* <div className="absolute left-0 top-3 bottom-0 border-l-2" /> */}

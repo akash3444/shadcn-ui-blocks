@@ -67,7 +67,7 @@ export default function InputDemo() {
               <div
                 {...getRootProps()}
                 className={cn(
-                  "border border-dashed flex items-center justify-center aspect-square rounded-md focus:outline-none focus:border-primary",
+                  "border border-dashed flex items-center justify-center aspect-square rounded-md focus:outline-hidden focus:border-primary",
                   {
                     "border-primary bg-secondary": isDragActive && isDragAccept,
                     "border-destructive bg-destructive/20":

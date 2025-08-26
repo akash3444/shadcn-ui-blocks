@@ -30,7 +30,7 @@ export const Hero = () => {
           >
             <Link href="/blocks">
               Explore Blocks{" "}
-              <Shapes className="!h-5 !w-5 group-hover:-rotate-12 transition-transform" />
+              <Shapes className="h-5! w-5! group-hover:-rotate-12 transition-transform" />
             </Link>
           </Button>
           <Button
@@ -41,7 +41,7 @@ export const Hero = () => {
           >
             <Link href="/components/accordion">
               View components
-              <PuzzleIcon className="!h-5 !w-5 group-hover:translate-x-1 transition-transform" />
+              <PuzzleIcon className="h-5! w-5! group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
         </div>

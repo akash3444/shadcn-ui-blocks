@@ -11,7 +11,7 @@ const Contact01Page = () => (
       <p className="mt-4 text-base sm:text-lg">
         Our friendly team is always here to chat.
       </p>
-      <div className="max-w-screen-xl mx-auto py-24 grid md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 px-6 md:px-0">
+      <div className="max-w-(--breakpoint-xl) mx-auto py-24 grid md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 px-6 md:px-0">
         <div className="text-center flex flex-col items-center">
           <div className="h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full">
             <MailIcon />

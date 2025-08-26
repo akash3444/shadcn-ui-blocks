@@ -64,7 +64,7 @@ const teamMembers = [
 
 const Team04Page = () => {
   return (
-    <div className="flex flex-col justify-center py-8 sm:py-16 px-6 lg:px-8 max-w-screen-xl mx-auto gap-16">
+    <div className="flex flex-col justify-center py-8 sm:py-16 px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto gap-16">
       <div className="text-center max-w-2xl mx-auto">
         <b className="text-center text-muted-foreground text-base font-semibold">
           We&apos;re hiring!

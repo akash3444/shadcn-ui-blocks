@@ -11,7 +11,7 @@ import { ChevronDown, Plus, Star, X } from "lucide-react";
 
 const SplitButton = () => {
   return (
-    <div className="[&>*]:rounded-none [&>button:first-child]:rounded-l-md [&>button:last-child]:rounded-r-md divide-x divide-border/40">
+    <div className="*:rounded-none [&>button:first-child]:rounded-l-md [&>button:last-child]:rounded-r-md divide-x divide-border/40">
       <Button>
         <Star /> Star
       </Button>

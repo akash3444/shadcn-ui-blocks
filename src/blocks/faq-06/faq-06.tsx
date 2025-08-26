@@ -49,15 +49,15 @@ const faq = [
 const FAQ06 = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-12">
-      <div className="max-w-screen-lg">
-        <h2 className="text-4xl md:text-5xl !leading-[1.15] font-bold tracking-tighter text-center">
+      <div className="max-w-(--breakpoint-lg)">
+        <h2 className="text-4xl md:text-5xl leading-[1.15]! font-bold tracking-tighter text-center">
           Frequently Asked Questions
         </h2>
         <p className="mt-3 text-lg text-center text-muted-foreground">
           Quick answers to common questions about our products and services.
         </p>
 
-        <div className="mt-12 grid md:grid-cols-2 rounded-xl overflow-hidden outline outline-[1px] outline-background outline-offset-[-1px]">
+        <div className="mt-12 grid md:grid-cols-2 rounded-xl overflow-hidden outline-solid outline-[1px] outline-background -outline-offset-1">
           {faq.map(({ question, answer, icon: Icon }) => (
             <div key={question} className="border p-6 -mt-px -ml-px">
               <div className="h-10 w-10 flex items-center justify-center rounded-full bg-accent">

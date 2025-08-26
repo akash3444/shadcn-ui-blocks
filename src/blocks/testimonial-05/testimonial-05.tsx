@@ -64,12 +64,12 @@ const Testimonial05 = () => (
       <h2 className="mb-8 sm:mb-14 text-5xl md:text-6xl font-bold text-center tracking-tight">
         Testimonials
       </h2>
-      <div className="w-full max-w-screen-xl mx-auto">
+      <div className="w-full max-w-(--breakpoint-xl) mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 overflow-hidden border-r border-background">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="flex flex-col outline outline-1 outline-border px-6 py-8"
+              className="flex flex-col outline-solid outline-1 outline-border px-6 py-8"
             >
               <div className="flex items-center justify-center gap-2">
                 <StarIcon className="w-6 h-6 fill-yellow-500 stroke-yellow-500" />

@@ -3,7 +3,7 @@ import React from "react";
 const Stats02Page = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-screen-xl mx-auto w-full py-12 px-6 xl:px-0">
+      <div className="max-w-(--breakpoint-xl) mx-auto w-full py-12 px-6 xl:px-0">
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
           The perfect starting point for any project
         </h2>

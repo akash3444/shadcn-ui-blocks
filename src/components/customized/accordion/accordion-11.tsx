@@ -44,7 +44,7 @@ export default function AccordionMediaContentDemo() {
           </AccordionTrigger>
           <AccordionContent>
             {content}
-            <div className="mt-4 w-full aspect-[18/9] bg-muted rounded-xl" />
+            <div className="mt-4 w-full aspect-18/9 bg-muted rounded-xl" />
           </AccordionContent>
         </AccordionItem>
       ))}

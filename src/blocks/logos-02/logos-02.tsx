@@ -17,7 +17,7 @@ const Logos02Page = () => {
           More than 2.2 million companies worldwide already trust us
         </p>
 
-        <div className="mt-20 flex flex-wrap items-center justify-center gap-x-14 gap-y-10 max-w-screen-lg">
+        <div className="mt-20 flex flex-wrap items-center justify-center gap-x-14 gap-y-10 max-w-(--breakpoint-lg)">
           <Logo01 />
           <Logo02 />
           <Logo03 />

@@ -34,7 +34,7 @@ export default function NavigationMenuWithIcon() {
               asChild
             >
               <Link href={item.href}>
-                <item.icon className="!h-6 !w-6" />
+                <item.icon className="h-6! w-6!" />
               </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>

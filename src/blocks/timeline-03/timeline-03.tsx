@@ -33,7 +33,7 @@ const experiences = [
 
 export default function Timeline() {
   return (
-    <div className="max-w-screen-sm mx-auto py-12 md:py-20 px-6">
+    <div className="max-w-(--breakpoint-sm) mx-auto py-12 md:py-20 px-6">
       <div className="relative ml-3">
         {/* Timeline line */}
         <div className="absolute left-0 inset-y-0 border-l-2" />
@@ -52,7 +52,7 @@ export default function Timeline() {
               {/* Content */}
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 h-9 w-9 bg-accent rounded-full flex items-center justify-center">
+                  <div className="shrink-0 h-9 w-9 bg-accent rounded-full flex items-center justify-center">
                     <Building2 className="h-5 w-5 text-muted-foreground" />
                   </div>
                   <span className="text-base sm:text-lg font-semibold">

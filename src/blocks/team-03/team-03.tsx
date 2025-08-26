@@ -50,7 +50,7 @@ const teamMembers = [
 
 const Team03Page = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-center py-8 sm:py-16 px-6 lg:px-8 max-w-screen-xl mx-auto gap-14">
+    <div className="flex flex-col lg:flex-row justify-center py-8 sm:py-16 px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto gap-14">
       <div className="sm:max-w-sm lg:max-w-xs">
         <b className="text-muted-foreground font-semibold">Our team</b>
         <h2 className="mt-3 text-3xl md:text-4xl font-bold tracking-tight">

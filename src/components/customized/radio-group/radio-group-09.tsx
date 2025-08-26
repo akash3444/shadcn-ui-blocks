@@ -10,7 +10,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 const RadioCardsDemo = () => {
   return (
-    <Card className="max-w-xs shadow-sm">
+    <Card className="max-w-xs shadow-xs">
       <CardHeader>
         <CardTitle>Plan Options</CardTitle>
         <CardDescription>

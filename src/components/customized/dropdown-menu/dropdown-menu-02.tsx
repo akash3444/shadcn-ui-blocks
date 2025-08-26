@@ -12,7 +12,7 @@ import { LogOut, Settings, User } from "lucide-react";
 export default function DropdownMenuWithIcon() {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="focus:outline-none focus:ring-[2px] focus:ring-offset-2 focus:ring-primary rounded-full">
+      <DropdownMenuTrigger className="focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-primary rounded-full">
         <Avatar>
           <AvatarFallback>AB</AvatarFallback>
         </Avatar>

@@ -24,7 +24,7 @@ export default function PaginationWithPrimaryButton() {
             href="#"
             isActive
             className={cn(
-              "!shadow-none hover:!text-primary-foreground",
+              "shadow-none! hover:text-primary-foreground!",
               buttonVariants({
                 variant: "default",
                 size: "icon",

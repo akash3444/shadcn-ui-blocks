@@ -29,7 +29,7 @@ export default function AlertWithActionsDemo() {
           <Button
             size="icon"
             variant="ghost"
-            className="!pl-0"
+            className="pl-0!"
             onClick={hideAlert}
           >
             <XIcon className="h-5 w-5" />

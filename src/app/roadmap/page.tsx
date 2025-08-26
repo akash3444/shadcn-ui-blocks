@@ -34,7 +34,7 @@ const RoadmapPage = () => {
       <div>
         <Navbar />
 
-        <div className="max-w-screen-xl mx-auto pb-16 px-6 xl:px-0">
+        <div className="max-w-(--breakpoint-xl) mx-auto pb-16 px-6 xl:px-0">
           {/* <h1 className="text-4xl md:text-5xl font-bold text-center">
             Shadcn UI Blocks Roadmap
           </h1> */}

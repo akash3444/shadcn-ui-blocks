@@ -40,7 +40,7 @@ const VerticalBorderedTabs = () => {
         ))}
       </TabsList>
 
-      <div className="grow w-full max-w-[12rem] aspect-square flex items-center justify-center border rounded-lg p-6">
+      <div className="grow w-full max-w-48 aspect-square flex items-center justify-center border rounded-lg p-6">
         {tabs.map((item) => (
           <TabsContent key={item.value} value={item.value}>
             <div className="mx-auto h-12 w-12 flex items-center justify-center rounded-full bg-muted">

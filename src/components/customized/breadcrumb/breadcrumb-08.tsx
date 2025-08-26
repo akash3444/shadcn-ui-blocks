@@ -11,7 +11,7 @@ import { ChevronsRight, Component, Home, Route } from "lucide-react";
 const BreadcrumbsSteps = () => {
   return (
     <Breadcrumb>
-      <BreadcrumbList className="!gap-5">
+      <BreadcrumbList className="gap-5!">
         <BreadcrumbItem>
           <BreadcrumbLink href="#">
             <div className="flex flex-col items-center gap-1">

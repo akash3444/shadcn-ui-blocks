@@ -115,7 +115,7 @@ export default function StickyColumnsTableDemo() {
     <div className="grid w-full [&>div]:max-h-[300px] [&>div]:border [&>div]:rounded">
       <Table>
         <TableHeader>
-          <TableRow className="[&>*]:whitespace-nowrap hover:bg-background">
+          <TableRow className="*:whitespace-nowrap hover:bg-background">
             <TableHead className="pl-4 sticky left-0 bg-background min-w-[50px]">
               ID
             </TableHead>
@@ -134,7 +134,7 @@ export default function StickyColumnsTableDemo() {
           {products.map((product) => (
             <TableRow
               key={product.id}
-              className="group odd:bg-muted [&>td]:whitespace-nowrap [&>td]:hover:bg-blue-100 dark:[&>td]:hover:bg-blue-400"
+              className="group odd:bg-muted [&>td]:whitespace-nowrap hover:[&>td]:bg-blue-100 dark:hover:[&>td]:bg-blue-400"
             >
               <TableCell className="pl-4 sticky left-0 bg-background group-odd:bg-muted group-hover:bg-blue-100">
                 {product.id}

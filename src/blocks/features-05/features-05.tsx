@@ -50,8 +50,8 @@ const features = [
 const Features05Page = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-screen-lg w-full py-10 px-6">
-        <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight sm:max-w-xl sm:text-center sm:mx-auto">
+      <div className="max-w-(--breakpoint-lg) w-full py-10 px-6">
+        <h2 className="text-4xl md:text-5xl md:leading-14 font-bold tracking-tight sm:max-w-xl sm:text-center sm:mx-auto">
           Boost Your Strategy with Smart Features
         </h2>
         <div className="mt-8 w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
@@ -62,7 +62,7 @@ const Features05Page = () => {
             >
               <CardHeader>
                 <feature.icon />
-                <h4 className="!mt-3 text-xl font-semibold tracking-tight">
+                <h4 className="mt-3! text-xl font-semibold tracking-tight">
                   {feature.title}
                 </h4>
                 <p className="mt-1 text-muted-foreground text-[17px]">

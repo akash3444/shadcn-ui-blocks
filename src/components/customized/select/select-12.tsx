@@ -105,14 +105,14 @@ export default function FancyMultiSelect() {
               onBlur={() => setOpen(false)}
               onFocus={() => setOpen(true)}
               placeholder="Select countries..."
-              className="ml-2 flex-1 bg-transparent outline-none placeholder:text-muted-foreground"
+              className="ml-2 flex-1 bg-transparent outline-hidden placeholder:text-muted-foreground"
             />
           </div>
         </div>
         <div className="relative mt-2">
           <CommandList>
             {open && !!filteredCountries.length && (
-              <div className="absolute top-0 z-10 w-full rounded-md border bg-popover text-popover-foreground shadow-md outline-none">
+              <div className="absolute top-0 z-10 w-full rounded-md border bg-popover text-popover-foreground shadow-md outline-hidden">
                 <CommandGroup className="h-full overflow-auto">
                   {filteredCountries.map((country) => {
                     return (

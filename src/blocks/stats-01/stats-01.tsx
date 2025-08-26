@@ -3,7 +3,7 @@ import React from "react";
 const Stats01Page = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-screen-xl mx-auto py-12 text-center">
+      <div className="max-w-(--breakpoint-xl) mx-auto py-12 text-center">
         <h2 className="text-4xl md:text-5xl font-semibold">Why TypeForm?</h2>
         <p className="mt-6 text-lg">Because after switching to us...</p>
 

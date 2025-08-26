@@ -21,7 +21,7 @@ export default function SliderWithCustomThumbDemo() {
           <SliderPrimitive.Range className="absolute h-full bg-primary" />
         </SliderPrimitive.Track>
 
-        <SliderPrimitive.Thumb className="h-6 w-6 flex items-center justify-center rounded-full border border-primary/50 bg-background shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+        <SliderPrimitive.Thumb className="h-6 w-6 flex items-center justify-center rounded-full border border-primary/50 bg-background shadow-sm transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
           <Settings2 className="h-3.5 w-3.5" />
         </SliderPrimitive.Thumb>
       </SliderPrimitive.Root>

@@ -66,7 +66,7 @@ const Team01Page = () => {
         </p>
       </div>
 
-      <div className="mt-20 w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12 max-w-screen-lg mx-auto">
+      <div className="mt-20 w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12 max-w-(--breakpoint-lg) mx-auto">
         {teamMembers.map((member) => (
           <div key={member.name} className="text-center">
             <Image

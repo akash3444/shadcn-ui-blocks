@@ -43,8 +43,8 @@ const features = [
 const Features06Page = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-screen-lg w-full py-10 px-6">
-        <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-xl md:text-center md:mx-auto">
+      <div className="max-w-(--breakpoint-lg) w-full py-10 px-6">
+        <h2 className="text-4xl md:text-5xl md:leading-14 font-bold tracking-tight max-w-xl md:text-center md:mx-auto">
           Boost Your Strategy with Smart Features
         </h2>
         <div className="mt-8 md:mt-16 w-full mx-auto space-y-20">
@@ -53,7 +53,7 @@ const Features06Page = () => {
               key={feature.category}
               className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse"
             >
-              <div className="w-full aspect-[6/4] bg-muted rounded-xl border border-border/50 basis-1/2" />
+              <div className="w-full aspect-6/4 bg-muted rounded-xl border border-border/50 basis-1/2" />
               <div className="basis-1/2 shrink-0">
                 <span className="uppercase font-semibold text-sm text-muted-foreground">
                   {feature.category}

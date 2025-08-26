@@ -27,11 +27,11 @@ export default function AlertDialogInfo() {
           <AlertDialogTitle className="text-2xl font-bold tracking-tight">
             New Software Update Available
           </AlertDialogTitle>
-          <AlertDialogDescription className="!mt-3 text-[15px]">
+          <AlertDialogDescription className="mt-3! text-[15px]">
             A new software update is available for your device. Please update to
             the latest version to continue using the app.
           </AlertDialogDescription>
-          <div className="!mt-6 flex flex-wrap gap-2">
+          <div className="mt-6! flex flex-wrap gap-2">
             <Badge variant="outline" className="py-1">
               Faster Performance
             </Badge>

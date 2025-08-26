@@ -45,7 +45,7 @@ export const CodeDialog = async ({
           </div>
         )}
 
-        <ScrollArea className="max-h-[30rem]" type="auto">
+        <ScrollArea className="max-h-120" type="auto">
           <ScrollArea
             className="max-w-2xl"
             orientation="horizontal"

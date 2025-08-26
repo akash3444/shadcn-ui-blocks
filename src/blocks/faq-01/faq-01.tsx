@@ -37,7 +37,7 @@ const FAQ01 = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-12">
       <div className="max-w-xl">
-        <h2 className="text-4xl md:text-5xl !leading-[1.15] font-bold tracking-tight">
+        <h2 className="text-4xl md:text-5xl leading-[1.15]! font-bold tracking-tight">
           Questions & Answers
         </h2>
 

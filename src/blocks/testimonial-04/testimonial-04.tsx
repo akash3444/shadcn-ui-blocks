@@ -68,8 +68,8 @@ const Testimonial04 = () => (
         Testimonials
       </h2>
       <div className="relative">
-        <div className="z-10 absolute left-0 inset-y-0 w-[15%] bg-gradient-to-r from-background to-transparent" />
-        <div className="z-10 absolute right-0 inset-y-0 w-[15%] bg-gradient-to-l from-background to-transparent" />
+        <div className="z-10 absolute left-0 inset-y-0 w-[15%] bg-linear-to-r from-background to-transparent" />
+        <div className="z-10 absolute right-0 inset-y-0 w-[15%] bg-linear-to-l from-background to-transparent" />
         <Marquee pauseOnHover className="[--duration:20s]">
           <TestimonialList />
         </Marquee>

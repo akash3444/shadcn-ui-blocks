@@ -18,7 +18,7 @@ const Logos06Page = () => {
           More than 2.2 million companies worldwide already trust us
         </p>
 
-        <div className="mt-20 flex items-center justify-center gap-x-14 gap-y-10 max-w-screen-lg">
+        <div className="mt-20 flex items-center justify-center gap-x-14 gap-y-10 max-w-(--breakpoint-lg)">
           <Marquee pauseOnHover className="[--duration:20s] [&_svg]:mr-10">
             <Logo01 />
             <Logo02 />

@@ -39,7 +39,7 @@ const FAQ07 = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-12">
       <div className="w-full max-w-2xl">
-        <h2 className="text-4xl md:text-5xl !leading-[1.15] font-bold tracking-tight">
+        <h2 className="text-4xl md:text-5xl leading-[1.15]! font-bold tracking-tight">
           Frequently Asked Questions
         </h2>
         <p className="mt-1.5 text-lg text-muted-foreground">

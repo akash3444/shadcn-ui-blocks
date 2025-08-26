@@ -75,7 +75,7 @@ const categories = [
 
 const Blog03Page = () => {
   return (
-    <div className="max-w-screen-xl mx-auto py-10 lg:py-16 px-6 xl:px-0 flex flex-col lg:flex-row items-start gap-12">
+    <div className="max-w-(--breakpoint-xl) mx-auto py-10 lg:py-16 px-6 xl:px-0 flex flex-col lg:flex-row items-start gap-12">
       <div>
         <h2 className="text-3xl font-bold tracking-tight">Posts</h2>
 

@@ -33,7 +33,7 @@ export default function PaginationTabsSecondary() {
                 className={cn({
                   [buttonVariants({
                     variant: "default",
-                    className: "hover:!text-primary-foreground !shadow-none",
+                    className: "hover:text-primary-foreground! shadow-none!",
                   })]: isActive,
                   "bg-secondary text-secondary-foreground": !isActive,
                 })}

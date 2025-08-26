@@ -54,7 +54,7 @@ const BlockPage = async (props: { params: Promise<{ block: string }> }) => {
     <BlockProvider>
       <ProBanner />
       <Navbar />
-      <div className="max-w-screen-2xl mx-auto py-8 px-4">
+      <div className="max-w-(--breakpoint-2xl) mx-auto py-8 px-4">
         <MainHeading>{title}</MainHeading>
         {description && (
           <DescriptionText className="mt-1">{description}</DescriptionText>

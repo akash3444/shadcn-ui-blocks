@@ -55,14 +55,14 @@ const Pricing05 = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center py-12 px-6">
       <h1 className="text-5xl font-bold text-center tracking-tight">Pricing</h1>
-      <div className="mt-12 max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 items-center">
+      <div className="mt-12 max-w-(--breakpoint-lg) mx-auto grid grid-cols-1 lg:grid-cols-3 items-center">
         {plans.map((plan) => (
           <div
             key={plan.name}
             className={cn(
               "relative border p-7 first:rounded-l-xl last:rounded-r-xl",
               {
-                "border-[2px] border-primary": plan.isPopular,
+                "border-2 border-primary": plan.isPopular,
               }
             )}
           >

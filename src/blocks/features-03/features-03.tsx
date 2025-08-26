@@ -4,8 +4,8 @@ import { ArrowRight, Blocks, Settings2 } from "lucide-react";
 const Features03Page = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="w-full max-w-screen-lg mx-auto py-12 px-6">
-        <h2 className="text-3xl leading-10 sm:text-4xl md:text-[40px] md:leading-[3.25rem] font-bold tracking-tight">
+      <div className="w-full max-w-(--breakpoint-lg) mx-auto py-12 px-6">
+        <h2 className="text-3xl leading-10 sm:text-4xl md:text-[40px] md:leading-13 font-bold tracking-tight">
           Design and Engage: <br />
           Build Smarter Spaces and Strategies
         </h2>

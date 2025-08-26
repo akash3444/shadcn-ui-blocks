@@ -30,7 +30,7 @@ export default function PaginationTabs() {
                 className={cn({
                   [buttonVariants({
                     variant: "default",
-                    className: "hover:!text-primary-foreground !shadow-none",
+                    className: "hover:text-primary-foreground! shadow-none!",
                   })]: isActive,
                   border: !isActive,
                 })}

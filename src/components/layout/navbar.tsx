@@ -8,7 +8,7 @@ import { NavigationSheet } from "./navigation-sheet";
 export const Navbar = () => {
   return (
     <nav className="px-6 lg:px-0 pt-4">
-      <div className="relative z-20 max-w-screen-lg mx-auto bg-background px-2 pl-3 rounded-full text-foreground border">
+      <div className="relative z-20 max-w-(--breakpoint-lg) mx-auto bg-background px-2 pl-3 rounded-full text-foreground border">
         <div className="h-12 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-2">

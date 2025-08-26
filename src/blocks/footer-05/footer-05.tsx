@@ -39,7 +39,7 @@ const Footer05Page = () => {
     <div className="min-h-screen flex flex-col">
       <div className="grow bg-muted" />
       <footer>
-        <div className="max-w-screen-xl mx-auto">
+        <div className="max-w-(--breakpoint-xl) mx-auto">
           <div className="py-12 flex flex-col justify-start items-center">
             {/* Logo */}
             <svg

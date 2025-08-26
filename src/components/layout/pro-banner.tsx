@@ -6,10 +6,10 @@ import Link from "next/link";
 
 export function ProBanner() {
   return (
-    <div className="relative z-10 overflow-hidden bg-gradient-to-r from-violet-500 to-indigo-500 text-white">
+    <div className="relative z-10 overflow-hidden bg-linear-to-r from-violet-500 to-indigo-500 text-white">
       {/* Animated background pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-size-[20px_20px] animate-pulse" />
       </div>
 
       <div className="relative z-10 px-4 sm:px-6 lg:px-8">

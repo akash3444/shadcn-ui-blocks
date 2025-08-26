@@ -21,7 +21,7 @@ const BlocksPage = async (props: {
     <>
       <ProBanner />
       <Navbar />
-      <div className="max-w-screen-2xl mx-auto py-12 sm:py-16">
+      <div className="max-w-(--breakpoint-2xl) mx-auto py-12 sm:py-16">
         <BlockPreviewList {...searchParams} />
       </div>
     </>

@@ -57,35 +57,35 @@ const SignUp05Page = () => {
               size="icon"
               className="rounded-full h-10 w-10"
             >
-              <GithubIcon className="!h-[18px] !w-[18px]" />
+              <GithubIcon className="h-[18px]! w-[18px]!" />
             </Button>
             <Button
               variant="outline"
               size="icon"
               className="rounded-full h-10 w-10"
             >
-              <InstagramIcon className="!h-[18px] !w-[18px]" />
+              <InstagramIcon className="h-[18px]! w-[18px]!" />
             </Button>
             <Button
               variant="outline"
               size="icon"
               className="rounded-full h-10 w-10"
             >
-              <TwitterIcon className="!h-[18px] !w-[18px]" />
+              <TwitterIcon className="h-[18px]! w-[18px]!" />
             </Button>
             <Button
               variant="outline"
               size="icon"
               className="rounded-full h-10 w-10"
             >
-              <FigmaIcon className="!h-[18px] !w-[18px]" />
+              <FigmaIcon className="h-[18px]! w-[18px]!" />
             </Button>
             <Button
               variant="outline"
               size="icon"
               className="rounded-full h-10 w-10"
             >
-              <TwitchIcon className="!h-[18px] !w-[18px]" />
+              <TwitchIcon className="h-[18px]! w-[18px]!" />
             </Button>
           </div>
 

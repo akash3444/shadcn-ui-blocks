@@ -115,7 +115,7 @@ export default function TableOverflowScrollDemo() {
     <div className="grid w-full [&>div]:max-h-[300px] [&>div]:border [&>div]:rounded">
       <Table>
         <TableHeader>
-          <TableRow className="[&>*]:whitespace-nowrap">
+          <TableRow className="*:whitespace-nowrap">
             <TableHead className="pl-4">ID</TableHead>
             <TableHead>Product Name</TableHead>
             <TableHead>Category</TableHead>
@@ -130,7 +130,7 @@ export default function TableOverflowScrollDemo() {
           {products.map((product) => (
             <TableRow
               key={product.id}
-              className="odd:bg-muted/50 [&>*]:whitespace-nowrap"
+              className="odd:bg-muted/50 *:whitespace-nowrap"
             >
               <TableCell className="pl-4">{product.id}</TableCell>
               <TableCell className="font-medium">{product.name}</TableCell>

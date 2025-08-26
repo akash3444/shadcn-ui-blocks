@@ -27,7 +27,7 @@ const tabs = [
 
 export default function TabSkewedDemo() {
   return (
-    <Tabs defaultValue={tabs[0].value} className="max-w-[17rem] w-full">
+    <Tabs defaultValue={tabs[0].value} className="max-w-68 w-full">
       <TabsList className="w-full p-0 bg-background justify-start border-b rounded-none gap-2">
         {tabs.map((tab) => (
           <TabsTrigger
@@ -51,7 +51,7 @@ export default function TabSkewedDemo() {
               variant="secondary"
               className="h-7 w-7 rounded-none shrink-0"
             >
-              <Copy className="!h-3.5 !w-3.5" />
+              <Copy className="h-3.5! w-3.5!" />
             </Button>
           </div>
         </TabsContent>

@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Contact02Page = () => (
   <div className="min-h-screen flex items-center justify-center py-16">
-    <div className="w-full max-w-screen-xl mx-auto px-6 xl:px-0">
+    <div className="w-full max-w-(--breakpoint-xl) mx-auto px-6 xl:px-0">
       <b className="text-muted-foreground">Contact Us</b>
       <h2 className="mt-3 text-3xl md:text-4xl font-bold tracking-tight">
         Chat to our friendly team
