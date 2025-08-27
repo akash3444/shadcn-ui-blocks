@@ -19,27 +19,27 @@ const RadioCardsDemo = () => {
       </CardHeader>
       <CardContent>
         <RadioGroup defaultValue="standard">
-          <div className="flex items-center space-x-2 mb-4">
+          <div className="flex items-start space-x-2 mb-4">
             <RadioGroupItem value="free" id="free" />
-            <Label htmlFor="free" className="flex flex-col">
+            <Label htmlFor="free" className="flex flex-col items-start">
               <span className="font-semibold">Free</span>
               <span className="text-sm text-muted-foreground">
                 Basic features, no cost
               </span>
             </Label>
           </div>
-          <div className="flex items-center space-x-2 mb-4">
+          <div className="flex items-start space-x-2 mb-4">
             <RadioGroupItem value="standard" id="standard" />
-            <Label htmlFor="standard" className="flex flex-col">
+            <Label htmlFor="standard" className="flex flex-col items-start">
               <span className="font-semibold">Standard</span>
               <span className="text-sm text-muted-foreground">
                 Advanced features, $9.99/month
               </span>
             </Label>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-start space-x-2">
             <RadioGroupItem value="premium" id="premium" />
-            <Label htmlFor="premium" className="flex flex-col">
+            <Label htmlFor="premium" className="flex flex-col items-start">
               <span className="font-semibold">Premium</span>
               <span className="text-sm text-muted-foreground">
                 All features, $19.99/month

@@ -37,7 +37,7 @@ export default function WithDelayTooltipDemo() {
         <Label>Delay</Label>
         <Input
           type="number"
-          className="mt-0.5"
+          className="mt-2"
           value={delayDuration}
           onChange={handleDelayDurationChange}
         />

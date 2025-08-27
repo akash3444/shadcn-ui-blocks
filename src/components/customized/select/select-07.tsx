@@ -56,7 +56,7 @@ export default function SelectWithFormDemo() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="max-w-sm mx-auto space-y-4 w-full"
+        className="max-w-sm mx-auto space-y-3 w-full"
       >
         <SelectWithForm<schemaType>
           name="country"
@@ -105,7 +105,7 @@ export function SelectWithForm<K>({
               <SelectTrigger
                 id={name}
                 className={cn(
-                  "aria-invalid:border-destructive aria-invalid:ring-destructive",
+                  "aria-invalid:border-destructive aria-invalid:ring-destructive w-full",
                   className
                 )}
               >

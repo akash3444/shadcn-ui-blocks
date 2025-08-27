@@ -14,7 +14,7 @@ export const Hero = () => {
             <ArrowUpRight className="ml-2 h-4 w-4" />
           </Badge>
         </Link>
-        <h1 className="relative z-10 mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl sm:max-w-[25ch] mx-auto font-bold tracking-tight leading-[1.2] lg:leading-[1.2]">
+        <h1 className="relative z-10 mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-7xl sm:max-w-[25ch] mx-auto font-semibold tracking-tighter leading-[1.2] lg:leading-[1.2]">
           Effortless Shadcn UI Component Previews & Code Snippets
         </h1>
         <p className="mt-8 text-base sm:text-lg lg:text-xl sm:max-w-4xl mx-auto">

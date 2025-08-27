@@ -9,7 +9,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="bg-slate-100 dark:bg-gray-800">
+    <div className="bg-primary/3">
       <div className="md:hidden">
         <Navbar />
       </div>

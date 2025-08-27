@@ -49,7 +49,7 @@ export default function WithSkipDelayTooltipDemo() {
         <Label>Skip delay duration</Label>
         <Input
           type="number"
-          className="mt-0.5"
+          className="mt-2"
           value={skipDelayDuration}
           onChange={handleDelayDurationChange}
         />

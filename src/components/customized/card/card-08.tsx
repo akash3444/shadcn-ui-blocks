@@ -5,7 +5,7 @@ import React from "react";
 
 const TestimonialCard = () => {
   return (
-    <Card className="relative w-full max-w-sm bg-muted/70 shadow-none border-none">
+    <Card className="relative w-full max-w-sm bg-muted/70 shadow-none border-none gap-0 pt-0 pb-4">
       <Quote className="absolute top-3 right-2 h-16 w-16 text-foreground/10 stroke-[1.5px]" />
       <CardHeader className="py-5">
         <div className="flex items-center gap-3">

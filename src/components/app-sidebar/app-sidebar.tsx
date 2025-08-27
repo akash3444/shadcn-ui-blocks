@@ -40,7 +40,9 @@ export function AppSidebar() {
             </SidebarGroupContent>
           </SidebarGroup>
         ))}
-        <CarbonAd className="sticky bottom-0" id="carbon-ad-sidebar" />
+        {process.env.NODE_ENV === "production" && (
+          <CarbonAd className="sticky bottom-0" id="carbon-ad-sidebar" />
+        )}
       </SidebarContent>
     </Sidebar>
   );

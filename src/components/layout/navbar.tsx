@@ -13,7 +13,7 @@ export const Navbar = () => {
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-2">
               <Logo className="font-bold rounded-full" />
-              <span className="font-bold hidden md:block text-lg">
+              <span className="font-semibold hidden md:block text-lg">
                 Shadcn UI Blocks
               </span>
             </Link>

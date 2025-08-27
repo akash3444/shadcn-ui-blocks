@@ -54,7 +54,7 @@ const Footer = () => {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
               <Logo />
-              <span className="font-bold text-lg">Shadcn UI Blocks</span>
+              <span className="font-semibold text-lg">Shadcn UI Blocks</span>
             </Link>
 
             <p className="mt-4 text-muted-foreground">

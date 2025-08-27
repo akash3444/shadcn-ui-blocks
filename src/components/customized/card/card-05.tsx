@@ -16,7 +16,7 @@ import { CircleHelpIcon } from "lucide-react";
 
 export default function PricingCard() {
   return (
-    <Card className="max-w-xs">
+    <Card className="max-w-xs w-full">
       <CardHeader>
         <CardTitle className="text-2xl font-bold">Pro Plan</CardTitle>
         <CardDescription>

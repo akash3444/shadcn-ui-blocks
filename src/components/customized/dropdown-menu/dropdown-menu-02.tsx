@@ -14,7 +14,7 @@ export default function DropdownMenuWithIcon() {
     <DropdownMenu>
       <DropdownMenuTrigger className="focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-primary rounded-full">
         <Avatar>
-          <AvatarFallback>AB</AvatarFallback>
+          <AvatarFallback>A</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
