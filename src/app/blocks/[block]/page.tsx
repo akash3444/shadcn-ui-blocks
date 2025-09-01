@@ -1,4 +1,4 @@
-import { blocks } from "@/blocks";
+import { blockList, blocks } from "@/blocks";
 import BlockToolbar from "@/components/blocks/block-toolbar";
 import BlockPreview from "@/components/blocks/block-preview";
 import FileExplorer from "@/components/blocks/file-explorer";
@@ -13,6 +13,12 @@ import { notFound } from "next/navigation";
 import registry from "../../../../registry.json";
 import BlockDetails from "@/components/blocks/block-details";
 import { ProBanner } from "@/components/layout/pro-banner";
+
+export const generateStaticParams = async () => {
+  return blockList.map(({ name }) => ({
+    block: name,
+  }));
+};
 
 export const generateMetadata = async (props: {
   params: Promise<{ block: string }>;

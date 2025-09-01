@@ -1,8 +1,14 @@
-import { blocks } from "@/blocks";
+import { blockList, blocks } from "@/blocks";
 import { constructMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/utils";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+
+export const generateStaticParams = async () => {
+  return blockList.map(({ name }) => ({
+    block: name,
+  }));
+};
 
 export const generateMetadata = async (props: {
   params: Promise<{ block: string }>;
