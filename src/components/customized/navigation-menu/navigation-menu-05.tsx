@@ -27,13 +27,14 @@ export default function NavigationMenuWithActiveItem() {
                 "hover:before:scale-x-100 hover:text-accent-foreground",
                 "focus:before:scale-x-100 focus:text-accent-foreground focus:outline-hidden",
                 "disabled:pointer-events-none disabled:opacity-50",
-                "data-active:before:scale-x-100 data-[state=open]:before:scale-x-100"
+                "data-active:before:scale-x-100 data-[state=open]:before:scale-x-100",
+                "hover:bg-transparent active:bg-transparent focus:bg-transparent"
               )}
               asChild
               active={item.isActive}
             >
-              <Link href={item.href}>
-                <item.icon className="h-5 w-5 mr-2" />
+              <Link href={item.href} className="flex-row items-center gap-2.5">
+                <item.icon className="h-5 w-5 shrink-0" />
                 {item.title}
               </Link>
             </NavigationMenuLink>

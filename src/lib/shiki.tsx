@@ -51,5 +51,6 @@ export async function getHighlightedCodeNodes(code: string) {
       transformerNotationHighlight(),
       transformerRemoveLineBreak(),
     ],
+    tabindex: false,
   });
 }

@@ -1,8 +1,11 @@
-import { Button, ButtonProps } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { StarIcon } from "lucide-react";
 
-const ButtonGradient = ({ className, ...props }: ButtonProps) => (
+const ButtonGradient = ({
+  className,
+  ...props
+}: React.ComponentProps<typeof Button>) => (
   <Button
     className={cn(
       "bg-linear-to-r from-blue-500 to-indigo-500 text-primary-foreground dark:text-foreground shadow-sm hover:to-blue-500",

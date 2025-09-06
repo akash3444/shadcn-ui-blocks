@@ -1,5 +1,5 @@
 import React from "react";
-import * as RadioGroup from "@radix-ui/react-radio-group";
+import { RadioGroup as RadioGroupPrimitive } from "radix-ui";
 import { CircleCheck, CpuIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -23,12 +23,12 @@ const options = [
 
 const RadioCardsDemo = () => {
   return (
-    <RadioGroup.Root
+    <RadioGroupPrimitive.Root
       defaultValue={options[0].value}
       className="max-w-md w-full grid grid-cols-3 gap-4"
     >
       {options.map((option) => (
-        <RadioGroup.Item
+        <RadioGroupPrimitive.Item
           key={option.value}
           value={option.value}
           className={cn(
@@ -41,9 +41,9 @@ const RadioCardsDemo = () => {
           <CpuIcon className="mb-2.5 text-muted-foreground" />
           <span className="font-semibold tracking-tight">{option.label}</span>
           <p className="text-xs">{option.description}</p>
-        </RadioGroup.Item>
+        </RadioGroupPrimitive.Item>
       ))}
-    </RadioGroup.Root>
+    </RadioGroupPrimitive.Root>
   );
 };
 

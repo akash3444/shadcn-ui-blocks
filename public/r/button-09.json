@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/button/button-09.tsx",
-      "content": "import { Button, ButtonProps } from \"@/components/ui/button\";\nimport { cn } from \"@/lib/utils\";\nimport { StarIcon } from \"lucide-react\";\n\nconst ButtonGradient = ({ className, ...props }: ButtonProps) => (\n  <Button\n    className={cn(\n      \"bg-gradient-to-r from-blue-500 to-indigo-500 text-primary-foreground dark:text-foreground shadow hover:to-blue-500\",\n      className\n    )}\n    {...props}\n  />\n);\n\nconst GradientButtonDemo = () => (\n  <div className=\"flex items-center gap-2 flex-wrap\">\n    <ButtonGradient>Gradient</ButtonGradient>\n    <ButtonGradient size=\"icon\">\n      <StarIcon />\n    </ButtonGradient>\n    <ButtonGradient>\n      <StarIcon /> Star\n    </ButtonGradient>\n  </div>\n);\n\nexport default GradientButtonDemo;\n",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { cn } from \"@/lib/utils\";\nimport { StarIcon } from \"lucide-react\";\n\nconst ButtonGradient = ({\n  className,\n  ...props\n}: React.ComponentProps<typeof Button>) => (\n  <Button\n    className={cn(\n      \"bg-linear-to-r from-blue-500 to-indigo-500 text-primary-foreground dark:text-foreground shadow-sm hover:to-blue-500\",\n      className\n    )}\n    {...props}\n  />\n);\n\nconst GradientButtonDemo = () => (\n  <div className=\"flex items-center gap-2 flex-wrap\">\n    <ButtonGradient>Gradient</ButtonGradient>\n    <ButtonGradient size=\"icon\">\n      <StarIcon />\n    </ButtonGradient>\n    <ButtonGradient>\n      <StarIcon /> Star\n    </ButtonGradient>\n  </div>\n);\n\nexport default GradientButtonDemo;\n",
       "type": "registry:component"
     }
   ]

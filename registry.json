@@ -265,7 +265,7 @@
       "type": "registry:block",
       "title": "FAQ 07",
       "description": "A simple FAQ component",
-      "dependencies": ["@radix-ui/react-accordion", "lucide-react"],
+      "dependencies": ["lucide-react", "radix-ui"],
       "registryDependencies": ["accordion"],
       "files": [
         {
@@ -787,7 +787,6 @@
       "type": "registry:block",
       "title": "Navbar 01",
       "description": "A simple navbar block",
-      "dependencies": ["@radix-ui/react-navigation-menu"],
       "registryDependencies": ["button", "navigation-menu", "sheet"],
       "files": [
         {
@@ -817,7 +816,6 @@
       "type": "registry:block",
       "title": "Navbar 02",
       "description": "A simple navbar block",
-      "dependencies": ["@radix-ui/react-navigation-menu"],
       "registryDependencies": ["button", "navigation-menu", "sheet"],
       "files": [
         {
@@ -847,7 +845,6 @@
       "type": "registry:block",
       "title": "Navbar 03",
       "description": "A simple navbar block",
-      "dependencies": ["@radix-ui/react-navigation-menu"],
       "registryDependencies": ["button", "navigation-menu", "sheet"],
       "files": [
         {
@@ -882,7 +879,6 @@
       "type": "registry:block",
       "title": "Navbar 04",
       "description": "A simple navbar block",
-      "dependencies": ["@radix-ui/react-navigation-menu"],
       "registryDependencies": ["button", "navigation-menu", "sheet"],
       "files": [
         {
@@ -912,7 +908,6 @@
       "type": "registry:block",
       "title": "Navbar 05",
       "description": "A simple navbar block",
-      "dependencies": ["@radix-ui/react-navigation-menu"],
       "registryDependencies": ["button", "input", "navigation-menu", "sheet"],
       "files": [
         {
@@ -1515,7 +1510,7 @@
       "type": "registry:component",
       "title": "Expand Icon Accordion",
       "description": "An accordion with a custom expand icon",
-      "dependencies": ["lucide-react", "@radix-ui/react-accordion"],
+      "dependencies": ["lucide-react", "radix-ui"],
       "registryDependencies": ["accordion"],
       "files": [
         {
@@ -1613,7 +1608,7 @@
       "type": "registry:component",
       "title": "Warning Alert",
       "description": "A warning alert component",
-      "dependencies": ["@radix-ui/react-icons"],
+      "dependencies": ["lucide-react"],
       "registryDependencies": ["alert"],
       "files": [
         {
@@ -2645,11 +2640,7 @@
       "type": "registry:component",
       "title": "Icon Checkbox",
       "description": "A checkbox with custom icon component",
-      "dependencies": [
-        "lucide-react",
-        "@radix-ui/react-icons",
-        "@radix-ui/react-checkbox"
-      ],
+      "dependencies": ["lucide-react", "radix-ui"],
       "files": [
         {
           "path": "src/components/customized/checkbox/checkbox-09.tsx",
@@ -2662,7 +2653,7 @@
       "type": "registry:component",
       "title": "Card Checkbox",
       "description": "A card checkbox component",
-      "dependencies": ["lucide-react", "@radix-ui/react-checkbox"],
+      "dependencies": ["lucide-react", "radix-ui"],
       "files": [
         {
           "path": "src/components/customized/checkbox/checkbox-11.tsx",
@@ -2675,7 +2666,7 @@
       "type": "registry:component",
       "title": "Multi Color Picker Checkbox",
       "description": "A multi color picker checkbox component",
-      "dependencies": ["lucide-react", "@radix-ui/react-checkbox"],
+      "dependencies": ["lucide-react", "radix-ui"],
       "files": [
         {
           "path": "src/components/customized/checkbox/checkbox-10.tsx",
@@ -3922,7 +3913,7 @@
       "type": "registry:component",
       "title": "Animated Progress",
       "description": "A progress component with animation effects",
-      "dependencies": ["@radix-ui/react-progress"],
+      "dependencies": ["radix-ui"],
       "files": [
         {
           "path": "src/components/customized/progress/progress-06.tsx",
@@ -3987,7 +3978,7 @@
       "type": "registry:component",
       "title": "Radio Group with Cards (Style 2)",
       "description": "A radio group component with card-style options (style 2)",
-      "dependencies": ["@radix-ui/react-radio-group", "lucide-react"],
+      "dependencies": ["lucide-react", "radix-ui"],
       "files": [
         {
           "path": "src/components/customized/radio-group/radio-group-08.tsx",
@@ -4343,7 +4334,7 @@
       "type": "registry:component",
       "title": "Slider Color",
       "description": "A slider component with different colors",
-      "dependencies": ["@radix-ui/react-slider"],
+      "dependencies": ["radix-ui"],
       "files": [
         {
           "path": "src/components/customized/slider/slider-04.tsx",
@@ -4356,7 +4347,7 @@
       "type": "registry:component",
       "title": "Slider Shape",
       "description": "A slider component with different shapes",
-      "dependencies": ["@radix-ui/react-slider"],
+      "dependencies": ["radix-ui"],
       "files": [
         {
           "path": "src/components/customized/slider/slider-05.tsx",
@@ -4382,7 +4373,7 @@
       "type": "registry:component",
       "title": "Vertical Slider",
       "description": "A vertical slider component",
-      "dependencies": ["@radix-ui/react-slider"],
+      "dependencies": ["radix-ui"],
       "files": [
         {
           "path": "src/components/customized/slider/slider-13.tsx",
@@ -4395,7 +4386,7 @@
       "type": "registry:component",
       "title": "Slider with Thumb Icon",
       "description": "A slider component with a custom thumb icon",
-      "dependencies": ["@radix-ui/react-slider", "lucide-react"],
+      "dependencies": ["lucide-react", "radix-ui"],
       "files": [
         {
           "path": "src/components/customized/slider/slider-07.tsx",
@@ -4434,7 +4425,7 @@
       "type": "registry:component",
       "title": "Slider with Sticky Label",
       "description": "A slider component with a sticky label",
-      "dependencies": ["@radix-ui/react-slider"],
+      "dependencies": ["radix-ui"],
       "registryDependencies": ["badge"],
       "files": [
         {
@@ -4448,7 +4439,7 @@
       "type": "registry:component",
       "title": "Slider with Sticky Label on Hover",
       "description": "A slider component with a sticky label that appears on hover",
-      "dependencies": ["@radix-ui/react-slider"],
+      "dependencies": ["radix-ui"],
       "registryDependencies": ["badge"],
       "files": [
         {
@@ -4462,7 +4453,7 @@
       "type": "registry:component",
       "title": "Slider with Sticky Label Arrow",
       "description": "A slider component with a sticky label with arrow",
-      "dependencies": ["@radix-ui/react-slider"],
+      "dependencies": ["radix-ui"],
       "registryDependencies": ["badge"],
       "files": [
         {
@@ -4476,7 +4467,7 @@
       "type": "registry:component",
       "title": "Range Slider",
       "description": "A range slider component",
-      "dependencies": ["@radix-ui/react-slider"],
+      "dependencies": ["radix-ui"],
       "files": [
         {
           "path": "src/components/customized/slider/slider-14.tsx",
@@ -4489,7 +4480,7 @@
       "type": "registry:component",
       "title": "Slider with Multiple Thumbs",
       "description": "A slider component with multiple thumbs",
-      "dependencies": ["@radix-ui/react-slider"],
+      "dependencies": ["radix-ui"],
       "files": [
         {
           "path": "src/components/customized/slider/slider-15.tsx",
@@ -4691,7 +4682,7 @@
       "type": "registry:component",
       "title": "Switch Sizes",
       "description": "A switch component with different sizes",
-      "dependencies": ["@radix-ui/react-switch"],
+      "dependencies": ["radix-ui"],
       "files": [
         {
           "path": "src/components/customized/switch/switch-05.tsx",
@@ -4717,7 +4708,7 @@
       "type": "registry:component",
       "title": "Switch Customization",
       "description": "A customized switch component",
-      "dependencies": ["@radix-ui/react-switch", "lucide-react"],
+      "dependencies": ["lucide-react", "radix-ui"],
       "files": [
         {
           "path": "src/components/customized/switch/switch-07.tsx",

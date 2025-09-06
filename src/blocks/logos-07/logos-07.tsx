@@ -8,7 +8,7 @@ import {
   Logo07,
   Logo08,
 } from "@/components/logos";
-import Marquee from "@/components/ui/marquee";
+import { Marquee } from "@/components/ui/marquee";
 
 const Logos07Page = () => {
   return (

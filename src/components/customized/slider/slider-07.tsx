@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import * as SliderPrimitive from "@radix-ui/react-slider";
+import { Slider as SliderPrimitive } from "radix-ui";
 import { Settings2 } from "lucide-react";
 
 export default function SliderWithCustomThumbDemo() {

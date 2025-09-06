@@ -1,11 +1,10 @@
 import { BlockScreenSize } from "@/types/blocks";
-import { DesktopIcon, MobileIcon } from "@radix-ui/react-icons";
-import { TabletIcon } from "lucide-react";
+import { Monitor, SmartphoneIcon, TabletIcon } from "lucide-react";
 
 export const blockScreens = [
   {
     name: BlockScreenSize.mobile,
-    icon: MobileIcon,
+    icon: SmartphoneIcon,
     size: 30,
   },
   {
@@ -15,7 +14,7 @@ export const blockScreens = [
   },
   {
     name: BlockScreenSize.desktop,
-    icon: DesktopIcon,
+    icon: Monitor,
     size: 100,
   },
 ];

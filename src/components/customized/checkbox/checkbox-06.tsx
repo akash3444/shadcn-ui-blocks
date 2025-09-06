@@ -1,11 +1,11 @@
 "use client";
 
 import { Checkbox } from "@/components/ui/checkbox";
-import { CheckedState } from "@radix-ui/react-checkbox";
+import { Checkbox as CheckboxPrimitive } from "radix-ui";
 import { useState } from "react";
 
 export default function ControlledCheckboxDemo() {
-  const [checked, setChecked] = useState<CheckedState>(false);
+  const [checked, setChecked] = useState<CheckboxPrimitive.CheckedState>(false);
 
   return (
     <div className="flex items-center space-x-2">

@@ -12,9 +12,9 @@ export const NavigationSheet = () => {
           <Menu />
         </Button>
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="px-6 py-3">
         <Logo />
-        <NavMenu orientation="vertical" className="mt-12" />
+        <NavMenu orientation="vertical" className="mt-6 [&>div]:h-full" />
       </SheetContent>
     </Sheet>
   );

@@ -10,13 +10,12 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { NavigationMenuProps } from "@radix-ui/react-navigation-menu";
 import { LucideIcon } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { ComponentProps } from "react";
 import { foods, travelMenuItems } from "./config";
 
-export const NavMenu = (props: NavigationMenuProps) => (
+export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => (
   <NavigationMenu {...props}>
     <NavigationMenuList className="gap-0 space-x-0 text-sm">
       <NavigationMenuItem>

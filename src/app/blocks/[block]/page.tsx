@@ -12,7 +12,6 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import registry from "../../../../registry.json";
 import BlockDetails from "@/components/blocks/block-details";
-import { ProBanner } from "@/components/layout/pro-banner";
 
 export const generateStaticParams = async () => {
   return blockList.map(({ name }) => ({
@@ -52,7 +51,6 @@ const BlockPage = async (props: { params: Promise<{ block: string }> }) => {
 
   return (
     <BlockProvider>
-      <ProBanner />
       <Navbar />
       <div className="max-w-(--breakpoint-2xl) mx-auto py-8 px-4">
         <MainHeading>{title}</MainHeading>

@@ -13,11 +13,13 @@ export const NavigationSheet = () => {
           <Menu />
         </Button>
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="px-6 py-3">
         <Logo />
 
         <div className="mt-12 text-base space-y-4">
-          <Link href="#">Home</Link>
+          <Link href="#" className="inline-block">
+            Home
+          </Link>
 
           <div>
             <div className="font-bold">Food</div>

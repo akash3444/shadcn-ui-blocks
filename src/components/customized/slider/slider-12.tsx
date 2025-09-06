@@ -3,7 +3,7 @@
 import * as React from "react";
 
 import { Badge } from "@/components/ui/badge";
-import * as SliderPrimitive from "@radix-ui/react-slider";
+import { Slider as SliderPrimitive } from "radix-ui";
 
 export default function SliderWithArrowStickyLabelDemo() {
   const [progress, setProgress] = React.useState([30]);

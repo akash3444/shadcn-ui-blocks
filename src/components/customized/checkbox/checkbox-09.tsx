@@ -1,8 +1,7 @@
 import * as React from "react";
-import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
+import { Checkbox as CheckboxPrimitive } from "radix-ui";
 import { cn } from "@/lib/utils";
-import { CheckIcon } from "@radix-ui/react-icons";
-import { BookmarkIcon, Heart, StarIcon } from "lucide-react";
+import { BookmarkIcon, CheckIcon, Heart, StarIcon } from "lucide-react";
 
 // Replace the `Checkbox` component in `@components/ui/checkbox` with below component and use it here to support custom icon.
 const Checkbox = React.forwardRef<

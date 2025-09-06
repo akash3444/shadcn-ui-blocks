@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "src/components/customized/tooltip/tooltip-02.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\";\nimport { TooltipArrow } from \"@radix-ui/react-tooltip\";\n\nexport default function WithArrowTooltipDemo() {\n  return (\n    <TooltipProvider>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button variant=\"outline\">Hover</Button>\n        </TooltipTrigger>\n        <TooltipContent>\n          <p>Tooltip with arrow</p>\n          <TooltipArrow className=\"fill-foreground\" />\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  );\n}\n",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\";\nimport { Tooltip as TooltipPrimitive } from \"radix-ui\";\n\nexport default function WithArrowTooltipDemo() {\n  return (\n    <TooltipProvider>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button variant=\"outline\">Hover</Button>\n        </TooltipTrigger>\n        <TooltipContent>\n          <p>Tooltip with arrow</p>\n          <TooltipPrimitive.Arrow className=\"fill-foreground\" />\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  );\n}\n",
       "type": "registry:component"
     }
   ]

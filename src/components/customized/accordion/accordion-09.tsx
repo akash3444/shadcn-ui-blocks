@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
 } from "@/components/ui/accordion";
-import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { Accordion as AccordionPrimitive } from "radix-ui";
 import { Plus } from "lucide-react";
 
 const items = [
@@ -34,7 +34,7 @@ export default function AccordionDefaultOpenDemo() {
       {items.map(({ title, content }, index) => (
         <AccordionItem key={index} value={`item-${index}`}>
           <AccordionPrimitive.Header className="flex">
-            <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
+            <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45 text-sm">
               {title}
               <Plus className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
             </AccordionPrimitive.Trigger>
