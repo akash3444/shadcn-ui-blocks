@@ -1,6 +1,6 @@
 import Footer from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
-import { ProBanner } from "@/components/layout/pro-banner";
+import { VersionBanner } from "@/components/layout/version-banner";
 import React from "react";
 
 export default function TemplatesLayout({
@@ -10,7 +10,7 @@ export default function TemplatesLayout({
 }) {
   return (
     <>
-      <ProBanner />
+      <VersionBanner />
       <Navbar />
       <main>{children}</main>
       <Footer />

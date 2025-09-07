@@ -2,7 +2,7 @@ import { blockCategories, categorizedBlocks } from "@/blocks";
 import BlockCategoryJsonLd from "@/components/blocks/category/block-category-json-ld";
 import BlockPreviewList from "@/components/blocks/category/block-preview-list";
 import { Navbar } from "@/components/layout/navbar";
-import { ProBanner } from "@/components/layout/pro-banner";
+import { VersionBanner } from "@/components/layout/version-banner";
 import { constructMetadata } from "@/lib/metadata";
 import { generateOgImageUrl } from "@/lib/og";
 import { absoluteUrl, capitalize } from "@/lib/utils";
@@ -88,7 +88,7 @@ const BlockCategoryPage = async (props: {
 
   return (
     <>
-      <ProBanner />
+      <VersionBanner />
       <Navbar />
       <div className="max-w-screen-2xl mx-auto py-12 sm:py-16">
         <BlockPreviewList category={category} {...searchParams} />
