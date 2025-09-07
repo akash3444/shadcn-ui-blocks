@@ -72,7 +72,6 @@
     "eslint-config-next": "15.1.7",
     "eslint-plugin-svg-jsx": "^1.2.4",
     "postcss": "^8",
-    "puppeteer": "^23.8.0",
     "schema-dts": "^1.1.2",
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
