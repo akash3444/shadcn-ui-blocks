@@ -4,6 +4,7 @@ import { Logo } from "../logo";
 import { AppNavigationMenu } from "./app-navigation-menu";
 import { ThemeToggle } from "../app-sidebar/theme-toggle";
 import { NavigationSheet } from "./navigation-sheet";
+import { VersionSwitcher } from "../version-switcher";
 
 export const Navbar = () => {
   return (
@@ -13,7 +14,7 @@ export const Navbar = () => {
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-2">
               <Logo className="font-bold rounded-full" />
-              <span className="font-bold hidden md:block text-lg">
+              <span className="font-semibold hidden lg:block text-lg">
                 Shadcn UI Blocks
               </span>
             </Link>
@@ -24,6 +25,9 @@ export const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-2">
+            <div className="hidden sm:block">
+              <VersionSwitcher variant="compact" />
+            </div>
             <GithubStarButton />
             <ThemeToggle />
             <div className="block md:hidden">

@@ -25,7 +25,7 @@ export const Hero = () => {
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-6 sm:px-0">
           <Button
             size="lg"
-            className="group h-12 text-base z-10 rounded-md w-full md:w-auto gap-3"
+            className="group h-12 text-base z-10 rounded-md w-full sm:w-auto gap-3"
             asChild
           >
             <Link href="/blocks">
@@ -35,7 +35,7 @@ export const Hero = () => {
           </Button>
           <Button
             size="lg"
-            className="group h-12 text-base z-10 rounded-md w-full md:w-auto gap-3"
+            className="group h-12 text-base z-10 rounded-md w-full sm:w-auto gap-3"
             variant="outline"
             asChild
           >

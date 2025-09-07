@@ -14,6 +14,7 @@ import Link from "next/link";
 import { Logo } from "../logo";
 import { Badge } from "../ui/badge";
 import { ScrollArea } from "../ui/scroll-area";
+import { VersionSwitcher } from "../version-switcher";
 import { useState } from "react";
 
 export function NavigationSheet() {
@@ -76,6 +77,11 @@ export function NavigationSheet() {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            <div className="pt-4 border-t">
+              <div className="font-semibold mb-3">Version</div>
+              <VersionSwitcher className="w-full" />
             </div>
           </div>
         </ScrollArea>
