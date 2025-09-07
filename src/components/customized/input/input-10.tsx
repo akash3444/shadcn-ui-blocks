@@ -76,7 +76,7 @@ export function InputWithForm<K>({
               {...field}
               {...props}
               className={cn(
-                "aria-[invalid=true]:border-destructive aria-[invalid=true]:ring-destructive",
+                "aria-invalid:border-destructive aria-invalid:ring-destructive",
                 className
               )}
             />

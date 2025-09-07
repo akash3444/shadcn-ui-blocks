@@ -182,12 +182,12 @@ const Footer01Page = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <div className="grow bg-muted" />
-      <footer>
-        <div className="max-w-screen-xl mx-auto">
+      <footer className="border-t">
+        <div className="max-w-(--breakpoint-xl) mx-auto">
           <div className="py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-8 gap-y-10 px-6 xl:px-0">
             {footerSections.map(({ title, links }) => (
               <div key={title}>
-                <h6 className="font-semibold">{title}</h6>
+                <h6 className="font-medium">{title}</h6>
                 <ul className="mt-6 space-y-4">
                   {links.map(({ title, href }) => (
                     <li key={title}>

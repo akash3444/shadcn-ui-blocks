@@ -55,20 +55,20 @@ const features = [
 const Features04Page = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-screen-lg w-full py-12 px-6">
-        <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-lg">
+      <div className="max-w-(--breakpoint-lg) w-full py-12 px-6">
+        <h2 className="text-4xl md:text-5xl md:leading-14 font-semibold tracking-[-0.03em] max-w-lg">
           Boost Your Strategy with Smart Features
         </h2>
-        <div className="mt-6 md:mt-8 w-full mx-auto grid md:grid-cols-2 gap-12">
+        <div className="mt-6 md:mt-10 w-full mx-auto grid md:grid-cols-2 gap-12">
           <div>
             <Accordion defaultValue="item-0" type="single" className="w-full">
               {features.map(({ title, description, icon: Icon }, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="data-[state=open]:border-b-2 data-[state=open]:border-primary"
+                  className="group/accordion-item data-[state=open]:border-b-2 data-[state=open]:border-primary"
                 >
-                  <AccordionTrigger className="text-lg [&>svg]:hidden">
+                  <AccordionTrigger className="text-lg [&>svg]:hidden group-first/accordion-item:pt-0">
                     <div className="flex items-center gap-4">
                       <Icon />
                       {title}

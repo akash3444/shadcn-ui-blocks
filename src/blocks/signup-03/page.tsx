@@ -40,7 +40,7 @@ const SignUp03Page = () => {
       <div className="w-full h-full grid lg:grid-cols-2">
         <div className="max-w-xs m-auto w-full flex flex-col items-center">
           <Logo className="h-9 w-9" />
-          <p className="mt-4 text-xl font-bold tracking-tight">
+          <p className="mt-4 text-xl font-semibold tracking-tight">
             Sign up for Shadcn UI Blocks
           </p>
 
@@ -109,7 +109,7 @@ const SignUp03Page = () => {
             </Link>
           </p>
         </div>
-        <div className="bg-muted hidden lg:block" />
+        <div className="bg-muted hidden lg:block border-l" />
       </div>
     </div>
   );
@@ -123,7 +123,7 @@ const GoogleLogo = () => (
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="inline-block shrink-0 align-sub text-[inherit] size-lg"
+    className="inline-block shrink-0 align-sub text-inherit size-lg"
   >
     <g clipPath="url(#clip0)">
       <path

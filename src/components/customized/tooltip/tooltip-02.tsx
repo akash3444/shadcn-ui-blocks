@@ -5,7 +5,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { TooltipArrow } from "@radix-ui/react-tooltip";
+import { Tooltip as TooltipPrimitive } from "radix-ui";
 
 export default function WithArrowTooltipDemo() {
   return (
@@ -16,7 +16,7 @@ export default function WithArrowTooltipDemo() {
         </TooltipTrigger>
         <TooltipContent>
           <p>Tooltip with arrow</p>
-          <TooltipArrow className="fill-foreground" />
+          <TooltipPrimitive.Arrow className="fill-foreground" />
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

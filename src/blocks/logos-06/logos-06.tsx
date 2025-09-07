@@ -8,7 +8,7 @@ import {
   Logo07,
   Logo08,
 } from "@/components/logos";
-import Marquee from "@/components/ui/marquee";
+import { Marquee } from "@/components/ui/marquee";
 
 const Logos06Page = () => {
   return (
@@ -18,8 +18,11 @@ const Logos06Page = () => {
           More than 2.2 million companies worldwide already trust us
         </p>
 
-        <div className="mt-20 flex items-center justify-center gap-x-14 gap-y-10 max-w-screen-lg">
-          <Marquee pauseOnHover className="[--duration:20s] [&_svg]:mr-10">
+        <div className="mt-10 flex items-center justify-center gap-x-14 gap-y-10 max-w-(--breakpoint-xl)">
+          <Marquee
+            pauseOnHover
+            className="[--duration:20s] [&_svg]:mr-10 mask-x-from-70% mask-x-to-90%"
+          >
             <Logo01 />
             <Logo02 />
             <Logo03 />

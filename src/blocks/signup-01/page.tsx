@@ -39,7 +39,7 @@ const SignUp01Page = () => {
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-xs w-full flex flex-col items-center">
         <Logo className="h-9 w-9" />
-        <p className="mt-4 text-xl font-bold tracking-tight">
+        <p className="mt-4 text-xl font-semibold tracking-tight">
           Sign up for Shadcn UI Blocks
         </p>
 
@@ -120,7 +120,7 @@ const GoogleLogo = () => (
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="inline-block shrink-0 align-sub text-[inherit] size-lg"
+    className="inline-block shrink-0 align-sub text-inherit size-lg"
   >
     <g clipPath="url(#clip0)">
       <path

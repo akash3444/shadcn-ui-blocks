@@ -4,18 +4,18 @@ import { ArrowRight, Blocks, Settings2 } from "lucide-react";
 const Features03Page = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="w-full max-w-screen-lg mx-auto py-12 px-6">
-        <h2 className="text-3xl leading-10 sm:text-4xl md:text-[40px] md:leading-[3.25rem] font-bold tracking-tight">
+      <div className="w-full max-w-(--breakpoint-lg) mx-auto py-12 px-6">
+        <h2 className="text-3xl leading-10 sm:text-4xl md:text-[40px] md:leading-13 font-semibold tracking-tight">
           Design and Engage: <br />
           Build Smarter Spaces and Strategies
         </h2>
         <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-3 gap-6">
           {/* Card 1 */}
-          <div className="bg-muted rounded-xl pt-6 md:pt-8 pb-6 px-6 col-span-1 md:col-span-2 lg:col-span-1">
+          <div className="bg-muted rounded-xl p-6 col-span-1 md:col-span-2 lg:col-span-1">
             {/* Media 1 Mobile */}
-            <div className="md:hidden mb-6 aspect-video w-full bg-background border rounded-xl"></div>
+            <div className="md:hidden mb-6 aspect-video w-full bg-background rounded-xl"></div>
 
-            <span className="text-2xl font-semibold tracking-tight">
+            <span className="text-xl font-semibold tracking-tight">
               Plan Smarter
             </span>
 
@@ -40,21 +40,22 @@ const Features03Page = () => {
               </li>
             </ul>
 
-            <Button className="mt-12 w-full">
+            <Button className="mt-8 w-full">
               Build your strategy <ArrowRight />
             </Button>
           </div>
           {/* Media 1 Desktop */}
-          <div className="hidden md:block border border-border/80 bg-muted rounded-xl col-span-1 md:col-span-3 lg:col-span-2"></div>
+          <div className="hidden md:block bg-muted rounded-xl col-span-1 md:col-span-3 lg:col-span-2"></div>
 
           {/* Media 2 Desktop */}
-          <div className="hidden md:block border border-border/80 bg-muted rounded-xl col-span-1 md:col-span-3 lg:col-span-2"></div>
-          {/* Card 2 */}
-          <div className="bg-muted rounded-xl pt-6 md:pt-8 pb-6 px-6 col-span-1 md:col-span-2 lg:col-span-1">
-            {/* Media 2 Mobile */}
-            <div className="md:hidden mb-6 aspect-video w-full bg-background border rounded-xl"></div>
+          <div className="hidden md:block bg-muted rounded-xl col-span-1 md:col-span-3 lg:col-span-2"></div>
 
-            <span className="text-2xl font-semibold tracking-tight">
+          {/* Card 2 */}
+          <div className="bg-muted rounded-xl p-6 col-span-1 md:col-span-2 lg:col-span-1">
+            {/* Media 2 Mobile */}
+            <div className="md:hidden mb-6 aspect-video w-full bg-background rounded-xl"></div>
+
+            <span className="text-xl font-semibold tracking-tight">
               Plan Smarter
             </span>
 
@@ -79,7 +80,7 @@ const Features03Page = () => {
               </li>
             </ul>
 
-            <Button className="mt-12 w-full">
+            <Button className="mt-8 w-full">
               Build your strategy <ArrowRight />
             </Button>
           </div>

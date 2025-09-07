@@ -474,7 +474,6 @@ export const customizedComponents = {
     },
     { title: "Scrollable", type: "select", name: "select-10" },
     { title: "Controlled", type: "select", name: "select-11" },
-    { title: "With auto complete", type: "select", name: "select-12" },
   ],
   separator: [
     { title: "Default", type: "separator", name: "separator-01" },

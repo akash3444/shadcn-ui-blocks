@@ -33,7 +33,7 @@ export default function AccordionOutlineDemo() {
         <AccordionItem
           key={index}
           value={`item-${index}`}
-          className="border rounded-md px-4"
+          className="border last:border-b rounded-md px-4"
         >
           <AccordionTrigger>{title}</AccordionTrigger>
           <AccordionContent>{content}</AccordionContent>

@@ -49,7 +49,7 @@ export default function TabsSharpDemo() {
               variant="secondary"
               className="h-7 w-7 rounded-none"
             >
-              <Copy className="!h-3.5 !w-3.5" />
+              <Copy className="h-3.5! w-3.5!" />
             </Button>
           </div>
         </TabsContent>

@@ -69,38 +69,40 @@ const Pricing04 = () => {
 
   return (
     <div className="min-h-screen bg-accent flex flex-col items-center justify-center py-12 px-6">
-      <h1 className="text-5xl font-bold text-center tracking-tight">Pricing</h1>
+      <h1 className="text-5xl sm:text-6xl font-semibold text-center tracking-tighter">
+        Pricing
+      </h1>
       <Tabs
         value={selectedBillingPeriod}
         onValueChange={setSelectedBillingPeriod}
         className="mt-8"
       >
-        <TabsList className="h-11 bg-background border px-1.5 rounded-full">
+        <TabsList className="h-11 bg-background border rounded-full">
           <TabsTrigger
             value="monthly"
-            className="px-4 py-1.5 rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+            className="px-4 rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
           >
             Monthly
           </TabsTrigger>
           <TabsTrigger
             value="yearly"
-            className="px-4 py-1.5 rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+            className="px-4 rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
           >
             Yearly (Save {YEARLY_DISCOUNT}%)
           </TabsTrigger>
         </TabsList>
       </Tabs>
-      <div className="mt-12 max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-8 lg:gap-0">
+      <div className="mt-12 sm:mt-16 max-w-(--breakpoint-lg) mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-8 lg:gap-0">
         {plans.map((plan) => (
           <div
             key={plan.name}
             className={cn("relative p-6 bg-background border px-8", {
-              "shadow-[0px_2px_10px_0px_rgba(0,0,0,0.1)] py-14 z-[1] px-10 lg:-mx-2 overflow-hidden":
+              "shadow-[0px_2px_10px_0px_rgba(0,0,0,0.1)] py-14 z-1 px-10 lg:-mx-2 overflow-hidden":
                 plan.isPopular,
             })}
           >
             {plan.isPopular && (
-              <Badge className="absolute top-10 right-10 rotate-[45deg] rounded-none px-10 uppercase translate-x-1/2 -translate-y-1/2">
+              <Badge className="absolute top-10 right-10 rotate-45 rounded-none px-10 uppercase translate-x-1/2 -translate-y-1/2">
                 Most Popular
               </Badge>
             )}

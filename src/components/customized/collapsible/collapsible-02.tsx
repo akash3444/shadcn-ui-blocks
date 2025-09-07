@@ -43,7 +43,7 @@ export default function ShowMoreCollapsible() {
         <Button
           variant="outline"
           size="sm"
-          className="!mt-4 data-[state=open]:hidden"
+          className="mt-4! data-[state=open]:hidden"
         >
           Show more <ChevronDown />
         </Button>
@@ -52,7 +52,7 @@ export default function ShowMoreCollapsible() {
         <Button
           variant="outline"
           size="sm"
-          className="!mt-4 data-[state=open]:inline-flex hidden"
+          className="mt-4! data-[state=open]:inline-flex hidden"
         >
           Show less <ChevronUp />
         </Button>

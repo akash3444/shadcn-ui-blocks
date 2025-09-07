@@ -18,7 +18,7 @@ export const BackgroundPattern = () => {
         cy={1}
         cr={1}
         className={cn(
-          "[mask-image:radial-gradient(ellipse,rgba(0,0,0,0.3)_30%,black_50%)]",
+          "mask-[radial-gradient(ellipse,rgba(0,0,0,0.3)_30%,black_50%)]",
           "dark:fill-slate-700"
         )}
       />

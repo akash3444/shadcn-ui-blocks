@@ -38,7 +38,7 @@ export default function CardWithBackground() {
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="framework">Priority</Label>
               <Select>
-                <SelectTrigger id="framework">
+                <SelectTrigger id="framework" className="w-full">
                   <SelectValue placeholder="Select" />
                 </SelectTrigger>
                 <SelectContent position="popper">

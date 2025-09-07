@@ -16,7 +16,7 @@ export default function RadioGroupVariantDemo() {
         <RadioGroupItem
           value="soft"
           id="variant-soft"
-          className="text-indigo-500 border-indigo-500 [&_svg]:fill-indigo-500 border-none bg-indigo-500/25"
+          className="text-indigo-500 border-indigo-500 [&_svg]:fill-indigo-500 border-none bg-indigo-500/25 dark:bg-indigo-500/30"
         />
         <Label htmlFor="variant-soft">Soft</Label>
       </div>
@@ -24,7 +24,7 @@ export default function RadioGroupVariantDemo() {
         <RadioGroupItem
           value="solid"
           id="variant-solid"
-          className="text-indigo-500 border-indigo-500 border-none bg-indigo-500 [&_svg]:fill-background"
+          className="text-indigo-500 border-indigo-500 border-none bg-indigo-500 dark:bg-indigo-500 [&_svg]:fill-white"
         />
         <Label htmlFor="variant-solid">Solid</Label>
       </div>

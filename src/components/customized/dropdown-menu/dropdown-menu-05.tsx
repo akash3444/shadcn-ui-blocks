@@ -41,7 +41,7 @@ export default function DropdownMenuWithSubMenu() {
         <DropdownMenuSeparator />
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>
-            <Copy className="mr-1" />
+            <Copy className="mr-3 size-4 text-muted-foreground" />
             Copy
           </DropdownMenuSubTrigger>
           <DropdownMenuSubContent>

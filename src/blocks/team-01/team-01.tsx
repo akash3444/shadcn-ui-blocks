@@ -54,19 +54,19 @@ const Team01Page = () => {
   return (
     <div className="flex flex-col items-center justify-center py-14 px-4 sm:px-6 lg:px-8">
       <div className="text-center max-w-xl mx-auto">
-        <b className="text-center text-muted-foreground font-semibold text-base">
+        <b className="text-center text-muted-foreground font-semibold text-sm uppercase">
           We&apos;re hiring!
         </b>
-        <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
+        <h2 className="mt-4 text-4xl sm:text-5xl font-semibold tracking-tighter">
           Meet Our Team
         </h2>
-        <p className="mt-4 text-base sm:text-lg">
+        <p className="mt-4 text-base sm:text-lg text-muted-foreground">
           Our philosophy is simple — hire a team of diverse, passionate people
           and foster a culture that empowers you to do you best work.
         </p>
       </div>
 
-      <div className="mt-20 w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12 max-w-screen-lg mx-auto">
+      <div className="mt-20 w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12 max-w-(--breakpoint-lg) mx-auto">
         {teamMembers.map((member) => (
           <div key={member.name} className="text-center">
             <Image

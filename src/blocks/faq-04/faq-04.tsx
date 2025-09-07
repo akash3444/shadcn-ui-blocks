@@ -49,11 +49,11 @@ const faq = [
 const FAQ04 = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-12">
-      <div className="max-w-screen-lg">
-        <h2 className="text-4xl md:text-5xl !leading-[1.15] font-bold tracking-tight text-center">
+      <div className="max-w-(--breakpoint-lg)">
+        <h2 className="text-4xl md:text-5xl leading-[1.15]! font-semibold tracking-tighter text-center">
           Frequently Asked Questions
         </h2>
-        <p className="mt-3 text-lg text-center text-muted-foreground">
+        <p className="mt-3 text-xl text-center text-muted-foreground">
           Quick answers to common questions about our products and services.
         </p>
 

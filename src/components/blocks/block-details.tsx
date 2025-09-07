@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function BlockDetails() {
   return (
-    <section className="mt-12 prose prose-h2:text-3xl prose-h2:tracking-tight prose-p:text-xl prose-p:leading-loose prose-li:text-xl prose-li:leading-loose mx-auto">
+    <section className="dark:prose-invert mt-12 prose prose-h2:text-3xl prose-h2:tracking-tight prose-p:text-xl prose-p:leading-loose prose-li:text-xl prose-li:leading-loose mx-auto">
       <h2 id="what-is-shadcn-ui-blocks-">What is Shadcn UI Blocks?</h2>
       <p>
         In the world of modern web development, UI components play a crucial

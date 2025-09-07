@@ -28,7 +28,7 @@ export default function ComplexDropdownMenu() {
       <DropdownMenuTrigger className="flex items-center gap-3">
         <Avatar>
           <AvatarFallback className="bg-primary text-primary-foreground">
-            MW
+            M
           </AvatarFallback>
         </Avatar>
         <div className="text-start flex flex-col">

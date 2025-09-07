@@ -11,6 +11,7 @@ import { groups } from "@/description/app-sidebar";
 import Link from "next/link";
 import CarbonAd from "../carbon-ads";
 import { Logo } from "../logo";
+import { VersionSwitcher } from "../version-switcher";
 import AppSidebarMenuItem from "./sidebar-menu-item";
 
 export function AppSidebar() {
@@ -18,15 +19,20 @@ export function AppSidebar() {
     <Sidebar collapsible="icon">
       <SidebarHeader className="relative flex-row items-center justify-between p-4 group-data-[state=collapsed]:p-3 group-data-[state=collapsed]:justify-center border-b">
         <Link href="/">
-          <div className="text-foreground flex items-center font-bold gap-2">
+          <div className="text-foreground flex items-center font-semibold gap-2">
             <Logo className="h-7 w-7" />
-            <span className="group-data-[state=collapsed]:hidden whitespace-nowrap">
+            <span className="group-data-[state=collapsed]:hidden whitespace-nowrap tracking-tight">
               Shadcn UI Blocks
             </span>
           </div>
         </Link>
         {/* <SidebarTrigger className="group-data-[state=collapsed]:absolute group-data-[state=collapsed]:left-[calc(100%+0.2rem)]" /> */}
       </SidebarHeader>
+      <div className="p-4 group-data-[state=collapsed]:p-3 py-3">
+        <div className="group-data-[state=collapsed]:hidden">
+          <VersionSwitcher className="w-full justify-between" />
+        </div>
+      </div>
       <SidebarContent>
         {groups.map(({ label, items }) => (
           <SidebarGroup key={label}>
@@ -40,7 +46,9 @@ export function AppSidebar() {
             </SidebarGroupContent>
           </SidebarGroup>
         ))}
-        <CarbonAd className="sticky bottom-0" id="carbon-ad-sidebar" />
+        {process.env.NODE_ENV === "production" && (
+          <CarbonAd className="sticky bottom-0" id="carbon-ad-sidebar" />
+        )}
       </SidebarContent>
     </Sidebar>
   );

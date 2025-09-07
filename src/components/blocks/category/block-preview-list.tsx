@@ -52,20 +52,20 @@ const BlockPreviewList = ({ category, columns, q }: BlockPreviewListProps) => {
                   <div className="flex items-end justify-between gap-2">
                     <div className="flex items-center gap-3">
                       <h2
-                        className={cn("text-2xl font-bold", {
+                        className={cn("text-xl font-semibold tracking-tight", {
                           "text-xl": columnsPerRow === 3,
                         })}
                       >
                         {block.title}
                       </h2>
                       <Button
-                        className={cn("h-7 w-8", {
+                        className={cn("size-6", {
                           "h-5 w-6": columnsPerRow === 3,
                         })}
                         variant="secondary"
                       >
                         <Link href={`/blocks/${block.name}`}>
-                          <ExternalLinkIcon />
+                          <ExternalLinkIcon className="size-3.5" />
                         </Link>
                       </Button>
                     </div>

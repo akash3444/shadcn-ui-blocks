@@ -15,15 +15,18 @@ const features = [
 
 const Features02Page = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center py-12">
-      <div className="w-full">
-        <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-center">
+    <div className="min-h-screen flex items-center justify-center py-12 px-6">
+      <div className="grow w-full sm:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg)">
+        <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight">
           Ignite Your Imagination
         </h2>
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 max-w-md sm:max-w-screen-md lg:max-w-screen-lg w-full mx-auto px-6">
+        <div className="w-full mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
           {features.map((feature) => (
-            <div key={feature.title} className="flex flex-col text-start">
-              <div className="mb-5 sm:mb-6 w-full aspect-[4/5] bg-muted rounded-xl" />
+            <div
+              key={feature.title}
+              className="flex flex-col text-start w-full"
+            >
+              <div className="mb-5 sm:mb-6 w-full aspect-4/5 bg-muted rounded-xl" />
               <span className="text-2xl font-semibold tracking-tight">
                 {feature.title}
               </span>

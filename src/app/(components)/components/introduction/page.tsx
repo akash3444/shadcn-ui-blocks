@@ -17,7 +17,7 @@ export const metadata: Metadata = constructMetadata({
 const Introduction = () => {
   return (
     <div>
-      <div className="prose prose-headings:text-foreground prose-p:text-foreground/80 prose-h2:mb-4 prose-strong:text-foreground prose-p:text-[17px] prose-h2:text-2xl prose-blockquote:text-foreground prose-blockquote:not-italic prose-blockquote:bg-muted/40 prose-blockquote:py-2">
+      <div className="prose prose-headings:text-foreground prose-p:text-foreground/80 prose-h2:mb-4 prose-strong:text-foreground prose-p:text-[17px] prose-h2:text-2xl prose-blockquote:text-foreground prose-blockquote:not-italic prose-blockquote:bg-primary/5 prose-blockquote:p-3 prose-blockquote:border-l-primary/20! prose-blockquote:rounded">
         <MainHeading>Introduction</MainHeading>
         <p>
           Welcome to our collection of customized Shadcn UI components—designed

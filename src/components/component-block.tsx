@@ -43,11 +43,14 @@ const ComponentBlock: FC<BlockProps> = async ({
 
   return (
     <div
-      className={cn("bg-background rounded-md px-3 flex flex-col", className)}
+      className={cn(
+        "bg-background border border-primary/8 rounded-md flex flex-col",
+        className
+      )}
     >
-      <div className="h-10 flex items-center justify-between pl-1 border-b border-muted">
+      <div className="h-10 flex items-center justify-between border-b border-muted pl-4 pr-3">
         <div className="flex items-center gap-2">
-          <span className="text-[15px] font-semibold">{title}</span>
+          <span className="text-[15px] font-medium">{title}</span>
           {credit && (
             <a
               href={credit.link}
@@ -81,7 +84,7 @@ const ComponentBlock: FC<BlockProps> = async ({
           <CodeDialog code={code} registryUrl={registryUrl} />
         </div>
       </div>
-      <div className="flex-1 min-h-32 px-1 py-5 w-full rounded flex items-center justify-center">
+      <div className="flex-1 min-h-32 px-4 py-5 w-full rounded flex items-center justify-center">
         <DynamicComponent />
       </div>
     </div>

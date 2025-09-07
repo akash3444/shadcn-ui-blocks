@@ -3,7 +3,7 @@ import { ComponentProps } from "react";
 
 export const MainHeading = ({ className, ...props }: ComponentProps<"h1">) => (
   <h1
-    className={cn("text-4xl font-bold tracking-tight", className)}
+    className={cn("text-4xl font-semibold tracking-tight", className)}
     {...props}
   />
 );

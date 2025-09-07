@@ -98,10 +98,13 @@ const Testimonial06 = () => {
   return (
     <div className="min-h-screen w-full flex justify-center items-center py-12 px-6">
       <div className="w-full">
-        <h2 className="mb-14 text-5xl md:text-6xl font-bold text-center tracking-tight">
+        <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
           Testimonials
         </h2>
-        <div className="container w-full lg:max-w-screen-lg xl:max-w-screen-xl mx-auto px-12">
+        <p className="mt-3 text-center text-muted-foreground text-xl">
+          See what our users have to say about us
+        </p>
+        <div className="mt-14 container w-full lg:max-w-(--breakpoint-lg) xl:max-w-(--breakpoint-xl) mx-auto px-12">
           <Carousel setApi={setApi}>
             <CarouselContent>
               {testimonials.map((testimonial) => (
@@ -137,7 +140,7 @@ const TestimonialCard = ({
 }) => (
   <div className="mb-8 bg-accent rounded-xl py-8 px-6 sm:py-6">
     <div className="flex items-center justify-between gap-20">
-      <div className="hidden lg:block relative shrink-0 aspect-[3/4] max-w-[18rem] w-full bg-muted-foreground/20 rounded-xl">
+      <div className="hidden lg:block relative shrink-0 aspect-3/4 max-w-[18rem] w-full bg-muted-foreground/20 rounded-xl">
         <div className="absolute top-1/4 right-0 translate-x-1/2 h-12 w-12 bg-primary rounded-full flex items-center justify-center">
           <svg
             width="102"
@@ -175,8 +178,8 @@ const TestimonialCard = ({
             <StarIcon className="w-5 h-5 fill-muted-foreground stroke-muted-foreground" />
           </div>
         </div>
-        <p className="mt-6 text-lg sm:text-2xl lg:text-[1.75rem] xl:text-3xl leading-normal lg:!leading-normal font-semibold tracking-tight">
-          &quot;{testimonial.testimonial}&quot;
+        <p className="mt-6 text-lg sm:text-2xl lg:text-[1.75rem] xl:text-3xl leading-normal lg:leading-normal! font-semibold tracking-tight">
+          {testimonial.testimonial}
         </p>
         <div className="flex sm:hidden md:flex mt-6 items-center gap-4">
           <Avatar>

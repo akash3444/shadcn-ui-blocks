@@ -3,7 +3,7 @@ import React from "react";
 
 const BadgeGradientDemo = () => {
   return (
-    <Badge className="rounded-full border-none bg-gradient-to-r from-sky-500 to-indigo-600 text-white">
+    <Badge className="rounded-full border-none bg-linear-to-r from-sky-500 to-indigo-600 text-white">
       Gradient
     </Badge>
   );

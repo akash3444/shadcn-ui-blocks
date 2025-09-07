@@ -1,4 +1,4 @@
-import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
+import { Checkbox as CheckboxPrimitive } from "radix-ui";
 import { CircleCheck, Ruler, Smile, SwatchBook } from "lucide-react";
 
 const options = [

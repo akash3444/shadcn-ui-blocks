@@ -64,15 +64,15 @@ const teamMembers = [
 
 const Team05Page = () => {
   return (
-    <div className="flex flex-col justify-center py-8 sm:py-12 px-6 lg:px-8 max-w-screen-xl mx-auto gap-16">
+    <div className="flex flex-col justify-center py-8 sm:py-12 px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto gap-16">
       <div className="text-center max-w-2xl mx-auto">
-        <b className="text-center text-muted-foreground text-base font-semibold">
+        <b className="text-center text-muted-foreground text-sm font-semibold uppercase">
           We&apos;re hiring!
         </b>
-        <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
+        <h2 className="mt-3 text-4xl sm:text-5xl font-semibold tracking-tighter">
           Meet Our Team
         </h2>
-        <p className="mt-6 text-base sm:text-lg">
+        <p className="mt-6 text-base sm:text-lg text-muted-foreground">
           Our philosophy is simple — hire a team of diverse, passionate people
           and foster a culture that empowers you to do you best work.
         </p>

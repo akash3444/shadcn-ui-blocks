@@ -39,7 +39,7 @@ export default function TemplatesPage() {
     <div>
       {/* Hero */}
       <div className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden">
-        <div className="relative z-[1] max-w-4xl mx-auto text-center space-y-8 px-6">
+        <div className="relative z-1 max-w-4xl mx-auto text-center space-y-8 px-6">
           <div className="relative overflow-hidden inline-flex items-center justify-center bg-accent gap-4 py-1.5 pl-4 pr-2 rounded-full">
             <span className="text-sm">Built using</span>
             <div className="flex items-center justify-center gap-3">
@@ -49,7 +49,7 @@ export default function TemplatesPage() {
               <Logo className="h-6 w-6 [&_svg]:h-4 [&_svg]:w-4" />
             </div>
           </div>
-          <h1 className="text-[2.5rem] sm:text-5xl lg:text-6xl font-bold !leading-[1.15] tracking-tight">
+          <h1 className="text-[2.5rem] sm:text-5xl lg:text-6xl font-semibold leading-[1.15]! tracking-tighter">
             <span className="text-blue-500">Beautifully Designed</span> Shadcn
             UI Templates for Every Project
           </h1>
@@ -59,9 +59,9 @@ export default function TemplatesPage() {
             functionality, these templates help you build stunning UIs with
             ease!
           </p>
-          <Button size="lg" className="h-14 text-lg rounded-full" asChild>
+          <Button size="lg" className="h-13 !px-6 text-lg rounded-full" asChild>
             <Link href="#templates">
-              <Layers className="!w-5 !h-5 mr-2" /> Browse Templates
+              <Layers className="w-5! h-5! mr-2" /> Browse Templates
             </Link>
           </Button>
         </div>
@@ -70,7 +70,7 @@ export default function TemplatesPage() {
       {/* Main */}
       <section
         id="templates"
-        className="container max-w-screen-lg py-20 mx-auto px-6"
+        className="container max-w-(--breakpoint-lg) py-20 mx-auto px-6"
       >
         <div className="space-y-14">
           {categories.map((category) => {

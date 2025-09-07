@@ -61,15 +61,18 @@ const testimonials = [
 const Testimonial05 = () => (
   <div className="min-h-screen flex justify-center items-center py-12 px-6">
     <div>
-      <h2 className="mb-8 sm:mb-14 text-5xl md:text-6xl font-bold text-center tracking-tight">
-        Testimonials
+      <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
+        Loved by Developers
       </h2>
-      <div className="w-full max-w-screen-xl mx-auto">
+      <p className="mt-3 text-center text-muted-foreground text-xl">
+        See how developers and teams are achieving more with us
+      </p>
+      <div className="mt-8 sm:mt-14 w-full max-w-(--breakpoint-xl) mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 overflow-hidden border-r border-background">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="flex flex-col outline outline-1 outline-border px-6 py-8"
+              className="flex flex-col outline-solid outline-1 outline-border px-6 py-8"
             >
               <div className="flex items-center justify-center gap-2">
                 <StarIcon className="w-6 h-6 fill-yellow-500 stroke-yellow-500" />
@@ -82,7 +85,7 @@ const Testimonial05 = () => (
                 &quot;{testimonial.testimonial}&quot;
               </p>
               <div className="mt-auto flex items-center justify-center gap-3">
-                <Avatar>
+                <Avatar className="size-9">
                   <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
                     {testimonial.name.charAt(0)}
                   </AvatarFallback>

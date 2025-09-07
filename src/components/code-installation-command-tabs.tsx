@@ -38,17 +38,10 @@ export const CodeInstallationCommandTabs = ({
   const { copyToClipboard, isCopied } = useCopyToClipboard();
 
   return (
-    <Tabs
-      defaultValue={tabs[0].value}
-      className="w-full border rounded-lg overflow-hidden"
-    >
-      <TabsList className="w-full p-0 bg-primary/5 justify-start border-b border-primary/10 rounded-none gap-0 h-10">
+    <Tabs defaultValue={tabs[0].value}>
+      <TabsList>
         {tabs.map((tab) => (
-          <TabsTrigger
-            key={tab.value}
-            value={tab.value}
-            className="rounded-none h-full data-[state=active]:bg-transparent data-[state=active]:shadow-none border-b-2 border-transparent data-[state=active]:border-primary"
-          >
+          <TabsTrigger key={tab.value} value={tab.value}>
             <code className="text-[13px] flex items-center gap-2">
               <tab.icon className="h-4 w-4" /> {tab.name}
             </code>
@@ -57,9 +50,13 @@ export const CodeInstallationCommandTabs = ({
       </TabsList>
 
       {tabs.map((tab) => (
-        <TabsContent key={tab.value} value={tab.value} className="!mt-0">
-          <div className="h-12 flex items-center justify-between gap-2 rounded-md pl-3 pr-1.5">
-            <code className="text-[13px] line-clamp-1 grow">
+        <TabsContent
+          key={tab.value}
+          value={tab.value}
+          className="mt-0! border rounded-lg"
+        >
+          <div className="h-10 flex items-center justify-between gap-2 rounded-md pl-3 pr-1.5">
+            <code className="text-[13px] grow line-clamp-1">
               {getInstallationCommand(tab.value, registryUrl)}
             </code>
             <Button
@@ -71,9 +68,9 @@ export const CodeInstallationCommandTabs = ({
               }}
             >
               {isCopied ? (
-                <Check className="!h-3.5 !w-3.5 text-green-600" />
+                <Check className="h-3.5! w-3.5! text-green-600" />
               ) : (
-                <Copy className="!h-3.5 !w-3.5" />
+                <Copy className="h-3.5! w-3.5!" />
               )}
             </Button>
           </div>

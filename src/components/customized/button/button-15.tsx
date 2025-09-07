@@ -18,7 +18,7 @@ const ToggleButton = () => {
       onClick={() => setIsLiked(!isLiked)}
     >
       <Heart
-        className={cn("!h-5 !w-5", {
+        className={cn("h-5! w-5!", {
           "fill-rose-600 stroke-rose-600": isLiked,
         })}
       />

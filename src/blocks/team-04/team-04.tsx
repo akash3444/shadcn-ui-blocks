@@ -64,15 +64,15 @@ const teamMembers = [
 
 const Team04Page = () => {
   return (
-    <div className="flex flex-col justify-center py-8 sm:py-16 px-6 lg:px-8 max-w-screen-xl mx-auto gap-16">
+    <div className="flex flex-col justify-center py-8 sm:py-16 px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto gap-16">
       <div className="text-center max-w-2xl mx-auto">
-        <b className="text-center text-muted-foreground text-base font-semibold">
+        <b className="text-center text-muted-foreground text-sm font-semibold uppercase">
           We&apos;re hiring!
         </b>
-        <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
+        <h2 className="mt-3 text-4xl sm:text-5xl font-semibold tracking-tighter">
           Meet Our Team
         </h2>
-        <p className="mt-6 text-base sm:text-lg">
+        <p className="mt-6 text-base sm:text-lg text-muted-foreground">
           Our philosophy is simple — hire a team of diverse, passionate people
           and foster a culture that empowers you to do you best work.
         </p>
@@ -99,7 +99,7 @@ const Team04Page = () => {
             />
             <h3 className="mt-5 text-lg font-semibold">{member.name}</h3>
             <p className="text-muted-foreground text-sm">{member.title}</p>
-            <p className="mt-2 mb-6">{member.bio}</p>
+            <p className="mt-2 mb-6 text-pretty">{member.bio}</p>
             <div className="mt-auto flex items-center gap-4">
               <Link href="#" target="_blank">
                 <TwitterIcon className="stroke-muted-foreground h-5 w-5" />

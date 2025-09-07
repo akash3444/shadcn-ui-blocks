@@ -61,12 +61,14 @@ const teamMembers = [
 
 const Team02Page = () => {
   return (
-    <div className="flex flex-col justify-center py-8 sm:pt-12 sm:pb-20 px-6 lg:px-8 max-w-screen-xl mx-auto">
-      <b className="text-muted-foreground font-semibold">Our team</b>
-      <h2 className="mt-3 text-3xl md:text-4xl font-bold tracking-tighter">
+    <div className="flex flex-col justify-center py-8 sm:pt-12 sm:pb-20 px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto">
+      <b className="text-muted-foreground font-semibold text-sm uppercase">
+        Our team
+      </b>
+      <h2 className="mt-4 text-3xl md:text-4xl font-bold tracking-tighter">
         Some of the people you&apos;ll be working with
       </h2>
-      <p className="mt-4 text-base sm:text-lg">
+      <p className="mt-3 text-base sm:text-lg text-muted-foreground">
         We&apos;re a 100% remote team spread all across the world. Join us!
       </p>
 

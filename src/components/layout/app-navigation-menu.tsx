@@ -29,7 +29,7 @@ export function AppNavigationMenu() {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ScrollArea className="h-[460px]">
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:grid-cols-3 lg:w-[900px]">
+              <ul className="grid w-[400px] gap-3 p-1 md:w-[500px] md:grid-cols-2 lg:grid-cols-3 lg:w-[900px]">
                 {components.map((component) => (
                   <div key={component.title}>
                     <ListItem
@@ -50,12 +50,12 @@ export function AppNavigationMenu() {
             Blocks
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[400px] ">
+            <ul className="grid w-[400px] gap-2 p-1 md:w-[500px] md:grid-cols-2 lg:w-[400px] ">
               {blockCategories.map((category) => (
                 <ListItem
                   key={category.name}
                   href={`/blocks/categories/${category.name}`}
-                  className="pt-1.5"
+                  className="py-0 pb-2"
                 >
                   <div className="flex items-center justify-between text-foreground">
                     <span className="capitalize font-medium">
@@ -95,7 +95,7 @@ const ListItem = React.forwardRef<
         <Link
           ref={ref}
           className={cn(
-            "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
           {...props}
@@ -105,9 +105,9 @@ const ListItem = React.forwardRef<
             <div className="text-sm font-medium leading-none">{title}</div>
           )}
           {children && (
-            <p className="mt-2 line-clamp-2 text-sm leading-snug text-muted-foreground">
+            <div className="mt-2 line-clamp-2 text-sm leading-snug text-muted-foreground">
               {children}
-            </p>
+            </div>
           )}
         </Link>
       </NavigationMenuLink>

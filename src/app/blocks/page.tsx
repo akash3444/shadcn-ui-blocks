@@ -1,6 +1,5 @@
 import BlockPreviewList from "@/components/blocks/category/block-preview-list";
 import { Navbar } from "@/components/layout/navbar";
-import { ProBanner } from "@/components/layout/pro-banner";
 import { absoluteUrl } from "@/lib/utils";
 import { Metadata } from "next";
 
@@ -19,9 +18,8 @@ const BlocksPage = async (props: {
   const searchParams = await props.searchParams;
   return (
     <>
-      <ProBanner />
       <Navbar />
-      <div className="max-w-screen-2xl mx-auto py-12 sm:py-16">
+      <div className="max-w-(--breakpoint-2xl) mx-auto py-12 sm:py-16">
         <BlockPreviewList {...searchParams} />
       </div>
     </>

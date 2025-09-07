@@ -40,8 +40,8 @@ const Footer04Page = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <div className="grow bg-muted" />
-      <footer>
-        <div className="max-w-screen-xl mx-auto">
+      <footer className="border-t">
+        <div className="max-w-(--breakpoint-xl) mx-auto">
           <div className="py-12 flex flex-col sm:flex-row items-start justify-between gap-x-8 gap-y-10 px-6 xl:px-0">
             <div>
               {/* Logo */}
@@ -79,7 +79,7 @@ const Footer04Page = () => {
 
             {/* Subscribe Newsletter */}
             <div className="max-w-xs w-full">
-              <h6 className="font-semibold">Stay up to date</h6>
+              <h6 className="font-medium">Stay up to date</h6>
               <form className="mt-6 flex items-center gap-2">
                 <Input type="email" placeholder="Enter your email" />
                 <Button>Subscribe</Button>

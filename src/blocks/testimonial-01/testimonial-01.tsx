@@ -64,10 +64,10 @@ const testimonials = [
 const Testimonial01 = () => (
   <div className="min-h-screen flex justify-center items-center py-12 px-6">
     <div>
-      <h2 className="mb-14 text-5xl md:text-6xl font-bold text-center tracking-tight">
+      <h2 className="mb-14 text-5xl md:text-6xl font-semibold text-center tracking-[-0.03em]">
         Testimonials
       </h2>
-      <div className="max-w-screen-xl mx-auto columns-1 md:columns-2 lg:columns-3 gap-8">
+      <div className="max-w-(--breakpoint-xl) mx-auto columns-1 md:columns-2 lg:columns-3 gap-8">
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.id}
@@ -75,7 +75,7 @@ const Testimonial01 = () => (
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <Avatar>
+                <Avatar className="size-10">
                   <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
                     {testimonial.name.charAt(0)}
                   </AvatarFallback>

@@ -12,7 +12,6 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import registry from "../../../../registry.json";
 import BlockDetails from "@/components/blocks/block-details";
-import { ProBanner } from "@/components/layout/pro-banner";
 
 export const generateStaticParams = async () => {
   return blockList.map(({ name }) => ({
@@ -52,16 +51,15 @@ const BlockPage = async (props: { params: Promise<{ block: string }> }) => {
 
   return (
     <BlockProvider>
-      <ProBanner />
       <Navbar />
-      <div className="max-w-screen-2xl mx-auto py-8 px-4">
+      <div className="max-w-(--breakpoint-2xl) mx-auto mt-14 py-8 px-4">
         <MainHeading>{title}</MainHeading>
         {description && (
           <DescriptionText className="mt-1">{description}</DescriptionText>
         )}
 
         <Tabs defaultValue="preview" className="mt-6">
-          <div className="mb-4 flex items-center gap-2 justify-between pr-1.5">
+          <div className="mb-1 flex items-center gap-2 justify-between pr-1.5">
             <TabsList>
               <TabsTrigger value="preview">Preview</TabsTrigger>
               <TabsTrigger value="code">Code</TabsTrigger>

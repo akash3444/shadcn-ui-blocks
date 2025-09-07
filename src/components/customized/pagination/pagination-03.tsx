@@ -24,7 +24,7 @@ export default function PaginationWithSecondaryButton() {
             href="#"
             isActive
             className={cn(
-              "!shadow-none hover:!text-secondary-foreground !border-none",
+              "shadow-none! hover:text-secondary-foreground! border-none!",
               buttonVariants({
                 variant: "secondary",
                 size: "icon",

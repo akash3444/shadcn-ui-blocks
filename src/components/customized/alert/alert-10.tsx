@@ -19,17 +19,19 @@ export default function AlertWithActionsDemo() {
     <div className="w-full">
       {isAlertVisible && (
         <Alert className="flex justify-between items-center pr-2 [&>svg+div]:translate-y-0">
-          <CircleFadingArrowUpIcon className="h-4 w-4" />
-          <div className="flex-col justify-center">
-            <AlertTitle>Update Available</AlertTitle>
-            <AlertDescription>
-              A new version of the app is now available.
-            </AlertDescription>
+          <div className="flex items-start gap-3">
+            <CircleFadingArrowUpIcon className="mt-0.5 h-4 w-4" />
+            <div className="flex-col justify-center">
+              <AlertTitle>Update Available</AlertTitle>
+              <AlertDescription>
+                A new version of the app is now available.
+              </AlertDescription>
+            </div>
           </div>
           <Button
             size="icon"
             variant="ghost"
-            className="!pl-0"
+            className="pl-0!"
             onClick={hideAlert}
           >
             <XIcon className="h-5 w-5" />

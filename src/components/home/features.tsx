@@ -11,7 +11,7 @@ import { FAQ } from "./faq";
 
 export const Features = () => {
   return (
-    <section className="py-20 max-w-screen-lg mx-auto px-6 lg:px-0">
+    <section className="py-20 max-w-(--breakpoint-lg) mx-auto px-6 lg:px-0">
       <h2 className="text-5xl font-bold text-center">Core Features</h2>
       <div className="mt-20 mb-14 grid grid-cols-1 md:grid-cols-2 gap-8">
         <Card className="bg-secondary/40 shadow-none">

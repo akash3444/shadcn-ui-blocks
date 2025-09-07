@@ -65,7 +65,6 @@ export const componentsMap: ComponentsMap = {
     columns: 3,
     description:
       "A modal dialog that interrupts the user with important content and expects a response.",
-    isNew: true,
   },
   avatar: {
     title: "Avatar",
@@ -123,7 +122,6 @@ export const componentsMap: ComponentsMap = {
     blockName: "collapsible",
     description: "An interactive component which expands/collapses a panel.",
     columns: 3,
-    isNew: true,
   },
   checkbox: {
     title: "Checkbox",
@@ -142,7 +140,6 @@ export const componentsMap: ComponentsMap = {
     columns: 3,
     description:
       "Displays a menu to the user — such as a set of actions or functions — triggered by a button.",
-    isNew: true,
   },
   input: {
     title: "Input",

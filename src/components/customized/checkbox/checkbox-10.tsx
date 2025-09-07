@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
+import { Checkbox as CheckboxPrimitive } from "radix-ui";
 import { CircleCheck } from "lucide-react";
 
 const colors = ["indigo", "rose", "sky", "green", "orange"];

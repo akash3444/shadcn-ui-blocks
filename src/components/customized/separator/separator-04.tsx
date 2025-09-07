@@ -30,7 +30,7 @@ export default function SeparatorDashed() {
           </div>
           <div className="relative my-4 flex items-center justify-center overflow-hidden">
             <Separator className="h-0 border-t border-dashed bg-transparent" />
-            <div className="px-2 text-center bg-background text-sm">OR</div>
+            <div className="px-2 text-center bg-card text-sm">OR</div>
             <Separator className="h-0 border-t border-dashed bg-transparent" />
           </div>
           <div className="grid w-full gap-2">

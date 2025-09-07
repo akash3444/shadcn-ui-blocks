@@ -17,7 +17,7 @@ export default function SelectMenuPositionDemo() {
       <div className="grow">
         <Label className="mb-2 block">Popper (Default)</Label>
         <Select defaultValue="apple">
-          <SelectTrigger>
+          <SelectTrigger className="w-full">
             <SelectValue placeholder="Select a fruit" />
           </SelectTrigger>
           <SelectContent position="popper">
@@ -35,7 +35,7 @@ export default function SelectMenuPositionDemo() {
       <div className="grow">
         <Label className="mb-2 block">Item Aligned</Label>
         <Select defaultValue="apple">
-          <SelectTrigger>
+          <SelectTrigger className="w-full">
             <SelectValue placeholder="Select a fruit" />
           </SelectTrigger>
           <SelectContent position="item-aligned">

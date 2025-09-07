@@ -4,9 +4,6 @@
   "type": "registry:block",
   "title": "Navbar 01",
   "description": "A simple navbar block",
-  "dependencies": [
-    "@radix-ui/react-navigation-menu"
-  ],
   "registryDependencies": [
     "button",
     "navigation-menu",
@@ -15,7 +12,7 @@
   "files": [
     {
       "path": "src/blocks/navbar-01/navbar-01.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\nimport { Logo } from \"./logo\";\nimport { NavMenu } from \"./nav-menu\";\nimport { NavigationSheet } from \"./navigation-sheet\";\n\nconst Navbar01Page = () => {\n  return (\n    <div className=\"min-h-screen bg-muted\">\n      <nav className=\"h-16 bg-background border-b\">\n        <div className=\"h-full flex items-center justify-between max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8\">\n          <Logo />\n\n          {/* Desktop Menu */}\n          <NavMenu className=\"hidden md:block\" />\n\n          <div className=\"flex items-center gap-3\">\n            <Button variant=\"outline\" className=\"hidden sm:inline-flex\">\n              Sign In\n            </Button>\n            <Button>Get Started</Button>\n\n            {/* Mobile Menu */}\n            <div className=\"md:hidden\">\n              <NavigationSheet />\n            </div>\n          </div>\n        </div>\n      </nav>\n    </div>\n  );\n};\n\nexport default Navbar01Page;\n",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { Logo } from \"./logo\";\nimport { NavMenu } from \"./nav-menu\";\nimport { NavigationSheet } from \"./navigation-sheet\";\n\nconst Navbar01Page = () => {\n  return (\n    <div className=\"min-h-screen bg-muted\">\n      <nav className=\"h-16 bg-background border-b\">\n        <div className=\"h-full flex items-center justify-between max-w-(--breakpoint-xl) mx-auto px-4 sm:px-6 lg:px-8\">\n          <Logo />\n\n          {/* Desktop Menu */}\n          <NavMenu className=\"hidden md:block\" />\n\n          <div className=\"flex items-center gap-3\">\n            <Button variant=\"outline\" className=\"hidden sm:inline-flex\">\n              Sign In\n            </Button>\n            <Button>Get Started</Button>\n\n            {/* Mobile Menu */}\n            <div className=\"md:hidden\">\n              <NavigationSheet />\n            </div>\n          </div>\n        </div>\n      </nav>\n    </div>\n  );\n};\n\nexport default Navbar01Page;\n",
       "type": "registry:block",
       "target": "components/navbar-01/navbar-01.tsx"
     },
@@ -27,13 +24,13 @@
     },
     {
       "path": "src/blocks/navbar-01/nav-menu.tsx",
-      "content": "import {\n  NavigationMenu,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList,\n} from \"@/components/ui/navigation-menu\";\nimport { NavigationMenuProps } from \"@radix-ui/react-navigation-menu\";\nimport Link from \"next/link\";\n\nexport const NavMenu = (props: NavigationMenuProps) => (\n  <NavigationMenu {...props}>\n    <NavigationMenuList className=\"gap-6 space-x-0 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start\">\n      <NavigationMenuItem>\n        <NavigationMenuLink asChild>\n          <Link href=\"#\">Home</Link>\n        </NavigationMenuLink>\n      </NavigationMenuItem>\n      <NavigationMenuItem>\n        <NavigationMenuLink asChild>\n          <Link href=\"#\">Blog</Link>\n        </NavigationMenuLink>\n      </NavigationMenuItem>\n      <NavigationMenuItem>\n        <NavigationMenuLink asChild>\n          <Link href=\"#\">About</Link>\n        </NavigationMenuLink>\n      </NavigationMenuItem>\n      <NavigationMenuItem>\n        <NavigationMenuLink asChild>\n          <Link href=\"#\">Contact Us</Link>\n        </NavigationMenuLink>\n      </NavigationMenuItem>\n    </NavigationMenuList>\n  </NavigationMenu>\n);\n",
+      "content": "import {\n  NavigationMenu,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList,\n} from \"@/components/ui/navigation-menu\";\nimport Link from \"next/link\";\nimport { ComponentProps } from \"react\";\n\nexport const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => (\n  <NavigationMenu {...props}>\n    <NavigationMenuList className=\"gap-3 space-x-0 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start data-[orientation=vertical]:justify-start\">\n      <NavigationMenuItem>\n        <NavigationMenuLink asChild>\n          <Link href=\"#\">Home</Link>\n        </NavigationMenuLink>\n      </NavigationMenuItem>\n      <NavigationMenuItem>\n        <NavigationMenuLink asChild>\n          <Link href=\"#\">Blog</Link>\n        </NavigationMenuLink>\n      </NavigationMenuItem>\n      <NavigationMenuItem>\n        <NavigationMenuLink asChild>\n          <Link href=\"#\">About</Link>\n        </NavigationMenuLink>\n      </NavigationMenuItem>\n      <NavigationMenuItem>\n        <NavigationMenuLink asChild>\n          <Link href=\"#\">Contact Us</Link>\n        </NavigationMenuLink>\n      </NavigationMenuItem>\n    </NavigationMenuList>\n  </NavigationMenu>\n);\n",
       "type": "registry:component",
       "target": "components/navbar-01/nav-menu.tsx"
     },
     {
       "path": "src/blocks/navbar-01/navigation-sheet.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\nimport { Sheet, SheetContent, SheetTrigger } from \"@/components/ui/sheet\";\nimport { Menu } from \"lucide-react\";\nimport { Logo } from \"./logo\";\nimport { NavMenu } from \"./nav-menu\";\n\nexport const NavigationSheet = () => {\n  return (\n    <Sheet>\n      <SheetTrigger asChild>\n        <Button variant=\"outline\" size=\"icon\">\n          <Menu />\n        </Button>\n      </SheetTrigger>\n      <SheetContent>\n        <Logo />\n        <NavMenu orientation=\"vertical\" className=\"mt-12\" />\n      </SheetContent>\n    </Sheet>\n  );\n};\n",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { Sheet, SheetContent, SheetTrigger } from \"@/components/ui/sheet\";\nimport { Menu } from \"lucide-react\";\nimport { Logo } from \"./logo\";\nimport { NavMenu } from \"./nav-menu\";\n\nexport const NavigationSheet = () => {\n  return (\n    <Sheet>\n      <SheetTrigger asChild>\n        <Button variant=\"outline\" size=\"icon\">\n          <Menu />\n        </Button>\n      </SheetTrigger>\n      <SheetContent className=\"px-6 py-3\">\n        <Logo />\n        <NavMenu orientation=\"vertical\" className=\"mt-6 [&>div]:h-full\" />\n      </SheetContent>\n    </Sheet>\n  );\n};\n",
       "type": "registry:component",
       "target": "components/navbar-01/navigation-sheet.tsx"
     }
