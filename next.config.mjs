@@ -29,9 +29,23 @@ const nextConfig = {
     ],
   },
   outputFileTracingIncludes: {
-    "/blocks/*": ["./src/**/*"],
+    "/blocks/*": ["./src/**/*.{js,ts,tsx}"],
   },
-  experimental: {},
+  outputFileTracingExcludes: {
+    "*": [
+      ".next/cache/webpack",
+      ".pnpm-store/**/*",
+      ".git/**/*",
+      "public/images/blocks/**/*",
+      "public/images/templates/**/*",
+      "public/r/**/*",
+      "node_modules/@shikijs/langs/**/*",
+      "node_modules/@shikijs/themes/**/*",
+    ],
+  },
+  experimental: {
+    outputFileTracingRoot: process.cwd(),
+  },
 };
 
 export default nextConfig;
