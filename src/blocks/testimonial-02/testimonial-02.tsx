@@ -64,7 +64,7 @@ const testimonials = [
 const Testimonial02 = () => (
   <div className="min-h-screen flex justify-center items-center py-12 px-6">
     <div>
-      <h2 className="mb-14 text-5xl md:text-6xl font-bold text-center tracking-tight">
+      <h2 className="mb-14 text-5xl md:text-6xl font-semibold text-center tracking-[-0.03em]">
         Testimonials
       </h2>
       <div className="max-w-(--breakpoint-xl) mx-auto columns-1 md:columns-2 lg:columns-3 gap-8">

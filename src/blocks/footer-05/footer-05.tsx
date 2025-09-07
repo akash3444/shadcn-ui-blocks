@@ -38,7 +38,7 @@ const Footer05Page = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <div className="grow bg-muted" />
-      <footer>
+      <footer className="border-t">
         <div className="max-w-(--breakpoint-xl) mx-auto">
           <div className="py-12 flex flex-col justify-start items-center">
             {/* Logo */}
@@ -65,7 +65,7 @@ const Footer05Page = () => {
                 <li key={title}>
                   <Link
                     href={href}
-                    className="text-muted-foreground hover:text-foreground font-medium"
+                    className="text-muted-foreground hover:text-foreground"
                   >
                     {title}
                   </Link>

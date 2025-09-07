@@ -18,8 +18,11 @@ const Logos07Page = () => {
           More than 2.2 million companies worldwide already trust us
         </p>
 
-        <div className="mt-20 max-w-(--breakpoint-lg) space-y-8">
-          <Marquee pauseOnHover className="[--duration:30s] [&_svg]:mr-10">
+        <div className="mt-14 max-w-(--breakpoint-xl) space-y-8">
+          <Marquee
+            pauseOnHover
+            className="[--duration:40s] [&_svg]:mr-10 mask-x-from-70% mask-x-to-90%"
+          >
             <Logo01 />
             <Logo02 />
             <Logo03 />
@@ -32,7 +35,7 @@ const Logos07Page = () => {
           <Marquee
             pauseOnHover
             reverse
-            className="[--duration:30s] [&_svg]:mr-10"
+            className="[--duration:40s] [&_svg]:mr-10 mask-x-from-70% mask-x-to-90%"
           >
             <Logo01 />
             <Logo02 />

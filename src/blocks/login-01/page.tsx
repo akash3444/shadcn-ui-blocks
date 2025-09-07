@@ -39,7 +39,7 @@ const Login01Page = () => {
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-xs w-full flex flex-col items-center">
         <Logo className="h-9 w-9" />
-        <p className="mt-4 text-xl font-bold tracking-tight">
+        <p className="mt-4 text-xl font-semibold tracking-tight">
           Log in to Shadcn UI Blocks
         </p>
 

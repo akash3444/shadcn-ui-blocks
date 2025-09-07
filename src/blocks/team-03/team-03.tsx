@@ -7,7 +7,7 @@ const teamMembers = [
   {
     name: "John Doe",
     title: "Founder & CEO",
-    bio: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
+    bio: "Former co-founder of Opendoor. Early staff at Spotify.",
     imageUrl:
       "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
@@ -52,8 +52,10 @@ const Team03Page = () => {
   return (
     <div className="flex flex-col lg:flex-row justify-center py-8 sm:py-16 px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto gap-14">
       <div className="sm:max-w-sm lg:max-w-xs">
-        <b className="text-muted-foreground font-semibold">Our team</b>
-        <h2 className="mt-3 text-3xl md:text-4xl font-bold tracking-tight">
+        <b className="text-muted-foreground font-semibold text-sm uppercase">
+          Our team
+        </b>
+        <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tighter">
           Leadership Team
         </h2>
         <p className="mt-4 text-base sm:text-lg">

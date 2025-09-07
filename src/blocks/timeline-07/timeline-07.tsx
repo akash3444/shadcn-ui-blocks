@@ -75,7 +75,7 @@ export default function Timeline() {
                   {/* Timeline Dot */}
                   <div className="absolute h-3 w-3 -translate-x-1/2 -left-px top-4 rounded-full border-2 border-primary bg-background" />
 
-                  <h3 className="text-lg sm:text-xl font-semibold">{title}</h3>
+                  <h3 className="mt-2 text-lg font-semibold">{title}</h3>
                   <p className="text-sm sm:text-base text-muted-foreground">
                     {description}
                   </p>

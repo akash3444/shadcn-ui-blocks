@@ -8,9 +8,12 @@ export const Hero = () => {
   return (
     <div className="flex items-center min-h-screen justify-center px-4 sm:px-6 xl:px-0">
       <div className="text-center w-full">
-        <Link href="/blocks/categories/pricing">
-          <Badge className="rounded-full py-0.5">
-            Pricing blocks are available now! 🚀
+        <Link href="/components/accordion">
+          <Badge
+            variant="secondary"
+            className="rounded-full py-0.5 border-border"
+          >
+            New: v4 is now live! 🚀
             <ArrowUpRight className="ml-2 h-4 w-4" />
           </Badge>
         </Link>

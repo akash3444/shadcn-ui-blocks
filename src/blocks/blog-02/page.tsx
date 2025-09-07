@@ -29,11 +29,11 @@ const Blog02Page = () => {
 
       <div className="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
-          <Card key={i} className="shadow-none overflow-hidden rounded-md">
+          <Card key={i} className="shadow-none overflow-hidden rounded-md py-0">
             <CardHeader className="p-0">
               <div className="aspect-video bg-muted w-full border-b" />
             </CardHeader>
-            <CardContent className="py-6">
+            <CardContent className="pb-6">
               <div className="flex items-center gap-3">
                 <Badge className="bg-primary/5 text-primary hover:bg-primary/5 shadow-none">
                   Technology
@@ -51,7 +51,7 @@ const Blog02Page = () => {
                 Suspendisse varius enim in eros.
               </p>
 
-              <Button className="mt-6 shadow-none">
+              <Button size="sm" className="mt-6 shadow-none">
                 Read more <ChevronRight />
               </Button>
             </CardContent>

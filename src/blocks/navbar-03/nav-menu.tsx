@@ -17,18 +17,16 @@ import { foods, travelMenuItems } from "./config";
 
 export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => (
   <NavigationMenu {...props}>
-    <NavigationMenuList className="gap-0 space-x-0 text-sm">
+    <NavigationMenuList className="gap-1 space-x-0 text-sm">
       <NavigationMenuItem>
-        <Button variant="ghost" className="text-[15px] font-normal" asChild>
+        <Button variant="ghost" asChild>
           <Link href="#">Home</Link>
         </Button>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavigationMenuTrigger className="text-[15px] font-normal">
-          Food
-        </NavigationMenuTrigger>
+        <NavigationMenuTrigger>Food</NavigationMenuTrigger>
         <NavigationMenuContent>
-          <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+          <ul className="grid w-[400px] gap-3 p-1 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
             {foods.map((food) => (
               <ListItem
                 key={food.title}
@@ -43,11 +41,9 @@ export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => (
         </NavigationMenuContent>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavigationMenuTrigger className="text-[15px] font-normal">
-          Travel
-        </NavigationMenuTrigger>
+        <NavigationMenuTrigger>Travel</NavigationMenuTrigger>
         <NavigationMenuContent>
-          <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+          <ul className="grid w-[400px] gap-3 p-1 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
             {travelMenuItems.map((menuItem) => (
               <ListItem
                 key={menuItem.title}
@@ -80,7 +76,7 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <props.icon className="mb-4 h-6 w-6" />
+          <props.icon className="mb-4 size-6" />
           <div className="text-sm font-semibold leading-none">{title}</div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}

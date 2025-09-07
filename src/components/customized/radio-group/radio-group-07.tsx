@@ -20,7 +20,7 @@ const RadioCardsDemo = () => {
   return (
     <RadioGroupPrimitive.Root
       defaultValue={options[0].value}
-      className="max-w-sm w-full grid grid-cols-3 gap-3"
+      className="max-w-md w-full grid grid-cols-3 gap-3"
     >
       {options.map((option) => (
         <RadioGroupPrimitive.Item

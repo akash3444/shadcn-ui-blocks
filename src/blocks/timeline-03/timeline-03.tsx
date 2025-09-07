@@ -51,22 +51,20 @@ export default function Timeline() {
 
               {/* Content */}
               <div className="space-y-3">
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2.5">
                   <div className="shrink-0 h-9 w-9 bg-accent rounded-full flex items-center justify-center">
                     <Building2 className="h-5 w-5 text-muted-foreground" />
                   </div>
-                  <span className="text-base sm:text-lg font-semibold">
-                    {company}
-                  </span>
+                  <span className="text-base font-medium">{company}</span>
                 </div>
                 <div>
-                  <h3 className="text-lg sm:text-xl font-medium">{title}</h3>
+                  <h3 className="text-lg font-semibold">{title}</h3>
                   <div className="flex items-center gap-2 mt-1 text-sm">
                     <Calendar className="h-4 w-4" />
                     <span>{period}</span>
                   </div>
                 </div>
-                <p className="text-sm sm:text-base text-muted-foreground">
+                <p className="text-sm sm:text-base text-muted-foreground text-pretty">
                   {description}
                 </p>
                 <div className="flex flex-wrap gap-2">

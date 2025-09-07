@@ -58,11 +58,11 @@ const testimonials = [
   },
 ];
 
-const Testimonial01 = () => (
+const Testimonial03 = () => (
   <div className="min-h-screen flex justify-center items-center py-12 px-6">
     <div>
-      <h2 className="mb-14 text-5xl md:text-6xl font-bold text-center tracking-tight">
-        Testimonials
+      <h2 className="mb-16 text-5xl font-semibold text-center tracking-[-0.03em]">
+        What Our Users Say
       </h2>
       <div className="max-w-(--breakpoint-xl) mx-auto columns-1 md:columns-2 lg:columns-3 gap-8">
         {testimonials.map((testimonial) => (
@@ -108,4 +108,4 @@ const Testimonial01 = () => (
   </div>
 );
 
-export default Testimonial01;
+export default Testimonial03;

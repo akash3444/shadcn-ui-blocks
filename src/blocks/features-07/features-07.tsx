@@ -69,19 +69,22 @@ const Features07Page = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-(--breakpoint-xl) w-full py-10 px-6">
-        <h2 className="text-4xl md:text-5xl md:leading-14 font-bold tracking-tight max-w-xl md:text-center md:mx-auto">
-          Boost Your Strategy with Smart Features
+        <h2 className="text-4xl md:text-[2.75rem] md:leading-[1.2] font-semibold tracking-[-0.03em] sm:max-w-xl text-pretty sm:mx-auto sm:text-center">
+          Strengthen Your Strategy
         </h2>
-        <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature) => (
-            <Link key={feature.title} href="#">
-              <div className="flex gap-6 hover:ring-3 rounded-lg p-2 -mx-2 sm:mx-0 max-w-lg">
+        <p className="mt-2 text-muted-foreground text-lg sm:text-xl sm:text-center">
+          Enhance your strategy with intelligent tools designed for success.
+        </p>
+        <div className="mt-12 sm:mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-y-8">
+          {features.map((feature, index) => (
+            <Link key={index} href="#">
+              <div className="flex gap-6 items-center rounded-lg -mx-2 sm:mx-0 max-w-lg">
                 <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
                 <div className="">
-                  <span className="font-semibold tracking-tight text-lg">
+                  <span className="font-semibold tracking-[-0.015em] text-lg">
                     {feature.title}
                   </span>
-                  <p className="mt-1 text-sm text-muted-foreground">
+                  <p className="mt-1 text-sm text-muted-foreground text-pretty">
                     {feature.description}
                   </p>
                 </div>

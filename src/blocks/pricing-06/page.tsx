@@ -54,8 +54,10 @@ const plans = [
 const Pricing06 = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center py-12 px-6">
-      <h1 className="text-5xl font-bold text-center tracking-tight">Pricing</h1>
-      <div className="mt-12 max-w-(--breakpoint-lg) mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-8 lg:gap-0">
+      <h1 className="text-5xl font-semibold text-center tracking-tighter">
+        Pricing
+      </h1>
+      <div className="mt-12 sm:mt-16 max-w-(--breakpoint-lg) mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-10 lg:gap-0">
         {plans.map((plan) => (
           <div
             key={plan.name}
@@ -88,7 +90,7 @@ const Pricing06 = () => {
             <Button
               variant={plan.isPopular ? "default" : "outline"}
               size="lg"
-              className="w-full mt-6 rounded-full"
+              className="w-full mt-6"
             >
               {plan.buttonText}
             </Button>

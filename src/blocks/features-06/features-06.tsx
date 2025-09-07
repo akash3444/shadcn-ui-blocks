@@ -44,30 +44,28 @@ const Features06Page = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-(--breakpoint-lg) w-full py-10 px-6">
-        <h2 className="text-4xl md:text-5xl md:leading-14 font-bold tracking-tight max-w-xl md:text-center md:mx-auto">
-          Boost Your Strategy with Smart Features
+        <h2 className="text-4xl md:text-[2.75rem] md:leading-[1.2] font-semibold tracking-[-0.03em] sm:max-w-xl text-pretty sm:mx-auto sm:text-center">
+          Strengthen Your Strategy
         </h2>
+        <p className="mt-2 text-muted-foreground text-lg sm:text-xl sm:text-center">
+          Enhance your strategy with intelligent tools designed for success.
+        </p>
         <div className="mt-8 md:mt-16 w-full mx-auto space-y-20">
           {features.map((feature) => (
             <div
               key={feature.category}
-              className="flex flex-col md:flex-row items-center gap-x-20 gap-y-6 md:odd:flex-row-reverse"
+              className="flex flex-col md:flex-row items-center gap-x-12 gap-y-6 md:even:flex-row-reverse"
             >
-              <div className="w-full aspect-6/4 bg-muted rounded-xl border border-border/50 basis-1/2" />
+              <div className="w-full aspect-[4/3] bg-muted rounded-xl border border-border/50 basis-1/2" />
               <div className="basis-1/2 shrink-0">
-                <span className="uppercase font-semibold text-sm text-muted-foreground">
+                <span className="uppercase font-medium text-sm text-muted-foreground">
                   {feature.category}
                 </span>
-                <h4 className="my-3 text-3xl font-semibold tracking-tight">
+                <h4 className="my-3 text-2xl font-semibold tracking-tight">
                   {feature.title}
                 </h4>
-                <p className="text-muted-foreground text-[17px]">
-                  {feature.details}
-                </p>
-                <Button
-                  asChild
-                  className="mt-6 rounded-full min-w-40 text-[15px]"
-                >
+                <p className="text-muted-foreground">{feature.details}</p>
+                <Button asChild size="lg" className="mt-6 rounded-full gap-3">
                   <Link href={feature.tutorialLink}>
                     Learn More <ArrowRight />
                   </Link>

@@ -54,7 +54,7 @@ export default function Timeline() {
             {/* Timeline Icon */}
             <div
               className={cn(
-                "absolute left-px -translate-x-1/2 h-9 w-9 border-2 border-muted-foreground flex items-center justify-center rounded-full bg-accent ring-8 ring-background",
+                "absolute left-px -translate-x-1/2 h-9 w-9 border-2 border-muted-foreground/40 flex items-center justify-center rounded-full bg-accent ring-8 ring-background",
                 {
                   "bg-primary border-primary text-primary-foreground":
                     completed,
@@ -68,7 +68,9 @@ export default function Timeline() {
 
             {/* Content */}
             <div className="pt-1 space-y-2">
-              <h3 className="text-xl font-semibold">{title}</h3>
+              <h3 className="text-xl font-medium tracking-[-0.015em]">
+                {title}
+              </h3>
               <p className="text-muted-foreground">{description}</p>
             </div>
           </div>

@@ -68,7 +68,7 @@ const FAQ03 = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-12">
       <div className="w-full max-w-(--breakpoint-lg)">
-        <h2 className="text-4xl md:text-5xl leading-[1.15]! font-bold tracking-tight">
+        <h2 className="text-4xl md:text-5xl leading-[1.15]! font-semibold tracking-tighter">
           Frequently Asked Questions
         </h2>
 
@@ -93,7 +93,9 @@ const FAQ03 = () => {
                     <PlusIcon className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
-                <AccordionContent>{answer}</AccordionContent>
+                <AccordionContent className="text-base text-muted-foreground text-pretty">
+                  {answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
@@ -118,7 +120,9 @@ const FAQ03 = () => {
                     <PlusIcon className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
-                <AccordionContent>{answer}</AccordionContent>
+                <AccordionContent className="text-base text-muted-foreground text-pretty">
+                  {answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

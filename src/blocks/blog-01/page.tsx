@@ -12,7 +12,9 @@ const Blog01Page = () => {
   return (
     <div className="max-w-(--breakpoint-xl) mx-auto py-16 px-6 xl:px-0">
       <div className="flex items-end justify-between">
-        <h2 className="text-3xl font-bold tracking-tight">Posts</h2>
+        <h2 className="text-3xl font-semibold tracking-tighter">
+          Today&apos;s Posts
+        </h2>
         <Select defaultValue="recommended">
           <SelectTrigger className="w-[180px]">
             <SelectValue />
@@ -27,20 +29,20 @@ const Blog01Page = () => {
 
       <div className="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
-          <Card key={i} className="shadow-none">
-            <CardHeader className="p-2">
+          <Card key={i} className="shadow-none py-0 gap-3">
+            <CardHeader className="p-2 pb-0">
               <div className="aspect-video bg-muted rounded-lg w-full" />
             </CardHeader>
-            <CardContent className="pt-4 pb-5">
-              <Badge>Technology</Badge>
+            <CardContent className="pt-0 pb-5 px-5">
+              <Badge variant="secondary">Technology</Badge>
 
-              <h3 className="mt-4 text-[1.35rem] font-semibold tracking-tight">
+              <h3 className="mt-4 text-[1.4rem] font-semibold tracking-tight">
                 What is the future of web development?
               </h3>
               <div className="mt-6 flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <div className="h-10 w-10 rounded-full bg-muted"></div>
-                  <span className="text-muted-foreground font-semibold">
+                  <div className="size-8 rounded-full bg-muted"></div>
+                  <span className="text-muted-foreground font-medium">
                     John Doe
                   </span>
                 </div>

@@ -30,7 +30,7 @@ export default function TablePagination() {
           value={rowsPerPage.toString()}
           onValueChange={(rowsPerPage) => setRowsPerPage(+rowsPerPage)}
         >
-          <SelectTrigger className="w-[65px]">
+          <SelectTrigger>
             <SelectValue />
           </SelectTrigger>
           <SelectContent>

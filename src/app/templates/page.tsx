@@ -49,7 +49,7 @@ export default function TemplatesPage() {
               <Logo className="h-6 w-6 [&_svg]:h-4 [&_svg]:w-4" />
             </div>
           </div>
-          <h1 className="text-[2.5rem] sm:text-5xl lg:text-6xl font-bold leading-[1.15]! tracking-tight">
+          <h1 className="text-[2.5rem] sm:text-5xl lg:text-6xl font-semibold leading-[1.15]! tracking-tighter">
             <span className="text-blue-500">Beautifully Designed</span> Shadcn
             UI Templates for Every Project
           </h1>
@@ -59,7 +59,7 @@ export default function TemplatesPage() {
             functionality, these templates help you build stunning UIs with
             ease!
           </p>
-          <Button size="lg" className="h-14 text-lg rounded-full" asChild>
+          <Button size="lg" className="h-13 !px-6 text-lg rounded-full" asChild>
             <Link href="#templates">
               <Layers className="w-5! h-5! mr-2" /> Browse Templates
             </Link>

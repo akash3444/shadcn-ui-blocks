@@ -7,7 +7,9 @@ const Logos03Page = () => {
       <div className="relative grow">
         <div className="sm:absolute sm:-translate-y-1/2 top-0 inset-x-0 mx-auto w-full md:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg) xl:max-w-(--breakpoint-xl) flex flex-col lg:flex-row lg:items-center justify-between gap-10 rounded-lg bg-background sm:shadow-lg dark:shadow-foreground/10 py-14 px-10">
           <div className="shrink-0">
-            <h3 className="text-4xl font-bold tracking-tight">Trusted by</h3>
+            <h3 className="text-4xl font-semibold tracking-tighter">
+              Trusted by
+            </h3>
             <p className="mt-6 text-lg max-w-xl lg:max-w-md xl:max-w-xl">
               Trusted by industry leaders and visionaries who are shaping the
               future, solving global challenges, and driving innovation forward.

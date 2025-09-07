@@ -2,20 +2,27 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CirclePlay } from "lucide-react";
 import { BackgroundPattern } from "./background-pattern";
+import Link from "next/link";
 
 const Hero06 = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6">
       <BackgroundPattern />
 
-      <div className="relative z-10 text-center max-w-2xl">
-        <Badge className="bg-linear-to-br via-70% from-primary via-muted/30 to-primary rounded-full py-1 border-none">
-          Just released v1.0.0
+      <div className="relative z-10 text-center max-w-3xl">
+        <Badge
+          variant="secondary"
+          className="rounded-full py-1 border-border"
+          asChild
+        >
+          <Link href="#">
+            Just released v1.0.0 <ArrowUpRight className="ml-1 size-4" />
+          </Link>
         </Badge>
-        <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.2]! tracking-tight">
+        <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl md:leading-[1.2] font-semibold tracking-tighter">
           Customized Shadcn UI Blocks & Components
         </h1>
-        <p className="mt-6 text-[17px] md:text-lg">
+        <p className="mt-6 md:text-lg">
           Explore a collection of Shadcn UI blocks and components, ready to
           preview and copy. Streamline your development workflow with
           easy-to-implement examples.

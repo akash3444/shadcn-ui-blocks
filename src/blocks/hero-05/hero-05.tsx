@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CirclePlay } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const Hero05 = () => {
@@ -8,10 +9,16 @@ const Hero05 = () => {
     <div className="min-h-screen flex items-center justify-center overflow-hidden">
       <div className="max-w-(--breakpoint-xl) w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 py-12 lg:py-0">
         <div className="my-auto">
-          <Badge className="bg-linear-to-br via-70% from-primary via-muted/30 to-primary rounded-full py-1 border-none">
-            Just released v1.0.0
+          <Badge
+            variant="secondary"
+            className="rounded-full py-1 border-border"
+            asChild
+          >
+            <Link href="#">
+              Just released v1.0.0 <ArrowUpRight className="ml-1 size-4" />
+            </Link>
           </Badge>
-          <h1 className="mt-6 max-w-[17ch] text-4xl md:text-5xl lg:text-[2.75rem] xl:text-5xl font-bold leading-[1.2]! tracking-tight">
+          <h1 className="mt-6 max-w-[17ch] text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] font-semibold leading-[1.2]! tracking-tighter">
             Customized Shadcn UI Blocks & Components
           </h1>
           <p className="mt-6 max-w-[60ch] text-lg">

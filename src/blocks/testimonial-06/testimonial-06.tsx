@@ -98,10 +98,13 @@ const Testimonial06 = () => {
   return (
     <div className="min-h-screen w-full flex justify-center items-center py-12 px-6">
       <div className="w-full">
-        <h2 className="mb-14 text-5xl md:text-6xl font-bold text-center tracking-tight">
+        <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
           Testimonials
         </h2>
-        <div className="container w-full lg:max-w-(--breakpoint-lg) xl:max-w-(--breakpoint-xl) mx-auto px-12">
+        <p className="mt-3 text-center text-muted-foreground text-xl">
+          See what our users have to say about us
+        </p>
+        <div className="mt-14 container w-full lg:max-w-(--breakpoint-lg) xl:max-w-(--breakpoint-xl) mx-auto px-12">
           <Carousel setApi={setApi}>
             <CarouselContent>
               {testimonials.map((testimonial) => (
@@ -176,7 +179,7 @@ const TestimonialCard = ({
           </div>
         </div>
         <p className="mt-6 text-lg sm:text-2xl lg:text-[1.75rem] xl:text-3xl leading-normal lg:leading-normal! font-semibold tracking-tight">
-          &quot;{testimonial.testimonial}&quot;
+          {testimonial.testimonial}
         </p>
         <div className="flex sm:hidden md:flex mt-6 items-center gap-4">
           <Avatar>

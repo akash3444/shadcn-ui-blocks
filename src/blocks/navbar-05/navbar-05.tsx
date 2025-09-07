@@ -14,7 +14,7 @@ const Navbar05Page = () => {
             <div className="relative hidden md:block">
               <Search className="h-5 w-5 absolute inset-y-0 my-auto left-2.5" />
               <Input
-                className="pl-10 flex-1 bg-slate-100/70 dark:bg-slate-800 border-none shadow-none w-[280px] rounded-full"
+                className="pl-10 flex-1 bg-muted border-none shadow-none w-[280px] rounded-full"
                 placeholder="Search"
               />
             </div>

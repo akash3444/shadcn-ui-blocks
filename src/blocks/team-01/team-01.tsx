@@ -54,13 +54,13 @@ const Team01Page = () => {
   return (
     <div className="flex flex-col items-center justify-center py-14 px-4 sm:px-6 lg:px-8">
       <div className="text-center max-w-xl mx-auto">
-        <b className="text-center text-muted-foreground font-semibold text-base">
+        <b className="text-center text-muted-foreground font-semibold text-sm uppercase">
           We&apos;re hiring!
         </b>
-        <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
+        <h2 className="mt-4 text-4xl sm:text-5xl font-semibold tracking-tighter">
           Meet Our Team
         </h2>
-        <p className="mt-4 text-base sm:text-lg">
+        <p className="mt-4 text-base sm:text-lg text-muted-foreground">
           Our philosophy is simple — hire a team of diverse, passionate people
           and foster a culture that empowers you to do you best work.
         </p>

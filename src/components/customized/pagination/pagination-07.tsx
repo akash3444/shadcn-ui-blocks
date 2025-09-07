@@ -29,7 +29,8 @@ export default function PaginationBordered() {
                   {
                     [buttonVariants({
                       variant: "default",
-                      className: "hover:text-primary-foreground!",
+                      className:
+                        "dark:bg-primary dark:hover:bg-primary/90 hover:text-primary-foreground!",
                     })]: isActive,
                   },
                   "rounded-none border-none"

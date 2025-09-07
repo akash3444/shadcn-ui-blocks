@@ -52,9 +52,11 @@ const Footer = () => {
         <div className="py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-x-8 gap-y-10 px-6 xl:px-0">
           <div className="col-span-full lg:col-span-2">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-2.5">
               <Logo />
-              <span className="font-semibold text-lg">Shadcn UI Blocks</span>
+              <span className="font-semibold text-lg tracking-tight">
+                Shadcn UI Blocks
+              </span>
             </Link>
 
             <p className="mt-4 text-muted-foreground">

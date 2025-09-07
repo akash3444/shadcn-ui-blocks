@@ -37,7 +37,7 @@ const FAQ02 = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-12">
       <div className="flex flex-col md:flex-row items-start gap-x-12 gap-y-6">
-        <h2 className="text-4xl lg:text-5xl leading-[1.15]! font-bold tracking-tight">
+        <h2 className="text-4xl lg:text-5xl leading-[1.15]! font-semibold tracking-tighter">
           Frequently Asked <br /> Questions
         </h2>
 
@@ -47,7 +47,9 @@ const FAQ02 = () => {
               <AccordionTrigger className="text-left text-lg">
                 {question}
               </AccordionTrigger>
-              <AccordionContent>{answer}</AccordionContent>
+              <AccordionContent className="text-base text-muted-foreground">
+                {answer}
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>

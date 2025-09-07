@@ -47,7 +47,7 @@ const Login05Page = () => {
       <div className="w-full h-full grid lg:grid-cols-2 p-4">
         <div className="max-w-xs m-auto w-full flex flex-col items-center">
           <Logo className="h-9 w-9" />
-          <p className="mt-4 text-xl font-bold tracking-tight">
+          <p className="mt-4 text-xl font-semibold tracking-tight">
             Log in to Shadcn UI Blocks
           </p>
 
@@ -157,7 +157,7 @@ const Login05Page = () => {
             </p>
           </div>
         </div>
-        <div className="bg-muted hidden lg:block rounded-lg" />
+        <div className="bg-muted hidden lg:block rounded-lg border" />
       </div>
     </div>
   );

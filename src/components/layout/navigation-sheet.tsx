@@ -34,14 +34,18 @@ export function NavigationSheet() {
           </Link>
         </SheetHeader>
 
-        <ScrollArea className="h-full pb-20">
+        <ScrollArea className="h-full pb-20 px-4">
           <div className="space-y-4 text-base pr-2.5">
-            <Link href="/" onClick={() => setOpen(false)}>
+            <Link
+              href="/"
+              onClick={() => setOpen(false)}
+              className="inline-block"
+            >
               Home
             </Link>
 
             <div>
-              <div className="font-bold">Components</div>
+              <div className="font-semibold">Components</div>
               <ul className="mt-2 space-y-3 ml-1 pl-4 border-l">
                 {components.map((component) => (
                   <li key={component.url}>

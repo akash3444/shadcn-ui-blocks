@@ -51,14 +51,17 @@ const Features05Page = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-(--breakpoint-lg) w-full py-10 px-6">
-        <h2 className="text-4xl md:text-5xl md:leading-14 font-bold tracking-tight sm:max-w-xl sm:text-center sm:mx-auto">
-          Boost Your Strategy with Smart Features
+        <h2 className="text-4xl md:text-[2.5rem] md:leading-[1.2] font-semibold tracking-[-0.03em] sm:max-w-xl text-pretty">
+          Strengthen Your Strategy
         </h2>
-        <div className="mt-8 w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
+        <p className="mt-2 text-muted-foreground text-lg sm:text-xl">
+          Enhance your strategy with intelligent tools designed for success.
+        </p>
+        <div className="mt-10 w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
           {features.map((feature) => (
             <Card
               key={feature.title}
-              className="flex flex-col border rounded-xl overflow-hidden shadow-none"
+              className="flex flex-col border rounded-xl overflow-hidden shadow-none pb-0"
             >
               <CardHeader>
                 <feature.icon />

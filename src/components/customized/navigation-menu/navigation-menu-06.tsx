@@ -73,7 +73,7 @@ export default function RichNavigationMenu() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-          <NavigationMenuContent className="p-4">
+          <NavigationMenuContent className="px-0 py-1">
             <div className="grid grid-cols-3 gap-3 p-4 w-[900px] divide-x">
               <div className="col-span-2">
                 <h6 className="pl-2.5 font-semibold uppercase text-sm text-muted-foreground">
@@ -115,24 +115,22 @@ export default function RichNavigationMenu() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
-          <NavigationMenuContent className="px-4 py-6">
-            <div className="pl-4">
-              <h6 className="pl-2.5 font-semibold uppercase text-sm text-muted-foreground">
-                Solutions
-              </h6>
-              <ul className="mt-2.5 grid w-[400px] gap-3 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                    icon={component.icon}
-                  >
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </div>
+          <NavigationMenuContent className="p-4">
+            <h6 className="pl-2.5 font-semibold uppercase text-sm text-muted-foreground">
+              Solutions
+            </h6>
+            <ul className="mt-2.5 grid w-[400px] gap-3 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+              {components.map((component) => (
+                <ListItem
+                  key={component.title}
+                  title={component.title}
+                  href={component.href}
+                  icon={component.icon}
+                >
+                  {component.description}
+                </ListItem>
+              ))}
+            </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
