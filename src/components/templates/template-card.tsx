@@ -43,11 +43,6 @@ const TemplateCard = ({ template }: { template: Template }) => {
               </Link>
             </Button>
           </div>
-          {/* TODO: Implement template details page */}
-          {/* <Button variant="outline" className="rounded-full shadow-none">
-            View Details
-            <ArrowUpRight />
-          </Button> */}
         </div>
       </div>
     </div>

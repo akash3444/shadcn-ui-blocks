@@ -4,7 +4,7 @@ import { isValid } from "date-fns/isValid";
 
 export default async function GithubStarsAndForks({ repo }: { repo: string }) {
   const response = await fetch(`https://api.github.com/repos/${repo}`, {
-    next: { revalidate: 60 * 5 },
+    next: { revalidate: 60 * 120 }, // 2 hours
   });
   const data = await response.json();
   const viewsResponse = await fetch(
@@ -13,7 +13,7 @@ export default async function GithubStarsAndForks({ repo }: { repo: string }) {
       headers: {
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
       },
-      next: { revalidate: 60 * 5 },
+      next: { revalidate: 60 * 120 }, // 2 hours
     }
   );
   const views = await viewsResponse.json();
@@ -24,7 +24,7 @@ export default async function GithubStarsAndForks({ repo }: { repo: string }) {
         <div className="flex items-center gap-2">
           <Eye className="text-foreground h-5 w-5" />
           <span className="whitespace-nowrap">
-            {views?.uniques} {views?.uniques > 1 ? "views" : "view"}
+            {views?.count} {views?.count > 1 ? "views" : "view"}
           </span>
         </div>
         <div className="flex items-center gap-2">
