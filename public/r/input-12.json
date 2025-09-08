@@ -6,7 +6,11 @@
   "description": "A dropzone input component",
   "dependencies": [
     "lucide-react",
-    "react-dropzone"
+    "react-dropzone",
+    "@radix-ui/react-label",
+    "class-variance-authority",
+    "clsx",
+    "tailwind-merge"
   ],
   "registryDependencies": [
     "input",
@@ -17,6 +21,24 @@
       "path": "src/components/customized/input/input-12.tsx",
       "content": "\"use client\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { cn } from \"@/lib/utils\";\nimport { ImageIcon, XCircleIcon } from \"lucide-react\";\nimport Image from \"next/image\";\nimport { useState } from \"react\";\nimport Dropzone from \"react-dropzone\";\n\nconst ImagePreview = ({\n  url,\n  onRemove,\n}: {\n  url: string;\n  onRemove: () => void;\n}) => (\n  <div className=\"relative aspect-square\">\n    <button\n      className=\"absolute top-0 right-0 translate-x-1/2 -translate-y-1/2\"\n      onClick={onRemove}\n    >\n      <XCircleIcon className=\"h-5 w-5 fill-primary text-primary-foreground\" />\n    </button>\n    <Image\n      src={url}\n      height={500}\n      width={500}\n      alt=\"\"\n      className=\"border border-border h-full w-full rounded-md object-cover\"\n    />\n  </div>\n);\n\nexport default function InputDemo() {\n  const [profilePicture, setProfilePicture] = useState<string | null>(null);\n\n  return (\n    <div className=\"w-full max-w-40\">\n      <Label htmlFor=\"profile\">Profile Picture</Label>\n      <div className=\"mt-1 w-full\">\n        {profilePicture ? (\n          <ImagePreview\n            url={profilePicture}\n            onRemove={() => setProfilePicture(null)}\n          />\n        ) : (\n          <Dropzone\n            onDrop={(acceptedFiles) => {\n              const file = acceptedFiles[0];\n              if (file) {\n                const imageUrl = URL.createObjectURL(file);\n                setProfilePicture(imageUrl);\n              }\n            }}\n            accept={{\n              \"image/png\": [\".png\", \".jpg\", \".jpeg\", \".webp\"],\n            }}\n            maxFiles={1}\n          >\n            {({\n              getRootProps,\n              getInputProps,\n              isDragActive,\n              isDragAccept,\n              isDragReject,\n            }) => (\n              <div\n                {...getRootProps()}\n                className={cn(\n                  \"border border-dashed flex items-center justify-center aspect-square rounded-md focus:outline-none focus:border-primary\",\n                  {\n                    \"border-primary bg-secondary\": isDragActive && isDragAccept,\n                    \"border-destructive bg-destructive/20\":\n                      isDragActive && isDragReject,\n                  }\n                )}\n              >\n                <input {...getInputProps()} id=\"profile\" />\n                <ImageIcon className=\"h-16 w-16\" strokeWidth={1.25} />\n              </div>\n            )}\n          </Dropzone>\n        )}\n      </div>\n    </div>\n  );\n}\n",
       "type": "registry:component"
+    },
+    {
+      "path": "src/components/ui/label.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport * as LabelPrimitive from \"@radix-ui/react-label\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst labelVariants = cva(\n  \"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\"\n)\n\nconst Label = React.forwardRef<\n  React.ElementRef<typeof LabelPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &\n    VariantProps<typeof labelVariants>\n>(({ className, ...props }, ref) => (\n  <LabelPrimitive.Root\n    ref={ref}\n    className={cn(labelVariants(), className)}\n    {...props}\n  />\n))\nLabel.displayName = LabelPrimitive.Root.displayName\n\nexport { Label }\n",
+      "type": "registry:ui",
+      "target": ""
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "content": "import { config } from \"@/config\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport function capitalize(str: string) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\n\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\ntype GroupBy<T, K extends keyof T> = Record<string, T[]>;\n\nexport function groupBy<T, K extends keyof T>(\n  array: T[],\n  key: K\n): GroupBy<T, K> {\n  return array.reduce((acc, item) => {\n    const keyValue = String(item[key]);\n    if (!acc[keyValue]) {\n      acc[keyValue] = [];\n    }\n    acc[keyValue].push(item);\n    return acc;\n  }, {} as GroupBy<T, K>);\n}\n\nexport function absoluteUrl(path: string) {\n  return process.env.NODE_ENV === \"development\"\n    ? `http://localhost:3000${path}`\n    : `https://${config.appUrl}${path}`;\n}\n",
+      "type": "registry:lib",
+      "target": ""
+    },
+    {
+      "path": "src/config.ts",
+      "content": "export const config = {\n  appUrl:\n    process.env.NODE_ENV === \"production\"\n      ? process.env.VERCEL_PROJECT_PRODUCTION_URL ??\n        process.env.NEXT_PUBLIC_APP_URL!\n      : \"localhost:3000\",\n  social: {\n    github: \"https://github.com/akash3444/shadcn-ui-blocks\",\n    twitter: \"https://twitter.com/shadcnui_blocks\",\n  },\n};\n",
+      "type": "registry:component",
+      "target": ""
     }
   ]
 }

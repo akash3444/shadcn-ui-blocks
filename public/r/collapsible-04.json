@@ -5,7 +5,15 @@
   "title": "Filters Collapsible",
   "description": "A collapsible component for filter options",
   "dependencies": [
-    "lucide-react"
+    "lucide-react",
+    "@radix-ui/react-checkbox",
+    "clsx",
+    "tailwind-merge",
+    "@radix-ui/react-icons",
+    "@radix-ui/react-collapsible",
+    "@radix-ui/react-label",
+    "class-variance-authority",
+    "@radix-ui/react-slider"
   ],
   "registryDependencies": [
     "collapsible",
@@ -19,6 +27,48 @@
       "path": "src/components/customized/collapsible/collapsible-04.tsx",
       "content": "\"use client\";\n\nimport { Checkbox } from \"@/components/ui/checkbox\";\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@/components/ui/collapsible\";\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\nimport { Slider } from \"@/components/ui/slider\";\nimport {\n  ChevronDown,\n  CircleDollarSign,\n  LucideIcon,\n  Star,\n  Tag,\n} from \"lucide-react\";\nimport { ReactNode, useState } from \"react\";\n\ntype PriceRange = { from: number; to: number };\n\nconst CollapsibleFilters = () => {\n  return (\n    <div className=\"w-full max-w-xs divide-y-2\">\n      <PriceRangeFilter />\n      <CategoryFilter />\n      <RatingFilter />\n    </div>\n  );\n};\n\nconst MIN_PRICE = 0;\nconst MAX_PRICE = 1000;\nfunction PriceRangeFilter() {\n  const [value, setValue] = useState<PriceRange>({\n    from: MIN_PRICE,\n    to: MAX_PRICE,\n  });\n\n  const handleChange = (newValue: PriceRange) => {\n    setValue(newValue);\n  };\n\n  return (\n    <CollapsibleFilter title=\"Price Range\" icon={CircleDollarSign}>\n      <div className=\"flex justify-between space-x-4\">\n        <Input\n          type=\"number\"\n          value={value.from}\n          onChange={(e) =>\n            handleChange({ from: +e.target.value, to: value.to })\n          }\n          // onBlur={handleBlur}\n          className=\"w-20\"\n        />\n        <Input\n          type=\"number\"\n          value={value.to}\n          onChange={(e) =>\n            handleChange({ from: value.from, to: +e.target.value })\n          }\n          // onBlur={handleBlur}\n          className=\"w-20\"\n        />\n      </div>\n      <Slider\n        min={MIN_PRICE}\n        max={MAX_PRICE}\n        step={10}\n        value={[value.from, value.to]}\n        onValueChange={([from, to]) => handleChange({ from, to })}\n        className=\"w-full mt-4 mb-3\"\n      />\n    </CollapsibleFilter>\n  );\n}\n\nfunction RatingFilter() {\n  const [rating, setRating] = useState<number | null>(null);\n  const [hoveredRating, setHoveredRating] = useState<number | null>(null);\n\n  return (\n    <CollapsibleFilter title=\"Rating\" icon={Star}>\n      <div className=\"flex space-x-1 mb-1\">\n        {[1, 2, 3, 4, 5].map((ratingValue) => (\n          <Star\n            key={ratingValue}\n            className={`h-6 w-6 cursor-pointer ${\n              (\n                hoveredRating !== null\n                  ? hoveredRating >= ratingValue\n                  : rating !== null && rating >= ratingValue\n              )\n                ? \"text-yellow-400 fill-yellow-400\"\n                : \"text-gray-300\"\n            }`}\n            onMouseEnter={() => setHoveredRating(ratingValue)}\n            onMouseLeave={() => setHoveredRating(null)}\n            onClick={() =>\n              setRating(ratingValue === rating ? null : ratingValue)\n            }\n          />\n        ))}\n      </div>\n    </CollapsibleFilter>\n  );\n}\n\nconst categories = [\n  \"Electronics\",\n  \"Clothing\",\n  \"Books\",\n  \"Home & Garden\",\n  \"Toys\",\n];\nfunction CategoryFilter() {\n  return (\n    <CollapsibleFilter title=\"Category\" icon={Tag}>\n      {categories.map((category) => (\n        <div key={category} className=\"mb-2 flex items-center space-x-3\">\n          <Checkbox id={category} />\n          <Label htmlFor={category}>{category}</Label>\n        </div>\n      ))}\n    </CollapsibleFilter>\n  );\n}\n\nconst CollapsibleFilter = ({\n  title,\n  icon: Icon,\n  children,\n}: {\n  title: string;\n  icon?: LucideIcon;\n  children: ReactNode;\n}) => (\n  <Collapsible defaultOpen>\n    <CollapsibleTrigger className=\"group flex w-full items-center justify-between py-3\">\n      <h3 className=\"flex items-center gap-2 text-sm font-semibold\">\n        {!!Icon && <Icon className=\"h-5 w-5\" />} {title}\n      </h3>\n      <ChevronDown className=\"h-4 w-4 group-data-[state=open]:rotate-180 transition-transform text-muted-foreground\" />\n    </CollapsibleTrigger>\n    <CollapsibleContent className=\"pt-1 pb-3\">{children}</CollapsibleContent>\n  </Collapsible>\n);\n\nexport default CollapsibleFilters;\n",
       "type": "registry:component"
+    },
+    {
+      "path": "src/components/ui/checkbox.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport * as CheckboxPrimitive from \"@radix-ui/react-checkbox\"\nimport { cn } from \"@/lib/utils\"\nimport { CheckIcon } from \"@radix-ui/react-icons\"\n\nconst Checkbox = React.forwardRef<\n  React.ElementRef<typeof CheckboxPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <CheckboxPrimitive.Root\n    ref={ref}\n    className={cn(\n      \"peer h-4 w-4 shrink-0 rounded-sm border border-primary shadow focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground\",\n      className\n    )}\n    {...props}\n  >\n    <CheckboxPrimitive.Indicator\n      className={cn(\"flex items-center justify-center text-current\")}\n    >\n      <CheckIcon className=\"h-4 w-4\" />\n    </CheckboxPrimitive.Indicator>\n  </CheckboxPrimitive.Root>\n))\nCheckbox.displayName = CheckboxPrimitive.Root.displayName\n\nexport { Checkbox }\n",
+      "type": "registry:ui",
+      "target": ""
+    },
+    {
+      "path": "src/components/ui/collapsible.tsx",
+      "content": "\"use client\"\n\nimport * as CollapsiblePrimitive from \"@radix-ui/react-collapsible\"\n\nconst Collapsible = CollapsiblePrimitive.Root\n\nconst CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger\n\nconst CollapsibleContent = CollapsiblePrimitive.CollapsibleContent\n\nexport { Collapsible, CollapsibleTrigger, CollapsibleContent }\n",
+      "type": "registry:ui",
+      "target": ""
+    },
+    {
+      "path": "src/components/ui/input.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport interface InputProps\n  extends React.InputHTMLAttributes<HTMLInputElement> {}\n\nconst Input = React.forwardRef<HTMLInputElement, InputProps>(\n  ({ className, type, ...props }, ref) => {\n    return (\n      <input\n        type={type}\n        className={cn(\n          \"flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50\",\n          className\n        )}\n        ref={ref}\n        {...props}\n      />\n    )\n  }\n)\nInput.displayName = \"Input\"\n\nexport { Input }\n",
+      "type": "registry:ui",
+      "target": ""
+    },
+    {
+      "path": "src/components/ui/label.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport * as LabelPrimitive from \"@radix-ui/react-label\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst labelVariants = cva(\n  \"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\"\n)\n\nconst Label = React.forwardRef<\n  React.ElementRef<typeof LabelPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &\n    VariantProps<typeof labelVariants>\n>(({ className, ...props }, ref) => (\n  <LabelPrimitive.Root\n    ref={ref}\n    className={cn(labelVariants(), className)}\n    {...props}\n  />\n))\nLabel.displayName = LabelPrimitive.Root.displayName\n\nexport { Label }\n",
+      "type": "registry:ui",
+      "target": ""
+    },
+    {
+      "path": "src/components/ui/slider.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport * as SliderPrimitive from \"@radix-ui/react-slider\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst Slider = React.forwardRef<\n  React.ElementRef<typeof SliderPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <SliderPrimitive.Root\n    ref={ref}\n    className={cn(\n      \"relative flex w-full touch-none select-none items-center\",\n      className\n    )}\n    {...props}\n  >\n    <SliderPrimitive.Track className=\"relative h-1.5 w-full grow overflow-hidden rounded-full bg-primary/20\">\n      <SliderPrimitive.Range className=\"absolute h-full bg-primary\" />\n    </SliderPrimitive.Track>\n    <SliderPrimitive.Thumb className=\"block h-4 w-4 rounded-full border border-primary/50 bg-background shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50\" />\n  </SliderPrimitive.Root>\n))\nSlider.displayName = SliderPrimitive.Root.displayName\n\nexport { Slider }\n",
+      "type": "registry:ui",
+      "target": ""
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "content": "import { config } from \"@/config\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport function capitalize(str: string) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\n\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\ntype GroupBy<T, K extends keyof T> = Record<string, T[]>;\n\nexport function groupBy<T, K extends keyof T>(\n  array: T[],\n  key: K\n): GroupBy<T, K> {\n  return array.reduce((acc, item) => {\n    const keyValue = String(item[key]);\n    if (!acc[keyValue]) {\n      acc[keyValue] = [];\n    }\n    acc[keyValue].push(item);\n    return acc;\n  }, {} as GroupBy<T, K>);\n}\n\nexport function absoluteUrl(path: string) {\n  return process.env.NODE_ENV === \"development\"\n    ? `http://localhost:3000${path}`\n    : `https://${config.appUrl}${path}`;\n}\n",
+      "type": "registry:lib",
+      "target": ""
+    },
+    {
+      "path": "src/config.ts",
+      "content": "export const config = {\n  appUrl:\n    process.env.NODE_ENV === \"production\"\n      ? process.env.VERCEL_PROJECT_PRODUCTION_URL ??\n        process.env.NEXT_PUBLIC_APP_URL!\n      : \"localhost:3000\",\n  social: {\n    github: \"https://github.com/akash3444/shadcn-ui-blocks\",\n    twitter: \"https://twitter.com/shadcnui_blocks\",\n  },\n};\n",
+      "type": "registry:component",
+      "target": ""
     }
   ]
 }

@@ -5,7 +5,12 @@
   "title": "Pricing 01",
   "description": "A simple pricing block",
   "dependencies": [
-    "lucide-react"
+    "lucide-react",
+    "@radix-ui/react-slot",
+    "class-variance-authority",
+    "clsx",
+    "tailwind-merge",
+    "@radix-ui/react-separator"
   ],
   "registryDependencies": [
     "button",
@@ -17,6 +22,30 @@
       "content": "import { Button } from \"@/components/ui/button\";\nimport { Separator } from \"@/components/ui/separator\";\nimport { CircleCheck } from \"lucide-react\";\n\nconst plans = [\n  {\n    name: \"Starter\",\n    price: 19,\n    description:\n      \"Get 20 AI-generated portraits with 2 unique styles and filters.\",\n    features: [\n      \"5 hours turnaround time\",\n      \"20 AI portraits\",\n      \"Choice of 2 styles\",\n      \"Choice of 2 filters\",\n      \"2 retouch credits\",\n    ],\n    buttonText: \"Get 20 portraits in 5 hours\",\n  },\n  {\n    name: \"Advanced\",\n    price: 29,\n    isRecommended: true,\n    description:\n      \"Get 50 AI-generated portraits with 5 unique styles and filters.\",\n    features: [\n      \"3 hours turnaround time\",\n      \"50 AI portraits\",\n      \"Choice of 5 styles\",\n      \"Choice of 5 filters\",\n      \"5 retouch credits\",\n    ],\n    buttonText: \"Get 50 portraits in 3 hours\",\n    isPopular: true,\n  },\n  {\n    name: \"Premium\",\n    price: 49,\n    description:\n      \"Get 100 AI-generated portraits with 10 unique styles and filters.\",\n    features: [\n      \"1-hour turnaround time\",\n      \"100 AI portraits\",\n      \"Choice of 10 styles\",\n      \"Choice of 10 filters\",\n      \"10 retouch credits\",\n    ],\n    buttonText: \"Get 100 portraits in 1 hour\",\n  },\n];\n\nconst Pricing01 = () => {\n  return (\n    <div className=\"min-h-screen flex flex-col items-center justify-center py-12 px-6\">\n      <h1 className=\"text-5xl font-bold text-center tracking-tight\">Pricing</h1>\n      <div className=\"mt-12 max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8\">\n        {plans.map((plan) => (\n          <div key={plan.name} className=\"border rounded-lg p-6\">\n            <h3 className=\"text-lg font-medium\">{plan.name}</h3>\n            <p className=\"mt-2 text-4xl font-bold\">${plan.price}</p>\n            <p className=\"mt-4 font-medium text-muted-foreground\">\n              {plan.description}\n            </p>\n            <Separator className=\"my-4\" />\n            <ul className=\"space-y-2\">\n              {plan.features.map((feature) => (\n                <li key={feature} className=\"flex items-start gap-2\">\n                  <CircleCheck className=\"h-4 w-4 mt-1 text-green-600\" />{\" \"}\n                  {feature}\n                </li>\n              ))}\n            </ul>\n            <Button\n              variant={plan.isPopular ? \"default\" : \"outline\"}\n              size=\"lg\"\n              className=\"w-full mt-6\"\n            >\n              {plan.buttonText}\n            </Button>\n          </div>\n        ))}\n      </div>\n    </div>\n  );\n};\n\nexport default Pricing01;\n",
       "type": "registry:page",
       "target": "app/pricing/page.tsx"
+    },
+    {
+      "path": "src/components/ui/button.tsx",
+      "content": "import * as React from \"react\";\nimport { Slot } from \"@radix-ui/react-slot\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst buttonVariants = cva(\n  \"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0\",\n  {\n    variants: {\n      variant: {\n        default:\n          \"bg-primary text-primary-foreground shadow hover:bg-primary/90\",\n        destructive:\n          \"bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90\",\n        outline:\n          \"border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground\",\n        secondary:\n          \"bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80\",\n        ghost: \"hover:bg-accent hover:text-accent-foreground\",\n        link: \"text-primary underline-offset-4 hover:underline\",\n      },\n      size: {\n        default: \"h-9 px-4 py-2\",\n        sm: \"h-8 rounded-md px-3 text-xs\",\n        lg: \"h-10 rounded-md px-8\",\n        icon: \"h-9 w-9\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      size: \"default\",\n    },\n  }\n);\n\nexport interface ButtonProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement>,\n    VariantProps<typeof buttonVariants> {\n  asChild?: boolean;\n}\n\nconst Button = React.forwardRef<HTMLButtonElement, ButtonProps>(\n  ({ className, variant, size, asChild = false, ...props }, ref) => {\n    const Comp = asChild ? Slot : \"button\";\n    return (\n      <Comp\n        className={cn(buttonVariants({ variant, size, className }))}\n        ref={ref}\n        {...props}\n      />\n    );\n  }\n);\nButton.displayName = \"Button\";\n\nexport { Button, buttonVariants };\n",
+      "type": "registry:ui",
+      "target": ""
+    },
+    {
+      "path": "src/components/ui/separator.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport * as SeparatorPrimitive from \"@radix-ui/react-separator\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst Separator = React.forwardRef<\n  React.ElementRef<typeof SeparatorPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>\n>(\n  (\n    { className, orientation = \"horizontal\", decorative = true, ...props },\n    ref\n  ) => (\n    <SeparatorPrimitive.Root\n      ref={ref}\n      decorative={decorative}\n      orientation={orientation}\n      className={cn(\n        \"shrink-0 bg-border\",\n        orientation === \"horizontal\" ? \"h-[1px] w-full\" : \"h-full w-[1px]\",\n        className\n      )}\n      {...props}\n    />\n  )\n)\nSeparator.displayName = SeparatorPrimitive.Root.displayName\n\nexport { Separator }\n",
+      "type": "registry:ui",
+      "target": ""
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "content": "import { config } from \"@/config\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport function capitalize(str: string) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\n\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\ntype GroupBy<T, K extends keyof T> = Record<string, T[]>;\n\nexport function groupBy<T, K extends keyof T>(\n  array: T[],\n  key: K\n): GroupBy<T, K> {\n  return array.reduce((acc, item) => {\n    const keyValue = String(item[key]);\n    if (!acc[keyValue]) {\n      acc[keyValue] = [];\n    }\n    acc[keyValue].push(item);\n    return acc;\n  }, {} as GroupBy<T, K>);\n}\n\nexport function absoluteUrl(path: string) {\n  return process.env.NODE_ENV === \"development\"\n    ? `http://localhost:3000${path}`\n    : `https://${config.appUrl}${path}`;\n}\n",
+      "type": "registry:lib",
+      "target": ""
+    },
+    {
+      "path": "src/config.ts",
+      "content": "export const config = {\n  appUrl:\n    process.env.NODE_ENV === \"production\"\n      ? process.env.VERCEL_PROJECT_PRODUCTION_URL ??\n        process.env.NEXT_PUBLIC_APP_URL!\n      : \"localhost:3000\",\n  social: {\n    github: \"https://github.com/akash3444/shadcn-ui-blocks\",\n    twitter: \"https://twitter.com/shadcnui_blocks\",\n  },\n};\n",
+      "type": "registry:component",
+      "target": ""
     }
   ]
 }

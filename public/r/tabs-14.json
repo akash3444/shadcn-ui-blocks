@@ -5,7 +5,10 @@
   "title": "Vertical Left Bordered Tabs",
   "description": "Vertical tabs with left border",
   "dependencies": [
-    "lucide-react"
+    "lucide-react",
+    "@radix-ui/react-tabs",
+    "clsx",
+    "tailwind-merge"
   ],
   "registryDependencies": [
     "tabs"
@@ -13,8 +16,26 @@
   "files": [
     {
       "path": "src/components/customized/tabs/tabs-14.tsx",
-      "content": "import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\";\nimport { Bot, Home, Settings, User } from \"lucide-react\";\n\nconst tabs = [\n  {\n    name: \"Home\",\n    value: \"home\",\n    icon: Home,\n  },\n  {\n    name: \"Profile\",\n    value: \"profile\",\n    icon: User,\n  },\n  {\n    name: \"Messages\",\n    value: \"messages\",\n    icon: Bot,\n  },\n  {\n    name: \"Settings\",\n    value: \"settings\",\n    icon: Settings,\n  },\n];\n\nexport default function VerticalLeftBorderedTabsDemo() {\n  return (\n    <Tabs\n      orientation=\"vertical\"\n      defaultValue={tabs[0].value}\n      className=\"max-w-md w-full flex items-start gap-4 justify-center\"\n    >\n      <TabsList className=\"shrink-0 grid grid-cols-1 min-w-28 p-0 bg-background\">\n        {tabs.map((tab) => (\n          <TabsTrigger\n            key={tab.value}\n            value={tab.value}\n            className=\"border-l-2 border-transparent justify-start rounded-none data-[state=active]:shadow-none data-[state=active]:border-primary data-[state=active]:bg-primary/5 py-1.5\"\n          >\n            <tab.icon className=\"h-5 w-5 me-2\" /> {tab.name}\n          </TabsTrigger>\n        ))}\n      </TabsList>\n\n      <div className=\"h-40 flex items-center justify-center max-w-xs w-full border rounded-md font-medium text-muted-foreground\">\n        {tabs.map((tab) => (\n          <TabsContent key={tab.value} value={tab.value}>\n            {tab.name} Content\n          </TabsContent>\n        ))}\n      </div>\n    </Tabs>\n  );\n}\n",
+      "content": "import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\";\nimport { Bot, Home, Settings, User } from \"lucide-react\";\n\nconst tabs = [\n  {\n    name: \"Home\",\n    value: \"home\",\n    icon: Home,\n  },\n  {\n    name: \"Profile\",\n    value: \"profile\",\n    icon: User,\n  },\n  {\n    name: \"Messages\",\n    value: \"messages\",\n    icon: Bot,\n  },\n  {\n    name: \"Settings\",\n    value: \"settings\",\n    icon: Settings,\n  },\n];\n\nexport default function VerticalLeftBorderedTabsDemo() {\n  return (\n    <Tabs\n      orientation=\"vertical\"\n      defaultValue={tabs[0].value}\n      className=\"max-w-md w-full flex flex-row items-start gap-4 justify-center\"\n    >\n      <TabsList className=\"shrink-0 grid grid-cols-1 min-w-28 p-0 bg-background\">\n        {tabs.map((tab) => (\n          <TabsTrigger\n            key={tab.value}\n            value={tab.value}\n            className=\"border-l-2 border-transparent justify-start rounded-none data-[state=active]:shadow-none data-[state=active]:border-primary data-[state=active]:bg-primary/5 py-1.5\"\n          >\n            <tab.icon className=\"h-5 w-5 me-2\" /> {tab.name}\n          </TabsTrigger>\n        ))}\n      </TabsList>\n\n      <div className=\"h-40 flex items-center justify-center max-w-xs w-full border rounded-md font-medium text-muted-foreground\">\n        {tabs.map((tab) => (\n          <TabsContent\n            key={tab.value}\n            value={tab.value}\n            className=\"flex items-center justify-center h-full\"\n          >\n            {tab.name} Content\n          </TabsContent>\n        ))}\n      </div>\n    </Tabs>\n  );\n}\n",
       "type": "registry:component"
+    },
+    {
+      "path": "src/components/ui/tabs.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport * as TabsPrimitive from \"@radix-ui/react-tabs\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst Tabs = TabsPrimitive.Root\n\nconst TabsList = React.forwardRef<\n  React.ElementRef<typeof TabsPrimitive.List>,\n  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>\n>(({ className, ...props }, ref) => (\n  <TabsPrimitive.List\n    ref={ref}\n    className={cn(\n      \"inline-flex h-9 items-center justify-center rounded-lg bg-muted p-1 text-muted-foreground\",\n      className\n    )}\n    {...props}\n  />\n))\nTabsList.displayName = TabsPrimitive.List.displayName\n\nconst TabsTrigger = React.forwardRef<\n  React.ElementRef<typeof TabsPrimitive.Trigger>,\n  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>\n>(({ className, ...props }, ref) => (\n  <TabsPrimitive.Trigger\n    ref={ref}\n    className={cn(\n      \"inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow\",\n      className\n    )}\n    {...props}\n  />\n))\nTabsTrigger.displayName = TabsPrimitive.Trigger.displayName\n\nconst TabsContent = React.forwardRef<\n  React.ElementRef<typeof TabsPrimitive.Content>,\n  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>\n>(({ className, ...props }, ref) => (\n  <TabsPrimitive.Content\n    ref={ref}\n    className={cn(\n      \"mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2\",\n      className\n    )}\n    {...props}\n  />\n))\nTabsContent.displayName = TabsPrimitive.Content.displayName\n\nexport { Tabs, TabsList, TabsTrigger, TabsContent }\n",
+      "type": "registry:ui",
+      "target": ""
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "content": "import { config } from \"@/config\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport function capitalize(str: string) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\n\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\ntype GroupBy<T, K extends keyof T> = Record<string, T[]>;\n\nexport function groupBy<T, K extends keyof T>(\n  array: T[],\n  key: K\n): GroupBy<T, K> {\n  return array.reduce((acc, item) => {\n    const keyValue = String(item[key]);\n    if (!acc[keyValue]) {\n      acc[keyValue] = [];\n    }\n    acc[keyValue].push(item);\n    return acc;\n  }, {} as GroupBy<T, K>);\n}\n\nexport function absoluteUrl(path: string) {\n  return process.env.NODE_ENV === \"development\"\n    ? `http://localhost:3000${path}`\n    : `https://${config.appUrl}${path}`;\n}\n",
+      "type": "registry:lib",
+      "target": ""
+    },
+    {
+      "path": "src/config.ts",
+      "content": "export const config = {\n  appUrl:\n    process.env.NODE_ENV === \"production\"\n      ? process.env.VERCEL_PROJECT_PRODUCTION_URL ??\n        process.env.NEXT_PUBLIC_APP_URL!\n      : \"localhost:3000\",\n  social: {\n    github: \"https://github.com/akash3444/shadcn-ui-blocks\",\n    twitter: \"https://twitter.com/shadcnui_blocks\",\n  },\n};\n",
+      "type": "registry:component",
+      "target": ""
     }
   ]
 }

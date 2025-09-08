@@ -5,7 +5,11 @@
   "title": "Features 04",
   "description": "A simple features block",
   "dependencies": [
-    "lucide-react"
+    "lucide-react",
+    "@radix-ui/react-accordion",
+    "@radix-ui/react-icons",
+    "clsx",
+    "tailwind-merge"
   ],
   "registryDependencies": [
     "accordion"
@@ -16,6 +20,24 @@
       "content": "import {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@/components/ui/accordion\";\nimport {\n  BookCheck,\n  ChartPie,\n  FolderSync,\n  Goal,\n  Users,\n  Zap,\n} from \"lucide-react\";\n\nconst features = [\n  {\n    icon: Goal,\n    title: \"Identify Opportunities\",\n    description:\n      \"Easily uncover untapped areas to explore and expand your reach effortlessly and effectively.\",\n  },\n  {\n    icon: BookCheck,\n    title: \"Build Authority\",\n    description:\n      \"Create valuable content that resonates, inspires trust, and positions you as an expert.\",\n  },\n  {\n    icon: ChartPie,\n    title: \"Instant Insights\",\n    description:\n      \"Gain immediate, actionable insights with a quick glance, enabling fast decision-making.\",\n  },\n  {\n    icon: Users,\n    title: \"Engage with Your Audience\",\n    description:\n      \"Boost audience engagement with interactive features like polls, quizzes, and forms.\",\n  },\n  {\n    icon: FolderSync,\n    title: \"Automate Your Workflow\",\n    description:\n      \"Streamline your processes by automating repetitive tasks, saving time and reducing effort.\",\n  },\n  {\n    icon: Zap,\n    title: \"Accelerate Growth\",\n    description:\n      \"Supercharge your growth by implementing strategies that drive results quickly and efficiently.\",\n  },\n];\n\nconst Features04Page = () => {\n  return (\n    <div className=\"min-h-screen flex items-center justify-center\">\n      <div className=\"max-w-screen-lg w-full py-12 px-6\">\n        <h2 className=\"text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight max-w-lg\">\n          Boost Your Strategy with Smart Features\n        </h2>\n        <div className=\"mt-6 md:mt-8 w-full mx-auto grid md:grid-cols-2 gap-12\">\n          <div>\n            <Accordion defaultValue=\"item-0\" type=\"single\" className=\"w-full\">\n              {features.map(({ title, description, icon: Icon }, index) => (\n                <AccordionItem\n                  key={index}\n                  value={`item-${index}`}\n                  className=\"data-[state=open]:border-b-2 data-[state=open]:border-primary\"\n                >\n                  <AccordionTrigger className=\"text-lg [&>svg]:hidden\">\n                    <div className=\"flex items-center gap-4\">\n                      <Icon />\n                      {title}\n                    </div>\n                  </AccordionTrigger>\n                  <AccordionContent className=\"text-[17px] leading-relaxed text-muted-foreground\">\n                    {description}\n                    <div className=\"mt-6 mb-2 md:hidden aspect-video w-full bg-muted rounded-xl\" />\n                  </AccordionContent>\n                </AccordionItem>\n              ))}\n            </Accordion>\n          </div>\n\n          {/* Media */}\n          <div className=\"hidden md:block w-full h-full bg-muted rounded-xl\" />\n        </div>\n      </div>\n    </div>\n  );\n};\n\nexport default Features04Page;\n",
       "type": "registry:block",
       "target": "components/features-04/features-04.tsx"
+    },
+    {
+      "path": "src/components/ui/accordion.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport * as AccordionPrimitive from \"@radix-ui/react-accordion\";\nimport { ChevronDownIcon } from \"@radix-ui/react-icons\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst Accordion = AccordionPrimitive.Root;\n\nconst AccordionItem = React.forwardRef<\n  React.ElementRef<typeof AccordionPrimitive.Item>,\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>\n>(({ className, ...props }, ref) => (\n  <AccordionPrimitive.Item\n    ref={ref}\n    className={cn(\"border-b\", className)}\n    {...props}\n  />\n));\nAccordionItem.displayName = \"AccordionItem\";\n\nconst AccordionTrigger = React.forwardRef<\n  React.ElementRef<typeof AccordionPrimitive.Trigger>,\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>\n>(({ className, children, ...props }, ref) => (\n  <AccordionPrimitive.Header className=\"flex\">\n    <AccordionPrimitive.Trigger\n      ref={ref}\n      className={cn(\n        \"flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180\",\n        className\n      )}\n      {...props}\n    >\n      {children}\n      <ChevronDownIcon className=\"h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200\" />\n    </AccordionPrimitive.Trigger>\n  </AccordionPrimitive.Header>\n));\nAccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;\n\nconst AccordionContent = React.forwardRef<\n  React.ElementRef<typeof AccordionPrimitive.Content>,\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>\n>(({ className, children, ...props }, ref) => (\n  <AccordionPrimitive.Content\n    ref={ref}\n    className=\"overflow-hidden text-muted-foreground text data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\"\n    {...props}\n  >\n    <div className={cn(\"pb-4 pt-0\", className)}>{children}</div>\n  </AccordionPrimitive.Content>\n));\nAccordionContent.displayName = AccordionPrimitive.Content.displayName;\n\nexport { Accordion, AccordionItem, AccordionTrigger, AccordionContent };\n",
+      "type": "registry:ui",
+      "target": ""
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "content": "import { config } from \"@/config\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport function capitalize(str: string) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\n\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\ntype GroupBy<T, K extends keyof T> = Record<string, T[]>;\n\nexport function groupBy<T, K extends keyof T>(\n  array: T[],\n  key: K\n): GroupBy<T, K> {\n  return array.reduce((acc, item) => {\n    const keyValue = String(item[key]);\n    if (!acc[keyValue]) {\n      acc[keyValue] = [];\n    }\n    acc[keyValue].push(item);\n    return acc;\n  }, {} as GroupBy<T, K>);\n}\n\nexport function absoluteUrl(path: string) {\n  return process.env.NODE_ENV === \"development\"\n    ? `http://localhost:3000${path}`\n    : `https://${config.appUrl}${path}`;\n}\n",
+      "type": "registry:lib",
+      "target": ""
+    },
+    {
+      "path": "src/config.ts",
+      "content": "export const config = {\n  appUrl:\n    process.env.NODE_ENV === \"production\"\n      ? process.env.VERCEL_PROJECT_PRODUCTION_URL ??\n        process.env.NEXT_PUBLIC_APP_URL!\n      : \"localhost:3000\",\n  social: {\n    github: \"https://github.com/akash3444/shadcn-ui-blocks\",\n    twitter: \"https://twitter.com/shadcnui_blocks\",\n  },\n};\n",
+      "type": "registry:component",
+      "target": ""
     }
   ]
 }

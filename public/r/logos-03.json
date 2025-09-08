@@ -4,6 +4,7 @@
   "type": "registry:block",
   "title": "Logos 03",
   "description": "A simple logos block",
+  "dependencies": [],
   "files": [
     {
       "path": "src/blocks/logos-03/logos-03.tsx",

@@ -4,6 +4,7 @@
   "type": "registry:block",
   "title": "Timeline 05",
   "description": "A simple timeline block for process steps",
+  "dependencies": [],
   "files": [
     {
       "path": "src/blocks/timeline-05/timeline-05.tsx",

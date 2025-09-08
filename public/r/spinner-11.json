@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Spinner Circle 5",
   "description": "A circle spinner component variation 5",
+  "dependencies": [],
   "files": [
     {
       "path": "src/components/customized/spinner/spinner-11.tsx",

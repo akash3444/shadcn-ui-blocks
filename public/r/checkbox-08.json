@@ -4,6 +4,12 @@
   "type": "registry:component",
   "title": "Checkbox Sizes",
   "description": "Different sizes of checkbox component",
+  "dependencies": [
+    "@radix-ui/react-checkbox",
+    "clsx",
+    "tailwind-merge",
+    "@radix-ui/react-icons"
+  ],
   "registryDependencies": [
     "checkbox"
   ],
@@ -12,6 +18,24 @@
       "path": "src/components/customized/checkbox/checkbox-08.tsx",
       "content": "import { Checkbox } from \"@/components/ui/checkbox\";\n\nexport default function CheckboxSizesDemo() {\n  return (\n    <div className=\"flex items-center space-x-2\">\n      <Checkbox defaultChecked />\n      <Checkbox\n        className=\"h-5 w-5 data-[state=checked]:bg-destructive data-[state=checked]:border-destructive dark:text-foreground\"\n        defaultChecked\n      />\n      <Checkbox\n        className=\"h-6 w-6 data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600 dark:text-foreground\"\n        defaultChecked\n      />\n      <Checkbox\n        className=\"h-7 w-7 data-[state=checked]:bg-emerald-600 data-[state=checked]:border-emerald-600 dark:text-foreground\"\n        defaultChecked\n      />\n    </div>\n  );\n}\n",
       "type": "registry:component"
+    },
+    {
+      "path": "src/components/ui/checkbox.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport * as CheckboxPrimitive from \"@radix-ui/react-checkbox\"\nimport { cn } from \"@/lib/utils\"\nimport { CheckIcon } from \"@radix-ui/react-icons\"\n\nconst Checkbox = React.forwardRef<\n  React.ElementRef<typeof CheckboxPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>\n>(({ className, ...props }, ref) => (\n  <CheckboxPrimitive.Root\n    ref={ref}\n    className={cn(\n      \"peer h-4 w-4 shrink-0 rounded-sm border border-primary shadow focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground\",\n      className\n    )}\n    {...props}\n  >\n    <CheckboxPrimitive.Indicator\n      className={cn(\"flex items-center justify-center text-current\")}\n    >\n      <CheckIcon className=\"h-4 w-4\" />\n    </CheckboxPrimitive.Indicator>\n  </CheckboxPrimitive.Root>\n))\nCheckbox.displayName = CheckboxPrimitive.Root.displayName\n\nexport { Checkbox }\n",
+      "type": "registry:ui",
+      "target": ""
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "content": "import { config } from \"@/config\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport function capitalize(str: string) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\n\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\ntype GroupBy<T, K extends keyof T> = Record<string, T[]>;\n\nexport function groupBy<T, K extends keyof T>(\n  array: T[],\n  key: K\n): GroupBy<T, K> {\n  return array.reduce((acc, item) => {\n    const keyValue = String(item[key]);\n    if (!acc[keyValue]) {\n      acc[keyValue] = [];\n    }\n    acc[keyValue].push(item);\n    return acc;\n  }, {} as GroupBy<T, K>);\n}\n\nexport function absoluteUrl(path: string) {\n  return process.env.NODE_ENV === \"development\"\n    ? `http://localhost:3000${path}`\n    : `https://${config.appUrl}${path}`;\n}\n",
+      "type": "registry:lib",
+      "target": ""
+    },
+    {
+      "path": "src/config.ts",
+      "content": "export const config = {\n  appUrl:\n    process.env.NODE_ENV === \"production\"\n      ? process.env.VERCEL_PROJECT_PRODUCTION_URL ??\n        process.env.NEXT_PUBLIC_APP_URL!\n      : \"localhost:3000\",\n  social: {\n    github: \"https://github.com/akash3444/shadcn-ui-blocks\",\n    twitter: \"https://twitter.com/shadcnui_blocks\",\n  },\n};\n",
+      "type": "registry:component",
+      "target": ""
     }
   ]
 }

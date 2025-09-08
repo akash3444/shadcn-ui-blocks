@@ -4,6 +4,7 @@
   "type": "registry:block",
   "title": "Features 02",
   "description": "A simple features block",
+  "dependencies": [],
   "files": [
     {
       "path": "src/blocks/features-02/features-02.tsx",

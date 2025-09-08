@@ -7,7 +7,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const componentsSitemap: MetadataRoute.Sitemap = components.map(
     ({ url }) => ({
-      url: `https://www.shadcnui-blocks.com${url}`,
+      url: `https://v3.shadcnui-blocks.com${url}`,
       changeFrequency: "daily",
       priority: 1,
       lastModified,
@@ -15,7 +15,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   );
   const blocksCategorySitemap: MetadataRoute.Sitemap = blockCategories.map(
     ({ name }) => ({
-      url: `https://www.shadcnui-blocks.com/blocks/categories/${name}`,
+      url: `https://v3.shadcnui-blocks.com/blocks/categories/${name}`,
       changeFrequency: "daily",
       priority: 1,
       lastModified,
@@ -24,25 +24,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     {
-      url: "https://www.shadcnui-blocks.com",
+      url: "https://v3.shadcnui-blocks.com",
       changeFrequency: "monthly",
       priority: 1,
       lastModified,
     },
     {
-      url: "https://www.shadcnui-blocks.com/components/introduction",
+      url: "https://v3.shadcnui-blocks.com/components/introduction",
       changeFrequency: "monthly",
       priority: 0.8,
       lastModified,
     },
     {
-      url: "https://www.shadcnui-blocks.com/blocks",
+      url: "https://v3.shadcnui-blocks.com/blocks",
       changeFrequency: "daily",
       priority: 1,
       lastModified,
     },
     {
-      url: "https://www.shadcnui-blocks.com/templates",
+      url: "https://v3.shadcnui-blocks.com/templates",
       changeFrequency: "daily",
       priority: 1,
       lastModified,

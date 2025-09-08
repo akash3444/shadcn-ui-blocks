@@ -1,3 +1,3 @@
 export const app = {
-  domain: "https://www.shadcnui-blocks.com",
+  domain: "https://v3.shadcnui-blocks.com",
 };

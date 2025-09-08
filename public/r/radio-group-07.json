@@ -4,6 +4,9 @@
   "type": "registry:component",
   "title": "Radio Group with Cards (Style 1)",
   "description": "A radio group component with card-style options (style 1)",
+  "dependencies": [
+    "@radix-ui/react-radio-group"
+  ],
   "registryDependencies": [
     "radio-group"
   ],
