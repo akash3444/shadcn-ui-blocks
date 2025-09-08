@@ -1,3 +1,5 @@
+"use client";
+
 import { blockList, categorizedBlocks } from "@/blocks";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -10,18 +12,17 @@ import { cn } from "@/lib/utils";
 import { ExternalLinkIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams, useSearchParams } from "next/navigation";
 import InformationBar from "./information-bar";
 import PreviewListFilter from "./preview-list-filter";
 import { ResultsNotFound } from "./results-not-found";
 
-interface BlockPreviewListProps {
-  category?: string;
-  columns?: string;
-  q?: string;
-}
-
-const BlockPreviewList = ({ category, columns, q }: BlockPreviewListProps) => {
-  const blocks = category ? categorizedBlocks[category] : blockList;
+const BlockPreviewList = () => {
+  const searchParams = useSearchParams();
+  const columns = searchParams.get("columns");
+  const q = searchParams.get("q");
+  const { category } = useParams();
+  const blocks = category ? categorizedBlocks[category as string] : blockList;
   const columnsPerRow = +(columns ?? 2);
   const query = q ?? "";
 

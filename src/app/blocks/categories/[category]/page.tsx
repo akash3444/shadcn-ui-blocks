@@ -6,6 +6,7 @@ import { constructMetadata } from "@/lib/metadata";
 import { generateOgImageUrl } from "@/lib/og";
 import { absoluteUrl, capitalize } from "@/lib/utils";
 import { Metadata } from "next";
+import { Suspense } from "react";
 
 const keywordsTemplate = [
   "{{category}} Shadcn UI blocks",
@@ -81,7 +82,6 @@ const BlockCategoryPage = async (props: {
   params: Promise<{ category: string }>;
   searchParams: Promise<{ columns: string; q: string }>;
 }) => {
-  const searchParams = await props.searchParams;
   const params = await props.params;
   const { category } = params;
 
@@ -89,7 +89,9 @@ const BlockCategoryPage = async (props: {
     <>
       <Navbar />
       <div className="max-w-(--breakpoint-2xl) mx-auto py-12 sm:py-16">
-        <BlockPreviewList category={category} {...searchParams} />
+        <Suspense fallback={null}>
+          <BlockPreviewList />
+        </Suspense>
 
         <BlockCategoryJsonLd category={category} />
       </div>
