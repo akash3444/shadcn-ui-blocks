@@ -1,5 +1,4 @@
 import { badgeVariants } from "@/components/ui/badge";
-import React from "react";
 
 const ClickableBadgeDemo = () => {
   return (

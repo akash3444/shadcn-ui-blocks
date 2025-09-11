@@ -4,7 +4,7 @@ import { OctagonAlertIcon } from "lucide-react";
 export default function DestructiveAlertDemo() {
   return (
     <Alert variant="destructive">
-      <OctagonAlertIcon className="h-4 w-4" />
+      <OctagonAlertIcon className="size-4" />
       <AlertTitle>Something Went Wrong</AlertTitle>
       <AlertDescription>
         An error occurred while processing your request.

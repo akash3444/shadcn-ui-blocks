@@ -20,7 +20,7 @@ export default function AlertWithActionsDemo() {
       {isAlertVisible && (
         <Alert className="flex justify-between items-center pr-2 [&>svg+div]:translate-y-0">
           <div className="flex items-start gap-3">
-            <CircleFadingArrowUpIcon className="mt-0.5 h-4 w-4" />
+            <CircleFadingArrowUpIcon className="mt-0.5 size-4" />
             <div className="flex-col justify-center">
               <AlertTitle>Update Available</AlertTitle>
               <AlertDescription>

@@ -17,17 +17,17 @@ export default function AvatarFallbackDemo() {
         </Avatar>
         <Avatar>
           <AvatarFallback className="bg-indigo-500/25 text-indigo-500">
-            <UserRoundIcon className="h-5 w-5" />
+            <UserRoundIcon className="size-4.5" />
           </AvatarFallback>
         </Avatar>
         <Avatar>
           <AvatarFallback className="bg-indigo-500/25 text-indigo-500">
-            <BuildingIcon className="h-5 w-5" />
+            <BuildingIcon className="size-4.5" />
           </AvatarFallback>
         </Avatar>
         <Avatar>
           <AvatarFallback className="bg-indigo-500/25 text-indigo-500">
-            <StoreIcon className="h-5 w-5" />
+            <StoreIcon className="size-4.5" />
           </AvatarFallback>
         </Avatar>
       </div>

@@ -6,34 +6,34 @@ export default function AvatarShapeDemo() {
       <div className="flex items-center gap-4">
         <Avatar className="rounded-none">
           <AvatarFallback className="rounded-none bg-indigo-500 text-white">
-            CN
+            A
           </AvatarFallback>
         </Avatar>
         <Avatar className="rounded-md">
           <AvatarFallback className="rounded-lg bg-indigo-500 text-white">
-            CN
+            A
           </AvatarFallback>
         </Avatar>
         <Avatar className="rounded-full">
           <AvatarFallback className="rounded-full bg-indigo-500 text-white">
-            CN
+            A
           </AvatarFallback>
         </Avatar>
       </div>
       <div className="flex items-center gap-4">
         <Avatar className="rounded-none">
           <AvatarFallback className="rounded-none bg-indigo-500/25 text-indigo-500">
-            CN
+            A
           </AvatarFallback>
         </Avatar>
         <Avatar className="rounded-md">
           <AvatarFallback className="rounded-lg bg-indigo-500/25 text-indigo-500">
-            CN
+            A
           </AvatarFallback>
         </Avatar>
         <Avatar className="rounded-full">
           <AvatarFallback className="rounded-full bg-indigo-500/25 text-indigo-500">
-            CN
+            A
           </AvatarFallback>
         </Avatar>
       </div>
