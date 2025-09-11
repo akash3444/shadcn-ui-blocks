@@ -1,10 +1,12 @@
+import { Sparkles } from "lucide-react";
 import Link from "next/link";
+import { ThemeToggle } from "../app-sidebar/theme-toggle";
 import { GithubStarButton } from "../github-star-button";
 import { Logo } from "../logo";
-import { AppNavigationMenu } from "./app-navigation-menu";
-import { ThemeToggle } from "../app-sidebar/theme-toggle";
-import { NavigationSheet } from "./navigation-sheet";
+import { Button } from "../ui/button";
 import { VersionSwitcher } from "../version-switcher";
+import { AppNavigationMenu } from "./app-navigation-menu";
+import { NavigationSheet } from "./navigation-sheet";
 
 export const Navbar = () => {
   return (
@@ -25,10 +27,22 @@ export const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <div className="hidden sm:block">
-              <VersionSwitcher variant="compact" />
-            </div>
+            <Button
+              className="relative rounded-full !px-4 bg-linear-to-br from-primary via-primary/85 to-primary"
+              asChild
+            >
+              <Link
+                href="https://pro.shadcnui-blocks.com"
+                target="_blank"
+                rel="noopener"
+              >
+                <Sparkles /> Get Pro
+              </Link>
+            </Button>
             <GithubStarButton />
+            <div className="hidden sm:block">
+              <VersionSwitcher variant="compact" className="h-9" />
+            </div>
             <ThemeToggle />
             <div className="block md:hidden">
               <NavigationSheet />

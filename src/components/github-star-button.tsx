@@ -7,10 +7,14 @@ const REPO = "shadcn-ui-blocks";
 
 export const GithubStarButton = async () => {
   return (
-    <Button variant="outline" className="rounded-full shadow-none px-3" asChild>
+    <Button
+      variant="outline"
+      size="icon"
+      className="rounded-full shadow-none px-3"
+      asChild
+    >
       <Link href={`https://github.com/${OWNER}/${REPO}`} target="_blank">
         <GithubLogo className="h-5! w-5!" />
-        Star
       </Link>
     </Button>
   );
