@@ -5,7 +5,9 @@
   "title": "Timeline 06",
   "description": "A simple timeline block for process steps with completion status",
   "dependencies": [
-    "lucide-react"
+    "lucide-react",
+    "clsx",
+    "tailwind-merge"
   ],
   "files": [
     {
@@ -13,6 +15,18 @@
       "content": "import { cn } from \"@/lib/utils\";\nimport { Check } from \"lucide-react\";\n\nconst steps = [\n  {\n    title: \"Research\",\n    description:\n      \"Gather information and analyze requirements to understand the problem and define objectives.\",\n    completed: true,\n  },\n  {\n    title: \"Planning\",\n    description:\n      \"Create a roadmap, define the scope, and outline the necessary steps to achieve the goal.\",\n    completed: true,\n  },\n  {\n    title: \"Design\",\n    description:\n      \"Develop wireframes, mockups, and prototypes to visualize the structure and user experience.\",\n    completed: true,\n  },\n  {\n    title: \"Development\",\n    description:\n      \"Write code, integrate features, and build the core functionality of the application.\",\n  },\n  {\n    title: \"Testing\",\n    description:\n      \"Perform quality assurance, fix bugs, and optimize performance before release.\",\n  },\n  {\n    title: \"Deployment\",\n    description:\n      \"Launch the project in a live environment and ensure smooth deployment.\",\n  },\n  {\n    title: \"Maintenance\",\n    description:\n      \"Monitor performance, update features, and provide ongoing support and improvements.\",\n  },\n];\n\nexport default function Timeline() {\n  return (\n    <div className=\"max-w-(--breakpoint-sm) mx-auto py-12 md:py-20 px-6\">\n      <div className=\"relative ml-6\">\n        {/* Timeline line */}\n        <div className=\"absolute left-0 inset-y-0 border-l-2\" />\n\n        {steps.map(({ title, description, completed }, index) => (\n          <div key={index} className=\"relative pl-10 pb-10 last:pb-0\">\n            {/* Timeline Icon */}\n            <div\n              className={cn(\n                \"absolute left-px -translate-x-1/2 h-9 w-9 border-2 border-muted-foreground/40 flex items-center justify-center rounded-full bg-accent ring-8 ring-background\",\n                {\n                  \"bg-primary border-primary text-primary-foreground\":\n                    completed,\n                }\n              )}\n            >\n              <span className=\"font-semibold text-lg\">\n                {completed ? <Check className=\"h-5 w-5\" /> : index + 1}\n              </span>\n            </div>\n\n            {/* Content */}\n            <div className=\"pt-1 space-y-2\">\n              <h3 className=\"text-xl font-medium tracking-[-0.015em]\">\n                {title}\n              </h3>\n              <p className=\"text-muted-foreground\">{description}</p>\n            </div>\n          </div>\n        ))}\n      </div>\n    </div>\n  );\n}\n",
       "type": "registry:block",
       "target": "components/timeline-06/timeline-06.tsx"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "content": "import { config } from \"@/config\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport function capitalize(str: string) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\n\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\ntype GroupBy<T, K extends keyof T> = Record<string, T[]>;\n\nexport function groupBy<T, K extends keyof T>(\n  array: T[],\n  key: K\n): GroupBy<T, K> {\n  return array.reduce((acc, item) => {\n    const keyValue = String(item[key]);\n    if (!acc[keyValue]) {\n      acc[keyValue] = [];\n    }\n    acc[keyValue].push(item);\n    return acc;\n  }, {} as GroupBy<T, K>);\n}\n\nexport function absoluteUrl(path: string) {\n  return process.env.NODE_ENV === \"development\"\n    ? `http://localhost:3000${path}`\n    : `https://${config.appUrl}${path}`;\n}\n",
+      "type": "registry:lib",
+      "target": ""
+    },
+    {
+      "path": "src/config.ts",
+      "content": "export const config = {\n  appUrl:\n    process.env.NODE_ENV === \"production\"\n      ? process.env.VERCEL_PROJECT_PRODUCTION_URL ??\n        process.env.NEXT_PUBLIC_APP_URL!\n      : \"localhost:3000\",\n  social: {\n    github: \"https://github.com/akash3444/shadcn-ui-blocks\",\n    twitter: \"https://twitter.com/shadcnui_blocks\",\n  },\n};\n",
+      "type": "registry:component",
+      "target": ""
     }
   ]
 }

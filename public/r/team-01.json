@@ -4,6 +4,7 @@
   "type": "registry:block",
   "title": "Team 01",
   "description": "A simple team block",
+  "dependencies": [],
   "files": [
     {
       "path": "src/blocks/team-01/team-01.tsx",

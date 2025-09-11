@@ -4,6 +4,10 @@
   "type": "registry:component",
   "title": "Bordered Table",
   "description": "A bordered table component",
+  "dependencies": [
+    "clsx",
+    "tailwind-merge"
+  ],
   "registryDependencies": [
     "table"
   ],
@@ -12,6 +16,24 @@
       "path": "src/components/customized/table/table-02.tsx",
       "content": "import {\n  Table,\n  TableBody,\n  TableCaption,\n  TableCell,\n  TableFooter,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@/components/ui/table\";\n\nconst invoices = [\n  {\n    invoice: \"INV001\",\n    paymentStatus: \"Paid\",\n    totalAmount: \"$250.00\",\n    paymentMethod: \"Credit Card\",\n  },\n  {\n    invoice: \"INV002\",\n    paymentStatus: \"Pending\",\n    totalAmount: \"$150.00\",\n    paymentMethod: \"PayPal\",\n  },\n  {\n    invoice: \"INV003\",\n    paymentStatus: \"Unpaid\",\n    totalAmount: \"$350.00\",\n    paymentMethod: \"Bank Transfer\",\n  },\n  {\n    invoice: \"INV004\",\n    paymentStatus: \"Paid\",\n    totalAmount: \"$450.00\",\n    paymentMethod: \"Credit Card\",\n  },\n  {\n    invoice: \"INV005\",\n    paymentStatus: \"Paid\",\n    totalAmount: \"$550.00\",\n    paymentMethod: \"PayPal\",\n  },\n  {\n    invoice: \"INV006\",\n    paymentStatus: \"Pending\",\n    totalAmount: \"$200.00\",\n    paymentMethod: \"Bank Transfer\",\n  },\n  {\n    invoice: \"INV007\",\n    paymentStatus: \"Unpaid\",\n    totalAmount: \"$300.00\",\n    paymentMethod: \"Credit Card\",\n  },\n];\n\nexport default function BorderedTableDemo() {\n  return (\n    <Table className=\"border\">\n      <TableCaption>A list of your recent invoices.</TableCaption>\n      <TableHeader>\n        <TableRow className=\"[&>th]:border-r last:border-r-0\">\n          <TableHead className=\"w-[100px]\">Invoice</TableHead>\n          <TableHead>Status</TableHead>\n          <TableHead>Method</TableHead>\n          <TableHead className=\"text-right\">Amount</TableHead>\n        </TableRow>\n      </TableHeader>\n      <TableBody>\n        {invoices.map((invoice) => (\n          <TableRow\n            key={invoice.invoice}\n            className=\"[&>td]:border-r last:border-r-0\"\n          >\n            <TableCell className=\"font-medium\">{invoice.invoice}</TableCell>\n            <TableCell>{invoice.paymentStatus}</TableCell>\n            <TableCell>{invoice.paymentMethod}</TableCell>\n            <TableCell className=\"text-right\">{invoice.totalAmount}</TableCell>\n          </TableRow>\n        ))}\n      </TableBody>\n      <TableFooter>\n        <TableRow className=\"*:border-r last:border-r-0\">\n          <TableCell colSpan={3}>Total</TableCell>\n          <TableCell className=\"text-right\">$2,500.00</TableCell>\n        </TableRow>\n      </TableFooter>\n    </Table>\n  );\n}\n",
       "type": "registry:component"
+    },
+    {
+      "path": "src/components/ui/table.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction Table({ className, ...props }: React.ComponentProps<\"table\">) {\n  return (\n    <div\n      data-slot=\"table-container\"\n      className=\"relative w-full overflow-x-auto\"\n    >\n      <table\n        data-slot=\"table\"\n        className={cn(\"w-full caption-bottom text-sm\", className)}\n        {...props}\n      />\n    </div>\n  )\n}\n\nfunction TableHeader({ className, ...props }: React.ComponentProps<\"thead\">) {\n  return (\n    <thead\n      data-slot=\"table-header\"\n      className={cn(\"[&_tr]:border-b\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction TableBody({ className, ...props }: React.ComponentProps<\"tbody\">) {\n  return (\n    <tbody\n      data-slot=\"table-body\"\n      className={cn(\"[&_tr:last-child]:border-0\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction TableFooter({ className, ...props }: React.ComponentProps<\"tfoot\">) {\n  return (\n    <tfoot\n      data-slot=\"table-footer\"\n      className={cn(\n        \"bg-muted/50 border-t font-medium [&>tr]:last:border-b-0\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction TableRow({ className, ...props }: React.ComponentProps<\"tr\">) {\n  return (\n    <tr\n      data-slot=\"table-row\"\n      className={cn(\n        \"hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction TableHead({ className, ...props }: React.ComponentProps<\"th\">) {\n  return (\n    <th\n      data-slot=\"table-head\"\n      className={cn(\n        \"text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction TableCell({ className, ...props }: React.ComponentProps<\"td\">) {\n  return (\n    <td\n      data-slot=\"table-cell\"\n      className={cn(\n        \"p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction TableCaption({\n  className,\n  ...props\n}: React.ComponentProps<\"caption\">) {\n  return (\n    <caption\n      data-slot=\"table-caption\"\n      className={cn(\"text-muted-foreground mt-4 text-sm\", className)}\n      {...props}\n    />\n  )\n}\n\nexport {\n  Table,\n  TableHeader,\n  TableBody,\n  TableFooter,\n  TableHead,\n  TableRow,\n  TableCell,\n  TableCaption,\n}\n",
+      "type": "registry:ui",
+      "target": ""
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "content": "import { config } from \"@/config\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport function capitalize(str: string) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\n\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\ntype GroupBy<T, K extends keyof T> = Record<string, T[]>;\n\nexport function groupBy<T, K extends keyof T>(\n  array: T[],\n  key: K\n): GroupBy<T, K> {\n  return array.reduce((acc, item) => {\n    const keyValue = String(item[key]);\n    if (!acc[keyValue]) {\n      acc[keyValue] = [];\n    }\n    acc[keyValue].push(item);\n    return acc;\n  }, {} as GroupBy<T, K>);\n}\n\nexport function absoluteUrl(path: string) {\n  return process.env.NODE_ENV === \"development\"\n    ? `http://localhost:3000${path}`\n    : `https://${config.appUrl}${path}`;\n}\n",
+      "type": "registry:lib",
+      "target": ""
+    },
+    {
+      "path": "src/config.ts",
+      "content": "export const config = {\n  appUrl:\n    process.env.NODE_ENV === \"production\"\n      ? process.env.VERCEL_PROJECT_PRODUCTION_URL ??\n        process.env.NEXT_PUBLIC_APP_URL!\n      : \"localhost:3000\",\n  social: {\n    github: \"https://github.com/akash3444/shadcn-ui-blocks\",\n    twitter: \"https://twitter.com/shadcnui_blocks\",\n  },\n};\n",
+      "type": "registry:component",
+      "target": ""
     }
   ]
 }

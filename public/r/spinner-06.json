@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Swirling Effect Spinner",
   "description": "A spinner component with swirling effect",
+  "dependencies": [],
   "files": [
     {
       "path": "src/components/customized/spinner/spinner-06.tsx",
