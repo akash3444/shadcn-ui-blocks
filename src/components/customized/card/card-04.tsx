@@ -9,9 +9,9 @@ import {
 
 export default function CardBanner() {
   return (
-    <Card className="w-full shadow-none bg-muted">
+    <Card className="w-full max-w-3xl shadow-none bg-muted py-10">
       <CardHeader className="px-8">
-        <CardTitle className="mb-1 text-3xl font-bold tracking-tight">
+        <CardTitle className="mb-1 text-4xl font-semibold tracking-tighter">
           Power up your scheduling
         </CardTitle>
         <CardDescription className="text-base text-muted-foreground">

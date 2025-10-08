@@ -12,14 +12,18 @@ import { FAQ } from "./faq";
 export const Features = () => {
   return (
     <section className="py-20 max-w-(--breakpoint-lg) mx-auto px-6 lg:px-0">
-      <h2 className="text-5xl font-bold text-center">Core Features</h2>
+      <h2 className="text-5xl font-semibold text-center tracking-tight">
+        Core Features
+      </h2>
       <div className="mt-20 mb-14 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <Card className="bg-secondary/40 shadow-none">
-          <CardHeader className="pb-2 gap-3">
+        <Card className="bg-secondary/40 shadow-none gap-3">
+          <CardHeader className="pb-0 gap-3">
             <div className="h-10 w-10 bg-primary/10 flex items-center justify-center rounded-full">
               <ShapesIcon className="h-5 w-5" />
             </div>
-            <h3 className="text-2xl font-bold tracking-tight">Blocks</h3>
+            <h3 className="mt-4 text-2xl font-semibold tracking-tight">
+              Blocks
+            </h3>
           </CardHeader>
           <CardContent>
             <p>
@@ -71,12 +75,12 @@ export const Features = () => {
             </Button>
           </CardFooter>
         </Card>
-        <Card className="bg-secondary/40 shadow-none">
-          <CardHeader className="pb-2 gap-3">
+        <Card className="bg-secondary/40 shadow-none gap-3">
+          <CardHeader className="pb-0 gap-3">
             <div className="h-10 w-10 bg-primary/10 flex items-center justify-center rounded-full">
               <PuzzleIcon className="h-5 w-5" />
             </div>
-            <h3 className="text-2xl font-bold tracking-tight">
+            <h3 className="mt-4 text-2xl font-semibold tracking-tight">
               Customized Components
             </h3>
           </CardHeader>

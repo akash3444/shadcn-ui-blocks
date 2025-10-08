@@ -16,9 +16,11 @@ import { CircleHelpIcon } from "lucide-react";
 
 export default function PricingCard() {
   return (
-    <Card className="max-w-xs w-full">
+    <Card className="max-w-xs w-full shadow-md shadow-border/70">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold">Pro Plan</CardTitle>
+        <CardTitle className="text-2xl font-bold tracking-tight">
+          Pro Plan
+        </CardTitle>
         <CardDescription>
           For teams that need advanced scheduling tools to streamline workflows
           and enhance collaboration, ensuring every meeting is productive and on
@@ -29,7 +31,7 @@ export default function PricingCard() {
         <span className="text-4xl leading-none font-bold text-foreground">
           $20
         </span>
-        <span className="ml-1.5 mr-1">/mo</span>
+        <span className="ml-0.5 mr-1.5">/mo</span>
         <Tooltip>
           <TooltipTrigger className="mb-1">
             <CircleHelpIcon className="h-4 w-4" />

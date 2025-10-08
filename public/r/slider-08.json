@@ -4,11 +4,6 @@
   "type": "registry:component",
   "title": "Audio Slider",
   "description": "A slider component designed for audio controls",
-  "dependencies": [
-    "radix-ui",
-    "clsx",
-    "tailwind-merge"
-  ],
   "registryDependencies": [
     "slider"
   ],
@@ -17,24 +12,6 @@
       "path": "src/components/customized/slider/slider-08.tsx",
       "content": "\"use client\";\n\nimport { Slider } from \"@/components/ui/slider\";\nimport * as React from \"react\";\n\nconst formatDuration = (duration: number) => {\n  const minutes = Math.floor(duration / 60);\n  const seconds = duration % 60;\n\n  return `${minutes}:${seconds < 10 ? \"0\" : \"\"}${seconds}`;\n};\n\nexport default function AudioSliderDemo() {\n  const duration = 145;\n  const [playbackTime, setPlaybackTime] = React.useState([78]);\n\n  return (\n    <div className=\"max-w-sm w-full\">\n      <Slider\n        defaultValue={playbackTime}\n        max={duration}\n        step={1}\n        onValueChange={setPlaybackTime}\n      />\n      <div className=\"mt-1 flex justify-between text-xs font-medium text-muted-foreground\">\n        <span>{formatDuration(playbackTime[0])}</span>\n        <span>{formatDuration(duration)}</span>\n      </div>\n    </div>\n  );\n}\n",
       "type": "registry:component"
-    },
-    {
-      "path": "src/components/ui/slider.tsx",
-      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Slider as SliderPrimitive } from \"radix-ui\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction Slider({\n  className,\n  defaultValue,\n  value,\n  min = 0,\n  max = 100,\n  ...props\n}: React.ComponentProps<typeof SliderPrimitive.Root>) {\n  const _values = React.useMemo(\n    () =>\n      Array.isArray(value)\n        ? value\n        : Array.isArray(defaultValue)\n          ? defaultValue\n          : [min, max],\n    [value, defaultValue, min, max]\n  )\n\n  return (\n    <SliderPrimitive.Root\n      data-slot=\"slider\"\n      defaultValue={defaultValue}\n      value={value}\n      min={min}\n      max={max}\n      className={cn(\n        \"relative flex w-full touch-none items-center select-none data-[disabled]:opacity-50 data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-44 data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col\",\n        className\n      )}\n      {...props}\n    >\n      <SliderPrimitive.Track\n        data-slot=\"slider-track\"\n        className={cn(\n          \"bg-muted relative grow overflow-hidden rounded-full data-[orientation=horizontal]:h-1.5 data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-1.5\"\n        )}\n      >\n        <SliderPrimitive.Range\n          data-slot=\"slider-range\"\n          className={cn(\n            \"bg-primary absolute data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full\"\n          )}\n        />\n      </SliderPrimitive.Track>\n      {Array.from({ length: _values.length }, (_, index) => (\n        <SliderPrimitive.Thumb\n          data-slot=\"slider-thumb\"\n          key={index}\n          className=\"border-primary bg-background ring-ring/50 block size-4 shrink-0 rounded-full border shadow-sm transition-[color,box-shadow] hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50\"\n        />\n      ))}\n    </SliderPrimitive.Root>\n  )\n}\n\nexport { Slider }\n",
-      "type": "registry:ui",
-      "target": ""
-    },
-    {
-      "path": "src/lib/utils.ts",
-      "content": "import { config } from \"@/config\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport function capitalize(str: string) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\n\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\ntype GroupBy<T, K extends keyof T> = Record<string, T[]>;\n\nexport function groupBy<T, K extends keyof T>(\n  array: T[],\n  key: K\n): GroupBy<T, K> {\n  return array.reduce((acc, item) => {\n    const keyValue = String(item[key]);\n    if (!acc[keyValue]) {\n      acc[keyValue] = [];\n    }\n    acc[keyValue].push(item);\n    return acc;\n  }, {} as GroupBy<T, K>);\n}\n\nexport function absoluteUrl(path: string) {\n  return process.env.NODE_ENV === \"development\"\n    ? `http://localhost:3000${path}`\n    : `https://${config.appUrl}${path}`;\n}\n",
-      "type": "registry:lib",
-      "target": ""
-    },
-    {
-      "path": "src/config.ts",
-      "content": "export const config = {\n  appUrl:\n    process.env.NODE_ENV === \"production\"\n      ? process.env.VERCEL_PROJECT_PRODUCTION_URL ??\n        process.env.NEXT_PUBLIC_APP_URL!\n      : \"localhost:3000\",\n  social: {\n    github: \"https://github.com/akash3444/shadcn-ui-blocks\",\n    twitter: \"https://twitter.com/shadcnui_blocks\",\n  },\n};\n",
-      "type": "registry:component",
-      "target": ""
     }
   ]
 }

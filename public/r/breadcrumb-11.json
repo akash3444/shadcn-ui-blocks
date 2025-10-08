@@ -5,11 +5,7 @@
   "title": "Tabs Breadcrumb",
   "description": "A tabs breadcrumb component",
   "dependencies": [
-    "lucide-react",
-    "radix-ui",
-    "class-variance-authority",
-    "clsx",
-    "tailwind-merge"
+    "lucide-react"
   ],
   "registryDependencies": [
     "breadcrumb",
@@ -20,30 +16,6 @@
       "path": "src/components/customized/breadcrumb/breadcrumb-11.tsx",
       "content": "import { Badge } from \"@/components/ui/badge\";\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@/components/ui/breadcrumb\";\nimport { ChevronsRight } from \"lucide-react\";\n\nconst BreadcrumbTabsDemo = () => {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList>\n        <BreadcrumbItem>\n          <BreadcrumbLink href=\"#\">\n            <Badge\n              variant=\"secondary\"\n              className=\"font-medium shadow-none rounded-full\"\n            >\n              Home\n            </Badge>\n          </BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator>\n          <ChevronsRight />\n        </BreadcrumbSeparator>\n        <BreadcrumbItem>\n          <BreadcrumbLink href=\"#/components\">\n            <Badge\n              variant=\"secondary\"\n              className=\"font-medium shadow-none rounded-full\"\n            >\n              Components\n            </Badge>\n          </BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator>\n          <ChevronsRight />\n        </BreadcrumbSeparator>\n        <BreadcrumbItem>\n          <BreadcrumbPage>\n            <Badge className=\"shadow-none rounded-full\">Breadcrumb</Badge>\n          </BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  );\n};\n\nexport default BreadcrumbTabsDemo;\n",
       "type": "registry:component"
-    },
-    {
-      "path": "src/components/ui/badge.tsx",
-      "content": "import * as React from \"react\"\nimport { Slot as SlotPrimitive } from \"radix-ui\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst badgeVariants = cva(\n  \"inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden\",\n  {\n    variants: {\n      variant: {\n        default:\n          \"border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90\",\n        secondary:\n          \"border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90\",\n        destructive:\n          \"border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60\",\n        outline:\n          \"text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n    },\n  }\n)\n\nfunction Badge({\n  className,\n  variant,\n  asChild = false,\n  ...props\n}: React.ComponentProps<\"span\"> &\n  VariantProps<typeof badgeVariants> & { asChild?: boolean }) {\n  const Comp = asChild ? SlotPrimitive.Slot : \"span\"\n\n  return (\n    <Comp\n      data-slot=\"badge\"\n      className={cn(badgeVariants({ variant }), className)}\n      {...props}\n    />\n  )\n}\n\nexport { Badge, badgeVariants }\n",
-      "type": "registry:ui",
-      "target": ""
-    },
-    {
-      "path": "src/components/ui/breadcrumb.tsx",
-      "content": "import * as React from \"react\"\nimport { Slot as SlotPrimitive } from \"radix-ui\"\nimport { ChevronRight, MoreHorizontal } from \"lucide-react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction Breadcrumb({ ...props }: React.ComponentProps<\"nav\">) {\n  return <nav aria-label=\"breadcrumb\" data-slot=\"breadcrumb\" {...props} />\n}\n\nfunction BreadcrumbList({ className, ...props }: React.ComponentProps<\"ol\">) {\n  return (\n    <ol\n      data-slot=\"breadcrumb-list\"\n      className={cn(\n        \"text-muted-foreground flex flex-wrap items-center gap-1.5 text-sm break-words sm:gap-2.5\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction BreadcrumbItem({ className, ...props }: React.ComponentProps<\"li\">) {\n  return (\n    <li\n      data-slot=\"breadcrumb-item\"\n      className={cn(\"inline-flex items-center gap-1.5\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction BreadcrumbLink({\n  asChild,\n  className,\n  ...props\n}: React.ComponentProps<\"a\"> & {\n  asChild?: boolean\n}) {\n  const Comp = asChild ? SlotPrimitive.Slot : \"a\"\n\n  return (\n    <Comp\n      data-slot=\"breadcrumb-link\"\n      className={cn(\"hover:text-foreground transition-colors\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction BreadcrumbPage({ className, ...props }: React.ComponentProps<\"span\">) {\n  return (\n    <span\n      data-slot=\"breadcrumb-page\"\n      role=\"link\"\n      aria-disabled=\"true\"\n      aria-current=\"page\"\n      className={cn(\"text-foreground font-normal\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction BreadcrumbSeparator({\n  children,\n  className,\n  ...props\n}: React.ComponentProps<\"li\">) {\n  return (\n    <li\n      data-slot=\"breadcrumb-separator\"\n      role=\"presentation\"\n      aria-hidden=\"true\"\n      className={cn(\"[&>svg]:size-3.5\", className)}\n      {...props}\n    >\n      {children ?? <ChevronRight />}\n    </li>\n  )\n}\n\nfunction BreadcrumbEllipsis({\n  className,\n  ...props\n}: React.ComponentProps<\"span\">) {\n  return (\n    <span\n      data-slot=\"breadcrumb-ellipsis\"\n      role=\"presentation\"\n      aria-hidden=\"true\"\n      className={cn(\"flex size-9 items-center justify-center\", className)}\n      {...props}\n    >\n      <MoreHorizontal className=\"size-4\" />\n      <span className=\"sr-only\">More</span>\n    </span>\n  )\n}\n\nexport {\n  Breadcrumb,\n  BreadcrumbList,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n  BreadcrumbEllipsis,\n}\n",
-      "type": "registry:ui",
-      "target": ""
-    },
-    {
-      "path": "src/lib/utils.ts",
-      "content": "import { config } from \"@/config\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport function capitalize(str: string) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\n\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\ntype GroupBy<T, K extends keyof T> = Record<string, T[]>;\n\nexport function groupBy<T, K extends keyof T>(\n  array: T[],\n  key: K\n): GroupBy<T, K> {\n  return array.reduce((acc, item) => {\n    const keyValue = String(item[key]);\n    if (!acc[keyValue]) {\n      acc[keyValue] = [];\n    }\n    acc[keyValue].push(item);\n    return acc;\n  }, {} as GroupBy<T, K>);\n}\n\nexport function absoluteUrl(path: string) {\n  return process.env.NODE_ENV === \"development\"\n    ? `http://localhost:3000${path}`\n    : `https://${config.appUrl}${path}`;\n}\n",
-      "type": "registry:lib",
-      "target": ""
-    },
-    {
-      "path": "src/config.ts",
-      "content": "export const config = {\n  appUrl:\n    process.env.NODE_ENV === \"production\"\n      ? process.env.VERCEL_PROJECT_PRODUCTION_URL ??\n        process.env.NEXT_PUBLIC_APP_URL!\n      : \"localhost:3000\",\n  social: {\n    github: \"https://github.com/akash3444/shadcn-ui-blocks\",\n    twitter: \"https://twitter.com/shadcnui_blocks\",\n  },\n};\n",
-      "type": "registry:component",
-      "target": ""
     }
   ]
 }

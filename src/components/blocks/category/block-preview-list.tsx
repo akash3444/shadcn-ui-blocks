@@ -80,7 +80,7 @@ const BlockPreviewList = () => {
                         width={BLOCK_SCREENSHOT_WIDTH}
                         src={getBlockScreenshot(block.name)}
                         alt={block.title}
-                        className="h-full w-full object-cover group-hover:scale-90 transition-transform"
+                        className="h-full w-full object-cover transition-transform"
                       />
                     </div>
                   </Link>

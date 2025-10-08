@@ -4,10 +4,6 @@
   "type": "registry:component",
   "title": "Default Input",
   "description": "A default input component",
-  "dependencies": [
-    "clsx",
-    "tailwind-merge"
-  ],
   "registryDependencies": [
     "input"
   ],
@@ -16,24 +12,6 @@
       "path": "src/components/customized/input/input-01.tsx",
       "content": "import { Input } from \"@/components/ui/input\";\n\nexport default function InputDemo() {\n  return <Input type=\"email\" placeholder=\"Email\" className=\"max-w-xs\" />;\n}\n",
       "type": "registry:component"
-    },
-    {
-      "path": "src/components/ui/input.tsx",
-      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction Input({ className, type, ...props }: React.ComponentProps<\"input\">) {\n  return (\n    <input\n      type={type}\n      data-slot=\"input\"\n      className={cn(\n        \"file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm\",\n        \"focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]\",\n        \"aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { Input }\n",
-      "type": "registry:ui",
-      "target": ""
-    },
-    {
-      "path": "src/lib/utils.ts",
-      "content": "import { config } from \"@/config\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport function capitalize(str: string) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\n\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\ntype GroupBy<T, K extends keyof T> = Record<string, T[]>;\n\nexport function groupBy<T, K extends keyof T>(\n  array: T[],\n  key: K\n): GroupBy<T, K> {\n  return array.reduce((acc, item) => {\n    const keyValue = String(item[key]);\n    if (!acc[keyValue]) {\n      acc[keyValue] = [];\n    }\n    acc[keyValue].push(item);\n    return acc;\n  }, {} as GroupBy<T, K>);\n}\n\nexport function absoluteUrl(path: string) {\n  return process.env.NODE_ENV === \"development\"\n    ? `http://localhost:3000${path}`\n    : `https://${config.appUrl}${path}`;\n}\n",
-      "type": "registry:lib",
-      "target": ""
-    },
-    {
-      "path": "src/config.ts",
-      "content": "export const config = {\n  appUrl:\n    process.env.NODE_ENV === \"production\"\n      ? process.env.VERCEL_PROJECT_PRODUCTION_URL ??\n        process.env.NEXT_PUBLIC_APP_URL!\n      : \"localhost:3000\",\n  social: {\n    github: \"https://github.com/akash3444/shadcn-ui-blocks\",\n    twitter: \"https://twitter.com/shadcnui_blocks\",\n  },\n};\n",
-      "type": "registry:component",
-      "target": ""
     }
   ]
 }

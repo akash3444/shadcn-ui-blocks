@@ -4,7 +4,6 @@
   "type": "registry:block",
   "title": "Stats 02",
   "description": "A simple stats block",
-  "dependencies": [],
   "files": [
     {
       "path": "src/blocks/stats-02/stats-02.tsx",

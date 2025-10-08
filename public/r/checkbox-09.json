@@ -6,27 +6,13 @@
   "description": "A checkbox with custom icon component",
   "dependencies": [
     "lucide-react",
-    "radix-ui",
-    "clsx",
-    "tailwind-merge"
+    "radix-ui"
   ],
   "files": [
     {
       "path": "src/components/customized/checkbox/checkbox-09.tsx",
       "content": "import * as React from \"react\";\nimport { Checkbox as CheckboxPrimitive } from \"radix-ui\";\nimport { cn } from \"@/lib/utils\";\nimport { BookmarkIcon, CheckIcon, Heart, StarIcon } from \"lucide-react\";\n\n// Replace the `Checkbox` component in `@components/ui/checkbox` with below component and use it here to support custom icon.\nconst Checkbox = React.forwardRef<\n  React.ElementRef<typeof CheckboxPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> & {\n    icon?: React.ReactNode;\n    checkedIcon?: React.ReactNode;\n  }\n>(({ className, icon, checkedIcon, ...props }, ref) => (\n  <>\n    <CheckboxPrimitive.Root\n      ref={ref}\n      className={cn(\"peer group\", className)}\n      {...props}\n    >\n      <span className=\"group-data-[state=checked]:hidden\">{icon}</span>\n      <span className=\"group-data-[state=unchecked]:hidden\">{checkedIcon}</span>\n\n      {!checkedIcon && (\n        <CheckboxPrimitive.Indicator\n          className={cn(\"flex items-center justify-center text-current\")}\n        >\n          <CheckIcon className=\"h-4 w-4\" />\n        </CheckboxPrimitive.Indicator>\n      )}\n    </CheckboxPrimitive.Root>\n  </>\n));\nCheckbox.displayName = CheckboxPrimitive.Root.displayName;\n\nexport default function CheckboxIconDemo() {\n  return (\n    <div className=\"flex items-center space-x-3\">\n      <Checkbox\n        defaultChecked\n        icon={<Heart />}\n        checkedIcon={<Heart className=\"fill-rose-500 stroke-rose-500\" />}\n      />\n      <Checkbox\n        defaultChecked\n        icon={<BookmarkIcon />}\n        checkedIcon={<BookmarkIcon className=\"fill-primary\" />}\n      />\n      <Checkbox\n        icon={<StarIcon />}\n        defaultChecked\n        checkedIcon={<StarIcon className=\"fill-yellow-400 stroke-yellow-400\" />}\n      />\n    </div>\n  );\n}\n",
       "type": "registry:component"
-    },
-    {
-      "path": "src/lib/utils.ts",
-      "content": "import { config } from \"@/config\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport function capitalize(str: string) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\n\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\ntype GroupBy<T, K extends keyof T> = Record<string, T[]>;\n\nexport function groupBy<T, K extends keyof T>(\n  array: T[],\n  key: K\n): GroupBy<T, K> {\n  return array.reduce((acc, item) => {\n    const keyValue = String(item[key]);\n    if (!acc[keyValue]) {\n      acc[keyValue] = [];\n    }\n    acc[keyValue].push(item);\n    return acc;\n  }, {} as GroupBy<T, K>);\n}\n\nexport function absoluteUrl(path: string) {\n  return process.env.NODE_ENV === \"development\"\n    ? `http://localhost:3000${path}`\n    : `https://${config.appUrl}${path}`;\n}\n",
-      "type": "registry:lib",
-      "target": ""
-    },
-    {
-      "path": "src/config.ts",
-      "content": "export const config = {\n  appUrl:\n    process.env.NODE_ENV === \"production\"\n      ? process.env.VERCEL_PROJECT_PRODUCTION_URL ??\n        process.env.NEXT_PUBLIC_APP_URL!\n      : \"localhost:3000\",\n  social: {\n    github: \"https://github.com/akash3444/shadcn-ui-blocks\",\n    twitter: \"https://twitter.com/shadcnui_blocks\",\n  },\n};\n",
-      "type": "registry:component",
-      "target": ""
     }
   ]
 }

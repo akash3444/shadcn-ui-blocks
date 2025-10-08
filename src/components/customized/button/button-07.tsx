@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ButtonGroup } from "@/components/ui/button-group";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,13 +12,13 @@ import { ChevronDown, Plus, Star, X } from "lucide-react";
 
 const SplitButton = () => {
   return (
-    <div className="*:rounded-none [&>button:first-child]:rounded-l-md [&>button:last-child]:rounded-r-md divide-x divide-border/40">
-      <Button>
+    <ButtonGroup>
+      <Button variant="outline">
         <Star /> Star
       </Button>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button size="icon">
+          <Button size="icon" variant="outline">
             <ChevronDown />
           </Button>
         </DropdownMenuTrigger>
@@ -38,7 +39,7 @@ const SplitButton = () => {
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-    </div>
+    </ButtonGroup>
   );
 };
 

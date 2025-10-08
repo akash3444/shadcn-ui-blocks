@@ -5,6 +5,14 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
+import {
+  Item,
+  ItemActions,
+  ItemContent,
+  ItemDescription,
+  ItemMedia,
+  ItemTitle,
+} from "@/components/ui/item";
 import { Separator } from "@/components/ui/separator";
 import {
   HeartIcon,
@@ -18,22 +26,26 @@ export default function CardPost() {
   return (
     <Card className="w-full max-w-xs shadow-none py-0 gap-0">
       <CardHeader className="flex flex-row items-center justify-between py-2.5 -mr-1">
-        <div className="flex items-center gap-3">
-          <Image
-            src="https://github.com/shadcn.png"
-            className="h-8 w-8 rounded-full bg-secondary object-contain"
-            alt=""
-            height={32}
-            width={32}
-          />
-          <div className="flex flex-col gap-0.5">
-            <h6 className="text-sm leading-none font-medium">shadcn</h6>
-            <span className="text-xs">@shadcn</span>
-          </div>
-        </div>
-        <Button variant="ghost" size="icon">
-          <MoreHorizontalIcon />
-        </Button>
+        <Item className="w-full p-0 gap-2.5">
+          <ItemMedia>
+            <Image
+              src="https://github.com/shadcn.png"
+              className="h-8 w-8 rounded-full bg-secondary object-contain"
+              alt=""
+              height={32}
+              width={32}
+            />
+          </ItemMedia>
+          <ItemContent className="gap-0">
+            <ItemTitle>shadcn</ItemTitle>
+            <ItemDescription className="text-xs">@shadcn</ItemDescription>
+          </ItemContent>
+          <ItemActions className="-me-1">
+            <Button variant="ghost" size="icon">
+              <MoreHorizontalIcon />
+            </Button>
+          </ItemActions>
+        </Item>
       </CardHeader>
       <CardContent className="p-0">
         <div className="relative aspect-video bg-muted border-y" />

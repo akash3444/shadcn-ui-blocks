@@ -6,27 +6,13 @@
   "description": "A customized switch component",
   "dependencies": [
     "lucide-react",
-    "radix-ui",
-    "clsx",
-    "tailwind-merge"
+    "radix-ui"
   ],
   "files": [
     {
       "path": "src/components/customized/switch/switch-07.tsx",
       "content": "\"use client\";\n\nimport { Switch as SwitchPrimitive } from \"radix-ui\";\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\nimport { MoonIcon, SunMediumIcon } from \"lucide-react\";\n\n// Replace the `Switch` component in `@components/ui/switch` with below component and use it here to support this customization.\nconst Switch = React.forwardRef<\n  React.ElementRef<typeof SwitchPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof SwitchPrimitive.Root> & {\n    icon?: React.ReactNode;\n    thumbClassName?: string;\n  }\n>(({ className, icon, thumbClassName, ...props }, ref) => (\n  <SwitchPrimitive.Root\n    className={cn(\n      \"peer inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent shadow-xs transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input\",\n      className\n    )}\n    {...props}\n    ref={ref}\n  >\n    <SwitchPrimitive.Thumb\n      className={cn(\n        \"pointer-events-none flex h-4 w-4 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0 items-center justify-center\",\n        thumbClassName\n      )}\n    >\n      {icon ? icon : null}\n    </SwitchPrimitive.Thumb>\n  </SwitchPrimitive.Root>\n));\nSwitch.displayName = SwitchPrimitive.Root.displayName;\n\nconst SwitchCustomizationDemo = () => {\n  const [isDarkMode, setIsDarkMode] = React.useState(false);\n\n  return (\n    <Switch\n      icon={\n        isDarkMode ? (\n          <MoonIcon className=\"h-4 w-4\" />\n        ) : (\n          <SunMediumIcon className=\"h-4 w-4\" />\n        )\n      }\n      checked={isDarkMode}\n      onCheckedChange={setIsDarkMode}\n      className=\"h-7 w-12\"\n      thumbClassName=\"h-6 w-6 data-[state=checked]:translate-x-5\"\n    />\n  );\n};\n\nexport default SwitchCustomizationDemo;\n",
       "type": "registry:component"
-    },
-    {
-      "path": "src/lib/utils.ts",
-      "content": "import { config } from \"@/config\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport function capitalize(str: string) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\n\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\ntype GroupBy<T, K extends keyof T> = Record<string, T[]>;\n\nexport function groupBy<T, K extends keyof T>(\n  array: T[],\n  key: K\n): GroupBy<T, K> {\n  return array.reduce((acc, item) => {\n    const keyValue = String(item[key]);\n    if (!acc[keyValue]) {\n      acc[keyValue] = [];\n    }\n    acc[keyValue].push(item);\n    return acc;\n  }, {} as GroupBy<T, K>);\n}\n\nexport function absoluteUrl(path: string) {\n  return process.env.NODE_ENV === \"development\"\n    ? `http://localhost:3000${path}`\n    : `https://${config.appUrl}${path}`;\n}\n",
-      "type": "registry:lib",
-      "target": ""
-    },
-    {
-      "path": "src/config.ts",
-      "content": "export const config = {\n  appUrl:\n    process.env.NODE_ENV === \"production\"\n      ? process.env.VERCEL_PROJECT_PRODUCTION_URL ??\n        process.env.NEXT_PUBLIC_APP_URL!\n      : \"localhost:3000\",\n  social: {\n    github: \"https://github.com/akash3444/shadcn-ui-blocks\",\n    twitter: \"https://twitter.com/shadcnui_blocks\",\n  },\n};\n",
-      "type": "registry:component",
-      "target": ""
     }
   ]
 }

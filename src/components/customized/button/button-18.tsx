@@ -1,19 +1,17 @@
 import { Button } from "@/components/ui/button";
+import {
+  ButtonGroup,
+  ButtonGroupSeparator,
+} from "@/components/ui/button-group";
 
 const GroupButtonDemo = () => (
-  <div className="flex items-center gap-2 flex-wrap">
-    <div className="divide-x divide-muted-foreground">
-      <Button className="rounded-none first:rounded-l-md last:rounded-r-md">
-        Left
-      </Button>
-      <Button className="rounded-none first:rounded-l-md last:rounded-r-md">
-        Middle
-      </Button>
-      <Button className="rounded-none first:rounded-l-md last:rounded-r-md">
-        Right
-      </Button>
-    </div>
-  </div>
+  <ButtonGroup>
+    <Button variant="secondary">Left</Button>
+    <ButtonGroupSeparator />
+    <Button variant="secondary">Middle</Button>
+    <ButtonGroupSeparator />
+    <Button variant="secondary">Right</Button>
+  </ButtonGroup>
 );
 
 export default GroupButtonDemo;

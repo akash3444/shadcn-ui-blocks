@@ -4,10 +4,6 @@
   "type": "registry:component",
   "title": "Rounded Corners Table",
   "description": "A table with rounded corners",
-  "dependencies": [
-    "clsx",
-    "tailwind-merge"
-  ],
   "registryDependencies": [
     "table"
   ],
@@ -16,24 +12,6 @@
       "path": "src/components/customized/table/table-04.tsx",
       "content": "import {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@/components/ui/table\";\n\nconst products = [\n  {\n    id: 101,\n    name: \"Wireless Headphones\",\n    category: \"Electronics\",\n    price: 59.99,\n    rating: 4.5,\n  },\n  {\n    id: 102,\n    name: \"Yoga Mat\",\n    category: \"Sports & Fitness\",\n    price: 25.0,\n    rating: 4.8,\n  },\n  {\n    id: 103,\n    name: \"Coffee Maker\",\n    category: \"Home Appliances\",\n    price: 80.0,\n    rating: 4.2,\n  },\n  {\n    id: 104,\n    name: \"Running Shoes\",\n    category: \"Sportswear\",\n    price: 70.0,\n    rating: 4.6,\n  },\n  {\n    id: 105,\n    name: \"Smartwatch\",\n    category: \"Electronics\",\n    price: 120.0,\n    rating: 4.7,\n  },\n];\n\nexport default function RoundedCornersTableDemo() {\n  return (\n    <div className=\"w-full border rounded-md overflow-hidden\">\n      <Table>\n        <TableHeader>\n          <TableRow>\n            <TableHead className=\"pl-4\">ID</TableHead>\n            <TableHead>Product Name</TableHead>\n            <TableHead>Category</TableHead>\n            <TableHead>Price (USD)</TableHead>\n            <TableHead>Rating</TableHead>\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {products.map((product) => (\n            <TableRow key={product.id} className=\"odd:bg-muted/50\">\n              <TableCell className=\"pl-4\">{product.id}</TableCell>\n              <TableCell className=\"font-medium\">{product.name}</TableCell>\n              <TableCell>{product.category}</TableCell>\n              <TableCell>{product.price}</TableCell>\n              <TableCell>{product.rating}</TableCell>\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </div>\n  );\n}\n",
       "type": "registry:component"
-    },
-    {
-      "path": "src/components/ui/table.tsx",
-      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction Table({ className, ...props }: React.ComponentProps<\"table\">) {\n  return (\n    <div\n      data-slot=\"table-container\"\n      className=\"relative w-full overflow-x-auto\"\n    >\n      <table\n        data-slot=\"table\"\n        className={cn(\"w-full caption-bottom text-sm\", className)}\n        {...props}\n      />\n    </div>\n  )\n}\n\nfunction TableHeader({ className, ...props }: React.ComponentProps<\"thead\">) {\n  return (\n    <thead\n      data-slot=\"table-header\"\n      className={cn(\"[&_tr]:border-b\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction TableBody({ className, ...props }: React.ComponentProps<\"tbody\">) {\n  return (\n    <tbody\n      data-slot=\"table-body\"\n      className={cn(\"[&_tr:last-child]:border-0\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction TableFooter({ className, ...props }: React.ComponentProps<\"tfoot\">) {\n  return (\n    <tfoot\n      data-slot=\"table-footer\"\n      className={cn(\n        \"bg-muted/50 border-t font-medium [&>tr]:last:border-b-0\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction TableRow({ className, ...props }: React.ComponentProps<\"tr\">) {\n  return (\n    <tr\n      data-slot=\"table-row\"\n      className={cn(\n        \"hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction TableHead({ className, ...props }: React.ComponentProps<\"th\">) {\n  return (\n    <th\n      data-slot=\"table-head\"\n      className={cn(\n        \"text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction TableCell({ className, ...props }: React.ComponentProps<\"td\">) {\n  return (\n    <td\n      data-slot=\"table-cell\"\n      className={cn(\n        \"p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction TableCaption({\n  className,\n  ...props\n}: React.ComponentProps<\"caption\">) {\n  return (\n    <caption\n      data-slot=\"table-caption\"\n      className={cn(\"text-muted-foreground mt-4 text-sm\", className)}\n      {...props}\n    />\n  )\n}\n\nexport {\n  Table,\n  TableHeader,\n  TableBody,\n  TableFooter,\n  TableHead,\n  TableRow,\n  TableCell,\n  TableCaption,\n}\n",
-      "type": "registry:ui",
-      "target": ""
-    },
-    {
-      "path": "src/lib/utils.ts",
-      "content": "import { config } from \"@/config\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport function capitalize(str: string) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\n\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\ntype GroupBy<T, K extends keyof T> = Record<string, T[]>;\n\nexport function groupBy<T, K extends keyof T>(\n  array: T[],\n  key: K\n): GroupBy<T, K> {\n  return array.reduce((acc, item) => {\n    const keyValue = String(item[key]);\n    if (!acc[keyValue]) {\n      acc[keyValue] = [];\n    }\n    acc[keyValue].push(item);\n    return acc;\n  }, {} as GroupBy<T, K>);\n}\n\nexport function absoluteUrl(path: string) {\n  return process.env.NODE_ENV === \"development\"\n    ? `http://localhost:3000${path}`\n    : `https://${config.appUrl}${path}`;\n}\n",
-      "type": "registry:lib",
-      "target": ""
-    },
-    {
-      "path": "src/config.ts",
-      "content": "export const config = {\n  appUrl:\n    process.env.NODE_ENV === \"production\"\n      ? process.env.VERCEL_PROJECT_PRODUCTION_URL ??\n        process.env.NEXT_PUBLIC_APP_URL!\n      : \"localhost:3000\",\n  social: {\n    github: \"https://github.com/akash3444/shadcn-ui-blocks\",\n    twitter: \"https://twitter.com/shadcnui_blocks\",\n  },\n};\n",
-      "type": "registry:component",
-      "target": ""
     }
   ]
 }

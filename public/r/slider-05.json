@@ -5,27 +5,13 @@
   "title": "Slider Shape",
   "description": "A slider component with different shapes",
   "dependencies": [
-    "radix-ui",
-    "clsx",
-    "tailwind-merge"
+    "radix-ui"
   ],
   "files": [
     {
       "path": "src/components/customized/slider/slider-05.tsx",
       "content": "import { Slider as SliderPrimitive } from \"radix-ui\";\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\n// Replace `Slider` component in `@components/ui/slider.tsx` with the following code to customize the appearance of the slider.\nconst Slider = React.forwardRef<\n  React.ElementRef<typeof SliderPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root> & {\n    trackClassName?: string;\n    rangeClassName?: string;\n    thumbClassName?: string;\n  }\n>(\n  (\n    { className, trackClassName, rangeClassName, thumbClassName, ...props },\n    ref\n  ) => (\n    <SliderPrimitive.Root\n      ref={ref}\n      className={cn(\n        \"relative flex w-full touch-none select-none items-center\",\n        className\n      )}\n      {...props}\n    >\n      <SliderPrimitive.Track\n        className={cn(\n          \"relative h-1.5 w-full grow overflow-hidden rounded-full bg-primary/20\",\n          trackClassName\n        )}\n      >\n        <SliderPrimitive.Range\n          className={cn(\"absolute h-full bg-primary\", rangeClassName)}\n        />\n      </SliderPrimitive.Track>\n      <SliderPrimitive.Thumb\n        className={cn(\n          \"block h-4 w-4 rounded-full border border-primary/50 bg-background shadow-sm transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50\",\n          thumbClassName\n        )}\n      />\n    </SliderPrimitive.Root>\n  )\n);\nSlider.displayName = SliderPrimitive.Root.displayName;\n\nexport default function SliderShapeDemo() {\n  return (\n    <div className=\"grid gap-6 max-w-sm w-full mx-auto\">\n      <Slider\n        defaultValue={[50]}\n        max={100}\n        step={1}\n        rangeClassName=\"bg-green-500\"\n        trackClassName=\"h-2 rounded-none\"\n        thumbClassName=\"rounded-none bg-white\"\n      />\n      <Slider\n        defaultValue={[50]}\n        max={100}\n        step={1}\n        rangeClassName=\"bg-indigo-500\"\n        trackClassName=\"h-2 rounded-[2px]\"\n        thumbClassName=\"rounded-[2px] bg-white\"\n      />\n      <Slider\n        defaultValue={[50]}\n        max={100}\n        step={1}\n        rangeClassName=\"bg-rose-500\"\n        trackClassName=\"h-2\"\n        thumbClassName=\"bg-white\"\n      />\n    </div>\n  );\n}\n",
       "type": "registry:component"
-    },
-    {
-      "path": "src/lib/utils.ts",
-      "content": "import { config } from \"@/config\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n\nexport function capitalize(str: string) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\n\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\ntype GroupBy<T, K extends keyof T> = Record<string, T[]>;\n\nexport function groupBy<T, K extends keyof T>(\n  array: T[],\n  key: K\n): GroupBy<T, K> {\n  return array.reduce((acc, item) => {\n    const keyValue = String(item[key]);\n    if (!acc[keyValue]) {\n      acc[keyValue] = [];\n    }\n    acc[keyValue].push(item);\n    return acc;\n  }, {} as GroupBy<T, K>);\n}\n\nexport function absoluteUrl(path: string) {\n  return process.env.NODE_ENV === \"development\"\n    ? `http://localhost:3000${path}`\n    : `https://${config.appUrl}${path}`;\n}\n",
-      "type": "registry:lib",
-      "target": ""
-    },
-    {
-      "path": "src/config.ts",
-      "content": "export const config = {\n  appUrl:\n    process.env.NODE_ENV === \"production\"\n      ? process.env.VERCEL_PROJECT_PRODUCTION_URL ??\n        process.env.NEXT_PUBLIC_APP_URL!\n      : \"localhost:3000\",\n  social: {\n    github: \"https://github.com/akash3444/shadcn-ui-blocks\",\n    twitter: \"https://twitter.com/shadcnui_blocks\",\n  },\n};\n",
-      "type": "registry:component",
-      "target": ""
     }
   ]
 }
