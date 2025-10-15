@@ -28,6 +28,34 @@ export const categories = Object.values(categoriesMap);
 
 export const templates = [
   {
+    name: "HomeGuardian",
+    description:
+      "A beautifully designed landing page template with a clean and modern look.",
+    image: "/images/templates/homeguardian-landing-page.png",
+    repo: "akash3444/homeguardian-shadcn-landing-page",
+    slug: "homeguardian",
+    category: categoriesMap.landingPage,
+    url: "https://homeguardian-shadcn-landing-page.vercel.app/",
+    features: [
+      "Next 15",
+      "React 19",
+      "Tailwind CSS 4",
+      "Shadcn UI",
+      "TypeScript",
+      "Dark Mode Support",
+      "Responsive Design",
+      "SEO Optimized",
+    ],
+    sections: [
+      "Hero",
+      "Why Choose Us",
+      "Features",
+      "Industries",
+      "FAQ",
+      "Footer",
+    ],
+  },
+  {
     name: "Minimalist Landing Page",
     description:
       "A beautifully designed landing page template with a clean and modern look.",
