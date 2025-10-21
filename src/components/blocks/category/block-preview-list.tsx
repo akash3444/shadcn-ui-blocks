@@ -35,7 +35,7 @@ const BlockPreviewList = () => {
   });
 
   return (
-    <div className="px-6 xl:px-0">
+    <div className="px-6">
       <PreviewListFilter />
       <div className="mt-4">
         <InformationBar />
