@@ -13,7 +13,6 @@ import {
   ItemMedia,
   ItemTitle,
 } from "@/components/ui/item";
-import { Separator } from "@/components/ui/separator";
 import {
   HeartIcon,
   MessageCircleIcon,

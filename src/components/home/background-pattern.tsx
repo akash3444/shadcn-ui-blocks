@@ -1,34 +1,51 @@
 "use client";
 
-import DotPattern from "@/components/ui/dot-pattern";
-import Particles from "@/components/ui/particles";
-import { cn } from "@/lib/utils";
-import { useTheme } from "next-themes";
-
 export const BackgroundPattern = () => {
-  const { resolvedTheme } = useTheme();
-  const isLightTheme = resolvedTheme === "light";
-
   return (
-    <>
-      <DotPattern
-        width={20}
-        height={20}
-        cx={1}
-        cy={1}
-        cr={1}
-        className={cn(
-          "mask-[radial-gradient(ellipse,rgba(0,0,0,0.3)_30%,black_50%)]",
-          "dark:fill-slate-700"
-        )}
-      />
-      <Particles
-        className="absolute inset-0"
-        quantity={100}
-        ease={80}
-        color={isLightTheme ? "#000" : "#fff"}
-        refresh
-      />
-    </>
+    <div
+      className="absolute inset-0 -z-1"
+      style={{
+        backgroundImage: `
+        linear-gradient(to right, var(--border) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--border) 1px, transparent 1px)
+      `,
+        backgroundSize: "20px 20px",
+        backgroundPosition: "0 0, 0 0",
+        maskImage: `
+        repeating-linear-gradient(
+          to right,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        )
+      `,
+        WebkitMaskImage: `
+        repeating-linear-gradient(
+          to right,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        )
+      `,
+        maskComposite: "intersect",
+        WebkitMaskComposite: "source-in",
+      }}
+    />
   );
 };

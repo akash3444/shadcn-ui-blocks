@@ -1,5 +1,5 @@
 import { app } from "@/config/app";
-import { faq } from "@/description/faq";
+import { faqs } from "@/description/faq";
 import { capitalize } from "@/lib/utils";
 import { BreadcrumbList, FAQPage, Graph, WebSite } from "schema-dts";
 
@@ -34,12 +34,12 @@ const BlockCategoryJsonLd = ({ category }: { category: string }) => {
   };
   const faqPage: FAQPage = {
     "@type": "FAQPage",
-    mainEntity: faq.map(({ title, content }) => ({
+    mainEntity: faqs.map(({ answer, question }) => ({
       "@type": "Question",
-      name: title,
+      name: question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: content,
+        text: answer,
       },
     })),
   };
