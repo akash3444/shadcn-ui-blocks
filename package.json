@@ -28,13 +28,13 @@
     "input-otp": "^1.4.2",
     "lucide-react": "^0.454.0",
     "motion": "^11.18.2",
-    "next": "15.5.2",
+    "next": "16.0.0",
     "next-themes": "^0.4.3",
     "posthog-js": "^1.256.1",
     "radix-ui": "latest",
-    "react": "19.1.1",
+    "react": "19.2.0",
     "react-day-picker": "^9.9.0",
-    "react-dom": "19.1.1",
+    "react-dom": "19.2.0",
     "react-dropzone": "^14.2.10",
     "react-hook-form": "^7.53.1",
     "react-remove-scroll": "^2.6.3",
@@ -52,10 +52,10 @@
     "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^20",
-    "@types/react": "19.1.11",
-    "@types/react-dom": "19.1.8",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
     "eslint": "^8",
-    "eslint-config-next": "15.5.2",
+    "eslint-config-next": "16.0.0",
     "eslint-plugin-svg-jsx": "^1.2.4",
     "postcss": "^8",
     "schema-dts": "^1.1.2",
@@ -70,8 +70,8 @@
   },
   "pnpm": {
     "overrides": {
-      "@types/react": "19.1.11",
-      "@types/react-dom": "19.1.8"
+      "@types/react": "19.2.2",
+      "@types/react-dom": "19.2.2"
     }
   }
 }
