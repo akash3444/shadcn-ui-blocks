@@ -1,25 +1,23 @@
+import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
+import { removeBlockPrefixFromPath } from "@/lib/blocks";
 import { getFileContent } from "@/lib/file";
 import { useBlockContext } from "@/providers/block-provider";
 import { CheckIcon, CopyIcon, FileIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import { CodeBlock } from "../ui/code-block";
-import { removeBlockPrefixFromPath } from "@/lib/blocks";
-import { useParams } from "next/navigation";
-import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 
 export function FilePreview() {
   const [code, setCode] = useState<string>("");
-  const { activeFile } = useBlockContext();
-  const { block } = useParams();
+  const { activeFile, block } = useBlockContext();
   const { copyToClipboard, isCopied } = useCopyToClipboard();
 
   useEffect(() => {
     const filePath = activeFile.path.startsWith("src/")
       ? activeFile.path
-      : `src/blocks/${block}/${activeFile.path}`;
+      : `src/blocks/${block.name}/${activeFile.path}`;
     getFileContent(filePath).then((code) => setCode(code));
-  }, [activeFile, block]);
+  }, [activeFile, block.name]);
 
   return (
     <div className="w-full flex flex-col overflow-x-auto">

@@ -1,12 +1,17 @@
 "use client";
 
 import { getFileTree } from "@/lib/blocks";
-import { BlockFile } from "@/types/blocks";
-import { FileTree } from "./file-tree";
+import { useBlockContext } from "@/providers/block-provider";
 import { FilePreview } from "./file-preview";
+import { FileTree } from "./file-tree";
+import registry from "../../../registry.json";
 
-const FileExplorer = ({ files }: { files: BlockFile[] }) => {
-  const fileTree = getFileTree(files);
+const FileExplorer = () => {
+  const {
+    block: { name },
+  } = useBlockContext();
+  const blockRegistryItem = registry.items.find((item) => item.name === name);
+  const fileTree = getFileTree(blockRegistryItem?.files ?? []);
 
   return (
     <div className="border h-[700px] flex rounded-lg overflow-hidden">

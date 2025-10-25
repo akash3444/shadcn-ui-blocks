@@ -43,9 +43,7 @@ const nextConfig = {
       "node_modules/@shikijs/themes/**/*",
     ],
   },
-  experimental: {
-    outputFileTracingRoot: process.cwd(),
-  },
+  outputFileTracingRoot: process.cwd(),
 };
 
 export default nextConfig;

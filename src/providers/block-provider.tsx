@@ -1,39 +1,49 @@
 "use client";
 
+import { blocks } from "@/blocks";
 import {
+  Block,
   BlockFile,
   BlockScreenSize,
   BlockScreenSizeUnion,
 } from "@/types/blocks";
-import { useParams } from "next/navigation";
-import registry from "../../registry.json";
 import { createContext, ReactNode, useContext, useState } from "react";
+import registry from "../../registry.json";
 
 const BlockContext = createContext<{
   activeFile: { path: string; target?: string };
   screenSize: BlockScreenSizeUnion;
   selectFile: (file: BlockFile) => void;
   setScreenSize: (screenSize: BlockScreenSize) => void;
+  block: Block;
 }>({
   activeFile: { path: "" },
   screenSize: "desktop",
   selectFile: () => {},
   setScreenSize: () => {},
+  block: {} as Block,
 });
 
-export const BlockProvider = ({ children }: { children: ReactNode }) => {
-  const { block } = useParams();
-  const blockDetails = registry.items.find((item) => item.name === block);
+export const BlockProvider = ({
+  children,
+  name,
+}: {
+  children: ReactNode;
+  name: string;
+}) => {
+  const blockDetails = registry.items.find((item) => item.name === name);
 
   if (!blockDetails) {
     throw new Error("Block not found");
   }
 
   const { files } = blockDetails as { files: BlockFile[] };
+
   const [activeFile, setActiveFile] = useState<BlockFile>({
-    path: files[0].path.replace(`src/blocks/${block}/`, ""),
+    path: files[0].path,
     target: files[0].target,
   });
+
   const [screenSize, setScreenSize] = useState<BlockScreenSizeUnion>("desktop");
 
   return (
@@ -43,6 +53,7 @@ export const BlockProvider = ({ children }: { children: ReactNode }) => {
         screenSize,
         setScreenSize,
         selectFile: setActiveFile,
+        block: blocks[name as keyof typeof blocks],
       }}
     >
       {children}

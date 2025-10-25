@@ -29,33 +29,30 @@ const CategoryFilter = () => {
   };
 
   return (
-    <div>
-      <Label>Category</Label>
-      <Select value={category} onValueChange={handleSelect}>
-        <SelectTrigger className="mt-2 w-[180px]">
-          <SelectValue placeholder="Select a category" />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectGroup>
-            <SelectLabel>Categories</SelectLabel>
-            <SelectItem value="all">
+    <Select value={category} onValueChange={handleSelect}>
+      <SelectTrigger className="w-[180px] bg-background">
+        <SelectValue placeholder="Select a category" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectGroup>
+          <SelectLabel>Categories</SelectLabel>
+          <SelectItem value="all">
+            <div className="flex items-center gap-3">
+              <TagIcon className="h-4 w-4" />
+              <span>All</span>
+            </div>
+          </SelectItem>
+          {blockCategories.map((category) => (
+            <SelectItem key={category.name} value={category.name}>
               <div className="flex items-center gap-3">
                 <TagIcon className="h-4 w-4" />
-                <span>All</span>
+                <span className="capitalize">{category.name}</span>
               </div>
             </SelectItem>
-            {blockCategories.map((category) => (
-              <SelectItem key={category.name} value={category.name}>
-                <div className="flex items-center gap-3">
-                  <TagIcon className="h-4 w-4" />
-                  <span className="capitalize">{category.name}</span>
-                </div>
-              </SelectItem>
-            ))}
-          </SelectGroup>
-        </SelectContent>
-      </Select>
-    </div>
+          ))}
+        </SelectGroup>
+      </SelectContent>
+    </Select>
   );
 };
 
