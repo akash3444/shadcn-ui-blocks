@@ -44,17 +44,14 @@ const PreviewListSearch = () => {
   }, [query]);
 
   return (
-    <div className="grow">
-      <Label>Search</Label>
-      <div className="relative">
-        <Input
-          className="ps-9 mt-2 max-w-60 w-full"
-          placeholder="Search"
-          value={value}
-          onChange={handleChange}
-        />
-        <SearchIcon className="h-5 w-5 absolute start-2 inset-y-0 my-auto text-muted-foreground" />
-      </div>
+    <div className="relative">
+      <Input
+        className="ps-9 max-w-60 w-full bg-background"
+        placeholder="Search"
+        value={value}
+        onChange={handleChange}
+      />
+      <SearchIcon className="h-5 w-5 absolute start-2 inset-y-0 my-auto text-muted-foreground" />
     </div>
   );
 };

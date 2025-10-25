@@ -44,13 +44,9 @@ const BlockPage = async (props: { params: Promise<{ block: string }> }) => {
   if (!blockDetails) notFound();
 
   const { title, description } = blockDetails;
-  const files = blockDetails.files.map((file) => ({
-    ...file,
-    path: file.path.replace(`src/blocks/${block}/`, ""),
-  }));
 
   return (
-    <BlockProvider>
+    <BlockProvider name={block}>
       <Navbar />
       <div className="max-w-(--breakpoint-2xl) mx-auto mt-14 py-8 px-4">
         <MainHeading>{title}</MainHeading>
@@ -68,10 +64,10 @@ const BlockPage = async (props: { params: Promise<{ block: string }> }) => {
           </div>
 
           <TabsContent value="preview">
-            <BlockPreview block={block} />
+            <BlockPreview />
           </TabsContent>
           <TabsContent value="code">
-            <FileExplorer files={files} />
+            <FileExplorer />
           </TabsContent>
         </Tabs>
 
