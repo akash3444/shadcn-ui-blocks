@@ -7,8 +7,16 @@ import {
   BlockScreenSize,
   BlockScreenSizeUnion,
 } from "@/types/blocks";
-import { createContext, ReactNode, useContext, useState } from "react";
+import {
+  createContext,
+  createRef,
+  ReactNode,
+  useContext,
+  useState,
+} from "react";
 import registry from "../../registry.json";
+import { useBlockTheme } from "@/hooks/use-block-theme";
+import { Theme } from "@/types/theme";
 
 const BlockContext = createContext<{
   activeFile: { path: string; target?: string };
@@ -16,12 +24,18 @@ const BlockContext = createContext<{
   selectFile: (file: BlockFile) => void;
   setScreenSize: (screenSize: BlockScreenSize) => void;
   block: Block;
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
+  iframeRef: React.RefObject<HTMLIFrameElement | null>;
 }>({
   activeFile: { path: "" },
   screenSize: "desktop",
   selectFile: () => {},
   setScreenSize: () => {},
   block: {} as Block,
+  theme: "light",
+  setTheme: () => {},
+  iframeRef: { current: null },
 });
 
 export const BlockProvider = ({
@@ -43,8 +57,9 @@ export const BlockProvider = ({
     path: files[0].path,
     target: files[0].target,
   });
-
   const [screenSize, setScreenSize] = useState<BlockScreenSizeUnion>("desktop");
+
+  const { theme, setTheme, iframeRef } = useBlockTheme();
 
   return (
     <BlockContext.Provider
@@ -54,6 +69,9 @@ export const BlockProvider = ({
         setScreenSize,
         selectFile: setActiveFile,
         block: blocks[name as keyof typeof blocks],
+        theme,
+        setTheme,
+        iframeRef,
       }}
     >
       {children}
