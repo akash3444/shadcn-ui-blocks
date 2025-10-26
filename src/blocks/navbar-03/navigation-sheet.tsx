@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { foods, travelMenuItems } from "./config";
@@ -8,6 +14,10 @@ import { Logo } from "./logo";
 export const NavigationSheet = () => {
   return (
     <Sheet>
+      <VisuallyHidden>
+        <SheetTitle>Navigation Menu</SheetTitle>
+      </VisuallyHidden>
+
       <SheetTrigger asChild>
         <Button variant="outline" size="icon">
           <Menu />

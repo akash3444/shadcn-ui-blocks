@@ -908,7 +908,7 @@
       "type": "registry:block",
       "title": "Navbar 05",
       "description": "A simple navbar block",
-      "registryDependencies": ["button", "input", "navigation-menu", "sheet"],
+      "registryDependencies": ["button", "input"],
       "files": [
         {
           "path": "src/blocks/navbar-05/navbar-05.tsx",
@@ -919,16 +919,6 @@
           "path": "src/blocks/navbar-05/logo.tsx",
           "type": "registry:component",
           "target": "components/navbar-05/logo.tsx"
-        },
-        {
-          "path": "src/blocks/navbar-05/nav-menu.tsx",
-          "type": "registry:component",
-          "target": "components/navbar-05/nav-menu.tsx"
-        },
-        {
-          "path": "src/blocks/navbar-05/navigation-sheet.tsx",
-          "type": "registry:component",
-          "target": "components/navbar-05/navigation-sheet.tsx"
         }
       ]
     },
