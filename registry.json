@@ -919,16 +919,6 @@
           "path": "src/blocks/navbar-05/logo.tsx",
           "type": "registry:component",
           "target": "components/navbar-05/logo.tsx"
-        },
-        {
-          "path": "src/blocks/navbar-05/nav-menu.tsx",
-          "type": "registry:component",
-          "target": "components/navbar-05/nav-menu.tsx"
-        },
-        {
-          "path": "src/blocks/navbar-05/navigation-sheet.tsx",
-          "type": "registry:component",
-          "target": "components/navbar-05/navigation-sheet.tsx"
         }
       ]
     },

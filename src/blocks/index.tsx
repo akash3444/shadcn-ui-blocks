@@ -117,14 +117,6 @@ export const blocks: Record<string, Block> = {
         path: "logo.tsx",
         target: "app/navbar-05/logo.tsx",
       },
-      {
-        path: "nav-menu.tsx",
-        target: "app/navbar-05/nav-menu.tsx",
-      },
-      {
-        path: "navigation-sheet.tsx",
-        target: "app/navbar-05/navigation-sheet.tsx",
-      },
     ],
   },
   "hero-01": {

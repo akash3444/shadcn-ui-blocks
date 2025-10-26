@@ -30,7 +30,7 @@
     },
     {
       "path": "src/blocks/navbar-04/navigation-sheet.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\nimport { Sheet, SheetContent, SheetTrigger } from \"@/components/ui/sheet\";\nimport { Menu } from \"lucide-react\";\nimport { Logo } from \"./logo\";\nimport { NavMenu } from \"./nav-menu\";\n\nexport const NavigationSheet = () => {\n  return (\n    <Sheet>\n      <SheetTrigger asChild>\n        <Button variant=\"outline\" size=\"icon\" className=\"rounded-full\">\n          <Menu />\n        </Button>\n      </SheetTrigger>\n      <SheetContent className=\"px-6 py-3\">\n        <Logo />\n        <NavMenu orientation=\"vertical\" className=\"mt-6 [&>div]:h-full\" />\n      </SheetContent>\n    </Sheet>\n  );\n};\n",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Sheet,\n  SheetContent,\n  SheetTitle,\n  SheetTrigger,\n} from \"@/components/ui/sheet\";\nimport { VisuallyHidden } from \"@radix-ui/react-visually-hidden\";\nimport { Menu } from \"lucide-react\";\nimport { Logo } from \"./logo\";\nimport { NavMenu } from \"./nav-menu\";\n\nexport const NavigationSheet = () => {\n  return (\n    <Sheet>\n      <VisuallyHidden>\n        <SheetTitle>Navigation Menu</SheetTitle>\n      </VisuallyHidden>\n\n      <SheetTrigger asChild>\n        <Button variant=\"outline\" size=\"icon\" className=\"rounded-full\">\n          <Menu />\n        </Button>\n      </SheetTrigger>\n      <SheetContent className=\"px-6 py-3\">\n        <Logo />\n        <NavMenu orientation=\"vertical\" className=\"mt-6 [&>div]:h-full\" />\n      </SheetContent>\n    </Sheet>\n  );\n};\n",
       "type": "registry:component",
       "target": "components/navbar-04/navigation-sheet.tsx"
     }
