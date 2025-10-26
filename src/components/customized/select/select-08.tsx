@@ -22,7 +22,7 @@ export default function ThemeSelector() {
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>Fruits</SelectLabel>
+          <SelectLabel>Themes</SelectLabel>
           <SelectItem value="light">
             <div className="flex items-center gap-2">
               <SunIcon className="h-4 w-4" />
