@@ -2,8 +2,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CirclePlay } from "lucide-react";
 import Link from "next/link";
+import React from "react";
 
-export default function Hero() {
+const Hero03 = () => {
   return (
     <div className="min-h-screen w-full flex flex-col gap-16 items-center justify-center px-6 py-16">
       <div className="text-center max-w-3xl">
@@ -19,7 +20,7 @@ export default function Hero() {
         <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl md:leading-[1.2] font-semibold tracking-tighter">
           Customized Shadcn UI Blocks & Components
         </h1>
-        <p className="mt-6 md:text-lg text-foreground/80">
+        <p className="mt-6 md:text-lg">
           Explore a collection of Shadcn UI blocks and components, ready to
           preview and copy. Streamline your development workflow with
           easy-to-implement examples.
@@ -40,4 +41,6 @@ export default function Hero() {
       <div className="w-full max-w-(--breakpoint-xl) mx-auto aspect-video bg-accent rounded-xl" />
     </div>
   );
-}
+};
+
+export default Hero03;
