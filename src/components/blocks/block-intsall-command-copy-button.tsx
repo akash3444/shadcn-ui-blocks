@@ -40,7 +40,7 @@ export const BlockInstallCommandCopyButton = ({ block }: { block: string }) => {
       <Button
         variant="outline"
         size="sm"
-        className="h-7 gap-2 text-sm"
+        className="gap-2 text-sm"
         onClick={copyInstallCommand}
       >
         {isCopied ? (
@@ -48,15 +48,15 @@ export const BlockInstallCommandCopyButton = ({ block }: { block: string }) => {
         ) : (
           <currentPackageManager.logo className="size-4" />
         )}
-        <span className="hidden sm:inline">
+        <span className="hidden sm:inline font-normal">
           {currentPackageManager.displayCommand(block)}
         </span>
       </Button>
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="sm" className="h-7 w-7 px-1.5">
-            <ChevronDown className="size-3" />
+          <Button variant="outline" size="icon-sm" className="px-1.5 w-7">
+            <ChevronDown className="size-3.5" />
             <span className="sr-only">Select package manager</span>
           </Button>
         </DropdownMenuTrigger>

@@ -24,7 +24,7 @@ const BlockToolbar = () => {
       <V0Button url={absoluteUrl(`/r/${block.name}.json`)} />
       <Tooltip>
         <TooltipTrigger>
-          <Button asChild variant="outline" size="icon">
+          <Button asChild variant="outline" size="icon-sm">
             <Link href={`/blocks/${block.name}/preview`} target="_blank">
               <FullscreenIcon />
             </Link>
@@ -34,14 +34,14 @@ const BlockToolbar = () => {
           <p>Open preview in new tab</p>
         </TooltipContent>
       </Tooltip>
-      <div className="border rounded-md flex items-center gap-1 p-1.5 h-9">
+      <div className="border rounded-md flex items-center gap-1 p-1 h-8 shadow-xs">
         {blockScreens.map(({ name, icon: Icon }) => (
           <Tooltip key={name}>
             <TooltipTrigger asChild>
               <Button
                 key={name}
                 variant={name === screenSize ? "secondary" : "ghost"}
-                className="h-7 w-6"
+                className="h-6 w-6 rounded"
                 onClick={() => setScreenSize(name)}
               >
                 <Icon />

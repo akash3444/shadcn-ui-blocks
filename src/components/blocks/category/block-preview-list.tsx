@@ -38,7 +38,7 @@ const BlockPreviewList = () => {
               <BlockProvider key={block.name} name={block.name}>
                 <div className="max-w-(--breakpoint-2xl) w-full mx-auto py-8">
                   <Tabs defaultValue="preview" className="mt-6">
-                    <div className="mb-1 flex items-center gap-2 justify-between pr-1.5">
+                    <div className="mb-1 flex items-end gap-2 justify-between pr-1.5">
                       <div className="text-lg font-medium">{block.title}</div>
                       <div className="flex items-end gap-3">
                         <BlockToolbar />

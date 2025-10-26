@@ -14,24 +14,24 @@ export const packageManagers: Record<PackageManager, PackageManagerConfig> = {
     name: "pnpm",
     command: (slug: string) => `pnpm dlx shadcn@latest add ${slug}`,
     logo: PnpmLogo,
-    displayCommand: (slug: string) => `pnpm dlx shadcn add ${slug}`
+    displayCommand: (slug: string) => `pnpm dlx shadcn@latest add ${slug}`,
   },
   npm: {
     name: "npm",
     command: (slug: string) => `npx shadcn@latest add ${slug}`,
     logo: NPMLogo,
-    displayCommand: (slug: string) => `npx shadcn add ${slug}`
+    displayCommand: (slug: string) => `npx shadcn@latest add ${slug}`,
   },
   yarn: {
     name: "Yarn",
     command: (slug: string) => `yarn shadcn@latest add ${slug}`,
     logo: YarnLogo,
-    displayCommand: (slug: string) => `yarn shadcn add ${slug}`
+    displayCommand: (slug: string) => `yarn shadcn@latest add ${slug}`,
   },
   bun: {
     name: "Bun",
     command: (slug: string) => `bunx --bun shadcn@latest add ${slug}`,
     logo: BunLogo,
-    displayCommand: (slug: string) => `bunx --bun shadcn add ${slug}`
-  }
+    displayCommand: (slug: string) => `bunx --bun shadcn@latest add ${slug}`,
+  },
 };
