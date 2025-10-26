@@ -908,7 +908,7 @@
       "type": "registry:block",
       "title": "Navbar 05",
       "description": "A simple navbar block",
-      "registryDependencies": ["button", "input", "navigation-menu", "sheet"],
+      "registryDependencies": ["button", "input"],
       "files": [
         {
           "path": "src/blocks/navbar-05/navbar-05.tsx",

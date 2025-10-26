@@ -6,9 +6,7 @@
   "description": "A simple navbar block",
   "registryDependencies": [
     "button",
-    "input",
-    "navigation-menu",
-    "sheet"
+    "input"
   ],
   "files": [
     {
