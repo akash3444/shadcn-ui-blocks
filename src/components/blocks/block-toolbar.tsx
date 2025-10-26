@@ -73,7 +73,7 @@ const ThemeToggleButton = () => {
   };
 
   if (!mounted) {
-    return <Button variant="outline" size="icon" className="h-7 w-8" />;
+    return <Button variant="outline" size="icon-sm" />;
   }
 
   return (
