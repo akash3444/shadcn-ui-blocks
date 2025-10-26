@@ -9,10 +9,11 @@ import {
 import { blockScreens } from "@/description/blocks";
 import { absoluteUrl } from "@/lib/utils";
 import { useBlockContext } from "@/providers/block-provider";
-import { FullscreenIcon } from "lucide-react";
+import { FullscreenIcon, Moon, Sun } from "lucide-react";
 import Link from "next/link";
 import { BlockInstallCommandCopyButton } from "./block-intsall-command-copy-button";
 import V0Button from "./v0-button";
+import { useEffect, useState } from "react";
 
 const BlockToolbar = () => {
   const { screenSize, setScreenSize } = useBlockContext();
@@ -21,10 +22,10 @@ const BlockToolbar = () => {
   return (
     <div className="flex items-center gap-2">
       <BlockInstallCommandCopyButton block={block.name} />
-      <V0Button url={absoluteUrl(`/r/${block.name}.json`)} />
+      <ThemeToggleButton />
       <Tooltip>
         <TooltipTrigger>
-          <Button asChild variant="outline" size="icon">
+          <Button asChild variant="outline" size="icon-sm">
             <Link href={`/blocks/${block.name}/preview`} target="_blank">
               <FullscreenIcon />
             </Link>
@@ -34,14 +35,15 @@ const BlockToolbar = () => {
           <p>Open preview in new tab</p>
         </TooltipContent>
       </Tooltip>
-      <div className="border rounded-md flex items-center gap-1 p-1.5 h-9">
+      <V0Button url={absoluteUrl(`/r/${block.name}.json`)} />
+      <div className="border rounded-md flex items-center gap-1 p-1 h-8 shadow-xs">
         {blockScreens.map(({ name, icon: Icon }) => (
           <Tooltip key={name}>
             <TooltipTrigger asChild>
               <Button
                 key={name}
                 variant={name === screenSize ? "secondary" : "ghost"}
-                className="h-7 w-6"
+                className="h-6 w-6 rounded"
                 onClick={() => setScreenSize(name)}
               >
                 <Icon />
@@ -54,6 +56,37 @@ const BlockToolbar = () => {
         ))}
       </div>
     </div>
+  );
+};
+
+const ThemeToggleButton = () => {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useBlockContext();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const handleThemeToggle = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
+
+  if (!mounted) {
+    return <Button variant="outline" size="icon" className="h-7 w-8" />;
+  }
+
+  return (
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Button variant="outline" size="icon-sm" onClick={handleThemeToggle}>
+          {theme === "light" ? <Moon /> : <Sun />}
+        </Button>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>Toggle theme</p>
+      </TooltipContent>
+    </Tooltip>
   );
 };
 

@@ -12,7 +12,11 @@ import { ImperativePanelHandle } from "react-resizable-panels";
 
 const BlockPreview = () => {
   const resizablePanelRef = useRef<ImperativePanelHandle>(null);
-  const { block, screenSize: selectedScreenSize } = useBlockContext();
+  const {
+    block,
+    screenSize: selectedScreenSize,
+    iframeRef,
+  } = useBlockContext();
   const blockScreen = blockScreens.find(
     ({ name }) => name === selectedScreenSize
   );
@@ -28,6 +32,7 @@ const BlockPreview = () => {
       <ResizablePanel ref={resizablePanelRef} defaultSize={120} minSize={30}>
         <div className="w-full rounded-lg border h-[700px] overflow-auto">
           <iframe
+            ref={iframeRef}
             src={`/blocks/${block.name}/preview`}
             height="100%"
             width="100%"

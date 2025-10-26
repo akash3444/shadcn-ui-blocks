@@ -12,7 +12,7 @@ const V0Button = ({ url }: { url: string }) => {
       <TooltipTrigger asChild>
         <Button
           variant="outline"
-          size="icon"
+          size="icon-sm"
           className="font-mono text-xs"
           asChild
         >
