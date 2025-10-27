@@ -14,7 +14,7 @@ const FileExplorer = () => {
   const fileTree = getFileTree(blockRegistryItem?.files ?? []);
 
   return (
-    <div className="border h-[700px] flex rounded-b-lg border-t-0 overflow-hidden">
+    <div className="border h-[700px] flex rounded-lg overflow-hidden">
       <div className="w-72 shrink-0 bg-sidebar border-r">
         <div className="w-full h-14 flex items-center pl-4 pr-2 border-b">
           <b className="font-semibold uppercase text-sm tracking-wide">

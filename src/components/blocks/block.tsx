@@ -11,12 +11,12 @@ export function Block({ block }: { block: BlockType }) {
   return (
     <BlockProvider key={block.name} name={block.name}>
       <div className="max-w-(--breakpoint-2xl) w-full mx-auto py-8">
-        <Tabs defaultValue="preview" className="gap-0">
-          <div className="flex items-center gap-2 justify-between py-2.5 px-4 border rounded-t-lg">
+        <Tabs defaultValue="preview" className="mt-6">
+          <div className="mb-1 flex items-end gap-2 justify-between pr-1.5">
             <div className="text-lg font-medium">{block.title}</div>
             <div className="flex items-end gap-3">
               <BlockToolbar />
-              <TabsList className="h-8">
+              <TabsList>
                 <TabsTrigger value="preview">Preview</TabsTrigger>
                 <TabsTrigger value="code">Code</TabsTrigger>
               </TabsList>

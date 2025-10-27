@@ -28,12 +28,9 @@ const BlockPreview = () => {
   }, [selectedScreenSize]);
 
   return (
-    <ResizablePanelGroup
-      direction="horizontal"
-      className="relative border border-t-0 rounded-b-lg overflow-visible!"
-    >
+    <ResizablePanelGroup direction="horizontal">
       <ResizablePanel ref={resizablePanelRef} defaultSize={120} minSize={30}>
-        <div className="w-full rounded-b-lg h-[700px] overflow-auto">
+        <div className="w-full rounded-lg border h-[700px] overflow-auto">
           <iframe
             ref={iframeRef}
             src={`/blocks/${block.name}/preview`}
@@ -42,54 +39,8 @@ const BlockPreview = () => {
           />
         </div>
       </ResizablePanel>
-      <ResizableHandle withHandle className="w-px -me-px" />
-      <ResizablePanel defaultSize={0} className="bg-primary/2"></ResizablePanel>
-
-      <div
-        className="absolute inset-0 -z-1 top-px left-px"
-        style={{
-          backgroundImage: `
-        linear-gradient(to right, var(--border) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--border) 1px, transparent 1px)
-      `,
-          backgroundSize: "20px 20px",
-          backgroundPosition: "0 0, 0 0",
-          maskImage: `
-        repeating-linear-gradient(
-          to right,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        ),
-        repeating-linear-gradient(
-          to bottom,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        )
-      `,
-          WebkitMaskImage: `
-        repeating-linear-gradient(
-          to right,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        ),
-        repeating-linear-gradient(
-          to bottom,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        )
-      `,
-          maskComposite: "intersect",
-          WebkitMaskComposite: "source-in",
-        }}
-      />
+      <ResizableHandle withHandle className="w-0" />
+      <ResizablePanel defaultSize={0} className="pr-1.5" />
     </ResizablePanelGroup>
   );
 };
