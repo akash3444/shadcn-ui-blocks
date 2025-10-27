@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { ArrowUpRight, CirclePlay } from "lucide-react";
 import Link from "next/link";
 
-const Hero07 = () => {
+export default function Hero() {
   return (
     <div className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
       <AnimatedGridPattern
@@ -30,7 +30,7 @@ const Hero07 = () => {
         <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl md:leading-[1.2] font-semibold tracking-tighter">
           Customized Shadcn UI Blocks & Components
         </h1>
-        <p className="mt-6 md:text-lg">
+        <p className="mt-6 md:text-lg text-foreground/80">
           Explore a collection of Shadcn UI blocks and components, ready to
           preview and copy. Streamline your development workflow with
           easy-to-implement examples.
@@ -50,6 +50,4 @@ const Hero07 = () => {
       </div>
     </div>
   );
-};
-
-export default Hero07;
+}
