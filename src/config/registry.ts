@@ -14,12 +14,20 @@ export interface RegistryBlock {
   files: { path: string }[];
 }
 
-const categories: Record<string, BlockCategory> = {
+const categories = {
   navbar: {
     name: "navbar",
     title: "Navbar",
   },
-};
+  login: {
+    name: "login",
+    title: "Login",
+  },
+  authentication: {
+    name: "authentication",
+    title: "Authentication",
+  },
+} as const;
 
 export const blocks: RegistryBlock[] = [
   {
@@ -92,5 +100,55 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.navbar],
     files: [{ path: "components/navbar.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "login-01",
+    title: "Login 01",
+    description: "A simple login block",
+    component: React.lazy(
+      () => import("@/registry/blocks/login-01/components/login")
+    ),
+    categories: [categories.login, categories.authentication],
+    files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "login-02",
+    title: "Login 02",
+    description: "A simple login block",
+    component: React.lazy(
+      () => import("@/registry/blocks/login-02/components/login")
+    ),
+    categories: [categories.login, categories.authentication],
+    files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "login-03",
+    title: "Login 03",
+    description: "A simple login block",
+    component: React.lazy(
+      () => import("@/registry/blocks/login-03/components/login")
+    ),
+    categories: [categories.login, categories.authentication],
+    files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "login-04",
+    title: "Login 04",
+    description: "A simple login block",
+    component: React.lazy(
+      () => import("@/registry/blocks/login-04/components/login")
+    ),
+    categories: [categories.login, categories.authentication],
+    files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "login-05",
+    title: "Login 05",
+    description: "A simple login block",
+    component: React.lazy(
+      () => import("@/registry/blocks/login-05/components/login")
+    ),
+    categories: [categories.login, categories.authentication],
+    files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
   },
 ];

@@ -1,6 +1,5 @@
 "use client";
 
-import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -12,6 +11,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
+import { Logo } from "@/registry/blocks/login-02/components/logo";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
@@ -22,7 +22,7 @@ const formSchema = z.object({
   password: z.string().min(8, "Password must be at least 8 characters long"),
 });
 
-const Login01Page = () => {
+const Login02Page = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     defaultValues: {
       email: "",
@@ -36,8 +36,8 @@ const Login01Page = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-xs w-full flex flex-col items-center">
+    <div className="min-h-screen flex items-center justify-center bg-muted">
+      <div className="max-w-sm w-full flex flex-col items-center border rounded-lg px-6 py-8 shadow-sm/5 bg-card">
         <Logo className="h-9 w-9" />
         <p className="mt-4 text-xl font-semibold tracking-tight">
           Log in to Shadcn UI Blocks
@@ -156,4 +156,4 @@ const GoogleLogo = () => (
   </svg>
 );
 
-export default Login01Page;
+export default Login02Page;

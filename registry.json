@@ -574,13 +574,16 @@
       "type": "registry:block",
       "title": "Login 01",
       "description": "A simple login block",
-      "dependencies": ["react-hook-form", "zod"],
+      "dependencies": ["react-hook-form", "zod", "@hookform/resolvers"],
       "registryDependencies": ["button", "form", "input", "separator"],
       "files": [
         {
-          "path": "src/blocks/login-01/page.tsx",
-          "type": "registry:page",
-          "target": "app/login/page.tsx"
+          "path": "src/registry/blocks/login-01/components/login.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/login-01/components/logo.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -589,13 +592,16 @@
       "type": "registry:block",
       "title": "Login 02",
       "description": "A simple login block",
-      "dependencies": ["@hookform/resolvers", "react-hook-form", "zod"],
+      "dependencies": ["react-hook-form", "zod", "@hookform/resolvers"],
       "registryDependencies": ["button", "form", "input", "separator"],
       "files": [
         {
-          "path": "src/blocks/login-02/page.tsx",
-          "type": "registry:page",
-          "target": "app/login/page.tsx"
+          "path": "src/registry/blocks/login-02/components/login.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/login-02/components/logo.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -604,13 +610,16 @@
       "type": "registry:block",
       "title": "Login 03",
       "description": "A simple login block",
-      "dependencies": ["@hookform/resolvers", "react-hook-form", "zod"],
+      "dependencies": ["react-hook-form", "zod", "@hookform/resolvers"],
       "registryDependencies": ["button", "form", "input", "separator"],
       "files": [
         {
-          "path": "src/blocks/login-03/page.tsx",
-          "type": "registry:page",
-          "target": "app/login/page.tsx"
+          "path": "src/registry/blocks/login-03/components/login.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/login-03/components/logo.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -619,13 +628,16 @@
       "type": "registry:block",
       "title": "Login 04",
       "description": "A simple login block",
-      "dependencies": ["@hookform/resolvers", "react-hook-form", "zod"],
+      "dependencies": ["react-hook-form", "zod", "@hookform/resolvers"],
       "registryDependencies": ["button", "form", "input", "separator"],
       "files": [
         {
-          "path": "src/blocks/login-04/page.tsx",
-          "type": "registry:page",
-          "target": "app/login/page.tsx"
+          "path": "src/registry/blocks/login-04/components/login.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/login-04/components/logo.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -643,9 +655,12 @@
       "registryDependencies": ["button", "form", "input", "separator"],
       "files": [
         {
-          "path": "src/blocks/login-05/page.tsx",
-          "type": "registry:page",
-          "target": "app/login/page.tsx"
+          "path": "src/registry/blocks/login-05/components/login.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/login-05/components/logo.tsx",
+          "type": "registry:component"
         }
       ]
     },

@@ -1,6 +1,5 @@
 "use client";
 
-import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -12,6 +11,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
+import { Logo } from "@/registry/blocks/login-03/components/logo";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
