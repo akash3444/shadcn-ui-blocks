@@ -15,6 +15,14 @@ export interface RegistryBlock {
 }
 
 const categories = {
+  pricing: {
+    name: "pricing",
+    title: "Pricing",
+  },
+  team: {
+    name: "team",
+    title: "Team",
+  },
   stats: {
     name: "stats",
     title: "Stats",
@@ -370,5 +378,55 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.stats],
     files: [{ path: "components/stats.tsx" }],
+  },
+  {
+    name: "pricing-01",
+    title: "Pricing 01",
+    description: "A simple pricing block",
+    component: React.lazy(
+      () => import("@/registry/blocks/pricing-01/components/pricing")
+    ),
+    categories: [categories.pricing],
+    files: [{ path: "components/pricing.tsx" }],
+  },
+  {
+    name: "pricing-02",
+    title: "Pricing 02",
+    description: "A simple pricing block",
+    component: React.lazy(
+      () => import("@/registry/blocks/pricing-02/components/pricing")
+    ),
+    categories: [categories.pricing],
+    files: [{ path: "components/pricing.tsx" }],
+  },
+  {
+    name: "pricing-03",
+    title: "Pricing 03",
+    description: "A simple pricing block",
+    component: React.lazy(
+      () => import("@/registry/blocks/pricing-03/components/pricing")
+    ),
+    categories: [categories.pricing],
+    files: [{ path: "components/pricing.tsx" }],
+  },
+  {
+    name: "pricing-04",
+    title: "Pricing 04",
+    description: "A simple pricing block",
+    component: React.lazy(
+      () => import("@/registry/blocks/pricing-04/components/pricing")
+    ),
+    categories: [categories.pricing],
+    files: [{ path: "components/pricing.tsx" }],
+  },
+  {
+    name: "pricing-05",
+    title: "Pricing 05",
+    description: "A simple pricing block",
+    component: React.lazy(
+      () => import("@/registry/blocks/pricing-05/components/pricing")
+    ),
+    categories: [categories.pricing],
+    files: [{ path: "components/pricing.tsx" }],
   },
 ];

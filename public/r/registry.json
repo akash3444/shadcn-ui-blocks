@@ -922,9 +922,8 @@
       "registryDependencies": ["button", "separator"],
       "files": [
         {
-          "path": "src/blocks/pricing-01/page.tsx",
-          "type": "registry:page",
-          "target": "app/pricing/page.tsx"
+          "path": "src/registry/blocks/pricing-01/components/pricing.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -937,9 +936,8 @@
       "registryDependencies": ["badge", "button", "separator"],
       "files": [
         {
-          "path": "src/blocks/pricing-02/page.tsx",
-          "type": "registry:page",
-          "target": "app/pricing/page.tsx"
+          "path": "src/registry/blocks/pricing-02/components/pricing.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -958,9 +956,8 @@
       ],
       "files": [
         {
-          "path": "src/blocks/pricing-03/page.tsx",
-          "type": "registry:page",
-          "target": "app/pricing/page.tsx"
+          "path": "src/registry/blocks/pricing-03/components/pricing.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -979,9 +976,8 @@
       ],
       "files": [
         {
-          "path": "src/blocks/pricing-04/page.tsx",
-          "type": "registry:page",
-          "target": "app/pricing/page.tsx"
+          "path": "src/registry/blocks/pricing-04/components/pricing.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -994,9 +990,8 @@
       "registryDependencies": ["badge", "button", "separator"],
       "files": [
         {
-          "path": "src/blocks/pricing-05/page.tsx",
-          "type": "registry:page",
-          "target": "app/pricing/page.tsx"
+          "path": "src/registry/blocks/pricing-05/components/pricing.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1009,9 +1004,8 @@
       "registryDependencies": ["badge", "button", "separator"],
       "files": [
         {
-          "path": "src/blocks/pricing-06/page.tsx",
-          "type": "registry:page",
-          "target": "app/pricing/page.tsx"
+          "path": "src/registry/blocks/pricing-06/components/pricing.tsx",
+          "type": "registry:component"
         }
       ]
     },
