@@ -813,27 +813,24 @@
       "type": "registry:block",
       "title": "Navbar 02",
       "description": "A simple navbar block",
+      "dependencies": ["lucide-react", "@radix-ui/react-visually-hidden"],
       "registryDependencies": ["button", "navigation-menu", "sheet"],
       "files": [
         {
-          "path": "src/blocks/navbar-02/navbar-02.tsx",
-          "type": "registry:block",
-          "target": "components/navbar-02/navbar-02.tsx"
+          "path": "src/registry/blocks/navbar-02/components/navbar.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/blocks/navbar-02/logo.tsx",
-          "type": "registry:component",
-          "target": "components/navbar-02/logo.tsx"
+          "path": "src/registry/blocks/navbar-02/components/logo.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/blocks/navbar-02/nav-menu.tsx",
-          "type": "registry:component",
-          "target": "components/navbar-02/nav-menu.tsx"
+          "path": "src/registry/blocks/navbar-02/components/nav-menu.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/blocks/navbar-02/navigation-sheet.tsx",
-          "type": "registry:component",
-          "target": "components/navbar-02/navigation-sheet.tsx"
+          "path": "src/registry/blocks/navbar-02/components/navigation-sheet.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -842,32 +839,29 @@
       "type": "registry:block",
       "title": "Navbar 03",
       "description": "A simple navbar block",
+      "dependencies": ["lucide-react", "@radix-ui/react-visually-hidden"],
       "registryDependencies": ["button", "navigation-menu", "sheet"],
       "files": [
         {
-          "path": "src/blocks/navbar-03/navbar-03.tsx",
-          "type": "registry:block",
-          "target": "components/navbar-03/navbar-03.tsx"
+          "path": "src/registry/blocks/navbar-03/components/navbar.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/blocks/navbar-03/logo.tsx",
-          "type": "registry:component",
-          "target": "components/navbar-03/logo.tsx"
+          "path": "src/registry/blocks/navbar-03/components/logo.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/blocks/navbar-03/nav-menu.tsx",
-          "type": "registry:component",
-          "target": "components/navbar-03/nav-menu.tsx"
+          "path": "src/registry/blocks/navbar-03/components/nav-menu.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/blocks/navbar-03/navigation-sheet.tsx",
-          "type": "registry:component",
-          "target": "components/navbar-03/navigation-sheet.tsx"
+          "path": "src/registry/blocks/navbar-03/components/navigation-sheet.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/blocks/navbar-03/config.tsx",
-          "type": "registry:component",
-          "target": "components/navbar-03/config.tsx"
+          "path": "src/registry/blocks/navbar-03/config/navbar.ts",
+          "type": "registry:file",
+          "target": "config/navbar.ts"
         }
       ]
     },
@@ -876,27 +870,24 @@
       "type": "registry:block",
       "title": "Navbar 04",
       "description": "A simple navbar block",
+      "dependencies": ["lucide-react", "@radix-ui/react-visually-hidden"],
       "registryDependencies": ["button", "navigation-menu", "sheet"],
       "files": [
         {
-          "path": "src/blocks/navbar-04/navbar-04.tsx",
-          "type": "registry:block",
-          "target": "components/navbar-04/navbar-04.tsx"
+          "path": "src/registry/blocks/navbar-04/components/navbar.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/blocks/navbar-04/logo.tsx",
-          "type": "registry:component",
-          "target": "components/navbar-04/logo.tsx"
+          "path": "src/registry/blocks/navbar-04/components/logo.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/blocks/navbar-04/nav-menu.tsx",
-          "type": "registry:component",
-          "target": "components/navbar-04/nav-menu.tsx"
+          "path": "src/registry/blocks/navbar-04/components/nav-menu.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/blocks/navbar-04/navigation-sheet.tsx",
-          "type": "registry:component",
-          "target": "components/navbar-04/navigation-sheet.tsx"
+          "path": "src/registry/blocks/navbar-04/components/navigation-sheet.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -905,17 +896,16 @@
       "type": "registry:block",
       "title": "Navbar 05",
       "description": "A simple navbar block",
+      "dependencies": ["lucide-react"],
       "registryDependencies": ["button", "input"],
       "files": [
         {
-          "path": "src/blocks/navbar-05/navbar-05.tsx",
-          "type": "registry:block",
-          "target": "components/navbar-05/navbar-05.tsx"
+          "path": "src/registry/blocks/navbar-05/components/navbar.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/blocks/navbar-05/logo.tsx",
-          "type": "registry:component",
-          "target": "components/navbar-05/logo.tsx"
+          "path": "src/registry/blocks/navbar-05/components/logo.tsx",
+          "type": "registry:component"
         }
       ]
     },

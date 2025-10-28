@@ -1,6 +1,4 @@
-import { ComponentProps } from "react";
-
-export const Logo = (props: ComponentProps<"svg">) => (
+export const Logo = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     id="logo-7"
     width="124"

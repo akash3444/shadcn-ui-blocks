@@ -4,10 +4,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BlockProvider } from "@/providers/block-provider";
 import BlockPreview from "./block-preview";
 import BlockToolbar from "./block-toolbar";
-import { Block as BlockType } from "@/types/blocks";
 import { BlockCodeExplorer } from "./block-code-explorer";
+import { RegistryBlock } from "@/config/registry";
 
-export function Block({ block }: { block: BlockType }) {
+export function Block({ block }: { block: RegistryBlock }) {
   return (
     <BlockProvider key={block.name} name={block.name}>
       <div className="max-w-(--breakpoint-2xl) w-full mx-auto py-8">

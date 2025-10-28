@@ -53,6 +53,18 @@ const transformCode = (code: string) => {
     "@/components"
   );
 
+  // Replace `@/registry/.../hooks` with `@/hooks`
+  transformedCode = transformedCode.replace(
+    /@\/registry\/(.+)\/hooks/g,
+    "@/hooks"
+  );
+
+  // Replace `@/registry/.../config` with `@/config`
+  transformedCode = transformedCode.replace(
+    /@\/registry\/(.+)\/config/g,
+    "@/config"
+  );
+
   // Replace `@/registry/.../ui` with `@/components/ui`
   transformedCode = transformedCode.replace(
     /@\/registry\/(.+)\/ui/g,
@@ -69,7 +81,7 @@ export const BlockProvider = ({
   children: ReactNode;
   name: string;
 }) => {
-  const block = blocks.find((block) => block.name === "navbar-01");
+  const block = blocks.find((block) => block.name === name);
 
   if (!block) {
     throw new Error("Block not found");

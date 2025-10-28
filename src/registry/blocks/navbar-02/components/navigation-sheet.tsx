@@ -5,10 +5,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
-import { Logo } from "./logo";
-import { NavMenu } from "./nav-menu";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { Menu } from "lucide-react";
+import { Logo } from "@/registry/blocks/navbar-02/components/logo";
+import { NavMenu } from "@/registry/blocks/navbar-02/components/nav-menu";
 
 export const NavigationSheet = () => {
   return (

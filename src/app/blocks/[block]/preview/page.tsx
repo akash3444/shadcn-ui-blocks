@@ -1,11 +1,11 @@
-import { blockList, blocks } from "@/blocks";
 import { constructMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/utils";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { blocks } from "@/config/registry";
 
 export const generateStaticParams = async () => {
-  return blockList.map(({ name }) => ({
+  return blocks.map(({ name }) => ({
     block: name,
   }));
 };
@@ -14,7 +14,10 @@ export const generateMetadata = async (props: {
   params: Promise<{ block: string }>;
 }): Promise<Metadata> => {
   const { block } = await props.params;
-  const blockDetails = blocks[block];
+  const blockDetails = blocks.find((b) => b.name === block);
+  if (!blockDetails) {
+    throw new Error(`Block ${block} not found`);
+  }
 
   return constructMetadata({
     title: `${blockDetails.title} Preview - Shadcn UI Blocks`,
@@ -31,11 +34,11 @@ const BlockPreviewPage = async (props: {
   const params = await props.params;
   const { block } = params;
 
-  if (!blocks[block]) notFound();
+  const blockDetails = blocks.find((b) => b.name === block);
 
-  const { component: Component } = blocks[block];
+  if (!blockDetails) notFound();
 
-  return <Component />;
+  return <blockDetails.component />;
 };
 
 export default BlockPreviewPage;

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Logo } from "./logo";
+import { Logo } from "@/registry/blocks/navbar-05/components/logo";
 import { Search } from "lucide-react";
 
 const Navbar05Page = () => {
