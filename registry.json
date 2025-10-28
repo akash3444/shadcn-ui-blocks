@@ -89,9 +89,8 @@
       "registryDependencies": ["badge", "card", "select"],
       "files": [
         {
-          "path": "src/blocks/blog-01/page.tsx",
-          "type": "registry:page",
-          "target": "app/blog/page.tsx"
+          "path": "src/registry/blocks/blog-01/components/blog.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -104,9 +103,8 @@
       "registryDependencies": ["badge", "button", "card", "select"],
       "files": [
         {
-          "path": "src/blocks/blog-02/page.tsx",
-          "type": "registry:page",
-          "target": "app/blog/page.tsx"
+          "path": "src/registry/blocks/blog-02/components/blog.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -119,9 +117,8 @@
       "registryDependencies": ["badge", "card"],
       "files": [
         {
-          "path": "src/blocks/blog-03/page.tsx",
-          "type": "registry:page",
-          "target": "app/blog/page.tsx"
+          "path": "src/registry/blocks/blog-03/components/blog.tsx",
+          "type": "registry:component"
         }
       ]
     },

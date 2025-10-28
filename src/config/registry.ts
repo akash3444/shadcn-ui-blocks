@@ -31,6 +31,10 @@ const categories = {
     name: "timeline",
     title: "Timeline",
   },
+  blog: {
+    name: "blog",
+    title: "Blog",
+  },
 } as const;
 
 export const blocks: RegistryBlock[] = [
@@ -224,5 +228,35 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.timeline],
     files: [{ path: "components/timeline.tsx" }],
+  },
+  {
+    name: "blog-01",
+    title: "Blog 01",
+    description: "A simple blog block",
+    component: React.lazy(
+      () => import("@/registry/blocks/blog-01/components/blog")
+    ),
+    categories: [categories.blog],
+    files: [{ path: "components/blog.tsx" }],
+  },
+  {
+    name: "blog-02",
+    title: "Blog 02",
+    description: "A simple blog block",
+    component: React.lazy(
+      () => import("@/registry/blocks/blog-02/components/blog")
+    ),
+    categories: [categories.blog],
+    files: [{ path: "components/blog.tsx" }],
+  },
+  {
+    name: "blog-03",
+    title: "Blog 03",
+    description: "A simple blog block",
+    component: React.lazy(
+      () => import("@/registry/blocks/blog-03/components/blog")
+    ),
+    categories: [categories.blog],
+    files: [{ path: "components/blog.tsx" }],
   },
 ];
