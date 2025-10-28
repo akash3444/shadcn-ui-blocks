@@ -15,6 +15,10 @@ export interface RegistryBlock {
 }
 
 const categories = {
+  stats: {
+    name: "stats",
+    title: "Stats",
+  },
   footer: {
     name: "footer",
     title: "Footer",
@@ -346,5 +350,25 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.footer],
     files: [{ path: "components/footer.tsx" }],
+  },
+  {
+    name: "stats-01",
+    title: "Stats 01",
+    description: "A simple stats block",
+    component: React.lazy(
+      () => import("@/registry/blocks/stats-01/components/stats")
+    ),
+    categories: [categories.stats],
+    files: [{ path: "components/stats.tsx" }],
+  },
+  {
+    name: "stats-02",
+    title: "Stats 02",
+    description: "A simple stats block",
+    component: React.lazy(
+      () => import("@/registry/blocks/stats-02/components/stats")
+    ),
+    categories: [categories.stats],
+    files: [{ path: "components/stats.tsx" }],
   },
 ];

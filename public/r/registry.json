@@ -1102,9 +1102,8 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/blocks/stats-01/stats-01.tsx",
-          "type": "registry:block",
-          "target": "components/stats-01/stats-01.tsx"
+          "path": "src/registry/blocks/stats-01/components/stats.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1115,9 +1114,8 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/blocks/stats-02/stats-02.tsx",
-          "type": "registry:block",
-          "target": "components/stats-02/stats-02.tsx"
+          "path": "src/registry/blocks/stats-02/components/stats.tsx",
+          "type": "registry:component"
         }
       ]
     },
