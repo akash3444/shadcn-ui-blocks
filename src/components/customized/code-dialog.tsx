@@ -1,4 +1,4 @@
-import { getHighlightedCodeNodes } from "@/lib/shiki";
+import { codeToHtml } from "@/lib/shiki";
 import { VisuallyHidden as VisuallyHiddenPrimitive } from "radix-ui";
 import { Code } from "lucide-react";
 import { CodeInstallationCommandTabs } from "../code-installation-command-tabs";
@@ -18,7 +18,7 @@ export const CodeDialog = async ({
   code: string;
   registryUrl?: string;
 }) => {
-  const highlightedCodeNodes = await getHighlightedCodeNodes(code);
+  const codeHtml = await codeToHtml(code);
 
   return (
     <Dialog>
@@ -35,7 +35,7 @@ export const CodeDialog = async ({
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="sm:max-w-2xl w-full p-0 border-none rounded-lg gap-0">
+      <DialogContent className="sm:max-w-2xl w-full p-0 border-none rounded-lg overflow-hidden gap-0">
         {registryUrl && (
           <div className="pt-6 pb-8 px-8 border-b">
             <h2 className="mb-2.5 font-semibold text-lg">
@@ -47,7 +47,10 @@ export const CodeDialog = async ({
 
         <ScrollArea className="max-h-120" type="auto">
           <ScrollArea orientation="horizontal" className="grid" type="auto">
-            {highlightedCodeNodes}
+            <div
+              dangerouslySetInnerHTML={{ __html: codeHtml }}
+              className="h-full overflow-auto text-sm [&_.line]:leading-[1.7] [&>pre]:h-full [&>pre]:overflow-x-auto [&>pre]:pt-4"
+            />
           </ScrollArea>
         </ScrollArea>
       </DialogContent>

@@ -13,9 +13,9 @@ export function FilePreview() {
   const { copyToClipboard, isCopied } = useCopyToClipboard();
 
   useEffect(() => {
-    const filePath = activeFile.path.startsWith("src/")
-      ? activeFile.path
-      : `src/blocks/${block.name}/${activeFile.path}`;
+    const filePath = activeFile.startsWith("src/")
+      ? activeFile
+      : `src/blocks/${block.name}/${activeFile}`;
     getFileContent(filePath).then((code) => setCode(code));
   }, [activeFile, block.name]);
 
@@ -24,7 +24,7 @@ export function FilePreview() {
       <div className="shrink-0 h-14 pl-6 pr-4 border-b flex items-center gap-2 justify-between bg-sidebar">
         <div className="flex items-center gap-2">
           <FileIcon className="h-4 w-4" />{" "}
-          {removeBlockPrefixFromPath(activeFile.target || activeFile.path)}
+          {removeBlockPrefixFromPath(activeFile)}
         </div>
         <Button
           variant="ghost"

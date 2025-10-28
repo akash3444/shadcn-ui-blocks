@@ -4,8 +4,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BlockProvider } from "@/providers/block-provider";
 import BlockPreview from "./block-preview";
 import BlockToolbar from "./block-toolbar";
-import FileExplorer from "./file-explorer";
 import { Block as BlockType } from "@/types/blocks";
+import { BlockCodeExplorer } from "./block-code-explorer";
 
 export function Block({ block }: { block: BlockType }) {
   return (
@@ -27,7 +27,7 @@ export function Block({ block }: { block: BlockType }) {
             <BlockPreview />
           </TabsContent>
           <TabsContent value="code">
-            <FileExplorer />
+            <BlockCodeExplorer />
           </TabsContent>
         </Tabs>
       </div>

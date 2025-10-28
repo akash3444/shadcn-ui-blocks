@@ -40,11 +40,12 @@
     "react-remove-scroll": "^2.6.3",
     "react-resizable-panels": "^2.1.6",
     "recharts": "2.15.4",
-    "shadcn": "2.9.3-canary.0",
+    "shadcn": "3.5.0",
     "shiki": "^1.23.0",
     "sonner": "^2.0.7",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
+    "to-path-tree": "^1.2.4",
     "vaul": "^1.1.2",
     "zod": "^3.24.1"
   },

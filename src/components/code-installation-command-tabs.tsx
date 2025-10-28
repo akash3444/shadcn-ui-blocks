@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 import { getInstallationCommand } from "@/lib/shadcn-registry";
 import { Check, Copy } from "lucide-react";
-import { BunLogo, NpmLogo, PnpmLogo, YarnLogo } from "./ui/icons";
+import { BunLogo, NPMLogo, PnpmLogo, YarnLogo } from "./icons";
 
 const tabs = [
   {
@@ -16,7 +16,7 @@ const tabs = [
   {
     name: "npm",
     value: "npm",
-    icon: NpmLogo,
+    icon: NPMLogo,
   },
   {
     name: "yarn",
