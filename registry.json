@@ -378,9 +378,8 @@
       "registryDependencies": ["separator"],
       "files": [
         {
-          "path": "src/blocks/footer-01/footer-01.tsx",
-          "type": "registry:block",
-          "target": "components/footer-01/footer-01.tsx"
+          "path": "src/registry/blocks/footer-01/components/footer.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -393,9 +392,8 @@
       "registryDependencies": ["separator"],
       "files": [
         {
-          "path": "src/blocks/footer-02/footer-02.tsx",
-          "type": "registry:block",
-          "target": "components/footer-02/footer-02.tsx"
+          "path": "src/registry/blocks/footer-02/components/footer.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -408,9 +406,8 @@
       "registryDependencies": ["button", "input", "separator"],
       "files": [
         {
-          "path": "src/blocks/footer-03/footer-03.tsx",
-          "type": "registry:block",
-          "target": "components/footer-03/footer-03.tsx"
+          "path": "src/registry/blocks/footer-03/components/footer.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -423,9 +420,8 @@
       "registryDependencies": ["button", "input", "separator"],
       "files": [
         {
-          "path": "src/blocks/footer-04/footer-04.tsx",
-          "type": "registry:block",
-          "target": "components/footer-04/footer-04.tsx"
+          "path": "src/registry/blocks/footer-04/components/footer.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -438,9 +434,8 @@
       "registryDependencies": ["separator"],
       "files": [
         {
-          "path": "src/blocks/footer-05/footer-05.tsx",
-          "type": "registry:block",
-          "target": "components/footer-05/footer-05.tsx"
+          "path": "src/registry/blocks/footer-05/components/footer.tsx",
+          "type": "registry:component"
         }
       ]
     },

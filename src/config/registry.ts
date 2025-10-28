@@ -15,6 +15,10 @@ export interface RegistryBlock {
 }
 
 const categories = {
+  footer: {
+    name: "footer",
+    title: "Footer",
+  },
   contact: {
     name: "contact",
     title: "Contact",
@@ -292,5 +296,55 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.contact],
     files: [{ path: "components/contact.tsx" }],
+  },
+  {
+    name: "footer-01",
+    title: "Footer 01",
+    description: "A simple footer block",
+    component: React.lazy(
+      () => import("@/registry/blocks/footer-01/components/footer")
+    ),
+    categories: [categories.footer],
+    files: [{ path: "components/footer.tsx" }],
+  },
+  {
+    name: "footer-02",
+    title: "Footer 02",
+    description: "A simple footer block",
+    component: React.lazy(
+      () => import("@/registry/blocks/footer-02/components/footer")
+    ),
+    categories: [categories.footer],
+    files: [{ path: "components/footer.tsx" }],
+  },
+  {
+    name: "footer-03",
+    title: "Footer 03",
+    description: "A simple footer block",
+    component: React.lazy(
+      () => import("@/registry/blocks/footer-03/components/footer")
+    ),
+    categories: [categories.footer],
+    files: [{ path: "components/footer.tsx" }],
+  },
+  {
+    name: "footer-04",
+    title: "Footer 04",
+    description: "A simple footer block",
+    component: React.lazy(
+      () => import("@/registry/blocks/footer-04/components/footer")
+    ),
+    categories: [categories.footer],
+    files: [{ path: "components/footer.tsx" }],
+  },
+  {
+    name: "footer-05",
+    title: "Footer 05",
+    description: "A simple footer block",
+    component: React.lazy(
+      () => import("@/registry/blocks/footer-05/components/footer")
+    ),
+    categories: [categories.footer],
+    files: [{ path: "components/footer.tsx" }],
   },
 ];
