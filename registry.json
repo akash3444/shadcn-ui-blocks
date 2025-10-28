@@ -1120,9 +1120,8 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/blocks/team-01/team-01.tsx",
-          "type": "registry:block",
-          "target": "components/team-01/team-01.tsx"
+          "path": "src/registry/blocks/team-01/components/team.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1133,9 +1132,8 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/blocks/team-02/team-02.tsx",
-          "type": "registry:block",
-          "target": "components/team-02/team-02.tsx"
+          "path": "src/registry/blocks/team-02/components/team.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1148,9 +1146,8 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "src/blocks/team-03/team-03.tsx",
-          "type": "registry:block",
-          "target": "components/team-03/team-03.tsx"
+          "path": "src/registry/blocks/team-03/components/team.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1163,9 +1160,8 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "src/blocks/team-04/team-04.tsx",
-          "type": "registry:block",
-          "target": "components/team-04/team-04.tsx"
+          "path": "src/registry/blocks/team-04/components/team.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1178,9 +1174,8 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "src/blocks/team-05/team-05.tsx",
-          "type": "registry:block",
-          "target": "components/team-05/team-05.tsx"
+          "path": "src/registry/blocks/team-05/components/team.tsx",
+          "type": "registry:component"
         }
       ]
     },

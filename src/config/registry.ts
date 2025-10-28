@@ -429,4 +429,54 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.pricing],
     files: [{ path: "components/pricing.tsx" }],
   },
+  {
+    name: "team-01",
+    title: "Team 01",
+    description: "A simple team block",
+    component: React.lazy(
+      () => import("@/registry/blocks/team-01/components/team")
+    ),
+    categories: [categories.team],
+    files: [{ path: "components/team.tsx" }],
+  },
+  {
+    name: "team-02",
+    title: "Team 02",
+    description: "A simple team block",
+    component: React.lazy(
+      () => import("@/registry/blocks/team-02/components/team")
+    ),
+    categories: [categories.team],
+    files: [{ path: "components/team.tsx" }],
+  },
+  {
+    name: "team-03",
+    title: "Team 03",
+    description: "A simple team block",
+    component: React.lazy(
+      () => import("@/registry/blocks/team-03/components/team")
+    ),
+    categories: [categories.team],
+    files: [{ path: "components/team.tsx" }],
+  },
+  {
+    name: "team-04",
+    title: "Team 04",
+    description: "A simple team block",
+    component: React.lazy(
+      () => import("@/registry/blocks/team-04/components/team")
+    ),
+    categories: [categories.team],
+    files: [{ path: "components/team.tsx" }],
+  },
+  {
+    name: "team-05",
+    title: "Team 05",
+    description: "A simple team block",
+    component: React.lazy(
+      () => import("@/registry/blocks/team-05/components/team")
+    ),
+    categories: [categories.team],
+    files: [{ path: "components/team.tsx" }],
+  },
 ];
