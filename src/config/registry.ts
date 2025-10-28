@@ -15,6 +15,10 @@ export interface RegistryBlock {
 }
 
 const categories = {
+  contact: {
+    name: "contact",
+    title: "Contact",
+  },
   navbar: {
     name: "navbar",
     title: "Navbar",
@@ -258,5 +262,35 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.blog],
     files: [{ path: "components/blog.tsx" }],
+  },
+  {
+    name: "contact-01",
+    title: "Contact 01",
+    description: "A simple contact block",
+    component: React.lazy(
+      () => import("@/registry/blocks/contact-01/components/contact")
+    ),
+    categories: [categories.contact],
+    files: [{ path: "components/contact.tsx" }],
+  },
+  {
+    name: "contact-02",
+    title: "Contact 02",
+    description: "A simple contact block",
+    component: React.lazy(
+      () => import("@/registry/blocks/contact-02/components/contact")
+    ),
+    categories: [categories.contact],
+    files: [{ path: "components/contact.tsx" }],
+  },
+  {
+    name: "contact-03",
+    title: "Contact 03",
+    description: "A simple contact block",
+    component: React.lazy(
+      () => import("@/registry/blocks/contact-03/components/contact")
+    ),
+    categories: [categories.contact],
+    files: [{ path: "components/contact.tsx" }],
   },
 ];

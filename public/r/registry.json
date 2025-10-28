@@ -130,9 +130,8 @@
       "dependencies": ["lucide-react"],
       "files": [
         {
-          "path": "src/blocks/contact-01/contact-01.tsx",
-          "type": "registry:block",
-          "target": "components/contact-01/contact-01.tsx"
+          "path": "src/registry/blocks/contact-01/components/contact.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -152,9 +151,8 @@
       ],
       "files": [
         {
-          "path": "src/blocks/contact-02/contact-02.tsx",
-          "type": "registry:block",
-          "target": "components/contact-02/contact-02.tsx"
+          "path": "src/registry/blocks/contact-02/components/contact.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -166,9 +164,8 @@
       "dependencies": ["lucide-react"],
       "files": [
         {
-          "path": "src/blocks/contact-03/contact-03.tsx",
-          "type": "registry:block",
-          "target": "components/contact-03/contact-03.tsx"
+          "path": "src/registry/blocks/contact-03/components/contact.tsx",
+          "type": "registry:component"
         }
       ]
     },
