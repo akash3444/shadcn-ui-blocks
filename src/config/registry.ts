@@ -27,6 +27,10 @@ const categories = {
     name: "authentication",
     title: "Authentication",
   },
+  timeline: {
+    name: "timeline",
+    title: "Timeline",
+  },
 } as const;
 
 export const blocks: RegistryBlock[] = [
@@ -150,5 +154,75 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.login, categories.authentication],
     files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "timeline-01",
+    title: "Timeline 01",
+    description: "A simple timeline block",
+    component: React.lazy(
+      () => import("@/registry/blocks/timeline-01/components/timeline")
+    ),
+    categories: [categories.timeline],
+    files: [{ path: "components/timeline.tsx" }],
+  },
+  {
+    name: "timeline-02",
+    title: "Timeline 02",
+    description: "A simple timeline block",
+    component: React.lazy(
+      () => import("@/registry/blocks/timeline-02/components/timeline")
+    ),
+    categories: [categories.timeline],
+    files: [{ path: "components/timeline.tsx" }],
+  },
+  {
+    name: "timeline-03",
+    title: "Timeline 03",
+    description: "A simple timeline block",
+    component: React.lazy(
+      () => import("@/registry/blocks/timeline-03/components/timeline")
+    ),
+    categories: [categories.timeline],
+    files: [{ path: "components/timeline.tsx" }],
+  },
+  {
+    name: "timeline-04",
+    title: "Timeline 04",
+    description: "A simple timeline block",
+    component: React.lazy(
+      () => import("@/registry/blocks/timeline-04/components/timeline")
+    ),
+    categories: [categories.timeline],
+    files: [{ path: "components/timeline.tsx" }],
+  },
+  {
+    name: "timeline-05",
+    title: "Timeline 05",
+    description: "A simple timeline block",
+    component: React.lazy(
+      () => import("@/registry/blocks/timeline-05/components/timeline")
+    ),
+    categories: [categories.timeline],
+    files: [{ path: "components/timeline.tsx" }],
+  },
+  {
+    name: "timeline-06",
+    title: "Timeline 06",
+    description: "A simple timeline block",
+    component: React.lazy(
+      () => import("@/registry/blocks/timeline-06/components/timeline")
+    ),
+    categories: [categories.timeline],
+    files: [{ path: "components/timeline.tsx" }],
+  },
+  {
+    name: "timeline-07",
+    title: "Timeline 07",
+    description: "A simple timeline block",
+    component: React.lazy(
+      () => import("@/registry/blocks/timeline-07/components/timeline")
+    ),
+    categories: [categories.timeline],
+    files: [{ path: "components/timeline.tsx" }],
   },
 ];

@@ -1302,9 +1302,8 @@
       "registryDependencies": ["badge"],
       "files": [
         {
-          "path": "src/blocks/timeline-01/timeline-01.tsx",
-          "type": "registry:block",
-          "target": "components/timeline-01/timeline-01.tsx"
+          "path": "src/registry/blocks/timeline-01/components/timeline.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1317,9 +1316,8 @@
       "registryDependencies": ["badge"],
       "files": [
         {
-          "path": "src/blocks/timeline-02/timeline-02.tsx",
-          "type": "registry:block",
-          "target": "components/timeline-02/timeline-02.tsx"
+          "path": "src/registry/blocks/timeline-02/components/timeline.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1332,9 +1330,8 @@
       "registryDependencies": ["badge"],
       "files": [
         {
-          "path": "src/blocks/timeline-03/timeline-03.tsx",
-          "type": "registry:block",
-          "target": "components/timeline-03/timeline-03.tsx"
+          "path": "src/registry/blocks/timeline-03/components/timeline.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1347,9 +1344,8 @@
       "registryDependencies": ["badge"],
       "files": [
         {
-          "path": "src/blocks/timeline-04/timeline-04.tsx",
-          "type": "registry:block",
-          "target": "components/timeline-04/timeline-04.tsx"
+          "path": "src/registry/blocks/timeline-04/components/timeline.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1360,9 +1356,8 @@
       "description": "A simple timeline block for process steps",
       "files": [
         {
-          "path": "src/blocks/timeline-05/timeline-05.tsx",
-          "type": "registry:block",
-          "target": "components/timeline-05/timeline-05.tsx"
+          "path": "src/registry/blocks/timeline-05/components/timeline.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1374,9 +1369,8 @@
       "dependencies": ["lucide-react"],
       "files": [
         {
-          "path": "src/blocks/timeline-06/timeline-06.tsx",
-          "type": "registry:block",
-          "target": "components/timeline-06/timeline-06.tsx"
+          "path": "src/registry/blocks/timeline-06/components/timeline.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1387,9 +1381,8 @@
       "description": "A simple timeline block with changelog",
       "files": [
         {
-          "path": "src/blocks/timeline-07/timeline-07.tsx",
-          "type": "registry:block",
-          "target": "components/timeline-07/timeline-07.tsx"
+          "path": "src/registry/blocks/timeline-07/components/timeline.tsx",
+          "type": "registry:component"
         }
       ]
     },
