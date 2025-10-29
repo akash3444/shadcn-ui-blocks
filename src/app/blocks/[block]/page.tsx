@@ -1,7 +1,7 @@
-import { blockList, blocks } from "@/blocks";
-import BlockToolbar from "@/components/blocks/block-toolbar";
+import { BlockCodeExplorer } from "@/components/blocks/block-code-explorer";
+import BlockDetails from "@/components/blocks/block-details";
 import BlockPreview from "@/components/blocks/block-preview";
-import FileExplorer from "@/components/blocks/file-explorer";
+import BlockToolbar from "@/components/blocks/block-toolbar";
 import { Navbar } from "@/components/layout/navbar";
 import { DescriptionText, MainHeading } from "@/components/typography";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -11,10 +11,10 @@ import { BlockProvider } from "@/providers/block-provider";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import registry from "../../../../registry.json";
-import BlockDetails from "@/components/blocks/block-details";
+import { blocks } from "@/config/registry";
 
 export const generateStaticParams = async () => {
-  return blockList.map(({ name }) => ({
+  return blocks.map(({ name }) => ({
     block: name,
   }));
 };
@@ -23,11 +23,15 @@ export const generateMetadata = async (props: {
   params: Promise<{ block: string }>;
 }): Promise<Metadata> => {
   const { block } = await props.params;
-  const blockDetails = blocks[block];
+  const blockDetails = blocks.find((b) => b.name === block);
+
+  if (!blockDetails) {
+    throw new Error(`Block ${block} not found`);
+  }
 
   return constructMetadata({
     title: `${blockDetails.title} - ${capitalize(
-      blockDetails.category
+      blockDetails.categories[0].title
     )} section Shadcn UI block`,
     description: `Fully customized and responsive ${blockDetails.title} Shadcn UI block. Preview, customize, and copy ready-to-use code snippets.`,
     alternates: {
@@ -67,7 +71,7 @@ const BlockPage = async (props: { params: Promise<{ block: string }> }) => {
             <BlockPreview />
           </TabsContent>
           <TabsContent value="code">
-            <FileExplorer />
+            <BlockCodeExplorer />
           </TabsContent>
         </Tabs>
 

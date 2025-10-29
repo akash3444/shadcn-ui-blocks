@@ -37,12 +37,12 @@ const TreeItem = ({ item, index = 0 }: TreeItemProps) => {
 
   const handleFileSelect = () => {
     if (item.type === "file") {
-      selectFile({ path: item.path || "", target: item.target });
+      selectFile(item.path);
     }
   };
 
   if (type === "file") {
-    const isActive = removeBlockPrefixFromPath(activeFile.path) === item.path;
+    const isActive = removeBlockPrefixFromPath(activeFile) === item.path;
 
     return (
       <button

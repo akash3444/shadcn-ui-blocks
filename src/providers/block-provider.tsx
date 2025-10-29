@@ -1,42 +1,78 @@
 "use client";
 
-import { blocks } from "@/blocks";
-import {
-  Block,
-  BlockFile,
-  BlockScreenSize,
-  BlockScreenSizeUnion,
-} from "@/types/blocks";
+import { blocks } from "@/config/registry";
+import { useBlockTheme } from "@/hooks/use-block-theme";
+import { getFileContent } from "@/lib/file";
+import { getFileTree } from "@/lib/file-tree";
+import { codeToHtml } from "@/lib/shiki";
+import { BlockScreenSize, BlockScreenSizeUnion } from "@/types/blocks";
+import { Theme } from "@/types/theme";
 import {
   createContext,
-  createRef,
   ReactNode,
   useContext,
+  useEffect,
   useState,
 } from "react";
-import registry from "../../registry.json";
-import { useBlockTheme } from "@/hooks/use-block-theme";
-import { Theme } from "@/types/theme";
+import { pathToTree } from "to-path-tree";
 
 const BlockContext = createContext<{
-  activeFile: { path: string; target?: string };
+  codeHtml: string | null;
+  code: string | null;
+  isLoadingCode: boolean;
+  fileTree: ReturnType<typeof pathToTree>;
+  activeFile: string;
   screenSize: BlockScreenSizeUnion;
-  selectFile: (file: BlockFile) => void;
+  selectFile: (file: string) => void;
   setScreenSize: (screenSize: BlockScreenSize) => void;
-  block: Block;
+  block: (typeof blocks)[number];
   theme: Theme;
   setTheme: (theme: Theme) => void;
   iframeRef: React.RefObject<HTMLIFrameElement | null>;
 }>({
-  activeFile: { path: "" },
+  codeHtml: null,
+  code: null,
+  isLoadingCode: false,
+  fileTree: {} as ReturnType<typeof pathToTree>,
+  activeFile: "",
   screenSize: "desktop",
   selectFile: () => {},
   setScreenSize: () => {},
-  block: {} as Block,
+  block: {} as (typeof blocks)[number],
   theme: "light",
   setTheme: () => {},
   iframeRef: { current: null },
 });
+
+const transformCode = (code: string) => {
+  let transformedCode = code;
+
+  // Replace `@/registry/.../components` with `@/components`
+  transformedCode = transformedCode.replace(
+    /@\/registry\/(.+)\/components/g,
+    "@/components"
+  );
+
+  // Replace `@/registry/.../hooks` with `@/hooks`
+  transformedCode = transformedCode.replace(
+    /@\/registry\/(.+)\/hooks/g,
+    "@/hooks"
+  );
+
+  // Replace `@/registry/.../config` with `@/config`
+  transformedCode = transformedCode.replace(
+    /@\/registry\/(.+)\/config/g,
+    "@/config"
+  );
+
+  // Replace `@/registry/.../ui` with `@/components/ui`
+  transformedCode = transformedCode.replace(
+    /@\/registry\/(.+)\/ui/g,
+    "@/components/ui"
+  );
+
+  return transformedCode;
+};
 
 export const BlockProvider = ({
   children,
@@ -45,30 +81,56 @@ export const BlockProvider = ({
   children: ReactNode;
   name: string;
 }) => {
-  const blockDetails = registry.items.find((item) => item.name === name);
+  const block = blocks.find((block) => block.name === name);
 
-  if (!blockDetails) {
+  if (!block) {
     throw new Error("Block not found");
   }
 
-  const { files } = blockDetails as { files: BlockFile[] };
+  const fileTree = getFileTree(block as (typeof blocks)[number]);
 
-  const [activeFile, setActiveFile] = useState<BlockFile>({
-    path: files[0].path,
-    target: files[0].target,
-  });
+  const [activeFile, setActiveFile] = useState(block?.files[0].path);
   const [screenSize, setScreenSize] = useState<BlockScreenSizeUnion>("desktop");
+  const [code, setCode] = useState<string | null>(null);
+  const [codeHtml, setCodeHtml] = useState<string | null>(null);
+  const [isLoadingCode, setIsLoadingCode] = useState(false);
 
   const { theme, setTheme, iframeRef } = useBlockTheme();
+
+  const updateCodeContent = async () => {
+    setIsLoadingCode(true);
+
+    try {
+      const code = await getFileContent(
+        `src/registry/blocks/${block.name}/${activeFile}`
+      );
+      const transformedCode = transformCode(code);
+      setCode(transformedCode);
+
+      const formattedCode = await codeToHtml(transformedCode ?? "");
+      setCodeHtml(formattedCode);
+    } finally {
+      setIsLoadingCode(false);
+    }
+  };
+
+  // Update the code content when the active file changes
+  useEffect(() => {
+    updateCodeContent();
+  }, [activeFile]);
 
   return (
     <BlockContext.Provider
       value={{
+        codeHtml,
+        code,
+        isLoadingCode,
+        fileTree,
         activeFile,
         screenSize,
         setScreenSize,
         selectFile: setActiveFile,
-        block: blocks[name as keyof typeof blocks],
+        block,
         theme,
         setTheme,
         iframeRef,

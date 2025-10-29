@@ -1,23 +1,29 @@
 "use client";
 
-import { blockList, categorizedBlocks } from "@/blocks";
+import { categorizedBlocks } from "@/blocks";
 import { useParams, useSearchParams } from "next/navigation";
 import PreviewListFilter from "./preview-list-filter";
 import { ResultsNotFound } from "./results-not-found";
 import { Block } from "../block";
+import { blocks as registryBlocks } from "@/config/registry";
 
 const BlockPreviewList = () => {
   const searchParams = useSearchParams();
   const q = searchParams.get("q");
   const { category } = useParams();
-  const blocks = category ? categorizedBlocks[category as string] : blockList;
+  const blocks = category
+    ? categorizedBlocks[category as string]
+    : registryBlocks;
   const query = q ?? "";
 
   const filteredBlocks = blocks.filter((block) => {
     const blockTitle = block.title.toLowerCase();
 
     return (
-      blockTitle.includes(query) || block.category.toLowerCase().includes(query)
+      blockTitle.includes(query) ||
+      block.categories.some((category) =>
+        category.name.toLowerCase().includes(query)
+      )
     );
   });
 
