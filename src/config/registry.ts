@@ -15,6 +15,10 @@ export interface RegistryBlock {
 }
 
 export const categories = {
+  logoCloud: {
+    name: "logoCloud",
+    title: "Logo Cloud",
+  },
   testimonials: {
     name: "testimonials",
     title: "Testimonials",
@@ -829,5 +833,98 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.testimonials],
     files: [{ path: "components/testimonials.tsx" }],
+  },
+  {
+    name: "logo-cloud-01",
+    title: "Logo Cloud 01",
+    description: "A simple logo cloud block",
+    component: React.lazy(
+      () => import("@/registry/blocks/logo-cloud-01/components/logo-cloud")
+    ),
+    categories: [categories.logoCloud],
+    files: [
+      { path: "components/logo-cloud.tsx" },
+      { path: "components/logos.tsx" },
+    ],
+  },
+  {
+    name: "logo-cloud-02",
+    title: "Logo Cloud 02",
+    description: "A simple logo cloud block",
+    component: React.lazy(
+      () => import("@/registry/blocks/logo-cloud-02/components/logo-cloud")
+    ),
+    categories: [categories.logoCloud],
+    files: [
+      { path: "components/logo-cloud.tsx" },
+      { path: "components/logos.tsx" },
+    ],
+  },
+  {
+    name: "logo-cloud-03",
+    title: "Logo Cloud 03",
+    description: "A simple logo cloud block",
+    component: React.lazy(
+      () => import("@/registry/blocks/logo-cloud-03/components/logo-cloud")
+    ),
+    categories: [categories.logoCloud],
+    files: [
+      { path: "components/logo-cloud.tsx" },
+      { path: "components/logos.tsx" },
+    ],
+  },
+  {
+    name: "logo-cloud-04",
+    title: "Logo Cloud 04",
+    description: "A simple logo cloud block",
+    component: React.lazy(
+      () => import("@/registry/blocks/logo-cloud-04/components/logo-cloud")
+    ),
+    categories: [categories.logoCloud],
+    files: [
+      { path: "components/logo-cloud.tsx" },
+      { path: "components/logos.tsx" },
+    ],
+  },
+  {
+    name: "logo-cloud-05",
+    title: "Logo Cloud 05",
+    description: "A simple logo cloud block",
+    component: React.lazy(
+      () => import("@/registry/blocks/logo-cloud-05/components/logo-cloud")
+    ),
+    categories: [categories.logoCloud],
+    files: [
+      { path: "components/logo-cloud.tsx" },
+      { path: "components/logos.tsx" },
+    ],
+  },
+  {
+    name: "logo-cloud-06",
+    title: "Logo Cloud 06",
+    description: "A simple logo cloud block",
+    component: React.lazy(
+      () => import("@/registry/blocks/logo-cloud-06/components/logo-cloud")
+    ),
+    categories: [categories.logoCloud],
+    files: [
+      { path: "components/logo-cloud.tsx" },
+      { path: "components/logos.tsx" },
+      { path: "components/ui/marquee.tsx" },
+    ],
+  },
+  {
+    name: "logo-cloud-07",
+    title: "Logo Cloud 07",
+    description: "A simple logo cloud block",
+    component: React.lazy(
+      () => import("@/registry/blocks/logo-cloud-07/components/logo-cloud")
+    ),
+    categories: [categories.logoCloud],
+    files: [
+      { path: "components/logo-cloud.tsx" },
+      { path: "components/logos.tsx" },
+      { path: "components/ui/marquee.tsx" },
+    ],
   },
 ];

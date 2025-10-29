@@ -632,135 +632,120 @@
       ]
     },
     {
-      "name": "logos-01",
+      "name": "logo-cloud-01",
       "type": "registry:block",
-      "title": "Logos 01",
+      "title": "Logo Cloud 01",
       "description": "A simple logos block",
       "files": [
         {
-          "path": "src/blocks/logos-01/logos-01.tsx",
-          "type": "registry:block",
-          "target": "components/logos-01/logos-01.tsx"
+          "path": "src/registry/blocks/logo-cloud-01/components/logo-cloud.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/components/logos.tsx",
-          "type": "registry:component",
-          "target": "components/logos-01/logos.tsx"
+          "path": "src/registry/blocks/logo-cloud-01/components/logos.tsx",
+          "type": "registry:component"
         }
       ]
     },
     {
-      "name": "logos-02",
+      "name": "logo-cloud-02",
       "type": "registry:block",
-      "title": "Logos 02",
+      "title": "Logo Cloud 02",
       "description": "A simple logos block",
-      "dependencies": ["lucide-react"],
       "files": [
         {
-          "path": "src/blocks/logos-02/logos-02.tsx",
-          "type": "registry:block",
-          "target": "components/logos-02/logos-02.tsx"
+          "path": "src/registry/blocks/logo-cloud-02/components/logo-cloud.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/components/logos.tsx",
-          "type": "registry:component",
-          "target": "components/logos-02/logos.tsx"
+          "path": "src/registry/blocks/logo-cloud-02/components/logos.tsx",
+          "type": "registry:component"
         }
       ]
     },
     {
-      "name": "logos-03",
+      "name": "logo-cloud-03",
       "type": "registry:block",
-      "title": "Logos 03",
+      "title": "Logo Cloud 03",
       "description": "A simple logos block",
       "files": [
         {
-          "path": "src/blocks/logos-03/logos-03.tsx",
-          "type": "registry:block",
-          "target": "components/logos-03/logos-03.tsx"
+          "path": "src/registry/blocks/logo-cloud-03/components/logo-cloud.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/components/logos.tsx",
-          "type": "registry:component",
-          "target": "components/logos-03/logos.tsx"
+          "path": "src/registry/blocks/logo-cloud-03/components/logos.tsx",
+          "type": "registry:component"
         }
       ]
     },
     {
-      "name": "logos-04",
+      "name": "logo-cloud-04",
       "type": "registry:block",
-      "title": "Logos 04",
+      "title": "Logo Cloud 04",
       "description": "A simple logos block",
       "files": [
         {
-          "path": "src/blocks/logos-04/logos-04.tsx",
-          "type": "registry:block",
-          "target": "components/logos-04/logos-04.tsx"
+          "path": "src/registry/blocks/logo-cloud-04/components/logo-cloud.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/components/logos.tsx",
-          "type": "registry:component",
-          "target": "components/logos-04/logos.tsx"
+          "path": "src/registry/blocks/logo-cloud-04/components/logos.tsx",
+          "type": "registry:component"
         }
       ]
     },
     {
-      "name": "logos-05",
+      "name": "logo-cloud-05",
       "type": "registry:block",
-      "title": "Logos 05",
+      "title": "Logo Cloud 05",
       "description": "A simple logos block",
       "files": [
         {
-          "path": "src/blocks/logos-05/logos-05.tsx",
-          "type": "registry:block",
-          "target": "components/logos-05/logos-05.tsx"
+          "path": "src/registry/blocks/logo-cloud-05/components/logo-cloud.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/components/logos.tsx",
-          "type": "registry:component",
-          "target": "components/logos-05/logos.tsx"
+          "path": "src/registry/blocks/logo-cloud-05/components/logos.tsx",
+          "type": "registry:component"
         }
       ]
     },
     {
-      "name": "logos-06",
+      "name": "logo-cloud-06",
       "type": "registry:block",
-      "title": "Logos 06",
+      "title": "Logo Cloud 06",
       "description": "A simple logos block",
       "registryDependencies": [
         "https://www.shadcnui-blocks.com/r/marquee.json"
       ],
       "files": [
         {
-          "path": "src/blocks/logos-06/logos-06.tsx",
-          "type": "registry:block",
-          "target": "components/logos-06/logos-06.tsx"
+          "path": "src/registry/blocks/logo-cloud-06/components/logo-cloud.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/components/logos.tsx",
-          "type": "registry:component",
-          "target": "components/logos-06/logos.tsx"
+          "path": "src/registry/blocks/logo-cloud-06/components/logos.tsx",
+          "type": "registry:component"
         }
       ]
     },
     {
-      "name": "logos-07",
+      "name": "logo-cloud-07",
       "type": "registry:block",
-      "title": "Logos 07",
+      "title": "Logo Cloud 07",
       "description": "A simple logos block",
       "registryDependencies": [
         "https://www.shadcnui-blocks.com/r/marquee.json"
       ],
       "files": [
         {
-          "path": "src/blocks/logos-07/logos-07.tsx",
-          "type": "registry:block",
-          "target": "components/logos-07/logos-07.tsx"
+          "path": "src/registry/blocks/logo-cloud-07/components/logo-cloud.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/components/logos.tsx",
-          "type": "registry:component",
-          "target": "components/logos-07/logos.tsx"
+          "path": "src/registry/blocks/logo-cloud-07/components/logos.tsx",
+          "type": "registry:component"
         }
       ]
     },
