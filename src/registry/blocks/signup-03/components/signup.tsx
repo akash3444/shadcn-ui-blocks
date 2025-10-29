@@ -1,6 +1,6 @@
 "use client";
 
-import { Logo } from "@/components/logo";
+import { Logo } from "@/registry/blocks/signup-03/components/logo";
 import { Button } from "@/components/ui/button";
 import {
   Form,

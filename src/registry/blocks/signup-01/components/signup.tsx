@@ -1,6 +1,6 @@
 "use client";
 
-import { Logo } from "@/components/logo";
+import { Logo } from "@/registry/blocks/signup-01/components/logo";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -22,7 +22,7 @@ const formSchema = z.object({
   password: z.string().min(8, "Password must be at least 8 characters long"),
 });
 
-const SignUp02Page = () => {
+const SignUp01Page = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     defaultValues: {
       email: "",
@@ -36,8 +36,8 @@ const SignUp02Page = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-muted">
-      <div className="max-w-sm w-full flex flex-col items-center border rounded-lg px-6 py-8 shadow-sm/5 bg-card">
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="max-w-xs w-full flex flex-col items-center">
         <Logo className="h-9 w-9" />
         <p className="mt-4 text-xl font-semibold tracking-tight">
           Sign up for Shadcn UI Blocks
@@ -148,4 +148,4 @@ const GoogleLogo = () => (
   </svg>
 );
 
-export default SignUp02Page;
+export default SignUp01Page;

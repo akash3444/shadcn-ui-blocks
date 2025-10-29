@@ -15,6 +15,10 @@ export interface RegistryBlock {
 }
 
 export const categories = {
+  signup: {
+    name: "signup",
+    title: "Signup",
+  },
   hero: {
     name: "hero",
     title: "Hero",
@@ -708,5 +712,55 @@ export const blocks: RegistryBlock[] = [
       { path: "components/hero.tsx" },
       { path: "components/ui/animated-grid-pattern.tsx" },
     ],
+  },
+  {
+    name: "signup-01",
+    title: "Signup 01",
+    description: "A simple signup block",
+    component: React.lazy(
+      () => import("@/registry/blocks/signup-01/components/signup")
+    ),
+    categories: [categories.signup, categories.authentication],
+    files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "signup-02",
+    title: "Signup 02",
+    description: "A simple signup block",
+    component: React.lazy(
+      () => import("@/registry/blocks/signup-02/components/signup")
+    ),
+    categories: [categories.signup, categories.authentication],
+    files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "signup-03",
+    title: "Signup 03",
+    description: "A simple signup block",
+    component: React.lazy(
+      () => import("@/registry/blocks/signup-03/components/signup")
+    ),
+    categories: [categories.signup, categories.authentication],
+    files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "signup-04",
+    title: "Signup 04",
+    description: "A simple signup block",
+    component: React.lazy(
+      () => import("@/registry/blocks/signup-04/components/signup")
+    ),
+    categories: [categories.signup, categories.authentication],
+    files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "signup-05",
+    title: "Signup 05",
+    description: "A simple signup block",
+    component: React.lazy(
+      () => import("@/registry/blocks/signup-05/components/signup")
+    ),
+    categories: [categories.signup, categories.authentication],
+    files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
   },
 ];

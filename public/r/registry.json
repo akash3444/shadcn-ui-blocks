@@ -996,9 +996,12 @@
       "registryDependencies": ["button", "form", "input", "separator"],
       "files": [
         {
-          "path": "src/blocks/signup-01/page.tsx",
-          "type": "registry:block",
-          "target": "app/signup/page.tsx"
+          "path": "src/registry/blocks/signup-01/components/signup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/signup-01/components/logo.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1011,9 +1014,12 @@
       "registryDependencies": ["button", "form", "input", "separator"],
       "files": [
         {
-          "path": "src/blocks/signup-02/page.tsx",
-          "type": "registry:block",
-          "target": "app/signup/page.tsx"
+          "path": "src/registry/blocks/signup-02/components/signup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/signup-02/components/logo.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1026,9 +1032,12 @@
       "registryDependencies": ["button", "form", "input", "separator"],
       "files": [
         {
-          "path": "src/blocks/signup-03/page.tsx",
-          "type": "registry:block",
-          "target": "app/signup/page.tsx"
+          "path": "src/registry/blocks/signup-03/components/signup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/signup-03/components/logo.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1041,9 +1050,12 @@
       "registryDependencies": ["button", "form", "input", "separator"],
       "files": [
         {
-          "path": "src/blocks/signup-04/page.tsx",
-          "type": "registry:block",
-          "target": "app/signup/page.tsx"
+          "path": "src/registry/blocks/signup-04/components/signup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/signup-04/components/logo.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1061,9 +1073,12 @@
       "registryDependencies": ["button", "form", "input", "separator"],
       "files": [
         {
-          "path": "src/blocks/signup-05/page.tsx",
-          "type": "registry:block",
-          "target": "app/signup/page.tsx"
+          "path": "src/registry/blocks/signup-05/components/signup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/signup-05/components/logo.tsx",
+          "type": "registry:component"
         }
       ]
     },
