@@ -1,4 +1,4 @@
-import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
+import AnimatedGridPattern from "@/registry/blocks/hero-07/components/ui/animated-grid-pattern";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";

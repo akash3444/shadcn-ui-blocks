@@ -8,7 +8,7 @@ export const BlockCodeExplorer = () => {
 
   return (
     <div className="flex divide-x overflow-hidden rounded-lg border">
-      <div className="w-full max-w-2xs shrink-0">
+      <div className="w-full max-w-[20rem] shrink-0">
         <div className="bg-sidebar flex h-12 items-center border-b pr-4 pl-7 font-medium">
           Explorer
         </div>

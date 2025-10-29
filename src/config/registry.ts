@@ -15,6 +15,10 @@ export interface RegistryBlock {
 }
 
 export const categories = {
+  hero: {
+    name: "hero",
+    title: "Hero",
+  },
   faq: {
     name: "faq",
     title: "FAQ",
@@ -626,5 +630,83 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.features],
     files: [{ path: "components/features.tsx" }],
+  },
+  {
+    name: "hero-01",
+    title: "Hero 01",
+    description: "A simple hero block",
+    component: React.lazy(
+      () => import("@/registry/blocks/hero-01/components/hero")
+    ),
+    categories: [categories.hero],
+    files: [{ path: "components/hero.tsx" }],
+  },
+  {
+    name: "hero-02",
+    title: "Hero 02",
+    description: "A simple hero block",
+    component: React.lazy(
+      () => import("@/registry/blocks/hero-02/components/hero")
+    ),
+    categories: [categories.hero],
+    files: [{ path: "components/hero.tsx" }],
+  },
+  {
+    name: "hero-03",
+    title: "Hero 03",
+    description: "A simple hero block",
+    component: React.lazy(
+      () => import("@/registry/blocks/hero-03/components/hero")
+    ),
+    categories: [categories.hero],
+    files: [{ path: "components/hero.tsx" }],
+  },
+  {
+    name: "hero-04",
+    title: "Hero 04",
+    description: "A simple hero block",
+    component: React.lazy(
+      () => import("@/registry/blocks/hero-04/components/hero")
+    ),
+    categories: [categories.hero],
+    files: [{ path: "components/hero.tsx" }],
+  },
+  {
+    name: "hero-05",
+    title: "Hero 05",
+    description: "A simple hero block",
+    component: React.lazy(
+      () => import("@/registry/blocks/hero-05/components/hero")
+    ),
+    categories: [categories.hero],
+    files: [{ path: "components/hero.tsx" }],
+  },
+  {
+    name: "hero-06",
+    title: "Hero 06",
+    description: "A simple hero block",
+    component: React.lazy(
+      () => import("@/registry/blocks/hero-06/components/hero")
+    ),
+    categories: [categories.hero],
+    files: [
+      { path: "components/hero.tsx" },
+      { path: "components/background-pattern.tsx" },
+      { path: "components/ui/dot-pattern.tsx" },
+      { path: "components/ui/particles.tsx" },
+    ],
+  },
+  {
+    name: "hero-07",
+    title: "Hero 07",
+    description: "A simple hero block",
+    component: React.lazy(
+      () => import("@/registry/blocks/hero-07/components/hero")
+    ),
+    categories: [categories.hero],
+    files: [
+      { path: "components/hero.tsx" },
+      { path: "components/ui/animated-grid-pattern.tsx" },
+    ],
   },
 ];

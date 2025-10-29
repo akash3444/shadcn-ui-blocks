@@ -434,9 +434,8 @@
       "registryDependencies": ["badge", "button"],
       "files": [
         {
-          "path": "src/blocks/hero-01/hero-01.tsx",
-          "type": "registry:block",
-          "target": "components/hero-01/hero-01.tsx"
+          "path": "src/registry/blocks/hero-01/components/hero.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -449,9 +448,8 @@
       "registryDependencies": ["badge", "button"],
       "files": [
         {
-          "path": "src/blocks/hero-02/hero-02.tsx",
-          "type": "registry:block",
-          "target": "components/hero-02/hero-02.tsx"
+          "path": "src/registry/blocks/hero-02/components/hero.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -464,9 +462,8 @@
       "registryDependencies": ["badge", "button"],
       "files": [
         {
-          "path": "src/blocks/hero-03/hero-03.tsx",
-          "type": "registry:block",
-          "target": "components/hero-03/hero-03.tsx"
+          "path": "src/registry/blocks/hero-03/components/hero.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -479,9 +476,8 @@
       "registryDependencies": ["badge", "button"],
       "files": [
         {
-          "path": "src/blocks/hero-04/hero-04.tsx",
-          "type": "registry:block",
-          "target": "components/hero-04/hero-04.tsx"
+          "path": "src/registry/blocks/hero-04/components/hero.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -494,9 +490,8 @@
       "registryDependencies": ["badge", "button"],
       "files": [
         {
-          "path": "src/blocks/hero-05/hero-05.tsx",
-          "type": "registry:block",
-          "target": "components/hero-05/hero-05.tsx"
+          "path": "src/registry/blocks/hero-05/components/hero.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -514,14 +509,12 @@
       ],
       "files": [
         {
-          "path": "src/blocks/hero-06/hero-06.tsx",
-          "type": "registry:block",
-          "target": "components/hero-06/hero-06.tsx"
+          "path": "src/registry/blocks/hero-06/components/hero.tsx",
+          "type": "registry:component"
         },
         {
-          "path": "src/blocks/hero-06/background-pattern.tsx",
-          "type": "registry:component",
-          "target": "components/hero-06/background-pattern.tsx"
+          "path": "src/registry/blocks/hero-06/components/background-pattern.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -538,9 +531,8 @@
       ],
       "files": [
         {
-          "path": "src/blocks/hero-07/hero-07.tsx",
-          "type": "registry:block",
-          "target": "components/hero-07/hero-07.tsx"
+          "path": "src/registry/blocks/hero-07/components/hero.tsx",
+          "type": "registry:component"
         }
       ]
     },

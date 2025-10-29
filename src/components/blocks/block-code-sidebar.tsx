@@ -23,7 +23,14 @@ export const BlockCodeSidebar = () => {
   if (!fileTree) return null;
 
   return (
-    <SidebarProvider className="w-full">
+    <SidebarProvider
+      className="w-full"
+      style={
+        {
+          "--sidebar-width": "20rem",
+        } as React.CSSProperties
+      }
+    >
       <Sidebar
         variant="inset"
         className="w-full data-[slot='sidebar-container']:relative"
