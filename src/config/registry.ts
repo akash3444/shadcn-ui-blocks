@@ -23,6 +23,10 @@ export const categories = {
     name: "pricing",
     title: "Pricing",
   },
+  features: {
+    name: "features",
+    title: "Features",
+  },
   team: {
     name: "team",
     title: "Team",
@@ -552,5 +556,75 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.faq],
     files: [{ path: "components/faq.tsx" }],
+  },
+  {
+    name: "features-01",
+    title: "Features 01",
+    description: "A simple features block",
+    component: React.lazy(
+      () => import("@/registry/blocks/features-01/components/features")
+    ),
+    categories: [categories.features],
+    files: [{ path: "components/features.tsx" }],
+  },
+  {
+    name: "features-02",
+    title: "Features 02",
+    description: "A simple features block",
+    component: React.lazy(
+      () => import("@/registry/blocks/features-02/components/features")
+    ),
+    categories: [categories.features],
+    files: [{ path: "components/features.tsx" }],
+  },
+  {
+    name: "features-03",
+    title: "Features 03",
+    description: "A simple features block",
+    component: React.lazy(
+      () => import("@/registry/blocks/features-03/components/features")
+    ),
+    categories: [categories.features],
+    files: [{ path: "components/features.tsx" }],
+  },
+  {
+    name: "features-04",
+    title: "Features 04",
+    description: "A simple features block",
+    component: React.lazy(
+      () => import("@/registry/blocks/features-04/components/features")
+    ),
+    categories: [categories.features],
+    files: [{ path: "components/features.tsx" }],
+  },
+  {
+    name: "features-05",
+    title: "Features 05",
+    description: "A simple features block",
+    component: React.lazy(
+      () => import("@/registry/blocks/features-05/components/features")
+    ),
+    categories: [categories.features],
+    files: [{ path: "components/features.tsx" }],
+  },
+  {
+    name: "features-06",
+    title: "Features 06",
+    description: "A simple features block",
+    component: React.lazy(
+      () => import("@/registry/blocks/features-06/components/features")
+    ),
+    categories: [categories.features],
+    files: [{ path: "components/features.tsx" }],
+  },
+  {
+    name: "features-07",
+    title: "Features 07",
+    description: "A simple features block",
+    component: React.lazy(
+      () => import("@/registry/blocks/features-07/components/features")
+    ),
+    categories: [categories.features],
+    files: [{ path: "components/features.tsx" }],
   },
 ];

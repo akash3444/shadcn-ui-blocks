@@ -270,9 +270,8 @@
       "dependencies": ["lucide-react"],
       "files": [
         {
-          "path": "src/blocks/features-01/features-01.tsx",
-          "type": "registry:block",
-          "target": "components/features-01/features-01.tsx"
+          "path": "src/registry/blocks/features-01/components/features.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -283,9 +282,8 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/blocks/features-02/features-02.tsx",
-          "type": "registry:block",
-          "target": "components/features-02/features-02.tsx"
+          "path": "src/registry/blocks/features-02/components/features.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -298,9 +296,8 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "src/blocks/features-03/features-03.tsx",
-          "type": "registry:block",
-          "target": "components/features-03/features-03.tsx"
+          "path": "src/registry/blocks/features-03/components/features.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -313,9 +310,8 @@
       "registryDependencies": ["accordion"],
       "files": [
         {
-          "path": "src/blocks/features-04/features-04.tsx",
-          "type": "registry:block",
-          "target": "components/features-04/features-04.tsx"
+          "path": "src/registry/blocks/features-04/components/features.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -328,9 +324,8 @@
       "registryDependencies": ["card"],
       "files": [
         {
-          "path": "src/blocks/features-05/features-05.tsx",
-          "type": "registry:block",
-          "target": "components/features-05/features-05.tsx"
+          "path": "src/registry/blocks/features-05/components/features.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -343,9 +338,8 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "src/blocks/features-06/features-06.tsx",
-          "type": "registry:block",
-          "target": "components/features-06/features-06.tsx"
+          "path": "src/registry/blocks/features-06/components/features.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -357,9 +351,8 @@
       "dependencies": ["lucide-react"],
       "files": [
         {
-          "path": "src/blocks/features-07/features-07.tsx",
-          "type": "registry:block",
-          "target": "components/features-07/features-07.tsx"
+          "path": "src/registry/blocks/features-07/components/features.tsx",
+          "type": "registry:component"
         }
       ]
     },
