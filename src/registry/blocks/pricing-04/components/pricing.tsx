@@ -64,7 +64,7 @@ const plans = [
   },
 ];
 
-const Pricing04 = () => {
+const Pricing = () => {
   const [selectedBillingPeriod, setSelectedBillingPeriod] = useState("monthly");
 
   return (
@@ -151,4 +151,4 @@ const Pricing04 = () => {
   );
 };
 
-export default Pricing04;
+export default Pricing;

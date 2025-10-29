@@ -62,7 +62,7 @@ const teamMembers = [
   },
 ];
 
-const Team05Page = () => {
+const Team = () => {
   return (
     <div className="flex flex-col justify-center py-8 sm:py-12 px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto gap-16">
       <div className="text-center max-w-2xl mx-auto">
@@ -133,4 +133,4 @@ const Team05Page = () => {
   );
 };
 
-export default Team05Page;
+export default Team;

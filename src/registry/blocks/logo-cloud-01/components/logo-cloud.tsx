@@ -1,6 +1,6 @@
 import { Logo01, Logo02, Logo03, Logo04 } from "@/components/logos";
 
-const Logos01Page = () => {
+const LogoCloud = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6">
       <div>
@@ -19,4 +19,4 @@ const Logos01Page = () => {
   );
 };
 
-export default Logos01Page;
+export default LogoCloud;

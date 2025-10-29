@@ -48,7 +48,7 @@ const teamMembers = [
   },
 ];
 
-const Team03Page = () => {
+const Team = () => {
   return (
     <div className="flex flex-col lg:flex-row justify-center py-8 sm:py-16 px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto gap-14">
       <div className="sm:max-w-sm lg:max-w-xs">
@@ -121,4 +121,4 @@ const Team03Page = () => {
   );
 };
 
-export default Team03Page;
+export default Team;

@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { MailIcon, MapPinIcon, MessageCircle, PhoneIcon } from "lucide-react";
 import Link from "next/link";
 
-const Contact02Page = () => (
+const Contact = () => (
   <div className="min-h-screen flex items-center justify-center py-16">
     <div className="w-full max-w-(--breakpoint-xl) mx-auto px-6 xl:px-0">
       <b className="text-muted-foreground uppercase font-semibold text-sm">
@@ -143,4 +143,4 @@ const Contact02Page = () => (
   </div>
 );
 
-export default Contact02Page;
+export default Contact;

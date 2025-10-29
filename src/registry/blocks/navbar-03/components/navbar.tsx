@@ -4,7 +4,7 @@ import { NavMenu } from "@/registry/blocks/navbar-03/components/nav-menu";
 import { NavigationSheet } from "@/registry/blocks/navbar-03/components/navigation-sheet";
 import { ArrowUpRight } from "lucide-react";
 
-const Navbar03Page = () => {
+const Navbar = () => {
   return (
     <div className="min-h-screen bg-muted">
       <nav className="h-16 bg-background border-b">
@@ -32,4 +32,4 @@ const Navbar03Page = () => {
   );
 };
 
-export default Navbar03Page;
+export default Navbar;

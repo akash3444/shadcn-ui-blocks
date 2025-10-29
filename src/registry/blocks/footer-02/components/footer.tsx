@@ -155,7 +155,7 @@ const footerSections = [
   },
 ];
 
-const Footer01Page = () => {
+const Footer = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <div className="grow bg-muted" />
@@ -238,4 +238,4 @@ const Footer01Page = () => {
   );
 };
 
-export default Footer01Page;
+export default Footer;

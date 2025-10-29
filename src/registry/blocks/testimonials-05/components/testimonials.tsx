@@ -58,7 +58,7 @@ const testimonials = [
   },
 ];
 
-const Testimonial05 = () => (
+const Testimonials = () => (
   <div className="min-h-screen flex justify-center items-center py-12 px-6">
     <div>
       <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
@@ -105,4 +105,4 @@ const Testimonial05 = () => (
   </div>
 );
 
-export default Testimonial05;
+export default Testimonials;

@@ -77,7 +77,8 @@ const testimonials = [
     avatar: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
-const Testimonial06 = () => {
+
+const Testimonials = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
@@ -197,4 +198,4 @@ const TestimonialCard = ({
   </div>
 );
 
-export default Testimonial06;
+export default Testimonials;

@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "src/registry/blocks/logo-cloud-01/components/logo-cloud.tsx",
-      "content": "import { Logo01, Logo02, Logo03, Logo04 } from \"@/components/logos\";\n\nconst Logos01Page = () => {\n  return (\n    <div className=\"min-h-screen flex items-center justify-center px-6\">\n      <div>\n        <p className=\"text-center text-xl\">\n          More than 2.2 million companies worldwide already trust us\n        </p>\n\n        <div className=\"mt-14 flex flex-wrap items-center justify-center gap-14\">\n          <Logo01 />\n          <Logo02 />\n          <Logo03 />\n          <Logo04 />\n        </div>\n      </div>\n    </div>\n  );\n};\n\nexport default Logos01Page;\n",
+      "content": "import { Logo01, Logo02, Logo03, Logo04 } from \"@/components/logos\";\n\nconst LogoCloud = () => {\n  return (\n    <div className=\"min-h-screen flex items-center justify-center px-6\">\n      <div>\n        <p className=\"text-center text-xl\">\n          More than 2.2 million companies worldwide already trust us\n        </p>\n\n        <div className=\"mt-14 flex flex-wrap items-center justify-center gap-14\">\n          <Logo01 />\n          <Logo02 />\n          <Logo03 />\n          <Logo04 />\n        </div>\n      </div>\n    </div>\n  );\n};\n\nexport default LogoCloud;\n",
       "type": "registry:component"
     },
     {

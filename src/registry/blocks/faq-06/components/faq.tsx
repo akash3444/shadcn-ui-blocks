@@ -46,7 +46,7 @@ const faq = [
   },
 ];
 
-const FAQ06 = () => {
+const FAQ = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-12">
       <div className="max-w-(--breakpoint-lg)">
@@ -75,4 +75,4 @@ const FAQ06 = () => {
   );
 };
 
-export default FAQ06;
+export default FAQ;

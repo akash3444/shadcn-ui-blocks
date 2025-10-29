@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Blocks, Settings2 } from "lucide-react";
 
-const Features03Page = () => {
+const Features = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="w-full max-w-(--breakpoint-lg) mx-auto py-12 px-6">
@@ -90,4 +90,4 @@ const Features03Page = () => {
   );
 };
 
-export default Features03Page;
+export default Features;

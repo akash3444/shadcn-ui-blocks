@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Logo } from "@/registry/blocks/navbar-05/components/logo";
 import { Search } from "lucide-react";
 
-const Navbar05Page = () => {
+const Navbar = () => {
   return (
     <div className="min-h-screen bg-muted">
       <nav className="fixed top-6 inset-x-4 h-16 bg-background border dark:border-slate-700/70 max-w-(--breakpoint-xl) mx-auto rounded-full">
@@ -41,4 +41,4 @@ const Navbar05Page = () => {
   );
 };
 
-export default Navbar05Page;
+export default Navbar;

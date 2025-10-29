@@ -33,7 +33,7 @@ const faq = [
   },
 ];
 
-const FAQ02 = () => {
+const FAQ = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-12">
       <div className="flex flex-col md:flex-row items-start gap-x-12 gap-y-6">
@@ -58,4 +58,4 @@ const FAQ02 = () => {
   );
 };
 
-export default FAQ02;
+export default FAQ;

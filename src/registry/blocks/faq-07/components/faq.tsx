@@ -35,7 +35,7 @@ const faq = [
   },
 ];
 
-const FAQ07 = () => {
+const FAQ = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-12">
       <div className="w-full max-w-2xl">
@@ -80,4 +80,4 @@ const FAQ07 = () => {
   );
 };
 
-export default FAQ07;
+export default FAQ;

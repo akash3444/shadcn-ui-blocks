@@ -10,7 +10,7 @@ import {
 } from "@/components/logos";
 import { Marquee } from "@/components/ui/marquee";
 
-const Logos06Page = () => {
+const LogoCloud = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6">
       <div className="overflow-hidden">
@@ -38,4 +38,4 @@ const Logos06Page = () => {
   );
 };
 
-export default Logos06Page;
+export default LogoCloud;

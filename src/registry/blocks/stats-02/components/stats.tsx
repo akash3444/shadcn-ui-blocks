@@ -1,4 +1,4 @@
-const Stats02Page = () => {
+const Stats = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-(--breakpoint-xl) mx-auto w-full py-12 px-6 xl:px-0">
@@ -59,4 +59,4 @@ const Stats02Page = () => {
   );
 };
 
-export default Stats02Page;
+export default Stats;
