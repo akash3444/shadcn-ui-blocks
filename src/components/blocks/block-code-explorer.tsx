@@ -1,3 +1,5 @@
+"use client";
+
 import { useBlockContext } from "@/providers/block-provider";
 import { File } from "lucide-react";
 import { BlockCodeSidebar } from "./block-code-sidebar";

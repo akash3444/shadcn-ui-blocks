@@ -1,26 +1,20 @@
 "use client";
-import { getHighlightedCodeNodes } from "@/lib/shiki";
+import { codeToHtml } from "@/lib/shiki";
 import { Loader2Icon } from "lucide-react";
-import { useLayoutEffect, useState, type JSX } from "react";
+import { useLayoutEffect, useState } from "react";
 
-export function CodeBlock({
-  initial,
-  code,
-}: {
-  initial?: JSX.Element;
-  code: string;
-}) {
-  const [nodes, setNodes] = useState(initial);
+export function CodeBlock({ code }: { code: string }) {
+  const [codeHtml, setCodeHtml] = useState<string | null>(null);
 
   useLayoutEffect(() => {
-    getHighlightedCodeNodes(code).then(setNodes);
+    codeToHtml(code).then(setCodeHtml);
   }, [code]);
 
-  return (
-    nodes ?? (
-      <div className="h-full w-full flex items-center justify-center">
-        <Loader2Icon className="animate-spin h-8 w-8" />
-      </div>
-    )
+  return codeHtml ? (
+    <div dangerouslySetInnerHTML={{ __html: codeHtml }} />
+  ) : (
+    <div className="h-full w-full flex items-center justify-center">
+      <Loader2Icon className="animate-spin h-8 w-8" />
+    </div>
   );
 }
