@@ -1173,51 +1173,48 @@
       ]
     },
     {
-      "name": "testimonial-01",
+      "name": "testimonials-01",
       "type": "registry:block",
-      "title": "Testimonial 01",
+      "title": "Testimonials 01",
       "description": "A simple testimonial block",
       "registryDependencies": ["avatar", "button"],
       "files": [
         {
-          "path": "src/blocks/testimonial-01/testimonial-01.tsx",
-          "type": "registry:block",
-          "target": "components/testimonial-01/testimonial-01.tsx"
+          "path": "src/registry/blocks/testimonials-01/components/testimonials.tsx",
+          "type": "registry:component"
         }
       ]
     },
     {
-      "name": "testimonial-02",
+      "name": "testimonials-02",
       "type": "registry:block",
-      "title": "Testimonial 02",
+      "title": "Testimonials 02",
       "description": "A simple testimonial block",
       "registryDependencies": ["avatar", "button"],
       "files": [
         {
-          "path": "src/blocks/testimonial-02/testimonial-02.tsx",
-          "type": "registry:block",
-          "target": "components/testimonial-02/testimonial-02.tsx"
+          "path": "src/registry/blocks/testimonials-02/components/testimonials.tsx",
+          "type": "registry:component"
         }
       ]
     },
     {
-      "name": "testimonial-03",
+      "name": "testimonials-03",
       "type": "registry:block",
-      "title": "Testimonial 03",
+      "title": "Testimonials 03",
       "description": "A simple testimonial block",
       "registryDependencies": ["avatar"],
       "files": [
         {
-          "path": "src/blocks/testimonial-03/testimonial-03.tsx",
-          "type": "registry:block",
-          "target": "components/testimonial-03/testimonial-03.tsx"
+          "path": "src/registry/blocks/testimonials-03/components/testimonials.tsx",
+          "type": "registry:component"
         }
       ]
     },
     {
-      "name": "testimonial-04",
+      "name": "testimonials-04",
       "type": "registry:block",
-      "title": "Testimonial 04",
+      "title": "Testimonials 04",
       "description": "A simple testimonial block",
       "registryDependencies": [
         "avatar",
@@ -1226,39 +1223,36 @@
       ],
       "files": [
         {
-          "path": "src/blocks/testimonial-04/testimonial-04.tsx",
-          "type": "registry:block",
-          "target": "components/testimonial-04/testimonial-04.tsx"
+          "path": "src/registry/blocks/testimonials-04/components/testimonials.tsx",
+          "type": "registry:component"
         }
       ]
     },
     {
-      "name": "testimonial-05",
+      "name": "testimonials-05",
       "type": "registry:block",
-      "title": "Testimonial 05",
+      "title": "Testimonials 05",
       "description": "A simple testimonial block",
       "dependencies": ["lucide-react"],
       "registryDependencies": ["avatar"],
       "files": [
         {
-          "path": "src/blocks/testimonial-05/testimonial-05.tsx",
-          "type": "registry:block",
-          "target": "components/testimonial-05/testimonial-05.tsx"
+          "path": "src/registry/blocks/testimonials-05/components/testimonials.tsx",
+          "type": "registry:component"
         }
       ]
     },
     {
-      "name": "testimonial-06",
+      "name": "testimonials-06",
       "type": "registry:block",
-      "title": "Testimonial 06",
+      "title": "Testimonials 06",
       "description": "A simple testimonial block",
       "dependencies": ["lucide-react"],
       "registryDependencies": ["avatar", "carousel"],
       "files": [
         {
-          "path": "src/blocks/testimonial-06/testimonial-06.tsx",
-          "type": "registry:block",
-          "target": "components/testimonial-06/testimonial-06.tsx"
+          "path": "src/registry/blocks/testimonials-06/components/testimonials.tsx",
+          "type": "registry:component"
         }
       ]
     },

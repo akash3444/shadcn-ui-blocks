@@ -1,7 +1,8 @@
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { Marquee } from "@/components/ui/marquee";
 import Link from "next/link";
-import React, { ComponentProps } from "react";
+import { ComponentProps } from "react";
 
 const testimonials = [
   {
@@ -28,8 +29,7 @@ const testimonials = [
     designation: "UX Designer",
     company: "DesignPro",
     testimonial:
-      "An amazing tool that simplifies complex tasks. Highly recommended for professionals in the industry. " +
-      "The intuitive interface makes it easy to onboard new team members, and the automation features save us countless hours every week. ",
+      "An amazing tool that simplifies complex tasks. Highly recommended for professionals in the industry.",
     avatar: "https://randomuser.me/api/portraits/men/3.jpg",
   },
   {
@@ -61,45 +61,56 @@ const testimonials = [
   },
 ];
 
-const Testimonial02 = () => (
-  <div className="min-h-screen flex justify-center items-center py-12 px-6">
-    <div>
-      <h2 className="mb-14 text-5xl md:text-6xl font-semibold text-center tracking-[-0.03em]">
-        Testimonials
+const Testimonial04 = () => (
+  <div className="min-h-screen flex justify-center items-center py-12">
+    <div className="h-full w-full">
+      <h2 className="text-5xl font-semibold text-center tracking-[-0.03em] px-6 text-pretty">
+        Success Stories
       </h2>
-      <div className="max-w-(--breakpoint-xl) mx-auto columns-1 md:columns-2 lg:columns-3 gap-8">
-        {testimonials.map((testimonial) => (
-          <div
-            key={testimonial.id}
-            className="mb-8 rounded-xl p-6 break-inside-avoid shadow-[0px_0px_16px_0px_rgba(0,0,0,0.1)]"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <Avatar>
-                  <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
-                    {testimonial.name.charAt(0)}
-                  </AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="text-lg font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">
-                    {testimonial.designation}
-                  </p>
-                </div>
-              </div>
-              <Button variant="ghost" size="icon" asChild>
-                <Link href="#" target="_blank">
-                  <TwitterLogo className="w-4 h-4" />
-                </Link>
-              </Button>
-            </div>
-            <p className="mt-5 text-[17px]">{testimonial.testimonial}</p>
-          </div>
-        ))}
+      <p className="mt-3 text-center text-muted-foreground text-xl">
+        Real stories from people who use and love our product every day
+      </p>
+      <div className="mt-14 relative">
+        <div className="z-10 absolute left-0 inset-y-0 w-[15%] bg-linear-to-r from-background to-transparent" />
+        <div className="z-10 absolute right-0 inset-y-0 w-[15%] bg-linear-to-l from-background to-transparent" />
+        <Marquee pauseOnHover className="[--duration:20s]">
+          <TestimonialList />
+        </Marquee>
+        <Marquee pauseOnHover reverse className="mt-0 [--duration:20s]">
+          <TestimonialList />
+        </Marquee>
       </div>
     </div>
   </div>
 );
+
+const TestimonialList = () =>
+  testimonials.map((testimonial) => (
+    <div
+      key={testimonial.id}
+      className="min-w-96 max-w-sm bg-accent rounded-xl p-6"
+    >
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <Avatar>
+            <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
+              {testimonial.name.charAt(0)}
+            </AvatarFallback>
+          </Avatar>
+          <div>
+            <p className="text-lg font-semibold">{testimonial.name}</p>
+            <p className="text-sm text-gray-500">{testimonial.designation}</p>
+          </div>
+        </div>
+        <Button variant="ghost" size="icon" asChild>
+          <Link href="#" target="_blank">
+            <TwitterLogo className="w-4 h-4" />
+          </Link>
+        </Button>
+      </div>
+      <p className="mt-5 text-[17px]">{testimonial.testimonial}</p>
+    </div>
+  ));
 
 const TwitterLogo = (props: ComponentProps<"svg">) => (
   <svg
@@ -116,4 +127,4 @@ const TwitterLogo = (props: ComponentProps<"svg">) => (
   </svg>
 );
 
-export default Testimonial02;
+export default Testimonial04;

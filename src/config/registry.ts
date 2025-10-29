@@ -15,6 +15,10 @@ export interface RegistryBlock {
 }
 
 export const categories = {
+  testimonials: {
+    name: "testimonials",
+    title: "Testimonials",
+  },
   signup: {
     name: "signup",
     title: "Signup",
@@ -762,5 +766,68 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.signup, categories.authentication],
     files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "testimonials-01",
+    title: "Testimonials 01",
+    description: "A simple testimonials block",
+    component: React.lazy(
+      () => import("@/registry/blocks/testimonials-01/components/testimonials")
+    ),
+    categories: [categories.testimonials],
+    files: [{ path: "components/testimonials.tsx" }],
+  },
+  {
+    name: "testimonials-02",
+    title: "Testimonials 02",
+    description: "A simple testimonials block",
+    component: React.lazy(
+      () => import("@/registry/blocks/testimonials-02/components/testimonials")
+    ),
+    categories: [categories.testimonials],
+    files: [{ path: "components/testimonials.tsx" }],
+  },
+  {
+    name: "testimonials-03",
+    title: "Testimonials 03",
+    description: "A simple testimonials block",
+    component: React.lazy(
+      () => import("@/registry/blocks/testimonials-03/components/testimonials")
+    ),
+    categories: [categories.testimonials],
+    files: [{ path: "components/testimonials.tsx" }],
+  },
+  {
+    name: "testimonials-04",
+    title: "Testimonials 04",
+    description: "A simple testimonials block",
+    component: React.lazy(
+      () => import("@/registry/blocks/testimonials-04/components/testimonials")
+    ),
+    categories: [categories.testimonials],
+    files: [
+      { path: "components/testimonials.tsx" },
+      { path: "components/ui/marquee.tsx" },
+    ],
+  },
+  {
+    name: "testimonials-05",
+    title: "Testimonials 05",
+    description: "A simple testimonials block",
+    component: React.lazy(
+      () => import("@/registry/blocks/testimonials-05/components/testimonials")
+    ),
+    categories: [categories.testimonials],
+    files: [{ path: "components/testimonials.tsx" }],
+  },
+  {
+    name: "testimonials-06",
+    title: "Testimonials 06",
+    description: "A simple testimonials block",
+    component: React.lazy(
+      () => import("@/registry/blocks/testimonials-06/components/testimonials")
+    ),
+    categories: [categories.testimonials],
+    files: [{ path: "components/testimonials.tsx" }],
   },
 ];
