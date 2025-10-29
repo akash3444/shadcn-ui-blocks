@@ -90,7 +90,6 @@ export const BlockProvider = ({
   const fileTree = getFileTree(block as (typeof blocks)[number]);
 
   const [activeFile, setActiveFile] = useState(block?.files[0].path);
-  console.log(activeFile);
   const [screenSize, setScreenSize] = useState<BlockScreenSizeUnion>("desktop");
   const [code, setCode] = useState<string | null>(null);
   const [codeHtml, setCodeHtml] = useState<string | null>(null);
