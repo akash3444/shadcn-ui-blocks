@@ -16,6 +16,7 @@ import {
 } from "../ui/sidebar";
 import { useBlockContext } from "@/providers/block-provider";
 import { NodeItem, pathToTree, TreeNode } from "to-path-tree";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 export const BlockCodeSidebar = () => {
   const { fileTree } = useBlockContext();
@@ -74,17 +75,23 @@ function TreeItem({ item }: { item: NodeItem<unknown> | TreeNode<unknown> }) {
     const isActive = activeFile === nodeItem.path;
 
     return (
-      <SidebarMenuButton
-        isActive={isActive}
-        className="text-foreground/80 data-[state=active]:bg-accent relative text-base font-medium"
-        onClick={() => selectFile(item.path)}
-      >
-        <File className="text-muted-foreground" />
-        {nodeItem.file}
-        {isLoadingCode && isActive && (
-          <Loader2 className="absolute right-1 animate-spin" />
-        )}
-      </SidebarMenuButton>
+      <Tooltip delayDuration={1000}>
+        <TooltipTrigger asChild>
+          <SidebarMenuButton
+            isActive={isActive}
+            className="text-foreground/80 data-[state=active]:bg-accent relative text-base font-medium"
+            onClick={() => selectFile(item.path)}
+          >
+            {isLoadingCode && isActive ? (
+              <Loader2 className="animate-spin" />
+            ) : (
+              <File className="text-muted-foreground" />
+            )}
+            <span className="truncate">{nodeItem.file}</span>
+          </SidebarMenuButton>
+        </TooltipTrigger>
+        <TooltipContent side="right">{nodeItem.file}</TooltipContent>
+      </Tooltip>
     );
   }
 
@@ -102,7 +109,7 @@ function TreeItem({ item }: { item: NodeItem<unknown> | TreeNode<unknown> }) {
             {item.name}
           </SidebarMenuButton>
         </CollapsibleTrigger>
-        <CollapsibleContent>
+        <CollapsibleContent className="max-w-(--radix-collapsible-content-width) overflow-hidden">
           <SidebarMenuSub>
             <Tree tree={item} />
           </SidebarMenuSub>
