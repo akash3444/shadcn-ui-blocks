@@ -9,7 +9,7 @@ import {
   Logo08,
 } from "@/components/logos";
 
-const Logos02Page = () => {
+const LogoCloud = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6">
       <div>
@@ -32,4 +32,4 @@ const Logos02Page = () => {
   );
 };
 
-export default Logos02Page;
+export default LogoCloud;

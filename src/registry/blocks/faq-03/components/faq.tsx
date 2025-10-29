@@ -62,7 +62,8 @@ const faq = [
       "Reach out via email at support@example.com or call us at 1-800-123-4567 for assistance with any inquiries.",
   },
 ];
-const FAQ03 = () => {
+
+const FAQ = () => {
   const [value, setValue] = useState<string>();
 
   return (
@@ -132,4 +133,4 @@ const FAQ03 = () => {
   );
 };
 
-export default FAQ03;
+export default FAQ;

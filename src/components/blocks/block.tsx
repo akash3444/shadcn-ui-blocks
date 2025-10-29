@@ -16,7 +16,7 @@ export function Block({ block }: { block: RegistryBlock }) {
             <div className="text-lg font-medium">{block.title}</div>
             <div className="flex items-end gap-3">
               <BlockToolbar />
-              <TabsList>
+              <TabsList className="h-8">
                 <TabsTrigger value="preview">Preview</TabsTrigger>
                 <TabsTrigger value="code">Code</TabsTrigger>
               </TabsList>

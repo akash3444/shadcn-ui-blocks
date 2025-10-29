@@ -4,7 +4,7 @@ import { NavMenu } from "@/registry/blocks/navbar-02/components/nav-menu";
 import { NavigationSheet } from "@/registry/blocks/navbar-02/components/navigation-sheet";
 import { SunIcon } from "lucide-react";
 
-const Navbar02Page = () => {
+const Navbar = () => {
   return (
     <div className="min-h-screen bg-muted">
       <nav className="h-16 bg-background border-b">
@@ -36,4 +36,4 @@ const Navbar02Page = () => {
   );
 };
 
-export default Navbar02Page;
+export default Navbar;

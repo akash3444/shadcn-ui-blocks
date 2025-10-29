@@ -50,7 +50,8 @@ const teamMembers = [
       "https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
 ];
-const Team01Page = () => {
+
+const Team = () => {
   return (
     <div className="flex flex-col items-center justify-center py-14 px-4 sm:px-6 lg:px-8">
       <div className="text-center max-w-xl mx-auto">
@@ -85,4 +86,4 @@ const Team01Page = () => {
   );
 };
 
-export default Team01Page;
+export default Team;

@@ -51,7 +51,7 @@ const plans = [
   },
 ];
 
-const Pricing06 = () => {
+const Pricing = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center py-12 px-6">
       <h1 className="text-5xl font-semibold text-center tracking-tighter">
@@ -101,4 +101,4 @@ const Pricing06 = () => {
   );
 };
 
-export default Pricing06;
+export default Pricing;

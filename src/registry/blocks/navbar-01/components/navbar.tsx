@@ -3,7 +3,7 @@ import { Logo } from "@/registry/blocks/navbar-01/components/logo";
 import { NavMenu } from "@/registry/blocks/navbar-01/components/nav-menu";
 import { NavigationSheet } from "@/registry/blocks/navbar-01/components/navigation-sheet";
 
-const Navbar01Page = () => {
+const Navbar = () => {
   return (
     <div className="min-h-screen bg-muted">
       <nav className="h-16 bg-background border-b">
@@ -30,4 +30,4 @@ const Navbar01Page = () => {
   );
 };
 
-export default Navbar01Page;
+export default Navbar;

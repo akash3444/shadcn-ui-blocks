@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "src/registry/blocks/logo-cloud-02/components/logo-cloud.tsx",
-      "content": "import {\n  Logo01,\n  Logo02,\n  Logo03,\n  Logo04,\n  Logo05,\n  Logo06,\n  Logo07,\n  Logo08,\n} from \"@/components/logos\";\n\nconst Logos02Page = () => {\n  return (\n    <div className=\"min-h-screen flex items-center justify-center px-6\">\n      <div>\n        <p className=\"text-center text-xl\">\n          More than 2.2 million companies worldwide already trust us\n        </p>\n\n        <div className=\"mt-20 flex flex-wrap items-center justify-center gap-x-14 gap-y-10 max-w-(--breakpoint-lg)\">\n          <Logo01 />\n          <Logo02 />\n          <Logo03 />\n          <Logo04 />\n          <Logo05 />\n          <Logo06 />\n          <Logo07 />\n          <Logo08 />\n        </div>\n      </div>\n    </div>\n  );\n};\n\nexport default Logos02Page;\n",
+      "content": "import {\n  Logo01,\n  Logo02,\n  Logo03,\n  Logo04,\n  Logo05,\n  Logo06,\n  Logo07,\n  Logo08,\n} from \"@/components/logos\";\n\nconst LogoCloud = () => {\n  return (\n    <div className=\"min-h-screen flex items-center justify-center px-6\">\n      <div>\n        <p className=\"text-center text-xl\">\n          More than 2.2 million companies worldwide already trust us\n        </p>\n\n        <div className=\"mt-20 flex flex-wrap items-center justify-center gap-x-14 gap-y-10 max-w-(--breakpoint-lg)\">\n          <Logo01 />\n          <Logo02 />\n          <Logo03 />\n          <Logo04 />\n          <Logo05 />\n          <Logo06 />\n          <Logo07 />\n          <Logo08 />\n        </div>\n      </div>\n    </div>\n  );\n};\n\nexport default LogoCloud;\n",
       "type": "registry:component"
     },
     {

@@ -8,7 +8,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-const Blog01Page = () => {
+const Blog = () => {
   return (
     <div className="max-w-(--breakpoint-xl) mx-auto py-16 px-6 xl:px-0">
       <div className="flex items-end justify-between">
@@ -59,4 +59,4 @@ const Blog01Page = () => {
   );
 };
 
-export default Blog01Page;
+export default Blog;

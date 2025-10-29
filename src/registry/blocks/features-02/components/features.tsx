@@ -13,7 +13,7 @@ const features = [
   },
 ];
 
-const Features02Page = () => {
+const Features = () => {
   return (
     <div className="min-h-screen flex items-center justify-center py-12 px-6">
       <div className="grow w-full sm:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg)">
@@ -41,4 +41,4 @@ const Features02Page = () => {
   );
 };
 
-export default Features02Page;
+export default Features;

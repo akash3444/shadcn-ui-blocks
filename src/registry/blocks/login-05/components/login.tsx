@@ -29,7 +29,7 @@ const formSchema = z.object({
   password: z.string().min(8, "Password must be at least 8 characters long"),
 });
 
-const Login05Page = () => {
+const Login = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     defaultValues: {
       email: "",
@@ -163,4 +163,4 @@ const Login05Page = () => {
   );
 };
 
-export default Login05Page;
+export default Login;

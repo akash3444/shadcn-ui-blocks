@@ -59,7 +59,7 @@ const teamMembers = [
   },
 ];
 
-const Team02Page = () => {
+const Team = () => {
   return (
     <div className="flex flex-col justify-center py-8 sm:pt-12 sm:pb-20 px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto">
       <b className="text-muted-foreground font-semibold text-sm uppercase">
@@ -92,4 +92,4 @@ const Team02Page = () => {
   );
 };
 
-export default Team02Page;
+export default Team;

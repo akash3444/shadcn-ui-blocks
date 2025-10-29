@@ -22,7 +22,7 @@ const formSchema = z.object({
   password: z.string().min(8, "Password must be at least 8 characters long"),
 });
 
-const SignUp02Page = () => {
+const SignUp = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     defaultValues: {
       email: "",
@@ -148,4 +148,4 @@ const GoogleLogo = () => (
   </svg>
 );
 
-export default SignUp02Page;
+export default SignUp;
