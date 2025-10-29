@@ -1,7 +1,6 @@
 "use client";
 
 import { blockCategories } from "@/blocks";
-import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
@@ -11,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { categories } from "@/config/registry";
 import { TagIcon } from "lucide-react";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 
@@ -46,7 +46,9 @@ const CategoryFilter = () => {
             <SelectItem key={category.name} value={category.name}>
               <div className="flex items-center gap-3">
                 <TagIcon className="h-4 w-4" />
-                <span className="capitalize">{category.name}</span>
+                <span className="capitalize">
+                  {categories[category.name as keyof typeof categories].title}
+                </span>
               </div>
             </SelectItem>
           ))}

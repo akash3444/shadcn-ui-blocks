@@ -14,7 +14,11 @@ export interface RegistryBlock {
   files: { path: string }[];
 }
 
-const categories = {
+export const categories = {
+  faq: {
+    name: "faq",
+    title: "FAQ",
+  },
   pricing: {
     name: "pricing",
     title: "Pricing",
@@ -478,5 +482,75 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.team],
     files: [{ path: "components/team.tsx" }],
+  },
+  {
+    name: "faq-01",
+    title: "FAQ 01",
+    description: "A simple FAQ block",
+    component: React.lazy(
+      () => import("@/registry/blocks/faq-01/components/faq")
+    ),
+    categories: [categories.faq],
+    files: [{ path: "components/faq.tsx" }],
+  },
+  {
+    name: "faq-02",
+    title: "FAQ 02",
+    description: "A simple FAQ block",
+    component: React.lazy(
+      () => import("@/registry/blocks/faq-02/components/faq")
+    ),
+    categories: [categories.faq],
+    files: [{ path: "components/faq.tsx" }],
+  },
+  {
+    name: "faq-03",
+    title: "FAQ 03",
+    description: "A simple FAQ block",
+    component: React.lazy(
+      () => import("@/registry/blocks/faq-03/components/faq")
+    ),
+    categories: [categories.faq],
+    files: [{ path: "components/faq.tsx" }],
+  },
+  {
+    name: "faq-04",
+    title: "FAQ 04",
+    description: "A simple FAQ block",
+    component: React.lazy(
+      () => import("@/registry/blocks/faq-04/components/faq")
+    ),
+    categories: [categories.faq],
+    files: [{ path: "components/faq.tsx" }],
+  },
+  {
+    name: "faq-05",
+    title: "FAQ 05",
+    description: "A simple FAQ block",
+    component: React.lazy(
+      () => import("@/registry/blocks/faq-05/components/faq")
+    ),
+    categories: [categories.faq],
+    files: [{ path: "components/faq.tsx" }],
+  },
+  {
+    name: "faq-06",
+    title: "FAQ 06",
+    description: "A simple FAQ block",
+    component: React.lazy(
+      () => import("@/registry/blocks/faq-06/components/faq")
+    ),
+    categories: [categories.faq],
+    files: [{ path: "components/faq.tsx" }],
+  },
+  {
+    name: "faq-07",
+    title: "FAQ 07",
+    description: "A simple FAQ block",
+    component: React.lazy(
+      () => import("@/registry/blocks/faq-07/components/faq")
+    ),
+    categories: [categories.faq],
+    files: [{ path: "components/faq.tsx" }],
   },
 ];

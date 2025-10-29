@@ -21,7 +21,11 @@ const getBlocksData = () => {
     categories.push({ name: category, totalBlocks: blocks.length });
   }
 
-  return { categories: categories, categorizedBlocks };
+  const alphabeticallySortedCategories = categories.sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
+
+  return { categories: alphabeticallySortedCategories, categorizedBlocks };
 };
 
 export const { categories: blockCategories, categorizedBlocks } =

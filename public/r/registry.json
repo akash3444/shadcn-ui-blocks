@@ -177,9 +177,8 @@
       "registryDependencies": ["accordion"],
       "files": [
         {
-          "path": "src/blocks/faq-01/faq-01.tsx",
-          "type": "registry:block",
-          "target": "components/faq-01/faq-01.tsx"
+          "path": "src/registry/blocks/faq-01/components/faq.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -191,9 +190,8 @@
       "registryDependencies": ["accordion"],
       "files": [
         {
-          "path": "src/blocks/faq-02/faq-02.tsx",
-          "type": "registry:block",
-          "target": "components/faq-02/faq-02.tsx"
+          "path": "src/registry/blocks/faq-02/components/faq.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -202,13 +200,12 @@
       "type": "registry:block",
       "title": "FAQ 03",
       "description": "A simple FAQ component",
-      "dependencies": ["lucide-react"],
+      "dependencies": ["lucide-react", "radix-ui"],
       "registryDependencies": ["accordion"],
       "files": [
         {
-          "path": "src/blocks/faq-03/faq-03.tsx",
-          "type": "registry:block",
-          "target": "components/faq-03/faq-03.tsx"
+          "path": "src/registry/blocks/faq-03/components/faq.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -220,9 +217,8 @@
       "dependencies": ["lucide-react"],
       "files": [
         {
-          "path": "src/blocks/faq-04/faq-04.tsx",
-          "type": "registry:block",
-          "target": "components/faq-04/faq-04.tsx"
+          "path": "src/registry/blocks/faq-04/components/faq.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -234,9 +230,8 @@
       "dependencies": ["lucide-react"],
       "files": [
         {
-          "path": "src/blocks/faq-05/faq-05.tsx",
-          "type": "registry:block",
-          "target": "components/faq-05/faq-05.tsx"
+          "path": "src/registry/blocks/faq-05/components/faq.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -248,9 +243,8 @@
       "dependencies": ["lucide-react"],
       "files": [
         {
-          "path": "src/blocks/faq-06/faq-06.tsx",
-          "type": "registry:block",
-          "target": "components/faq-06/faq-06.tsx"
+          "path": "src/registry/blocks/faq-06/components/faq.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -263,9 +257,8 @@
       "registryDependencies": ["accordion"],
       "files": [
         {
-          "path": "src/blocks/faq-07/faq-07.tsx",
-          "type": "registry:block",
-          "target": "components/faq-07/faq-07.tsx"
+          "path": "src/registry/blocks/faq-07/components/faq.tsx",
+          "type": "registry:component"
         }
       ]
     },
