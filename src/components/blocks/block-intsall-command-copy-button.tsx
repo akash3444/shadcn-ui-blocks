@@ -48,7 +48,8 @@ export const BlockInstallCommandCopyButton = ({ block }: { block: string }) => {
         ) : (
           <currentPackageManager.logo className="size-4" />
         )}
-        <span className="hidden sm:inline font-normal">
+        <span className="inline md:hidden font-normal">Copy Command</span>
+        <span className="hidden md:inline font-normal">
           {currentPackageManager.displayCommand(block)}
         </span>
       </Button>

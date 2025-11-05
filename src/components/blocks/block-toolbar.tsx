@@ -36,7 +36,7 @@ const BlockToolbar = () => {
         </TooltipContent>
       </Tooltip>
       <V0Button url={absoluteUrl(`/r/${block.name}.json`)} />
-      <div className="border rounded-md flex items-center gap-1 p-1 h-8 shadow-xs">
+      <div className="border rounded-md hidden md:flex items-center gap-1 p-1 h-8 shadow-xs">
         {blockScreens.map(({ name, icon: Icon }) => (
           <Tooltip key={name}>
             <TooltipTrigger asChild>
@@ -79,7 +79,12 @@ const ThemeToggleButton = () => {
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <Button variant="outline" size="icon-sm" onClick={handleThemeToggle}>
+        <Button
+          variant="outline"
+          size="icon-sm"
+          onClick={handleThemeToggle}
+          className="max-sm:hidden"
+        >
           {theme === "light" ? <Moon /> : <Sun />}
         </Button>
       </TooltipTrigger>

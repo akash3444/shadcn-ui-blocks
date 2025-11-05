@@ -8,7 +8,7 @@ const PreviewListFilter = ({ numberOfBlocks }: { numberOfBlocks: number }) => {
         <CategoryFilter />
         <PreviewListSearch />
       </div>
-      <p className="text-sm text-muted-foreground">
+      <p className="max-sm:hidden text-sm text-muted-foreground">
         <span className="font-medium text-foreground">{numberOfBlocks}</span>{" "}
         {numberOfBlocks === 1 ? "block" : "blocks"} found
       </p>
