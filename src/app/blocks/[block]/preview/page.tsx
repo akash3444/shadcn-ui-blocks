@@ -38,6 +38,14 @@ const BlockPreviewPage = async (props: {
 
   if (!blockDetails) notFound();
 
+  if (blockDetails.layout) {
+    return (
+      <blockDetails.layout>
+        <blockDetails.component />
+      </blockDetails.layout>
+    );
+  }
+
   return <blockDetails.component />;
 };
 

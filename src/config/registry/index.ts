@@ -12,6 +12,7 @@ export interface RegistryBlock {
   categories: BlockCategory[];
   component: React.LazyExoticComponent<() => JSX.Element>;
   files: { path: string }[];
+  layout?: React.FC<{ children: React.ReactNode }>;
 }
 
 export const categories = {
