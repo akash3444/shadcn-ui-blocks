@@ -2,10 +2,14 @@
 
 import { categorizedBlocks } from "@/blocks";
 import { useParams, useSearchParams } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import PreviewListFilter from "./preview-list-filter";
 import { ResultsNotFound } from "./results-not-found";
 import { Block } from "../block";
 import { blocks as registryBlocks } from "@/config/registry";
+
+const INITIAL_BLOCK_COUNT = 5;
+const BLOCKS_PER_LOAD = 5;
 
 const BlockPreviewList = () => {
   const searchParams = useSearchParams();
@@ -27,6 +31,44 @@ const BlockPreviewList = () => {
     );
   });
 
+  const [visibleCount, setVisibleCount] = useState(INITIAL_BLOCK_COUNT);
+  const loadMoreRef = useRef<HTMLDivElement>(null);
+
+  // Reset visible count when filters change
+  useEffect(() => {
+    setVisibleCount(INITIAL_BLOCK_COUNT);
+  }, [query, category]);
+
+  // Set up intersection observer for infinite scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry?.isIntersecting && visibleCount < filteredBlocks.length) {
+          setVisibleCount((prev) =>
+            Math.min(prev + BLOCKS_PER_LOAD, filteredBlocks.length)
+          );
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    const currentRef = loadMoreRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [visibleCount, filteredBlocks.length]);
+
+  const visibleBlocks = filteredBlocks.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredBlocks.length;
   const numberOfBlocks = filteredBlocks.length;
 
   return (
@@ -36,9 +78,19 @@ const BlockPreviewList = () => {
       <div className="mt-3">
         {filteredBlocks.length ? (
           <div className="grid grid-cols-1 gap-6">
-            {filteredBlocks.map((block) => (
+            {visibleBlocks.map((block) => (
               <Block key={block.name} block={block} />
             ))}
+            {hasMore && (
+              <div
+                ref={loadMoreRef}
+                className="h-20 flex items-center justify-center"
+              >
+                <div className="text-sm text-muted-foreground">
+                  Loading more blocks...
+                </div>
+              </div>
+            )}
           </div>
         ) : (
           <ResultsNotFound />
