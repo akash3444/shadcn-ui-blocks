@@ -1,4 +1,5 @@
 import React, { JSX } from "react";
+import { NavbarLayout } from "./block-layouts";
 
 export type BlockCategory = {
   name: string;
@@ -90,6 +91,7 @@ export const blocks: RegistryBlock[] = [
     component: React.lazy(
       () => import("@/registry/blocks/navbar-01/components/navbar")
     ),
+    layout: NavbarLayout,
     categories: [categories.navbar],
     files: [
       { path: "components/navbar.tsx" },
@@ -105,6 +107,7 @@ export const blocks: RegistryBlock[] = [
     component: React.lazy(
       () => import("@/registry/blocks/navbar-02/components/navbar")
     ),
+    layout: NavbarLayout,
     categories: [categories.navbar],
     files: [
       { path: "components/navbar.tsx" },
@@ -120,6 +123,7 @@ export const blocks: RegistryBlock[] = [
     component: React.lazy(
       () => import("@/registry/blocks/navbar-03/components/navbar")
     ),
+    layout: NavbarLayout,
     categories: [categories.navbar],
     files: [
       { path: "components/navbar.tsx" },
@@ -136,6 +140,7 @@ export const blocks: RegistryBlock[] = [
     component: React.lazy(
       () => import("@/registry/blocks/navbar-04/components/navbar")
     ),
+    layout: NavbarLayout,
     categories: [categories.navbar],
     files: [
       { path: "components/navbar.tsx" },
@@ -151,6 +156,7 @@ export const blocks: RegistryBlock[] = [
     component: React.lazy(
       () => import("@/registry/blocks/navbar-05/components/navbar")
     ),
+    layout: NavbarLayout,
     categories: [categories.navbar],
     files: [{ path: "components/navbar.tsx" }, { path: "components/logo.tsx" }],
   },
