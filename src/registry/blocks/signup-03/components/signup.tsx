@@ -38,7 +38,17 @@ const SignUp = () => {
   return (
     <div className="h-screen flex items-center justify-center">
       <div className="w-full h-full grid lg:grid-cols-2">
-        <div className="max-w-xs m-auto w-full flex flex-col items-center">
+        <div className="relative max-w-sm m-auto w-full flex flex-col items-center p-8 outline-0 sm:outline-2 outline-border/40 dark:outline-border/80 outline-offset-0.5">
+          <div className="max-sm:hidden absolute border-t top-0 inset-x-0 w-[calc(100%+4rem)] -translate-x-8" />
+          <div className="max-sm:hidden absolute border-b bottom-0 inset-x-0 w-[calc(100%+4rem)] -translate-x-8" />
+          <div className="max-sm:hidden absolute border-s left-0 inset-y-0 h-[calc(100%+4rem)] -translate-y-8" />
+          <div className="max-sm:hidden absolute border-e right-0 inset-y-0 h-[calc(100%+4rem)] -translate-y-8" />
+
+          <div className="max-sm:hidden absolute border-t -top-1 inset-x-0 w-[calc(100%+3rem)] -translate-x-6" />
+          <div className="max-sm:hidden absolute border-b -bottom-1 inset-x-0 w-[calc(100%+3rem)] -translate-x-6" />
+          <div className="max-sm:hidden absolute border-s -left-1 inset-y-0 h-[calc(100%+3rem)] -translate-y-6" />
+          <div className="max-sm:hidden absolute border-e -right-1 inset-y-0 h-[calc(100%+3rem)] -translate-y-6" />
+
           <Logo className="h-9 w-9" />
           <p className="mt-4 text-xl font-semibold tracking-tight">
             Sign up for Shadcn UI Blocks
