@@ -26,10 +26,10 @@ cd shadcn-ui-blocks
 
 ### 2. Install Dependencies
 
-Install the required packages using npm:
+Install the required packages using pnpm:
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### 3. Run the Project Locally
@@ -37,7 +37,7 @@ npm install
 Start the development server:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 The website should now be accessible at `http://localhost:3000`.
