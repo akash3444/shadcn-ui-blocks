@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -20,10 +26,10 @@ const Contact = () => (
         We&apos;d love to hear from you. Please fill out this form or shoot us
         an email.
       </p>
-      <div className="mt-24 grid lg:grid-cols-2 gap-16 md:gap-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12">
+      <div className="mt-16 flex flex-col lg:flex-row gap-16 md:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:col-span-2 *:border *:p-6 *:bg-background gap-1 border p-1 bg-muted max-w-3xl w-full">
           <div>
-            <div className="h-12 w-12 flex items-center justify-center bg-primary/5 dark:bg-primary/10 text-primary rounded-full">
+            <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/10 text-foreground border border-foreground/3 rounded-xl">
               <MailIcon />
             </div>
             <h3 className="mt-6 font-semibold text-xl">Email</h3>
@@ -38,7 +44,7 @@ const Contact = () => (
             </Link>
           </div>
           <div>
-            <div className="h-12 w-12 flex items-center justify-center bg-primary/5 dark:bg-primary/10 text-primary rounded-full">
+            <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/10 text-foreground border border-foreground/3 rounded-xl">
               <MessageCircle />
             </div>
             <h3 className="mt-6 font-semibold text-xl">Live chat</h3>
@@ -50,7 +56,7 @@ const Contact = () => (
             </Link>
           </div>
           <div>
-            <div className="h-12 w-12 flex items-center justify-center bg-primary/5 dark:bg-primary/10 text-primary rounded-full">
+            <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/10 text-foreground border border-foreground/3 rounded-xl">
               <MapPinIcon />
             </div>
             <h3 className="mt-6 font-semibold text-xl">Office</h3>
@@ -66,7 +72,7 @@ const Contact = () => (
             </Link>
           </div>
           <div>
-            <div className="h-12 w-12 flex items-center justify-center bg-primary/5 dark:bg-primary/10 text-primary rounded-full">
+            <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/10 text-foreground border border-foreground/3 rounded-xl">
               <PhoneIcon />
             </div>
             <h3 className="mt-6 font-semibold text-xl">Phone</h3>
@@ -83,61 +89,69 @@ const Contact = () => (
         </div>
 
         {/* Form */}
-        <Card className="bg-accent shadow-none py-0">
-          <CardContent className="p-6 md:p-8">
-            <form>
-              <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
-                <div className="col-span-2 sm:col-span-1">
-                  <Label htmlFor="firstName">First Name</Label>
-                  <Input
-                    placeholder="First name"
-                    id="firstName"
-                    className="mt-2 bg-white h-10 shadow-none"
-                  />
+        <div className="border p-1 bg-muted w-full max-w-lg">
+          <Card className="relative isolate bg-white/50 shadow-none lg:ms-auto rounded-none">
+            <CardHeader>
+              <CardTitle>Contact Us</CardTitle>
+              <CardDescription>
+                We'd love to hear from you. Please fill out this form.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="mt-2">
+              <form>
+                <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                  <div className="col-span-2 sm:col-span-1">
+                    <Label htmlFor="firstName">First Name</Label>
+                    <Input
+                      placeholder="First name"
+                      id="firstName"
+                      className="mt-2 bg-white h-10 shadow-none"
+                    />
+                  </div>
+                  <div className="col-span-2 sm:col-span-1">
+                    <Label htmlFor="lastName">Last Name</Label>
+                    <Input
+                      placeholder="Last name"
+                      id="lastName"
+                      className="mt-2 bg-white h-10 shadow-none"
+                    />
+                  </div>
+                  <div className="col-span-2">
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      type="email"
+                      placeholder="Email"
+                      id="email"
+                      className="mt-2 bg-white h-10 shadow-none"
+                    />
+                  </div>
+                  <div className="col-span-2">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea
+                      id="message"
+                      placeholder="Message"
+                      className="mt-2 bg-white shadow-none"
+                      rows={6}
+                    />
+                  </div>
+                  <div className="col-span-2 flex items-center gap-2">
+                    <Checkbox id="acceptTerms" className="bg-background" />
+                    <Label htmlFor="acceptTerms" className="gap-0">
+                      You agree to our
+                      <Link href="#" className="underline ml-1">
+                        terms and conditions
+                      </Link>
+                      <span>.</span>
+                    </Label>
+                  </div>
                 </div>
-                <div className="col-span-2 sm:col-span-1">
-                  <Label htmlFor="lastName">Last Name</Label>
-                  <Input
-                    placeholder="Last name"
-                    id="lastName"
-                    className="mt-2 bg-white h-10 shadow-none"
-                  />
-                </div>
-                <div className="col-span-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    type="email"
-                    placeholder="Email"
-                    id="email"
-                    className="mt-2 bg-white h-10 shadow-none"
-                  />
-                </div>
-                <div className="col-span-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Message"
-                    className="mt-2 bg-white shadow-none"
-                    rows={6}
-                  />
-                </div>
-                <div className="col-span-2 flex items-center gap-2">
-                  <Checkbox id="acceptTerms" className="bg-background" />
-                  <Label htmlFor="acceptTerms" className="gap-0">
-                    You agree to our
-                    <Link href="#" className="underline ml-1">
-                      terms and conditions
-                    </Link>
-                    <span>.</span>
-                  </Label>
-                </div>
-              </div>
-              <Button className="mt-6 w-full" size="lg">
-                Submit
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
+                <Button className="mt-6 w-full" size="lg">
+                  Submit
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </div>
   </div>

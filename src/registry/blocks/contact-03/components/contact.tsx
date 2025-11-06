@@ -14,8 +14,8 @@ const Contact = () => (
         Our friendly team is always here to chat.
       </p>
       <div className="mt-14 grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        <div className="border border-dashed bg-primary/1 p-6 pb-10 rounded-lg">
-          <div className="h-12 w-12 flex items-center justify-center bg-primary/5 dark:bg-primary/10 text-primary rounded-full">
+        <div className="border border-dashed bg-muted/40 p-6 pb-8 rounded-xl">
+          <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/8 text-foreground rounded-full">
             <MailIcon />
           </div>
           <h3 className="mt-8 font-bold text-xl">Email</h3>
@@ -29,8 +29,8 @@ const Contact = () => (
             akashmoradiya3444@gmail.com
           </Link>
         </div>
-        <div className="border border-dashed bg-primary/1 p-6 pb-10 rounded-lg">
-          <div className="h-12 w-12 flex items-center justify-center bg-primary/5 dark:bg-primary/10 text-primary rounded-full">
+        <div className="border border-dashed bg-muted/40 p-6 pb-8 rounded-xl">
+          <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/8 text-foreground rounded-full">
             <MessageCircle />
           </div>
           <h3 className="mt-8 font-bold text-xl">Live chat</h3>
@@ -41,8 +41,8 @@ const Contact = () => (
             Start new chat
           </Link>
         </div>
-        <div className="border border-dashed bg-primary/1 p-6 pb-10 rounded-lg">
-          <div className="h-12 w-12 flex items-center justify-center bg-primary/5 dark:bg-primary/10 text-primary rounded-full">
+        <div className="border border-dashed bg-muted/40 p-6 pb-8 rounded-xl">
+          <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/8 text-foreground rounded-full">
             <MapPinIcon />
           </div>
           <h3 className="mt-8 font-bold text-xl">Office</h3>
@@ -57,8 +57,8 @@ const Contact = () => (
             100 Smith Street Collingwood <br /> VIC 3066 AU
           </Link>
         </div>
-        <div className="border border-dashed bg-primary/1 p-6 pb-10 rounded-lg">
-          <div className="h-12 w-12 flex items-center justify-center bg-primary/5 dark:bg-primary/10 text-primary rounded-full">
+        <div className="border border-dashed bg-muted/40 p-6 pb-8 rounded-xl">
+          <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/8 text-foreground rounded-full">
             <PhoneIcon />
           </div>
           <h3 className="mt-8 font-bold text-xl">Phone</h3>
