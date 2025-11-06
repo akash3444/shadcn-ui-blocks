@@ -3,7 +3,7 @@
 export const BackgroundPattern = () => {
   return (
     <div
-      className="absolute inset-0 -z-1"
+      className="absolute inset-0 -z-1 -top-6.5 -left-px"
       style={{
         backgroundImage: `
         linear-gradient(to right, var(--border) 1px, transparent 1px),

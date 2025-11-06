@@ -9,10 +9,7 @@ export const Hero = () => {
     <div className="flex items-center min-h-screen justify-center px-4 sm:px-6 xl:px-0">
       <div className="text-center w-full">
         <Link href="/components/accordion">
-          <Badge
-            variant="secondary"
-            className="rounded-full py-0.5 border-border"
-          >
+          <Badge className="rounded-full py-0.5 border-border bg-background text-foreground">
             New: v4 is now live! 🚀
             <ArrowUpRight className="ml-2 h-4 w-4" />
           </Badge>
@@ -20,7 +17,7 @@ export const Hero = () => {
         <h1 className="relative z-10 mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-7xl sm:max-w-[25ch] mx-auto font-semibold tracking-tighter leading-[1.2] lg:leading-[1.2]">
           Effortless Shadcn UI Component Previews & Code Snippets
         </h1>
-        <p className="mt-8 text-base sm:text-lg lg:text-xl sm:max-w-4xl mx-auto">
+        <p className="mt-8 text-base sm:text-lg lg:text-xl sm:max-w-4xl mx-auto text-foreground/80">
           Explore a collection of Shadcn UI blocks and components, ready to
           preview and copy. Streamline your development workflow with
           easy-to-implement examples.

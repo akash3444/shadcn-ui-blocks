@@ -7,12 +7,18 @@ import { Button } from "../ui/button";
 import { VersionSwitcher } from "../version-switcher";
 import { AppNavigationMenu } from "./app-navigation-menu";
 import { NavigationSheet } from "./navigation-sheet";
+import { cn } from "@/lib/utils";
 
-export const Navbar = () => {
+export const Navbar = ({ className }: { className?: string }) => {
   return (
     <nav className="px-6 lg:px-0 pt-4">
-      <div className="relative z-20 max-w-(--breakpoint-lg) mx-auto bg-background px-2 pl-3 rounded-full text-foreground border border-primary/8 shadow shadow-primary/1">
-        <div className="h-12 flex items-center justify-between">
+      <div
+        className={cn(
+          "relative z-20 max-w-(--breakpoint-lg) mx-auto bg-background px-4 rounded-full text-foreground border border-primary/8 shadow shadow-primary/1",
+          className
+        )}
+      >
+        <div className="h-14 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-2">
               <Logo className="font-bold rounded-full" />

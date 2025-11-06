@@ -6,6 +6,7 @@ import {
   Sheet,
   SheetContent,
   SheetHeader,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { components } from "@/description/app-sidebar";
@@ -16,6 +17,7 @@ import { Badge } from "../ui/badge";
 import { ScrollArea } from "../ui/scroll-area";
 import { VersionSwitcher } from "../version-switcher";
 import { useState } from "react";
+import { VisuallyHidden } from "radix-ui";
 
 export function NavigationSheet() {
   const [open, setOpen] = useState(false);
@@ -27,6 +29,9 @@ export function NavigationSheet() {
           <Menu />
         </Button>
       </SheetTrigger>
+      <VisuallyHidden.Root>
+        <SheetTitle>Navigation Menu</SheetTitle>
+      </VisuallyHidden.Root>
       <SheetContent>
         <SheetHeader className="pb-12">
           <Link href="/" className="flex items-center gap-2">
