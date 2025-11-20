@@ -1,3 +1,4 @@
+import { BlackFridayBanner } from "@/components/layout/black-friday-banner";
 import Footer from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import React from "react";
@@ -9,6 +10,7 @@ export default function TemplatesLayout({
 }) {
   return (
     <>
+      <BlackFridayBanner />
       <Navbar />
       <main>{children}</main>
       <Footer />
