@@ -1,18 +1,18 @@
 "use client";
 
-import { Button } from "@/registry/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/ui/sheet";
+} from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { VisuallyHidden } from "radix-ui";
 import { useState } from "react";
-import { ScrollArea } from "../../registry/ui/scroll-area";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Logo } from "../logo";
 import { VersionSwitcher } from "../version-switcher";
 
@@ -22,7 +22,7 @@ export function NavigationSheet() {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="outline" className="rounded-full" size="icon">
+        <Button variant="outline" size="icon">
           <Menu />
         </Button>
       </SheetTrigger>
@@ -50,7 +50,7 @@ export function NavigationSheet() {
               Blocks
             </Link>
             <Link
-              href="/components"
+              href="/components/accordion"
               onClick={() => setOpen(false)}
               className="block"
             >

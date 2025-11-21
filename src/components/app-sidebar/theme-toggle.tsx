@@ -1,12 +1,15 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Button } from "../../registry/ui/button";
+import { Button } from "@/components/ui/button";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-export const ThemeToggle = () => {
+export const ThemeToggle = ({
+  className,
+  ...props
+}: React.ComponentProps<typeof Button>) => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
   const pathname = usePathname();
@@ -26,22 +29,12 @@ export const ThemeToggle = () => {
   // To avoid flickering
   if (!mounted) {
     return (
-      <Button
-        onClick={toggleTheme}
-        variant="outline"
-        size="icon"
-        className="rounded-full"
-      />
+      <Button onClick={toggleTheme} variant="outline" size="icon" {...props} />
     );
   }
 
   return (
-    <Button
-      onClick={toggleTheme}
-      variant="outline"
-      size="icon"
-      className="rounded-full"
-    >
+    <Button onClick={toggleTheme} variant="outline" size="icon" {...props}>
       {resolvedTheme === "dark" ? <SunIcon /> : <MoonIcon />}
     </Button>
   );

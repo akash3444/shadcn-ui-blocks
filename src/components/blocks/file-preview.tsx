@@ -4,7 +4,7 @@ import { getFileContent } from "@/lib/file";
 import { useBlockContext } from "@/providers/block-provider";
 import { CheckIcon, CopyIcon, FileIcon } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Button } from "../../registry/ui/button";
+import { Button } from "@/components/ui/button";
 import { CodeBlock } from "../code-block";
 
 export function FilePreview() {

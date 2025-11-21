@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/registry/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -8,9 +8,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/ui/form";
-import { Input } from "@/registry/ui/input";
-import { Separator } from "@/registry/ui/separator";
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Separator } from "@/components/ui/separator";
 import { Logo } from "@/registry/blocks/login-05/components/logo";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {

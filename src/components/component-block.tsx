@@ -8,7 +8,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "../registry/ui/tooltip";
+} from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { config } from "@/config";
 

@@ -1,10 +1,10 @@
-import { Button } from "@/registry/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/ui/sheet";
+} from "@/components/ui/sheet";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { Menu } from "lucide-react";
 import { Logo } from "@/registry/blocks/navbar-02/components/logo";

@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/registry/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 import { getInstallationCommand } from "@/lib/shadcn-registry";
 import { Check, Copy } from "lucide-react";

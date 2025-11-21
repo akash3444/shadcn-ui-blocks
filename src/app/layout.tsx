@@ -4,7 +4,7 @@ import { Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import { TooltipProvider } from "@/registry/ui/tooltip";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeToggle } from "@/components/app-sidebar/theme-toggle";
 import { CSPostHogProvider } from "@/providers/posthog-provider";
 import { WebSite, WithContext } from "schema-dts";

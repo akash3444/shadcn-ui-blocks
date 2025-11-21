@@ -1,7 +1,11 @@
 "use client";
 
-import { Button } from "@/registry/ui/button";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/ui/tooltip";
+import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { blockScreens } from "@/description/blocks";
 import { absoluteUrl } from "@/lib/utils";
 import { useBlockContext } from "@/providers/block-provider";
@@ -39,7 +43,7 @@ const BlockToolbar = () => {
               <Button
                 key={name}
                 variant={name === screenSize ? "secondary" : "ghost"}
-                className="h-6 w-6 rounded"
+                className="h-6 w-6"
                 onClick={() => setScreenSize(name)}
               >
                 <Icon />

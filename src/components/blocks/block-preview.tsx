@@ -5,7 +5,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "../../registry/ui/resizable";
+} from "@/components/ui/resizable";
 import { blockScreens } from "@/description/blocks";
 import { useEffect, useRef } from "react";
 import { ImperativePanelHandle } from "react-resizable-panels";

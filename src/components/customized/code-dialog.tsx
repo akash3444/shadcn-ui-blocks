@@ -2,14 +2,14 @@ import { codeToHtml } from "@/lib/shiki";
 import { VisuallyHidden as VisuallyHiddenPrimitive } from "radix-ui";
 import { Code } from "lucide-react";
 import { CodeInstallationCommandTabs } from "../code-installation-command-tabs";
-import { Button } from "../../registry/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogTitle,
   DialogTrigger,
-} from "../../registry/ui/dialog";
-import { ScrollArea } from "../../registry/ui/scroll-area";
+} from "@/components/ui/dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 function rewriteImports(code: string): string {
   let codeWithRewrittenImports = code;

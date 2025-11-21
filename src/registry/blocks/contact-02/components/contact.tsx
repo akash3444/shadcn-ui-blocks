@@ -1,15 +1,15 @@
-import { Button } from "@/registry/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/ui/card";
-import { Checkbox } from "@/registry/ui/checkbox";
-import { Input } from "@/registry/ui/input";
-import { Label } from "@/registry/ui/label";
-import { Textarea } from "@/registry/ui/textarea";
+} from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { MailIcon, MapPinIcon, MessageCircle, PhoneIcon } from "lucide-react";
 import Link from "next/link";
 

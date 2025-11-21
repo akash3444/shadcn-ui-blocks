@@ -1,8 +1,8 @@
 import { ArrowUpRight, PuzzleIcon, Shapes } from "lucide-react";
 import Link from "next/link";
-import { Button } from "../../registry/ui/button";
+import { Button } from "@/components/ui/button";
 import { BackgroundPattern } from "./background-pattern";
-import { Badge } from "../../registry/ui/badge";
+import { Badge } from "@/components/ui/badge";
 
 export const Hero = () => {
   return (
@@ -25,7 +25,7 @@ export const Hero = () => {
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-6 sm:px-0">
           <Button
             size="lg"
-            className="group h-12 text-base z-10 rounded-md w-full sm:w-auto gap-3"
+            className="group z-10 w-full sm:w-auto gap-3"
             asChild
           >
             <Link href="/blocks">
@@ -35,7 +35,7 @@ export const Hero = () => {
           </Button>
           <Button
             size="lg"
-            className="group h-12 text-base z-10 rounded-md w-full sm:w-auto gap-3"
+            className="group z-10 w-full sm:w-auto gap-3"
             variant="outline"
             asChild
           >

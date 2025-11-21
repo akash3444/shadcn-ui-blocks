@@ -1,4 +1,4 @@
-import { Badge } from "@/registry/ui/badge";
+import { Badge } from "@/components/ui/badge";
 import { Bot, Bug, Building2, Calendar, Database } from "lucide-react";
 
 const experiences = [

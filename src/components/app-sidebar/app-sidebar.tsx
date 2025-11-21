@@ -6,7 +6,7 @@ import {
   SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
-} from "@/registry/ui/sidebar";
+} from "@/components/ui/sidebar";
 import { groups } from "@/description/app-sidebar";
 import Link from "next/link";
 import CarbonAd from "../carbon-ads";

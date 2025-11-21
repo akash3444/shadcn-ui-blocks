@@ -9,26 +9,26 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "@/registry/ui/navigation-menu";
+} from "@/components/ui/navigation-menu";
 import { LucideIcon } from "lucide-react";
-import { Button } from "../../registry/ui/button";
+import { Button } from "@/components/ui/button";
 
 export function AppNavigationMenu() {
   return (
     <NavigationMenu>
       <NavigationMenuList className="space-x-0">
         <NavigationMenuItem>
-          <Button variant="ghost" asChild>
+          <Button size="sm" variant="ghost" asChild>
             <Link href="/blocks">Blocks</Link>
           </Button>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Button variant="ghost" asChild>
-            <Link href="/components">Components</Link>
+          <Button size="sm" variant="ghost" asChild>
+            <Link href="/components/accordion">Components</Link>
           </Button>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Button variant="ghost" asChild>
+          <Button size="sm" variant="ghost" asChild>
             <Link href="/templates">Templates</Link>
           </Button>
         </NavigationMenuItem>

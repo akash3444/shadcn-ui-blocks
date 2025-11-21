@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/registry/ui/button";
+import { Button } from "@/components/ui/button";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import React from "react";
 

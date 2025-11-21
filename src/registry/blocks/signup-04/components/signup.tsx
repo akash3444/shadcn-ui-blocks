@@ -1,7 +1,7 @@
 "use client";
 
 import { Logo } from "@/registry/blocks/signup-04/components/logo";
-import { Button } from "@/registry/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -9,9 +9,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/ui/form";
-import { Input } from "@/registry/ui/input";
-import { Separator } from "@/registry/ui/separator";
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Separator } from "@/components/ui/separator";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useForm } from "react-hook-form";

@@ -1,7 +1,7 @@
 import Footer from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
-import { Card, CardContent } from "@/registry/ui/card";
-import { ScrollArea } from "@/registry/ui/scroll-area";
+import { Card, CardContent } from "@/components/ui/card";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { roadmap, statuses } from "@/description/roadmap";
 import { constructMetadata } from "@/lib/metadata";
 import { absoluteUrl, cn, groupBy } from "@/lib/utils";

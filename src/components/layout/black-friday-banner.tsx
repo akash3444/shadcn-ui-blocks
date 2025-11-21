@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/registry/ui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export function BlackFridayBanner() {
@@ -29,7 +29,7 @@ export function BlackFridayBanner() {
               variant="secondary"
               asChild
               size="sm"
-              className="h-6 !px-2 !gap-1  font-medium transition-all duration-200 group shadow-none"
+              className="h-6 !px-2 !gap-1 font-medium transition-all duration-200 group shadow-none"
             >
               <Link
                 target="_blank"

@@ -1,5 +1,5 @@
-import { Avatar, AvatarFallback } from "@/registry/ui/avatar";
-import { Button } from "@/registry/ui/button";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import { Marquee } from "@/components/ui/marquee";
 import Link from "next/link";
 import { ComponentProps } from "react";

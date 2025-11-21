@@ -1,6 +1,6 @@
 "use client";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BlockProvider } from "@/providers/block-provider";
 import BlockPreview from "./block-preview";
 import BlockToolbar from "./block-toolbar";

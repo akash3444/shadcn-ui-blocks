@@ -1,12 +1,12 @@
-import { Badge } from "@/registry/ui/badge";
-import { Card, CardContent, CardHeader } from "@/registry/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/ui/select";
+} from "@/components/ui/select";
 
 const Blog = () => {
   return (

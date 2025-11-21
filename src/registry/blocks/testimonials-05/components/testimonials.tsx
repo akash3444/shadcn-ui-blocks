@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback } from "@/registry/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { StarIcon } from "lucide-react";
 
 const testimonials = [

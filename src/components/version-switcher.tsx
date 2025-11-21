@@ -1,13 +1,13 @@
 "use client";
 
-import { Badge } from "@/registry/ui/badge";
-import { Button } from "@/registry/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu";
 import { useVersion } from "@/hooks/use-version";
 import { ChevronDown, ExternalLink, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -33,11 +33,7 @@ export function VersionSwitcher({
       <Button
         variant="outline"
         size={variant === "compact" ? "sm" : "default"}
-        className={cn(
-          "gap-2 font-medium rounded-full",
-          variant === "compact" && "h-8 text-xs",
-          className
-        )}
+        className={cn("gap-2 font-medium", className)}
         disabled
       >
         <Loader2 className="h-3 w-3 animate-spin" />
@@ -51,12 +47,9 @@ export function VersionSwitcher({
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
-            variant="outline"
             size="sm"
-            className={cn(
-              "h-8 gap-1 text-xs font-medium rounded-full",
-              className
-            )}
+            variant="outline"
+            className={cn("gap-1 text-xs font-medium", className)}
           >
             {currentVersion.version}
             <ChevronDown className="h-3 w-3" />
@@ -95,7 +88,7 @@ export function VersionSwitcher({
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
-          className={cn("gap-2 font-medium rounded-full", className)}
+          className={cn("gap-2 font-medium", className)}
         >
           {currentVersion.label}
           <ChevronDown className="h-4 w-4" />

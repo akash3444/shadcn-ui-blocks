@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import React from "react";
-import { SidebarMenuButton } from "../../registry/ui/sidebar";
+import { SidebarMenuButton } from "@/components/ui/sidebar";
 
 type AppSidebarMenuButtonProps = React.ComponentProps<typeof SidebarMenuButton>;
 

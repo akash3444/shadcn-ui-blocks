@@ -9,7 +9,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/ui/select";
+} from "@/components/ui/select";
 import { categories } from "@/config/registry";
 import { TagIcon } from "lucide-react";
 import { useParams, useRouter, useSearchParams } from "next/navigation";

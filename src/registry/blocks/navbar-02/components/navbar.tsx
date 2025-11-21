@@ -1,4 +1,4 @@
-import { Button } from "@/registry/ui/button";
+import { Button } from "@/components/ui/button";
 import { Logo } from "@/registry/blocks/navbar-02/components/logo";
 import { NavMenu } from "@/registry/blocks/navbar-02/components/nav-menu";
 import { NavigationSheet } from "@/registry/blocks/navbar-02/components/navigation-sheet";

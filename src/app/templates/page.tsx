@@ -1,6 +1,6 @@
 import { Logo } from "@/components/logo";
 import TemplateCard from "@/components/templates/template-card";
-import { Button } from "@/registry/ui/button";
+import { Button } from "@/components/ui/button";
 import { NextLogo, ShadcnLogo, TailwindLogo } from "@/components/ui/icons";
 import { categories, categorizedTemplates } from "@/description/templates";
 import { constructMetadata } from "@/lib/metadata";
@@ -59,7 +59,7 @@ export default function TemplatesPage() {
             functionality, these templates help you build stunning UIs with
             ease!
           </p>
-          <Button size="lg" className="h-13 !px-6 text-lg rounded-full" asChild>
+          <Button size="lg" className="h-13 !px-6 text-lg" asChild>
             <Link href="#templates">
               <Layers className="w-5! h-5! mr-2" /> Browse Templates
             </Link>

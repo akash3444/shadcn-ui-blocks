@@ -4,7 +4,7 @@ import BlockPreview from "@/components/blocks/block-preview";
 import BlockToolbar from "@/components/blocks/block-toolbar";
 import { Navbar } from "@/components/layout/navbar";
 import { DescriptionText, MainHeading } from "@/components/typography";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { constructMetadata } from "@/lib/metadata";
 import { absoluteUrl, capitalize } from "@/lib/utils";
 import { BlockProvider } from "@/providers/block-provider";

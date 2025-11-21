@@ -3,7 +3,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "../../registry/ui/collapsible";
+} from "@/components/ui/collapsible";
 import {
   Sidebar,
   SidebarGroup,
@@ -13,14 +13,14 @@ import {
   SidebarMenuItem,
   SidebarMenuSub,
   SidebarProvider,
-} from "../../registry/ui/sidebar";
+} from "@/components/ui/sidebar";
 import { useBlockContext } from "@/providers/block-provider";
 import { NodeItem, pathToTree, TreeNode } from "to-path-tree";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "../../registry/ui/tooltip";
+} from "@/components/ui/tooltip";
 
 export const BlockCodeSidebar = () => {
   const { fileTree } = useBlockContext();

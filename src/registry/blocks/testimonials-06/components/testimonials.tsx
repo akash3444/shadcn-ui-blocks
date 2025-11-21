@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar, AvatarFallback } from "@/registry/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   Carousel,
   CarouselApi,
@@ -8,7 +8,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/ui/carousel";
+} from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 import { StarIcon } from "lucide-react";
 import { useEffect, useState } from "react";

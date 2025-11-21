@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/ui/accordion";
+} from "@/components/ui/accordion";
 import {
   BookCheck,
   ChartPie,

@@ -6,8 +6,8 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "../registry/ui/tooltip";
-import { Button } from "../registry/ui/button";
+} from "@/components/ui/tooltip";
+import { Button } from "@/components/ui/button";
 
 export const CopyButton = ({ content }: { content: string }) => {
   const { copyToClipboard, isCopied } = useCopyToClipboard();

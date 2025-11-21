@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils";
 import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import { Badge } from "../../registry/ui/badge";
-import { SidebarMenuItem } from "../../registry/ui/sidebar";
+import { Badge } from "@/components/ui/badge";
+import { SidebarMenuItem } from "@/components/ui/sidebar";
 import AppSidebarMenuButton from "./sidebar-menu-button";
 
 interface SidebarItem {

@@ -1,10 +1,14 @@
 "use client";
 
-import { Badge } from "@/registry/ui/badge";
-import { Button } from "@/registry/ui/button";
-import { Separator } from "@/registry/ui/separator";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/tabs";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/ui/tooltip";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, CircleCheck, CircleHelp } from "lucide-react";
 import { useState } from "react";
