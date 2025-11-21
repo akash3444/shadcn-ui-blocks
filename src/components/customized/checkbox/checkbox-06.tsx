@@ -1,6 +1,6 @@
 "use client";
 
-import { Checkbox } from "@/components/ui/checkbox";
+import { Checkbox } from "@/registry/ui/checkbox";
 import { Checkbox as CheckboxPrimitive } from "radix-ui";
 import { useState } from "react";
 

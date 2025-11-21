@@ -8,8 +8,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import { Button, buttonVariants } from "@/components/ui/button";
+} from "@/registry/ui/alert-dialog";
+import { Button, buttonVariants } from "@/registry/ui/button";
 import { OctagonAlert } from "lucide-react";
 
 export default function AlertDialogDestructive() {

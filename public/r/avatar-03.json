@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "src/components/customized/avatar/avatar-03.tsx",
-      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\";\n\nexport default function AvatarWithTooltipDemo() {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <Avatar>\n          <AvatarImage src=\"https://github.com/shadcn.png\" alt=\"@shadcn\" />\n          <AvatarFallback>CN</AvatarFallback>\n        </Avatar>\n      </TooltipTrigger>\n      <TooltipContent className=\"font-semibold\">shadcn</TooltipContent>\n    </Tooltip>\n  );\n}\n",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/registry/ui/avatar\";\nimport { Tooltip, TooltipContent, TooltipTrigger } from \"@/registry/ui/tooltip\";\n\nexport default function AvatarWithTooltipDemo() {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <Avatar>\n          <AvatarImage src=\"https://github.com/shadcn.png\" alt=\"@shadcn\" />\n          <AvatarFallback>CN</AvatarFallback>\n        </Avatar>\n      </TooltipTrigger>\n      <TooltipContent className=\"font-semibold\">shadcn</TooltipContent>\n    </Tooltip>\n  );\n}\n",
       "type": "registry:component"
     }
   ]

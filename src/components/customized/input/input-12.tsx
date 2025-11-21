@@ -1,6 +1,6 @@
 "use client";
 
-import { Label } from "@/components/ui/label";
+import { Label } from "@/registry/ui/label";
 import { cn } from "@/lib/utils";
 import { ImageIcon, XCircleIcon } from "lucide-react";
 import Image from "next/image";

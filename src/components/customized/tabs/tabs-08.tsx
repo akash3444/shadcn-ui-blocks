@@ -1,4 +1,4 @@
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/tabs";
 
 export default function TabsMobileNavigationDemo() {
   return (

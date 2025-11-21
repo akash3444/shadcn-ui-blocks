@@ -2,7 +2,7 @@ import { Template } from "@/description/templates";
 import { Eye } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../ui/button";
+import { Button } from "../../registry/ui/button";
 import { GithubLogo } from "../ui/icons";
 import GithubStarsAndForks from "./github-stars-and-forks";
 

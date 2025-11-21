@@ -1,4 +1,4 @@
-import { Input } from "@/components/ui/input";
+import { Input } from "@/registry/ui/input";
 
 export default function FilledInputDemo() {
   return (

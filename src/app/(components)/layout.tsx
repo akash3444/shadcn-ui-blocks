@@ -1,6 +1,6 @@
 import { AppSidebar } from "@/components/app-sidebar";
 import { Navbar } from "@/components/layout/navbar";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/registry/ui/sidebar";
 
 export default function RootLayout({
   children,

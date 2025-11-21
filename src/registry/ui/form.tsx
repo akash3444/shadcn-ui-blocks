@@ -14,7 +14,7 @@ import {
 } from "react-hook-form";
 
 import { cn } from "@/lib/utils";
-import { Label } from "@/components/ui/label";
+import { Label } from "@/registry/ui/label";
 
 const Form = FormProvider;
 
@@ -104,7 +104,9 @@ function FormLabel({
   );
 }
 
-function FormControl({ ...props }: React.ComponentProps<typeof SlotPrimitive.Slot>) {
+function FormControl({
+  ...props
+}: React.ComponentProps<typeof SlotPrimitive.Slot>) {
   const { error, formItemId, formDescriptionId, formMessageId } =
     useFormField();
 

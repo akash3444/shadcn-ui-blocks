@@ -1,13 +1,13 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from "@/registry/ui/badge";
+import { Button } from "@/registry/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/registry/ui/dropdown-menu";
 import { useVersion } from "@/hooks/use-version";
 import { ChevronDown, ExternalLink, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";

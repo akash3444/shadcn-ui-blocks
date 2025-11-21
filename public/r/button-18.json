@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/button/button-18.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  ButtonGroup,\n  ButtonGroupSeparator,\n} from \"@/components/ui/button-group\";\n\nconst GroupButtonDemo = () => (\n  <ButtonGroup>\n    <Button variant=\"secondary\">Left</Button>\n    <ButtonGroupSeparator />\n    <Button variant=\"secondary\">Middle</Button>\n    <ButtonGroupSeparator />\n    <Button variant=\"secondary\">Right</Button>\n  </ButtonGroup>\n);\n\nexport default GroupButtonDemo;\n",
+      "content": "import { Button } from \"@/registry/ui/button\";\nimport { ButtonGroup, ButtonGroupSeparator } from \"@/registry/ui/button-group\";\n\nconst GroupButtonDemo = () => (\n  <ButtonGroup>\n    <Button variant=\"secondary\">Left</Button>\n    <ButtonGroupSeparator />\n    <Button variant=\"secondary\">Middle</Button>\n    <ButtonGroupSeparator />\n    <Button variant=\"secondary\">Right</Button>\n  </ButtonGroup>\n);\n\nexport default GroupButtonDemo;\n",
       "type": "registry:component"
     }
   ]

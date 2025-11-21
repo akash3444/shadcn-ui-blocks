@@ -9,7 +9,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/registry/ui/select";
 import {
   FormControl,
   FormItem,
@@ -17,8 +17,8 @@ import {
   FormMessage,
   FormLabel,
   Form,
-} from "@/components/ui/form";
-import { Button } from "@/components/ui/button";
+} from "@/registry/ui/form";
+import { Button } from "@/registry/ui/button";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 

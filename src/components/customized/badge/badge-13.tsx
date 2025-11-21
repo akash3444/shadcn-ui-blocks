@@ -1,4 +1,4 @@
-import { badgeVariants } from "@/components/ui/badge";
+import { badgeVariants } from "@/registry/ui/badge";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";

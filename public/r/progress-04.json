@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/progress/progress-04.tsx",
-      "content": "\"use client\";\n\nimport { Progress } from \"@/components/ui/progress\";\nimport * as React from \"react\";\n\nexport default function RoundedLinearProgressDemo() {\n  const [progress, setProgress] = React.useState(13);\n\n  React.useEffect(() => {\n    const timer = setTimeout(() => setProgress(66), 500);\n    return () => clearTimeout(timer);\n  }, []);\n\n  return (\n    <Progress value={progress} className=\"w-[60%] [&>div]:rounded-r-full\" />\n  );\n}\n",
+      "content": "\"use client\";\n\nimport { Progress } from \"@/registry/ui/progress\";\nimport * as React from \"react\";\n\nexport default function RoundedLinearProgressDemo() {\n  const [progress, setProgress] = React.useState(13);\n\n  React.useEffect(() => {\n    const timer = setTimeout(() => setProgress(66), 500);\n    return () => clearTimeout(timer);\n  }, []);\n\n  return (\n    <Progress value={progress} className=\"w-[60%] [&>div]:rounded-r-full\" />\n  );\n}\n",
       "type": "registry:component"
     }
   ]

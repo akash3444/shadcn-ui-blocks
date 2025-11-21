@@ -8,9 +8,9 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+} from "@/registry/ui/alert-dialog";
+import { Badge } from "@/registry/ui/badge";
+import { Button } from "@/registry/ui/button";
 import { CircleFadingArrowUp, Rocket } from "lucide-react";
 
 export default function AlertDialogInfo() {

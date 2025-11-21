@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/registry/ui/button";
+import { Input } from "@/registry/ui/input";
 import { Logo } from "@/registry/blocks/navbar-05/components/logo";
 import { Search } from "lucide-react";
 

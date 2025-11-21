@@ -13,7 +13,7 @@
   "files": [
     {
       "path": "src/components/customized/button/button-11.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\nimport { Instagram, Twitch, Twitter } from \"lucide-react\";\nimport React from \"react\";\n\nconst SocialButtonDemo = () => {\n  return (\n    <div className=\"flex items-center gap-2\">\n      <Button size=\"icon\" className=\"rounded-full\">\n        <Twitch />\n      </Button>\n      <Button size=\"icon\" className=\"rounded-full\">\n        <Instagram />\n      </Button>\n      <Button size=\"icon\" className=\"rounded-full\">\n        <Twitter />\n      </Button>\n    </div>\n  );\n};\n\nexport default SocialButtonDemo;\n",
+      "content": "import { Button } from \"@/registry/ui/button\";\nimport { Instagram, Twitch, Twitter } from \"lucide-react\";\nimport React from \"react\";\n\nconst SocialButtonDemo = () => {\n  return (\n    <div className=\"flex items-center gap-2\">\n      <Button size=\"icon\" className=\"rounded-full\">\n        <Twitch />\n      </Button>\n      <Button size=\"icon\" className=\"rounded-full\">\n        <Instagram />\n      </Button>\n      <Button size=\"icon\" className=\"rounded-full\">\n        <Twitter />\n      </Button>\n    </div>\n  );\n};\n\nexport default SocialButtonDemo;\n",
       "type": "registry:component"
     }
   ]

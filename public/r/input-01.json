@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/input/input-01.tsx",
-      "content": "import { Input } from \"@/components/ui/input\";\n\nexport default function InputDemo() {\n  return <Input type=\"email\" placeholder=\"Email\" className=\"max-w-xs\" />;\n}\n",
+      "content": "import { Input } from \"@/registry/ui/input\";\n\nexport default function InputDemo() {\n  return <Input type=\"email\" placeholder=\"Email\" className=\"max-w-xs\" />;\n}\n",
       "type": "registry:component"
     }
   ]

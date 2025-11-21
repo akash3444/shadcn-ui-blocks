@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/registry/ui/badge";
 import { ArrowLeftIcon, ArrowRightIcon, XIcon } from "lucide-react";
 
 const BadgeWithIconDemo = () => {

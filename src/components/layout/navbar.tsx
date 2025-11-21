@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ThemeToggle } from "../app-sidebar/theme-toggle";
 import { GithubStarButton } from "../github-star-button";
 import { Logo } from "../logo";
-import { Button } from "../ui/button";
+import { Button } from "../../registry/ui/button";
 import { VersionSwitcher } from "../version-switcher";
 import { AppNavigationMenu } from "./app-navigation-menu";
 import { NavigationSheet } from "./navigation-sheet";

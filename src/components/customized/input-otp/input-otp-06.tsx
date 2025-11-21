@@ -1,8 +1,4 @@
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSlot,
-} from "@/components/ui/input-otp";
+import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/registry/ui/input-otp";
 import { Dot } from "lucide-react";
 
 export default function InputOTPDemo() {

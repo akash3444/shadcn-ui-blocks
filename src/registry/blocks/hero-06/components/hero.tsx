@@ -1,5 +1,5 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from "@/registry/ui/badge";
+import { Button } from "@/registry/ui/button";
 import { ArrowUpRight, CirclePlay } from "lucide-react";
 import { BackgroundPattern } from "@/registry/blocks/hero-06/components/background-pattern";
 import Link from "next/link";

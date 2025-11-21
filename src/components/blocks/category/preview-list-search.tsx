@@ -1,7 +1,7 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Input } from "@/registry/ui/input";
+import { Label } from "@/registry/ui/label";
 import { useDebounce } from "@/hooks/use-debounce";
 import { SearchIcon } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";

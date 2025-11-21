@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/registry/ui/button";
+import { Input } from "@/registry/ui/input";
 
 export default function InputWithButtonDemo() {
   return (

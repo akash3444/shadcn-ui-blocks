@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
+import { Button } from "@/registry/ui/button";
+import { Input } from "@/registry/ui/input";
+import { Separator } from "@/registry/ui/separator";
 import {
   DribbbleIcon,
   GithubIcon,

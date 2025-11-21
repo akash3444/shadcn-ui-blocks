@@ -4,7 +4,7 @@ import {
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
-} from "@/components/ui/breadcrumb";
+} from "@/registry/ui/breadcrumb";
 import { Package, ShoppingCart, Store, Truck } from "lucide-react";
 import { Fragment } from "react";
 

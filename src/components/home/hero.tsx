@@ -1,8 +1,8 @@
 import { ArrowUpRight, PuzzleIcon, Shapes } from "lucide-react";
 import Link from "next/link";
-import { Button } from "../ui/button";
+import { Button } from "../../registry/ui/button";
 import { BackgroundPattern } from "./background-pattern";
-import { Badge } from "../ui/badge";
+import { Badge } from "../../registry/ui/badge";
 
 export const Hero = () => {
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { Textarea } from "@/components/ui/textarea";
+import { Textarea } from "@/registry/ui/textarea";
 import { ChangeEventHandler, useState } from "react";
 
 export default function ControlledTextareaDemo() {

@@ -1,6 +1,6 @@
 import { Logo } from "@/components/logo";
 import TemplateCard from "@/components/templates/template-card";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/registry/ui/button";
 import { NextLogo, ShadcnLogo, TailwindLogo } from "@/components/ui/icons";
 import { categories, categorizedTemplates } from "@/description/templates";
 import { constructMetadata } from "@/lib/metadata";

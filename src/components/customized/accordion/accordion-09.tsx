@@ -2,7 +2,7 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-} from "@/components/ui/accordion";
+} from "@/registry/ui/accordion";
 import { Accordion as AccordionPrimitive } from "radix-ui";
 import { Plus } from "lucide-react";
 

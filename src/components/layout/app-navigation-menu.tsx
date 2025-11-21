@@ -11,13 +11,13 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+} from "@/registry/ui/navigation-menu";
 import { components } from "@/description/app-sidebar";
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
-import { Badge } from "../ui/badge";
-import { ScrollArea } from "../ui/scroll-area";
-import { Button } from "../ui/button";
+import { Badge } from "../../registry/ui/badge";
+import { ScrollArea } from "../../registry/ui/scroll-area";
+import { Button } from "../../registry/ui/button";
 
 export function AppNavigationMenu() {
   return (

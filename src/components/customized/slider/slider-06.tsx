@@ -1,6 +1,6 @@
 "use client";
 
-import { Slider } from "@/components/ui/slider";
+import { Slider } from "@/registry/ui/slider";
 import { useState } from "react";
 
 export default function SliderWithLabelDemo() {

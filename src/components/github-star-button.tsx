@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "../registry/ui/button";
 import { GithubLogo } from "./ui/icons";
 
 const OWNER = "akash3444";

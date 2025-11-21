@@ -5,8 +5,13 @@ import {
   ShapesIcon,
 } from "lucide-react";
 import Link from "next/link";
-import { Button } from "../ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
+import { Button } from "../../registry/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "../../registry/ui/card";
 import { FAQ } from "./faq";
 
 export const Features = () => {

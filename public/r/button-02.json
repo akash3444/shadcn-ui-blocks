@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/button/button-02.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\n\nconst SecondaryButtonDemo = () => (\n  <Button variant=\"secondary\">Secondary</Button>\n);\n\nexport default SecondaryButtonDemo;\n",
+      "content": "import { Button } from \"@/registry/ui/button\";\n\nconst SecondaryButtonDemo = () => (\n  <Button variant=\"secondary\">Secondary</Button>\n);\n\nexport default SecondaryButtonDemo;\n",
       "type": "registry:component"
     }
   ]

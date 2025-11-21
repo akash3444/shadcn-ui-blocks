@@ -1,10 +1,5 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
+import { Button } from "@/registry/ui/button";
+import { Card, CardContent, CardFooter, CardHeader } from "@/registry/ui/card";
 import { ArrowRight, Shapes } from "lucide-react";
 import React from "react";
 

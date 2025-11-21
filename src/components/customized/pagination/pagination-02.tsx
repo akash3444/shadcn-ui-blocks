@@ -1,4 +1,4 @@
-import { buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/registry/ui/button";
 import {
   Pagination,
   PaginationContent,
@@ -6,7 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
+} from "@/registry/ui/pagination";
 import { cn } from "@/lib/utils";
 
 export default function PaginationWithPrimaryButton() {

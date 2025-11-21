@@ -6,7 +6,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+} from "@/registry/ui/collapsible";
 import { ChevronRight, FileIcon, FolderIcon } from "lucide-react";
 
 interface FileTreeItem {

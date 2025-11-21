@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/textarea/textarea-05.tsx",
-      "content": "import { Textarea } from \"@/components/ui/textarea\";\n\nexport default function TextareaRowsDemo() {\n  return <Textarea placeholder=\"Type your message here.\" rows={8} />;\n}\n",
+      "content": "import { Textarea } from \"@/registry/ui/textarea\";\n\nexport default function TextareaRowsDemo() {\n  return <Textarea placeholder=\"Type your message here.\" rows={8} />;\n}\n",
       "type": "registry:component"
     }
   ]

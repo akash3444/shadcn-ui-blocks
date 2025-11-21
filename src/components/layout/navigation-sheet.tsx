@@ -1,20 +1,20 @@
 "use client";
 
 import { blockCategories } from "@/blocks";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/registry/ui/button";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@/registry/ui/sheet";
 import { components } from "@/description/app-sidebar";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "../logo";
-import { Badge } from "../ui/badge";
-import { ScrollArea } from "../ui/scroll-area";
+import { Badge } from "../../registry/ui/badge";
+import { ScrollArea } from "../../registry/ui/scroll-area";
 import { VersionSwitcher } from "../version-switcher";
 import { useState } from "react";
 import { VisuallyHidden } from "radix-ui";

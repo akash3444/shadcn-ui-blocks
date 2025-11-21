@@ -1,6 +1,6 @@
 import AnimatedGridPattern from "@/registry/blocks/hero-07/components/ui/animated-grid-pattern";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from "@/registry/ui/badge";
+import { Button } from "@/registry/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, CirclePlay } from "lucide-react";
 import Link from "next/link";

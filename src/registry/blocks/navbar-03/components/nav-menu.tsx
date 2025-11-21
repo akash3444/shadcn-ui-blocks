@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/registry/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -8,7 +8,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+} from "@/registry/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
 import Link from "next/link";

@@ -1,6 +1,6 @@
 "use client";
 
-import { Switch } from "@/components/ui/switch";
+import { Switch } from "@/registry/ui/switch";
 import React, { useState } from "react";
 
 const ControlledSwitchDemo = () => {

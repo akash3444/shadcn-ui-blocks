@@ -1,14 +1,14 @@
 "use client";
 
-import { Checkbox } from "@/components/ui/checkbox";
+import { Checkbox } from "@/registry/ui/checkbox";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Slider } from "@/components/ui/slider";
+} from "@/registry/ui/collapsible";
+import { Input } from "@/registry/ui/input";
+import { Label } from "@/registry/ui/label";
+import { Slider } from "@/registry/ui/slider";
 import {
   ChevronDown,
   CircleDollarSign,

@@ -1,9 +1,9 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/avatar";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/components/ui/hover-card";
+} from "@/registry/ui/hover-card";
 import { CalendarIcon } from "lucide-react";
 
 export default function AvatarHoverCardDemo() {

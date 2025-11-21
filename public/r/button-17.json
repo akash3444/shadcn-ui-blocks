@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/button/button-17.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\nimport { StarIcon } from \"lucide-react\";\n\nconst FullWidthButtonDemo = () => (\n  <Button className=\"w-full\">\n    <StarIcon /> Star\n  </Button>\n);\n\nexport default FullWidthButtonDemo;\n",
+      "content": "import { Button } from \"@/registry/ui/button\";\nimport { StarIcon } from \"lucide-react\";\n\nconst FullWidthButtonDemo = () => (\n  <Button className=\"w-full\">\n    <StarIcon /> Star\n  </Button>\n);\n\nexport default FullWidthButtonDemo;\n",
       "type": "registry:component"
     }
   ]

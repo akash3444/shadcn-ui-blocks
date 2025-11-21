@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/registry/ui/button";
 import {
   Sheet,
   SheetContent,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@/registry/ui/sheet";
 import { Menu } from "lucide-react";
 import { Logo } from "@/registry/blocks/navbar-01/components/logo";
 import { NavMenu } from "@/registry/blocks/navbar-01/components/nav-menu";

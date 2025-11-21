@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/registry/ui/button";
 import { DribbbleIcon, TwitchIcon, TwitterIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

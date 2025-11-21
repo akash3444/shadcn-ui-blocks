@@ -1,13 +1,13 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/registry/ui/badge";
+import { Button } from "@/registry/ui/button";
+import { Card, CardContent, CardHeader } from "@/registry/ui/card";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/registry/ui/select";
 import { ChevronRight } from "lucide-react";
 
 const Blog = () => {

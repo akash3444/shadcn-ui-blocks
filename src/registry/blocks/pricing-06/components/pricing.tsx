@@ -1,6 +1,6 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/registry/ui/badge";
+import { Button } from "@/registry/ui/button";
+import { Separator } from "@/registry/ui/separator";
 import { cn } from "@/lib/utils";
 import { CircleCheck } from "lucide-react";
 

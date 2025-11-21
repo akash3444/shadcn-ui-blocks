@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/registry/ui/badge";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,7 +6,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from "@/registry/ui/breadcrumb";
 import { ChevronsRight } from "lucide-react";
 
 const BreadcrumbTabsOutline = () => {

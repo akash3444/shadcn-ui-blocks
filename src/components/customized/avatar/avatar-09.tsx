@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/registry/ui/avatar";
 import { BuildingIcon, StoreIcon, UserRoundIcon } from "lucide-react";
 
 export default function AvatarFallbackDemo() {

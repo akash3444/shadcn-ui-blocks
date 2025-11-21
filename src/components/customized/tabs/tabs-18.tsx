@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/registry/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
 import { BanIcon, MoreHorizontalIcon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 

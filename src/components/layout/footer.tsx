@@ -1,5 +1,5 @@
 import { blockCategories } from "@/blocks";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/registry/ui/separator";
 import { config } from "@/config";
 import { components } from "@/description/app-sidebar";
 import { capitalize } from "@/lib/utils";

@@ -1,11 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { Button } from "@/registry/ui/button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/ui/tooltip";
 import { blockScreens } from "@/description/blocks";
 import { absoluteUrl } from "@/lib/utils";
 import { useBlockContext } from "@/providers/block-provider";

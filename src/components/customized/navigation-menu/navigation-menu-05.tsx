@@ -3,7 +3,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "@/components/ui/navigation-menu";
+} from "@/registry/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { BookOpen, Home, Rss } from "lucide-react";
 import Link from "next/link";

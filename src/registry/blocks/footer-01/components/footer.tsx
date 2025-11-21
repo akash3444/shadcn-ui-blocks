@@ -1,4 +1,4 @@
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/registry/ui/separator";
 import Link from "next/link";
 
 const footerSections = [

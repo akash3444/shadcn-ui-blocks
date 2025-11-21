@@ -1,10 +1,5 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
+import { Button } from "@/registry/ui/button";
+import { Card, CardContent, CardFooter, CardHeader } from "@/registry/ui/card";
 import {
   Item,
   ItemActions,
@@ -12,7 +7,7 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/components/ui/item";
+} from "@/registry/ui/item";
 import {
   HeartIcon,
   MessageCircleIcon,

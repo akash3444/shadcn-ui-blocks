@@ -1,4 +1,4 @@
-import { badgeVariants } from "@/components/ui/badge";
+import { badgeVariants } from "@/registry/ui/badge";
 
 const ClickableBadgeDemo = () => {
   return (

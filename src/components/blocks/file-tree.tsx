@@ -2,7 +2,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+} from "@/registry/ui/collapsible";
 import { cn } from "@/lib/utils";
 import { ChevronRight, FileIcon, FolderIcon } from "lucide-react";
 

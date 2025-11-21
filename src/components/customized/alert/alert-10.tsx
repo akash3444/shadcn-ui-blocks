@@ -1,7 +1,7 @@
 "use client";
 
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Button } from "@/components/ui/button";
+import { Alert, AlertDescription, AlertTitle } from "@/registry/ui/alert";
+import { Button } from "@/registry/ui/button";
 import { CircleFadingArrowUpIcon, XIcon } from "lucide-react";
 import { useState } from "react";
 
