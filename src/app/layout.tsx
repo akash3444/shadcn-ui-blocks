@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Geist_Mono, Inter } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,10 +10,18 @@ import { CSPostHogProvider } from "@/providers/posthog-provider";
 import { WebSite, WithContext } from "schema-dts";
 import { PackageManagerProvider } from "@/providers/package-manager-provider";
 
-const inter = Inter({
-  weight: ["400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
+const inter = localFont({
+  src: [
+    { path: "./fonts/InterVariable.woff2", weight: "100 900", style: "normal" },
+    {
+      path: "./fonts/InterVariable-Italic.woff2",
+      weight: "100 900",
+      style: "italic",
+    },
+  ],
+  variable: "--font-inter",
 });
+
 const geistMono = Geist_Mono({
   weight: ["400"],
   subsets: ["latin"],
@@ -97,7 +106,7 @@ export default function RootLayout({
           src="https://datafa.st/js/script.js"
         />
       </head>
-      <body className={cn(inter.className, geistMono.variable, "antialiased")}>
+      <body className={cn(inter.variable, geistMono.variable, "antialiased")}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
