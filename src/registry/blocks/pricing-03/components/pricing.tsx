@@ -72,9 +72,13 @@ const Pricing = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center py-12 px-6">
-      <h1 className="text-5xl sm:text-6xl font-semibold text-center tracking-tighter">
-        Pricing
-      </h1>
+      <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
+        Our Plans
+      </h2>
+      <p className="mt-3 text-xl text-center text-muted-foreground">
+        Choose the plan that fits your needs and get started today
+      </p>
+
       <Tabs
         value={selectedBillingPeriod}
         onValueChange={setSelectedBillingPeriod}
@@ -109,7 +113,7 @@ const Pricing = () => {
               </Badge>
             )}
             <h3 className="text-lg font-medium">{plan.name}</h3>
-            <p className="mt-2 text-4xl font-bold">
+            <p className="mt-2 text-4xl font-semibold">
               $
               {selectedBillingPeriod === "monthly"
                 ? plan.price
@@ -118,7 +122,7 @@ const Pricing = () => {
                 /month
               </span>
             </p>
-            <p className="mt-4 font-medium text-muted-foreground">
+            <p className="mt-4 text-sm text-muted-foreground">
               {plan.description}
             </p>
 

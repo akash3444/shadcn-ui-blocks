@@ -39,7 +39,7 @@ const FAQ = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-12">
       <div className="w-full max-w-2xl">
-        <h2 className="text-4xl md:text-5xl leading-[1.15]! font-semibold tracking-tighter">
+        <h2 className="text-4xl leading-[1.15]! font-semibold tracking-[-0.03em]">
           Frequently Asked Questions
         </h2>
         <p className="mt-2 text-xl text-muted-foreground">

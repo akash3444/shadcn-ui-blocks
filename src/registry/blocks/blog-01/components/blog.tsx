@@ -12,7 +12,7 @@ const Blog = () => {
   return (
     <div className="max-w-(--breakpoint-xl) mx-auto py-16 px-6 xl:px-0">
       <div className="flex items-end justify-between">
-        <h2 className="text-3xl font-semibold tracking-tighter">
+        <h2 className="text-3xl font-semibold tracking-tight">
           Today&apos;s Posts
         </h2>
         <Select defaultValue="recommended">
@@ -36,7 +36,7 @@ const Blog = () => {
             <CardContent className="pt-0 pb-5 px-5">
               <Badge variant="secondary">Technology</Badge>
 
-              <h3 className="mt-4 text-[1.4rem] font-semibold tracking-tight">
+              <h3 className="mt-4 text-2xl text-[1.4rem] font-semibold tracking-[-0.015em]">
                 What is the future of web development?
               </h3>
               <div className="mt-6 flex items-center justify-between">

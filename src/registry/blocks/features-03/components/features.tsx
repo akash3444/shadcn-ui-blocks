@@ -7,7 +7,9 @@ const Features = () => {
       <div className="w-full max-w-(--breakpoint-lg) mx-auto py-12 px-6">
         <h2 className="text-3xl leading-10 sm:text-4xl md:text-[40px] md:leading-13 font-semibold tracking-tight">
           Design and Engage: <br />
-          Build Smarter Spaces and Strategies
+          <span className="text-foreground/65">
+            Build Smarter Spaces and Strategies
+          </span>
         </h2>
         <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-3 gap-6">
           {/* Card 1 */}

@@ -685,6 +685,16 @@ export const blocks: RegistryBlock[] = [
     files: [{ path: "components/pricing.tsx" }],
   },
   {
+    name: "pricing-06",
+    title: "Pricing 06",
+    description: "A simple pricing block",
+    component: React.lazy(
+      () => import("@/registry/blocks/pricing-06/components/pricing")
+    ),
+    categories: [categories.pricing],
+    files: [{ path: "components/pricing.tsx" }],
+  },
+  {
     name: "login-01",
     title: "Login 01",
     description: "A simple login block",

@@ -75,7 +75,7 @@ const Blog = () => {
                 </div>
 
                 <h3 className="mt-4 text-2xl font-semibold tracking-tight">
-                  A beginner&apos;s guide to blackchain for engineers
+                  A beginner&apos;s guide to blockchain for engineers
                 </h3>
                 <p className="mt-2 text-muted-foreground line-clamp-3 text-ellipsis">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa

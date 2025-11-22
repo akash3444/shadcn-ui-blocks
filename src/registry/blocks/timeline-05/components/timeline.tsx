@@ -52,7 +52,7 @@ export default function Timeline() {
 
             {/* Content */}
             <div className="pt-1 space-y-2">
-              <h3 className="text-xl font-medium tracking-[-0.015em]">
+              <h3 className="text-xl font-semibold tracking-[-0.01em]">
                 {title}
               </h3>
               <p className="text-muted-foreground">{description}</p>

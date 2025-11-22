@@ -61,7 +61,7 @@ const Features = () => {
                 <span className="uppercase font-medium text-sm text-muted-foreground">
                   {feature.category}
                 </span>
-                <h4 className="my-3 text-2xl font-semibold tracking-tight">
+                <h4 className="my-3 text-3xl font-semibold tracking-[-0.02em]">
                   {feature.title}
                 </h4>
                 <p className="text-muted-foreground">{feature.details}</p>

@@ -53,7 +53,9 @@ export default function Timeline() {
               <div className="pt-2 sm:pt-1 space-y-3">
                 <p className="text-base font-medium">{company}</p>
                 <div>
-                  <h3 className="text-lg font-semibold">{title}</h3>
+                  <h3 className="text-xl font-semibold tracking-[-0.01em]">
+                    {title}
+                  </h3>
                   <div className="flex items-center gap-2 mt-2 text-sm">
                     <Calendar className="h-4 w-4" />
                     <span>{period}</span>
