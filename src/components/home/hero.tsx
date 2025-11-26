@@ -8,10 +8,10 @@ export const Hero = () => {
   return (
     <div className="flex items-center min-h-screen justify-center px-4 sm:px-6 xl:px-0">
       <div className="text-center w-full">
-        <Link href="/components/accordion">
-          <Badge className="rounded-full py-0.5 border-border bg-background text-foreground">
-            New: v4 is now live! 🚀
-            <ArrowUpRight className="ml-2 h-4 w-4" />
+        <Link href="/blocks">
+          <Badge className="border-border bg-background text-foreground py-1">
+            80+ blocks available for free! 🚀
+            <ArrowUpRight className="ml-2 size-5" />
           </Badge>
         </Link>
         <h1 className="relative z-10 mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-7xl sm:max-w-[25ch] mx-auto font-semibold tracking-[-0.04em] leading-[1.2] lg:leading-[1.2]">

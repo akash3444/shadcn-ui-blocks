@@ -284,16 +284,6 @@ export const components = Object.values(componentsMap);
 
 export const groups = [
   {
-    label: "Get Started",
-    items: [
-      {
-        title: "Introduction",
-        url: "/components/introduction",
-        icon: BookTextIcon,
-      },
-    ],
-  },
-  {
     label: "Components",
     items: components,
   },

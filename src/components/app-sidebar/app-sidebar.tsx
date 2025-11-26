@@ -11,7 +11,6 @@ import { groups } from "@/description/app-sidebar";
 import Link from "next/link";
 import CarbonAd from "../carbon-ads";
 import { Logo } from "../logo";
-import { VersionSwitcher } from "../version-switcher";
 import AppSidebarMenuItem from "./sidebar-menu-item";
 
 export function AppSidebar() {
@@ -28,11 +27,6 @@ export function AppSidebar() {
         </Link>
         {/* <SidebarTrigger className="group-data-[state=collapsed]:absolute group-data-[state=collapsed]:left-[calc(100%+0.2rem)]" /> */}
       </SidebarHeader>
-      <div className="p-4 group-data-[state=collapsed]:p-3 py-3">
-        <div className="group-data-[state=collapsed]:hidden">
-          <VersionSwitcher className="w-full justify-between" />
-        </div>
-      </div>
       <SidebarContent>
         {groups.map(({ label, items }) => (
           <SidebarGroup key={label}>
