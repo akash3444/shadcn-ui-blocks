@@ -84,82 +84,7 @@ export const categories = {
 } as const;
 
 export const blocks: RegistryBlock[] = [
-  {
-    name: "navbar-01",
-    title: "Navbar 01",
-    description: "A simple navbar block",
-    component: React.lazy(
-      () => import("@/registry/blocks/navbar-01/components/navbar")
-    ),
-    layout: NavbarLayout,
-    categories: [categories.navbar],
-    files: [
-      { path: "components/navbar.tsx" },
-      { path: "components/logo.tsx" },
-      { path: "components/nav-menu.tsx" },
-      { path: "components/navigation-sheet.tsx" },
-    ],
-  },
-  {
-    name: "navbar-02",
-    title: "Navbar 02",
-    description: "A simple navbar block",
-    component: React.lazy(
-      () => import("@/registry/blocks/navbar-02/components/navbar")
-    ),
-    layout: NavbarLayout,
-    categories: [categories.navbar],
-    files: [
-      { path: "components/navbar.tsx" },
-      { path: "components/logo.tsx" },
-      { path: "components/nav-menu.tsx" },
-      { path: "components/navigation-sheet.tsx" },
-    ],
-  },
-  {
-    name: "navbar-03",
-    title: "Navbar 03",
-    description: "A simple navbar block",
-    component: React.lazy(
-      () => import("@/registry/blocks/navbar-03/components/navbar")
-    ),
-    layout: NavbarLayout,
-    categories: [categories.navbar],
-    files: [
-      { path: "components/navbar.tsx" },
-      { path: "components/logo.tsx" },
-      { path: "components/nav-menu.tsx" },
-      { path: "components/navigation-sheet.tsx" },
-      { path: "config/navbar.ts" },
-    ],
-  },
-  {
-    name: "navbar-04",
-    title: "Navbar 04",
-    description: "A simple navbar block",
-    component: React.lazy(
-      () => import("@/registry/blocks/navbar-04/components/navbar")
-    ),
-    layout: NavbarLayout,
-    categories: [categories.navbar],
-    files: [
-      { path: "components/navbar.tsx" },
-      { path: "components/logo.tsx" },
-      { path: "components/nav-menu.tsx" },
-      { path: "components/navigation-sheet.tsx" },
-    ],
-  },
-  {
-    name: "navbar-05",
-    title: "Navbar 05",
-    description: "A simple navbar block",
-    component: React.lazy(
-      () => import("@/registry/blocks/navbar-05/components/navbar")
-    ),
-    layout: NavbarLayout,
-    categories: [categories.navbar],
-    files: [{ path: "components/navbar.tsx" }, { path: "components/logo.tsx" }],
-  },
+  // Hero Blocks
   {
     name: "hero-01",
     title: "Hero 01",
@@ -239,56 +164,6 @@ export const blocks: RegistryBlock[] = [
     ],
   },
   {
-    name: "footer-01",
-    title: "Footer 01",
-    description: "A simple footer block",
-    component: React.lazy(
-      () => import("@/registry/blocks/footer-01/components/footer")
-    ),
-    categories: [categories.footer],
-    files: [{ path: "components/footer.tsx" }],
-  },
-  {
-    name: "footer-02",
-    title: "Footer 02",
-    description: "A simple footer block",
-    component: React.lazy(
-      () => import("@/registry/blocks/footer-02/components/footer")
-    ),
-    categories: [categories.footer],
-    files: [{ path: "components/footer.tsx" }],
-  },
-  {
-    name: "footer-03",
-    title: "Footer 03",
-    description: "A simple footer block",
-    component: React.lazy(
-      () => import("@/registry/blocks/footer-03/components/footer")
-    ),
-    categories: [categories.footer],
-    files: [{ path: "components/footer.tsx" }],
-  },
-  {
-    name: "footer-04",
-    title: "Footer 04",
-    description: "A simple footer block",
-    component: React.lazy(
-      () => import("@/registry/blocks/footer-04/components/footer")
-    ),
-    categories: [categories.footer],
-    files: [{ path: "components/footer.tsx" }],
-  },
-  {
-    name: "footer-05",
-    title: "Footer 05",
-    description: "A simple footer block",
-    component: React.lazy(
-      () => import("@/registry/blocks/footer-05/components/footer")
-    ),
-    categories: [categories.footer],
-    files: [{ path: "components/footer.tsx" }],
-  },
-  {
     name: "features-01",
     title: "Features 01",
     description: "A simple features block",
@@ -358,6 +233,7 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.features],
     files: [{ path: "components/features.tsx" }],
   },
+  // Team Blocks
   {
     name: "team-01",
     title: "Team 01",
@@ -408,6 +284,68 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.team],
     files: [{ path: "components/team.tsx" }],
   },
+  // Pricing Blocks
+  {
+    name: "pricing-01",
+    title: "Pricing 01",
+    description: "A simple pricing block",
+    component: React.lazy(
+      () => import("@/registry/blocks/pricing-01/components/pricing")
+    ),
+    categories: [categories.pricing],
+    files: [{ path: "components/pricing.tsx" }],
+  },
+  {
+    name: "pricing-02",
+    title: "Pricing 02",
+    description: "A simple pricing block",
+    component: React.lazy(
+      () => import("@/registry/blocks/pricing-02/components/pricing")
+    ),
+    categories: [categories.pricing],
+    files: [{ path: "components/pricing.tsx" }],
+  },
+  {
+    name: "pricing-03",
+    title: "Pricing 03",
+    description: "A simple pricing block",
+    component: React.lazy(
+      () => import("@/registry/blocks/pricing-03/components/pricing")
+    ),
+    categories: [categories.pricing],
+    files: [{ path: "components/pricing.tsx" }],
+  },
+  {
+    name: "pricing-04",
+    title: "Pricing 04",
+    description: "A simple pricing block",
+    component: React.lazy(
+      () => import("@/registry/blocks/pricing-04/components/pricing")
+    ),
+    categories: [categories.pricing],
+    files: [{ path: "components/pricing.tsx" }],
+  },
+  {
+    name: "pricing-05",
+    title: "Pricing 05",
+    description: "A simple pricing block",
+    component: React.lazy(
+      () => import("@/registry/blocks/pricing-05/components/pricing")
+    ),
+    categories: [categories.pricing],
+    files: [{ path: "components/pricing.tsx" }],
+  },
+  {
+    name: "pricing-06",
+    title: "Pricing 06",
+    description: "A simple pricing block",
+    component: React.lazy(
+      () => import("@/registry/blocks/pricing-06/components/pricing")
+    ),
+    categories: [categories.pricing],
+    files: [{ path: "components/pricing.tsx" }],
+  },
+  // FAQ Blocks
   {
     name: "faq-01",
     title: "FAQ 01",
@@ -478,6 +416,7 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.faq],
     files: [{ path: "components/faq.tsx" }],
   },
+  // Testimonials Blocks
   {
     name: "testimonials-01",
     title: "Testimonials 01",
@@ -541,6 +480,237 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.testimonials],
     files: [{ path: "components/testimonials.tsx" }],
   },
+  // Login Blocks
+  {
+    name: "login-01",
+    title: "Login 01",
+    description: "A simple login block",
+    component: React.lazy(
+      () => import("@/registry/blocks/login-01/components/login")
+    ),
+    categories: [categories.login, categories.authentication],
+    files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "login-02",
+    title: "Login 02",
+    description: "A simple login block",
+    component: React.lazy(
+      () => import("@/registry/blocks/login-02/components/login")
+    ),
+    categories: [categories.login, categories.authentication],
+    files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "login-03",
+    title: "Login 03",
+    description: "A simple login block",
+    component: React.lazy(
+      () => import("@/registry/blocks/login-03/components/login")
+    ),
+    categories: [categories.login, categories.authentication],
+    files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "login-04",
+    title: "Login 04",
+    description: "A simple login block",
+    component: React.lazy(
+      () => import("@/registry/blocks/login-04/components/login")
+    ),
+    categories: [categories.login, categories.authentication],
+    files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "login-05",
+    title: "Login 05",
+    description: "A simple login block",
+    component: React.lazy(
+      () => import("@/registry/blocks/login-05/components/login")
+    ),
+    categories: [categories.login, categories.authentication],
+    files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
+  },
+  // Signup Blocks
+  {
+    name: "signup-01",
+    title: "Signup 01",
+    description: "A simple signup block",
+    component: React.lazy(
+      () => import("@/registry/blocks/signup-01/components/signup")
+    ),
+    categories: [categories.signup, categories.authentication],
+    files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "signup-02",
+    title: "Signup 02",
+    description: "A simple signup block",
+    component: React.lazy(
+      () => import("@/registry/blocks/signup-02/components/signup")
+    ),
+    categories: [categories.signup, categories.authentication],
+    files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "signup-03",
+    title: "Signup 03",
+    description: "A simple signup block",
+    component: React.lazy(
+      () => import("@/registry/blocks/signup-03/components/signup")
+    ),
+    categories: [categories.signup, categories.authentication],
+    files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "signup-04",
+    title: "Signup 04",
+    description: "A simple signup block",
+    component: React.lazy(
+      () => import("@/registry/blocks/signup-04/components/signup")
+    ),
+    categories: [categories.signup, categories.authentication],
+    files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    name: "signup-05",
+    title: "Signup 05",
+    description: "A simple signup block",
+    component: React.lazy(
+      () => import("@/registry/blocks/signup-05/components/signup")
+    ),
+    categories: [categories.signup, categories.authentication],
+    files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
+  },
+  // Navbar Blocks
+  {
+    name: "navbar-01",
+    title: "Navbar 01",
+    description: "A simple navbar block",
+    component: React.lazy(
+      () => import("@/registry/blocks/navbar-01/components/navbar")
+    ),
+    layout: NavbarLayout,
+    categories: [categories.navbar],
+    files: [
+      { path: "components/navbar.tsx" },
+      { path: "components/logo.tsx" },
+      { path: "components/nav-menu.tsx" },
+      { path: "components/navigation-sheet.tsx" },
+    ],
+  },
+  {
+    name: "navbar-02",
+    title: "Navbar 02",
+    description: "A simple navbar block",
+    component: React.lazy(
+      () => import("@/registry/blocks/navbar-02/components/navbar")
+    ),
+    layout: NavbarLayout,
+    categories: [categories.navbar],
+    files: [
+      { path: "components/navbar.tsx" },
+      { path: "components/logo.tsx" },
+      { path: "components/nav-menu.tsx" },
+      { path: "components/navigation-sheet.tsx" },
+    ],
+  },
+  {
+    name: "navbar-03",
+    title: "Navbar 03",
+    description: "A simple navbar block",
+    component: React.lazy(
+      () => import("@/registry/blocks/navbar-03/components/navbar")
+    ),
+    layout: NavbarLayout,
+    categories: [categories.navbar],
+    files: [
+      { path: "components/navbar.tsx" },
+      { path: "components/logo.tsx" },
+      { path: "components/nav-menu.tsx" },
+      { path: "components/navigation-sheet.tsx" },
+      { path: "config/navbar.ts" },
+    ],
+  },
+  {
+    name: "navbar-04",
+    title: "Navbar 04",
+    description: "A simple navbar block",
+    component: React.lazy(
+      () => import("@/registry/blocks/navbar-04/components/navbar")
+    ),
+    layout: NavbarLayout,
+    categories: [categories.navbar],
+    files: [
+      { path: "components/navbar.tsx" },
+      { path: "components/logo.tsx" },
+      { path: "components/nav-menu.tsx" },
+      { path: "components/navigation-sheet.tsx" },
+    ],
+  },
+  {
+    name: "navbar-05",
+    title: "Navbar 05",
+    description: "A simple navbar block",
+    component: React.lazy(
+      () => import("@/registry/blocks/navbar-05/components/navbar")
+    ),
+    layout: NavbarLayout,
+    categories: [categories.navbar],
+    files: [{ path: "components/navbar.tsx" }, { path: "components/logo.tsx" }],
+  },
+  // Footer Blocks
+  {
+    name: "footer-01",
+    title: "Footer 01",
+    description: "A simple footer block",
+    component: React.lazy(
+      () => import("@/registry/blocks/footer-01/components/footer")
+    ),
+    categories: [categories.footer],
+    files: [{ path: "components/footer.tsx" }],
+  },
+  {
+    name: "footer-02",
+    title: "Footer 02",
+    description: "A simple footer block",
+    component: React.lazy(
+      () => import("@/registry/blocks/footer-02/components/footer")
+    ),
+    categories: [categories.footer],
+    files: [{ path: "components/footer.tsx" }],
+  },
+  {
+    name: "footer-03",
+    title: "Footer 03",
+    description: "A simple footer block",
+    component: React.lazy(
+      () => import("@/registry/blocks/footer-03/components/footer")
+    ),
+    categories: [categories.footer],
+    files: [{ path: "components/footer.tsx" }],
+  },
+  {
+    name: "footer-04",
+    title: "Footer 04",
+    description: "A simple footer block",
+    component: React.lazy(
+      () => import("@/registry/blocks/footer-04/components/footer")
+    ),
+    categories: [categories.footer],
+    files: [{ path: "components/footer.tsx" }],
+  },
+  {
+    name: "footer-05",
+    title: "Footer 05",
+    description: "A simple footer block",
+    component: React.lazy(
+      () => import("@/registry/blocks/footer-05/components/footer")
+    ),
+    categories: [categories.footer],
+    files: [{ path: "components/footer.tsx" }],
+  },
+  // Logo Cloud Blocks
   {
     name: "logo-cloud-01",
     title: "Logo Cloud 01",
@@ -634,166 +804,7 @@ export const blocks: RegistryBlock[] = [
       { path: "components/ui/marquee.tsx" },
     ],
   },
-  {
-    name: "pricing-01",
-    title: "Pricing 01",
-    description: "A simple pricing block",
-    component: React.lazy(
-      () => import("@/registry/blocks/pricing-01/components/pricing")
-    ),
-    categories: [categories.pricing],
-    files: [{ path: "components/pricing.tsx" }],
-  },
-  {
-    name: "pricing-02",
-    title: "Pricing 02",
-    description: "A simple pricing block",
-    component: React.lazy(
-      () => import("@/registry/blocks/pricing-02/components/pricing")
-    ),
-    categories: [categories.pricing],
-    files: [{ path: "components/pricing.tsx" }],
-  },
-  {
-    name: "pricing-03",
-    title: "Pricing 03",
-    description: "A simple pricing block",
-    component: React.lazy(
-      () => import("@/registry/blocks/pricing-03/components/pricing")
-    ),
-    categories: [categories.pricing],
-    files: [{ path: "components/pricing.tsx" }],
-  },
-  {
-    name: "pricing-04",
-    title: "Pricing 04",
-    description: "A simple pricing block",
-    component: React.lazy(
-      () => import("@/registry/blocks/pricing-04/components/pricing")
-    ),
-    categories: [categories.pricing],
-    files: [{ path: "components/pricing.tsx" }],
-  },
-  {
-    name: "pricing-05",
-    title: "Pricing 05",
-    description: "A simple pricing block",
-    component: React.lazy(
-      () => import("@/registry/blocks/pricing-05/components/pricing")
-    ),
-    categories: [categories.pricing],
-    files: [{ path: "components/pricing.tsx" }],
-  },
-  {
-    name: "pricing-06",
-    title: "Pricing 06",
-    description: "A simple pricing block",
-    component: React.lazy(
-      () => import("@/registry/blocks/pricing-06/components/pricing")
-    ),
-    categories: [categories.pricing],
-    files: [{ path: "components/pricing.tsx" }],
-  },
-  {
-    name: "login-01",
-    title: "Login 01",
-    description: "A simple login block",
-    component: React.lazy(
-      () => import("@/registry/blocks/login-01/components/login")
-    ),
-    categories: [categories.login, categories.authentication],
-    files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
-  },
-  {
-    name: "login-02",
-    title: "Login 02",
-    description: "A simple login block",
-    component: React.lazy(
-      () => import("@/registry/blocks/login-02/components/login")
-    ),
-    categories: [categories.login, categories.authentication],
-    files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
-  },
-  {
-    name: "login-03",
-    title: "Login 03",
-    description: "A simple login block",
-    component: React.lazy(
-      () => import("@/registry/blocks/login-03/components/login")
-    ),
-    categories: [categories.login, categories.authentication],
-    files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
-  },
-  {
-    name: "login-04",
-    title: "Login 04",
-    description: "A simple login block",
-    component: React.lazy(
-      () => import("@/registry/blocks/login-04/components/login")
-    ),
-    categories: [categories.login, categories.authentication],
-    files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
-  },
-  {
-    name: "login-05",
-    title: "Login 05",
-    description: "A simple login block",
-    component: React.lazy(
-      () => import("@/registry/blocks/login-05/components/login")
-    ),
-    categories: [categories.login, categories.authentication],
-    files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
-  },
-  {
-    name: "signup-01",
-    title: "Signup 01",
-    description: "A simple signup block",
-    component: React.lazy(
-      () => import("@/registry/blocks/signup-01/components/signup")
-    ),
-    categories: [categories.signup, categories.authentication],
-    files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
-  },
-  {
-    name: "signup-02",
-    title: "Signup 02",
-    description: "A simple signup block",
-    component: React.lazy(
-      () => import("@/registry/blocks/signup-02/components/signup")
-    ),
-    categories: [categories.signup, categories.authentication],
-    files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
-  },
-  {
-    name: "signup-03",
-    title: "Signup 03",
-    description: "A simple signup block",
-    component: React.lazy(
-      () => import("@/registry/blocks/signup-03/components/signup")
-    ),
-    categories: [categories.signup, categories.authentication],
-    files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
-  },
-  {
-    name: "signup-04",
-    title: "Signup 04",
-    description: "A simple signup block",
-    component: React.lazy(
-      () => import("@/registry/blocks/signup-04/components/signup")
-    ),
-    categories: [categories.signup, categories.authentication],
-    files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
-  },
-  {
-    name: "signup-05",
-    title: "Signup 05",
-    description: "A simple signup block",
-    component: React.lazy(
-      () => import("@/registry/blocks/signup-05/components/signup")
-    ),
-    categories: [categories.signup, categories.authentication],
-    files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
-  },
+  // Stats Blocks
   {
     name: "stats-01",
     title: "Stats 01",
@@ -814,6 +825,7 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.stats],
     files: [{ path: "components/stats.tsx" }],
   },
+  // Contact Blocks
   {
     name: "contact-01",
     title: "Contact 01",
@@ -844,6 +856,7 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.contact],
     files: [{ path: "components/contact.tsx" }],
   },
+  // Timeline Blocks
   {
     name: "timeline-01",
     title: "Timeline 01",
@@ -914,6 +927,7 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.timeline],
     files: [{ path: "components/timeline.tsx" }],
   },
+  // Blog Blocks
   {
     name: "blog-01",
     title: "Blog 01",
