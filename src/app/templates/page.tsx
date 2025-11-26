@@ -49,7 +49,7 @@ export default function TemplatesPage() {
               <Logo className="h-6 w-6 [&_svg]:h-4 [&_svg]:w-4" />
             </div>
           </div>
-          <h1 className="text-[2.5rem] sm:text-5xl lg:text-6xl font-semibold leading-[1.15]! tracking-tighter">
+          <h1 className="text-[2.5rem] sm:text-5xl lg:text-6xl font-semibold leading-[1.15]! tracking-[-0.035em]">
             <span className="text-blue-500">Beautifully Designed</span> Shadcn
             UI Templates for Every Project
           </h1>
