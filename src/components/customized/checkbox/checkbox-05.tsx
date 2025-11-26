@@ -1,4 +1,4 @@
-import { Checkbox } from "@/components/ui/checkbox";
+import { Checkbox } from "@/registry/ui/checkbox";
 import { Beer, IceCreamBowl, Pizza, Sandwich } from "lucide-react";
 
 const options = [

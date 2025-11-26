@@ -64,24 +64,27 @@ const testimonials = [
 const Testimonials = () => (
   <div className="min-h-screen flex justify-center items-center py-12 px-6">
     <div>
-      <h2 className="mb-14 text-5xl md:text-6xl font-semibold text-center tracking-[-0.03em]">
+      <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
         Testimonials
       </h2>
-      <div className="max-w-(--breakpoint-xl) mx-auto columns-1 md:columns-2 lg:columns-3 gap-8">
+      <p className="mt-2.5 text-xl text-center text-muted-foreground">
+        What our users say about our products and services
+      </p>
+      <div className="mt-14 max-w-(--breakpoint-xl) mx-auto columns-1 md:columns-2 lg:columns-3 gap-8">
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.id}
             className="mb-8 bg-accent rounded-xl p-6 break-inside-avoid"
           >
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
                 <Avatar className="size-10">
                   <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
                     {testimonial.name.charAt(0)}
                   </AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="text-lg font-semibold">{testimonial.name}</p>
+                  <p className="font-semibold">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">
                     {testimonial.designation}
                   </p>

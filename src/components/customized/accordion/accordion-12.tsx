@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "@/registry/ui/accordion";
 import { cn } from "@/lib/utils";
 import { Contrast, Palette, Zap } from "lucide-react";
 

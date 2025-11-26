@@ -27,7 +27,7 @@ const Features = () => {
               className="flex flex-col text-start w-full"
             >
               <div className="mb-5 sm:mb-6 w-full aspect-4/5 bg-muted rounded-xl" />
-              <span className="text-2xl font-semibold tracking-tight">
+              <span className="text-2xl font-semibold tracking-[-0.015em]">
                 {feature.title}
               </span>
               <p className="mt-2 max-w-[25ch] text-muted-foreground text-[17px]">

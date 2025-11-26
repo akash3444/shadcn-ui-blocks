@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/registry/ui/button";
 import {
   Card,
   CardContent,
@@ -6,12 +6,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/registry/ui/card";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/ui/tooltip";
 import { CircleHelpIcon } from "lucide-react";
 
 export default function PricingCard() {

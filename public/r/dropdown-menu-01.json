@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "src/components/customized/dropdown-menu/dropdown-menu-01.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\";\n\nexport default function DropdownMenuDemo() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant=\"outline\">Open</Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent>\n        <DropdownMenuLabel>My Account</DropdownMenuLabel>\n        <DropdownMenuSeparator />\n        <DropdownMenuItem>Profile</DropdownMenuItem>\n        <DropdownMenuItem>Settings</DropdownMenuItem>\n        <DropdownMenuItem>Logout</DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}\n",
+      "content": "import { Button } from \"@/registry/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/registry/ui/dropdown-menu\";\n\nexport default function DropdownMenuDemo() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant=\"outline\">Open</Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent>\n        <DropdownMenuLabel>My Account</DropdownMenuLabel>\n        <DropdownMenuSeparator />\n        <DropdownMenuItem>Profile</DropdownMenuItem>\n        <DropdownMenuItem>Settings</DropdownMenuItem>\n        <DropdownMenuItem>Logout</DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}\n",
       "type": "registry:component"
     }
   ]

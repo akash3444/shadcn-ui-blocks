@@ -1,9 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/avatar";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/ui/tooltip";
 
 export default function AvatarWithTooltipDemo() {
   return (

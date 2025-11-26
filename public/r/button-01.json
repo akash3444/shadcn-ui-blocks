@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/button/button-01.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\n\nconst PrimaryButtonDemo = () => <Button>Primary</Button>;\n\nexport default PrimaryButtonDemo;\n",
+      "content": "import { Button } from \"@/registry/ui/button\";\n\nconst PrimaryButtonDemo = () => <Button>Primary</Button>;\n\nexport default PrimaryButtonDemo;\n",
       "type": "registry:component"
     }
   ]

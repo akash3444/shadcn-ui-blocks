@@ -3,75 +3,32 @@
 import Link from "next/link";
 import * as React from "react";
 
-import { blockCategories } from "@/blocks";
+import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { components } from "@/description/app-sidebar";
-import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
-import { Badge } from "../ui/badge";
-import { ScrollArea } from "../ui/scroll-area";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 
 export function AppNavigationMenu() {
   return (
     <NavigationMenu>
       <NavigationMenuList className="space-x-0">
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-medium">
-            Components
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ScrollArea className="h-[460px]">
-              <ul className="grid w-[400px] gap-3 p-1 md:w-[500px] md:grid-cols-2 lg:grid-cols-3 lg:w-[900px]">
-                {components.map((component) => (
-                  <div key={component.title}>
-                    <ListItem
-                      title={component.title}
-                      icon={component.icon}
-                      href={component.url}
-                    >
-                      {component.description}
-                    </ListItem>
-                  </div>
-                ))}
-              </ul>
-            </ScrollArea>
-          </NavigationMenuContent>
+          <Button size="sm" variant="ghost" asChild>
+            <Link href="/blocks">Blocks</Link>
+          </Button>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-medium">
-            Blocks
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-2 p-1 md:w-[500px] md:grid-cols-2 lg:w-[400px] ">
-              {blockCategories.map((category) => (
-                <ListItem
-                  key={category.name}
-                  href={`/blocks/categories/${category.name}`}
-                  className="py-0 pb-2"
-                >
-                  <div className="flex items-center justify-between text-foreground">
-                    <span className="capitalize font-medium">
-                      {category.name}
-                    </span>
-                    <Badge variant="secondary" className="bg-accent">
-                      {category.totalBlocks} blocks
-                    </Badge>
-                  </div>
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
+          <Button size="sm" variant="ghost" asChild>
+            <Link href="/components/accordion">Components</Link>
+          </Button>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Button variant="ghost" asChild>
+          <Button size="sm" variant="ghost" asChild>
             <Link href="/templates">Templates</Link>
           </Button>
         </NavigationMenuItem>

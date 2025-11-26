@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/registry/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -10,8 +10,8 @@ import {
   CarouselNext,
   CarouselPrevious,
   type CarouselApi,
-} from "@/components/ui/carousel";
-import { Progress } from "@/components/ui/progress";
+} from "@/registry/ui/carousel";
+import { Progress } from "@/registry/ui/progress";
 
 export default function CarouselWithProgress() {
   const [api, setApi] = React.useState<CarouselApi>();

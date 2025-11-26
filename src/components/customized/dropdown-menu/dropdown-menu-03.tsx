@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/registry/ui/button";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -8,7 +8,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/registry/ui/dropdown-menu";
 import { useState } from "react";
 
 const tags = ["Sport", "Music", "Food", "Travel", "Tech", "Science", "Art"];

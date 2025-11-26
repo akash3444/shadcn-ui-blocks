@@ -1,4 +1,4 @@
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Alert, AlertDescription, AlertTitle } from "@/registry/ui/alert";
 import { CircleCheckBigIcon } from "lucide-react";
 
 export default function AlertSuccessDemo() {

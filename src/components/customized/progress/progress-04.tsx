@@ -1,6 +1,6 @@
 "use client";
 
-import { Progress } from "@/components/ui/progress";
+import { Progress } from "@/registry/ui/progress";
 import * as React from "react";
 
 export default function RoundedLinearProgressDemo() {

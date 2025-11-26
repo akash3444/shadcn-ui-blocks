@@ -2,14 +2,24 @@ import { codeToHtml } from "@/lib/shiki";
 import { VisuallyHidden as VisuallyHiddenPrimitive } from "radix-ui";
 import { Code } from "lucide-react";
 import { CodeInstallationCommandTabs } from "../code-installation-command-tabs";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogTitle,
   DialogTrigger,
-} from "../ui/dialog";
-import { ScrollArea } from "../ui/scroll-area";
+} from "@/components/ui/dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
+
+function rewriteImports(code: string): string {
+  let codeWithRewrittenImports = code;
+
+  codeWithRewrittenImports = codeWithRewrittenImports.replace(
+    /(["'])@\/registry\/ui\//g,
+    "$1@/components/ui/"
+  );
+  return codeWithRewrittenImports;
+}
 
 export const CodeDialog = async ({
   code,
@@ -18,7 +28,7 @@ export const CodeDialog = async ({
   code: string;
   registryUrl?: string;
 }) => {
-  const codeHtml = await codeToHtml(code);
+  const codeHtml = await codeToHtml(rewriteImports(code));
 
   return (
     <Dialog>

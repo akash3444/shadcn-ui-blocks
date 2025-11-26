@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/registry/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -10,7 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
   type CarouselApi,
-} from "@/components/ui/carousel";
+} from "@/registry/ui/carousel";
 import { cn } from "@/lib/utils";
 
 export default function CarouselWithFooter() {

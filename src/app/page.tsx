@@ -16,8 +16,8 @@ export default function Home() {
     <>
       <BlackFridayBanner />
       <div className="relative bg-primary/3">
-        <Navbar className="mt-2 shadow-xl shadow-primary/2 dark:shadow-primary/3 border-primary/11" />
-        <div className="-mt-16">
+        <Navbar className="shadow-xl shadow-primary/2 dark:shadow-primary/3 border-primary/11" />
+        <div className="-mt-24">
           <Hero />
         </div>
       </div>

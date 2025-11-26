@@ -4,9 +4,9 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+} from "@/registry/ui/card";
+import { Label } from "@/registry/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/registry/ui/radio-group";
 
 const RadioCardsDemo = () => {
   return (

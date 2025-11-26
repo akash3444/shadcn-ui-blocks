@@ -1,13 +1,13 @@
 "use client";
 
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/registry/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/registry/ui/dropdown-menu";
 import { Check, ChevronsUpDown } from "lucide-react";
 import { useState } from "react";
 

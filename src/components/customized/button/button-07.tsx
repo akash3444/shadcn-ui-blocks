@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { ButtonGroup } from "@/components/ui/button-group";
+import { Button } from "@/registry/ui/button";
+import { ButtonGroup } from "@/registry/ui/button-group";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,7 +7,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/registry/ui/dropdown-menu";
 import { ChevronDown, Plus, Star, X } from "lucide-react";
 
 const SplitButton = () => {

@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/registry/ui/badge";
 
 const BadgeDestructiveDemo = () => {
   return <Badge variant="destructive">Destructive</Badge>;

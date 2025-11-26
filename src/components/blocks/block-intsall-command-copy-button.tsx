@@ -3,19 +3,19 @@
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 import { absoluteUrl } from "@/lib/utils";
 import { ChevronDown, Check, Terminal } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from "../ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu";
 import {
   PackageManager,
   packageManagers,
 } from "@/description/package-managers";
 import { usePackageManager } from "@/providers/package-manager-provider";
-import { ButtonGroup } from "../ui/button-group";
+import { ButtonGroup } from "@/components/ui/button-group";
 
 export const BlockInstallCommandCopyButton = ({ block }: { block: string }) => {
   const { isCopied, copyToClipboard } = useCopyToClipboard();

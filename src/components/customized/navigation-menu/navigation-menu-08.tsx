@@ -4,7 +4,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+} from "@/registry/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { BookOpen, Home, Rss, Settings, User } from "lucide-react";
 import Link from "next/link";

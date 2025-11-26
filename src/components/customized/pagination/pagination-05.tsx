@@ -3,7 +3,7 @@ import {
   PaginationContent,
   PaginationItem,
   PaginationLink,
-} from "@/components/ui/pagination";
+} from "@/registry/ui/pagination";
 import { ChevronsLeft, ChevronsRight } from "lucide-react";
 
 export default function PaginationWithIcon() {

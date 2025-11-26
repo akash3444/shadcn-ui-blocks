@@ -15,8 +15,8 @@ import {
 import { ArrowUpDown, MoreHorizontal, Rows2, Rows3, Rows4 } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/registry/ui/button";
+import { Checkbox } from "@/registry/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,8 +24,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Input } from "@/components/ui/input";
+} from "@/registry/ui/dropdown-menu";
+import { Input } from "@/registry/ui/input";
 import {
   Select,
   SelectContent,
@@ -34,7 +34,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/registry/ui/select";
 import {
   Table,
   TableBody,
@@ -42,7 +42,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "@/registry/ui/table";
 import { cn } from "@/lib/utils";
 
 const data: Payment[] = [

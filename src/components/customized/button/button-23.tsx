@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/registry/ui/button";
 import * as motion from "framer-motion/client";
 import { StarIcon } from "lucide-react";
 

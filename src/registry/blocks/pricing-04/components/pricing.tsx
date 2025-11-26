@@ -69,9 +69,13 @@ const Pricing = () => {
 
   return (
     <div className="min-h-screen bg-accent flex flex-col items-center justify-center py-12 px-6">
-      <h1 className="text-5xl sm:text-6xl font-semibold text-center tracking-tighter">
-        Pricing
-      </h1>
+      <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
+        Our Plans
+      </h2>
+      <p className="mt-3 text-xl text-center text-muted-foreground">
+        Choose the plan that fits your needs and get started today
+      </p>
+
       <Tabs
         value={selectedBillingPeriod}
         onValueChange={setSelectedBillingPeriod}
@@ -96,18 +100,18 @@ const Pricing = () => {
         {plans.map((plan) => (
           <div
             key={plan.name}
-            className={cn("relative p-6 bg-background border px-8", {
-              "shadow-[0px_2px_10px_0px_rgba(0,0,0,0.1)] py-14 z-1 px-10 lg:-mx-2 overflow-hidden":
+            className={cn("relative p-6 bg-background border px-8 rounded-lg", {
+              "shadow-[0px_2px_12px_0px_rgba(0,0,0,0.07)] py-14 z-1 px-10 lg:-mx-2 overflow-hidden":
                 plan.isPopular,
             })}
           >
             {plan.isPopular && (
-              <Badge className="absolute top-10 right-10 rotate-45 rounded-none px-10 uppercase translate-x-1/2 -translate-y-1/2">
+              <Badge className="absolute top-0 right-0 rounded-none px-5 py-1 uppercase rounded-bl-lg">
                 Most Popular
               </Badge>
             )}
             <h3 className="text-lg font-medium">{plan.name}</h3>
-            <p className="mt-2 text-4xl font-bold">
+            <p className="mt-2 text-4xl font-semibold">
               $
               {selectedBillingPeriod === "monthly"
                 ? plan.price
@@ -116,7 +120,7 @@ const Pricing = () => {
                 /month
               </span>
             </p>
-            <p className="mt-4 font-medium text-muted-foreground">
+            <p className="mt-4 text-sm text-muted-foreground">
               {plan.description}
             </p>
 

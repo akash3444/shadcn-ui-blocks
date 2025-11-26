@@ -4,7 +4,11 @@ import dynamic from "next/dynamic";
 import { FC, ReactNode } from "react";
 import { CopyToClipboardButton } from "./copy-to-clipboard-button";
 import { CodeDialog } from "./customized/code-dialog";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { config } from "@/config";
 

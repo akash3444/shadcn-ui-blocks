@@ -1,4 +1,4 @@
-import { Slider } from "@/components/ui/slider";
+import { Slider } from "@/registry/ui/slider";
 
 export default function SliderDisabledDemo() {
   return (

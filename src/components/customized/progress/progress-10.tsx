@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Slider } from "@/components/ui/slider";
+import { Slider } from "@/registry/ui/slider";
 import { cn } from "@/lib/utils";
 
 interface CircularProgressProps {

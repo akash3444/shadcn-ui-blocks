@@ -4,8 +4,8 @@ import { getFileContent } from "@/lib/file";
 import { useBlockContext } from "@/providers/block-provider";
 import { CheckIcon, CopyIcon, FileIcon } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Button } from "../ui/button";
-import { CodeBlock } from "../ui/code-block";
+import { Button } from "@/components/ui/button";
+import { CodeBlock } from "../code-block";
 
 export function FilePreview() {
   const [code, setCode] = useState<string>("");

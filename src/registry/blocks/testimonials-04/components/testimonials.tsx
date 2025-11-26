@@ -91,14 +91,14 @@ const TestimonialList = () =>
       className="min-w-96 max-w-sm bg-accent rounded-xl p-6"
     >
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <Avatar>
+        <div className="flex items-center gap-3">
+          <Avatar className="size-10">
             <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
               {testimonial.name.charAt(0)}
             </AvatarFallback>
           </Avatar>
           <div>
-            <p className="text-lg font-semibold">{testimonial.name}</p>
+            <p className="font-semibold">{testimonial.name}</p>
             <p className="text-sm text-gray-500">{testimonial.designation}</p>
           </div>
         </div>

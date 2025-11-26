@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/button/button-04.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\n\nconst OutlineButtonDemo = () => <Button variant=\"outline\">Outline</Button>;\n\nexport default OutlineButtonDemo;\n",
+      "content": "import { Button } from \"@/registry/ui/button\";\n\nconst OutlineButtonDemo = () => <Button variant=\"outline\">Outline</Button>;\n\nexport default OutlineButtonDemo;\n",
       "type": "registry:component"
     }
   ]

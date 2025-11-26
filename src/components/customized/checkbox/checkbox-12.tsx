@@ -3,7 +3,7 @@
 import { useForm, useFormContext } from "react-hook-form";
 import { z } from "zod";
 
-import { Checkbox } from "@/components/ui/checkbox";
+import { Checkbox } from "@/registry/ui/checkbox";
 import {
   FormControl,
   FormItem,
@@ -12,8 +12,8 @@ import {
   FormLabel,
   Form,
   FormDescription,
-} from "@/components/ui/form";
-import { Button } from "@/components/ui/button";
+} from "@/registry/ui/form";
+import { Button } from "@/registry/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 type CheckboxWithFormProps<K> = {

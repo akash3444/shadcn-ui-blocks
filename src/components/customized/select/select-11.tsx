@@ -10,7 +10,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/registry/ui/select";
 
 export default function ControlledSelectDemo() {
   const [value, setValue] = React.useState("blueberry");

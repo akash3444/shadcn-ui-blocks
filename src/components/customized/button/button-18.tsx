@@ -1,8 +1,5 @@
-import { Button } from "@/components/ui/button";
-import {
-  ButtonGroup,
-  ButtonGroupSeparator,
-} from "@/components/ui/button-group";
+import { Button } from "@/registry/ui/button";
+import { ButtonGroup, ButtonGroupSeparator } from "@/registry/ui/button-group";
 
 const GroupButtonDemo = () => (
   <ButtonGroup>

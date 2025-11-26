@@ -5,7 +5,7 @@ import {
   SelectItem,
   SelectLabel,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/registry/ui/select";
 import { cn } from "@/lib/utils";
 import { Select as SelectPrimitive } from "radix-ui";
 import { ChevronDown } from "lucide-react";

@@ -43,7 +43,7 @@ const BlockToolbar = () => {
               <Button
                 key={name}
                 variant={name === screenSize ? "secondary" : "ghost"}
-                className="h-6 w-6 rounded"
+                className="h-6 w-6"
                 onClick={() => setScreenSize(name)}
               >
                 <Icon />

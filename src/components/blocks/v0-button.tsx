@@ -1,8 +1,12 @@
 "use client";
 
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import { V0Logo } from "../ui/icons";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const V0Button = ({ url }: { url: string }) => {
   const v0Url = `https://v0.dev/chat/api/open?url=${url}`;

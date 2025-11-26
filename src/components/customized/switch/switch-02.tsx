@@ -1,5 +1,5 @@
-import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
+import { Label } from "@/registry/ui/label";
+import { Switch } from "@/registry/ui/switch";
 import React from "react";
 
 const SwitchWithLabelDemo = () => {

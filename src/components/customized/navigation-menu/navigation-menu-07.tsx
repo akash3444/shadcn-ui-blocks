@@ -1,10 +1,10 @@
-import { buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/registry/ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "@/components/ui/navigation-menu";
+} from "@/registry/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { BookOpen, Home, Rss, Settings, User } from "lucide-react";
 import Link from "next/link";

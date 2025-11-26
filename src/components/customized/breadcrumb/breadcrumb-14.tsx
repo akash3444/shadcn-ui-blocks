@@ -6,13 +6,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from "@/registry/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/registry/ui/dropdown-menu";
 import { Home } from "lucide-react";
 
 export default function BreadcrumbCollapsed() {

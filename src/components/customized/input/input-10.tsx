@@ -3,7 +3,7 @@
 import { InputHTMLAttributes } from "react";
 import { useForm, useFormContext } from "react-hook-form";
 import { z } from "zod";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/registry/ui/input";
 import {
   FormControl,
   FormItem,
@@ -11,8 +11,8 @@ import {
   FormMessage,
   FormLabel,
   Form,
-} from "@/components/ui/form";
-import { Button } from "@/components/ui/button";
+} from "@/registry/ui/form";
+import { Button } from "@/registry/ui/button";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 

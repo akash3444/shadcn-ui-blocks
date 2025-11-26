@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/registry/ui/button";
 import { ArrowBigDown, ArrowBigUp } from "lucide-react";
 
 const GroupButton2Demo = () => (

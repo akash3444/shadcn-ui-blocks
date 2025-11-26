@@ -8,8 +8,8 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Label } from "@/components/ui/label";
+} from "@/registry/ui/select";
+import { Label } from "@/registry/ui/label";
 
 export default function SelectMenuPositionDemo() {
   return (

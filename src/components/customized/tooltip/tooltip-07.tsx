@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/registry/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/registry/ui/tooltip";
 
 export default function TooltipPortalDemo() {
   return (

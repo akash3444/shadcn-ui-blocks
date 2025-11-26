@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/button/button-03.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\n\nconst DestructiveButtonDemo = () => (\n  <Button variant=\"destructive\">Destructive</Button>\n);\n\nexport default DestructiveButtonDemo;\n",
+      "content": "import { Button } from \"@/registry/ui/button\";\n\nconst DestructiveButtonDemo = () => (\n  <Button variant=\"destructive\">Destructive</Button>\n);\n\nexport default DestructiveButtonDemo;\n",
       "type": "registry:component"
     }
   ]

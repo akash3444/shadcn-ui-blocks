@@ -5,7 +5,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from "@/registry/ui/breadcrumb";
 import { Dot } from "lucide-react";
 
 const BreadcrumbsWithDotSeparator = () => {

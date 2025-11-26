@@ -1,4 +1,4 @@
-import { Alert, AlertTitle } from "@/components/ui/alert";
+import { Alert, AlertTitle } from "@/registry/ui/alert";
 import { CircleFadingArrowUpIcon } from "lucide-react";
 
 export default function AlertCalloutDemo() {

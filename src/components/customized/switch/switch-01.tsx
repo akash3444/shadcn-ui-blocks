@@ -1,4 +1,4 @@
-import { Switch } from "@/components/ui/switch";
+import { Switch } from "@/registry/ui/switch";
 import React from "react";
 
 const SwitchDemo = () => {

@@ -1,11 +1,11 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/registry/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from "@/registry/ui/carousel";
 import React from "react";
 
 export default function CarouselWithMultipleSlides() {

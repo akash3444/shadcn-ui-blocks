@@ -10,7 +10,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/registry/ui/select";
 import {
   AppleIcon,
   BananaIcon,

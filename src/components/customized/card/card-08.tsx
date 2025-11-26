@@ -1,5 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/avatar";
+import { Card, CardContent, CardHeader } from "@/registry/ui/card";
 import { Quote } from "lucide-react";
 import React from "react";
 

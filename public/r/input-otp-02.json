@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/input-otp/input-otp-02.tsx",
-      "content": "import {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@/components/ui/input-otp\";\n\nexport default function InputOTPDemo() {\n  return (\n    <InputOTP maxLength={6}>\n      <InputOTPGroup>\n        <InputOTPSlot index={0} />\n        <InputOTPSlot index={1} />\n        <InputOTPSlot index={2} />\n        <InputOTPSlot index={3} />\n      </InputOTPGroup>\n    </InputOTP>\n  );\n}\n",
+      "content": "import { InputOTP, InputOTPGroup, InputOTPSlot } from \"@/registry/ui/input-otp\";\n\nexport default function InputOTPDemo() {\n  return (\n    <InputOTP maxLength={6}>\n      <InputOTPGroup>\n        <InputOTPSlot index={0} />\n        <InputOTPSlot index={1} />\n        <InputOTPSlot index={2} />\n        <InputOTPSlot index={3} />\n      </InputOTPGroup>\n    </InputOTP>\n  );\n}\n",
       "type": "registry:component"
     }
   ]

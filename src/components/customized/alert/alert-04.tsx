@@ -1,4 +1,4 @@
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Alert, AlertDescription, AlertTitle } from "@/registry/ui/alert";
 import { AlertTriangleIcon } from "lucide-react";
 
 export default function AlertWarningDemo() {
