@@ -1,7 +1,6 @@
 import { blockCategories, categorizedBlocks } from "@/blocks";
 import BlockCategoryJsonLd from "@/components/blocks/category/block-category-json-ld";
 import BlockPreviewList from "@/components/blocks/category/block-preview-list";
-import { BlackFridayBanner } from "@/components/layout/black-friday-banner";
 import { Navbar } from "@/components/layout/navbar";
 import { constructMetadata } from "@/lib/metadata";
 import { generateOgImageUrl } from "@/lib/og";
@@ -88,7 +87,6 @@ const BlockCategoryPage = async (props: {
 
   return (
     <>
-      <BlackFridayBanner />
       <Navbar />
       <div className="max-w-(--breakpoint-2xl) mx-auto py-12 sm:py-16">
         <Suspense fallback={null}>
