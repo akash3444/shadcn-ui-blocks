@@ -14,10 +14,12 @@ import Link from "next/link";
 import { BlockInstallCommandCopyButton } from "./block-intsall-command-copy-button";
 import V0Button from "./v0-button";
 import { useEffect, useState } from "react";
+import { BLOCK_PRICING } from "@/config/registry";
 
 const BlockToolbar = () => {
   const { screenSize, setScreenSize } = useBlockContext();
-  const { block } = useBlockContext();
+  const { block, iframeSrc } = useBlockContext();
+  const isFree = !block.pricing || block.pricing === BLOCK_PRICING.free;
 
   return (
     <div className="flex items-center gap-2">
@@ -26,7 +28,7 @@ const BlockToolbar = () => {
       <Tooltip>
         <TooltipTrigger>
           <Button asChild variant="outline" size="icon-sm">
-            <Link href={`/blocks/${block.name}/preview`} target="_blank">
+            <Link href={iframeSrc} target="_blank">
               <FullscreenIcon />
             </Link>
           </Button>
@@ -35,7 +37,7 @@ const BlockToolbar = () => {
           <p>Open preview in new tab</p>
         </TooltipContent>
       </Tooltip>
-      <V0Button url={absoluteUrl(`/r/${block.name}.json`)} />
+      {isFree && <V0Button url={absoluteUrl(`/r/${block.name}.json`)} />}
       <div className="border rounded-md hidden md:flex items-center gap-1 p-1 h-8 shadow-xs">
         {blockScreens.map(({ name, icon: Icon }) => (
           <Tooltip key={name}>

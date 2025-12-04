@@ -6,17 +6,55 @@ export type BlockCategory = {
   title: string;
 };
 
-export interface RegistryBlock {
+type Plan = "free" | "pro" | "premium";
+
+export const BLOCK_PRICING: Record<Plan, Plan> = {
+  free: "free",
+  pro: "pro",
+  premium: "premium",
+};
+
+export type RegistryBlock = {
   name: string;
   title: string;
+  slug?: string;
   description: string;
   categories: BlockCategory[];
-  component: React.LazyExoticComponent<() => JSX.Element>;
+  component?: React.LazyExoticComponent<() => JSX.Element>;
   files: { path: string }[];
   layout?: React.FC<{ children: React.ReactNode }>;
-}
+  pricing?: Plan;
+};
 
 export const categories = {
+  carousel: {
+    name: "carousel",
+    title: "Carousel",
+  },
+  inviteMember: {
+    name: "inviteMember",
+    title: "Invite Member",
+  },
+  members: {
+    name: "members",
+    title: "Members",
+  },
+  orderConfirmation: {
+    name: "orderConfirmation",
+    title: "Order Confirmation",
+  },
+  cta: {
+    name: "cta",
+    title: "CTA",
+  },
+  setupGuide: {
+    name: "setupGuide",
+    title: "Setup Guide",
+  },
+  integrations: {
+    name: "integrations",
+    title: "Integrations",
+  },
   logoCloud: {
     name: "logoCloud",
     title: "Logo Cloud",
@@ -164,6 +202,18 @@ export const blocks: RegistryBlock[] = [
     ],
   },
   {
+    name: "hero-08",
+    title: "Hero 08",
+    slug: "hero-05",
+    description: "A simple hero page",
+    component: React.lazy(
+      () => import("@/registry/blocks/hero-05/components/hero")
+    ),
+    files: [],
+    categories: [categories.hero],
+    pricing: BLOCK_PRICING.premium,
+  },
+  {
     name: "features-01",
     title: "Features 01",
     description: "A simple features block",
@@ -233,6 +283,152 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.features],
     files: [{ path: "components/features.tsx" }],
   },
+  {
+    name: "features-08",
+    title: "Features 08",
+    slug: "features-03",
+    description: "A simple features page",
+    files: [],
+    categories: [categories.features],
+    pricing: BLOCK_PRICING.premium,
+  },
+  {
+    name: "features-09",
+    title: "Features 09",
+    slug: "features-05",
+    description: "A simple features page",
+    files: [],
+    categories: [categories.features],
+    pricing: BLOCK_PRICING.premium,
+  },
+  {
+    name: "features-10",
+    title: "Features 10",
+    slug: "features-06",
+    description: "A simple features page",
+    files: [],
+    categories: [categories.features],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    name: "features-11",
+    title: "Features 11",
+    slug: "features-07",
+    description: "A simple features page",
+    files: [],
+    categories: [categories.features],
+    pricing: BLOCK_PRICING.premium,
+  },
+  {
+    name: "features-12",
+    title: "Features 12",
+    slug: "features-08",
+    description: "A simple features page",
+    files: [],
+    categories: [categories.features],
+    pricing: BLOCK_PRICING.premium,
+  },
+  {
+    name: "features-13",
+    title: "Features 13",
+    slug: "features-09",
+    description: "A simple features page",
+    files: [],
+    categories: [categories.features],
+    pricing: BLOCK_PRICING.premium,
+  },
+  {
+    name: "features-14",
+    title: "Features 14",
+    slug: "features-10",
+    description: "A simple features page",
+    files: [],
+    categories: [categories.features],
+    pricing: BLOCK_PRICING.pro,
+  },
+  // Setup Guide Blocks
+  {
+    name: "setup-guide-01",
+    slug: "setup-guide-01",
+    title: "Setup Guide 01",
+    description: "A simple tutorial page",
+    files: [],
+    categories: [categories.setupGuide],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    name: "setup-guide-02",
+    slug: "setup-guide-02",
+    title: "Setup Guide 02",
+    description: "A simple tutorial page",
+    files: [],
+    categories: [categories.setupGuide],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    name: "setup-guide-03",
+    slug: "setup-guide-03",
+    title: "Setup Guide 03",
+    description: "A simple tutorial page",
+    files: [],
+    categories: [categories.setupGuide],
+    pricing: BLOCK_PRICING.premium,
+  },
+  {
+    name: "setup-guide-04",
+    slug: "setup-guide-04",
+    title: "Setup Guide 04",
+    description: "A simple tutorial page",
+    files: [],
+    categories: [categories.setupGuide],
+    pricing: BLOCK_PRICING.premium,
+  },
+  // Integrations Blocks
+  {
+    name: "integrations-01",
+    slug: "integrations-01",
+    title: "Integrations 01",
+    description: "A simple integrations page",
+    files: [],
+    categories: [categories.integrations],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    name: "integrations-02",
+    slug: "integrations-02",
+    title: "Integrations 02",
+    description: "A simple integrations page",
+    files: [],
+    categories: [categories.integrations],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    name: "integrations-03",
+    slug: "integrations-03",
+    title: "Integrations 03",
+    description: "A simple integrations page",
+    files: [],
+    categories: [categories.integrations],
+    pricing: BLOCK_PRICING.premium,
+  },
+  {
+    name: "integrations-04",
+    slug: "integrations-04",
+    title: "Integrations 04",
+    description: "A simple integrations page",
+    files: [],
+    categories: [categories.integrations],
+    pricing: BLOCK_PRICING.premium,
+  },
+  {
+    name: "integrations-05",
+    slug: "integrations-05",
+    title: "Integrations 05",
+    description: "A simple integrations page",
+    files: [],
+    categories: [categories.integrations],
+    pricing: BLOCK_PRICING.premium,
+  },
   // Team Blocks
   {
     name: "team-01",
@@ -283,6 +479,33 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.team],
     files: [{ path: "components/team.tsx" }],
+  },
+  {
+    name: "team-06",
+    title: "Team 06",
+    slug: "team-03",
+    description: "A simple team page",
+    files: [],
+    categories: [categories.team],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    name: "team-07",
+    title: "Team 07",
+    slug: "team-04",
+    description: "A simple team page",
+    files: [],
+    categories: [categories.team],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "team-05",
+    name: "team-08",
+    title: "Team 08",
+    description: "A simple team page",
+    files: [],
+    categories: [categories.team],
+    pricing: BLOCK_PRICING.premium,
   },
   // Pricing Blocks
   {
@@ -344,6 +567,43 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.pricing],
     files: [{ path: "components/pricing.tsx" }],
+  },
+  {
+    slug: "pricing-03",
+    name: "pricing-07",
+    title: "Pricing 07",
+    description: "A simple pricing block",
+    files: [],
+    categories: [categories.pricing],
+    pricing: BLOCK_PRICING.premium,
+  },
+  // CTA Blocks
+  {
+    name: "cta-01",
+    slug: "cta-01",
+    title: "CTA 01",
+    description: "A simple FAQ page",
+    files: [],
+    categories: [categories.cta],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "cta-02",
+    name: "cta-02",
+    title: "CTA 02",
+    description: "A simple FAQ page",
+    files: [],
+    categories: [categories.cta],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "cta-03",
+    name: "cta-03",
+    title: "CTA 03",
+    description: "A simple FAQ page",
+    files: [],
+    categories: [categories.cta],
+    pricing: BLOCK_PRICING.premium,
   },
   // FAQ Blocks
   {
@@ -416,6 +676,33 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.faq],
     files: [{ path: "components/faq.tsx" }],
   },
+  {
+    slug: "faq-04",
+    name: "faq-08",
+    title: "FAQ 08",
+    description: "A simple FAQ block",
+    files: [],
+    categories: [categories.faq],
+    pricing: BLOCK_PRICING.premium,
+  },
+  {
+    slug: "faq-05",
+    name: "faq-09",
+    title: "FAQ 09",
+    description: "A simple FAQ block",
+    files: [],
+    categories: [categories.faq],
+    pricing: BLOCK_PRICING.premium,
+  },
+  {
+    slug: "faq-06",
+    name: "faq-10",
+    title: "FAQ 10",
+    description: "A simple FAQ page",
+    files: [],
+    categories: [categories.faq],
+    pricing: BLOCK_PRICING.premium,
+  },
   // Testimonials Blocks
   {
     name: "testimonials-01",
@@ -480,6 +767,15 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.testimonials],
     files: [{ path: "components/testimonials.tsx" }],
   },
+  {
+    slug: "testimonials-04",
+    name: "testimonials-08",
+    title: "Testimonials 08",
+    description: "A simple testimonials block",
+    files: [],
+    categories: [categories.testimonials],
+    pricing: BLOCK_PRICING.premium,
+  },
   // Login Blocks
   {
     name: "login-01",
@@ -531,6 +827,24 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.login, categories.authentication],
     files: [{ path: "components/login.tsx" }, { path: "components/logo.tsx" }],
   },
+  {
+    slug: "login-02",
+    name: "login-06",
+    title: "Login 06",
+    description: "A simple login page",
+    files: [],
+    categories: [categories.login, categories.authentication],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "login-03",
+    name: "login-07",
+    title: "Login 07",
+    description: "A simple login page",
+    files: [],
+    categories: [categories.login, categories.authentication],
+    pricing: BLOCK_PRICING.pro,
+  },
   // Signup Blocks
   {
     name: "signup-01",
@@ -581,6 +895,24 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.signup, categories.authentication],
     files: [{ path: "components/signup.tsx" }, { path: "components/logo.tsx" }],
+  },
+  {
+    slug: "signup-02",
+    name: "signup-06",
+    title: "Signup 06",
+    description: "A simple signup page",
+    files: [],
+    categories: [categories.signup, categories.authentication],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "signup-03",
+    name: "signup-07",
+    title: "Signup 07",
+    description: "A simple signup page",
+    files: [],
+    categories: [categories.signup, categories.authentication],
+    pricing: BLOCK_PRICING.pro,
   },
   // Navbar Blocks
   {
@@ -804,6 +1136,42 @@ export const blocks: RegistryBlock[] = [
       { path: "components/ui/marquee.tsx" },
     ],
   },
+  {
+    slug: "logo-cloud-01",
+    name: "logo-cloud-08",
+    title: "Logo Cloud 08",
+    description: "A simple logo cloud page",
+    files: [],
+    categories: [categories.logoCloud],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "logo-cloud-04",
+    name: "logo-cloud-09",
+    title: "Logo Cloud 09",
+    description: "A simple logo cloud page",
+    files: [],
+    categories: [categories.logoCloud],
+    pricing: BLOCK_PRICING.premium,
+  },
+  {
+    slug: "logo-cloud-05",
+    name: "logo-cloud-10",
+    title: "Logo Cloud 10",
+    description: "A simple logo cloud page",
+    files: [],
+    categories: [categories.logoCloud],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "logo-cloud-06",
+    name: "logo-cloud-11",
+    title: "Logo Cloud 11",
+    description: "A simple logo cloud page",
+    files: [],
+    categories: [categories.logoCloud],
+    pricing: BLOCK_PRICING.premium,
+  },
   // Stats Blocks
   {
     name: "stats-01",
@@ -824,6 +1192,51 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.stats],
     files: [{ path: "components/stats.tsx" }],
+  },
+  {
+    slug: "stats-01",
+    name: "stats-03",
+    title: "Stats 03",
+    description: "A simple stats page",
+    files: [],
+    categories: [categories.stats],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "stats-02",
+    name: "stats-04",
+    title: "Stats 04",
+    description: "A simple stats page",
+    files: [],
+    categories: [categories.stats],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "stats-03",
+    name: "stats-05",
+    title: "Stats 05",
+    description: "A simple stats page",
+    files: [],
+    categories: [categories.stats],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "stats-04",
+    name: "stats-06",
+    title: "Stats 06",
+    description: "A simple stats page",
+    files: [],
+    categories: [categories.stats],
+    pricing: BLOCK_PRICING.premium,
+  },
+  {
+    slug: "stats-05",
+    name: "stats-07",
+    title: "Stats 07",
+    description: "A simple stats page",
+    files: [],
+    categories: [categories.stats],
+    pricing: BLOCK_PRICING.pro,
   },
   // Contact Blocks
   {
@@ -855,6 +1268,100 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.contact],
     files: [{ path: "components/contact.tsx" }],
+  },
+  // Order Confirmation Blocks
+  {
+    name: "order-confirmation-01",
+    slug: "order-confirmation-01",
+    title: "Order Confirmation 01",
+    description: "A simple order confirmation page",
+    files: [],
+    categories: [categories.orderConfirmation],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "order-confirmation-02",
+    name: "order-confirmation-02",
+    title: "Order Confirmation 02",
+    description: "A simple order confirmation page",
+    files: [],
+    categories: [categories.orderConfirmation],
+    pricing: BLOCK_PRICING.premium,
+  },
+  // Carousel Blocks
+  {
+    name: "carousel-01",
+    slug: "carousel-01",
+    title: "Carousel 01",
+    description: "A simple carousel block",
+    files: [],
+    categories: [categories.carousel],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "carousel-02",
+    name: "carousel-02",
+    title: "Carousel 02",
+    description: "A simple carousel block",
+    files: [],
+    categories: [categories.carousel],
+    pricing: BLOCK_PRICING.premium,
+  },
+  // Invite Member Blocks
+  {
+    slug: "invite-member-01",
+    name: "invite-member-01",
+    title: "Invite Member 01",
+    description: "A simple invite member block",
+    files: [],
+    categories: [categories.inviteMember],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "invite-member-02",
+    name: "invite-member-02",
+    title: "Invite Member 02",
+    description: "A simple invite member block",
+    files: [],
+    categories: [categories.inviteMember],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "invite-member-03",
+    name: "invite-member-03",
+    title: "Invite Member 03",
+    description: "A simple invite member block",
+    files: [],
+    categories: [categories.inviteMember],
+    pricing: BLOCK_PRICING.pro,
+  },
+  // Members Blocks
+  {
+    slug: "members-01",
+    name: "members-01",
+    title: "Members 01",
+    description: "A simple members block",
+    files: [],
+    categories: [categories.members],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "members-02",
+    name: "members-02",
+    title: "Members 02",
+    description: "A simple members block",
+    files: [],
+    categories: [categories.members],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "members-03",
+    name: "members-03",
+    title: "Members 03",
+    description: "A simple members block",
+    files: [],
+    categories: [categories.members],
+    pricing: BLOCK_PRICING.pro,
   },
   // Timeline Blocks
   {
@@ -957,5 +1464,32 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.blog],
     files: [{ path: "components/blog.tsx" }],
+  },
+  {
+    slug: "blog-01",
+    name: "blog-04",
+    title: "Blog 04",
+    description: "A simple blog page",
+    files: [],
+    categories: [categories.blog],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "blog-02",
+    name: "blog-05",
+    title: "Blog 05",
+    description: "A simple blog page",
+    files: [],
+    categories: [categories.blog],
+    pricing: BLOCK_PRICING.pro,
+  },
+  {
+    slug: "blog-03",
+    name: "blog-06",
+    title: "Blog 06",
+    description: "A simple blog page",
+    files: [],
+    categories: [categories.blog],
+    pricing: BLOCK_PRICING.premium,
   },
 ];

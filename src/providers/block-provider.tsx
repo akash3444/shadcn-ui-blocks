@@ -1,6 +1,6 @@
 "use client";
 
-import { blocks } from "@/config/registry";
+import { BLOCK_PRICING, blocks } from "@/config/registry";
 import { useBlockTheme } from "@/hooks/use-block-theme";
 import { getFileContent } from "@/lib/file";
 import { getFileTree } from "@/lib/file-tree";
@@ -29,6 +29,7 @@ const BlockContext = createContext<{
   theme: Theme;
   setTheme: (theme: Theme) => void;
   iframeRef: React.RefObject<HTMLIFrameElement | null>;
+  iframeSrc: string;
 }>({
   codeHtml: null,
   code: null,
@@ -42,6 +43,7 @@ const BlockContext = createContext<{
   theme: "light",
   setTheme: () => {},
   iframeRef: { current: null },
+  iframeSrc: "",
 });
 
 const transformCode = (code: string) => {
@@ -89,7 +91,7 @@ export const BlockProvider = ({
 
   const fileTree = getFileTree(block as (typeof blocks)[number]);
 
-  const [activeFile, setActiveFile] = useState(block?.files[0].path);
+  const [activeFile, setActiveFile] = useState(block?.files[0]?.path);
   const [screenSize, setScreenSize] = useState<BlockScreenSizeUnion>("desktop");
   const [code, setCode] = useState<string | null>(null);
   const [codeHtml, setCodeHtml] = useState<string | null>(null);
@@ -97,10 +99,17 @@ export const BlockProvider = ({
 
   const { theme, setTheme, iframeRef } = useBlockTheme();
 
+  const isBlockFree = !block.pricing || block.pricing === BLOCK_PRICING.free;
+  const iframeSrc = isBlockFree
+    ? `/blocks/${block.name}/preview`
+    : `https://pro.shadcnui-blocks.com/blocks/${block.slug}/preview?theme=${theme}&prest=vercel`;
+
   const updateCodeContent = async () => {
     setIsLoadingCode(true);
 
     try {
+      if (!isBlockFree) return;
+
       const code = await getFileContent(
         `src/registry/blocks/${block.name}/${activeFile}`
       );
@@ -134,6 +143,7 @@ export const BlockProvider = ({
         theme,
         setTheme,
         iframeRef,
+        iframeSrc,
       }}
     >
       {children}
