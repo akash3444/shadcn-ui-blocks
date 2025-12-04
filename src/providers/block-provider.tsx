@@ -102,7 +102,7 @@ export const BlockProvider = ({
   const isBlockFree = !block.pricing || block.pricing === BLOCK_PRICING.free;
   const iframeSrc = isBlockFree
     ? `/blocks/${block.name}/preview`
-    : `https://pro.shadcnui-blocks.com/blocks/${block.slug}/preview?theme=${theme}&prest=vercel`;
+    : `https://pro.shadcnui-blocks.com/blocks/${block.slug}/preview?theme=${theme}&preset=vercel`;
 
   const updateCodeContent = async () => {
     setIsLoadingCode(true);
