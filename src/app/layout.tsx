@@ -105,6 +105,7 @@ export default function RootLayout({
           data-domain="www.shadcnui-blocks.com"
           src="https://datafa.st/js/script.js"
         />
+      <meta name="google-adsense-account" content="ca-pub-4493596981598123" />
       </head>
       <body className={cn(inter.variable, geistMono.variable, "antialiased")}>
         <script
