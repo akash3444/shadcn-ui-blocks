@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/sidebar";
 import { groups } from "@/description/app-sidebar";
 import Link from "next/link";
-import CarbonAd from "../carbon-ads";
 import { Logo } from "../logo";
 import AppSidebarMenuItem from "./sidebar-menu-item";
 
@@ -40,9 +39,25 @@ export function AppSidebar() {
             </SidebarGroupContent>
           </SidebarGroup>
         ))}
-        {process.env.NODE_ENV === "production" && (
+
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4493596981598123"
+          crossOrigin="anonymous"
+        ></script>
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-4493596981598123"
+          data-ad-slot="2023971604"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+        {/* {process.env.NODE_ENV === "production" && (
           <CarbonAd className="sticky bottom-0" id="carbon-ad-sidebar" />
-        )}
+        )} */}
       </SidebarContent>
     </Sidebar>
   );
