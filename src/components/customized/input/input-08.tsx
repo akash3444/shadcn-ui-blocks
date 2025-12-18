@@ -3,7 +3,7 @@ import { Label } from "@/registry/ui/label";
 
 export default function InputWithHelperTextDemo() {
   return (
-    <div className="w-full max-w-xs space-y-1.5">
+    <div className="w-full max-w-xs space-y-2">
       <Label htmlFor="email-address">Email Address</Label>
       <Input id="email-address" type="email" placeholder="Email" />
       <p className="text-[0.8rem] text-muted-foreground">

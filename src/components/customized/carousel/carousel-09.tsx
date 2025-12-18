@@ -60,13 +60,13 @@ export default function CarouselWithThumbs() {
             <CarouselItem
               key={index}
               className={cn(
-                "basis-1/5 cursor-pointer",
+                "basis-1/4 cursor-pointer",
                 current === index + 1 ? "opacity-100" : "opacity-50"
               )}
               onClick={() => handleThumbClick(index)}
             >
-              <Card>
-                <CardContent className="p-0 flex aspect-square items-center justify-center">
+              <Card className="aspect-square p-0 flex items-center justify-center">
+                <CardContent className="p-0 flex items-center justify-center">
                   <div className="text-2xl font-semibold">{index + 1}</div>
                 </CardContent>
               </Card>

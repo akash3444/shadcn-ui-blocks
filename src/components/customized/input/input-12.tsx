@@ -37,7 +37,7 @@ export default function InputDemo() {
   return (
     <div className="w-full max-w-40">
       <Label htmlFor="profile">Profile Picture</Label>
-      <div className="mt-1 w-full">
+      <div className="mt-2 w-full">
         {profilePicture ? (
           <ImagePreview
             url={profilePicture}

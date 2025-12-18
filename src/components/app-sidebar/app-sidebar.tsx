@@ -24,7 +24,6 @@ export function AppSidebar() {
             </span>
           </div>
         </Link>
-        {/* <SidebarTrigger className="group-data-[state=collapsed]:absolute group-data-[state=collapsed]:left-[calc(100%+0.2rem)]" /> */}
       </SidebarHeader>
       <SidebarContent>
         {groups.map(({ label, items }) => (

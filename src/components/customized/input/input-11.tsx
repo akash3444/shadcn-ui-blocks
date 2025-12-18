@@ -5,7 +5,7 @@ export default function FileInputDemo() {
   return (
     <div className="w-full max-w-xs">
       <Label htmlFor="picture">Profile Picture</Label>
-      <Input id="picture" type="file" className="mt-1 file:pt-0.5" />
+      <Input id="picture" type="file" className="mt-2" />
     </div>
   );
 }

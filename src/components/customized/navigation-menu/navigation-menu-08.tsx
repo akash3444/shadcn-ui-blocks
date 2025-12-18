@@ -32,7 +32,7 @@ export default function NavigationMenuMobile() {
               asChild
             >
               <Link href={item.href}>
-                <item.icon className="mb-1.5 h-5 w-5" />
+                <item.icon className="mb-1.5 size-5" />
                 {item.title}
               </Link>
             </NavigationMenuLink>

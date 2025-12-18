@@ -29,19 +29,19 @@ export default function DropdownMenuWithSubMenu() {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="mt-2">
         <DropdownMenuItem>
-          <Eye className="mr-1" /> Open conversation details
+          <Eye /> Open conversation details
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <User className="mr-1" /> View full profile
+          <User /> View full profile
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <MessageCircle className="mr-1" /> Start conversation
+          <MessageCircle /> Start conversation
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>
-            <Copy className="mr-3 size-4 text-muted-foreground" />
+            <Copy className="size-4 text-muted-foreground" />
             Copy
           </DropdownMenuSubTrigger>
           <DropdownMenuSubContent>
@@ -51,10 +51,10 @@ export default function DropdownMenuWithSubMenu() {
           </DropdownMenuSubContent>
         </DropdownMenuSub>
         <DropdownMenuItem>
-          <Search className="mr-1" /> Search in conversation
+          <Search /> Search in conversation
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <ExternalLink className="mr-1" /> Open in new window
+          <ExternalLink /> Open in new window
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

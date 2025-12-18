@@ -47,7 +47,7 @@ export const CodeDialog = async ({
 
       <DialogContent className="sm:max-w-2xl w-full p-0 border-none rounded-lg overflow-hidden gap-0">
         {registryUrl && (
-          <div className="pt-6 pb-8 px-8 border-b">
+          <div className="pt-6 pb-8 px-8 border-b border">
             <h2 className="mb-2.5 font-semibold text-lg">
               Installation Command
             </h2>

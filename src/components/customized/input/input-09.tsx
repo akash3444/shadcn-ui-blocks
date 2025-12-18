@@ -3,7 +3,7 @@ import { Label } from "@/registry/ui/label";
 
 export default function InputWithErrorMessageDemo() {
   return (
-    <div className="w-full max-w-xs space-y-1.5">
+    <div className="w-full max-w-xs space-y-2">
       <Label htmlFor="email-address" className="text-destructive">
         Email Address
       </Label>
