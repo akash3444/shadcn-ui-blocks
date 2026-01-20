@@ -259,6 +259,10 @@ export const customizedComponents = {
     },
     { title: "Card", type: "checkbox", name: "checkbox-11" },
     { title: "With form", type: "checkbox", name: "checkbox-12" },
+    { title: "Roles", type: "checkbox", name: "checkbox-13" },
+    { title: "Countries", type: "checkbox", name: "checkbox-14" },
+    { title: "Days", type: "checkbox", name: "checkbox-15" },
+    { title: "Filters", type: "checkbox", name: "checkbox-16" },
   ],
   collapsible: [
     { title: "Default", type: "collapsible", name: "collapsible-01" },
@@ -413,6 +417,11 @@ export const customizedComponents = {
       title: "Table Pagination",
       type: "pagination",
       name: "pagination-14",
+    },
+    {
+      title: "Pagination with text",
+      type: "pagination",
+      name: "pagination-15",
     },
   ],
   progress: [

@@ -27,7 +27,7 @@ const CheckboxCardDemo = () => {
         <CheckboxPrimitive.Root
           key={option.value}
           defaultChecked={option.defaultChecked}
-          className="relative ring-[1px] ring-border rounded-lg px-4 py-3 text-start text-muted-foreground data-[state=checked]:ring-2 data-[state=checked]:ring-primary data-[state=checked]:text-primary"
+          className="relative border border-dashed rounded-lg px-4 py-3 text-start text-muted-foreground data-[state=checked]:ring data-[state=checked]:ring-primary data-[state=checked]:border-solid data-[state=checked]:bg-primary/4 data-[state=checked]:border-primary data-[state=checked]:text-primary"
         >
           <option.icon className="mb-3" />
           <span className="font-medium tracking-tight">{option.label}</span>

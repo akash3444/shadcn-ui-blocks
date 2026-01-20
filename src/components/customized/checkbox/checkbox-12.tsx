@@ -49,7 +49,7 @@ export function CheckboxWithForm<K>({
               className={className}
             />
           </FormControl>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-1.5">
             {title && <FormLabel htmlFor={name}>{title}</FormLabel>}
             {description && <FormDescription>{description}</FormDescription>}
           </div>

@@ -2636,6 +2636,61 @@
       ]
     },
     {
+      "name": "checkbox-13",
+      "type": "registry:component",
+      "title": "Roles",
+      "description": "A roles component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["checkbox"],
+      "files": [
+        {
+          "path": "src/components/customized/checkbox/checkbox-13.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-14",
+      "type": "registry:component",
+      "title": "Countries",
+      "description": "A countries component",
+      "registryDependencies": ["checkbox", "scroll-area", "label"],
+      "files": [
+        {
+          "path": "src/components/customized/checkbox/checkbox-14.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-15",
+      "type": "registry:component",
+      "title": "Working Days",
+      "description": "A working days component",
+      "dependencies": ["radix-ui"],
+      "registryDependencies": ["label"],
+      "files": [
+        {
+          "path": "src/components/customized/checkbox/checkbox-15.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-16",
+      "type": "registry:component",
+      "title": "Notification Settings",
+      "description": "A notification settings component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["label", "scroll-area", "checkbox"],
+      "files": [
+        {
+          "path": "src/components/customized/checkbox/checkbox-16.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "dropdown-menu-01",
       "type": "registry:component",
       "title": "Default Dropdown Menu",
@@ -3674,6 +3729,20 @@
       "files": [
         {
           "path": "src/components/customized/pagination/pagination-14.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "pagination-15",
+      "type": "registry:component",
+      "title": "Pagination with text",
+      "description": "A pagination component with text",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["pagination"],
+      "files": [
+        {
+          "path": "src/components/customized/pagination/pagination-15.tsx",
           "type": "registry:component"
         }
       ]
