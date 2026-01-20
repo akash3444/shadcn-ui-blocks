@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-16",
+  "type": "registry:component",
+  "title": "Notification Settings",
+  "description": "A notification settings component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "label",
+    "scroll-area",
+    "checkbox"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/checkbox/checkbox-16.tsx",
+      "content": "\"use client\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { ScrollArea } from \"@/components/ui/scroll-area\";\nimport { Checkbox } from \"@/registry/ui/checkbox\";\nimport {\n  CalendarPlus,\n  CalendarX,\n  CalendarCog,\n  Bell,\n  CalendarCheck,\n  type LucideIcon,\n} from \"lucide-react\";\n\ninterface NotificationType {\n  label: string;\n  value: string;\n  icon: LucideIcon;\n}\n\nexport default function Checkbox16() {\n  return (\n    <div>\n      <Label className=\"font-medium ps-1\">Notification Settings</Label>\n      <div className=\"bg-muted/30 mt-2.5 border rounded-lg\">\n        <ScrollArea className=\"h-64\">\n          <table className=\"w-full\">\n            <thead className=\"sticky top-0 bg-muted/80 backdrop-blur-sm rounded-t-lg\">\n              <tr className=\"border-b rounded-t-lg *:first:rounded-tl-lg *:last:rounded-tr-lg\">\n                <th className=\"text-left text-xs font-medium text-muted-foreground p-3\">\n                  Notification Type\n                </th>\n                <th className=\"text-xs font-medium text-muted-foreground p-3 w-16\">\n                  In-App\n                </th>\n                <th className=\"text-xs font-medium text-muted-foreground p-3 w-16\">\n                  Email\n                </th>\n              </tr>\n            </thead>\n            <tbody>\n              {notificationTypes.map((notificationType, index) => (\n                <tr\n                  key={notificationType.value}\n                  className=\"border-b last:border-b-0\"\n                >\n                  <td className=\"p-3\">\n                    <div className=\"flex items-center gap-2.5\">\n                      <notificationType.icon className=\"size-4 text-muted-foreground\" />\n                      <span className=\"text-sm\">{notificationType.label}</span>\n                    </div>\n                  </td>\n                  <td className=\"p-3 text-center\">\n                    <Checkbox\n                      value={`${notificationType.value}-in-app`}\n                      id={`${notificationType.value}-in-app`}\n                      defaultChecked={index < 3}\n                      className=\"bg-background\"\n                    />\n                  </td>\n                  <td className=\"p-3 text-center\">\n                    <Checkbox\n                      value={`${notificationType.value}-email`}\n                      id={`${notificationType.value}-email`}\n                      defaultChecked={index < 3}\n                      className=\"bg-background\"\n                    />\n                  </td>\n                </tr>\n              ))}\n            </tbody>\n          </table>\n        </ScrollArea>\n      </div>\n    </div>\n  );\n}\n\nconst notificationTypes: NotificationType[] = [\n  { label: \"New Booking\", value: \"new-booking\", icon: CalendarPlus },\n  { label: \"Booking Cancelled\", value: \"booking-cancelled\", icon: CalendarX },\n  { label: \"Booking Updated\", value: \"booking-updated\", icon: CalendarCog },\n  { label: \"Booking Reminder\", value: \"booking-reminder-1\", icon: Bell },\n  {\n    label: \"Booking Confirmation\",\n    value: \"booking-confirmation\",\n    icon: CalendarCheck,\n  },\n  { label: \"Payment Reminder\", value: \"payment-reminder\", icon: Bell },\n  { label: \"Upcoming Reminder\", value: \"upcoming-reminder\", icon: Bell },\n];\n",
+      "type": "registry:component"
+    }
+  ]
+}

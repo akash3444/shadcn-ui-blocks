@@ -21,8 +21,8 @@ export const Features = () => {
         Core Features
       </h2>
       <div className="mt-20 mb-14 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="p-1 border rounded-xl bg-muted border-border/65">
-          <Card className="relative overflow-hidden bg-gradient-to-b rounded-lg from-primary/3 shadow/5 gap-3 h-full">
+        <div className="p-1 border rounded-xl bg-muted/50 border-border/80">
+          <Card className="relative overflow-hidden bg-background rounded-lg dark:shadow-xs/40 shadow-xs/5 gap-3 h-full border-border/90">
             <DashedTopFadeGrid />
 
             <CardHeader className="pb-0 gap-3 isolate">
@@ -85,8 +85,8 @@ export const Features = () => {
             </CardFooter>
           </Card>
         </div>
-        <div className="p-1 border rounded-xl bg-muted border-border/65">
-          <Card className="relative overflow-hidden bg-gradient-to-b rounded-lg from-primary/3 shadow/5 gap-3 h-full">
+        <div className="p-1 border rounded-xl bg-muted/50 border-border/80">
+          <Card className="relative overflow-hidden bg-background rounded-lg dark:shadow-xs/40 shadow-xs/5 gap-3 h-full border-border/90">
             <DashedTopFadeGrid />
 
             <CardHeader className="pb-0 gap-3 isolate">

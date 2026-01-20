@@ -104,6 +104,7 @@ export const customizedComponents = {
     { title: "Badge", type: "avatar", name: "avatar-14" },
     { title: "Group", type: "avatar", name: "avatar-12" },
     { title: "Group max avatar", type: "avatar", name: "avatar-13" },
+    { title: "Chat", type: "avatar", name: "avatar-15" },
   ],
   badge: [
     { title: "Default", type: "badge", name: "badge-01" },

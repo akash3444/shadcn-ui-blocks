@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-15",
+  "type": "registry:component",
+  "title": "Pagination with text",
+  "description": "A pagination component with text",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "pagination"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/pagination/pagination-15.tsx",
+      "content": "import {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/registry/ui/pagination\";\n\nexport default function PaginationDemo() {\n  return (\n    <div className=\"max-w-xs w-full flex items-center justify-between gap-3\">\n      <p className=\"flex-1 text-sm text-muted-foreground whitespace-nowrap\">\n        Showing 5 results\n      </p>\n\n      <Pagination className=\"justify-end\">\n        <PaginationContent className=\"gap-0 border rounded-lg divide-x overflow-hidden\">\n          <PaginationItem>\n            <PaginationPrevious\n              href=\"#\"\n              className=\"rounded-none *:[span]:hidden\"\n              size=\"icon-sm\"\n            />\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationNext\n              href=\"#\"\n              className=\"rounded-none *:[span]:hidden\"\n              size=\"icon-sm\"\n            />\n          </PaginationItem>\n        </PaginationContent>\n      </Pagination>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

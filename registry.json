@@ -1889,6 +1889,33 @@
       ]
     },
     {
+      "name": "avatar-14",
+      "type": "registry:component",
+      "title": "Avatar Group with Max",
+      "description": "Group of avatars with maximum limit component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["avatar"],
+      "files": [
+        {
+          "path": "src/components/customized/avatar/avatar-14.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "avatar-15",
+      "type": "registry:component",
+      "title": "Avatar Group with Max",
+      "description": "Group of avatars with maximum limit component",
+      "registryDependencies": ["avatar"],
+      "files": [
+        {
+          "path": "src/components/customized/avatar/avatar-15.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "badge-01",
       "type": "registry:component",
       "title": "Default Badge",

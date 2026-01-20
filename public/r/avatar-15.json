@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-15",
+  "type": "registry:component",
+  "title": "Avatar Group with Max",
+  "description": "Group of avatars with maximum limit component",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/avatar/avatar-15.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/registry/ui/avatar\";\n\nexport default function AvatarDemo() {\n  return (\n    <div className=\"border p-4 rounded-lg shadow-sm/3 flex items-start gap-10\">\n      <div className=\"flex gap-3\">\n        <Avatar className=\"size-10\">\n          <AvatarImage src=\"https://github.com/shadcn.png\" alt=\"@shadcn\" />\n          <AvatarFallback>CN</AvatarFallback>\n        </Avatar>\n        <div className=\"flex flex-col gap-1.5\">\n          <div className=\"font-medium tracking-tight leading-none flex items-center gap-1\">\n            John Doe\n          </div>\n          <span className=\"leading-none text-sm text-muted-foreground\">\n            Let's go to the park\n          </span>\n        </div>\n      </div>\n      <div className=\"flex flex-col justify-start gap-1\">\n        <span className=\"text-xs text-muted-foreground\">12:00 AM</span>\n        <div className=\"px-1.5 h-5 flex items-center justify-center min-w-5 bg-primary text-primary-foreground rounded-full text-xs w-fit ms-auto\">2</div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

@@ -7,12 +7,12 @@ export function FAQ() {
       <p className="uppercase mb-3 font-semibold text-muted-foreground tracking-tight">
         Frequently Asked Questions
       </p>
-      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 bg-muted gap-1 p-1 rounded-lg border border-border/50">
+      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 bg-muted/50 gap-1 p-1 rounded-lg border border-border/90">
         {faqs.map((faq, index) => (
           <div
             key={index}
             className={cn(
-              "relative border bg-card -ms-px -mt-px text-start overflow-hidden",
+              "relative border bg-background -ms-px -mt-px text-start overflow-hidden",
               "first:rounded-t-md md:first:rounded-tr-none md:nth-[2]:rounded-tr-md md:nth-last-[2]:rounded-bl-md last:rounded-b-md md:last:rounded-bl-none"
             )}
           >
