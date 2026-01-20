@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 import { config } from "@/config";
 
 interface BlockProps {
+  index: number;
   title: string;
   children?: ReactNode;
   name: string;
@@ -26,6 +27,7 @@ interface BlockProps {
 }
 
 const ComponentBlock: FC<BlockProps> = async ({
+  index,
   title,
   type,
   description,
@@ -48,13 +50,15 @@ const ComponentBlock: FC<BlockProps> = async ({
   return (
     <div
       className={cn(
-        "bg-background border border-primary/8 rounded-md flex flex-col",
+        "bg-background border rounded-lg flex flex-col shadow-xs/2 dark:shadow/30",
         className
       )}
     >
-      <div className="h-10 flex items-center justify-between border-b border-muted pl-4 pr-3">
+      <div className="h-10 flex items-center justify-between border-b border-border/50 dark:border-border/80 pl-4 pr-3">
         <div className="flex items-center gap-2">
-          <span className="text-[15px] font-medium">{title}</span>
+
+          <span className="text-sm font-mono text-muted-foreground">{(index + 1).toString().padStart(2, "0")}.</span>
+          <span className="text-sm font-medium">{title}</span>
           {credit && (
             <a
               href={credit.link}

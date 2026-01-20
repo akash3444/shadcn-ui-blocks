@@ -69,7 +69,7 @@ const CustomizedComponentPage = async (props: {
 
       <div
         className={cn(
-          "mt-12 grid gap-2",
+          "mt-12 grid gap-1 border border-border/80 p-1 rounded-xl bg-muted/50",
           {
             "lg:grid-cols-2": details.columns === 2,
             "sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3":
@@ -79,7 +79,7 @@ const CustomizedComponentPage = async (props: {
         )}
       >
         {components.map((component, index) => (
-          <ComponentBlock key={`${component.title}-${index}`} {...component} />
+          <ComponentBlock key={`${component.title}-${index}`} index={index} {...component} />
         ))}
       </div>
     </div>

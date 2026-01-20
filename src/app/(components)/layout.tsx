@@ -8,7 +8,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="bg-primary/3">
+    <div>
       <div className="md:hidden">
         <Navbar />
       </div>
