@@ -105,13 +105,14 @@ export const customizedComponents = {
     { title: "Group", type: "avatar", name: "avatar-12" },
     { title: "Group max avatar", type: "avatar", name: "avatar-13" },
     { title: "Chat", type: "avatar", name: "avatar-15" },
+    { title: "Dropdown Menu", type: "avatar", name: "avatar-16" },
   ],
   badge: [
     { title: "Default", type: "badge", name: "badge-01" },
     { title: "Secondary", type: "badge", name: "badge-02" },
     { title: "Outline", type: "badge", name: "badge-03" },
     { title: "Destructive", type: "badge", name: "badge-04" },
-    { title: "Rounded", type: "badge", name: "badge-05" },
+    { title: "Shapes", type: "badge", name: "badge-05" },
     { title: "Gradient", type: "badge", name: "badge-06" },
     { title: "Gradient Outline", type: "badge", name: "badge-07" },
     { title: "Soft", type: "badge", name: "badge-08" },
@@ -120,6 +121,10 @@ export const customizedComponents = {
     { title: "With icon", type: "badge", name: "badge-11" },
     { title: "Clickable", type: "badge", name: "badge-12" },
     { title: "Clickable link", type: "badge", name: "badge-13" },
+    { title: "With number", type: "badge", name: "badge-14" },
+    { title: "Plan features with badge", type: "badge", name: "badge-15" },
+    { title: "Tabs with badge", type: "badge", name: "badge-16" },
+    { title: "Icon button", type: "badge", name: "badge-17" },
   ],
   breadcrumb: [
     { title: "Default", type: "breadcrumb", name: "breadcrumb-01" },
@@ -651,3 +656,5 @@ export const customizedComponents = {
     },
   ],
 };
+
+console.log("TOTAL COMPONENTS: ", Object.values(customizedComponents).flat().length);

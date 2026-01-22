@@ -12,12 +12,12 @@ const ClickableLinkBadgeDemo = () => {
         badgeVariants({
           variant: "outline",
         }),
-        "rounded-full pl-[3px]"
+        "rounded-full pl-0.75 gap-1.5"
       )}
     >
       <Image
         src="https://github.com/shadcn.png"
-        className="mr-2 h-5 w-5 rounded-full"
+        className="h-5 w-5 rounded-full"
         alt=""
         height={20}
         width={20}

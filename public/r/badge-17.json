@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-17",
+  "type": "registry:component",
+  "title": "Icon button",
+  "description": "An icon button component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/badge/badge-17.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { Badge } from \"@/registry/ui/badge\";\nimport { Bell, MailIcon, MessageSquare } from \"lucide-react\";\n\nconst BadgeDemo = () => {\n  return <div className=\"flex items-center gap-5\">\n    <Button variant=\"outline\" size=\"icon\" className=\"relative\"><Bell />\n    <Badge className=\"px-1 min-w-5.5 absolute top-0 right-0 translate-x-1/2 -translate-y-1/2\">2</Badge></Button>\n    <Button variant=\"outline\" size=\"icon\" className=\"relative\"><MailIcon />\n    <Badge variant='destructive' className=\"px-1 min-w-5.5 absolute top-0 right-0 translate-x-1/2 -translate-y-1/2\">@</Badge></Button>\n    <Button variant=\"outline\" size=\"icon\" className=\"relative rounded-full\"><MessageSquare />\n    <Badge variant='destructive' className=\"px-0.75 py-0.25 min-w-4.5 absolute -top-2 -right-2\">@</Badge></Button>\n  </div>;\n};\n\nexport default BadgeDemo;\n",
+      "type": "registry:component"
+    }
+  ]
+}

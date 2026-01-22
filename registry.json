@@ -1916,6 +1916,19 @@
       ]
     },
     {
+      "name": "avatar-16",
+      "type": "registry:component",
+      "title": "Avatar Dropdown Menu",
+      "description": "An avatar dropdown menu component",
+      "registryDependencies": ["avatar", "dropdown-menu"],
+      "files": [
+        {
+          "path": "src/components/customized/avatar/avatar-16.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "badge-01",
       "type": "registry:component",
       "title": "Default Badge",
@@ -2081,6 +2094,60 @@
       "files": [
         {
           "path": "src/components/customized/badge/badge-13.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "badge-14",
+      "type": "registry:component",
+      "title": "Badge with number",
+      "description": "A badge with number component",
+      "registryDependencies": ["badge"],
+      "files": [
+        {
+          "path": "src/components/customized/badge/badge-14.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "badge-15",
+      "type": "registry:component",
+      "title": "Plan features with badge",
+      "description": "A plan features with badge component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge"],
+      "files": [
+        {
+          "path": "src/components/customized/badge/badge-15.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "badge-16",
+      "type": "registry:component",
+      "title": "Tabs with badge",
+      "description": "A tabs with badge component",
+      "registryDependencies": ["badge", "tabs"],
+      "files": [
+        {
+          "path": "src/components/customized/badge/badge-16.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "badge-17",
+      "type": "registry:component",
+      "title": "Icon button",
+      "description": "An icon button component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button"],
+      "files": [
+        {
+          "path": "src/components/customized/badge/badge-17.tsx",
           "type": "registry:component"
         }
       ]
