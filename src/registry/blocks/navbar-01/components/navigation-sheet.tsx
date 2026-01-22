@@ -1,3 +1,5 @@
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -5,10 +7,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
 import { Logo } from "@/registry/blocks/navbar-01/components/logo";
 import { NavMenu } from "@/registry/blocks/navbar-01/components/nav-menu";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 export const NavigationSheet = () => {
   return (
@@ -18,13 +18,13 @@ export const NavigationSheet = () => {
       </VisuallyHidden>
 
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button size="icon" variant="outline">
           <Menu />
         </Button>
       </SheetTrigger>
       <SheetContent className="px-6 py-3">
         <Logo />
-        <NavMenu orientation="vertical" className="mt-6 [&>div]:h-full" />
+        <NavMenu className="mt-6 [&>div]:h-full" orientation="vertical" />
       </SheetContent>
     </Sheet>
   );

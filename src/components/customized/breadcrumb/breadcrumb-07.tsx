@@ -1,3 +1,4 @@
+import { ChevronsRight, Component, Home, Route } from "lucide-react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,7 +7,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/registry/ui/breadcrumb";
-import { ChevronsRight, Component, Home, Route } from "lucide-react";
 
 const BreadcrumbsWithIconAndLabel = () => {
   return (
@@ -22,7 +22,7 @@ const BreadcrumbsWithIconAndLabel = () => {
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbLink href="#/components">
-            <Component className="mr-1 h-4 w-4 inline" /> Components
+            <Component className="mr-1 inline h-4 w-4" /> Components
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
@@ -30,7 +30,7 @@ const BreadcrumbsWithIconAndLabel = () => {
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbPage>
-            <Route className="mr-1 h-4 w-4 inline" /> Breadcrumb
+            <Route className="mr-1 inline h-4 w-4" /> Breadcrumb
           </BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>

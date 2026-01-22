@@ -1,3 +1,4 @@
+import { ExternalLink, OctagonAlert, Trash, X } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -10,7 +11,6 @@ import {
   AlertDialogTrigger,
 } from "@/registry/ui/alert-dialog";
 import { Button, buttonVariants } from "@/registry/ui/button";
-import { ExternalLink, OctagonAlert, Trash, X } from "lucide-react";
 
 export default function AlertDialogWithCustomizedFooter() {
   return (
@@ -21,7 +21,7 @@ export default function AlertDialogWithCustomizedFooter() {
       <AlertDialogContent className="overflow-hidden">
         <AlertDialogHeader className="pb-4">
           <AlertDialogTitle>
-            <div className="mx-auto sm:mx-0 mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-destructive/10">
+            <div className="mx-auto mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-destructive/10 sm:mx-0">
               <OctagonAlert className="h-5 w-5 text-destructive" />
             </div>
             Are you absolutely sure?
@@ -31,10 +31,10 @@ export default function AlertDialogWithCustomizedFooter() {
             account and remove your data from our servers.
           </AlertDialogDescription>
         </AlertDialogHeader>
-        <AlertDialogFooter className="border-t -mx-6 -mb-6 px-6 py-5">
+        <AlertDialogFooter className="-mx-6 -mb-6 border-t px-6 py-5">
           <Button
+            className="mr-auto -ml-3 text-muted-foreground"
             variant="link"
-            className="-ml-3 mr-auto text-muted-foreground"
           >
             Learn more <ExternalLink />
           </Button>

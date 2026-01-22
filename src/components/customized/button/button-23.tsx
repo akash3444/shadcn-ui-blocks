@@ -1,9 +1,9 @@
-import { Button } from "@/registry/ui/button";
 import * as motion from "framer-motion/client";
 import { StarIcon } from "lucide-react";
+import { Button } from "@/registry/ui/button";
 
 const ButtonsWithTapAnimation = () => (
-  <div className="flex items-center gap-2 flex-wrap">
+  <div className="flex flex-wrap items-center gap-2">
     <Button asChild>
       <motion.button whileTap={{ scale: 0.85 }}>Tap</motion.button>
     </Button>

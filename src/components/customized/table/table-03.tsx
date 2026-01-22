@@ -59,7 +59,7 @@ export default function BorderedTableDemo() {
       </TableHeader>
       <TableBody>
         {products.map((product) => (
-          <TableRow key={product.id} className="odd:bg-muted/50">
+          <TableRow className="odd:bg-muted/50" key={product.id}>
             <TableCell className="pl-4">{product.id}</TableCell>
             <TableCell className="font-medium">{product.name}</TableCell>
             <TableCell>{product.category}</TableCell>

@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/input/input-04.tsx",
-      "content": "import { Input } from \"@/registry/ui/input\";\n\nexport default function DisabledInputDemo() {\n  return (\n    <Input type=\"email\" placeholder=\"Email\" disabled className=\"max-w-xs\" />\n  );\n}\n",
+      "content": "import { Input } from \"@/registry/ui/input\";\n\nexport default function DisabledInputDemo() {\n  return (\n    <Input className=\"max-w-xs\" disabled placeholder=\"Email\" type=\"email\" />\n  );\n}\n",
       "type": "registry:component"
     }
   ]

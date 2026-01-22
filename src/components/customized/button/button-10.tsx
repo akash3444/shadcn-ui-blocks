@@ -1,9 +1,9 @@
 import { Button } from "@/registry/ui/button";
 
 const LinkButtonDemo = () => (
-  <div className="flex items-center gap-2 flex-wrap">
+  <div className="flex flex-wrap items-center gap-2">
     <Button variant="link">Link</Button>
-    <Button variant="link" disabled>
+    <Button disabled variant="link">
       Disabled Link
     </Button>
   </div>

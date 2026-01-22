@@ -1,11 +1,11 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { useDebounce } from "@/hooks/use-debounce";
 import { SearchIcon } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import type React from "react";
+import { useEffect, useState } from "react";
+import { Input } from "@/components/ui/input";
+import { useDebounce } from "@/hooks/use-debounce";
 
 const PreviewListSearch = () => {
   const searchParams = useSearchParams();
@@ -23,7 +23,7 @@ const PreviewListSearch = () => {
   const handleSearch = () => {
     const searchParams = new URLSearchParams(searchParamsString);
 
-    if (!searchParamsString && !debouncedQuery) return;
+    if (!(searchParamsString || debouncedQuery)) return;
 
     if (!debouncedQuery) {
       searchParams.delete("q");
@@ -46,12 +46,12 @@ const PreviewListSearch = () => {
   return (
     <div className="relative">
       <Input
-        className="ps-9 max-w-60 w-full bg-background"
+        className="w-full max-w-60 bg-background ps-9"
+        onChange={handleChange}
         placeholder="Search"
         value={value}
-        onChange={handleChange}
       />
-      <SearchIcon className="h-5 w-5 absolute start-2 inset-y-0 my-auto text-muted-foreground" />
+      <SearchIcon className="absolute inset-y-0 start-2 my-auto h-5 w-5 text-muted-foreground" />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 "use client";
 
+import { type ChangeEvent, useState } from "react";
 import { Button } from "@/registry/ui/button";
 import { Input } from "@/registry/ui/input";
 import { Label } from "@/registry/ui/label";
@@ -9,7 +10,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/registry/ui/tooltip";
-import { ChangeEvent, useState } from "react";
 
 export default function WithDelayTooltipDemo() {
   const [delayDuration, setDelayDuration] = useState<number | undefined>(500);
@@ -21,7 +21,7 @@ export default function WithDelayTooltipDemo() {
   };
 
   return (
-    <div className="flex flex-col gap-6 items-center">
+    <div className="flex flex-col items-center gap-6">
       <TooltipProvider>
         <Tooltip delayDuration={delayDuration}>
           <TooltipTrigger asChild>
@@ -36,10 +36,10 @@ export default function WithDelayTooltipDemo() {
       <div>
         <Label>Delay</Label>
         <Input
-          type="number"
           className="mt-2"
-          value={delayDuration}
           onChange={handleDelayDurationChange}
+          type="number"
+          value={delayDuration}
         />
       </div>
     </div>

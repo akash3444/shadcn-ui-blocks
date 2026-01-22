@@ -1,5 +1,3 @@
-import React from "react";
-
 const SwirlingEffectSpinner = () => {
   return (
     <>
@@ -34,8 +32,8 @@ const SwirlingEffectSpinner = () => {
       </style>
 
       <svg
-        viewBox="0 0 800 800"
         className="h-14 w-14"
+        viewBox="0 0 800 800"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
@@ -44,9 +42,9 @@ const SwirlingEffectSpinner = () => {
           cy="400"
           fill="none"
           r="200"
-          strokeWidth="50"
           strokeDasharray="700 1400"
           strokeLinecap="round"
+          strokeWidth="50"
         />
       </svg>
     </>

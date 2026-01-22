@@ -1,4 +1,3 @@
-import React from "react";
 import { RadioGroup as RadioGroupPrimitive } from "radix-ui";
 
 const options = [
@@ -19,14 +18,14 @@ const options = [
 const RadioCardsDemo = () => {
   return (
     <RadioGroupPrimitive.Root
+      className="grid w-full max-w-md grid-cols-3 gap-3"
       defaultValue={options[0].value}
-      className="max-w-md w-full grid grid-cols-3 gap-3"
     >
       {options.map((option) => (
         <RadioGroupPrimitive.Item
+          className="rounded px-3 py-1 ring-[1px] ring-border data-[state=checked]:ring-2 data-[state=checked]:ring-blue-500"
           key={option.value}
           value={option.value}
-          className="ring-[1px] ring-border rounded py-1 px-3 data-[state=checked]:ring-2 data-[state=checked]:ring-blue-500"
         >
           <span className="font-semibold tracking-tight">{option.label}</span>
         </RadioGroupPrimitive.Item>

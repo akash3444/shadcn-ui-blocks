@@ -1,13 +1,11 @@
 "use client";
 
-import * as React from "react";
-
+import { ChevronRight, FileIcon, FolderIcon } from "lucide-react";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/registry/ui/collapsible";
-import { ChevronRight, FileIcon, FolderIcon } from "lucide-react";
 
 interface FileTreeItem {
   name: string;
@@ -46,8 +44,8 @@ const fileTree: FileTreeItem[] = [
 
 export default function FileTree() {
   return (
-    <div className="w-[350px] bg-accent p-4 rounded-lg">
-      <div className="w-full -ml-4">
+    <div className="w-[350px] rounded-lg bg-accent p-4">
+      <div className="-ml-4 w-full">
         {fileTree.map((treeItem) => (
           <FileTreeItem key={treeItem.name} {...treeItem} />
         ))}
@@ -59,7 +57,7 @@ export default function FileTree() {
 const FileTreeItem = ({ name, type, children }: FileTreeItem) => {
   if (type === "file") {
     return (
-      <div className="flex items-center gap-2 pl-10 py-1">
+      <div className="flex items-center gap-2 py-1 pl-10">
         <FileIcon className="h-4 w-4" /> {name}
       </div>
     );
@@ -67,8 +65,8 @@ const FileTreeItem = ({ name, type, children }: FileTreeItem) => {
 
   return (
     <Collapsible className="pl-4">
-      <CollapsibleTrigger className="w-full group flex items-center gap-2 py-1">
-        <ChevronRight className="h-4 w-4 group-data-[state=open]:rotate-90 transition-transform" />
+      <CollapsibleTrigger className="group flex w-full items-center gap-2 py-1">
+        <ChevronRight className="h-4 w-4 transition-transform group-data-[state=open]:rotate-90" />
         <span className="flex items-center gap-2">
           <FolderIcon className="h-4 w-4 fill-current" /> {name}
         </span>

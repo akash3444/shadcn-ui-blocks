@@ -1,11 +1,11 @@
 "use client";
 
-import { Label } from "@/registry/ui/label";
-import { cn } from "@/lib/utils";
 import { ImageIcon, XCircleIcon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import Dropzone from "react-dropzone";
+import { cn } from "@/lib/utils";
+import { Label } from "@/registry/ui/label";
 
 const ImagePreview = ({
   url,
@@ -22,11 +22,11 @@ const ImagePreview = ({
       <XCircleIcon className="h-5 w-5 fill-primary text-primary-foreground" />
     </button>
     <Image
-      src={url}
-      height={500}
-      width={500}
       alt=""
-      className="border border-border h-full w-full rounded-md object-cover"
+      className="h-full w-full rounded-md border border-border object-cover"
+      height={500}
+      src={url}
+      width={500}
     />
   </div>
 );
@@ -40,11 +40,15 @@ export default function InputDemo() {
       <div className="mt-2 w-full">
         {profilePicture ? (
           <ImagePreview
-            url={profilePicture}
             onRemove={() => setProfilePicture(null)}
+            url={profilePicture}
           />
         ) : (
           <Dropzone
+            accept={{
+              "image/png": [".png", ".jpg", ".jpeg", ".webp"],
+            }}
+            maxFiles={1}
             onDrop={(acceptedFiles) => {
               const file = acceptedFiles[0];
               if (file) {
@@ -52,10 +56,6 @@ export default function InputDemo() {
                 setProfilePicture(imageUrl);
               }
             }}
-            accept={{
-              "image/png": [".png", ".jpg", ".jpeg", ".webp"],
-            }}
-            maxFiles={1}
           >
             {({
               getRootProps,
@@ -67,7 +67,7 @@ export default function InputDemo() {
               <div
                 {...getRootProps()}
                 className={cn(
-                  "border border-dashed flex items-center justify-center aspect-square rounded-md focus:outline-hidden focus:border-primary",
+                  "flex aspect-square items-center justify-center rounded-md border border-dashed focus:border-primary focus:outline-hidden",
                   {
                     "border-primary bg-secondary": isDragActive && isDragAccept,
                     "border-destructive bg-destructive/20":

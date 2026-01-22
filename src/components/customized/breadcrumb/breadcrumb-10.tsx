@@ -1,3 +1,4 @@
+import { ChevronsRight } from "lucide-react";
 import { Badge } from "@/registry/ui/badge";
 import {
   Breadcrumb,
@@ -7,8 +8,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/registry/ui/breadcrumb";
-import { ChevronsRight } from "lucide-react";
-import React from "react";
 
 const BreadcrumbTabActiveDemo = () => {
   return (
@@ -28,7 +27,7 @@ const BreadcrumbTabActiveDemo = () => {
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbPage>
-            <Badge className="shadow-none rounded-full">Breadcrumb</Badge>
+            <Badge className="rounded-full shadow-none">Breadcrumb</Badge>
           </BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>

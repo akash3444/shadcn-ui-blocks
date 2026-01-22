@@ -1,7 +1,13 @@
 "use client";
 
+import {
+  AppleIcon,
+  BananaIcon,
+  CherryIcon,
+  CitrusIcon,
+  GrapeIcon,
+} from "lucide-react";
 import * as React from "react";
-
 import {
   Select,
   SelectContent,
@@ -11,13 +17,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/ui/select";
-import {
-  AppleIcon,
-  BananaIcon,
-  CherryIcon,
-  CitrusIcon,
-  GrapeIcon,
-} from "lucide-react";
 
 const fruits = [
   { value: "apple", label: "Apple", icon: AppleIcon },
@@ -31,7 +30,7 @@ export default function SelectWithIconDemo() {
   const [value, setValue] = React.useState("apple");
 
   return (
-    <Select value={value} onValueChange={setValue}>
+    <Select onValueChange={setValue} value={value}>
       <SelectTrigger className="w-[180px]">
         <div className="flex items-center gap-2 [&_svg]:h-4 [&_svg]:w-4">
           <SelectValue placeholder="Select a fruit" />

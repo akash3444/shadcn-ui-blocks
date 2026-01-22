@@ -5,7 +5,7 @@ export default function InputWithLabelDemo() {
   return (
     <div className="w-full max-w-xs">
       <Label htmlFor="email">Email</Label>
-      <Input id="email" type="email" placeholder="Email" className="mt-2" />
+      <Input className="mt-2" id="email" placeholder="Email" type="email" />
     </div>
   );
 }

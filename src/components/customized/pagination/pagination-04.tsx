@@ -19,9 +19,9 @@ export default function PaginationWithRoundedButton() {
         {pages.map((page) => (
           <PaginationItem key={page}>
             <PaginationLink
+              className="rounded-full"
               href={`#${page}`}
               isActive={page === 2}
-              className="rounded-full"
             >
               {page}
             </PaginationLink>

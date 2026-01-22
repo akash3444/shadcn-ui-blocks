@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/spinner/spinner-05.tsx",
-      "content": "import { Loader2Icon } from \"lucide-react\";\n\nexport default function SpinnerSizesDemo() {\n  return (\n    <div className=\"flex gap-4 flex-wrap items-center\">\n      <Loader2Icon className=\"animate-spin h-4 w-4\" />\n      <Loader2Icon className=\"animate-spin h-5 w-5\" />\n      <Loader2Icon className=\"animate-spin h-6 w-6\" />\n      <Loader2Icon className=\"animate-spin h-8 w-8\" />\n    </div>\n  );\n}\n",
+      "content": "import { Loader2Icon } from \"lucide-react\";\n\nexport default function SpinnerSizesDemo() {\n  return (\n    <div className=\"flex flex-wrap items-center gap-4\">\n      <Loader2Icon className=\"h-4 w-4 animate-spin\" />\n      <Loader2Icon className=\"h-5 w-5 animate-spin\" />\n      <Loader2Icon className=\"h-6 w-6 animate-spin\" />\n      <Loader2Icon className=\"h-8 w-8 animate-spin\" />\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
   ]

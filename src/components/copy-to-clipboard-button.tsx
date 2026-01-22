@@ -1,8 +1,8 @@
 "use client";
 
-import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
-import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 
 export const CopyToClipboardButton = ({
   content,

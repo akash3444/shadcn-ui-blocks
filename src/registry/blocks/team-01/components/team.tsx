@@ -53,31 +53,31 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="flex flex-col items-center justify-center py-14 px-4 sm:px-6 lg:px-8">
-      <div className="text-center max-w-xl mx-auto">
-        <b className="text-center text-muted-foreground font-semibold text-sm uppercase">
+    <div className="flex flex-col items-center justify-center px-4 py-14 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-xl text-center">
+        <b className="text-center font-semibold text-muted-foreground text-sm uppercase">
           We&apos;re hiring!
         </b>
-        <h2 className="mt-4 text-4xl sm:text-5xl font-semibold tracking-tighter">
+        <h2 className="mt-4 font-semibold text-4xl tracking-tighter sm:text-5xl">
           Meet Our Team
         </h2>
-        <p className="mt-4 text-base sm:text-lg text-muted-foreground">
+        <p className="mt-4 text-base text-muted-foreground sm:text-lg">
           Our philosophy is simple — hire a team of diverse, passionate people
           and foster a culture that empowers you to do you best work.
         </p>
       </div>
 
-      <div className="mt-20 w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12 max-w-(--breakpoint-lg) mx-auto">
+      <div className="mx-auto mt-20 grid w-full max-w-(--breakpoint-lg) grid-cols-2 gap-12 sm:grid-cols-3 md:grid-cols-4">
         {teamMembers.map((member) => (
-          <div key={member.name} className="text-center">
+          <div className="text-center" key={member.name}>
             <Image
-              src={member.imageUrl}
               alt={member.name}
-              className="h-20 w-20 rounded-full object-cover mx-auto bg-secondary"
-              width={120}
+              className="mx-auto h-20 w-20 rounded-full bg-secondary object-cover"
               height={120}
+              src={member.imageUrl}
+              width={120}
             />
-            <h3 className="mt-4 text-lg font-semibold">{member.name}</h3>
+            <h3 className="mt-4 font-semibold text-lg">{member.name}</h3>
             <p className="text-muted-foreground">{member.title}</p>
           </div>
         ))}

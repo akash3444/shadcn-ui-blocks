@@ -1,17 +1,16 @@
 "use client";
 
 import * as React from "react";
-
+import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/registry/ui/card";
 import {
   Carousel,
+  type CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  type CarouselApi,
 } from "@/registry/ui/carousel";
-import { cn } from "@/lib/utils";
 
 export default function SlideOpacity() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -32,13 +31,13 @@ export default function SlideOpacity() {
   return (
     <div className="mx-auto max-w-xs">
       <Carousel
-        setApi={setApi}
-        className="w-full max-w-xs mx-2"
+        className="mx-2 w-full max-w-xs"
         opts={{ loop: true }}
+        setApi={setApi}
       >
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className="basis-3/5">
+            <CarouselItem className="basis-3/5" key={index}>
               <Card
                 className={cn(
                   "bg-primary text-primary-foreground transition-all duration-500",
@@ -48,7 +47,7 @@ export default function SlideOpacity() {
                 )}
               >
                 <CardContent className="flex aspect-video items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
+                  <span className="font-semibold text-4xl">{index + 1}</span>
                 </CardContent>
               </Card>
             </CarouselItem>

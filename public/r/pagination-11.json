@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/pagination/pagination-11.tsx",
-      "content": "import {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/registry/ui/pagination\";\n\nexport default function PaginationNumberless() {\n  return (\n    <Pagination>\n      <PaginationContent className=\"gap-0 border rounded-lg divide-x overflow-hidden\">\n        <PaginationItem>\n          <PaginationPrevious href=\"#\" className=\"rounded-none\" />\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationNext href=\"#\" className=\"rounded-none\" />\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  );\n}\n",
+      "content": "import {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/registry/ui/pagination\";\n\nexport default function PaginationNumberless() {\n  return (\n    <Pagination>\n      <PaginationContent className=\"gap-0 divide-x overflow-hidden rounded-lg border\">\n        <PaginationItem>\n          <PaginationPrevious className=\"rounded-none\" href=\"#\" />\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationNext className=\"rounded-none\" href=\"#\" />\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  );\n}\n",
       "type": "registry:component"
     }
   ]

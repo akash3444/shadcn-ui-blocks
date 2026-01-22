@@ -1,27 +1,27 @@
 import { Sparkles } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { ThemeToggle } from "../app-sidebar/theme-toggle";
 import { GithubStarButton } from "../github-star-button";
 import { Logo } from "../logo";
-import { Button } from "@/components/ui/button";
 import { VersionSwitcher } from "../version-switcher";
 import { AppNavigationMenu } from "./app-navigation-menu";
 import { NavigationSheet } from "./navigation-sheet";
-import { cn } from "@/lib/utils";
 
 export const Navbar = ({ className }: { className?: string }) => {
   return (
-    <nav className="px-6 lg:px-0 bg-background ps-4 pe-2 border-b">
+    <nav className="border-b bg-background px-6 ps-4 pe-2 lg:px-0">
       <div
         className={cn(
-          "h-14 flex items-center justify-between relative z-20 max-w-(--breakpoint-lg) mx-auto text-foreground border-primary/8 shadow shadow-primary/1",
+          "relative z-20 mx-auto flex h-14 max-w-(--breakpoint-lg) items-center justify-between border-primary/8 text-foreground shadow shadow-primary/1",
           className
         )}
       >
         <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center gap-2">
+          <Link className="flex items-center gap-2" href="/">
             <Logo className="font-bold" />
-            <span className="font-semibold hidden lg:block text-lg tracking-tight">
+            <span className="hidden font-semibold text-lg tracking-tight lg:block">
               Shadcn UI Blocks
             </span>
           </Link>
@@ -32,11 +32,11 @@ export const Navbar = ({ className }: { className?: string }) => {
         </div>
 
         <div className="flex items-center gap-2">
-          <Button size="sm" className="relative" asChild>
+          <Button asChild className="relative" size="sm">
             <Link
               href="https://pro.shadcnui-blocks.com"
-              target="_blank"
               rel="noopener"
+              target="_blank"
             >
               <Sparkles /> Get Pro
             </Link>

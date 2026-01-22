@@ -2,7 +2,7 @@ import { Logo01, Logo02, Logo03, Logo04 } from "@/components/logos";
 
 const LogoCloud = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center px-6">
+    <div className="flex min-h-screen items-center justify-center px-6">
       <div>
         <p className="text-center text-xl">
           More than 2.2 million companies worldwide already trust us

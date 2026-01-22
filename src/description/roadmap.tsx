@@ -1,5 +1,5 @@
-import { Task } from "@/app/roadmap/page";
 import { CircleCheck, Clock, GoalIcon } from "lucide-react";
+import type { Task } from "@/app/roadmap/page";
 
 export const roadmap: Task[] = [
   {

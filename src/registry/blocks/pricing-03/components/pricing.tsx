@@ -1,5 +1,7 @@
 "use client";
 
+import { CircleCheck, CircleHelp } from "lucide-react";
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -10,8 +12,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
-import { CircleCheck, CircleHelp } from "lucide-react";
-import { useState } from "react";
 
 const tooltipContent = {
   styles: "Choose from a variety of styles to suit your preferences.",
@@ -71,78 +71,78 @@ const Pricing = () => {
   const [selectedBillingPeriod, setSelectedBillingPeriod] = useState("monthly");
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center py-12 px-6">
-      <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
+    <div className="flex min-h-screen flex-col items-center justify-center px-6 py-12">
+      <h2 className="text-center font-semibold text-5xl tracking-[-0.03em]">
         Our Plans
       </h2>
-      <p className="mt-3 text-xl text-center text-muted-foreground">
+      <p className="mt-3 text-center text-muted-foreground text-xl">
         Choose the plan that fits your needs and get started today
       </p>
 
       <Tabs
-        value={selectedBillingPeriod}
-        onValueChange={setSelectedBillingPeriod}
         className="mt-8"
+        onValueChange={setSelectedBillingPeriod}
+        value={selectedBillingPeriod}
       >
         <TabsList className="h-11 rounded-full">
           <TabsTrigger
+            className="rounded-full px-4 data-[state=active]:shadow-none"
             value="monthly"
-            className="rounded-full data-[state=active]:shadow-none px-4"
           >
             Monthly
           </TabsTrigger>
           <TabsTrigger
+            className="rounded-full px-4 data-[state=active]:shadow-none"
             value="yearly"
-            className="rounded-full data-[state=active]:shadow-none px-4"
           >
             Yearly (Save {YEARLY_DISCOUNT}%)
           </TabsTrigger>
         </TabsList>
       </Tabs>
-      <div className="mt-12 max-w-(--breakpoint-lg) mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-8">
+      <div className="mx-auto mt-12 grid max-w-(--breakpoint-lg) grid-cols-1 items-center gap-8 lg:grid-cols-3">
         {plans.map((plan) => (
           <div
-            key={plan.name}
-            className={cn("relative border rounded-xl p-6", {
+            className={cn("relative rounded-xl border p-6", {
               "border-2 border-primary py-10": plan.isPopular,
             })}
+            key={plan.name}
           >
             {plan.isPopular && (
               <Badge className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2">
                 Most Popular
               </Badge>
             )}
-            <h3 className="text-lg font-medium">{plan.name}</h3>
-            <p className="mt-2 text-4xl font-semibold">
+            <h3 className="font-medium text-lg">{plan.name}</h3>
+            <p className="mt-2 font-semibold text-4xl">
               $
               {selectedBillingPeriod === "monthly"
                 ? plan.price
                 : plan.price * ((100 - YEARLY_DISCOUNT) / 100)}
-              <span className="ml-1.5 text-sm text-muted-foreground font-normal">
+              <span className="ml-1.5 font-normal text-muted-foreground text-sm">
                 /month
               </span>
             </p>
-            <p className="mt-4 text-sm text-muted-foreground">
+            <p className="mt-4 text-muted-foreground text-sm">
               {plan.description}
             </p>
 
             <Button
-              variant={plan.isPopular ? "default" : "outline"}
+              className="mt-6 w-full"
               size="lg"
-              className="w-full mt-6"
+              variant={plan.isPopular ? "default" : "outline"}
             >
               {plan.buttonText}
             </Button>
             <Separator className="my-8" />
             <ul className="space-y-2">
               {plan.features.map((feature) => (
-                <li key={feature.title} className="flex items-start gap-1.5">
-                  <CircleCheck className="h-4 w-4 mt-1 text-green-600" />
+                <li className="flex items-start gap-1.5" key={feature.title}>
+                  <CircleCheck className="mt-1 h-4 w-4 text-green-600" />
                   {feature.title}
                   {feature.tooltip && (
                     <Tooltip>
                       <TooltipTrigger className="cursor-help">
-                        <CircleHelp className="h-4 w-4 mt-1 text-gray-500" />
+                        <CircleHelp className="mt-1 h-4 w-4 text-gray-500" />
                       </TooltipTrigger>
                       <TooltipContent>{feature.tooltip}</TooltipContent>
                     </Tooltip>

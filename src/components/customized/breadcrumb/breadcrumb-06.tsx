@@ -1,3 +1,4 @@
+import { ChevronsRight, Component, Home } from "lucide-react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,7 +7,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/registry/ui/breadcrumb";
-import { ChevronsRight, Component, Home } from "lucide-react";
 
 const BreadcrumbsWithIcon = () => {
   return (

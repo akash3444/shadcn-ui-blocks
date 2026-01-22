@@ -1,4 +1,6 @@
 "use client";
+import { ChevronDown, ChevronsUp, ChevronUp, Equal } from "lucide-react";
+import { useState } from "react";
 import { Button } from "@/registry/ui/button";
 import {
   DropdownMenu,
@@ -9,8 +11,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/registry/ui/dropdown-menu";
-import { ChevronDown, ChevronsUp, ChevronUp, Equal } from "lucide-react";
-import { useState } from "react";
 
 export default function DropdownMenuWithRadioGroup() {
   const [priority, setPriority] = useState("highest");
@@ -23,7 +23,7 @@ export default function DropdownMenuWithRadioGroup() {
       <DropdownMenuContent className="w-44">
         <DropdownMenuLabel>Set Priority</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuRadioGroup value={priority} onValueChange={setPriority}>
+        <DropdownMenuRadioGroup onValueChange={setPriority} value={priority}>
           <DropdownMenuRadioItem value="highest">
             <ChevronsUp className="mr-2 h-4 w-4 text-destructive" /> Highest
           </DropdownMenuRadioItem>

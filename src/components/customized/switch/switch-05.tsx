@@ -1,5 +1,5 @@
-import * as React from "react";
 import { Switch as SwitchPrimitive } from "radix-ui";
+import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -32,15 +32,15 @@ const SwitchSizesDemo = () => {
   return (
     <div className="flex items-center gap-3">
       <Switch defaultChecked />
-      <Switch defaultChecked className="h-6 w-10" thumbClassName="h-5 w-5" />
+      <Switch className="h-6 w-10" defaultChecked thumbClassName="h-5 w-5" />
       <Switch
-        defaultChecked
         className="h-7 w-12"
+        defaultChecked
         thumbClassName="h-6 w-6 data-[state=checked]:translate-x-5"
       />
       <Switch
-        defaultChecked
         className="h-8 w-14"
+        defaultChecked
         thumbClassName="h-7 w-7 data-[state=checked]:translate-x-6"
       />
     </div>

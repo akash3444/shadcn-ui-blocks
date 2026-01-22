@@ -1,6 +1,6 @@
+import { Checkbox as CheckboxPrimitive } from "radix-ui";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
-import { Checkbox as CheckboxPrimitive } from "radix-ui";
 
 const days = [
   { label: "M", value: "monday" },
@@ -15,18 +15,18 @@ const days = [
 const CheckboxCardDemo = () => {
   return (
     <div>
-      <Label className="font-medium ps-1 text-foreground/80">
+      <Label className="ps-1 font-medium text-foreground/80">
         Select Working Days
       </Label>
-      <div className="mt-3.5 flex items-center flex-wrap gap-2 bg-muted/50 rounded-lg px-4 py-3">
+      <div className="mt-3.5 flex flex-wrap items-center gap-2 rounded-lg bg-muted/50 px-4 py-3">
         {days.map((day) => (
           <CheckboxPrimitive.Root
-            key={day.value}
-            defaultChecked={day.value === "monday" || day.value === "tuesday"}
             className={cn(
-              "size-9 rounded-full border cursor-pointer bg-background text-sm",
-              "data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=checked]:border-primary"
+              "size-9 cursor-pointer rounded-full border bg-background text-sm",
+              "data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
             )}
+            defaultChecked={day.value === "monday" || day.value === "tuesday"}
+            key={day.value}
           >
             {day.label}
           </CheckboxPrimitive.Root>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -5,7 +6,6 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/registry/ui/navigation-menu";
-import Link from "next/link";
 
 const navigationMenuItems = [
   { title: "Home", href: "#" },
@@ -20,8 +20,8 @@ export default function NavigationMenuDemo() {
         {navigationMenuItems.map((item) => (
           <NavigationMenuItem key={item.title}>
             <NavigationMenuLink
-              className={navigationMenuTriggerStyle()}
               asChild
+              className={navigationMenuTriggerStyle()}
             >
               <Link href={item.href}>{item.title}</Link>
             </NavigationMenuLink>

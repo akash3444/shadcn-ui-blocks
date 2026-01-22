@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/checkbox/checkbox-08.tsx",
-      "content": "import { Checkbox } from \"@/registry/ui/checkbox\";\n\nexport default function CheckboxSizesDemo() {\n  return (\n    <div className=\"flex items-center space-x-2\">\n      <Checkbox defaultChecked />\n      <Checkbox\n        className=\"h-5 w-5 data-[state=checked]:bg-destructive data-[state=checked]:border-destructive dark:text-foreground\"\n        defaultChecked\n      />\n      <Checkbox\n        className=\"h-6 w-6 data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600 dark:text-foreground\"\n        defaultChecked\n      />\n      <Checkbox\n        className=\"h-7 w-7 data-[state=checked]:bg-emerald-600 data-[state=checked]:border-emerald-600 dark:text-foreground\"\n        defaultChecked\n      />\n    </div>\n  );\n}\n",
+      "content": "import { Checkbox } from \"@/registry/ui/checkbox\";\n\nexport default function CheckboxSizesDemo() {\n  return (\n    <div className=\"flex items-center space-x-2\">\n      <Checkbox defaultChecked />\n      <Checkbox\n        className=\"h-5 w-5 data-[state=checked]:border-destructive data-[state=checked]:bg-destructive dark:text-foreground\"\n        defaultChecked\n      />\n      <Checkbox\n        className=\"h-6 w-6 data-[state=checked]:border-blue-600 data-[state=checked]:bg-blue-600 dark:text-foreground\"\n        defaultChecked\n      />\n      <Checkbox\n        className=\"h-7 w-7 data-[state=checked]:border-emerald-600 data-[state=checked]:bg-emerald-600 dark:text-foreground\"\n        defaultChecked\n      />\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
   ]

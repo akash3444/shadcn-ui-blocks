@@ -1,10 +1,10 @@
 "use client";
 
+import { Check, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 import { getInstallationCommand } from "@/lib/shadcn-registry";
-import { Check, Copy } from "lucide-react";
 import { BunLogo, NPMLogo, PnpmLogo, YarnLogo } from "./icons";
 
 const tabs = [
@@ -42,7 +42,7 @@ export const CodeInstallationCommandTabs = ({
       <TabsList>
         {tabs.map((tab) => (
           <TabsTrigger key={tab.value} value={tab.value}>
-            <code className="text-[13px] flex items-center gap-2">
+            <code className="flex items-center gap-2 text-[13px]">
               <tab.icon className="h-4 w-4" /> {tab.name}
             </code>
           </TabsTrigger>
@@ -51,21 +51,21 @@ export const CodeInstallationCommandTabs = ({
 
       {tabs.map((tab) => (
         <TabsContent
+          className="mt-0! rounded-lg border"
           key={tab.value}
           value={tab.value}
-          className="mt-0! border rounded-lg"
         >
-          <div className="h-10 flex items-center justify-between gap-2 rounded-md pl-3 pr-1.5">
-            <code className="text-[13px] grow line-clamp-1">
+          <div className="flex h-10 items-center justify-between gap-2 rounded-md pr-1.5 pl-3">
+            <code className="line-clamp-1 grow text-[13px]">
               {getInstallationCommand(tab.value, registryUrl)}
             </code>
             <Button
-              size="icon"
-              variant="secondary"
-              className="shrink-0 h-7 w-7"
+              className="h-7 w-7 shrink-0"
               onClick={() => {
                 copyToClipboard(getInstallationCommand(tab.value, registryUrl));
               }}
+              size="icon"
+              variant="secondary"
             >
               {isCopied ? (
                 <Check className="h-3.5! w-3.5! text-green-600" />

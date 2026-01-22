@@ -1,6 +1,6 @@
-import { Button } from "@/registry/ui/button";
-import { cn } from "@/lib/utils";
 import { StarIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/registry/ui/button";
 
 const ButtonGradient = ({
   className,
@@ -8,7 +8,7 @@ const ButtonGradient = ({
 }: React.ComponentProps<typeof Button>) => (
   <Button
     className={cn(
-      "bg-linear-to-r from-blue-500 to-indigo-500 text-primary-foreground dark:text-foreground shadow-sm hover:to-blue-500",
+      "bg-linear-to-r from-blue-500 to-indigo-500 text-primary-foreground shadow-sm hover:to-blue-500 dark:text-foreground",
       className
     )}
     {...props}
@@ -16,7 +16,7 @@ const ButtonGradient = ({
 );
 
 const GradientButtonDemo = () => (
-  <div className="flex items-center gap-2 flex-wrap">
+  <div className="flex flex-wrap items-center gap-2">
     <ButtonGradient>Gradient</ButtonGradient>
     <ButtonGradient size="icon">
       <StarIcon />

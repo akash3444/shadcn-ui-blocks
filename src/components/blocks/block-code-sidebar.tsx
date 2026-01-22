@@ -1,4 +1,5 @@
 import { ChevronRight, File, Folder, Loader2 } from "lucide-react";
+import type { NodeItem, pathToTree, TreeNode } from "to-path-tree";
 import {
   Collapsible,
   CollapsibleContent,
@@ -14,13 +15,12 @@ import {
   SidebarMenuSub,
   SidebarProvider,
 } from "@/components/ui/sidebar";
-import { useBlockContext } from "@/providers/block-provider";
-import { NodeItem, pathToTree, TreeNode } from "to-path-tree";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useBlockContext } from "@/providers/block-provider";
 
 export const BlockCodeSidebar = () => {
   const { fileTree } = useBlockContext();
@@ -37,8 +37,8 @@ export const BlockCodeSidebar = () => {
       }
     >
       <Sidebar
-        variant="inset"
         className="w-full data-[slot='sidebar-container']:relative"
+        variant="inset"
       >
         <SidebarGroupContent>
           <SidebarGroup>
@@ -59,12 +59,12 @@ function Tree({ tree }: { tree: ReturnType<typeof pathToTree> }) {
     <>
       {/* Directories */}
       {Object.values(tree.subDirectory ?? {}).map((item, index) => (
-        <TreeItem key={index} item={item} />
+        <TreeItem item={item} key={index} />
       ))}
 
       {/* Files */}
       {tree.items.map((item, index) => (
-        <TreeItem key={index} item={item} />
+        <TreeItem item={item} key={index} />
       ))}
     </>
   );
@@ -82,8 +82,8 @@ function TreeItem({ item }: { item: NodeItem<unknown> | TreeNode<unknown> }) {
       <Tooltip delayDuration={1000}>
         <TooltipTrigger asChild>
           <SidebarMenuButton
+            className="relative font-medium text-base text-foreground/80 data-[state=active]:bg-accent"
             isActive={isActive}
-            className="text-foreground/80 data-[state=active]:bg-accent relative text-base font-medium"
             onClick={() => selectFile(item.path)}
           >
             {isLoadingCode && isActive ? (
@@ -103,11 +103,11 @@ function TreeItem({ item }: { item: NodeItem<unknown> | TreeNode<unknown> }) {
   return (
     <SidebarMenuItem>
       <Collapsible
-        defaultOpen={`/${activeFile}`.startsWith(item.path)}
         className="group/collapsible [&[data-state=open]>button>svg:first-child]:rotate-90"
+        defaultOpen={`/${activeFile}`.startsWith(item.path)}
       >
         <CollapsibleTrigger asChild>
-          <SidebarMenuButton className="text-foreground/80 text-base font-medium">
+          <SidebarMenuButton className="font-medium text-base text-foreground/80">
             <ChevronRight className="transition-transform" />
             <Folder className="fill-muted-foreground stroke-muted-foreground" />
             {item.name}

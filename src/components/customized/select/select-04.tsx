@@ -1,3 +1,6 @@
+import { ChevronDown } from "lucide-react";
+import { Select as SelectPrimitive } from "radix-ui";
+import { cn } from "@/lib/utils";
 import {
   Select,
   SelectContent,
@@ -6,9 +9,6 @@ import {
   SelectLabel,
   SelectValue,
 } from "@/registry/ui/select";
-import { cn } from "@/lib/utils";
-import { Select as SelectPrimitive } from "radix-ui";
-import { ChevronDown } from "lucide-react";
 
 export default function SelectWithCustomDropdownIconDemo() {
   return (

@@ -1,4 +1,4 @@
-import React, { JSX } from "react";
+import React, { type JSX } from "react";
 import { NavbarLayout } from "./block-layouts";
 
 export type BlockCategory = {

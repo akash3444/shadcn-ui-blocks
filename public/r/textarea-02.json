@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/textarea/textarea-02.tsx",
-      "content": "import { Textarea } from \"@/registry/ui/textarea\";\n\nexport default function TextareaWithBackgroundColorDemo() {\n  return (\n    <Textarea\n      placeholder=\"Type your message here.\"\n      className=\"bg-muted shadow-none\"\n    />\n  );\n}\n",
+      "content": "import { Textarea } from \"@/registry/ui/textarea\";\n\nexport default function TextareaWithBackgroundColorDemo() {\n  return (\n    <Textarea\n      className=\"bg-muted shadow-none\"\n      placeholder=\"Type your message here.\"\n    />\n  );\n}\n",
       "type": "registry:component"
     }
   ]

@@ -4,8 +4,8 @@ export default function SeparatorDemo() {
   return (
     <div>
       <div className="space-y-1">
-        <h4 className="text-sm font-semibold leading-none">Radix Primitives</h4>
-        <p className="text-sm text-muted-foreground">
+        <h4 className="font-semibold text-sm leading-none">Radix Primitives</h4>
+        <p className="text-muted-foreground text-sm">
           An open-source UI component library.
         </p>
       </div>

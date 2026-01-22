@@ -1,3 +1,12 @@
+import {
+  Copy,
+  Ellipsis,
+  ExternalLink,
+  Eye,
+  MessageCircle,
+  Search,
+  User,
+} from "lucide-react";
 import { Button } from "@/registry/ui/button";
 import {
   DropdownMenu,
@@ -9,21 +18,12 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/registry/ui/dropdown-menu";
-import {
-  Copy,
-  Ellipsis,
-  ExternalLink,
-  Eye,
-  MessageCircle,
-  Search,
-  User,
-} from "lucide-react";
 
 export default function DropdownMenuWithSubMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button size="icon" variant="outline">
           <Ellipsis />
         </Button>
       </DropdownMenuTrigger>

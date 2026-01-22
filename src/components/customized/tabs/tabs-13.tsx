@@ -22,24 +22,24 @@ const tabs = [
 export default function VerticalTabsDemo() {
   return (
     <Tabs
-      orientation="vertical"
+      className="flex w-full max-w-md flex-row items-start justify-center gap-4"
       defaultValue={tabs[0].value}
-      className="max-w-md w-full flex flex-row items-start gap-4 justify-center"
+      orientation="vertical"
     >
-      <TabsList className="shrink-0 grid grid-cols-1 h-auto w-fit gap-1">
+      <TabsList className="grid h-auto w-fit shrink-0 grid-cols-1 gap-1">
         {tabs.map((tab) => (
-          <TabsTrigger key={tab.value} value={tab.value} className="py-1.5">
+          <TabsTrigger className="py-1.5" key={tab.value} value={tab.value}>
             {tab.name}
           </TabsTrigger>
         ))}
       </TabsList>
 
-      <div className="h-40 flex items-center justify-center max-w-xs w-full border rounded-md font-medium text-muted-foreground">
+      <div className="flex h-40 w-full max-w-xs items-center justify-center rounded-md border font-medium text-muted-foreground">
         {tabs.map((tab) => (
           <TabsContent
+            className="flex h-full items-center justify-center"
             key={tab.value}
             value={tab.value}
-            className="flex items-center justify-center h-full"
           >
             {tab.name} Content
           </TabsContent>

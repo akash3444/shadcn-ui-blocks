@@ -1,5 +1,7 @@
 "use client";
 
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import React from "react";
 import { Button } from "@/registry/ui/button";
 import { Label } from "@/registry/ui/label";
 import {
@@ -14,8 +16,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/ui/select";
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
-import React from "react";
 
 export default function TablePagination() {
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -23,12 +23,12 @@ export default function TablePagination() {
   const TOTAL_ITEMS = 100;
 
   return (
-    <div className="w-full flex items-center justify-between gap-2">
+    <div className="flex w-full items-center justify-between gap-2">
       <div className="flex items-center gap-2">
         <Label className="whitespace-nowrap">Rows per page:</Label>
         <Select
-          value={rowsPerPage.toString()}
           onValueChange={(rowsPerPage) => setRowsPerPage(+rowsPerPage)}
+          value={rowsPerPage.toString()}
         >
           <SelectTrigger>
             <SelectValue />
@@ -43,7 +43,7 @@ export default function TablePagination() {
       </div>
 
       <div className="flex items-center gap-2">
-        <span className="text-sm text-muted-foreground whitespace-nowrap">
+        <span className="whitespace-nowrap text-muted-foreground text-sm">
           {(page - 1) * rowsPerPage + 1}-{page * rowsPerPage} of {TOTAL_ITEMS}
         </span>
 
@@ -52,9 +52,9 @@ export default function TablePagination() {
             <PaginationItem>
               <Button
                 aria-label="Go to previous page"
+                disabled={page === 1}
                 size="icon"
                 variant="ghost"
-                disabled={page === 1}
               >
                 <ChevronLeftIcon className="h-4 w-4" />
               </Button>
@@ -62,9 +62,9 @@ export default function TablePagination() {
             <PaginationItem>
               <Button
                 aria-label="Go to next page"
+                disabled={page * rowsPerPage >= TOTAL_ITEMS}
                 size="icon"
                 variant="ghost"
-                disabled={page * rowsPerPage >= TOTAL_ITEMS}
               >
                 <ChevronRightIcon className="h-4 w-4" />
               </Button>

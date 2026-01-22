@@ -1,9 +1,9 @@
 "use client";
 
-import { useBlockContext } from "@/providers/block-provider";
 import { File } from "lucide-react";
-import { BlockCodeSidebar } from "./block-code-sidebar";
+import { useBlockContext } from "@/providers/block-provider";
 import { CopyButton } from "../copy-button";
+import { BlockCodeSidebar } from "./block-code-sidebar";
 
 export const BlockCodeExplorer = () => {
   const { activeFile, code } = useBlockContext();
@@ -11,7 +11,7 @@ export const BlockCodeExplorer = () => {
   return (
     <div className="flex divide-x overflow-hidden rounded-lg border">
       <div className="w-full max-w-[20rem] shrink-0">
-        <div className="bg-sidebar flex h-12 items-center border-b pr-4 pl-7 font-medium">
+        <div className="flex h-12 items-center border-b bg-sidebar pr-4 pl-7 font-medium">
           Explorer
         </div>
         <div className="w-full">
@@ -19,10 +19,10 @@ export const BlockCodeExplorer = () => {
         </div>
       </div>
       <div className="flex min-w-0 flex-1 flex-col">
-        <div className="bg-sidebar flex h-12 shrink-0 items-center justify-between gap-4 border-b pe-2 ps-5">
+        <div className="flex h-12 shrink-0 items-center justify-between gap-4 border-b bg-sidebar ps-5 pe-2">
           <div className="flex items-center gap-2">
             <File className="size-4" />
-            <p className="leading-none font-medium">{activeFile}</p>
+            <p className="font-medium leading-none">{activeFile}</p>
           </div>
           <CopyButton content={code ?? ""} />
         </div>
@@ -40,8 +40,8 @@ const CodeBlock = () => {
   return (
     <div className="relative h-full">
       <div
+        className="h-full max-h-svh overflow-auto text-sm [&>pre]:h-full [&>pre]:overflow-x-auto [&>pre]:pt-4 [&_.line]:leading-[1.7]"
         dangerouslySetInnerHTML={{ __html: codeHtml ?? "" }}
-        className="h-full max-h-svh overflow-auto text-sm [&_.line]:leading-[1.7] [&>pre]:h-full [&>pre]:overflow-x-auto [&>pre]:pt-4"
       />
     </div>
   );

@@ -2,8 +2,8 @@ import { Badge } from "@/registry/ui/badge";
 
 const BadgeGradientOutlineDemo = () => {
   return (
-    <div className="bg-linear-to-r from-sky-400 to-indigo-600 rounded-full p-0.5 flex items-center justify-center">
-      <Badge className="bg-background text-foreground rounded-full border-none">
+    <div className="flex items-center justify-center rounded-full bg-linear-to-r from-sky-400 to-indigo-600 p-0.5">
+      <Badge className="rounded-full border-none bg-background text-foreground">
         Gradient Outline
       </Badge>
     </div>

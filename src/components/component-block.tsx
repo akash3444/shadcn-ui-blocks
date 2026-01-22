@@ -1,16 +1,16 @@
-import { getFileContent } from "@/lib/file";
 import { Copy, Info } from "lucide-react";
 import dynamic from "next/dynamic";
-import { FC, ReactNode } from "react";
-import { CopyToClipboardButton } from "./copy-to-clipboard-button";
-import { CodeDialog } from "./customized/code-dialog";
+import type { FC, ReactNode } from "react";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { cn } from "@/lib/utils";
 import { config } from "@/config";
+import { getFileContent } from "@/lib/file";
+import { cn } from "@/lib/utils";
+import { CopyToClipboardButton } from "./copy-to-clipboard-button";
+import { CodeDialog } from "./customized/code-dialog";
 
 interface BlockProps {
   index: number;
@@ -50,21 +50,22 @@ const ComponentBlock: FC<BlockProps> = async ({
   return (
     <div
       className={cn(
-        "bg-background border rounded-lg flex flex-col shadow-xs/2 dark:shadow/30",
+        "dark:shadow/30 flex flex-col rounded-lg border bg-background shadow-xs/2",
         className
       )}
     >
-      <div className="h-10 flex items-center justify-between border-b border-border/50 dark:border-border/80 pl-4 pr-3">
+      <div className="flex h-10 items-center justify-between border-border/50 border-b pr-3 pl-4 dark:border-border/80">
         <div className="flex items-center gap-2">
-
-          <span className="text-sm font-mono text-muted-foreground">{(index + 1).toString().padStart(2, "0")}.</span>
-          <span className="text-sm font-medium">{title}</span>
+          <span className="font-mono text-muted-foreground text-sm">
+            {(index + 1).toString().padStart(2, "0")}.
+          </span>
+          <span className="font-medium text-sm">{title}</span>
           {credit && (
             <a
+              className="text-muted-foreground text-xs hover:text-foreground hover:underline"
               href={credit.link}
-              target="_blank"
               rel="noreferrer noopener"
-              className="text-xs hover:underline hover:text-foreground text-muted-foreground"
+              target="_blank"
             >
               (Credits to {credit?.label})
             </a>
@@ -82,17 +83,17 @@ const ComponentBlock: FC<BlockProps> = async ({
         </div>
         <div className="flex items-center">
           <CopyToClipboardButton
-            size="icon"
-            variant="ghost"
             className="h-8 w-8 text-muted-foreground"
             content={code}
+            size="icon"
+            variant="ghost"
           >
             <Copy />
           </CopyToClipboardButton>
           <CodeDialog code={code} registryUrl={registryUrl} />
         </div>
       </div>
-      <div className="flex-1 min-h-32 px-4 py-5 w-full rounded flex items-center justify-center">
+      <div className="flex min-h-32 w-full flex-1 items-center justify-center rounded px-4 py-5">
         <DynamicComponent />
       </div>
     </div>

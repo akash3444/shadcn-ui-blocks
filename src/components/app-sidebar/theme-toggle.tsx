@@ -1,10 +1,9 @@
 "use client";
 
-import { useTheme } from "next-themes";
-import { Button } from "@/components/ui/button";
-import { MoonIcon, SunIcon } from "lucide-react";
-import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export const ThemeToggle = ({
   className,
@@ -29,25 +28,25 @@ export const ThemeToggle = ({
   // To avoid flickering
   if (!mounted) {
     return (
-      <Button onClick={toggleTheme} variant="outline" size="icon" {...props} />
+      <Button onClick={toggleTheme} size="icon" variant="outline" {...props} />
     );
   }
 
   return (
-    <Button onClick={toggleTheme} variant="outline" size="icon" {...props}>
+    <Button onClick={toggleTheme} size="icon" variant="outline" {...props}>
       <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
+        className="size-4.5"
         fill="none"
+        height="24"
         stroke="currentColor"
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="size-4.5"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M0 0h24v24H0z" fill="none" stroke="none" />
         <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
         <path d="M12 3l0 18" />
         <path d="M12 9l4.65 -4.65" />

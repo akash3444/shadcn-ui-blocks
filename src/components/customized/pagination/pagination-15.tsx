@@ -8,24 +8,24 @@ import {
 
 export default function PaginationDemo() {
   return (
-    <div className="max-w-xs w-full flex items-center justify-between gap-3">
-      <p className="flex-1 text-sm text-muted-foreground whitespace-nowrap">
+    <div className="flex w-full max-w-xs items-center justify-between gap-3">
+      <p className="flex-1 whitespace-nowrap text-muted-foreground text-sm">
         Showing 5 results
       </p>
 
       <Pagination className="justify-end">
-        <PaginationContent className="gap-0 border rounded-lg divide-x overflow-hidden">
+        <PaginationContent className="gap-0 divide-x overflow-hidden rounded-lg border">
           <PaginationItem>
             <PaginationPrevious
-              href="#"
               className="rounded-none *:[span]:hidden"
+              href="#"
               size="icon-sm"
             />
           </PaginationItem>
           <PaginationItem>
             <PaginationNext
-              href="#"
               className="rounded-none *:[span]:hidden"
+              href="#"
               size="icon-sm"
             />
           </PaginationItem>

@@ -1,5 +1,7 @@
 "use client";
 
+import { Check, ChevronsUpDown } from "lucide-react";
+import { useState } from "react";
 import { Avatar, AvatarFallback } from "@/registry/ui/avatar";
 import {
   DropdownMenu,
@@ -8,8 +10,6 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/registry/ui/dropdown-menu";
-import { Check, ChevronsUpDown } from "lucide-react";
-import { useState } from "react";
 
 const workspaces = [
   {
@@ -34,23 +34,23 @@ export default function WorkspaceSwitcher() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="flex items-center gap-2 bg-accent py-2.5 px-3 rounded-lg">
-        <Avatar className="rounded-lg h-8 w-8">
+      <DropdownMenuTrigger className="flex items-center gap-2 rounded-lg bg-accent px-3 py-2.5">
+        <Avatar className="h-8 w-8 rounded-lg">
           <AvatarFallback className="rounded-lg bg-primary text-primary-foreground">
             {selectedWorkspace.name[0]}
           </AvatarFallback>
         </Avatar>
-        <div className="text-start flex flex-col gap-1 leading-none">
-          <span className="text-sm leading-none font-semibold truncate max-w-[17ch]">
+        <div className="flex flex-col gap-1 text-start leading-none">
+          <span className="max-w-[17ch] truncate font-semibold text-sm leading-none">
             {selectedWorkspace.name}
           </span>
-          <span className="text-xs text-muted-foreground truncate max-w-[20ch]">
+          <span className="max-w-[20ch] truncate text-muted-foreground text-xs">
             {selectedWorkspace.createdBy}
           </span>
         </div>
         <ChevronsUpDown className="ml-6 h-4 w-4 text-muted-foreground" />
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-52" align="start">
+      <DropdownMenuContent align="start" className="w-52">
         <DropdownMenuLabel>Workspaces</DropdownMenuLabel>
         {workspaces.map((workspace) => (
           <DropdownMenuItem
@@ -58,14 +58,14 @@ export default function WorkspaceSwitcher() {
             onClick={() => setSelectedWorkspace(workspace)}
           >
             <div className="flex items-center gap-2">
-              <Avatar className="rounded-md h-8 w-8">
+              <Avatar className="h-8 w-8 rounded-md">
                 <AvatarFallback className="rounded-md bg-primary/10 text-foreground">
                   {workspace.name[0]}
                 </AvatarFallback>
               </Avatar>
               <div className="flex flex-col">
                 <span>{workspace.name}</span>
-                <span className="text-xs text-muted-foreground">
+                <span className="text-muted-foreground text-xs">
                   {workspace.createdBy}
                 </span>
               </div>

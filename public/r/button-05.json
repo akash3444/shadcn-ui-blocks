@@ -13,7 +13,7 @@
   "files": [
     {
       "path": "src/components/customized/button/button-05.tsx",
-      "content": "import { Button } from \"@/registry/ui/button\";\nimport { ArrowRight, Star } from \"lucide-react\";\n\nconst IconButtonDemo = () => {\n  return (\n    <div className=\"flex items-center gap-2\">\n      <Button size=\"icon\">\n        <Star />\n      </Button>\n      <Button>\n        <Star /> Star\n      </Button>\n      <Button>\n        Read More <ArrowRight />\n      </Button>\n    </div>\n  );\n};\n\nexport default IconButtonDemo;\n",
+      "content": "import { ArrowRight, Star } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nconst IconButtonDemo = () => {\n  return (\n    <div className=\"flex items-center gap-2\">\n      <Button size=\"icon\">\n        <Star />\n      </Button>\n      <Button>\n        <Star /> Star\n      </Button>\n      <Button>\n        Read More <ArrowRight />\n      </Button>\n    </div>\n  );\n};\n\nexport default IconButtonDemo;\n",
       "type": "registry:component"
     }
   ]

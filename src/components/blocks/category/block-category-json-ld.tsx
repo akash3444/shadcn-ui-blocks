@@ -1,7 +1,7 @@
+import type { BreadcrumbList, FAQPage, Graph, WebSite } from "schema-dts";
 import { app } from "@/config/app";
 import { faqs } from "@/description/faq";
 import { capitalize } from "@/lib/utils";
-import { BreadcrumbList, FAQPage, Graph, WebSite } from "schema-dts";
 
 const BlockCategoryJsonLd = ({ category }: { category: string }) => {
   const breadCrumbList: BreadcrumbList = {
@@ -52,10 +52,10 @@ const BlockCategoryJsonLd = ({ category }: { category: string }) => {
   return (
     <>
       <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(jsonLd),
         }}
+        type="application/ld+json"
       />
     </>
   );

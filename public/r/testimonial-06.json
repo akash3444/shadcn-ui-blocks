@@ -4,13 +4,8 @@
   "type": "registry:block",
   "title": "Testimonial 06",
   "description": "A simple testimonial block",
-  "dependencies": [
-    "lucide-react"
-  ],
-  "registryDependencies": [
-    "avatar",
-    "carousel"
-  ],
+  "dependencies": ["lucide-react"],
+  "registryDependencies": ["avatar", "carousel"],
   "files": [
     {
       "path": "src/blocks/testimonial-06/testimonial-06.tsx",

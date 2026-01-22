@@ -1,13 +1,13 @@
 "use client";
 
 import { Check, Clipboard } from "lucide-react";
-import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
+import { Button } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Button } from "@/components/ui/button";
+import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 
 export const CopyButton = ({ content }: { content: string }) => {
   const { copyToClipboard, isCopied } = useCopyToClipboard();
@@ -16,9 +16,9 @@ export const CopyButton = ({ content }: { content: string }) => {
     <Tooltip delayDuration={1000}>
       <TooltipTrigger asChild>
         <Button
-          variant="ghost"
-          size="icon"
           onClick={() => copyToClipboard(content)}
+          size="icon"
+          variant="ghost"
         >
           {isCopied ? <Check /> : <Clipboard />}
         </Button>

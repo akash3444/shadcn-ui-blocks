@@ -1,8 +1,8 @@
 "use client";
 
-import { refreshCarbonAd } from "@/lib/carbon-ad";
 import { usePathname } from "next/navigation";
-import { HTMLAttributes, useEffect, useRef } from "react";
+import { type HTMLAttributes, useEffect, useRef } from "react";
+import { refreshCarbonAd } from "@/lib/carbon-ad";
 
 export default function CarbonAd({
   className,
@@ -18,7 +18,8 @@ export default function CarbonAd({
     reference.current.innerHTML = "";
     const s = document.createElement("script");
     s.id = "_carbonads_js";
-    s.src = `//cdn.carbonads.com/carbon.js?serve=CW7ILKQL&placement=wwwshadcnui-blockscom`;
+    s.src =
+      "//cdn.carbonads.com/carbon.js?serve=CW7ILKQL&placement=wwwshadcnui-blockscom";
     reference.current.appendChild(s);
 
     if (mounted.current) {

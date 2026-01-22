@@ -1,13 +1,13 @@
+import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/registry/blocks/navbar-03/components/logo";
 import { NavMenu } from "@/registry/blocks/navbar-03/components/nav-menu";
 import { NavigationSheet } from "@/registry/blocks/navbar-03/components/navigation-sheet";
-import { ArrowUpRight } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="h-16 bg-background border-b">
-      <div className="h-full flex items-center justify-between max-w-(--breakpoint-lg) mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="h-16 border-b bg-background">
+      <div className="mx-auto flex h-full max-w-(--breakpoint-lg) items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-8">
           <Logo />
 

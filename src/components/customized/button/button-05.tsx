@@ -1,5 +1,5 @@
-import { Button } from "@/registry/ui/button";
 import { ArrowRight, Star } from "lucide-react";
+import { Button } from "@/registry/ui/button";
 
 const IconButtonDemo = () => {
   return (

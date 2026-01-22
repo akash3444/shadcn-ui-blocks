@@ -6,37 +6,37 @@ export default function AvatarWithStatusDemo() {
       {/* Online */}
       <div className="relative">
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
-        <div className="size-2 ring-2 ring-background rounded-full bg-green-500 absolute bottom-0 right-0"></div>
+        <div className="absolute right-0 bottom-0 size-2 rounded-full bg-green-500 ring-2 ring-background" />
       </div>
 
       {/* DND */}
       <div className="relative">
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
-        <div className="size-2 ring-2 ring-background rounded-full bg-red-500 absolute bottom-0 right-0"></div>
+        <div className="absolute right-0 bottom-0 size-2 rounded-full bg-red-500 ring-2 ring-background" />
       </div>
 
       {/* Busy */}
       <div className="relative">
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
-        <div className="size-2 ring-2 ring-background rounded-full bg-yellow-500 absolute bottom-0 right-0"></div>
+        <div className="absolute right-0 bottom-0 size-2 rounded-full bg-yellow-500 ring-2 ring-background" />
       </div>
 
       {/* Offline */}
       <div className="relative">
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
-        <div className="size-2 ring-2 ring-background border-2 border-muted-foreground rounded-full bg-background absolute bottom-0 right-0"></div>
+        <div className="absolute right-0 bottom-0 size-2 rounded-full border-2 border-muted-foreground bg-background ring-2 ring-background" />
       </div>
     </div>
   );

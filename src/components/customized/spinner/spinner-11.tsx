@@ -1,7 +1,5 @@
-import React from "react";
-
 const SpinnerCircle5 = () => (
-  <div className="w-7 h-7 border-[3px] border-white border-t-primary border-b-primary rounded-full animate-spin" />
+  <div className="h-7 w-7 animate-spin rounded-full border-[3px] border-white border-t-primary border-b-primary" />
 );
 
 export default SpinnerCircle5;

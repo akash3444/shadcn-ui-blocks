@@ -1,14 +1,14 @@
-import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
+import { cn } from "@/lib/utils";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import type { WebSite, WithContext } from "schema-dts";
 import { ThemeToggle } from "@/components/app-sidebar/theme-toggle";
-import { CSPostHogProvider } from "@/providers/posthog-provider";
-import { WebSite, WithContext } from "schema-dts";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { PackageManagerProvider } from "@/providers/package-manager-provider";
+import { CSPostHogProvider } from "@/providers/posthog-provider";
 
 const inter = localFont({
   src: [
@@ -100,26 +100,26 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <script
-          defer
-          data-website-id="67bf0ef528e2eaab259e0c50"
           data-domain="www.shadcnui-blocks.com"
+          data-website-id="67bf0ef528e2eaab259e0c50"
+          defer
           src="https://datafa.st/js/script.js"
         />
-      <meta name="google-adsense-account" content="ca-pub-4493596981598123" />
+        <meta content="ca-pub-4493596981598123" name="google-adsense-account" />
       </head>
       <body className={cn(inter.variable, geistMono.variable, "antialiased")}>
         <script
-          type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(jsonLd),
           }}
+          type="application/ld+json"
         />
 
         <CSPostHogProvider>
           <ThemeProvider attribute="class">
             <TooltipProvider>
               <PackageManagerProvider>{children}</PackageManagerProvider>
-              <div className="fixed bottom-6 right-6">
+              <div className="fixed right-6 bottom-6">
                 <ThemeToggle />
               </div>
             </TooltipProvider>

@@ -1,7 +1,7 @@
 "use client";
-import { codeToHtml } from "@/lib/shiki";
 import { Loader2Icon } from "lucide-react";
 import { useLayoutEffect, useState } from "react";
+import { codeToHtml } from "@/lib/shiki";
 
 export function CodeBlock({ code }: { code: string }) {
   const [codeHtml, setCodeHtml] = useState<string | null>(null);
@@ -13,8 +13,8 @@ export function CodeBlock({ code }: { code: string }) {
   return codeHtml ? (
     <div dangerouslySetInnerHTML={{ __html: codeHtml }} />
   ) : (
-    <div className="h-full w-full flex items-center justify-center">
-      <Loader2Icon className="animate-spin h-8 w-8" />
+    <div className="flex h-full w-full items-center justify-center">
+      <Loader2Icon className="h-8 w-8 animate-spin" />
     </div>
   );
 }

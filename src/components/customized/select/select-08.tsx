@@ -1,5 +1,7 @@
 "use client";
 
+import { MoonIcon, SunIcon } from "lucide-react";
+import { useTheme } from "next-themes";
 import {
   Select,
   SelectContent,
@@ -9,14 +11,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/ui/select";
-import { MoonIcon, SunIcon } from "lucide-react";
-import { useTheme } from "next-themes";
 
 export default function ThemeSelector() {
   const { resolvedTheme, setTheme } = useTheme();
 
   return (
-    <Select value={resolvedTheme} onValueChange={setTheme}>
+    <Select onValueChange={setTheme} value={resolvedTheme}>
       <SelectTrigger className="w-[180px]">
         <SelectValue placeholder="Select a theme" />
       </SelectTrigger>

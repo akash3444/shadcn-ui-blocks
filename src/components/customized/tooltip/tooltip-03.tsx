@@ -9,7 +9,7 @@ import {
 export default function TooltipDirectionsDemo() {
   return (
     <TooltipProvider>
-      <div className="flex gap-2 flex-wrap">
+      <div className="flex flex-wrap gap-2">
         <Tooltip>
           <TooltipTrigger asChild>
             <Button variant="outline">Left</Button>

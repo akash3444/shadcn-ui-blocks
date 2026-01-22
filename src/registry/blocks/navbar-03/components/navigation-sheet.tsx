@@ -1,3 +1,6 @@
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { Menu } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -5,14 +8,11 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-import { Menu } from "lucide-react";
-import Link from "next/link";
+import { Logo } from "@/registry/blocks/navbar-03/components/logo";
 import {
   foods,
   travelMenuItems,
 } from "@/registry/blocks/navbar-03/config/navbar";
-import { Logo } from "@/registry/blocks/navbar-03/components/logo";
 
 export const NavigationSheet = () => {
   return (
@@ -22,25 +22,25 @@ export const NavigationSheet = () => {
       </VisuallyHidden>
 
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button size="icon" variant="outline">
           <Menu />
         </Button>
       </SheetTrigger>
       <SheetContent className="px-6 py-3">
         <Logo />
 
-        <div className="mt-12 text-base space-y-4">
-          <Link href="#" className="inline-block">
+        <div className="mt-12 space-y-4 text-base">
+          <Link className="inline-block" href="#">
             Home
           </Link>
 
           <div>
             <div className="font-bold">Food</div>
-            <ul className="mt-2 space-y-3 ml-1 pl-4 border-l">
+            <ul className="mt-2 ml-1 space-y-3 border-l pl-4">
               {foods.map((foodItem) => (
                 <li key={foodItem.title}>
-                  <Link href="#" className="flex items-center gap-2">
-                    <foodItem.icon className="h-5 w-5 mr-2 text-muted-foreground" />
+                  <Link className="flex items-center gap-2" href="#">
+                    <foodItem.icon className="mr-2 h-5 w-5 text-muted-foreground" />
                     {foodItem.title}
                   </Link>
                 </li>
@@ -50,11 +50,11 @@ export const NavigationSheet = () => {
 
           <div>
             <div className="font-bold">Travel</div>
-            <ul className="mt-2 space-y-3 ml-1 pl-4 border-l">
+            <ul className="mt-2 ml-1 space-y-3 border-l pl-4">
               {travelMenuItems.map((item) => (
                 <li key={item.title}>
-                  <Link href="#" className="flex items-center gap-2">
-                    <item.icon className="h-5 w-5 mr-2 text-muted-foreground" />
+                  <Link className="flex items-center gap-2" href="#">
+                    <item.icon className="mr-2 h-5 w-5 text-muted-foreground" />
                     {item.title}
                   </Link>
                 </li>

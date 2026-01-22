@@ -1,17 +1,16 @@
 "use client";
 
 import * as React from "react";
-
+import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/registry/ui/card";
 import {
   Carousel,
+  type CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  type CarouselApi,
 } from "@/registry/ui/carousel";
-import { cn } from "@/lib/utils";
 
 export default function CarouselWithThumbs() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -40,13 +39,13 @@ export default function CarouselWithThumbs() {
 
   return (
     <div className="mx-auto max-w-xs">
-      <Carousel setApi={setApi} className="w-full max-w-xs">
+      <Carousel className="w-full max-w-xs" setApi={setApi}>
         <CarouselContent>
           {Array.from({ length: 12 }).map((_, index) => (
             <CarouselItem key={index}>
               <Card>
                 <CardContent className="flex aspect-video items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
+                  <span className="font-semibold text-4xl">{index + 1}</span>
                 </CardContent>
               </Card>
             </CarouselItem>
@@ -55,19 +54,19 @@ export default function CarouselWithThumbs() {
       </Carousel>
 
       <Carousel className="mt-4 w-full max-w-xs">
-        <CarouselContent className="flex my-1">
+        <CarouselContent className="my-1 flex">
           {Array.from({ length: count }).map((_, index) => (
             <CarouselItem
-              key={index}
               className={cn(
                 "basis-1/4 cursor-pointer",
                 current === index + 1 ? "opacity-100" : "opacity-50"
               )}
+              key={index}
               onClick={() => handleThumbClick(index)}
             >
-              <Card className="aspect-square p-0 flex items-center justify-center">
-                <CardContent className="p-0 flex items-center justify-center">
-                  <div className="text-2xl font-semibold">{index + 1}</div>
+              <Card className="flex aspect-square items-center justify-center p-0">
+                <CardContent className="flex items-center justify-center p-0">
+                  <div className="font-semibold text-2xl">{index + 1}</div>
                 </CardContent>
               </Card>
             </CarouselItem>

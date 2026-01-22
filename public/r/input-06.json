@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "src/components/customized/input/input-06.tsx",
-      "content": "import { Button } from \"@/registry/ui/button\";\nimport { Input } from \"@/registry/ui/input\";\n\nexport default function InputWithButtonDemo() {\n  return (\n    <div className=\"w-full max-w-xs flex items-center gap-2\">\n      <Input type=\"email\" placeholder=\"Email\" />\n      <Button className=\"shadow\">Subscribe</Button>\n    </div>\n  );\n}\n",
+      "content": "import { Button } from \"@/registry/ui/button\";\nimport { Input } from \"@/registry/ui/input\";\n\nexport default function InputWithButtonDemo() {\n  return (\n    <div className=\"flex w-full max-w-xs items-center gap-2\">\n      <Input placeholder=\"Email\" type=\"email\" />\n      <Button className=\"shadow\">Subscribe</Button>\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
   ]

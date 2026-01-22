@@ -1,20 +1,20 @@
 "use client";
 
+import {
+  createContext,
+  type ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
+import type { pathToTree } from "to-path-tree";
 import { BLOCK_PRICING, blocks } from "@/config/registry";
 import { useBlockTheme } from "@/hooks/use-block-theme";
 import { getFileContent } from "@/lib/file";
 import { getFileTree } from "@/lib/file-tree";
 import { codeToHtml } from "@/lib/shiki";
-import { BlockScreenSize, BlockScreenSizeUnion } from "@/types/blocks";
-import { Theme } from "@/types/theme";
-import {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
-import { pathToTree } from "to-path-tree";
+import type { BlockScreenSize, BlockScreenSizeUnion } from "@/types/blocks";
+import type { Theme } from "@/types/theme";
 
 const BlockContext = createContext<{
   codeHtml: string | null;

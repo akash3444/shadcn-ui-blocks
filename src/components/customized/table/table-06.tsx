@@ -112,10 +112,10 @@ const products = [
 
 export default function StickyHeaderTableDemo() {
   return (
-    <div className="grid w-full [&>div]:max-h-[300px] [&>div]:border [&>div]:rounded">
+    <div className="grid w-full [&>div]:max-h-[300px] [&>div]:rounded [&>div]:border">
       <Table>
         <TableHeader>
-          <TableRow className="*:whitespace-nowrap sticky top-0 bg-background after:content-[''] after:inset-x-0 after:h-px after:bg-border after:absolute after:bottom-0">
+          <TableRow className="sticky top-0 bg-background *:whitespace-nowrap after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-border after:content-['']">
             <TableHead className="pl-4">ID</TableHead>
             <TableHead>Product Name</TableHead>
             <TableHead>Category</TableHead>
@@ -129,8 +129,8 @@ export default function StickyHeaderTableDemo() {
         <TableBody className="overflow-hidden">
           {products.map((product) => (
             <TableRow
+              className="*:whitespace-nowrap odd:bg-muted/50"
               key={product.id}
-              className="odd:bg-muted/50 *:whitespace-nowrap"
             >
               <TableCell className="pl-4">{product.id}</TableCell>
               <TableCell className="font-medium">{product.name}</TableCell>

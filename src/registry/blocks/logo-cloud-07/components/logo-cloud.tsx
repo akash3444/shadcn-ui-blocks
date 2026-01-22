@@ -12,16 +12,16 @@ import { Marquee } from "@/components/ui/marquee";
 
 const LogoCloud = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center px-6">
+    <div className="flex min-h-screen items-center justify-center px-6">
       <div className="overflow-hidden">
-        <p className="text-center text-xl font-medium">
+        <p className="text-center font-medium text-xl">
           More than 2.2 million companies worldwide already trust us
         </p>
 
         <div className="mt-14 max-w-(--breakpoint-xl) space-y-8">
           <Marquee
+            className="mask-x-from-70% mask-x-to-90% [--duration:40s] [&_svg]:mr-10"
             pauseOnHover
-            className="[--duration:40s] [&_svg]:mr-10 mask-x-from-70% mask-x-to-90%"
           >
             <Logo01 />
             <Logo02 />
@@ -33,9 +33,9 @@ const LogoCloud = () => {
             <Logo08 />
           </Marquee>
           <Marquee
+            className="mask-x-from-70% mask-x-to-90% [--duration:40s] [&_svg]:mr-10"
             pauseOnHover
             reverse
-            className="[--duration:40s] [&_svg]:mr-10 mask-x-from-70% mask-x-to-90%"
           >
             <Logo01 />
             <Logo02 />

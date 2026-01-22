@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/switch/switch-01.tsx",
-      "content": "import { Switch } from \"@/registry/ui/switch\";\nimport React from \"react\";\n\nconst SwitchDemo = () => {\n  return <Switch />;\n};\n\nexport default SwitchDemo;\n",
+      "content": "import { Switch } from \"@/registry/ui/switch\";\n\nconst SwitchDemo = () => {\n  return <Switch />;\n};\n\nexport default SwitchDemo;\n",
       "type": "registry:component"
     }
   ]

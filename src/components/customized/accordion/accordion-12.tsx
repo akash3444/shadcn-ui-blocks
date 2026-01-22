@@ -1,11 +1,11 @@
+import { Contrast, Palette, Zap } from "lucide-react";
+import { cn } from "@/lib/utils";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/registry/ui/accordion";
-import { cn } from "@/lib/utils";
-import { Contrast, Palette, Zap } from "lucide-react";
 
 const items = [
   {
@@ -31,18 +31,18 @@ const items = [
 export default function AccordionItemDisabledDemo() {
   return (
     <Accordion
+      className="my-4 w-full max-w-lg"
+      collapsible
       defaultValue="item-0"
       type="single"
-      collapsible
-      className="max-w-lg my-4 w-full"
     >
       {items.map(({ title, content, icon: Icon, disabled }, index) => (
         <AccordionItem key={index} value={`item-${index}`}>
           <AccordionTrigger
-            disabled={disabled}
             className={cn({
               "opacity-50": disabled,
             })}
+            disabled={disabled}
           >
             <div className="flex items-start gap-3">
               <Icon />

@@ -1,3 +1,10 @@
+import {
+  HeartIcon,
+  MessageCircleIcon,
+  MoreHorizontalIcon,
+  ShareIcon,
+} from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/registry/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/registry/ui/card";
 import {
@@ -8,25 +15,18 @@ import {
   ItemMedia,
   ItemTitle,
 } from "@/registry/ui/item";
-import {
-  HeartIcon,
-  MessageCircleIcon,
-  MoreHorizontalIcon,
-  ShareIcon,
-} from "lucide-react";
-import Image from "next/image";
 
 export default function CardPost() {
   return (
-    <Card className="w-full max-w-xs shadow-none py-0 gap-0">
-      <CardHeader className="flex flex-row items-center justify-between py-2.5 -mr-1">
-        <Item className="w-full p-0 gap-2.5">
+    <Card className="w-full max-w-xs gap-0 py-0 shadow-none">
+      <CardHeader className="-mr-1 flex flex-row items-center justify-between py-2.5">
+        <Item className="w-full gap-2.5 p-0">
           <ItemMedia>
             <Image
-              src="https://github.com/shadcn.png"
-              className="h-8 w-8 rounded-full bg-secondary object-contain"
               alt=""
+              className="h-8 w-8 rounded-full bg-secondary object-contain"
               height={32}
+              src="https://github.com/shadcn.png"
               width={32}
             />
           </ItemMedia>
@@ -35,17 +35,17 @@ export default function CardPost() {
             <ItemDescription className="text-xs">@shadcn</ItemDescription>
           </ItemContent>
           <ItemActions className="-me-1">
-            <Button variant="ghost" size="icon">
+            <Button size="icon" variant="ghost">
               <MoreHorizontalIcon />
             </Button>
           </ItemActions>
         </Item>
       </CardHeader>
       <CardContent className="p-0">
-        <div className="relative aspect-video bg-muted border-y" />
-        <div className="py-5 px-6">
+        <div className="relative aspect-video border-y bg-muted" />
+        <div className="px-6 py-5">
           <h2 className="font-semibold">Exploring New Horizons</h2>
-          <p className="mt-1 text-sm text-muted-foreground">
+          <p className="mt-1 text-muted-foreground text-sm">
             Had an amazing time discovering hidden gems! 🌄 Can&apos;t wait to
             share more from this journey.{" "}
             <span className="text-blue-500">#Wanderlust</span>{" "}
@@ -53,15 +53,15 @@ export default function CardPost() {
           </p>
         </div>
       </CardContent>
-      <CardFooter className="border-t flex px-2 pb-0 py-2!">
-        <Button variant="ghost" className="grow shrink-0 text-muted-foreground">
+      <CardFooter className="flex border-t px-2 py-2! pb-0">
+        <Button className="shrink-0 grow text-muted-foreground" variant="ghost">
           <HeartIcon /> <span className="hidden sm:inline">Like</span>
         </Button>
-        <Button variant="ghost" className="grow shrink-0 text-muted-foreground">
+        <Button className="shrink-0 grow text-muted-foreground" variant="ghost">
           <MessageCircleIcon />
           <span className="hidden sm:inline">Comment</span>
         </Button>
-        <Button variant="ghost" className="grow shrink-0 text-muted-foreground">
+        <Button className="shrink-0 grow text-muted-foreground" variant="ghost">
           <ShareIcon /> <span className="hidden sm:inline">Share</span>
         </Button>
       </CardFooter>

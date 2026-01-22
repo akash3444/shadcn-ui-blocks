@@ -112,11 +112,11 @@ const products = [
 
 export default function StickyColumnsTableDemo() {
   return (
-    <div className="grid w-full [&>div]:max-h-[300px] [&>div]:border [&>div]:rounded">
+    <div className="grid w-full [&>div]:max-h-[300px] [&>div]:rounded [&>div]:border">
       <Table>
         <TableHeader>
           <TableRow className="*:whitespace-nowrap hover:bg-background">
-            <TableHead className="pl-4 sticky left-0 bg-background min-w-[50px]">
+            <TableHead className="sticky left-0 min-w-[50px] bg-background pl-4">
               ID
             </TableHead>
             <TableHead className="sticky left-[50px] bg-background">
@@ -133,13 +133,13 @@ export default function StickyColumnsTableDemo() {
         <TableBody className="overflow-hidden">
           {products.map((product) => (
             <TableRow
-              key={product.id}
               className="group odd:bg-muted [&>td]:whitespace-nowrap hover:[&>td]:bg-blue-100 dark:hover:[&>td]:bg-blue-400"
+              key={product.id}
             >
-              <TableCell className="pl-4 sticky left-0 bg-background group-odd:bg-muted group-hover:bg-blue-100">
+              <TableCell className="sticky left-0 bg-background pl-4 group-odd:bg-muted group-hover:bg-blue-100">
                 {product.id}
               </TableCell>
-              <TableCell className="font-medium sticky left-[50px] bg-background group-odd:bg-muted group-hover:bg-blue-100">
+              <TableCell className="sticky left-[50px] bg-background font-medium group-odd:bg-muted group-hover:bg-blue-100">
                 {product.name}
               </TableCell>
               <TableCell>{product.category}</TableCell>

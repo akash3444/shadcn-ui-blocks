@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "src/components/customized/spinner/spinner-11.tsx",
-      "content": "import React from \"react\";\n\nconst SpinnerCircle5 = () => (\n  <div className=\"w-7 h-7 border-[3px] border-white border-t-primary border-b-primary rounded-full animate-spin\" />\n);\n\nexport default SpinnerCircle5;\n",
+      "content": "const SpinnerCircle5 = () => (\n  <div className=\"h-7 w-7 animate-spin rounded-full border-[3px] border-white border-t-primary border-b-primary\" />\n);\n\nexport default SpinnerCircle5;\n",
       "type": "registry:component"
     }
   ]

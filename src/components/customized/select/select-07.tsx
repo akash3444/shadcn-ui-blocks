@@ -1,8 +1,19 @@
 "use client";
 
-import { SelectHTMLAttributes } from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import type { SelectHTMLAttributes } from "react";
 import { useForm, useFormContext } from "react-hook-form";
 import { z } from "zod";
+import { cn } from "@/lib/utils";
+import { Button } from "@/registry/ui/button";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/registry/ui/form";
 import {
   Select,
   SelectContent,
@@ -10,17 +21,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/ui/select";
-import {
-  FormControl,
-  FormItem,
-  FormField,
-  FormMessage,
-  FormLabel,
-  Form,
-} from "@/registry/ui/form";
-import { Button } from "@/registry/ui/button";
-import { cn } from "@/lib/utils";
-import { zodResolver } from "@hookform/resolvers/zod";
 
 const COUNTRIES: OptionType[] = [
   { id: "us", name: "United States" },
@@ -55,13 +55,13 @@ export default function SelectWithFormDemo() {
   return (
     <Form {...form}>
       <form
+        className="mx-auto w-full max-w-sm space-y-3"
         onSubmit={form.handleSubmit(onSubmit)}
-        className="max-w-sm mx-auto space-y-3 w-full"
       >
         <SelectWithForm<schemaType>
           name="country"
-          title="Select country"
           options={COUNTRIES}
+          title="Select country"
         />
         <Button type="submit">Submit</Button>
       </form>
@@ -103,11 +103,11 @@ export function SelectWithForm<K>({
           <Select {...field} {...props} onValueChange={field.onChange}>
             <FormControl>
               <SelectTrigger
-                id={name}
                 className={cn(
-                  "aria-invalid:border-destructive aria-invalid:ring-destructive w-full",
+                  "w-full aria-invalid:border-destructive aria-invalid:ring-destructive",
                   className
                 )}
+                id={name}
               >
                 <SelectValue placeholder="Select" />
               </SelectTrigger>

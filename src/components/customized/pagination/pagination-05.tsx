@@ -1,17 +1,17 @@
+import { ChevronsLeft, ChevronsRight } from "lucide-react";
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
   PaginationLink,
 } from "@/registry/ui/pagination";
-import { ChevronsLeft, ChevronsRight } from "lucide-react";
 
 export default function PaginationWithIcon() {
   return (
     <Pagination>
       <PaginationContent>
         <PaginationItem>
-          <PaginationLink href="#" aria-label="Go to previous page" size="icon">
+          <PaginationLink aria-label="Go to previous page" href="#" size="icon">
             <ChevronsLeft className="h-4 w-4" />
           </PaginationLink>
         </PaginationItem>
@@ -27,7 +27,7 @@ export default function PaginationWithIcon() {
           <PaginationLink href="#">3</PaginationLink>
         </PaginationItem>
         <PaginationItem>
-          <PaginationLink href="#" aria-label="Go to next page" size="icon">
+          <PaginationLink aria-label="Go to next page" href="#" size="icon">
             <ChevronsRight className="h-4 w-4" />
           </PaginationLink>
         </PaginationItem>

@@ -1,5 +1,5 @@
-import { Button } from "@/registry/ui/button";
 import { Loader } from "lucide-react";
+import { Button } from "@/registry/ui/button";
 
 const LoadingButtonDemo = () => {
   return (

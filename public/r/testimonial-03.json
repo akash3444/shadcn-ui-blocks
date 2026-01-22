@@ -4,9 +4,7 @@
   "type": "registry:block",
   "title": "Testimonial 03",
   "description": "A simple testimonial block",
-  "registryDependencies": [
-    "avatar"
-  ],
+  "registryDependencies": ["avatar"],
   "files": [
     {
       "path": "src/blocks/testimonial-03/testimonial-03.tsx",

@@ -16,20 +16,20 @@ import { FAQ } from "./faq";
 
 export const Features = () => {
   return (
-    <section className="py-20 max-w-(--breakpoint-lg) mx-auto px-6 lg:px-0">
-      <h2 className="text-5xl font-semibold text-center tracking-tight">
+    <section className="mx-auto max-w-(--breakpoint-lg) px-6 py-20 lg:px-0">
+      <h2 className="text-center font-semibold text-5xl tracking-tight">
         Core Features
       </h2>
-      <div className="mt-20 mb-14 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="p-1 border rounded-xl bg-muted/50 border-border/80">
-          <Card className="relative overflow-hidden bg-background rounded-lg dark:shadow-xs/40 shadow-xs/5 gap-3 h-full border-border/90">
+      <div className="mt-20 mb-14 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="rounded-xl border border-border/80 bg-muted/50 p-1">
+          <Card className="relative h-full gap-3 overflow-hidden rounded-lg border-border/90 bg-background shadow-xs/5 dark:shadow-xs/40">
             <DashedTopFadeGrid />
 
-            <CardHeader className="pb-0 gap-3 isolate">
-              <div className="h-10 w-10 bg-primary/7 dark:bg-primary/15 flex items-center justify-center rounded-full">
+            <CardHeader className="isolate gap-3 pb-0">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/7 dark:bg-primary/15">
                 <ShapesIcon className="h-5 w-5" />
               </div>
-              <h3 className="mt-4 text-2xl font-semibold tracking-tight">
+              <h3 className="mt-4 font-semibold text-2xl tracking-tight">
                 Blocks
               </h3>
             </CardHeader>
@@ -43,10 +43,10 @@ export const Features = () => {
                 <li className="flex items-start gap-2">
                   <BadgeCheck className="h-4.5 w-4.5" />
                   <div>
-                    <h6 className="mb-1 leading-[1.1] font-semibold">
+                    <h6 className="mb-1 font-semibold leading-[1.1]">
                       Fully responsive
                     </h6>
-                    <p className="text-sm text-foreground/70">
+                    <p className="text-foreground/70 text-sm">
                       Each block is optimized for perfect display on any device.
                     </p>
                   </div>
@@ -54,10 +54,10 @@ export const Features = () => {
                 <li className="flex items-start gap-2">
                   <BadgeCheck className="h-4.5 w-4.5" />
                   <div>
-                    <h6 className="mb-1 leading-[1.1] font-semibold">
+                    <h6 className="mb-1 font-semibold leading-[1.1]">
                       Easily preview and copy
                     </h6>
-                    <p className="text-sm text-foreground/70">
+                    <p className="text-foreground/70 text-sm">
                       Quickly view how blocks look and grab the code in one
                       click.
                     </p>
@@ -66,10 +66,10 @@ export const Features = () => {
                 <li className="flex items-start gap-2">
                   <BadgeCheck className="h-4.5 w-4.5" />
                   <div>
-                    <h6 className="mb-1 leading-[1.1] font-semibold">
+                    <h6 className="mb-1 font-semibold leading-[1.1]">
                       Absolutely Free to Use
                     </h6>
-                    <p className="text-sm text-foreground/70">
+                    <p className="text-foreground/70 text-sm">
                       Use all blocks without any restrictions or fees.
                     </p>
                   </div>
@@ -85,15 +85,15 @@ export const Features = () => {
             </CardFooter>
           </Card>
         </div>
-        <div className="p-1 border rounded-xl bg-muted/50 border-border/80">
-          <Card className="relative overflow-hidden bg-background rounded-lg dark:shadow-xs/40 shadow-xs/5 gap-3 h-full border-border/90">
+        <div className="rounded-xl border border-border/80 bg-muted/50 p-1">
+          <Card className="relative h-full gap-3 overflow-hidden rounded-lg border-border/90 bg-background shadow-xs/5 dark:shadow-xs/40">
             <DashedTopFadeGrid />
 
-            <CardHeader className="pb-0 gap-3 isolate">
-              <div className="h-10 w-10 bg-primary/7 dark:bg-primary/15 flex items-center justify-center rounded-full">
+            <CardHeader className="isolate gap-3 pb-0">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/7 dark:bg-primary/15">
                 <PuzzleIcon className="h-5 w-5" />
               </div>
-              <h3 className="mt-4 text-2xl font-semibold tracking-tight">
+              <h3 className="mt-4 font-semibold text-2xl tracking-tight">
                 Customized Components
               </h3>
             </CardHeader>
@@ -108,10 +108,10 @@ export const Features = () => {
                 <li className="flex items-start gap-2">
                   <BadgeCheck className="h-4.5 w-4.5" />
                   <div>
-                    <h6 className="mb-1 leading-[1.1] font-semibold">
+                    <h6 className="mb-1 font-semibold leading-[1.1]">
                       Multiple Variants
                     </h6>
-                    <p className="text-sm text-foreground/70">
+                    <p className="text-foreground/70 text-sm">
                       Access wide range of component styles to fit any design
                       need.
                     </p>
@@ -120,10 +120,10 @@ export const Features = () => {
                 <li className="flex items-start gap-2">
                   <BadgeCheck className="h-4.5 w-4.5" />
                   <div>
-                    <h6 className="mb-1 leading-[1.1] font-semibold">
+                    <h6 className="mb-1 font-semibold leading-[1.1]">
                       Fully Customizable
                     </h6>
-                    <p className="text-sm text-foreground/70">
+                    <p className="text-foreground/70 text-sm">
                       Adjust colors, sizes, and styles to match your brand.
                     </p>
                   </div>
@@ -131,10 +131,10 @@ export const Features = () => {
                 <li className="flex items-start gap-2">
                   <BadgeCheck className="h-4.5 w-4.5" />
                   <div>
-                    <h6 className="mb-1 leading-[1.1] font-semibold">
+                    <h6 className="mb-1 font-semibold leading-[1.1]">
                       Absolutely Free to Use
                     </h6>
-                    <p className="text-sm text-foreground/70">
+                    <p className="text-foreground/70 text-sm">
                       Enjoy unlimited access to all components at no cost.
                     </p>
                   </div>
@@ -160,7 +160,7 @@ export const Features = () => {
 
 const DashedTopFadeGrid = () => (
   <div
-    className="absolute inset-0 z-0 -left-px -top-px dark:opacity-80"
+    className="absolute inset-0 -top-px -left-px z-0 dark:opacity-80"
     style={{
       backgroundImage: `
         linear-gradient(to right, var(--border) 1px, transparent 1px),

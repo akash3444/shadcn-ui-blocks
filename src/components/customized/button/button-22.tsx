@@ -2,7 +2,7 @@ import { Button } from "@/registry/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/ui/tooltip";
 
 const ButtonsWithTooltip = () => (
-  <div className="flex items-center gap-2 flex-wrap">
+  <div className="flex flex-wrap items-center gap-2">
     <Tooltip>
       <TooltipTrigger asChild>
         <Button variant="outline">Left</Button>

@@ -1,3 +1,4 @@
+import { Tooltip as TooltipPrimitive } from "radix-ui";
 import { Button } from "@/registry/ui/button";
 import {
   Tooltip,
@@ -5,7 +6,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/registry/ui/tooltip";
-import { Tooltip as TooltipPrimitive } from "radix-ui";
 
 export default function WithArrowTooltipDemo() {
   return (

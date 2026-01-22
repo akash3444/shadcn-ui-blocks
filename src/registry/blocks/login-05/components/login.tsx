@@ -1,5 +1,16 @@
 "use client";
 
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  FigmaIcon,
+  GithubIcon,
+  InstagramIcon,
+  TwitchIcon,
+  TwitterIcon,
+} from "lucide-react";
+import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -12,17 +23,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Logo } from "@/registry/blocks/login-05/components/logo";
-import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  FigmaIcon,
-  GithubIcon,
-  InstagramIcon,
-  TwitchIcon,
-  TwitterIcon,
-} from "lucide-react";
-import Link from "next/link";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -43,55 +43,55 @@ const Login = () => {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center">
-      <div className="w-full h-full grid lg:grid-cols-2 p-4">
-        <div className="max-w-xs m-auto w-full flex flex-col items-center">
+    <div className="flex h-screen items-center justify-center">
+      <div className="grid h-full w-full p-4 lg:grid-cols-2">
+        <div className="m-auto flex w-full max-w-xs flex-col items-center">
           <Logo className="h-9 w-9" />
-          <p className="mt-4 text-xl font-semibold tracking-tight">
+          <p className="mt-4 font-semibold text-xl tracking-tight">
             Log in to Shadcn UI Blocks
           </p>
 
           <div className="mt-8 flex items-center gap-3">
             <Button
-              variant="outline"
+              className="h-10 w-10 rounded-full"
               size="icon"
-              className="rounded-full h-10 w-10"
+              variant="outline"
             >
               <GithubIcon className="h-[18px]! w-[18px]!" />
             </Button>
             <Button
-              variant="outline"
+              className="h-10 w-10 rounded-full"
               size="icon"
-              className="rounded-full h-10 w-10"
+              variant="outline"
             >
               <InstagramIcon className="h-[18px]! w-[18px]!" />
             </Button>
             <Button
-              variant="outline"
+              className="h-10 w-10 rounded-full"
               size="icon"
-              className="rounded-full h-10 w-10"
+              variant="outline"
             >
               <TwitterIcon className="h-[18px]! w-[18px]!" />
             </Button>
             <Button
-              variant="outline"
+              className="h-10 w-10 rounded-full"
               size="icon"
-              className="rounded-full h-10 w-10"
+              variant="outline"
             >
               <FigmaIcon className="h-[18px]! w-[18px]!" />
             </Button>
             <Button
-              variant="outline"
+              className="h-10 w-10 rounded-full"
               size="icon"
-              className="rounded-full h-10 w-10"
+              variant="outline"
             >
               <TwitchIcon className="h-[18px]! w-[18px]!" />
             </Button>
           </div>
 
-          <div className="my-7 w-full flex items-center justify-center overflow-hidden">
+          <div className="my-7 flex w-full items-center justify-center overflow-hidden">
             <Separator />
-            <span className="text-sm px-2">OR</span>
+            <span className="px-2 text-sm">OR</span>
             <Separator />
           </div>
 
@@ -108,9 +108,9 @@ const Login = () => {
                     <FormLabel>Email</FormLabel>
                     <FormControl>
                       <Input
-                        type="email"
-                        placeholder="Email"
                         className="w-full"
+                        placeholder="Email"
+                        type="email"
                         {...field}
                       />
                     </FormControl>
@@ -126,9 +126,9 @@ const Login = () => {
                     <FormLabel>Password</FormLabel>
                     <FormControl>
                       <Input
-                        type="password"
-                        placeholder="Password"
                         className="w-full"
+                        placeholder="Password"
+                        type="password"
                         {...field}
                       />
                     </FormControl>
@@ -136,7 +136,7 @@ const Login = () => {
                   </FormItem>
                 )}
               />
-              <Button type="submit" className="mt-4 w-full">
+              <Button className="mt-4 w-full" type="submit">
                 Continue with Email
               </Button>
             </form>
@@ -144,20 +144,20 @@ const Login = () => {
 
           <div className="mt-5 space-y-5">
             <Link
+              className="block text-center text-muted-foreground text-sm underline"
               href="#"
-              className="text-sm block underline text-muted-foreground text-center"
             >
               Forgot your password?
             </Link>
-            <p className="text-sm text-center">
+            <p className="text-center text-sm">
               Don&apos;t have an account?
-              <Link href="#" className="ml-1 underline text-muted-foreground">
+              <Link className="ml-1 text-muted-foreground underline" href="#">
                 Create account
               </Link>
             </p>
           </div>
         </div>
-        <div className="bg-muted hidden lg:block rounded-lg border" />
+        <div className="hidden rounded-lg border bg-muted lg:block" />
       </div>
     </div>
   );

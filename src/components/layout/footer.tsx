@@ -1,9 +1,9 @@
+import Link from "next/link";
 import { blockCategories } from "@/blocks";
 import { Separator } from "@/components/ui/separator";
 import { config } from "@/config";
 import { components } from "@/description/app-sidebar";
 import { capitalize } from "@/lib/utils";
-import Link from "next/link";
 import { Logo } from "../logo";
 import { GithubLogo, TwitterLogo } from "../ui/icons";
 
@@ -47,12 +47,12 @@ const footerSections = [
 
 const Footer = () => {
   return (
-    <footer className="bg-muted/50 border-t">
-      <div className="max-w-(--breakpoint-xl) mx-auto">
-        <div className="py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-x-8 gap-y-10 px-6 xl:px-0">
+    <footer className="border-t bg-muted/50">
+      <div className="mx-auto max-w-(--breakpoint-xl)">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-10 px-6 py-12 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 xl:px-0">
           <div className="col-span-full lg:col-span-2">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2.5">
+            <Link className="flex items-center gap-2.5" href="/">
               <Logo />
               <span className="font-semibold text-lg tracking-tight">
                 Shadcn UI Blocks
@@ -66,14 +66,14 @@ const Footer = () => {
           </div>
 
           {footerSections.map(({ title, links, className }, index) => (
-            <div key={index} className={className}>
+            <div className={className} key={index}>
               <h6 className="font-semibold">{title}</h6>
               <ul className="mt-6 space-y-4">
                 {links.map(({ title, href }) => (
                   <li key={title}>
                     <Link
-                      href={href}
                       className="text-muted-foreground hover:text-foreground"
+                      href={href}
                     >
                       {title}
                     </Link>
@@ -84,7 +84,7 @@ const Footer = () => {
           ))}
         </div>
         <Separator />
-        <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0">
+        <div className="flex flex-col-reverse items-center justify-between gap-x-2 gap-y-5 px-6 py-8 sm:flex-row xl:px-0">
           {/* Copyright */}
           <span className="text-muted-foreground">
             &copy; {new Date().getFullYear()}{" "}

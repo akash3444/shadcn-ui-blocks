@@ -1,5 +1,5 @@
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { StarIcon } from "lucide-react";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const testimonials = [
   {
@@ -59,40 +59,40 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <div className="min-h-screen flex justify-center items-center py-12 px-6">
+  <div className="flex min-h-screen items-center justify-center px-6 py-12">
     <div>
-      <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
+      <h2 className="text-center font-semibold text-5xl tracking-[-0.03em]">
         Loved by Developers
       </h2>
       <p className="mt-3 text-center text-muted-foreground text-xl">
         See how developers and teams are achieving more with us
       </p>
-      <div className="mt-8 sm:mt-14 w-full max-w-(--breakpoint-xl) mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 overflow-hidden border-r border-background">
+      <div className="mx-auto mt-8 w-full max-w-(--breakpoint-xl) sm:mt-14">
+        <div className="grid grid-cols-1 overflow-hidden border-background border-r md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial) => (
             <div
+              className="flex flex-col px-6 py-8 outline-1 outline-border outline-solid"
               key={testimonial.id}
-              className="flex flex-col outline-solid outline-1 outline-border px-6 py-8"
             >
               <div className="flex items-center justify-center gap-2">
-                <StarIcon className="w-6 h-6 fill-yellow-500 stroke-yellow-500" />
-                <StarIcon className="w-6 h-6 fill-yellow-500 stroke-yellow-500" />
-                <StarIcon className="w-6 h-6 fill-yellow-500 stroke-yellow-500" />
-                <StarIcon className="w-6 h-6 fill-yellow-500 stroke-yellow-500" />
-                <StarIcon className="w-6 h-6 fill-yellow-500 stroke-yellow-500" />
+                <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
+                <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
+                <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
+                <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
+                <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
               </div>
-              <p className="my-6 text-[17px] text-center max-w-md">
+              <p className="my-6 max-w-md text-center text-[17px]">
                 &quot;{testimonial.testimonial}&quot;
               </p>
               <div className="mt-auto flex items-center justify-center gap-3">
                 <Avatar className="size-9">
-                  <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
+                  <AvatarFallback className="bg-primary font-medium text-primary-foreground text-xl">
                     {testimonial.name.charAt(0)}
                   </AvatarFallback>
                 </Avatar>
                 <div>
                   <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-gray-500 text-sm">
                     {testimonial.designation}
                   </p>
                 </div>

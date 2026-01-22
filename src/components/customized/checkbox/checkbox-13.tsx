@@ -1,6 +1,5 @@
 "use client";
 
-import { Checkbox } from "@/registry/ui/checkbox";
 import {
   EyeIcon,
   PencilIcon,
@@ -8,31 +7,32 @@ import {
   UserCircleIcon,
   UserIcon,
 } from "lucide-react";
+import { Checkbox } from "@/registry/ui/checkbox";
 
 export default function Checkbox13() {
   return (
-    <div className="border p-4 rounded-lg space-y-3 max-w-xs w-full">
+    <div className="w-full max-w-xs space-y-3 rounded-lg border p-4">
       {roles.map((role) => (
         <label
-          key={role.value}
-          htmlFor={role.value}
           className="flex items-center justify-between gap-2"
+          htmlFor={role.value}
+          key={role.value}
         >
           <div className="flex items-center gap-2">
-            <div className="size-9 rounded-md bg-muted flex items-center justify-center">
+            <div className="flex size-9 items-center justify-center rounded-md bg-muted">
               <role.icon className="size-4.5" />
             </div>
             <div className="flex flex-col gap-0.5">
-              <span className="text-sm font-medium">{role.name}</span>
-              <span className="text-sm text-muted-foreground">
+              <span className="font-medium text-sm">{role.name}</span>
+              <span className="text-muted-foreground text-sm">
                 {role.description}
               </span>
             </div>
           </div>
           <Checkbox
-            value={role.value}
-            id={role.value}
             defaultChecked={role.defaultChecked}
+            id={role.value}
+            value={role.value}
           />
         </label>
       ))}

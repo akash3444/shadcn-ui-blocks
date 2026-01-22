@@ -4,9 +4,7 @@
   "type": "registry:block",
   "title": "Logos 07",
   "description": "A simple logos block",
-  "registryDependencies": [
-    "https://www.shadcnui-blocks.com/r/marquee.json"
-  ],
+  "registryDependencies": ["https://www.shadcnui-blocks.com/r/marquee.json"],
   "files": [
     {
       "path": "src/blocks/logos-07/logos-07.tsx",

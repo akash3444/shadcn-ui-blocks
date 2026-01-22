@@ -5,20 +5,20 @@ export default function InputOTPDemo() {
     <InputOTP maxLength={6}>
       <InputOTPGroup className="space-x-2">
         <InputOTPSlot
+          className="rounded-md border-accent/90 border-l shadow-inner dark:shadow-primary/10"
           index={0}
-          className="rounded-md border-l border-accent/90 shadow-inner dark:shadow-primary/10"
         />
         <InputOTPSlot
+          className="rounded-md border-accent/90 border-l shadow-inner dark:shadow-primary/10"
           index={1}
-          className="rounded-md border-l border-accent/90 shadow-inner dark:shadow-primary/10"
         />
         <InputOTPSlot
+          className="rounded-md border-accent/90 border-l shadow-inner dark:shadow-primary/10"
           index={2}
-          className="rounded-md border-l border-accent/90 shadow-inner dark:shadow-primary/10"
         />
         <InputOTPSlot
+          className="rounded-md border-accent/90 border-l shadow-inner dark:shadow-primary/10"
           index={3}
-          className="rounded-md border-l border-accent/90 shadow-inner dark:shadow-primary/10"
         />
       </InputOTPGroup>
     </InputOTP>

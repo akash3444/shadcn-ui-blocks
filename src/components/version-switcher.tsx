@@ -1,5 +1,6 @@
 "use client";
 
+import { ChevronDown, ExternalLink, Loader2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,7 +10,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useVersion } from "@/hooks/use-version";
-import { ChevronDown, ExternalLink, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface VersionSwitcherProps {
@@ -31,10 +31,10 @@ export function VersionSwitcher({
   if (isLoading || !currentVersion) {
     return (
       <Button
-        variant="outline"
-        size={variant === "compact" ? "sm" : "default"}
         className={cn("gap-2 font-medium", className)}
         disabled
+        size={variant === "compact" ? "sm" : "default"}
+        variant="outline"
       >
         <Loader2 className="h-3 w-3 animate-spin" />
         {variant === "compact" ? "..." : "Loading..."}
@@ -47,9 +47,9 @@ export function VersionSwitcher({
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
+            className={cn("gap-1 font-medium text-xs", className)}
             size="sm"
             variant="outline"
-            className={cn("gap-1 text-xs font-medium", className)}
           >
             {currentVersion.version}
             <ChevronDown className="h-3 w-3" />
@@ -58,22 +58,22 @@ export function VersionSwitcher({
         <DropdownMenuContent className="w-64">
           {allVersions.map((version) => (
             <DropdownMenuItem
+              className="flex cursor-pointer flex-col items-start gap-1 p-3"
               key={version.version}
-              className="flex flex-col items-start gap-1 p-3 cursor-pointer"
               onClick={() => handleVersionSwitch(version.url)}
             >
-              <div className="flex items-center gap-2 w-full">
+              <div className="flex w-full items-center gap-2">
                 <span className="font-medium">{version.label}</span>
                 {version.isCurrentVersion && (
-                  <Badge variant="secondary" className="text-xs">
+                  <Badge className="text-xs" variant="secondary">
                     Current
                   </Badge>
                 )}
                 {!version.isCurrentVersion && (
-                  <ExternalLink className="h-3 w-3 text-muted-foreground ml-auto" />
+                  <ExternalLink className="ml-auto h-3 w-3 text-muted-foreground" />
                 )}
               </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground text-xs leading-relaxed">
                 {version.description}
               </p>
             </DropdownMenuItem>
@@ -87,8 +87,8 @@ export function VersionSwitcher({
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          variant="outline"
           className={cn("gap-2 font-medium", className)}
+          variant="outline"
         >
           {currentVersion.label}
           <ChevronDown className="h-4 w-4" />
@@ -96,25 +96,25 @@ export function VersionSwitcher({
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-72">
         <div className="p-2">
-          <p className="text-sm font-medium mb-2">Switch Version</p>
+          <p className="mb-2 font-medium text-sm">Switch Version</p>
           {allVersions.map((version) => (
             <DropdownMenuItem
+              className="flex cursor-pointer flex-col items-start gap-2 rounded-md p-3"
               key={version.version}
-              className="flex flex-col items-start gap-2 p-3 cursor-pointer rounded-md"
               onClick={() => handleVersionSwitch(version.url)}
             >
-              <div className="flex items-center gap-2 w-full">
+              <div className="flex w-full items-center gap-2">
                 <span className="font-medium">{version.label}</span>
                 {version.isCurrentVersion && (
-                  <Badge variant="secondary" className="text-xs">
+                  <Badge className="text-xs" variant="secondary">
                     Current
                   </Badge>
                 )}
                 {!version.isCurrentVersion && (
-                  <ExternalLink className="h-4 w-4 text-muted-foreground ml-1" />
+                  <ExternalLink className="ml-1 h-4 w-4 text-muted-foreground" />
                 )}
               </div>
-              <p className="text-xs text-muted-foreground leading-relaxed text-pretty">
+              <p className="text-pretty text-muted-foreground text-xs leading-relaxed">
                 {version.description}
               </p>
             </DropdownMenuItem>

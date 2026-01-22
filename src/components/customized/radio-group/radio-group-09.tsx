@@ -19,29 +19,29 @@ const RadioCardsDemo = () => {
       </CardHeader>
       <CardContent>
         <RadioGroup defaultValue="standard">
-          <div className="flex items-start space-x-2 mb-4">
-            <RadioGroupItem value="free" id="free" />
-            <Label htmlFor="free" className="flex flex-col items-start">
+          <div className="mb-4 flex items-start space-x-2">
+            <RadioGroupItem id="free" value="free" />
+            <Label className="flex flex-col items-start" htmlFor="free">
               <span className="font-semibold">Free</span>
-              <span className="text-sm text-muted-foreground">
+              <span className="text-muted-foreground text-sm">
                 Basic features, no cost
               </span>
             </Label>
           </div>
-          <div className="flex items-start space-x-2 mb-4">
-            <RadioGroupItem value="standard" id="standard" />
-            <Label htmlFor="standard" className="flex flex-col items-start">
+          <div className="mb-4 flex items-start space-x-2">
+            <RadioGroupItem id="standard" value="standard" />
+            <Label className="flex flex-col items-start" htmlFor="standard">
               <span className="font-semibold">Standard</span>
-              <span className="text-sm text-muted-foreground">
+              <span className="text-muted-foreground text-sm">
                 Advanced features, $9.99/month
               </span>
             </Label>
           </div>
           <div className="flex items-start space-x-2">
-            <RadioGroupItem value="premium" id="premium" />
-            <Label htmlFor="premium" className="flex flex-col items-start">
+            <RadioGroupItem id="premium" value="premium" />
+            <Label className="flex flex-col items-start" htmlFor="premium">
               <span className="font-semibold">Premium</span>
-              <span className="text-sm text-muted-foreground">
+              <span className="text-muted-foreground text-sm">
                 All features, $19.99/month
               </span>
             </Label>

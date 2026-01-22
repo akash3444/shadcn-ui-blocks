@@ -1,6 +1,6 @@
+import { Copy } from "lucide-react";
 import { Button } from "@/registry/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
-import { Copy } from "lucide-react";
 
 const tabs = [
   {
@@ -27,13 +27,13 @@ const tabs = [
 
 export default function TabsBorderedDemo() {
   return (
-    <Tabs defaultValue={tabs[0].value} className="max-w-xs w-full">
-      <TabsList className="p-0 h-auto bg-background gap-1">
+    <Tabs className="w-full max-w-xs" defaultValue={tabs[0].value}>
+      <TabsList className="h-auto gap-1 bg-background p-0">
         {tabs.map((tab) => (
           <TabsTrigger
+            className="border border-transparent data-[state=active]:border-border data-[state=active]:shadow-none"
             key={tab.value}
             value={tab.value}
-            className="border border-transparent data-[state=active]:border-border data-[state=active]:shadow-none"
           >
             <code className="text-[13px]">{tab.name}</code>
           </TabsTrigger>
@@ -42,9 +42,9 @@ export default function TabsBorderedDemo() {
 
       {tabs.map((tab) => (
         <TabsContent key={tab.value} value={tab.value}>
-          <div className="h-10 flex items-center justify-between border gap-2 rounded-md pl-3 pr-1.5">
+          <div className="flex h-10 items-center justify-between gap-2 rounded-md border pr-1.5 pl-3">
             <code className="text-[13px]">{tab.content}</code>
-            <Button size="icon" variant="secondary" className="h-7 w-7">
+            <Button className="h-7 w-7" size="icon" variant="secondary">
               <Copy className="h-3.5! w-3.5!" />
             </Button>
           </div>

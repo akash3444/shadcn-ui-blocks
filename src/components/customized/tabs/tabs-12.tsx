@@ -1,6 +1,6 @@
+import { Copy } from "lucide-react";
 import { Button } from "@/registry/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
-import { Copy } from "lucide-react";
 
 const tabs = [
   {
@@ -27,13 +27,13 @@ const tabs = [
 
 export default function TabSkewedDemo() {
   return (
-    <Tabs defaultValue={tabs[0].value} className="max-w-68 w-full">
-      <TabsList className="w-full p-0 bg-background justify-start border-b rounded-none gap-2">
+    <Tabs className="w-full max-w-68" defaultValue={tabs[0].value}>
+      <TabsList className="w-full justify-start gap-2 rounded-none border-b bg-background p-0">
         {tabs.map((tab) => (
           <TabsTrigger
+            className="h-full -skew-x-12 rounded-none border border-transparent border-b-[3px] bg-background data-[state=active]:border-primary data-[state=active]:shadow-none"
             key={tab.value}
             value={tab.value}
-            className="rounded-none bg-background h-full -skew-x-12 data-[state=active]:shadow-none border border-b-[3px] border-transparent data-[state=active]:border-primary"
           >
             <code className="text-[13px]">{tab.name}</code>
           </TabsTrigger>
@@ -42,14 +42,14 @@ export default function TabSkewedDemo() {
 
       {tabs.map((tab) => (
         <TabsContent key={tab.value} value={tab.value}>
-          <div className="-ml-2 h-10 flex items-center justify-between border gap-2 -skew-x-12 pl-3 pr-1.5">
-            <code className="text-[13px] whitespace-nowrap max-w-[33ch] text-ellipsis overflow-hidden">
+          <div className="-ml-2 flex h-10 -skew-x-12 items-center justify-between gap-2 border pr-1.5 pl-3">
+            <code className="max-w-[33ch] overflow-hidden text-ellipsis whitespace-nowrap text-[13px]">
               {tab.content}
             </code>
             <Button
+              className="h-7 w-7 shrink-0 rounded-none"
               size="icon"
               variant="secondary"
-              className="h-7 w-7 rounded-none shrink-0"
             >
               <Copy className="h-3.5! w-3.5!" />
             </Button>

@@ -1,12 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { V0Logo } from "../ui/icons";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { V0Logo } from "../ui/icons";
 
 const V0Button = ({ url }: { url: string }) => {
   const v0Url = `https://v0.dev/chat/api/open?url=${url}`;
@@ -15,12 +15,12 @@ const V0Button = ({ url }: { url: string }) => {
     <Tooltip>
       <TooltipTrigger asChild>
         <Button
-          variant="outline"
-          size="icon-sm"
-          className="font-mono text-xs"
           asChild
+          className="font-mono text-xs"
+          size="icon-sm"
+          variant="outline"
         >
-          <a href={v0Url} target="_blank" rel="noopener noreferrer">
+          <a href={v0Url} rel="noopener noreferrer" target="_blank">
             <V0Logo />
           </a>
         </Button>

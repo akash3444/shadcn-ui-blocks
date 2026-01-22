@@ -17,11 +17,11 @@ const Slider = React.forwardRef<
     ref
   ) => (
     <SliderPrimitive.Root
-      ref={ref}
       className={cn(
         "relative flex w-full touch-none select-none items-center",
         className
       )}
+      ref={ref}
       {...props}
     >
       <SliderPrimitive.Track
@@ -47,30 +47,30 @@ Slider.displayName = SliderPrimitive.Root.displayName;
 
 export default function SliderShapeDemo() {
   return (
-    <div className="grid gap-6 max-w-sm w-full mx-auto">
+    <div className="mx-auto grid w-full max-w-sm gap-6">
       <Slider
         defaultValue={[50]}
         max={100}
-        step={1}
         rangeClassName="bg-green-500"
-        trackClassName="h-2 rounded-none"
+        step={1}
         thumbClassName="rounded-none bg-white"
+        trackClassName="h-2 rounded-none"
       />
       <Slider
         defaultValue={[50]}
         max={100}
-        step={1}
         rangeClassName="bg-indigo-500"
-        trackClassName="h-2 rounded-[2px]"
+        step={1}
         thumbClassName="rounded-[2px] bg-white"
+        trackClassName="h-2 rounded-[2px]"
       />
       <Slider
         defaultValue={[50]}
         max={100}
-        step={1}
         rangeClassName="bg-rose-500"
-        trackClassName="h-2"
+        step={1}
         thumbClassName="bg-white"
+        trackClassName="h-2"
       />
     </div>
   );

@@ -1,9 +1,9 @@
 "use client";
 
-import { Alert, AlertDescription, AlertTitle } from "@/registry/ui/alert";
-import { Button } from "@/registry/ui/button";
 import { CircleFadingArrowUpIcon, XIcon } from "lucide-react";
 import { useState } from "react";
+import { Alert, AlertDescription, AlertTitle } from "@/registry/ui/alert";
+import { Button } from "@/registry/ui/button";
 
 export default function AlertWithActionsDemo() {
   const [isAlertVisible, setIsAlertVisible] = useState(true);
@@ -18,7 +18,7 @@ export default function AlertWithActionsDemo() {
   return (
     <div className="w-full">
       {isAlertVisible && (
-        <Alert className="flex justify-between items-center pr-2 [&>svg+div]:translate-y-0">
+        <Alert className="flex items-center justify-between pr-2 [&>svg+div]:translate-y-0">
           <div className="flex items-start gap-3">
             <CircleFadingArrowUpIcon className="mt-0.5 size-4" />
             <div className="flex-col justify-center">
@@ -29,10 +29,10 @@ export default function AlertWithActionsDemo() {
             </div>
           </div>
           <Button
-            size="icon"
-            variant="ghost"
             className="pl-0!"
             onClick={hideAlert}
+            size="icon"
+            variant="ghost"
           >
             <XIcon className="h-5 w-5" />
           </Button>
@@ -40,7 +40,7 @@ export default function AlertWithActionsDemo() {
       )}
       {!isAlertVisible && (
         <div className="flex justify-center">
-          <Button className="mt-2 mx-auto" onClick={showAlert}>
+          <Button className="mx-auto mt-2" onClick={showAlert}>
             Reopen
           </Button>
         </div>

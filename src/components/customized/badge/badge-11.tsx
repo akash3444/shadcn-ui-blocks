@@ -1,18 +1,18 @@
-import { Badge } from "@/registry/ui/badge";
 import { ArrowLeftIcon, ArrowRightIcon, XIcon } from "lucide-react";
+import { Badge } from "@/registry/ui/badge";
 
 const BadgeWithIconDemo = () => {
   return (
-    <div className="flex items-center gap-3 flex-wrap">
-      <Badge className="rounded-full pl-1 gap-1.5">
+    <div className="flex flex-wrap items-center gap-3">
+      <Badge className="gap-1.5 rounded-full pl-1">
         <ArrowLeftIcon className="h-4 w-4" />
         Left
       </Badge>
-      <Badge className="rounded-full pr-1 gap-1.5">
+      <Badge className="gap-1.5 rounded-full pr-1">
         Right
         <ArrowRightIcon className="h-4 w-4" />
       </Badge>
-      <Badge className="rounded-full pr-1 gap-1.5">
+      <Badge className="gap-1.5 rounded-full pr-1">
         Remove
         <XIcon className="h-4 w-4" />
       </Badge>

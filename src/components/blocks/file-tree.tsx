@@ -1,14 +1,13 @@
+import { ChevronRight, FileIcon, FolderIcon } from "lucide-react";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { cn } from "@/lib/utils";
-import { ChevronRight, FileIcon, FolderIcon } from "lucide-react";
-
-import type { FileTree } from "@/types/blocks";
-import { useBlockContext } from "@/providers/block-provider";
 import { removeBlockPrefixFromPath } from "@/lib/blocks";
+import { cn } from "@/lib/utils";
+import { useBlockContext } from "@/providers/block-provider";
+import type { FileTree } from "@/types/blocks";
 
 interface TreeProps {
   files: FileTree;
@@ -21,9 +20,9 @@ interface TreeItemProps {
 
 export function FileTree({ files }: TreeProps) {
   return (
-    <div className="w-full h-full overflow-y-auto">
+    <div className="h-full w-full overflow-y-auto">
       {files.map((item, index) => (
-        <TreeItem key={index} item={item} />
+        <TreeItem item={item} key={index} />
       ))}
     </div>
   );
@@ -47,11 +46,11 @@ const TreeItem = ({ item, index = 0 }: TreeItemProps) => {
     return (
       <button
         className={cn(
-          "flex items-center gap-2 w-full py-1.5 px-2 hover:bg-sidebar-accent truncate",
+          "flex w-full items-center gap-2 truncate px-2 py-1.5 hover:bg-sidebar-accent",
           { "bg-sidebar-accent": isActive }
         )}
-        style={{ paddingLeft: filePaddingLeft }}
         onClick={handleFileSelect}
+        style={{ paddingLeft: filePaddingLeft }}
       >
         <FileIcon className="h-4 w-4 shrink-0 stroke-muted-foreground" />
         {name}
@@ -65,20 +64,20 @@ const TreeItem = ({ item, index = 0 }: TreeItemProps) => {
         defaultOpen
       >
         <CollapsibleTrigger
-          className="flex items-center gap-2 w-full py-1.5 px-2 hover:bg-sidebar-accent truncate"
+          className="flex w-full items-center gap-2 truncate px-2 py-1.5 hover:bg-sidebar-accent"
           style={{ paddingLeft: folderPaddingLeft }}
         >
-          <ChevronRight className="transition-transform h-4 w-4" />
+          <ChevronRight className="h-4 w-4 transition-transform" />
           <FolderIcon className="h-4 w-4 fill-muted-foreground stroke-muted-foreground" />
           {name}
         </CollapsibleTrigger>
-        <CollapsibleContent className="pl-4 -ml-4">
+        <CollapsibleContent className="-ml-4 pl-4">
           <div>
             {children?.map((subItem, subItemIndex) => (
               <TreeItem
-                key={`subItem-${subItemIndex}`}
-                item={subItem}
                 index={index + 1}
+                item={subItem}
+                key={`subItem-${subItemIndex}`}
               />
             ))}
           </div>

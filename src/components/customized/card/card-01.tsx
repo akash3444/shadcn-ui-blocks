@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import { Button } from "@/registry/ui/button";
 import {
   Card,
@@ -38,7 +36,7 @@ export default function CardDemo() {
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="framework">Priority</Label>
               <Select>
-                <SelectTrigger id="framework" className="w-full">
+                <SelectTrigger className="w-full" id="framework">
                   <SelectValue placeholder="Select" />
                 </SelectTrigger>
                 <SelectContent position="popper">

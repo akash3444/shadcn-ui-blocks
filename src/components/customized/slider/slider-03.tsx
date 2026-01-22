@@ -1,8 +1,7 @@
-import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
 import { Slider as SliderPrimitive } from "radix-ui";
-
+import * as React from "react";
 import { cn } from "@/lib/utils";
-import { cva, VariantProps } from "class-variance-authority";
 
 const sliderTrackVariants = cva(
   "relative w-full grow overflow-hidden rounded-full bg-primary/20",
@@ -43,11 +42,11 @@ const Slider = React.forwardRef<
   SliderProps
 >(({ className, size, ...props }, ref) => (
   <SliderPrimitive.Root
-    ref={ref}
     className={cn(
       "relative flex w-full touch-none select-none items-center",
       className
     )}
+    ref={ref}
     {...props}
   >
     <SliderPrimitive.Track className={cn(sliderTrackVariants({ size }))}>
@@ -60,10 +59,10 @@ Slider.displayName = SliderPrimitive.Root.displayName;
 
 export default function SliderSizeDemo() {
   return (
-    <div className="grid gap-6 max-w-sm w-full mx-auto">
-      <Slider defaultValue={[50]} max={100} step={1} size="base" />
-      <Slider defaultValue={[50]} max={100} step={1} size="medium" />
-      <Slider defaultValue={[50]} max={100} step={1} size="large" />
+    <div className="mx-auto grid w-full max-w-sm gap-6">
+      <Slider defaultValue={[50]} max={100} size="base" step={1} />
+      <Slider defaultValue={[50]} max={100} size="medium" step={1} />
+      <Slider defaultValue={[50]} max={100} size="large" step={1} />
     </div>
   );
 }

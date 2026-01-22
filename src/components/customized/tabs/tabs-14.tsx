@@ -1,5 +1,5 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
 import { Bot, Home, Settings, User } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
 
 const tabs = [
   {
@@ -27,28 +27,28 @@ const tabs = [
 export default function VerticalLeftBorderedTabsDemo() {
   return (
     <Tabs
-      orientation="vertical"
+      className="flex w-full max-w-md flex-row items-start justify-center gap-4"
       defaultValue={tabs[0].value}
-      className="max-w-md w-full flex flex-row items-start gap-4 justify-center"
+      orientation="vertical"
     >
-      <TabsList className="shrink-0 grid grid-cols-1 min-w-28 p-0 bg-background">
+      <TabsList className="grid min-w-28 shrink-0 grid-cols-1 bg-background p-0">
         {tabs.map((tab) => (
           <TabsTrigger
+            className="justify-start rounded-none border-transparent border-l-2 py-1.5 data-[state=active]:border-primary data-[state=active]:bg-primary/5 data-[state=active]:shadow-none"
             key={tab.value}
             value={tab.value}
-            className="border-l-2 border-transparent justify-start rounded-none data-[state=active]:shadow-none data-[state=active]:border-primary data-[state=active]:bg-primary/5 py-1.5"
           >
-            <tab.icon className="h-5 w-5 me-2" /> {tab.name}
+            <tab.icon className="me-2 h-5 w-5" /> {tab.name}
           </TabsTrigger>
         ))}
       </TabsList>
 
-      <div className="h-40 flex items-center justify-center max-w-xs w-full border rounded-md font-medium text-muted-foreground">
+      <div className="flex h-40 w-full max-w-xs items-center justify-center rounded-md border font-medium text-muted-foreground">
         {tabs.map((tab) => (
           <TabsContent
+            className="flex h-full items-center justify-center"
             key={tab.value}
             value={tab.value}
-            className="flex items-center justify-center h-full"
           >
             {tab.name} Content
           </TabsContent>

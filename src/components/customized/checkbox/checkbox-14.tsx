@@ -7,24 +7,24 @@ import { Checkbox } from "@/registry/ui/checkbox";
 export default function Checkbox14() {
   return (
     <div>
-      <Label className="font-medium ps-1">Countries</Label>
-      <div className="bg-muted/30 mt-2.5 border rounded-lg">
+      <Label className="ps-1 font-medium">Countries</Label>
+      <div className="mt-2.5 rounded-lg border bg-muted/30">
         <ScrollArea className="h-60">
-          <div className="p-4 space-y-2">
+          <div className="space-y-2 p-4">
             {countries.map((country, index) => (
               <label
-                key={country.value}
-                htmlFor={country.value}
                 className="flex items-center justify-between gap-6"
+                htmlFor={country.value}
+                key={country.value}
               >
                 <span className="text-sm">
                   {country.flag}&nbsp;&nbsp;{country.label}
                 </span>
                 <Checkbox
-                  value={country.value}
-                  id={country.value}
-                  defaultChecked={index < 3}
                   className="bg-background"
+                  defaultChecked={index < 3}
+                  id={country.value}
+                  value={country.value}
                 />
               </label>
             ))}

@@ -1,17 +1,16 @@
-import { Button } from "@/registry/ui/button";
 import { Instagram, Twitch, Twitter } from "lucide-react";
-import React from "react";
+import { Button } from "@/registry/ui/button";
 
 const SocialButtonDemo = () => {
   return (
     <div className="flex items-center gap-2">
-      <Button size="icon" className="rounded-full">
+      <Button className="rounded-full" size="icon">
         <Twitch />
       </Button>
-      <Button size="icon" className="rounded-full">
+      <Button className="rounded-full" size="icon">
         <Instagram />
       </Button>
-      <Button size="icon" className="rounded-full">
+      <Button className="rounded-full" size="icon">
         <Twitter />
       </Button>
     </div>

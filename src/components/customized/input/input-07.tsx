@@ -1,5 +1,7 @@
 "use client";
 
+import { EyeIcon, EyeOffIcon, LockIcon, MailIcon } from "lucide-react";
+import { useState } from "react";
 import {
   InputGroup,
   InputGroupAddon,
@@ -7,8 +9,6 @@ import {
   InputGroupInput,
 } from "@/components/ui/input-group";
 import { Button } from "@/registry/ui/button";
-import { EyeIcon, EyeOffIcon, LockIcon, MailIcon } from "lucide-react";
-import { useState } from "react";
 
 export default function InputWithAdornmentDemo() {
   const [showPassword, setShowPassword] = useState(false);
@@ -25,9 +25,9 @@ export default function InputWithAdornmentDemo() {
           <MailIcon className="text-muted-foreground" />
         </InputGroupAddon>
         <InputGroupInput
-          type="email"
+          className="border-0 shadow-none focus-visible:ring-0"
           placeholder="Email"
-          className="border-0 focus-visible:ring-0 shadow-none"
+          type="email"
         />
       </InputGroup>
       {/* </div> */}
@@ -36,9 +36,9 @@ export default function InputWithAdornmentDemo() {
           <LockIcon className="text-muted-foreground" />
         </InputGroupAddon>
         <InputGroupInput
-          type={showPassword ? "text" : "password"}
+          className="border-0 shadow-none focus-visible:ring-0"
           placeholder="Password"
-          className="border-0 focus-visible:ring-0 shadow-none"
+          type={showPassword ? "text" : "password"}
         />
 
         <InputGroupAddon align="inline-end">

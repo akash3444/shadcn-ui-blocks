@@ -17,11 +17,11 @@ const Slider = React.forwardRef<
     ref
   ) => (
     <SliderPrimitive.Root
-      ref={ref}
       className={cn(
         "relative flex w-full touch-none select-none items-center",
         className
       )}
+      ref={ref}
       {...props}
     >
       <SliderPrimitive.Track
@@ -47,26 +47,26 @@ Slider.displayName = SliderPrimitive.Root.displayName;
 
 export default function SliderColorDemo() {
   return (
-    <div className="grid gap-6 max-w-sm w-full mx-auto">
+    <div className="mx-auto grid w-full max-w-sm gap-6">
       <Slider
         defaultValue={[50]}
         max={100}
-        step={1}
         rangeClassName="bg-green-500"
+        step={1}
         thumbClassName="bg-white"
       />
       <Slider
         defaultValue={[50]}
         max={100}
-        step={1}
         rangeClassName="bg-indigo-500"
+        step={1}
         thumbClassName="bg-white"
       />
       <Slider
         defaultValue={[50]}
         max={100}
-        step={1}
         rangeClassName="bg-rose-500"
+        step={1}
         thumbClassName="bg-white"
       />
     </div>

@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/avatar/avatar-02.tsx",
-      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/registry/ui/avatar\";\nimport Link from \"next/link\";\n\nexport default function ClickableAvatarDemo() {\n  return (\n    <Link href=\"https://github.com/shadcn\" target=\"_blank\">\n      <Avatar>\n        <AvatarImage src=\"https://github.com/shadcn.png\" alt=\"@shadcn\" />\n        <AvatarFallback>CN</AvatarFallback>\n      </Avatar>\n    </Link>\n  );\n}\n",
+      "content": "import Link from \"next/link\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/registry/ui/avatar\";\n\nexport default function ClickableAvatarDemo() {\n  return (\n    <Link href=\"https://github.com/shadcn\" target=\"_blank\">\n      <Avatar>\n        <AvatarImage alt=\"@shadcn\" src=\"https://github.com/shadcn.png\" />\n        <AvatarFallback>CN</AvatarFallback>\n      </Avatar>\n    </Link>\n  );\n}\n",
       "type": "registry:component"
     }
   ]

@@ -14,8 +14,8 @@ export default function ProgressGradientDemo() {
 
   return (
     <Progress
+      className="w-[60%] [&>div]:rounded-l-full [&>div]:bg-linear-to-r [&>div]:from-cyan-400 [&>div]:via-sky-500 [&>div]:to-indigo-500"
       value={progress}
-      className="w-[60%] [&>div]:bg-linear-to-r [&>div]:from-cyan-400 [&>div]:via-sky-500 [&>div]:to-indigo-500 [&>div]:rounded-l-full"
     />
   );
 }

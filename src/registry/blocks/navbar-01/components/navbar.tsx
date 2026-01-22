@@ -5,15 +5,15 @@ import { NavigationSheet } from "@/registry/blocks/navbar-01/components/navigati
 
 const Navbar = () => {
   return (
-    <nav className="h-16 bg-background border-b">
-      <div className="h-full flex items-center justify-between max-w-(--breakpoint-xl) mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="h-16 border-b bg-background">
+      <div className="mx-auto flex h-full max-w-(--breakpoint-xl) items-center justify-between px-4 sm:px-6 lg:px-8">
         <Logo />
 
         {/* Desktop Menu */}
         <NavMenu className="hidden md:block" />
 
         <div className="flex items-center gap-3">
-          <Button variant="outline" className="hidden sm:inline-flex">
+          <Button className="hidden sm:inline-flex" variant="outline">
             Sign In
           </Button>
           <Button>Get Started</Button>

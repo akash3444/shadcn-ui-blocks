@@ -25,16 +25,16 @@ const items = [
 export default function AccordionTabsDemo() {
   return (
     <Accordion
-      type="single"
+      className="my-4 w-full max-w-lg space-y-2"
       collapsible
       defaultValue="item-0"
-      className="max-w-lg my-4 w-full space-y-2"
+      type="single"
     >
       {items.map(({ title, content }, index) => (
         <AccordionItem
+          className="rounded-md border-none px-4 data-[state=open]:bg-secondary"
           key={index}
           value={`item-${index}`}
-          className="border-none rounded-md px-4 data-[state=open]:bg-secondary"
         >
           <AccordionTrigger className="data-[state=closed]:py-2">
             {title}

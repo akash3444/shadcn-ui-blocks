@@ -13,8 +13,8 @@ export default function LinearProgressWithLabelDemo() {
   }, []);
 
   return (
-    <div className="w-full flex items-center justify-center gap-3">
-      <Progress value={progress} className="w-[60%]" />
+    <div className="flex w-full items-center justify-center gap-3">
+      <Progress className="w-[60%]" value={progress} />
       <span className="text-sm">{progress}%</span>
     </div>
   );

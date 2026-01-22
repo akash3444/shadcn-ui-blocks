@@ -2,13 +2,13 @@ import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/tabs";
 
 export default function TabsMobileNavigationDemo() {
   return (
-    <Tabs defaultValue={tabs[0].value} className="max-w-xs w-full">
-      <TabsList className="h-14 w-full grid grid-cols-4 p-0 bg-background justify-start rounded-none">
+    <Tabs className="w-full max-w-xs" defaultValue={tabs[0].value}>
+      <TabsList className="grid h-14 w-full grid-cols-4 justify-start rounded-none bg-background p-0">
         {tabs.map((tab) => (
           <TabsTrigger
+            className="flex h-full flex-col rounded-none border-transparent border-b-2 bg-background data-[state=active]:border-primary data-[state=active]:shadow-none [&>svg]:h-5 [&>svg]:w-5 [&>svg]:shrink-0"
             key={tab.value}
             value={tab.value}
-            className="flex flex-col rounded-none bg-background h-full data-[state=active]:shadow-none border-b-2 border-transparent data-[state=active]:border-primary [&>svg]:h-5 [&>svg]:w-5 [&>svg]:shrink-0"
           >
             {tab.icon}
             <code className="mt-1.5 text-[13px]">{tab.name}</code>

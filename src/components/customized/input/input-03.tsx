@@ -3,9 +3,9 @@ import { Input } from "@/registry/ui/input";
 export default function FilledInputDemo() {
   return (
     <Input
-      type="email"
+      className="max-w-xs border-none bg-secondary shadow-none"
       placeholder="Email"
-      className="bg-secondary border-none shadow-none max-w-xs"
+      type="email"
     />
   );
 }

@@ -1,5 +1,5 @@
-import { Button } from "@/registry/ui/button";
 import { StarIcon } from "lucide-react";
+import { Button } from "@/registry/ui/button";
 
 const FullWidthButtonDemo = () => (
   <Button className="w-full">

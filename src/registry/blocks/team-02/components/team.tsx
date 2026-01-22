@@ -61,28 +61,28 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="flex flex-col justify-center py-8 sm:pt-12 sm:pb-20 px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto">
-      <b className="text-muted-foreground font-semibold text-sm uppercase">
+    <div className="mx-auto flex max-w-(--breakpoint-xl) flex-col justify-center px-6 py-8 sm:pt-12 sm:pb-20 lg:px-8">
+      <b className="font-semibold text-muted-foreground text-sm uppercase">
         Our team
       </b>
-      <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-[-0.03em]">
+      <h2 className="mt-4 font-semibold text-3xl tracking-[-0.03em] md:text-4xl">
         Some of the people you&apos;ll be working with
       </h2>
-      <p className="mt-3 text-base sm:text-lg text-muted-foreground">
+      <p className="mt-3 text-base text-muted-foreground sm:text-lg">
         We&apos;re a 100% remote team spread all across the world. Join us!
       </p>
 
-      <div className="mt-14 sm:mt-20 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="mt-14 grid w-full grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 md:grid-cols-4">
         {teamMembers.map((member) => (
           <div key={member.name}>
             <Image
-              src={member.imageUrl}
               alt={member.name}
-              className="h-20 w-20 rounded-full object-cover bg-secondary"
-              width={120}
+              className="h-20 w-20 rounded-full bg-secondary object-cover"
               height={120}
+              src={member.imageUrl}
+              width={120}
             />
-            <h3 className="mt-4 text-lg font-semibold">{member.name}</h3>
+            <h3 className="mt-4 font-semibold text-lg">{member.name}</h3>
             <p className="text-muted-foreground text-sm">{member.title}</p>
             <p className="mt-3">{member.bio}</p>
           </div>

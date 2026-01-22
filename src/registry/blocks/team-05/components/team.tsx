@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
 import { DribbbleIcon, TwitchIcon, TwitterIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const teamMembers = [
   {
@@ -64,19 +64,19 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="flex flex-col justify-center py-8 sm:py-12 px-6 lg:px-8 max-w-(--breakpoint-xl) mx-auto gap-16">
-      <div className="text-center max-w-2xl mx-auto">
-        <b className="text-center text-muted-foreground text-sm font-semibold uppercase">
+    <div className="mx-auto flex max-w-(--breakpoint-xl) flex-col justify-center gap-16 px-6 py-8 sm:py-12 lg:px-8">
+      <div className="mx-auto max-w-2xl text-center">
+        <b className="text-center font-semibold text-muted-foreground text-sm uppercase">
           We&apos;re hiring!
         </b>
-        <h2 className="mt-3 text-4xl sm:text-5xl font-semibold tracking-tighter">
+        <h2 className="mt-3 font-semibold text-4xl tracking-tighter sm:text-5xl">
           Meet Our Team
         </h2>
-        <p className="mt-6 text-base sm:text-lg text-muted-foreground">
+        <p className="mt-6 text-base text-muted-foreground sm:text-lg">
           Our philosophy is simple — hire a team of diverse, passionate people
           and foster a culture that empowers you to do you best work.
         </p>
-        <div className="mt-8 flex flex-col sm:flex-row-reverse sm:justify-center gap-3">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row-reverse sm:justify-center">
           <Button size="lg">Open Positions</Button>
           <Button size="lg" variant="outline">
             About Us
@@ -84,42 +84,42 @@ const Team = () => {
         </div>
       </div>
 
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
+      <div className="grid w-full grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-4">
         {teamMembers.map((member) => (
           <div key={member.name}>
             <Image
-              src={member.imageUrl}
               alt={member.name}
-              className="w-full aspect-square rounded-lg object-cover bg-secondary"
-              width={600}
+              className="aspect-square w-full rounded-lg bg-secondary object-cover"
               height={600}
+              src={member.imageUrl}
+              width={600}
             />
-            <h3 className="mt-4 text-lg font-semibold">{member.name}</h3>
+            <h3 className="mt-4 font-semibold text-lg">{member.name}</h3>
             <p className="text-muted-foreground text-sm">{member.title}</p>
             <p className="mt-3">{member.bio}</p>
             <div className="mt-4 flex items-center gap-2.5">
               <Button
-                className="bg-accent hover:bg-accent text-muted-foreground shadow-none"
-                size="icon"
                 asChild
+                className="bg-accent text-muted-foreground shadow-none hover:bg-accent"
+                size="icon"
               >
                 <Link href="#" target="_blank">
                   <TwitterIcon className="stroke-muted-foreground" />
                 </Link>
               </Button>
               <Button
-                className="bg-muted hover:bg-muted text-muted-foreground shadow-none"
-                size="icon"
                 asChild
+                className="bg-muted text-muted-foreground shadow-none hover:bg-muted"
+                size="icon"
               >
                 <Link href="#" target="_blank">
                   <DribbbleIcon className="stroke-muted-foreground" />
                 </Link>
               </Button>
               <Button
-                className="bg-muted hover:bg-muted text-muted-foreground shadow-none"
-                size="icon"
                 asChild
+                className="bg-muted text-muted-foreground shadow-none hover:bg-muted"
+                size="icon"
               >
                 <Link href="#" target="_blank">
                   <TwitchIcon className="stroke-muted-foreground" />

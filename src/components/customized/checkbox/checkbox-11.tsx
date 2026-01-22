@@ -1,5 +1,5 @@
-import { Checkbox as CheckboxPrimitive } from "radix-ui";
 import { CircleCheck, Ruler, Smile, SwatchBook } from "lucide-react";
+import { Checkbox as CheckboxPrimitive } from "radix-ui";
 
 const options = [
   {
@@ -22,12 +22,12 @@ const options = [
 
 const CheckboxCardDemo = () => {
   return (
-    <div className="w-full max-w-sm grid grid-cols-3 gap-3">
+    <div className="grid w-full max-w-sm grid-cols-3 gap-3">
       {options.map((option) => (
         <CheckboxPrimitive.Root
-          key={option.value}
+          className="relative rounded-lg border border-dashed px-4 py-3 text-start text-muted-foreground data-[state=checked]:border-primary data-[state=checked]:border-solid data-[state=checked]:bg-primary/4 data-[state=checked]:text-primary data-[state=checked]:ring data-[state=checked]:ring-primary"
           defaultChecked={option.defaultChecked}
-          className="relative border border-dashed rounded-lg px-4 py-3 text-start text-muted-foreground data-[state=checked]:ring data-[state=checked]:ring-primary data-[state=checked]:border-solid data-[state=checked]:bg-primary/4 data-[state=checked]:border-primary data-[state=checked]:text-primary"
+          key={option.value}
         >
           <option.icon className="mb-3" />
           <span className="font-medium tracking-tight">{option.label}</span>

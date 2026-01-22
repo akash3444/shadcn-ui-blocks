@@ -1,5 +1,7 @@
 "use client";
 
+import { TagIcon } from "lucide-react";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { blockCategories } from "@/blocks";
 import {
   Select,
@@ -11,8 +13,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { categories } from "@/config/registry";
-import { TagIcon } from "lucide-react";
-import { useParams, useRouter, useSearchParams } from "next/navigation";
 
 const CategoryFilter = () => {
   const { category = "all" } = useParams<{ category: string }>();
@@ -29,7 +29,7 @@ const CategoryFilter = () => {
   };
 
   return (
-    <Select value={category} onValueChange={handleSelect}>
+    <Select onValueChange={handleSelect} value={category}>
       <SelectTrigger className="w-[180px] bg-background">
         <SelectValue placeholder="Select a category" />
       </SelectTrigger>

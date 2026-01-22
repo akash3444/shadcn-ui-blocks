@@ -1,3 +1,5 @@
+import { MailIcon, MapPinIcon, MessageCircle, PhoneIcon } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,26 +12,24 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { MailIcon, MapPinIcon, MessageCircle, PhoneIcon } from "lucide-react";
-import Link from "next/link";
 
 const Contact = () => (
-  <div className="min-h-screen flex items-center justify-center py-16">
-    <div className="w-full max-w-(--breakpoint-xl) mx-auto px-6 xl:px-0">
-      <b className="text-muted-foreground uppercase font-semibold text-sm">
+  <div className="flex min-h-screen items-center justify-center py-16">
+    <div className="mx-auto w-full max-w-(--breakpoint-xl) px-6 xl:px-0">
+      <b className="font-semibold text-muted-foreground text-sm uppercase">
         Contact Us
       </b>
-      <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
+      <h2 className="mt-3 font-semibold text-3xl tracking-tight md:text-4xl">
         Chat with our friendly team!
       </h2>
-      <p className="mt-3 text-base sm:text-lg text-muted-foreground">
+      <p className="mt-3 text-base text-muted-foreground sm:text-lg">
         We&apos;d love to hear from you. Please fill out this form or shoot us
         an email.
       </p>
-      <div className="mt-16 flex flex-col lg:flex-row gap-16 md:gap-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:col-span-2 *:border *:p-6 *:bg-background gap-1 border p-1 bg-muted max-w-3xl w-full">
+      <div className="mt-16 flex flex-col gap-16 md:gap-10 lg:flex-row">
+        <div className="grid w-full max-w-3xl grid-cols-1 gap-1 border bg-muted p-1 *:border *:bg-background *:p-6 sm:grid-cols-2 lg:col-span-2">
           <div>
-            <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/10 text-foreground border border-foreground/3 rounded-xl">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-foreground/3 bg-foreground/5 text-foreground dark:bg-foreground/10">
               <MailIcon />
             </div>
             <h3 className="mt-6 font-semibold text-xl">Email</h3>
@@ -44,7 +44,7 @@ const Contact = () => (
             </Link>
           </div>
           <div>
-            <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/10 text-foreground border border-foreground/3 rounded-xl">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-foreground/3 bg-foreground/5 text-foreground dark:bg-foreground/10">
               <MessageCircle />
             </div>
             <h3 className="mt-6 font-semibold text-xl">Live chat</h3>
@@ -56,7 +56,7 @@ const Contact = () => (
             </Link>
           </div>
           <div>
-            <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/10 text-foreground border border-foreground/3 rounded-xl">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-foreground/3 bg-foreground/5 text-foreground dark:bg-foreground/10">
               <MapPinIcon />
             </div>
             <h3 className="mt-6 font-semibold text-xl">Office</h3>
@@ -72,7 +72,7 @@ const Contact = () => (
             </Link>
           </div>
           <div>
-            <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/10 text-foreground border border-foreground/3 rounded-xl">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-foreground/3 bg-foreground/5 text-foreground dark:bg-foreground/10">
               <PhoneIcon />
             </div>
             <h3 className="mt-6 font-semibold text-xl">Phone</h3>
@@ -89,8 +89,8 @@ const Contact = () => (
         </div>
 
         {/* Form */}
-        <div className="border p-1 bg-muted w-full max-w-lg">
-          <Card className="relative isolate bg-white/50 shadow-none lg:ms-auto rounded-none">
+        <div className="w-full max-w-lg border bg-muted p-1">
+          <Card className="relative isolate rounded-none bg-white/50 shadow-none lg:ms-auto">
             <CardHeader>
               <CardTitle>Contact Us</CardTitle>
               <CardDescription>
@@ -99,46 +99,46 @@ const Contact = () => (
             </CardHeader>
             <CardContent className="mt-2">
               <form>
-                <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                <div className="grid gap-x-8 gap-y-6 md:grid-cols-2">
                   <div className="col-span-2 sm:col-span-1">
                     <Label htmlFor="firstName">First Name</Label>
                     <Input
-                      placeholder="First name"
+                      className="mt-2 h-10 bg-white shadow-none"
                       id="firstName"
-                      className="mt-2 bg-white h-10 shadow-none"
+                      placeholder="First name"
                     />
                   </div>
                   <div className="col-span-2 sm:col-span-1">
                     <Label htmlFor="lastName">Last Name</Label>
                     <Input
-                      placeholder="Last name"
+                      className="mt-2 h-10 bg-white shadow-none"
                       id="lastName"
-                      className="mt-2 bg-white h-10 shadow-none"
+                      placeholder="Last name"
                     />
                   </div>
                   <div className="col-span-2">
                     <Label htmlFor="email">Email</Label>
                     <Input
-                      type="email"
-                      placeholder="Email"
+                      className="mt-2 h-10 bg-white shadow-none"
                       id="email"
-                      className="mt-2 bg-white h-10 shadow-none"
+                      placeholder="Email"
+                      type="email"
                     />
                   </div>
                   <div className="col-span-2">
                     <Label htmlFor="message">Message</Label>
                     <Textarea
+                      className="mt-2 bg-white shadow-none"
                       id="message"
                       placeholder="Message"
-                      className="mt-2 bg-white shadow-none"
                       rows={6}
                     />
                   </div>
                   <div className="col-span-2 flex items-center gap-2">
-                    <Checkbox id="acceptTerms" className="bg-background" />
-                    <Label htmlFor="acceptTerms" className="gap-0">
+                    <Checkbox className="bg-background" id="acceptTerms" />
+                    <Label className="gap-0" htmlFor="acceptTerms">
                       You agree to our
-                      <Link href="#" className="underline ml-1">
+                      <Link className="ml-1 underline" href="#">
                         terms and conditions
                       </Link>
                       <span>.</span>

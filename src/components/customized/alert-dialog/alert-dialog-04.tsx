@@ -1,3 +1,4 @@
+import { CircleFadingArrowUp, Rocket } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -11,7 +12,6 @@ import {
 } from "@/registry/ui/alert-dialog";
 import { Badge } from "@/registry/ui/badge";
 import { Button } from "@/registry/ui/button";
-import { CircleFadingArrowUp, Rocket } from "lucide-react";
 
 export default function AlertDialogInfo() {
   return (
@@ -21,10 +21,10 @@ export default function AlertDialogInfo() {
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <div className="mx-auto sm:mx-0 mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-primary/10">
+          <div className="mx-auto mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 sm:mx-0">
             <CircleFadingArrowUp className="h-[18px] w-[18px] text-primary" />
           </div>
-          <AlertDialogTitle className="text-2xl font-bold tracking-tight">
+          <AlertDialogTitle className="font-bold text-2xl tracking-tight">
             New Software Update Available
           </AlertDialogTitle>
           <AlertDialogDescription className="mt-3! text-[15px]">
@@ -32,28 +32,28 @@ export default function AlertDialogInfo() {
             the latest version to continue using the app.
           </AlertDialogDescription>
           <div className="mt-6! flex flex-wrap gap-2">
-            <Badge variant="outline" className="py-1">
+            <Badge className="py-1" variant="outline">
               Faster Performance
             </Badge>
-            <Badge variant="outline" className="py-1">
+            <Badge className="py-1" variant="outline">
               Advanced Blocks
             </Badge>
-            <Badge variant="outline" className="py-1">
+            <Badge className="py-1" variant="outline">
               Customized Components
             </Badge>
-            <Badge variant="outline" className="py-1">
+            <Badge className="py-1" variant="outline">
               UI Revamp
             </Badge>
-            <Badge variant="outline" className="py-1">
+            <Badge className="py-1" variant="outline">
               Security Improvements
             </Badge>
-            <Badge variant="outline" className="py-1">
+            <Badge className="py-1" variant="outline">
               Other Improvements
             </Badge>
-            <Badge variant="outline" className="py-1">
+            <Badge className="py-1" variant="outline">
               Bug Fixes
             </Badge>
-            <Badge variant="outline" className="py-1">
+            <Badge className="py-1" variant="outline">
               + much more
             </Badge>
           </div>

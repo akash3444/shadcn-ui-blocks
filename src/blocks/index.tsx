@@ -1,4 +1,4 @@
-import { blocks, RegistryBlock } from "@/config/registry";
+import { blocks, type RegistryBlock } from "@/config/registry";
 
 const getBlocksData = () => {
   const categories = [];

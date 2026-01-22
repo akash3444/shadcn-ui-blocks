@@ -1,5 +1,5 @@
-import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/registry/ui/input-otp";
 import { Dot } from "lucide-react";
+import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/registry/ui/input-otp";
 
 export default function InputOTPDemo() {
   return (
@@ -9,7 +9,7 @@ export default function InputOTPDemo() {
         <InputOTPSlot index={1} />
         <InputOTPSlot index={2} />
       </InputOTPGroup>
-      <div role="separator" className="text-muted-foreground">
+      <div className="text-muted-foreground" role="separator">
         <Dot />
       </div>
       <InputOTPGroup>

@@ -1,11 +1,11 @@
 "use client";
 
-import {
-  PackageManager,
-  packageManagers,
-} from "@/description/package-managers";
 import posthog from "posthog-js";
 import { createContext, useContext, useEffect, useState } from "react";
+import {
+  type PackageManager,
+  packageManagers,
+} from "@/description/package-managers";
 
 interface PackageManagerContextType {
   selectedPackageManager: PackageManager;

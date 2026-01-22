@@ -47,7 +47,7 @@ const products = [
 
 export default function RoundedCornersTableDemo() {
   return (
-    <div className="w-full border rounded-md overflow-hidden">
+    <div className="w-full overflow-hidden rounded-md border">
       <Table>
         <TableHeader>
           <TableRow>
@@ -60,7 +60,7 @@ export default function RoundedCornersTableDemo() {
         </TableHeader>
         <TableBody>
           {products.map((product) => (
-            <TableRow key={product.id} className="odd:bg-muted/50">
+            <TableRow className="odd:bg-muted/50" key={product.id}>
               <TableCell className="pl-4">{product.id}</TableCell>
               <TableCell className="font-medium">{product.name}</TableCell>
               <TableCell>{product.category}</TableCell>

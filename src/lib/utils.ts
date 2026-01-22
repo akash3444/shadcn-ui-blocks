@@ -1,6 +1,6 @@
-import { config } from "@/config";
-import { clsx, type ClassValue } from "clsx";
+import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { config } from "@/config";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -17,14 +17,17 @@ export function groupBy<T, K extends keyof T>(
   array: T[],
   key: K
 ): GroupBy<T, K> {
-  return array.reduce((acc, item) => {
-    const keyValue = String(item[key]);
-    if (!acc[keyValue]) {
-      acc[keyValue] = [];
-    }
-    acc[keyValue].push(item);
-    return acc;
-  }, {} as GroupBy<T, K>);
+  return array.reduce(
+    (acc, item) => {
+      const keyValue = String(item[key]);
+      if (!acc[keyValue]) {
+        acc[keyValue] = [];
+      }
+      acc[keyValue].push(item);
+      return acc;
+    },
+    {} as GroupBy<T, K>
+  );
 }
 
 export function absoluteUrl(path: string) {

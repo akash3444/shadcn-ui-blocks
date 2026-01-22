@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { BlockCodeExplorer } from "@/components/blocks/block-code-explorer";
 import BlockDetails from "@/components/blocks/block-details";
 import BlockPreview from "@/components/blocks/block-preview";
@@ -5,13 +7,11 @@ import BlockToolbar from "@/components/blocks/block-toolbar";
 import { Navbar } from "@/components/layout/navbar";
 import { DescriptionText, MainHeading } from "@/components/typography";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { blocks } from "@/config/registry";
 import { constructMetadata } from "@/lib/metadata";
 import { absoluteUrl, capitalize } from "@/lib/utils";
 import { BlockProvider } from "@/providers/block-provider";
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
 import registry from "../../../../registry.json";
-import { blocks } from "@/config/registry";
 
 export const generateStaticParams = async () => {
   return blocks.map(({ name }) => ({
@@ -52,14 +52,14 @@ const BlockPage = async (props: { params: Promise<{ block: string }> }) => {
   return (
     <BlockProvider name={block}>
       <Navbar />
-      <div className="max-w-(--breakpoint-2xl) mx-auto mt-14 py-8 px-4">
+      <div className="mx-auto mt-14 max-w-(--breakpoint-2xl) px-4 py-8">
         <MainHeading>{title}</MainHeading>
         {description && (
           <DescriptionText className="mt-1">{description}</DescriptionText>
         )}
 
-        <Tabs defaultValue="preview" className="mt-6">
-          <div className="mb-1 flex items-center gap-2 justify-between pr-1.5">
+        <Tabs className="mt-6" defaultValue="preview">
+          <div className="mb-1 flex items-center justify-between gap-2 pr-1.5">
             <TabsList>
               <TabsTrigger value="preview">Preview</TabsTrigger>
               <TabsTrigger value="code">Code</TabsTrigger>

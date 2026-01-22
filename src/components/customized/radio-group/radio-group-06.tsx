@@ -3,28 +3,28 @@ import { RadioGroup, RadioGroupItem } from "@/registry/ui/radio-group";
 
 export default function RadioGroupVariantDemo() {
   return (
-    <RadioGroup defaultValue="default" className="flex items-center gap-3">
+    <RadioGroup className="flex items-center gap-3" defaultValue="default">
       <div className="flex items-center space-x-2">
         <RadioGroupItem
-          value="default"
+          className="border-indigo-500 text-indigo-500 [&_svg]:fill-indigo-500"
           id="variant-default"
-          className="text-indigo-500 border-indigo-500 [&_svg]:fill-indigo-500"
+          value="default"
         />
         <Label htmlFor="variant-default">Default</Label>
       </div>
       <div className="flex items-center space-x-2">
         <RadioGroupItem
-          value="soft"
+          className="border-indigo-500 border-none bg-indigo-500/25 text-indigo-500 dark:bg-indigo-500/30 [&_svg]:fill-indigo-500"
           id="variant-soft"
-          className="text-indigo-500 border-indigo-500 [&_svg]:fill-indigo-500 border-none bg-indigo-500/25 dark:bg-indigo-500/30"
+          value="soft"
         />
         <Label htmlFor="variant-soft">Soft</Label>
       </div>
       <div className="flex items-center space-x-2">
         <RadioGroupItem
-          value="solid"
+          className="border-indigo-500 border-none bg-indigo-500 text-indigo-500 dark:bg-indigo-500 [&_svg]:fill-white"
           id="variant-solid"
-          className="text-indigo-500 border-indigo-500 border-none bg-indigo-500 dark:bg-indigo-500 [&_svg]:fill-white"
+          value="solid"
         />
         <Label htmlFor="variant-solid">Solid</Label>
       </div>

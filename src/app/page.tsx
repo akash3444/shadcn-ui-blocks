@@ -1,8 +1,8 @@
+import type { Metadata } from "next";
 import { Features, Hero } from "@/components/home";
 import Footer from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { absoluteUrl } from "@/lib/utils";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: {
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <div className="relative bg-primary/3 mask-b-from-85%">
-        <Navbar className="shadow-xl shadow-primary/2 dark:shadow-primary/3 border-primary/11" />
+      <div className="mask-b-from-85% relative bg-primary/3">
+        <Navbar className="border-primary/11 shadow-primary/2 shadow-xl dark:shadow-primary/3" />
         <div className="-mt-24">
           <Hero />
         </div>

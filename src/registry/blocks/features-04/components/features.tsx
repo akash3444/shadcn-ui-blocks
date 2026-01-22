@@ -1,10 +1,4 @@
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import {
   BookCheck,
   ChartPie,
   FolderSync,
@@ -12,6 +6,12 @@ import {
   Users,
   Zap,
 } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const features = [
   {
@@ -54,29 +54,29 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-(--breakpoint-lg) w-full py-12 px-6">
-        <h2 className="text-4xl md:text-5xl md:leading-14 font-semibold tracking-[-0.03em] max-w-lg">
+    <div className="flex min-h-screen items-center justify-center">
+      <div className="w-full max-w-(--breakpoint-lg) px-6 py-12">
+        <h2 className="max-w-lg font-semibold text-4xl tracking-[-0.03em] md:text-5xl md:leading-14">
           Boost Your Strategy with Smart Features
         </h2>
-        <div className="mt-6 md:mt-10 w-full mx-auto grid md:grid-cols-2 gap-12">
+        <div className="mx-auto mt-6 grid w-full gap-12 md:mt-10 md:grid-cols-2">
           <div>
-            <Accordion defaultValue="item-0" type="single" className="w-full">
+            <Accordion className="w-full" defaultValue="item-0" type="single">
               {features.map(({ title, description, icon: Icon }, index) => (
                 <AccordionItem
+                  className="group/accordion-item data-[state=open]:border-primary data-[state=open]:border-b-2"
                   key={index}
                   value={`item-${index}`}
-                  className="group/accordion-item data-[state=open]:border-b-2 data-[state=open]:border-primary"
                 >
-                  <AccordionTrigger className="text-lg [&>svg]:hidden group-first/accordion-item:pt-0">
+                  <AccordionTrigger className="text-lg group-first/accordion-item:pt-0 [&>svg]:hidden">
                     <div className="flex items-center gap-4">
                       <Icon />
                       {title}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-[17px] leading-relaxed text-muted-foreground">
+                  <AccordionContent className="text-[17px] text-muted-foreground leading-relaxed">
                     {description}
-                    <div className="mt-6 mb-2 md:hidden aspect-video w-full bg-muted rounded-xl" />
+                    <div className="mt-6 mb-2 aspect-video w-full rounded-xl bg-muted md:hidden" />
                   </AccordionContent>
                 </AccordionItem>
               ))}
@@ -84,7 +84,7 @@ const Features = () => {
           </div>
 
           {/* Media */}
-          <div className="hidden md:block w-full h-full bg-muted rounded-xl" />
+          <div className="hidden h-full w-full rounded-xl bg-muted md:block" />
         </div>
       </div>
     </div>

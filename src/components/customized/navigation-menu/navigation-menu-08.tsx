@@ -1,3 +1,6 @@
+import { BookOpen, Home, Rss, Settings, User } from "lucide-react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -5,9 +8,6 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/registry/ui/navigation-menu";
-import { cn } from "@/lib/utils";
-import { BookOpen, Home, Rss, Settings, User } from "lucide-react";
-import Link from "next/link";
 
 const navigationMenuItems = [
   { title: "Home", href: "#", icon: Home, isActive: true },
@@ -24,12 +24,12 @@ export default function NavigationMenuMobile() {
         {navigationMenuItems.map((item) => (
           <NavigationMenuItem key={item.title}>
             <NavigationMenuLink
-              className={cn(
-                navigationMenuTriggerStyle(),
-                "flex flex-col h-auto items-center px-5 py-2.5"
-              )}
               active={item.isActive}
               asChild
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "flex h-auto flex-col items-center px-5 py-2.5"
+              )}
             >
               <Link href={item.href}>
                 <item.icon className="mb-1.5 size-5" />

@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const features = [
   {
@@ -42,30 +42,30 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-(--breakpoint-lg) w-full py-10 px-6">
-        <h2 className="text-4xl md:text-[2.75rem] md:leading-[1.2] font-semibold tracking-[-0.03em] sm:max-w-xl text-pretty sm:mx-auto sm:text-center">
+    <div className="flex min-h-screen items-center justify-center">
+      <div className="w-full max-w-(--breakpoint-lg) px-6 py-10">
+        <h2 className="text-pretty font-semibold text-4xl tracking-[-0.03em] sm:mx-auto sm:max-w-xl sm:text-center md:text-[2.75rem] md:leading-[1.2]">
           Strengthen Your Strategy
         </h2>
-        <p className="mt-2 text-muted-foreground text-lg sm:text-xl sm:text-center">
+        <p className="mt-2 text-lg text-muted-foreground sm:text-center sm:text-xl">
           Enhance your strategy with intelligent tools designed for success.
         </p>
-        <div className="mt-8 md:mt-16 w-full mx-auto space-y-20">
+        <div className="mx-auto mt-8 w-full space-y-20 md:mt-16">
           {features.map((feature) => (
             <div
+              className="flex flex-col items-center gap-x-12 gap-y-6 md:flex-row md:even:flex-row-reverse"
               key={feature.category}
-              className="flex flex-col md:flex-row items-center gap-x-12 gap-y-6 md:even:flex-row-reverse"
             >
-              <div className="w-full aspect-[4/3] bg-muted rounded-xl border border-border/50 basis-1/2" />
-              <div className="basis-1/2 shrink-0">
-                <span className="uppercase font-medium text-sm text-muted-foreground">
+              <div className="aspect-[4/3] w-full basis-1/2 rounded-xl border border-border/50 bg-muted" />
+              <div className="shrink-0 basis-1/2">
+                <span className="font-medium text-muted-foreground text-sm uppercase">
                   {feature.category}
                 </span>
-                <h4 className="my-3 text-3xl font-semibold tracking-[-0.02em]">
+                <h4 className="my-3 font-semibold text-3xl tracking-[-0.02em]">
                   {feature.title}
                 </h4>
                 <p className="text-muted-foreground">{feature.details}</p>
-                <Button asChild size="lg" className="mt-6 rounded-full gap-3">
+                <Button asChild className="mt-6 gap-3 rounded-full" size="lg">
                   <Link href={feature.tutorialLink}>
                     Learn More <ArrowRight />
                   </Link>

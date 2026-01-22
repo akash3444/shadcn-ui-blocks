@@ -5,8 +5,8 @@ import { NavigationSheet } from "@/registry/blocks/navbar-04/components/navigati
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-6 inset-x-4 h-16 bg-background border max-w-(--breakpoint-xl) mx-auto rounded-full">
-      <div className="h-full flex items-center justify-between mx-auto px-4">
+    <nav className="fixed inset-x-4 top-6 mx-auto h-16 max-w-(--breakpoint-xl) rounded-full border bg-background">
+      <div className="mx-auto flex h-full items-center justify-between px-4">
         <Logo />
 
         {/* Desktop Menu */}
@@ -14,8 +14,8 @@ const Navbar = () => {
 
         <div className="flex items-center gap-3">
           <Button
+            className="hidden rounded-full sm:inline-flex"
             variant="outline"
-            className="hidden sm:inline-flex rounded-full"
           >
             Sign In
           </Button>

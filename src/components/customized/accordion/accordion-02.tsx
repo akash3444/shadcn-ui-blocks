@@ -25,15 +25,15 @@ const items = [
 export default function AccordionOutlineDemo() {
   return (
     <Accordion
-      type="single"
+      className="my-4 w-full max-w-lg space-y-2"
       collapsible
-      className="max-w-lg my-4 w-full space-y-2"
+      type="single"
     >
       {items.map(({ title, content }, index) => (
         <AccordionItem
+          className="rounded-md border px-4 last:border-b"
           key={index}
           value={`item-${index}`}
-          className="border last:border-b rounded-md px-4"
         >
           <AccordionTrigger>{title}</AccordionTrigger>
           <AccordionContent>{content}</AccordionContent>

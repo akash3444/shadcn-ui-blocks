@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/switch/switch-06.tsx",
-      "content": "\"use client\";\n\nimport { Switch } from \"@/registry/ui/switch\";\nimport React, { useState } from \"react\";\n\nconst ControlledSwitchDemo = () => {\n  const [checked, setChecked] = useState<boolean>();\n\n  return <Switch checked={checked} onCheckedChange={setChecked} />;\n};\n\nexport default ControlledSwitchDemo;\n",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { Switch } from \"@/registry/ui/switch\";\n\nconst ControlledSwitchDemo = () => {\n  const [checked, setChecked] = useState<boolean>();\n\n  return <Switch checked={checked} onCheckedChange={setChecked} />;\n};\n\nexport default ControlledSwitchDemo;\n",
       "type": "registry:component"
     }
   ]

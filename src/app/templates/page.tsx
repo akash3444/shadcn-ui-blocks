@@ -1,3 +1,6 @@
+import { Layers } from "lucide-react";
+import type { Metadata } from "next";
+import Link from "next/link";
 import { Logo } from "@/components/logo";
 import TemplateCard from "@/components/templates/template-card";
 import { Button } from "@/components/ui/button";
@@ -5,9 +8,6 @@ import { NextLogo, ShadcnLogo, TailwindLogo } from "@/components/ui/icons";
 import { categories, categorizedTemplates } from "@/description/templates";
 import { constructMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/utils";
-import { Layers } from "lucide-react";
-import { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = constructMetadata({
   title: "Beautifully Designed Shadcn UI Templates",
@@ -30,7 +30,7 @@ export const metadata: Metadata = constructMetadata({
     "Portfolio templates",
   ],
   alternates: {
-    canonical: absoluteUrl(`/templates`),
+    canonical: absoluteUrl("/templates"),
   },
 });
 
@@ -38,9 +38,9 @@ export default function TemplatesPage() {
   return (
     <div>
       {/* Hero */}
-      <div className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden">
-        <div className="relative z-1 max-w-4xl mx-auto text-center space-y-8 px-6">
-          <div className="relative overflow-hidden inline-flex items-center justify-center bg-accent gap-4 py-1.5 pl-4 pr-2 rounded-full">
+      <div className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden">
+        <div className="relative z-1 mx-auto max-w-4xl space-y-8 px-6 text-center">
+          <div className="relative inline-flex items-center justify-center gap-4 overflow-hidden rounded-full bg-accent py-1.5 pr-2 pl-4">
             <span className="text-sm">Built using</span>
             <div className="flex items-center justify-center gap-3">
               <NextLogo className="h-6 w-6" />
@@ -49,7 +49,7 @@ export default function TemplatesPage() {
               <Logo className="h-6 w-6 [&_svg]:h-4 [&_svg]:w-4" />
             </div>
           </div>
-          <h1 className="text-[2.5rem] sm:text-5xl lg:text-6xl font-semibold leading-[1.15]! tracking-[-0.035em]">
+          <h1 className="font-semibold text-[2.5rem] leading-[1.15]! tracking-[-0.035em] sm:text-5xl lg:text-6xl">
             <span className="text-blue-500">Beautifully Designed</span> Shadcn
             UI Templates for Every Project
           </h1>
@@ -59,9 +59,9 @@ export default function TemplatesPage() {
             functionality, these templates help you build stunning UIs with
             ease!
           </p>
-          <Button size="lg" className="h-13 !px-6 text-lg" asChild>
+          <Button asChild className="!px-6 h-13 text-lg" size="lg">
             <Link href="#templates">
-              <Layers className="w-5! h-5! mr-2" /> Browse Templates
+              <Layers className="mr-2 h-5! w-5!" /> Browse Templates
             </Link>
           </Button>
         </div>
@@ -69,8 +69,8 @@ export default function TemplatesPage() {
 
       {/* Main */}
       <section
+        className="container mx-auto max-w-(--breakpoint-lg) px-6 py-20"
         id="templates"
-        className="container max-w-(--breakpoint-lg) py-20 mx-auto px-6"
       >
         <div className="space-y-14">
           {categories.map((category) => {
@@ -78,19 +78,19 @@ export default function TemplatesPage() {
 
             return (
               <div key={category.slug}>
-                <h2 className="mb-5 text-3xl sm:text-4xl font-bold tracking-tight">
+                <h2 className="mb-5 font-bold text-3xl tracking-tight sm:text-4xl">
                   {category.name} Templates
                 </h2>
                 {templates?.length ? (
-                  <div className="grid md:grid-cols-2 gap-8">
+                  <div className="grid gap-8 md:grid-cols-2">
                     {categorizedTemplates[category.slug].map((template) => (
                       <TemplateCard key={template.slug} template={template} />
                     ))}
                   </div>
                 ) : (
-                  <div className="bg-accent p-6 rounded-xl">
+                  <div className="rounded-xl bg-accent p-6">
                     <div className="flex flex-col gap-2">
-                      <p className="text-lg font-semibold">Coming Soon!</p>
+                      <p className="font-semibold text-lg">Coming Soon!</p>
                     </div>
                     <p className="mt-2">
                       We&apos;re currently working on crafting high-quality

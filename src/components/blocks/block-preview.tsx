@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+import type { ImperativePanelHandle } from "react-resizable-panels";
 import {
   ResizableHandle,
   ResizablePanel,
@@ -7,8 +9,6 @@ import {
 } from "@/components/ui/resizable";
 import { blockScreens } from "@/description/blocks";
 import { useBlockContext } from "@/providers/block-provider";
-import { useEffect, useRef } from "react";
-import { ImperativePanelHandle } from "react-resizable-panels";
 
 const BlockPreview = () => {
   const resizablePanelRef = useRef<ImperativePanelHandle>(null);
@@ -29,13 +29,13 @@ const BlockPreview = () => {
 
   return (
     <ResizablePanelGroup direction="horizontal">
-      <ResizablePanel ref={resizablePanelRef} defaultSize={120} minSize={30}>
-        <div className="w-full rounded-lg border h-[700px] overflow-auto">
-          <iframe ref={iframeRef} src={iframeSrc} height="100%" width="100%" />
+      <ResizablePanel defaultSize={120} minSize={30} ref={resizablePanelRef}>
+        <div className="h-[700px] w-full overflow-auto rounded-lg border">
+          <iframe height="100%" ref={iframeRef} src={iframeSrc} width="100%" />
         </div>
       </ResizablePanel>
-      <ResizableHandle withHandle className="w-0" />
-      <ResizablePanel defaultSize={0} className="pr-1.5" />
+      <ResizableHandle className="w-0" withHandle />
+      <ResizablePanel className="pr-1.5" defaultSize={0} />
     </ResizablePanelGroup>
   );
 };

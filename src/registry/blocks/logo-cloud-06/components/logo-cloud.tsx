@@ -12,16 +12,16 @@ import { Marquee } from "@/components/ui/marquee";
 
 const LogoCloud = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center px-6">
+    <div className="flex min-h-screen items-center justify-center px-6">
       <div className="overflow-hidden">
-        <p className="text-center text-xl font-medium">
+        <p className="text-center font-medium text-xl">
           More than 2.2 million companies worldwide already trust us
         </p>
 
-        <div className="mt-10 flex items-center justify-center gap-x-14 gap-y-10 max-w-(--breakpoint-xl)">
+        <div className="mt-10 flex max-w-(--breakpoint-xl) items-center justify-center gap-x-14 gap-y-10">
           <Marquee
+            className="mask-x-from-70% mask-x-to-90% [--duration:20s] [&_svg]:mr-10"
             pauseOnHover
-            className="[--duration:20s] [&_svg]:mr-10 mask-x-from-70% mask-x-to-90%"
           >
             <Logo01 />
             <Logo02 />

@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { Suspense } from "react";
 import { blockCategories, categorizedBlocks } from "@/blocks";
 import BlockCategoryJsonLd from "@/components/blocks/category/block-category-json-ld";
 import BlockPreviewList from "@/components/blocks/category/block-preview-list";
@@ -5,8 +7,6 @@ import { Navbar } from "@/components/layout/navbar";
 import { constructMetadata } from "@/lib/metadata";
 import { generateOgImageUrl } from "@/lib/og";
 import { absoluteUrl, capitalize } from "@/lib/utils";
-import { Metadata } from "next";
-import { Suspense } from "react";
 
 const keywordsTemplate = [
   "{{category}} Shadcn UI blocks",
@@ -88,7 +88,7 @@ const BlockCategoryPage = async (props: {
   return (
     <>
       <Navbar />
-      <div className="max-w-(--breakpoint-2xl) mx-auto py-12 sm:py-16">
+      <div className="mx-auto max-w-(--breakpoint-2xl) py-12 sm:py-16">
         <Suspense fallback={null}>
           <BlockPreviewList />
         </Suspense>

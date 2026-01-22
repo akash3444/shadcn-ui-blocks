@@ -121,13 +121,16 @@ export const templates = [
 ] as Template[];
 
 const getCategorizedTemplates = () => {
-  return templates.reduce((acc, template) => {
-    acc[template.category.slug] = [
-      ...(acc[template.category.slug] || []),
-      template,
-    ];
-    return acc;
-  }, {} as Record<string, Template[]>);
+  return templates.reduce(
+    (acc, template) => {
+      acc[template.category.slug] = [
+        ...(acc[template.category.slug] || []),
+        template,
+      ];
+      return acc;
+    },
+    {} as Record<string, Template[]>
+  );
 };
 
 export const categorizedTemplates = getCategorizedTemplates();

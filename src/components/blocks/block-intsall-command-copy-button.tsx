@@ -1,21 +1,21 @@
 "use client";
 
-import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
-import { absoluteUrl } from "@/lib/utils";
-import { ChevronDown, Check, Terminal } from "lucide-react";
+import { Check, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ButtonGroup } from "@/components/ui/button-group";
 import {
   DropdownMenu,
-  DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
-  PackageManager,
+  type PackageManager,
   packageManagers,
 } from "@/description/package-managers";
+import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
+import { absoluteUrl } from "@/lib/utils";
 import { usePackageManager } from "@/providers/package-manager-provider";
-import { ButtonGroup } from "@/components/ui/button-group";
 
 export const BlockInstallCommandCopyButton = ({ block }: { block: string }) => {
   const { isCopied, copyToClipboard } = useCopyToClipboard();
@@ -38,25 +38,25 @@ export const BlockInstallCommandCopyButton = ({ block }: { block: string }) => {
   return (
     <ButtonGroup>
       <Button
-        variant="outline"
-        size="sm"
         className="gap-2 text-sm"
         onClick={copyInstallCommand}
+        size="sm"
+        variant="outline"
       >
         {isCopied ? (
           <Check className="size-4 text-green-500" />
         ) : (
           <currentPackageManager.logo className="size-4" />
         )}
-        <span className="inline md:hidden font-normal">Copy Command</span>
-        <span className="hidden md:inline font-normal">
+        <span className="inline font-normal md:hidden">Copy Command</span>
+        <span className="hidden font-normal md:inline">
           {currentPackageManager.displayCommand(block)}
         </span>
       </Button>
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="icon-sm" className="px-1.5 w-7">
+          <Button className="w-7 px-1.5" size="icon-sm" variant="outline">
             <ChevronDown className="size-3.5" />
             <span className="sr-only">Select package manager</span>
           </Button>
@@ -65,9 +65,9 @@ export const BlockInstallCommandCopyButton = ({ block }: { block: string }) => {
           {Object.entries(packageManagers).map(([key, pm]) => {
             return (
               <DropdownMenuItem
+                className="cursor-pointer gap-2"
                 key={key}
                 onClick={() => setPackageManager(key as PackageManager)}
-                className="cursor-pointer gap-2"
               >
                 <pm.logo className="size-4" />
                 <span className="flex-1">{pm.name}</span>

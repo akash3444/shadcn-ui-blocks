@@ -1,20 +1,20 @@
 "use client";
 
 import {
-  ColumnDef,
-  ColumnFiltersState,
-  SortingState,
-  VisibilityState,
+  type ColumnDef,
+  type ColumnFiltersState,
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
+  type SortingState,
   useReactTable,
+  type VisibilityState,
 } from "@tanstack/react-table";
 import { ArrowUpDown, MoreHorizontal, Rows2, Rows3, Rows4 } from "lucide-react";
 import * as React from "react";
-
+import { cn } from "@/lib/utils";
 import { Button } from "@/registry/ui/button";
 import { Checkbox } from "@/registry/ui/checkbox";
 import {
@@ -43,7 +43,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/registry/ui/table";
-import { cn } from "@/lib/utils";
 
 const data: Payment[] = [
   {
@@ -90,19 +89,19 @@ export const columns: ColumnDef<Payment>[] = [
     id: "select",
     header: ({ table }) => (
       <Checkbox
+        aria-label="Select all"
         checked={
           table.getIsAllPageRowsSelected() ||
           (table.getIsSomePageRowsSelected() && "indeterminate")
         }
         onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
       />
     ),
     cell: ({ row }) => (
       <Checkbox
+        aria-label="Select row"
         checked={row.getIsSelected()}
         onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Select row"
       />
     ),
     enableSorting: false,
@@ -120,8 +119,8 @@ export const columns: ColumnDef<Payment>[] = [
     header: ({ column }) => {
       return (
         <Button
-          variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          variant="ghost"
         >
           Email
           <ArrowUpDown />
@@ -134,7 +133,7 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "amount",
     header: () => <div className="text-right">Amount</div>,
     cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"));
+      const amount = Number.parseFloat(row.getValue("amount"));
 
       // Format the amount as a dollar amount
       const formatted = new Intl.NumberFormat("en-US", {
@@ -154,7 +153,7 @@ export const columns: ColumnDef<Payment>[] = [
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
+            <Button className="h-8 w-8 p-0" variant="ghost">
               <span className="sr-only">Open menu</span>
               <MoreHorizontal />
             </Button>
@@ -209,15 +208,15 @@ export default function DataTableDensityDemo() {
     <div className="w-full">
       <div className="flex items-center gap-2 py-4">
         <Input
-          placeholder="Filter emails..."
-          value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
+          className="max-w-sm"
           onChange={(event) =>
             table.getColumn("email")?.setFilterValue(event.target.value)
           }
-          className="max-w-sm"
+          placeholder="Filter emails..."
+          value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
         />
 
-        <Select value={density} onValueChange={setDensity}>
+        <Select onValueChange={setDensity} value={density}>
           <SelectTrigger className="ml-auto w-[180px]">
             <SelectValue placeholder="Density" />
           </SelectTrigger>
@@ -230,12 +229,12 @@ export default function DataTableDensityDemo() {
                   Compact
                 </div>
               </SelectItem>
-              <SelectItem value="standard" className="flex items-center gap-2">
+              <SelectItem className="flex items-center gap-2" value="standard">
                 <div className="flex items-center gap-2">
                   <Rows3 className="h-4 w-4" /> Standard
                 </div>
               </SelectItem>
-              <SelectItem value="flexible" className="flex items-center gap-2">
+              <SelectItem className="flex items-center gap-2" value="flexible">
                 <div className="flex items-center gap-2">
                   <Rows2 className="h-4 w-4" />
                   Flexible
@@ -275,8 +274,8 @@ export default function DataTableDensityDemo() {
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow
-                  key={row.id}
                   data-state={row.getIsSelected() && "selected"}
+                  key={row.id}
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
@@ -291,8 +290,8 @@ export default function DataTableDensityDemo() {
             ) : (
               <TableRow>
                 <TableCell
-                  colSpan={columns.length}
                   className="h-24 text-center"
+                  colSpan={columns.length}
                 >
                   No results.
                 </TableCell>
@@ -302,24 +301,24 @@ export default function DataTableDensityDemo() {
         </Table>
       </div>
       <div className="flex items-center justify-end space-x-2 py-4">
-        <div className="flex-1 text-sm text-muted-foreground">
+        <div className="flex-1 text-muted-foreground text-sm">
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
           {table.getFilteredRowModel().rows.length} row(s) selected.
         </div>
         <div className="space-x-2">
           <Button
-            variant="outline"
-            size="sm"
-            onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
+            onClick={() => table.previousPage()}
+            size="sm"
+            variant="outline"
           >
             Previous
           </Button>
           <Button
-            variant="outline"
-            size="sm"
-            onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
+            onClick={() => table.nextPage()}
+            size="sm"
+            variant="outline"
           >
             Next
           </Button>

@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/registry/ui/button";
 import {
   Pagination,
@@ -7,7 +8,6 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/registry/ui/pagination";
-import { cn } from "@/lib/utils";
 
 export default function PaginationWithSecondaryButton() {
   return (
@@ -21,15 +21,15 @@ export default function PaginationWithSecondaryButton() {
         </PaginationItem>
         <PaginationItem>
           <PaginationLink
-            href="#"
-            isActive
             className={cn(
-              "shadow-none! hover:text-secondary-foreground! border-none!",
+              "border-none! shadow-none! hover:text-secondary-foreground!",
               buttonVariants({
                 variant: "secondary",
                 size: "icon",
               })
             )}
+            href="#"
+            isActive
           >
             2
           </PaginationLink>

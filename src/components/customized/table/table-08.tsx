@@ -112,7 +112,7 @@ const products = [
 
 export default function TableOverflowScrollDemo() {
   return (
-    <div className="grid w-full [&>div]:max-h-[300px] [&>div]:border [&>div]:rounded">
+    <div className="grid w-full [&>div]:max-h-[300px] [&>div]:rounded [&>div]:border">
       <Table>
         <TableHeader>
           <TableRow className="*:whitespace-nowrap">
@@ -129,8 +129,8 @@ export default function TableOverflowScrollDemo() {
         <TableBody className="overflow-hidden">
           {products.map((product) => (
             <TableRow
+              className="*:whitespace-nowrap odd:bg-muted/50"
               key={product.id}
-              className="odd:bg-muted/50 *:whitespace-nowrap"
             >
               <TableCell className="pl-4">{product.id}</TableCell>
               <TableCell className="font-medium">{product.name}</TableCell>

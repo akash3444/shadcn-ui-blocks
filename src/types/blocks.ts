@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+
 type TreeItem = {
   name: string;
   children?: TreeItem[];

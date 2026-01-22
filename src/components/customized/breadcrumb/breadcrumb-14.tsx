@@ -1,3 +1,4 @@
+import { Home } from "lucide-react";
 import {
   Breadcrumb,
   BreadcrumbEllipsis,
@@ -13,7 +14,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/registry/ui/dropdown-menu";
-import { Home } from "lucide-react";
 
 export default function BreadcrumbCollapsed() {
   return (

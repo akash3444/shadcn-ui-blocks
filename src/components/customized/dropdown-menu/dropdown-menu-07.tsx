@@ -1,3 +1,13 @@
+import {
+  Bolt,
+  ExternalLink,
+  Filter,
+  LogIn,
+  LogOut,
+  Rocket,
+  Settings2,
+  User,
+} from "lucide-react";
 import { Avatar, AvatarFallback } from "@/registry/ui/avatar";
 import {
   DropdownMenu,
@@ -11,16 +21,6 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/registry/ui/dropdown-menu";
-import {
-  Bolt,
-  ExternalLink,
-  Filter,
-  LogIn,
-  LogOut,
-  Rocket,
-  Settings2,
-  User,
-} from "lucide-react";
 
 export default function ComplexDropdownMenu() {
   return (
@@ -31,9 +31,9 @@ export default function ComplexDropdownMenu() {
             M
           </AvatarFallback>
         </Avatar>
-        <div className="text-start flex flex-col">
-          <p className="text-sm font-medium">My Workspace</p>
-          <p className="text-xs text-muted-foreground">myworkspace.slack.com</p>
+        <div className="flex flex-col text-start">
+          <p className="font-medium text-sm">My Workspace</p>
+          <p className="text-muted-foreground text-xs">myworkspace.slack.com</p>
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="mt-2 w-72">
@@ -44,8 +44,8 @@ export default function ComplexDropdownMenu() {
             </AvatarFallback>
           </Avatar>
           <div className="ml-1 flex flex-col">
-            <p className="text-sm font-medium">My Workspace</p>
-            <p className="text-xs text-muted-foreground">
+            <p className="font-medium text-sm">My Workspace</p>
+            <p className="text-muted-foreground text-xs">
               myworkspace.slack.com
             </p>
           </div>

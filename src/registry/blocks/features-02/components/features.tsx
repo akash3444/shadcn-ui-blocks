@@ -15,22 +15,22 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-6">
-      <div className="grow w-full sm:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg)">
-        <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight">
+    <div className="flex min-h-screen items-center justify-center px-6 py-12">
+      <div className="w-full grow sm:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg)">
+        <h2 className="font-semibold text-4xl tracking-tight sm:text-5xl">
           Ignite Your Imagination
         </h2>
-        <div className="w-full mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+        <div className="mt-10 grid w-full gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <div
+              className="flex w-full flex-col text-start"
               key={feature.title}
-              className="flex flex-col text-start w-full"
             >
-              <div className="mb-5 sm:mb-6 w-full aspect-4/5 bg-muted rounded-xl" />
-              <span className="text-2xl font-semibold tracking-[-0.015em]">
+              <div className="mb-5 aspect-4/5 w-full rounded-xl bg-muted sm:mb-6" />
+              <span className="font-semibold text-2xl tracking-[-0.015em]">
                 {feature.title}
               </span>
-              <p className="mt-2 max-w-[25ch] text-muted-foreground text-[17px]">
+              <p className="mt-2 max-w-[25ch] text-[17px] text-muted-foreground">
                 {feature.description}
               </p>
             </div>

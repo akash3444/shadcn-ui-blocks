@@ -11,7 +11,7 @@ import {
 export default function SelectBackgroundColorDemo() {
   return (
     <Select defaultValue="apple">
-      <SelectTrigger className="w-44 bg-indigo-600/25 dark:text-white text-indigo-600 border-none shadow-none">
+      <SelectTrigger className="w-44 border-none bg-indigo-600/25 text-indigo-600 shadow-none dark:text-white">
         <SelectValue placeholder="Select a fruit" />
       </SelectTrigger>
       <SelectContent>

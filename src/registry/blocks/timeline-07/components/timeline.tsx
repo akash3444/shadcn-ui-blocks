@@ -52,7 +52,7 @@ const changelog = [
 
 export default function Timeline() {
   return (
-    <div className="max-w-(--breakpoint-sm) md:mx-auto py-12 md:py-20 px-6">
+    <div className="max-w-(--breakpoint-sm) px-6 py-12 md:mx-auto md:py-20">
       <div className="relative">
         {/* Timeline line */}
         {/* <div className="absolute left-0 top-3 bottom-0 border-l-2" /> */}
@@ -60,25 +60,25 @@ export default function Timeline() {
         {changelog
           .reverse()
           .map(({ title, description, date, version }, index) => (
-            <div key={index} className="group relative">
+            <div className="group relative" key={index}>
               {/* Content */}
               <div className="flex items-start">
-                <div className="mt-3 mr-5 flex flex-col gap-2 shrink-0 w-[75px] sm:w-[90px] text-end">
-                  <h6 className="text-sm text-primary font-semibold">
+                <div className="mt-3 mr-5 flex w-[75px] shrink-0 flex-col gap-2 text-end sm:w-[90px]">
+                  <h6 className="font-semibold text-primary text-sm">
                     v{version}
                   </h6>
-                  <span className="text-xs sm:text-sm text-muted-foreground">
+                  <span className="text-muted-foreground text-xs sm:text-sm">
                     {date}
                   </span>
                 </div>
-                <div className="relative pb-10 border-l-2 group-last:pb-4 pl-6 sm:pl-8 space-y-2">
+                <div className="relative space-y-2 border-l-2 pb-10 pl-6 group-last:pb-4 sm:pl-8">
                   {/* Timeline Dot */}
-                  <div className="absolute h-3 w-3 -translate-x-1/2 -left-px top-4 rounded-full border-2 border-primary bg-background" />
+                  <div className="absolute top-4 -left-px h-3 w-3 -translate-x-1/2 rounded-full border-2 border-primary bg-background" />
 
-                  <h3 className="mt-2 text-lg font-semibold tracking-[-0.01em]">
+                  <h3 className="mt-2 font-semibold text-lg tracking-[-0.01em]">
                     {title}
                   </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground">
+                  <p className="text-muted-foreground text-sm sm:text-base">
                     {description}
                   </p>
                 </div>

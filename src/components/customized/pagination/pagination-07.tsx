@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/registry/ui/button";
 import {
   Pagination,
@@ -7,16 +8,15 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/registry/ui/pagination";
-import { cn } from "@/lib/utils";
 
 const pages = [1, 2, 3];
 
 export default function PaginationBordered() {
   return (
     <Pagination>
-      <PaginationContent className="gap-0 border rounded-lg divide-x overflow-hidden">
+      <PaginationContent className="gap-0 divide-x overflow-hidden rounded-lg border">
         <PaginationItem>
-          <PaginationPrevious href="#" className="rounded-none" />
+          <PaginationPrevious className="rounded-none" href="#" />
         </PaginationItem>
         {pages.map((page) => {
           const isActive = page === 2;
@@ -24,17 +24,17 @@ export default function PaginationBordered() {
           return (
             <PaginationItem key={page}>
               <PaginationLink
-                href={`#${page}`}
                 className={cn(
                   {
                     [buttonVariants({
                       variant: "default",
                       className:
-                        "dark:bg-primary dark:hover:bg-primary/90 hover:text-primary-foreground!",
+                        "hover:text-primary-foreground! dark:bg-primary dark:hover:bg-primary/90",
                     })]: isActive,
                   },
                   "rounded-none border-none"
                 )}
+                href={`#${page}`}
                 isActive={isActive}
               >
                 {page}
@@ -43,7 +43,7 @@ export default function PaginationBordered() {
           );
         })}
         <PaginationItem>
-          <PaginationNext href="#" className="rounded-none" />
+          <PaginationNext className="rounded-none" href="#" />
         </PaginationItem>
       </PaginationContent>
     </Pagination>

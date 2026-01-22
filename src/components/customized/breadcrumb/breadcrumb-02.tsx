@@ -1,3 +1,4 @@
+import { Slash } from "lucide-react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,8 +7,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/registry/ui/breadcrumb";
-import { Slash } from "lucide-react";
-import React from "react";
 
 const BreadcrumbsWithSlashSeparator = () => {
   return (

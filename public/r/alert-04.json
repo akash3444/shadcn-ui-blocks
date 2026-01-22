@@ -13,7 +13,7 @@
   "files": [
     {
       "path": "src/components/customized/alert/alert-04.tsx",
-      "content": "import { Alert, AlertDescription, AlertTitle } from \"@/registry/ui/alert\";\nimport { AlertTriangleIcon } from \"lucide-react\";\n\nexport default function AlertWarningDemo() {\n  return (\n    <Alert className=\"border-amber-500/50 text-amber-500 dark:border-amber-500 [&>svg]:text-amber-500\">\n      <AlertTriangleIcon className=\"size-4\" />\n      <AlertTitle>Proceed with Caution</AlertTitle>\n      <AlertDescription className=\"text-amber-500\">\n        This action might have unintended consequences.\n      </AlertDescription>\n    </Alert>\n  );\n}\n",
+      "content": "import { AlertTriangleIcon } from \"lucide-react\";\nimport { Alert, AlertDescription, AlertTitle } from \"@/registry/ui/alert\";\n\nexport default function AlertWarningDemo() {\n  return (\n    <Alert className=\"border-amber-500/50 text-amber-500 dark:border-amber-500 [&>svg]:text-amber-500\">\n      <AlertTriangleIcon className=\"size-4\" />\n      <AlertTitle>Proceed with Caution</AlertTitle>\n      <AlertDescription className=\"text-amber-500\">\n        This action might have unintended consequences.\n      </AlertDescription>\n    </Alert>\n  );\n}\n",
       "type": "registry:component"
     }
   ]

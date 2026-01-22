@@ -1,5 +1,6 @@
 "use client";
 
+import { type ChangeEvent, useState } from "react";
 import { Button } from "@/registry/ui/button";
 import { Input } from "@/registry/ui/input";
 import { Label } from "@/registry/ui/label";
@@ -9,7 +10,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/registry/ui/tooltip";
-import { ChangeEvent, useState } from "react";
 
 export default function WithSkipDelayTooltipDemo() {
   const [skipDelayDuration, setSkipDelayDuration] = useState<
@@ -23,7 +23,7 @@ export default function WithSkipDelayTooltipDemo() {
   };
 
   return (
-    <div className="flex flex-col gap-6 items-center">
+    <div className="flex flex-col items-center gap-6">
       <TooltipProvider skipDelayDuration={skipDelayDuration}>
         <div className="flex gap-2">
           <Tooltip>
@@ -48,10 +48,10 @@ export default function WithSkipDelayTooltipDemo() {
       <div>
         <Label>Skip delay duration</Label>
         <Input
-          type="number"
           className="mt-2"
-          value={skipDelayDuration}
           onChange={handleDelayDurationChange}
+          type="number"
+          value={skipDelayDuration}
         />
       </div>
     </div>

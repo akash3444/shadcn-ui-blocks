@@ -1,20 +1,20 @@
 "use client";
 
+import { FullscreenIcon, Moon, Sun } from "lucide-react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { BLOCK_PRICING } from "@/config/registry";
 import { blockScreens } from "@/description/blocks";
 import { absoluteUrl } from "@/lib/utils";
 import { useBlockContext } from "@/providers/block-provider";
-import { FullscreenIcon, Moon, Sun } from "lucide-react";
-import Link from "next/link";
 import { BlockInstallCommandCopyButton } from "./block-intsall-command-copy-button";
 import V0Button from "./v0-button";
-import { useEffect, useState } from "react";
-import { BLOCK_PRICING } from "@/config/registry";
 
 const BlockToolbar = () => {
   const { screenSize, setScreenSize } = useBlockContext();
@@ -27,7 +27,7 @@ const BlockToolbar = () => {
       <ThemeToggleButton />
       <Tooltip>
         <TooltipTrigger>
-          <Button asChild variant="outline" size="icon-sm">
+          <Button asChild size="icon-sm" variant="outline">
             <Link href={iframeSrc} target="_blank">
               <FullscreenIcon />
             </Link>
@@ -38,15 +38,15 @@ const BlockToolbar = () => {
         </TooltipContent>
       </Tooltip>
       {isFree && <V0Button url={absoluteUrl(`/r/${block.name}.json`)} />}
-      <div className="border rounded-md hidden md:flex items-center gap-1 p-1 h-8 shadow-xs">
+      <div className="hidden h-8 items-center gap-1 rounded-md border p-1 shadow-xs md:flex">
         {blockScreens.map(({ name, icon: Icon }) => (
           <Tooltip key={name}>
             <TooltipTrigger asChild>
               <Button
-                key={name}
-                variant={name === screenSize ? "secondary" : "ghost"}
                 className="h-6 w-6"
+                key={name}
                 onClick={() => setScreenSize(name)}
+                variant={name === screenSize ? "secondary" : "ghost"}
               >
                 <Icon />
               </Button>
@@ -75,17 +75,17 @@ const ThemeToggleButton = () => {
   };
 
   if (!mounted) {
-    return <Button variant="outline" size="icon-sm" />;
+    return <Button size="icon-sm" variant="outline" />;
   }
 
   return (
     <Tooltip>
       <TooltipTrigger asChild>
         <Button
-          variant="outline"
-          size="icon-sm"
-          onClick={handleThemeToggle}
           className="max-sm:hidden"
+          onClick={handleThemeToggle}
+          size="icon-sm"
+          variant="outline"
         >
           {theme === "light" ? <Moon /> : <Sun />}
         </Button>

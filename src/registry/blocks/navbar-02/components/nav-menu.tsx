@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import type { ComponentProps } from "react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -7,8 +9,6 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import Link from "next/link";
-import { ComponentProps } from "react";
 
 export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => (
   <NavigationMenu {...props}>

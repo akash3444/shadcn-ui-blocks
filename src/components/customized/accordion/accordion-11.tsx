@@ -1,10 +1,10 @@
+import { Contrast, Palette, Zap } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/registry/ui/accordion";
-import { Contrast, Palette, Zap } from "lucide-react";
 
 const items = [
   {
@@ -29,10 +29,10 @@ const items = [
 export default function AccordionMediaContentDemo() {
   return (
     <Accordion
+      className="my-4 w-full max-w-lg"
+      collapsible
       defaultValue="item-0"
       type="single"
-      collapsible
-      className="max-w-lg my-4 w-full"
     >
       {items.map(({ title, content, icon: Icon }, index) => (
         <AccordionItem key={index} value={`item-${index}`}>
@@ -44,7 +44,7 @@ export default function AccordionMediaContentDemo() {
           </AccordionTrigger>
           <AccordionContent>
             {content}
-            <div className="mt-4 w-full aspect-18/9 bg-muted rounded-xl" />
+            <div className="mt-4 aspect-18/9 w-full rounded-xl bg-muted" />
           </AccordionContent>
         </AccordionItem>
       ))}

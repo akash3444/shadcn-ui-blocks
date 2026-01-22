@@ -6,7 +6,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/registry/ui/breadcrumb";
-import React from "react";
 
 const BreadcrumbsDemo = () => {
   return (

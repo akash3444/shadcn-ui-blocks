@@ -30,7 +30,7 @@ export default function ProgressAnimationDemo() {
           className="relative h-full w-full flex-1 bg-primary transition-all"
           style={{ transform: `translateX(-${100 - (progress || 0)}%)` }}
         >
-          <div className="absolute left-0 w-6 h-full bg-primary-foreground blur-[10px] inset-y-0 progress" />
+          <div className="progress absolute inset-y-0 left-0 h-full w-6 bg-primary-foreground blur-[10px]" />
         </ProgressPrimitive.Indicator>
       </ProgressPrimitive.Root>
     </div>

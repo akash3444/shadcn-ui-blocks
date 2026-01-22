@@ -1,8 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import React from "react";
+import { Button } from "@/components/ui/button";
 
 export const ResultsNotFound = () => {
   const searchParams = useSearchParams();
@@ -18,10 +17,10 @@ export const ResultsNotFound = () => {
   };
 
   return (
-    <div className="flex justify-center mt-16 text-center">
+    <div className="mt-16 flex justify-center text-center">
       <div>
-        <span className="text-7xl font-bold">404</span>
-        <p className="mt-6 text-lg max-w-md">
+        <span className="font-bold text-7xl">404</span>
+        <p className="mt-6 max-w-md text-lg">
           Could not find any result for query &quot;{query}&quot;. <br />
           Please try searching for something else.
         </p>

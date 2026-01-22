@@ -1,3 +1,4 @@
+import { ChevronDown, Plus, Star, X } from "lucide-react";
 import { Button } from "@/registry/ui/button";
 import { ButtonGroup } from "@/registry/ui/button-group";
 import {
@@ -8,7 +9,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/registry/ui/dropdown-menu";
-import { ChevronDown, Plus, Star, X } from "lucide-react";
 
 const SplitButton = () => {
   return (
@@ -25,7 +25,7 @@ const SplitButton = () => {
         <DropdownMenuContent className="min-w-52">
           <DropdownMenuLabel className="flex items-center justify-between gap-2">
             Lists
-            <Button size="icon" variant="ghost" className="h-5 w-5">
+            <Button className="h-5 w-5" size="icon" variant="ghost">
               <X />
             </Button>
           </DropdownMenuLabel>

@@ -1,3 +1,5 @@
+import { Package, ShoppingCart, Store, Truck } from "lucide-react";
+import { Fragment } from "react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -5,8 +7,6 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
 } from "@/registry/ui/breadcrumb";
-import { Package, ShoppingCart, Store, Truck } from "lucide-react";
-import { Fragment } from "react";
 
 const steps = [
   {
@@ -51,9 +51,9 @@ const BreadcrumbsSteps = () => {
             </BreadcrumbItem>
             {index !== steps.length - 1 && (
               <li
-                role="presentation"
                 aria-hidden="true"
                 className="inline-block h-[2px] w-[40px] bg-muted"
+                role="presentation"
               />
             )}
           </Fragment>

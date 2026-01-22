@@ -1,14 +1,14 @@
 "use client";
 
+import { PlusIcon } from "lucide-react";
+import { Accordion as AccordionPrimitive } from "radix-ui";
+import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
 } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
-import { Accordion as AccordionPrimitive } from "radix-ui";
-import { PlusIcon } from "lucide-react";
-import { useState } from "react";
 
 const faq = [
   {
@@ -67,19 +67,19 @@ const FAQ = () => {
   const [value, setValue] = useState<string>();
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 py-12">
+    <div className="flex min-h-screen items-center justify-center px-6 py-12">
       <div className="w-full max-w-(--breakpoint-lg)">
-        <h2 className="text-4xl md:text-5xl leading-[1.15]! font-semibold tracking-[-0.035em]">
+        <h2 className="font-semibold text-4xl leading-[1.15]! tracking-[-0.035em] md:text-5xl">
           Frequently Asked Questions
         </h2>
 
-        <div className="mt-6 w-full grid md:grid-cols-2 gap-x-10">
+        <div className="mt-6 grid w-full gap-x-10 md:grid-cols-2">
           <Accordion
-            type="single"
-            collapsible
             className="w-full"
-            value={value}
+            collapsible
             onValueChange={setValue}
+            type="single"
+            value={value}
           >
             {faq.slice(0, 5).map(({ question, answer }, index) => (
               <AccordionItem key={question} value={`question-${index}`}>
@@ -94,7 +94,7 @@ const FAQ = () => {
                     <PlusIcon className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
-                <AccordionContent className="text-base text-muted-foreground text-pretty">
+                <AccordionContent className="text-pretty text-base text-muted-foreground">
                   {answer}
                 </AccordionContent>
               </AccordionItem>
@@ -102,11 +102,11 @@ const FAQ = () => {
           </Accordion>
 
           <Accordion
-            type="single"
-            collapsible
             className="w-full"
-            value={value}
+            collapsible
             onValueChange={setValue}
+            type="single"
+            value={value}
           >
             {faq.slice(5).map(({ question, answer }, index) => (
               <AccordionItem key={question} value={`question-${index + 5}`}>
@@ -121,7 +121,7 @@ const FAQ = () => {
                     <PlusIcon className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
-                <AccordionContent className="text-base text-muted-foreground text-pretty">
+                <AccordionContent className="text-pretty text-base text-muted-foreground">
                   {answer}
                 </AccordionContent>
               </AccordionItem>

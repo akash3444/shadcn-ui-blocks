@@ -1,16 +1,16 @@
 "use client";
 
+import {
+  Bell,
+  CalendarCheck,
+  CalendarCog,
+  CalendarPlus,
+  CalendarX,
+  type LucideIcon,
+} from "lucide-react";
 import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Checkbox } from "@/registry/ui/checkbox";
-import {
-  CalendarPlus,
-  CalendarX,
-  CalendarCog,
-  Bell,
-  CalendarCheck,
-  type LucideIcon,
-} from "lucide-react";
 
 interface NotificationType {
   label: string;
@@ -21,19 +21,19 @@ interface NotificationType {
 export default function Checkbox16() {
   return (
     <div>
-      <Label className="font-medium ps-1">Notification Settings</Label>
-      <div className="bg-muted/30 mt-2.5 border rounded-lg">
+      <Label className="ps-1 font-medium">Notification Settings</Label>
+      <div className="mt-2.5 rounded-lg border bg-muted/30">
         <ScrollArea className="h-64">
           <table className="w-full">
-            <thead className="sticky top-0 bg-muted/80 backdrop-blur-sm rounded-t-lg">
-              <tr className="border-b rounded-t-lg *:first:rounded-tl-lg *:last:rounded-tr-lg">
-                <th className="text-left text-xs font-medium text-muted-foreground p-3">
+            <thead className="sticky top-0 rounded-t-lg bg-muted/80 backdrop-blur-sm">
+              <tr className="rounded-t-lg border-b *:first:rounded-tl-lg *:last:rounded-tr-lg">
+                <th className="p-3 text-left font-medium text-muted-foreground text-xs">
                   Notification Type
                 </th>
-                <th className="text-xs font-medium text-muted-foreground p-3 w-16">
+                <th className="w-16 p-3 font-medium text-muted-foreground text-xs">
                   In-App
                 </th>
-                <th className="text-xs font-medium text-muted-foreground p-3 w-16">
+                <th className="w-16 p-3 font-medium text-muted-foreground text-xs">
                   Email
                 </th>
               </tr>
@@ -41,8 +41,8 @@ export default function Checkbox16() {
             <tbody>
               {notificationTypes.map((notificationType, index) => (
                 <tr
-                  key={notificationType.value}
                   className="border-b last:border-b-0"
+                  key={notificationType.value}
                 >
                   <td className="p-3">
                     <div className="flex items-center gap-2.5">
@@ -52,18 +52,18 @@ export default function Checkbox16() {
                   </td>
                   <td className="p-3 text-center">
                     <Checkbox
-                      value={`${notificationType.value}-in-app`}
-                      id={`${notificationType.value}-in-app`}
-                      defaultChecked={index < 3}
                       className="bg-background"
+                      defaultChecked={index < 3}
+                      id={`${notificationType.value}-in-app`}
+                      value={`${notificationType.value}-in-app`}
                     />
                   </td>
                   <td className="p-3 text-center">
                     <Checkbox
-                      value={`${notificationType.value}-email`}
-                      id={`${notificationType.value}-email`}
-                      defaultChecked={index < 3}
                       className="bg-background"
+                      defaultChecked={index < 3}
+                      id={`${notificationType.value}-email`}
+                      value={`${notificationType.value}-email`}
                     />
                   </td>
                 </tr>

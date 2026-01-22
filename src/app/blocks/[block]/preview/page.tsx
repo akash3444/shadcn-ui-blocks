@@ -1,8 +1,8 @@
-import { constructMetadata } from "@/lib/metadata";
-import { absoluteUrl } from "@/lib/utils";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blocks } from "@/config/registry";
+import { constructMetadata } from "@/lib/metadata";
+import { absoluteUrl } from "@/lib/utils";
 
 export const generateStaticParams = async () => {
   return blocks.map(({ name }) => ({
@@ -36,7 +36,7 @@ const BlockPreviewPage = async (props: {
 
   const blockDetails = blocks.find((b) => b.name === block);
 
-  if (!blockDetails || !blockDetails.component) {
+  if (!(blockDetails && blockDetails.component)) {
     notFound();
   }
 

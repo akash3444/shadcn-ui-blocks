@@ -59,7 +59,7 @@ export default function BorderedTableDemo() {
     <Table className="border">
       <TableCaption>A list of your recent invoices.</TableCaption>
       <TableHeader>
-        <TableRow className="[&>th]:border-r last:border-r-0">
+        <TableRow className="last:border-r-0 [&>th]:border-r">
           <TableHead className="w-[100px]">Invoice</TableHead>
           <TableHead>Status</TableHead>
           <TableHead>Method</TableHead>
@@ -69,8 +69,8 @@ export default function BorderedTableDemo() {
       <TableBody>
         {invoices.map((invoice) => (
           <TableRow
+            className="last:border-r-0 [&>td]:border-r"
             key={invoice.invoice}
-            className="[&>td]:border-r last:border-r-0"
           >
             <TableCell className="font-medium">{invoice.invoice}</TableCell>
             <TableCell>{invoice.paymentStatus}</TableCell>

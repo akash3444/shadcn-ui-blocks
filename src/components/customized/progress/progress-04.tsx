@@ -1,7 +1,7 @@
 "use client";
 
-import { Progress } from "@/registry/ui/progress";
 import * as React from "react";
+import { Progress } from "@/registry/ui/progress";
 
 export default function RoundedLinearProgressDemo() {
   const [progress, setProgress] = React.useState(13);
@@ -12,6 +12,6 @@ export default function RoundedLinearProgressDemo() {
   }, []);
 
   return (
-    <Progress value={progress} className="w-[60%] [&>div]:rounded-r-full" />
+    <Progress className="w-[60%] [&>div]:rounded-r-full" value={progress} />
   );
 }

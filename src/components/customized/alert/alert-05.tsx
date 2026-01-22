@@ -1,5 +1,5 @@
-import { Alert, AlertDescription, AlertTitle } from "@/registry/ui/alert";
 import { InfoIcon } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "@/registry/ui/alert";
 
 export default function AlertInfoDemo() {
   return (

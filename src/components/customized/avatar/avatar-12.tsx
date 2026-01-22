@@ -1,7 +1,6 @@
 import * as React from "react";
-
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/avatar";
 import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/avatar";
 
 type AvatarProps = React.ComponentProps<typeof Avatar>;
 
@@ -24,11 +23,11 @@ const AvatarGroup = ({
 
   return (
     <div
-      className={cn("flex items-center flex-row-reverse", className)}
+      className={cn("flex flex-row-reverse items-center", className)}
       {...props}
     >
       {remainingAvatars > 0 && (
-        <Avatar className="-ml-2 hover:z-10 relative ring-2 ring-background">
+        <Avatar className="relative -ml-2 ring-2 ring-background hover:z-10">
           <AvatarFallback className="bg-muted-foreground text-white">
             +{remainingAvatars}
           </AvatarFallback>
@@ -38,7 +37,7 @@ const AvatarGroup = ({
         if (!React.isValidElement(avatar)) return null;
 
         return (
-          <div key={index} className="-ml-2 hover:z-10 relative">
+          <div className="relative -ml-2 hover:z-10" key={index}>
             {React.cloneElement(avatar as React.ReactElement<AvatarProps>, {
               className: "ring-2 ring-background",
             })}
@@ -52,20 +51,20 @@ const AvatarGroup = ({
 export default function AvatarGroupDemo() {
   return (
     <AvatarGroup>
-      <Avatar className="-ml-2 first:ml-0 cursor-pointer">
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+      <Avatar className="-ml-2 cursor-pointer first:ml-0">
+        <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
         <AvatarFallback className="bg-indigo-500 text-white">CN</AvatarFallback>
       </Avatar>
-      <Avatar className="-ml-2 first:ml-0 cursor-pointer">
+      <Avatar className="-ml-2 cursor-pointer first:ml-0">
         <AvatarFallback className="bg-green-600 text-white">CN</AvatarFallback>
       </Avatar>
-      <Avatar className="-ml-2 first:ml-0 cursor-pointer">
+      <Avatar className="-ml-2 cursor-pointer first:ml-0">
         <AvatarFallback className="bg-red-500 text-white">AB</AvatarFallback>
       </Avatar>
-      <Avatar className="-ml-2 first:ml-0 cursor-pointer">
+      <Avatar className="-ml-2 cursor-pointer first:ml-0">
         <AvatarFallback className="bg-indigo-500 text-white">VK</AvatarFallback>
       </Avatar>
-      <Avatar className="-ml-2 first:ml-0 cursor-pointer">
+      <Avatar className="-ml-2 cursor-pointer first:ml-0">
         <AvatarFallback className="bg-orange-500 text-white">RS</AvatarFallback>
       </Avatar>
     </AvatarGroup>

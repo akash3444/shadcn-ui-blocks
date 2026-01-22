@@ -1,7 +1,7 @@
 "use client";
 
+import { type ChangeEventHandler, useState } from "react";
 import { Textarea } from "@/registry/ui/textarea";
-import { ChangeEventHandler, useState } from "react";
 
 export default function ControlledTextareaDemo() {
   const [message, setMessage] = useState<string>();
@@ -12,9 +12,9 @@ export default function ControlledTextareaDemo() {
 
   return (
     <Textarea
-      value={message}
       onChange={handleChange}
       placeholder="Type your message here."
+      value={message}
     />
   );
 }

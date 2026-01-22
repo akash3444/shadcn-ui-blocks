@@ -1,6 +1,6 @@
+import { CircleCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { CircleCheck } from "lucide-react";
 
 const plans = [
   {
@@ -51,34 +51,34 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center py-12 px-6">
-      <h2 className="text-5xl font-semibold text-center tracking-[-0.03em]">
+    <div className="flex min-h-screen flex-col items-center justify-center px-6 py-12">
+      <h2 className="text-center font-semibold text-5xl tracking-[-0.03em]">
         Our Plans
       </h2>
-      <p className="mt-3 text-xl text-center text-muted-foreground">
+      <p className="mt-3 text-center text-muted-foreground text-xl">
         Choose the plan that fits your needs and get started today
       </p>
-      <div className="mt-12 sm:mt-16 max-w-(--breakpoint-lg) mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="mx-auto mt-12 grid max-w-(--breakpoint-lg) grid-cols-1 gap-8 sm:mt-16 lg:grid-cols-3">
         {plans.map((plan) => (
-          <div key={plan.name} className="border rounded-lg p-6">
-            <h3 className="text-lg font-medium">{plan.name}</h3>
-            <p className="mt-2 text-4xl font-semibold">${plan.price}</p>
+          <div className="rounded-lg border p-6" key={plan.name}>
+            <h3 className="font-medium text-lg">{plan.name}</h3>
+            <p className="mt-2 font-semibold text-4xl">${plan.price}</p>
             <p className="mt-4 font-medium text-muted-foreground">
               {plan.description}
             </p>
             <Separator className="my-4" />
             <ul className="space-y-2">
               {plan.features.map((feature) => (
-                <li key={feature} className="flex items-start gap-2">
-                  <CircleCheck className="h-4 w-4 mt-1 text-green-600" />{" "}
+                <li className="flex items-start gap-2" key={feature}>
+                  <CircleCheck className="mt-1 h-4 w-4 text-green-600" />{" "}
                   {feature}
                 </li>
               ))}
             </ul>
             <Button
-              variant={plan.isPopular ? "default" : "outline"}
+              className="mt-6 w-full"
               size="lg"
-              className="w-full mt-6"
+              variant={plan.isPopular ? "default" : "outline"}
             >
               {plan.buttonText}
             </Button>

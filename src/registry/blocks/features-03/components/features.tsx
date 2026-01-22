@@ -1,23 +1,23 @@
-import { Button } from "@/components/ui/button";
 import { ArrowRight, Blocks, Settings2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Features = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="w-full max-w-(--breakpoint-lg) mx-auto py-12 px-6">
-        <h2 className="text-3xl leading-10 sm:text-4xl md:text-[40px] md:leading-13 font-semibold tracking-tight">
+    <div className="flex min-h-screen items-center justify-center">
+      <div className="mx-auto w-full max-w-(--breakpoint-lg) px-6 py-12">
+        <h2 className="font-semibold text-3xl leading-10 tracking-tight sm:text-4xl md:text-[40px] md:leading-13">
           Design and Engage: <br />
           <span className="text-foreground/65">
             Build Smarter Spaces and Strategies
           </span>
         </h2>
-        <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-3 gap-6">
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-3">
           {/* Card 1 */}
-          <div className="bg-muted rounded-xl p-6 col-span-1 md:col-span-2 lg:col-span-1">
+          <div className="col-span-1 rounded-xl bg-muted p-6 md:col-span-2 lg:col-span-1">
             {/* Media 1 Mobile */}
-            <div className="md:hidden mb-6 aspect-video w-full bg-background rounded-xl"></div>
+            <div className="mb-6 aspect-video w-full rounded-xl bg-background md:hidden" />
 
-            <span className="text-xl font-semibold tracking-tight">
+            <span className="font-semibold text-xl tracking-tight">
               Plan Smarter
             </span>
 
@@ -47,17 +47,17 @@ const Features = () => {
             </Button>
           </div>
           {/* Media 1 Desktop */}
-          <div className="hidden md:block bg-muted rounded-xl col-span-1 md:col-span-3 lg:col-span-2"></div>
+          <div className="col-span-1 hidden rounded-xl bg-muted md:col-span-3 md:block lg:col-span-2" />
 
           {/* Media 2 Desktop */}
-          <div className="hidden md:block bg-muted rounded-xl col-span-1 md:col-span-3 lg:col-span-2"></div>
+          <div className="col-span-1 hidden rounded-xl bg-muted md:col-span-3 md:block lg:col-span-2" />
 
           {/* Card 2 */}
-          <div className="bg-muted rounded-xl p-6 col-span-1 md:col-span-2 lg:col-span-1">
+          <div className="col-span-1 rounded-xl bg-muted p-6 md:col-span-2 lg:col-span-1">
             {/* Media 2 Mobile */}
-            <div className="md:hidden mb-6 aspect-video w-full bg-background rounded-xl"></div>
+            <div className="mb-6 aspect-video w-full rounded-xl bg-background md:hidden" />
 
-            <span className="text-xl font-semibold tracking-tight">
+            <span className="font-semibold text-xl tracking-tight">
               Plan Smarter
             </span>
 

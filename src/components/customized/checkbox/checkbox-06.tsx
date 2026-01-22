@@ -1,8 +1,8 @@
 "use client";
 
-import { Checkbox } from "@/registry/ui/checkbox";
-import { Checkbox as CheckboxPrimitive } from "radix-ui";
+import type { Checkbox as CheckboxPrimitive } from "radix-ui";
 import { useState } from "react";
+import { Checkbox } from "@/registry/ui/checkbox";
 
 export default function ControlledCheckboxDemo() {
   const [checked, setChecked] = useState<CheckboxPrimitive.CheckedState>(false);
@@ -10,13 +10,13 @@ export default function ControlledCheckboxDemo() {
   return (
     <div className="flex items-center space-x-2">
       <Checkbox
-        id="terms-controlled"
         checked={checked}
+        id="terms-controlled"
         onCheckedChange={setChecked}
       />
       <label
+        className="font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
         htmlFor="terms-controlled"
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         Accept terms and conditions
       </label>

@@ -1,6 +1,6 @@
+import type { MetadataRoute } from "next";
 import { blockCategories } from "@/blocks";
 import { components } from "@/description/app-sidebar";
-import { MetadataRoute } from "next";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();

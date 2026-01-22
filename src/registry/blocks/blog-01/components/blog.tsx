@@ -10,9 +10,9 @@ import {
 
 const Blog = () => {
   return (
-    <div className="max-w-(--breakpoint-xl) mx-auto py-16 px-6 xl:px-0">
+    <div className="mx-auto max-w-(--breakpoint-xl) px-6 py-16 xl:px-0">
       <div className="flex items-end justify-between">
-        <h2 className="text-3xl font-semibold tracking-tight">
+        <h2 className="font-semibold text-3xl tracking-tight">
           Today&apos;s Posts
         </h2>
         <Select defaultValue="recommended">
@@ -27,22 +27,22 @@ const Blog = () => {
         </Select>
       </div>
 
-      <div className="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="mt-4 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
         {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
-          <Card key={i} className="shadow-none py-0 gap-3">
+          <Card className="gap-3 py-0 shadow-none" key={i}>
             <CardHeader className="p-2 pb-0">
-              <div className="aspect-video bg-muted rounded-lg w-full" />
+              <div className="aspect-video w-full rounded-lg bg-muted" />
             </CardHeader>
-            <CardContent className="pt-0 pb-5 px-5">
+            <CardContent className="px-5 pt-0 pb-5">
               <Badge variant="secondary">Technology</Badge>
 
-              <h3 className="mt-4 text-2xl text-[1.4rem] font-semibold tracking-[-0.015em]">
+              <h3 className="mt-4 font-semibold text-2xl text-[1.4rem] tracking-[-0.015em]">
                 What is the future of web development?
               </h3>
               <div className="mt-6 flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <div className="size-8 rounded-full bg-muted"></div>
-                  <span className="text-muted-foreground font-medium">
+                  <div className="size-8 rounded-full bg-muted" />
+                  <span className="font-medium text-muted-foreground">
                     John Doe
                   </span>
                 </div>

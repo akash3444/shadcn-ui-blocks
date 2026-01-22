@@ -1,3 +1,5 @@
+import { OctagonAlert, X } from "lucide-react";
+import { AlertDialog as AlertDialogPrimitive } from "radix-ui";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -10,8 +12,6 @@ import {
   AlertDialogTrigger,
 } from "@/registry/ui/alert-dialog";
 import { Button, buttonVariants } from "@/registry/ui/button";
-import { OctagonAlert, X } from "lucide-react";
-import { AlertDialog as AlertDialogPrimitive } from "radix-ui";
 
 export default function AlertDialogWithCustomizedHeader() {
   return (
@@ -20,7 +20,7 @@ export default function AlertDialogWithCustomizedHeader() {
         <Button variant="outline">Show Dialog</Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
-        <div className="-mt-3 -mx-6 border-b pb-3 px-6 flex justify-between items-center">
+        <div className="-mx-6 -mt-3 flex items-center justify-between border-b px-6 pb-3">
           <AlertDialogTitle>Delete Account</AlertDialogTitle>
           <AlertDialogPrimitive.Cancel
             className={buttonVariants({
@@ -34,7 +34,7 @@ export default function AlertDialogWithCustomizedHeader() {
         </div>
         <AlertDialogHeader className="pt-2">
           <AlertDialogTitle>
-            <div className="mx-auto sm:mx-0 mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-destructive/10">
+            <div className="mx-auto mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-destructive/10 sm:mx-0">
               <OctagonAlert className="h-5 w-5 text-destructive" />
             </div>
             Are you absolutely sure?

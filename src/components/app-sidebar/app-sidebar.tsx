@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   Sidebar,
   SidebarContent,
@@ -8,18 +9,17 @@ import {
   SidebarMenu,
 } from "@/components/ui/sidebar";
 import { groups } from "@/description/app-sidebar";
-import Link from "next/link";
 import { Logo } from "../logo";
 import AppSidebarMenuItem from "./sidebar-menu-item";
 
 export function AppSidebar() {
   return (
     <Sidebar collapsible="icon">
-      <SidebarHeader className="relative flex-row items-center justify-between p-4 group-data-[state=collapsed]:p-3 group-data-[state=collapsed]:justify-center border-b">
+      <SidebarHeader className="relative flex-row items-center justify-between border-b p-4 group-data-[state=collapsed]:justify-center group-data-[state=collapsed]:p-3">
         <Link href="/">
-          <div className="text-foreground flex items-center font-semibold gap-2">
+          <div className="flex items-center gap-2 font-semibold text-foreground">
             <Logo className="h-7 w-7" />
-            <span className="group-data-[state=collapsed]:hidden whitespace-nowrap tracking-tight">
+            <span className="whitespace-nowrap tracking-tight group-data-[state=collapsed]:hidden">
               Shadcn UI Blocks
             </span>
           </div>
@@ -32,7 +32,7 @@ export function AppSidebar() {
             <SidebarGroupContent>
               <SidebarMenu>
                 {items.map((item) => (
-                  <AppSidebarMenuItem key={item.title} item={item} />
+                  <AppSidebarMenuItem item={item} key={item.title} />
                 ))}
               </SidebarMenu>
             </SidebarGroupContent>
@@ -41,17 +41,17 @@ export function AppSidebar() {
 
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4493596981598123"
           crossOrigin="anonymous"
-        ></script>
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4493596981598123"
+        />
         <ins
           className="adsbygoogle"
-          style={{ display: "block" }}
           data-ad-client="ca-pub-4493596981598123"
-          data-ad-slot="2023971604"
           data-ad-format="auto"
+          data-ad-slot="2023971604"
           data-full-width-responsive="true"
-        ></ins>
+          style={{ display: "block" }}
+        />
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
         {/* {process.env.NODE_ENV === "production" && (

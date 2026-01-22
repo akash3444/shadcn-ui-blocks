@@ -1,12 +1,12 @@
 "use client";
 
-import { categorizedBlocks } from "@/blocks";
 import { useParams, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { categorizedBlocks } from "@/blocks";
+import { blocks as registryBlocks } from "@/config/registry";
+import { Block } from "../block";
 import PreviewListFilter from "./preview-list-filter";
 import { ResultsNotFound } from "./results-not-found";
-import { Block } from "../block";
-import { blocks as registryBlocks } from "@/config/registry";
 
 const INITIAL_BLOCK_COUNT = 5;
 const BLOCKS_PER_LOAD = 5;
@@ -79,14 +79,14 @@ const BlockPreviewList = () => {
         {filteredBlocks.length ? (
           <div className="grid grid-cols-1 gap-6">
             {visibleBlocks.map((block) => (
-              <Block key={block.name} block={block} />
+              <Block block={block} key={block.name} />
             ))}
             {hasMore && (
               <div
+                className="flex h-20 items-center justify-center"
                 ref={loadMoreRef}
-                className="h-20 flex items-center justify-center"
               >
-                <div className="text-sm text-muted-foreground">
+                <div className="text-muted-foreground text-sm">
                   Loading more blocks...
                 </div>
               </div>

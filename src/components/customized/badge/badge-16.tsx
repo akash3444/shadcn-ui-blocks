@@ -25,11 +25,13 @@ const tabs = [
 const TabsWithBadge = () => {
   return (
     <Tabs defaultValue={tabs[0].value}>
-      <TabsList>  
+      <TabsList>
         {tabs.map((feature) => (
           <TabsTrigger key={feature.value} value={feature.value}>
             {feature.name}
-            {feature.count && <Badge className="px-1 min-w-5.5">{feature.count}</Badge>}
+            {feature.count && (
+              <Badge className="min-w-5.5 px-1">{feature.count}</Badge>
+            )}
           </TabsTrigger>
         ))}
       </TabsList>

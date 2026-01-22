@@ -1,7 +1,7 @@
 "use client";
 
-import { Slider } from "@/registry/ui/slider";
 import * as React from "react";
+import { Slider } from "@/registry/ui/slider";
 
 const formatDuration = (duration: number) => {
   const minutes = Math.floor(duration / 60);
@@ -15,14 +15,14 @@ export default function AudioSliderDemo() {
   const [playbackTime, setPlaybackTime] = React.useState([78]);
 
   return (
-    <div className="max-w-sm w-full">
+    <div className="w-full max-w-sm">
       <Slider
         defaultValue={playbackTime}
         max={duration}
-        step={1}
         onValueChange={setPlaybackTime}
+        step={1}
       />
-      <div className="mt-1 flex justify-between text-xs font-medium text-muted-foreground">
+      <div className="mt-1 flex justify-between font-medium text-muted-foreground text-xs">
         <span>{formatDuration(playbackTime[0])}</span>
         <span>{formatDuration(duration)}</span>
       </div>

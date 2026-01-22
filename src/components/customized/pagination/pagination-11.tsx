@@ -9,12 +9,12 @@ import {
 export default function PaginationNumberless() {
   return (
     <Pagination>
-      <PaginationContent className="gap-0 border rounded-lg divide-x overflow-hidden">
+      <PaginationContent className="gap-0 divide-x overflow-hidden rounded-lg border">
         <PaginationItem>
-          <PaginationPrevious href="#" className="rounded-none" />
+          <PaginationPrevious className="rounded-none" href="#" />
         </PaginationItem>
         <PaginationItem>
-          <PaginationNext href="#" className="rounded-none" />
+          <PaginationNext className="rounded-none" href="#" />
         </PaginationItem>
       </PaginationContent>
     </Pagination>

@@ -1,20 +1,19 @@
 "use client";
 
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, useFormContext } from "react-hook-form";
 import { z } from "zod";
-
+import { Button } from "@/registry/ui/button";
 import { Checkbox } from "@/registry/ui/checkbox";
 import {
-  FormControl,
-  FormItem,
-  FormField,
-  FormMessage,
-  FormLabel,
   Form,
+  FormControl,
   FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
 } from "@/registry/ui/form";
-import { Button } from "@/registry/ui/button";
-import { zodResolver } from "@hookform/resolvers/zod";
 
 type CheckboxWithFormProps<K> = {
   name: keyof K & string;
@@ -38,15 +37,15 @@ export function CheckboxWithForm<K>({
       control={form.control}
       name={name}
       render={({ field }) => (
-        <FormItem className="w-full flex gap-4 items-center">
+        <FormItem className="flex w-full items-center gap-4">
           <FormControl>
             <Checkbox
               id={name}
               {...field}
               checked={field.value}
-              onCheckedChange={field.onChange}
-              disabled={disabled}
               className={className}
+              disabled={disabled}
+              onCheckedChange={field.onChange}
             />
           </FormControl>
           <div className="flex flex-col gap-1.5">
@@ -83,13 +82,13 @@ export default function CheckboxWithFormDemo() {
   return (
     <Form {...form}>
       <form
+        className="w-full space-y-4 px-4"
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-4 w-full px-4"
       >
         <CheckboxWithForm<schemaType>
+          description="This role has access to all the features of the application."
           name="isAdmin"
           title="Admin role"
-          description="This role has access to all the features of the application."
         />
         <Button type="submit">Submit</Button>
       </form>

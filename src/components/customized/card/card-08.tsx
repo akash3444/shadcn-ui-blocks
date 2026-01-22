@@ -1,12 +1,11 @@
+import { Quote } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/avatar";
 import { Card, CardContent, CardHeader } from "@/registry/ui/card";
-import { Quote } from "lucide-react";
-import React from "react";
 
 const TestimonialCard = () => {
   return (
-    <Card className="relative w-full max-w-sm bg-muted/70 shadow-none border-none gap-0 pt-0 pb-4">
-      <Quote className="absolute top-3 right-2 h-16 w-16 text-foreground/10 stroke-[1.5px]" />
+    <Card className="relative w-full max-w-sm gap-0 border-none bg-muted/70 pt-0 pb-4 shadow-none">
+      <Quote className="absolute top-3 right-2 h-16 w-16 stroke-[1.5px] text-foreground/10" />
       <CardHeader className="py-5">
         <div className="flex items-center gap-3">
           <Avatar className="h-12 w-12">
@@ -14,10 +13,10 @@ const TestimonialCard = () => {
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <div className="flex flex-col gap-1">
-            <span className="text-[15px] leading-none font-semibold">
+            <span className="font-semibold text-[15px] leading-none">
               shadcn
             </span>
-            <span className="text-sm leading-none text-muted-foreground">
+            <span className="text-muted-foreground text-sm leading-none">
               @shadcn
             </span>
           </div>

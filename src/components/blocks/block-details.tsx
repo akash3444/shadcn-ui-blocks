@@ -1,10 +1,10 @@
-import { blockCategories } from "@/blocks";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { blockCategories } from "@/blocks";
 
 export default function BlockDetails() {
   return (
-    <section className="dark:prose-invert mt-12 prose prose-h2:text-3xl prose-h2:tracking-tight prose-p:text-xl prose-p:leading-loose prose-li:text-xl prose-li:leading-loose mx-auto">
+    <section className="dark:prose-invert prose mx-auto mt-12 prose-h2:text-3xl prose-li:text-xl prose-p:text-xl prose-li:leading-loose prose-p:leading-loose prose-h2:tracking-tight">
       <h2 id="what-is-shadcn-ui-blocks-">What is Shadcn UI Blocks?</h2>
       <p>
         In the world of modern web development, UI components play a crucial
@@ -120,7 +120,7 @@ export default function BlockDetails() {
               <Link href={`/blocks/categories/${category.name}`}>
                 {categoryTitle} Blocks
               </Link>
-              <ArrowUpRight className="mr-2 h-4 2-4 inline-block" />(
+              <ArrowUpRight className="2-4 mr-2 inline-block h-4" />(
               {category.totalBlocks} blocks)
             </li>
           );

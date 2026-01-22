@@ -38,21 +38,21 @@ const steps = [
 
 export default function Timeline() {
   return (
-    <div className="max-w-(--breakpoint-sm) mx-auto py-12 md:py-20 px-6">
+    <div className="mx-auto max-w-(--breakpoint-sm) px-6 py-12 md:py-20">
       <div className="relative ml-6">
         {/* Timeline line */}
-        <div className="absolute left-0 inset-y-0 border-l-2" />
+        <div className="absolute inset-y-0 left-0 border-l-2" />
 
         {steps.map(({ title, description }, index) => (
-          <div key={index} className="relative pl-10 pb-10 last:pb-0">
+          <div className="relative pb-10 pl-10 last:pb-0" key={index}>
             {/* Timeline Icon */}
-            <div className="absolute left-px -translate-x-1/2 h-9 w-9 border-2 border-muted-foreground/40 flex items-center justify-center rounded-full bg-accent ring-8 ring-background">
+            <div className="absolute left-px flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full border-2 border-muted-foreground/40 bg-accent ring-8 ring-background">
               <span className="font-semibold text-lg">{index + 1}</span>
             </div>
 
             {/* Content */}
-            <div className="pt-1 space-y-2">
-              <h3 className="text-xl font-semibold tracking-[-0.01em]">
+            <div className="space-y-2 pt-1">
+              <h3 className="font-semibold text-xl tracking-[-0.01em]">
                 {title}
               </h3>
               <p className="text-muted-foreground">{description}</p>

@@ -1,3 +1,4 @@
+import { ChevronsRight } from "lucide-react";
 import { Badge } from "@/registry/ui/badge";
 import {
   Breadcrumb,
@@ -7,7 +8,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/registry/ui/breadcrumb";
-import { ChevronsRight } from "lucide-react";
 
 const BreadcrumbTabsOutline = () => {
   return (
@@ -16,8 +16,8 @@ const BreadcrumbTabsOutline = () => {
         <BreadcrumbItem>
           <BreadcrumbLink href="#">
             <Badge
+              className="rounded-full font-medium shadow-none"
               variant="outline"
-              className="font-medium shadow-none rounded-full"
             >
               Home
             </Badge>
@@ -29,8 +29,8 @@ const BreadcrumbTabsOutline = () => {
         <BreadcrumbItem>
           <BreadcrumbLink href="#/components">
             <Badge
+              className="rounded-full font-medium shadow-none"
               variant="outline"
-              className="font-medium shadow-none rounded-full"
             >
               Components
             </Badge>
@@ -41,7 +41,7 @@ const BreadcrumbTabsOutline = () => {
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbPage>
-            <Badge className="shadow-none rounded-full">Breadcrumb</Badge>
+            <Badge className="rounded-full shadow-none">Breadcrumb</Badge>
           </BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>

@@ -1,4 +1,16 @@
 import {
+  CreditCardIcon,
+  Loader,
+  type LucideIcon,
+  SquareCheckIcon,
+  SquareChevronUpIcon,
+  SquarePowerIcon,
+  ToggleRight,
+} from "lucide-react";
+import Link from "next/link";
+import * as React from "react";
+import { cn } from "@/lib/utils";
+import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
@@ -7,18 +19,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/registry/ui/navigation-menu";
-import { cn } from "@/lib/utils";
-import {
-  CreditCardIcon,
-  Loader,
-  LucideIcon,
-  SquareCheckIcon,
-  SquareChevronUpIcon,
-  SquarePowerIcon,
-  ToggleRight,
-} from "lucide-react";
-import Link from "next/link";
-import * as React from "react";
 
 const components: {
   title: string;
@@ -74,18 +74,18 @@ export default function RichNavigationMenu() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Products</NavigationMenuTrigger>
           <NavigationMenuContent className="px-0 py-1">
-            <div className="grid grid-cols-3 gap-3 p-4 w-[900px] divide-x">
+            <div className="grid w-[900px] grid-cols-3 gap-3 divide-x p-4">
               <div className="col-span-2">
-                <h6 className="pl-2.5 font-semibold uppercase text-sm text-muted-foreground">
+                <h6 className="pl-2.5 font-semibold text-muted-foreground text-sm uppercase">
                   Capabilities
                 </h6>
                 <ul className="mt-2.5 grid grid-cols-2 gap-3">
                   {components.map((component) => (
                     <ListItem
-                      key={component.title}
-                      title={component.title}
                       href={component.href}
                       icon={component.icon}
+                      key={component.title}
+                      title={component.title}
                     >
                       {component.description}
                     </ListItem>
@@ -94,16 +94,16 @@ export default function RichNavigationMenu() {
               </div>
 
               <div className="pl-4">
-                <h6 className="pl-2.5 font-semibold uppercase text-sm text-muted-foreground">
+                <h6 className="pl-2.5 font-semibold text-muted-foreground text-sm uppercase">
                   Product & Features
                 </h6>
                 <ul className="mt-2.5 grid gap-3">
                   {components.slice(0, 3).map((component) => (
                     <ListItem
-                      key={component.title}
-                      title={component.title}
                       href={component.href}
                       icon={component.icon}
+                      key={component.title}
+                      title={component.title}
                     >
                       {component.description}
                     </ListItem>
@@ -116,16 +116,16 @@ export default function RichNavigationMenu() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
           <NavigationMenuContent className="p-4">
-            <h6 className="pl-2.5 font-semibold uppercase text-sm text-muted-foreground">
+            <h6 className="pl-2.5 font-semibold text-muted-foreground text-sm uppercase">
               Solutions
             </h6>
             <ul className="mt-2.5 grid w-[400px] gap-3 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
                 <ListItem
-                  key={component.title}
-                  title={component.title}
                   href={component.href}
                   icon={component.icon}
+                  key={component.title}
+                  title={component.title}
                 >
                   {component.description}
                 </ListItem>
@@ -153,18 +153,18 @@ const ListItem = React.forwardRef<
     <li>
       <NavigationMenuLink asChild>
         <a
-          ref={ref}
           className={cn(
             "block select-none rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
+          ref={ref}
           {...props}
         >
-          <div className="font-semibold tracking-tight leading-none flex items-center gap-2">
+          <div className="flex items-center gap-2 font-semibold leading-none tracking-tight">
             <Icon className="h-5 w-5" />
             {title}
           </div>
-          <p className="mt-2 line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <p className="mt-2 line-clamp-2 text-muted-foreground text-sm leading-snug">
             {children}
           </p>
         </a>

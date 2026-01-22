@@ -1,5 +1,8 @@
 "use client";
 
+import type { LucideIcon } from "lucide-react";
+import Link from "next/link";
+import React, { type ComponentProps } from "react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -10,9 +13,6 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { LucideIcon } from "lucide-react";
-import Link from "next/link";
-import React, { ComponentProps } from "react";
 import {
   foods,
   travelMenuItems,
@@ -22,7 +22,7 @@ export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => (
   <NavigationMenu {...props}>
     <NavigationMenuList className="gap-1 space-x-0 text-sm">
       <NavigationMenuItem>
-        <Button variant="ghost" asChild>
+        <Button asChild variant="ghost">
           <Link href="#">Home</Link>
         </Button>
       </NavigationMenuItem>
@@ -32,10 +32,10 @@ export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => (
           <ul className="grid w-[400px] gap-3 p-1 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
             {foods.map((food) => (
               <ListItem
+                href="#"
+                icon={food.icon}
                 key={food.title}
                 title={food.title}
-                icon={food.icon}
-                href="#"
               >
                 {food.description}
               </ListItem>
@@ -49,10 +49,10 @@ export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => (
           <ul className="grid w-[400px] gap-3 p-1 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
             {travelMenuItems.map((menuItem) => (
               <ListItem
+                href="#"
+                icon={menuItem.icon}
                 key={menuItem.title}
                 title={menuItem.title}
-                icon={menuItem.icon}
-                href="#"
               >
                 {menuItem.description}
               </ListItem>
@@ -72,16 +72,16 @@ const ListItem = React.forwardRef<
     <li>
       <NavigationMenuLink asChild>
         <Link
-          ref={ref}
           className={cn(
             "block select-none space-y-2 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
+          ref={ref}
           {...props}
         >
           <props.icon className="mb-4 size-6" />
-          <div className="text-sm font-semibold leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <div className="font-semibold text-sm leading-none">{title}</div>
+          <p className="line-clamp-2 text-muted-foreground text-sm leading-snug">
             {children}
           </p>
         </Link>

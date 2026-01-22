@@ -9,15 +9,15 @@ export default function InputOTPDemo() {
   return (
     <InputOTP maxLength={6}>
       <InputOTPGroup className="space-x-1">
-        <InputOTPSlot index={0} className="rounded-md border-l" />
-        <InputOTPSlot index={1} className="rounded-md border-l" />
-        <InputOTPSlot index={2} className="rounded-md border-l" />
+        <InputOTPSlot className="rounded-md border-l" index={0} />
+        <InputOTPSlot className="rounded-md border-l" index={1} />
+        <InputOTPSlot className="rounded-md border-l" index={2} />
       </InputOTPGroup>
       <InputOTPSeparator />
       <InputOTPGroup className="space-x-1">
-        <InputOTPSlot index={3} className="rounded-md border-l" />
-        <InputOTPSlot index={4} className="rounded-md border-l" />
-        <InputOTPSlot index={5} className="rounded-md border-l" />
+        <InputOTPSlot className="rounded-md border-l" index={3} />
+        <InputOTPSlot className="rounded-md border-l" index={4} />
+        <InputOTPSlot className="rounded-md border-l" index={5} />
       </InputOTPGroup>
     </InputOTP>
   );

@@ -1,5 +1,5 @@
-import { BlockScreenSize } from "@/types/blocks";
 import { Monitor, SmartphoneIcon, TabletIcon } from "lucide-react";
+import { BlockScreenSize } from "@/types/blocks";
 
 export const blockScreens = [
   {

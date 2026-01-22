@@ -36,13 +36,13 @@ const items = [
 export function CustomizedComponentsFAQ() {
   return (
     <>
-      <p className="uppercase mb-3 font-semibold text-foreground/80 tracking-tight">
+      <p className="mb-3 font-semibold text-foreground/80 uppercase tracking-tight">
         Frequently Asked Questions
       </p>
-      <Accordion type="multiple" className="w-full border-t">
+      <Accordion className="w-full border-t" type="multiple">
         {items.map(({ title, content }, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
-            <AccordionTrigger className="text-left font-semibold text-[17px] py-3 gap-3">
+            <AccordionTrigger className="gap-3 py-3 text-left font-semibold text-[17px]">
               {title}
             </AccordionTrigger>
             <AccordionContent className="text-base text-foreground/80">

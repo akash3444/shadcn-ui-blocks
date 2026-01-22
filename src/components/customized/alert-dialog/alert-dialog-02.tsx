@@ -1,3 +1,4 @@
+import { OctagonAlert } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -10,7 +11,6 @@ import {
   AlertDialogTrigger,
 } from "@/registry/ui/alert-dialog";
 import { Button } from "@/registry/ui/button";
-import { OctagonAlert } from "lucide-react";
 
 export default function AlertDialogWithIcon() {
   return (
@@ -21,7 +21,7 @@ export default function AlertDialogWithIcon() {
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>
-            <div className="mx-auto sm:mx-0 mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-destructive/10">
+            <div className="mx-auto mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-destructive/10 sm:mx-0">
               <OctagonAlert className="h-5 w-5 text-destructive" />
             </div>
             Are you absolutely sure?

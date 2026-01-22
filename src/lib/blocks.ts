@@ -1,5 +1,5 @@
 import { BLOCK_SCREENSHOT_EXTENSION } from "@/description/blocks";
-import { BlockFile, FileTree } from "@/types/blocks";
+import type { BlockFile, FileTree } from "@/types/blocks";
 
 export const getFileTree = (files: BlockFile[]) => {
   function setNestedObject({

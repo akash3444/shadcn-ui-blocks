@@ -1,6 +1,6 @@
-import { Theme } from "@/types/theme";
 import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
+import type { Theme } from "@/types/theme";
 
 export const useBlockTheme = () => {
   const { resolvedTheme } = useTheme();

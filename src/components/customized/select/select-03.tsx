@@ -11,7 +11,7 @@ import {
 export default function SelectGhostDemo() {
   return (
     <Select defaultValue="apple">
-      <SelectTrigger className="w-44 border-none hover:bg-accent shadow-none">
+      <SelectTrigger className="w-44 border-none shadow-none hover:bg-accent">
         <SelectValue placeholder="Select a fruit" />
       </SelectTrigger>
       <SelectContent>

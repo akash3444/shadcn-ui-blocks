@@ -1,7 +1,7 @@
 "use client";
 
-import * as React from "react";
 import { ChevronsUpDown } from "lucide-react";
+import * as React from "react";
 
 import { Button } from "@/registry/ui/button";
 import {
@@ -15,16 +15,16 @@ export default function CollapsibleDemo() {
 
   return (
     <Collapsible
-      open={isOpen}
-      onOpenChange={setIsOpen}
       className="w-[350px] space-y-2"
+      onOpenChange={setIsOpen}
+      open={isOpen}
     >
       <div className="flex items-center justify-between space-x-4 px-4">
-        <h4 className="text-sm font-semibold">
+        <h4 className="font-semibold text-sm">
           @peduarte starred 3 repositories
         </h4>
         <CollapsibleTrigger asChild>
-          <Button variant="ghost" size="sm">
+          <Button size="sm" variant="ghost">
             <ChevronsUpDown className="h-4 w-4" />
             <span className="sr-only">Toggle</span>
           </Button>

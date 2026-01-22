@@ -1,3 +1,4 @@
+import { CircleHelpIcon } from "lucide-react";
 import { Button } from "@/registry/ui/button";
 import {
   Card,
@@ -8,13 +9,12 @@ import {
   CardTitle,
 } from "@/registry/ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/ui/tooltip";
-import { CircleHelpIcon } from "lucide-react";
 
 export default function PricingCard() {
   return (
-    <Card className="max-w-xs w-full shadow-md shadow-border/70">
+    <Card className="w-full max-w-xs shadow-border/70 shadow-md">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold tracking-tight">
+        <CardTitle className="font-bold text-2xl tracking-tight">
           Pro Plan
         </CardTitle>
         <CardDescription>
@@ -23,11 +23,11 @@ export default function PricingCard() {
           track.
         </CardDescription>
       </CardHeader>
-      <CardContent className="text-sm text-muted-foreground flex items-end leading-6">
-        <span className="text-4xl leading-none font-bold text-foreground">
+      <CardContent className="flex items-end text-muted-foreground text-sm leading-6">
+        <span className="font-bold text-4xl text-foreground leading-none">
           $20
         </span>
-        <span className="ml-0.5 mr-1.5">/mo</span>
+        <span className="mr-1.5 ml-0.5">/mo</span>
         <Tooltip>
           <TooltipTrigger className="mb-1">
             <CircleHelpIcon className="h-4 w-4" />
@@ -42,7 +42,7 @@ export default function PricingCard() {
         </Tooltip>
       </CardContent>
       <CardFooter className="mt-2 flex justify-between">
-        <Button size="lg" className="w-full">
+        <Button className="w-full" size="lg">
           Try for free
         </Button>
       </CardFooter>

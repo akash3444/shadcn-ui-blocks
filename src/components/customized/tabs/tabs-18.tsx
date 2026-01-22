@@ -1,9 +1,9 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
+import { BanIcon, MoreHorizontalIcon } from "lucide-react";
 import { Button } from "@/registry/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
-import { BanIcon, MoreHorizontalIcon } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const followers = [
   { username: "jane_doe", fullName: "Jane Doe" },
@@ -39,23 +39,23 @@ const itemVariants = {
 const UserList = ({ users }: { users: typeof following }) => (
   <AnimatePresence>
     <motion.div
-      className="space-y-4"
-      initial="hidden"
       animate="visible"
+      className="space-y-4"
       exit="hidden"
+      initial="hidden"
       variants={listVariants}
     >
       {users.map(({ username, fullName }) => (
         <motion.div
+          className="flex items-center justify-between gap-2"
           key={username}
-          className="flex items-center gap-2 justify-between"
-          variants={itemVariants}
           transition={{ type: "tween" }}
+          variants={itemVariants}
         >
           <div className="flex items-center gap-4">
             <div className="h-10 w-10 rounded-full bg-secondary" />
             <div>
-              <span className="block text-sm leading-none font-semibold">
+              <span className="block font-semibold text-sm leading-none">
                 {fullName}
               </span>
               <span className="text-xs leading-none">@{username}</span>
@@ -65,7 +65,7 @@ const UserList = ({ users }: { users: typeof following }) => (
             <Button size="icon" variant="outline">
               <MoreHorizontalIcon className="h-5 w-5" />
             </Button>
-            <Button size="icon" variant="outline" className="text-destructive">
+            <Button className="text-destructive" size="icon" variant="outline">
               <BanIcon className="h-5 w-5" />
             </Button>
           </div>
@@ -77,13 +77,13 @@ const UserList = ({ users }: { users: typeof following }) => (
 
 export default function AnimatedTabsDemo() {
   return (
-    <Tabs defaultValue="followers" className="max-w-xs w-full">
-      <TabsList className="w-full grid grid-cols-2">
+    <Tabs className="w-full max-w-xs" defaultValue="followers">
+      <TabsList className="grid w-full grid-cols-2">
         <TabsTrigger value="followers">Followers</TabsTrigger>
         <TabsTrigger value="following">Following</TabsTrigger>
       </TabsList>
 
-      <div className="mt-2 p-4 border rounded-md">
+      <div className="mt-2 rounded-md border p-4">
         <TabsContent value="followers">
           <UserList users={followers} />
         </TabsContent>

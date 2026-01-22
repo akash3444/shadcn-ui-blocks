@@ -1,3 +1,5 @@
+import { BookOpen, Home, Rss } from "lucide-react";
+import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -5,8 +7,6 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/registry/ui/navigation-menu";
-import { BookOpen, Home, Rss } from "lucide-react";
-import Link from "next/link";
 
 const navigationMenuItems = [
   { title: "Home", href: "#", icon: Home },
@@ -21,10 +21,10 @@ export default function NavigationMenuWithIcon() {
         {navigationMenuItems.map((item) => (
           <NavigationMenuItem key={item.title}>
             <NavigationMenuLink
-              className={navigationMenuTriggerStyle()}
               asChild
+              className={navigationMenuTriggerStyle()}
             >
-              <Link href={item.href} className="flex-row items-center gap-2.5">
+              <Link className="flex-row items-center gap-2.5" href={item.href}>
                 <item.icon className="h-5 w-5 shrink-0" />
                 {item.title}
               </Link>

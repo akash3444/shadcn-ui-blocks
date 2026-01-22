@@ -13,7 +13,7 @@
   "files": [
     {
       "path": "src/components/customized/button/button-19.tsx",
-      "content": "import { Button } from \"@/registry/ui/button\";\nimport { ArrowBigDown, ArrowBigUp } from \"lucide-react\";\n\nconst GroupButton2Demo = () => (\n  <div className=\"[&>*+*]:border-l-0\">\n    <Button\n      variant=\"outline\"\n      className=\"rounded-none first:rounded-l-md last:rounded-r-md gap-1 px-3.5 font-semibold hover:bg-green-600/20 hover:text-green-600\"\n    >\n      <ArrowBigUp className=\"h-5! w-5!\" /> 39\n    </Button>\n    <Button\n      variant=\"outline\"\n      size=\"icon\"\n      className=\"rounded-none first:rounded-l-md last:rounded-r-md hover:bg-rose-500/20 hover:text-rose-500\"\n    >\n      <ArrowBigDown className=\"h-5! w-5!\" />\n    </Button>\n  </div>\n);\n\nexport default GroupButton2Demo;\n",
+      "content": "import { ArrowBigDown, ArrowBigUp } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nconst GroupButton2Demo = () => (\n  <div className=\"[&>*+*]:border-l-0\">\n    <Button\n      className=\"gap-1 rounded-none px-3.5 font-semibold first:rounded-l-md last:rounded-r-md hover:bg-green-600/20 hover:text-green-600\"\n      variant=\"outline\"\n    >\n      <ArrowBigUp className=\"h-5! w-5!\" /> 39\n    </Button>\n    <Button\n      className=\"rounded-none first:rounded-l-md last:rounded-r-md hover:bg-rose-500/20 hover:text-rose-500\"\n      size=\"icon\"\n      variant=\"outline\"\n    >\n      <ArrowBigDown className=\"h-5! w-5!\" />\n    </Button>\n  </div>\n);\n\nexport default GroupButton2Demo;\n",
       "type": "registry:component"
     }
   ]

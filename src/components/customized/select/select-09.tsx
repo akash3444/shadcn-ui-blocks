@@ -1,5 +1,4 @@
-import * as React from "react";
-
+import { Label } from "@/registry/ui/label";
 import {
   Select,
   SelectContent,
@@ -9,11 +8,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/ui/select";
-import { Label } from "@/registry/ui/label";
 
 export default function SelectMenuPositionDemo() {
   return (
-    <div className="grid sm:grid-cols-2 gap-3 w-full">
+    <div className="grid w-full gap-3 sm:grid-cols-2">
       <div className="grow">
         <Label className="mb-2 block">Popper (Default)</Label>
         <Select defaultValue="apple">

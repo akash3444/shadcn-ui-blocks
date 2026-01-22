@@ -2,20 +2,20 @@ import { MailIcon, MapPinIcon, MessageCircle, PhoneIcon } from "lucide-react";
 import Link from "next/link";
 
 const Contact = () => (
-  <div className="min-h-screen flex items-center justify-center pt-12 md:pt-16 pb-16">
-    <div className="w-full max-w-(--breakpoint-xl) mx-auto px-6 xl:px-0">
-      <b className="text-muted-foreground uppercase font-semibold text-sm">
+  <div className="flex min-h-screen items-center justify-center pt-12 pb-16 md:pt-16">
+    <div className="mx-auto w-full max-w-(--breakpoint-xl) px-6 xl:px-0">
+      <b className="font-semibold text-muted-foreground text-sm uppercase">
         Contact Us
       </b>
-      <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tighter">
+      <h2 className="mt-3 font-semibold text-3xl tracking-tighter md:text-4xl">
         We&apos;d love to hear from you
       </h2>
-      <p className="mt-4 text-base sm:text-lg text-muted-foreground">
+      <p className="mt-4 text-base text-muted-foreground sm:text-lg">
         Our friendly team is always here to chat.
       </p>
-      <div className="mt-14 grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        <div className="border border-dashed bg-muted/40 p-6 pb-8 rounded-xl">
-          <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/8 text-foreground rounded-full">
+      <div className="mt-14 grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="rounded-xl border border-dashed bg-muted/40 p-6 pb-8">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-foreground dark:bg-foreground/8">
             <MailIcon />
           </div>
           <h3 className="mt-8 font-bold text-xl">Email</h3>
@@ -29,8 +29,8 @@ const Contact = () => (
             akashmoradiya3444@gmail.com
           </Link>
         </div>
-        <div className="border border-dashed bg-muted/40 p-6 pb-8 rounded-xl">
-          <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/8 text-foreground rounded-full">
+        <div className="rounded-xl border border-dashed bg-muted/40 p-6 pb-8">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-foreground dark:bg-foreground/8">
             <MessageCircle />
           </div>
           <h3 className="mt-8 font-bold text-xl">Live chat</h3>
@@ -41,8 +41,8 @@ const Contact = () => (
             Start new chat
           </Link>
         </div>
-        <div className="border border-dashed bg-muted/40 p-6 pb-8 rounded-xl">
-          <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/8 text-foreground rounded-full">
+        <div className="rounded-xl border border-dashed bg-muted/40 p-6 pb-8">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-foreground dark:bg-foreground/8">
             <MapPinIcon />
           </div>
           <h3 className="mt-8 font-bold text-xl">Office</h3>
@@ -57,8 +57,8 @@ const Contact = () => (
             100 Smith Street Collingwood <br /> VIC 3066 AU
           </Link>
         </div>
-        <div className="border border-dashed bg-muted/40 p-6 pb-8 rounded-xl">
-          <div className="h-12 w-12 flex items-center justify-center bg-foreground/5 dark:bg-foreground/8 text-foreground rounded-full">
+        <div className="rounded-xl border border-dashed bg-muted/40 p-6 pb-8">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-foreground dark:bg-foreground/8">
             <PhoneIcon />
           </div>
           <h3 className="mt-8 font-bold text-xl">Phone</h3>

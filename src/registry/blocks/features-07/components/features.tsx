@@ -67,24 +67,24 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-(--breakpoint-xl) w-full py-10 px-6">
-        <h2 className="text-4xl md:text-[2.75rem] md:leading-[1.2] font-semibold tracking-[-0.03em] sm:max-w-xl text-pretty sm:mx-auto sm:text-center">
+    <div className="flex min-h-screen items-center justify-center">
+      <div className="w-full max-w-(--breakpoint-xl) px-6 py-10">
+        <h2 className="text-pretty font-semibold text-4xl tracking-[-0.03em] sm:mx-auto sm:max-w-xl sm:text-center md:text-[2.75rem] md:leading-[1.2]">
           Strengthen Your Strategy
         </h2>
-        <p className="mt-2 text-muted-foreground text-lg sm:text-xl sm:text-center">
+        <p className="mt-2 text-lg text-muted-foreground sm:text-center sm:text-xl">
           Enhance your strategy with intelligent tools designed for success.
         </p>
-        <div className="mt-12 sm:mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-y-8">
+        <div className="mt-12 grid gap-6 sm:mt-16 sm:gap-y-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
-            <Link key={index} href="#">
-              <div className="flex gap-6 items-center rounded-lg -mx-2 sm:mx-0 max-w-lg">
-                <div className="h-24 aspect-square shrink-0 rounded-lg bg-muted" />
+            <Link href="#" key={index}>
+              <div className="-mx-2 flex max-w-lg items-center gap-6 rounded-lg sm:mx-0">
+                <div className="aspect-square h-24 shrink-0 rounded-lg bg-muted" />
                 <div className="">
-                  <span className="font-semibold tracking-[-0.015em] text-lg">
+                  <span className="font-semibold text-lg tracking-[-0.015em]">
                     {feature.title}
                   </span>
-                  <p className="mt-1 text-sm text-muted-foreground text-pretty">
+                  <p className="mt-1 text-pretty text-muted-foreground text-sm">
                     {feature.description}
                   </p>
                 </div>

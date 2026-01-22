@@ -16,7 +16,7 @@ export default function ControlledSelectDemo() {
   const [value, setValue] = React.useState("blueberry");
 
   return (
-    <Select value={value} onValueChange={setValue}>
+    <Select onValueChange={setValue} value={value}>
       <SelectTrigger className="w-[180px]">
         <SelectValue placeholder="Select a fruit" />
       </SelectTrigger>

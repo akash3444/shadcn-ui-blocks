@@ -1,3 +1,4 @@
+import { EllipsisVertical } from "lucide-react";
 import { Button } from "@/registry/ui/button";
 import {
   DropdownMenu,
@@ -10,13 +11,12 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/registry/ui/dropdown-menu";
-import { EllipsisVertical } from "lucide-react";
 
 export default function DropdownMenuWithShortcuts() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button size="icon" variant="outline">
           <EllipsisVertical />
         </Button>
       </DropdownMenuTrigger>

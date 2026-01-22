@@ -1,5 +1,13 @@
 "use client";
 
+import {
+  ChevronDown,
+  CircleDollarSign,
+  type LucideIcon,
+  Star,
+  Tag,
+} from "lucide-react";
+import { type ReactNode, useState } from "react";
 import { Checkbox } from "@/registry/ui/checkbox";
 import {
   Collapsible,
@@ -9,14 +17,6 @@ import {
 import { Input } from "@/registry/ui/input";
 import { Label } from "@/registry/ui/label";
 import { Slider } from "@/registry/ui/slider";
-import {
-  ChevronDown,
-  CircleDollarSign,
-  LucideIcon,
-  Star,
-  Tag,
-} from "lucide-react";
-import { ReactNode, useState } from "react";
 
 type PriceRange = { from: number; to: number };
 
@@ -43,34 +43,34 @@ function PriceRangeFilter() {
   };
 
   return (
-    <CollapsibleFilter title="Price Range" icon={CircleDollarSign}>
+    <CollapsibleFilter icon={CircleDollarSign} title="Price Range">
       <div className="flex justify-between space-x-4">
         <Input
-          type="number"
-          value={value.from}
+          className="w-20"
           onChange={(e) =>
             handleChange({ from: +e.target.value, to: value.to })
           }
+          type="number"
           // onBlur={handleBlur}
-          className="w-20"
+          value={value.from}
         />
         <Input
-          type="number"
-          value={value.to}
+          className="w-20"
           onChange={(e) =>
             handleChange({ from: value.from, to: +e.target.value })
           }
+          type="number"
           // onBlur={handleBlur}
-          className="w-20"
+          value={value.to}
         />
       </div>
       <Slider
-        min={MIN_PRICE}
+        className="mt-4 mb-3 w-full"
         max={MAX_PRICE}
+        min={MIN_PRICE}
+        onValueChange={([from, to]) => handleChange({ from, to })}
         step={10}
         value={[value.from, value.to]}
-        onValueChange={([from, to]) => handleChange({ from, to })}
-        className="w-full mt-4 mb-3"
       />
     </CollapsibleFilter>
   );
@@ -81,25 +81,25 @@ function RatingFilter() {
   const [hoveredRating, setHoveredRating] = useState<number | null>(null);
 
   return (
-    <CollapsibleFilter title="Rating" icon={Star}>
-      <div className="flex space-x-1 mb-1">
+    <CollapsibleFilter icon={Star} title="Rating">
+      <div className="mb-1 flex space-x-1">
         {[1, 2, 3, 4, 5].map((ratingValue) => (
           <Star
-            key={ratingValue}
             className={`h-6 w-6 cursor-pointer ${
               (
                 hoveredRating !== null
                   ? hoveredRating >= ratingValue
                   : rating !== null && rating >= ratingValue
               )
-                ? "text-yellow-400 fill-yellow-400"
+                ? "fill-yellow-400 text-yellow-400"
                 : "text-gray-300"
             }`}
-            onMouseEnter={() => setHoveredRating(ratingValue)}
-            onMouseLeave={() => setHoveredRating(null)}
+            key={ratingValue}
             onClick={() =>
               setRating(ratingValue === rating ? null : ratingValue)
             }
+            onMouseEnter={() => setHoveredRating(ratingValue)}
+            onMouseLeave={() => setHoveredRating(null)}
           />
         ))}
       </div>
@@ -116,9 +116,9 @@ const categories = [
 ];
 function CategoryFilter() {
   return (
-    <CollapsibleFilter title="Category" icon={Tag}>
+    <CollapsibleFilter icon={Tag} title="Category">
       {categories.map((category) => (
-        <div key={category} className="mb-2 flex items-center space-x-3">
+        <div className="mb-2 flex items-center space-x-3" key={category}>
           <Checkbox id={category} />
           <Label htmlFor={category}>{category}</Label>
         </div>
@@ -138,10 +138,10 @@ const CollapsibleFilter = ({
 }) => (
   <Collapsible defaultOpen>
     <CollapsibleTrigger className="group flex w-full items-center justify-between py-3">
-      <h3 className="flex items-center gap-2 text-sm font-semibold">
+      <h3 className="flex items-center gap-2 font-semibold text-sm">
         {!!Icon && <Icon className="h-5 w-5" />} {title}
       </h3>
-      <ChevronDown className="h-4 w-4 group-data-[state=open]:rotate-180 transition-transform text-muted-foreground" />
+      <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
     </CollapsibleTrigger>
     <CollapsibleContent className="pt-1 pb-3">{children}</CollapsibleContent>
   </Collapsible>

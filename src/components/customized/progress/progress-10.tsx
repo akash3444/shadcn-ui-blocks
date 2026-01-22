@@ -1,9 +1,8 @@
 "use client";
 
 import * as React from "react";
-
-import { Slider } from "@/registry/ui/slider";
 import { cn } from "@/lib/utils";
+import { Slider } from "@/registry/ui/slider";
 
 interface CircularProgressProps {
   value: number;
@@ -43,37 +42,37 @@ const CircularProgress = ({
   return (
     <div className="relative">
       <svg
-        width={size}
-        height={size}
-        viewBox={viewBox}
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        style={{ transform: "rotate(-90deg)" }}
         className="relative"
+        height={size}
+        style={{ transform: "rotate(-90deg)" }}
+        version="1.1"
+        viewBox={viewBox}
+        width={size}
+        xmlns="http://www.w3.org/2000/svg"
       >
         {/* Base Circle */}
         <circle
-          r={radius}
+          className={cn("stroke-primary/25", className)}
           cx={size / 2}
           cy={size / 2}
           fill="transparent"
-          strokeWidth={strokeWidth ?? circleStrokeWidth}
+          r={radius}
           strokeDasharray={circumference}
           strokeDashoffset="0"
-          className={cn("stroke-primary/25", className)}
+          strokeWidth={strokeWidth ?? circleStrokeWidth}
         />
 
         {/* Progress */}
         <circle
-          r={radius}
+          className={cn("stroke-primary", progressClassName)}
           cx={size / 2}
           cy={size / 2}
-          strokeWidth={strokeWidth ?? progressStrokeWidth}
-          strokeLinecap={shape}
-          strokeDashoffset={percentage}
           fill="transparent"
+          r={radius}
           strokeDasharray={circumference}
-          className={cn("stroke-primary", progressClassName)}
+          strokeDashoffset={percentage}
+          strokeLinecap={shape}
+          strokeWidth={strokeWidth ?? progressStrokeWidth}
         />
       </svg>
       {showLabel && (
@@ -94,35 +93,35 @@ export default function CircularProgressColorDemo() {
   const [progress, setProgress] = React.useState([13]);
 
   return (
-    <div className="max-w-xs mx-auto w-full flex flex-col items-center">
+    <div className="mx-auto flex w-full max-w-xs flex-col items-center">
       <div className="flex items-center gap-1">
         <CircularProgress
-          value={progress[0]}
+          className="stroke-indigo-500/25"
+          labelClassName="text-xl font-bold"
+          progressClassName="stroke-indigo-600"
+          renderLabel={(progress) => `${progress}%`}
+          showLabel
           size={120}
           strokeWidth={10}
-          showLabel
-          labelClassName="text-xl font-bold"
-          renderLabel={(progress) => `${progress}%`}
-          className="stroke-indigo-500/25"
-          progressClassName="stroke-indigo-600"
+          value={progress[0]}
         />
         <CircularProgress
-          value={progress[0]}
+          className="stroke-orange-500/25"
+          labelClassName="text-xl font-bold"
+          progressClassName="stroke-orange-600"
+          renderLabel={(progress) => `${progress}%`}
+          showLabel
           size={120}
           strokeWidth={10}
-          showLabel
-          labelClassName="text-xl font-bold"
-          renderLabel={(progress) => `${progress}%`}
-          className="stroke-orange-500/25"
-          progressClassName="stroke-orange-600"
+          value={progress[0]}
         />
       </div>
       <Slider
+        className="mt-6"
         defaultValue={progress}
         max={100}
-        step={1}
         onValueChange={setProgress}
-        className="mt-6"
+        step={1}
       />
     </div>
   );

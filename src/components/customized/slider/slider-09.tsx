@@ -6,7 +6,7 @@ export default function SliderMarksDemo() {
   return (
     <div className="w-full max-w-sm">
       <Slider defaultValue={[1]} max={2} step={1} />
-      <div className="mt-2 -mx-1.5 flex items-center justify-between text-muted-foreground text-xs">
+      <div className="-mx-1.5 mt-2 flex items-center justify-between text-muted-foreground text-xs">
         {ramExpansions.map((expansion) => (
           <span key={expansion}>{expansion}</span>
         ))}

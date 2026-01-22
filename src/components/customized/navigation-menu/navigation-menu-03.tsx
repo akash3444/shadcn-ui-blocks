@@ -1,4 +1,7 @@
+import Link from "next/link";
+import * as React from "react";
 import { Logo } from "@/components/logo";
+import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -8,9 +11,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/registry/ui/navigation-menu";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-import * as React from "react";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -65,10 +65,10 @@ export default function NavigationMenuWithDropdown() {
                     href="/"
                   >
                     <Logo className="h-8 w-8" />
-                    <div className="mb-2 mt-4 text-lg font-medium">
+                    <div className="mt-4 mb-2 font-medium text-lg">
                       Shadcn UI Blocks
                     </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
+                    <p className="text-muted-foreground text-sm leading-tight">
                       Collection of customized Shadcn UI blocks and components
                     </p>
                   </Link>
@@ -89,12 +89,12 @@ export default function NavigationMenuWithDropdown() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Components</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-1 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid w-[400px] gap-3 p-1 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
                 <ListItem
+                  href={component.href}
                   key={component.title}
                   title={component.title}
-                  href={component.href}
                 >
                   {component.description}
                 </ListItem>
@@ -122,15 +122,15 @@ const ListItem = React.forwardRef<
     <li>
       <NavigationMenuLink asChild>
         <a
-          ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
+          ref={ref}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <div className="font-medium text-sm leading-none">{title}</div>
+          <p className="line-clamp-2 text-muted-foreground text-sm leading-snug">
             {children}
           </p>
         </a>

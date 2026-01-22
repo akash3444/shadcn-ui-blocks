@@ -48,22 +48,22 @@ const faq = [
 
 const FAQ = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 py-12">
+    <div className="flex min-h-screen items-center justify-center px-6 py-12">
       <div className="max-w-(--breakpoint-lg)">
-        <h2 className="text-4xl md:text-5xl leading-[1.15]! font-semibold tracking-[-0.035em] text-center">
+        <h2 className="text-center font-semibold text-4xl leading-[1.15]! tracking-[-0.035em] md:text-5xl">
           Frequently Asked Questions
         </h2>
-        <p className="mt-3 text-xl text-center text-muted-foreground">
+        <p className="mt-3 text-center text-muted-foreground text-xl">
           Quick answers to common questions about our products and services.
         </p>
 
-        <div className="mt-12 grid md:grid-cols-2 rounded-xl gap-4">
+        <div className="mt-12 grid gap-4 rounded-xl md:grid-cols-2">
           {faq.map(({ question, answer, icon: Icon }) => (
-            <div key={question} className="border p-6 rounded-xl">
-              <div className="h-10 w-10 flex items-center justify-center rounded-full bg-accent">
+            <div className="rounded-xl border p-6" key={question}>
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent">
                 <Icon />
               </div>
-              <div className="mt-5 mb-2 flex items-start gap-2 text-[1.35rem] font-semibold tracking-[-0.02em]">
+              <div className="mt-5 mb-2 flex items-start gap-2 font-semibold text-[1.35rem] tracking-[-0.02em]">
                 <span>{question}</span>
               </div>
               <p className="text-foreground/70">{answer}</p>

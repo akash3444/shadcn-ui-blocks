@@ -1,16 +1,16 @@
+import { Copy } from "lucide-react";
 import { Button } from "@/registry/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
-import { Copy } from "lucide-react";
 
 export default function TabsIconDemo() {
   return (
-    <Tabs defaultValue={tabs[0].value} className="max-w-xs w-full">
+    <Tabs className="w-full max-w-xs" defaultValue={tabs[0].value}>
       <TabsList className="p-1">
         {tabs.map((tab) => (
           <TabsTrigger
+            className="px-2.5 sm:px-3"
             key={tab.value}
             value={tab.value}
-            className="px-2.5 sm:px-3"
           >
             <code className="flex items-center gap-1 text-[13px] [&>svg]:h-4 [&>svg]:w-4">
               {tab.icon} {tab.name}
@@ -21,9 +21,9 @@ export default function TabsIconDemo() {
 
       {tabs.map((tab) => (
         <TabsContent key={tab.value} value={tab.value}>
-          <div className="h-10 flex items-center justify-between border gap-2 rounded-md pl-3 pr-1.5">
+          <div className="flex h-10 items-center justify-between gap-2 rounded-md border pr-1.5 pl-3">
             <code className="text-[13px]">{tab.content}</code>
-            <Button size="icon" variant="secondary" className="h-7 w-7">
+            <Button className="h-7 w-7" size="icon" variant="secondary">
               <Copy className="h-3.5! w-3.5!" />
             </Button>
           </div>

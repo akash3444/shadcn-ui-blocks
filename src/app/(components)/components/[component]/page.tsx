@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import ComponentBlock from "@/components/component-block";
 import { DescriptionText, MainHeading } from "@/components/typography";
 import { componentsMap } from "@/description/app-sidebar";
@@ -5,7 +6,6 @@ import { customizedComponents } from "@/description/customized-components";
 import { constructMetadata } from "@/lib/metadata";
 import { generateOgImageUrl } from "@/lib/og";
 import { absoluteUrl, cn } from "@/lib/utils";
-import { notFound } from "next/navigation";
 
 export const dynamicParams = false;
 
@@ -69,7 +69,7 @@ const CustomizedComponentPage = async (props: {
 
       <div
         className={cn(
-          "mt-12 grid gap-1 border border-border/80 p-1 rounded-xl bg-muted/50",
+          "mt-12 grid gap-1 rounded-xl border border-border/80 bg-muted/50 p-1",
           {
             "lg:grid-cols-2": details.columns === 2,
             "sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3":
@@ -79,7 +79,11 @@ const CustomizedComponentPage = async (props: {
         )}
       >
         {components.map((component, index) => (
-          <ComponentBlock key={`${component.title}-${index}`} index={index} {...component} />
+          <ComponentBlock
+            index={index}
+            key={`${component.title}-${index}`}
+            {...component}
+          />
         ))}
       </div>
     </div>

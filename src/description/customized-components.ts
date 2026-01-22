@@ -657,4 +657,7 @@ export const customizedComponents = {
   ],
 };
 
-console.log("TOTAL COMPONENTS: ", Object.values(customizedComponents).flat().length);
+console.log(
+  "TOTAL COMPONENTS: ",
+  Object.values(customizedComponents).flat().length
+);

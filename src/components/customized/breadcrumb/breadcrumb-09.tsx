@@ -1,3 +1,4 @@
+import { ChevronsRight } from "lucide-react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,11 +7,10 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/registry/ui/breadcrumb";
-import { ChevronsRight } from "lucide-react";
 
 const BreadcrumbsWithBackground = () => {
   return (
-    <Breadcrumb className="bg-secondary py-1.5 px-3 rounded-lg">
+    <Breadcrumb className="rounded-lg bg-secondary px-3 py-1.5">
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink href="#">Home</BreadcrumbLink>

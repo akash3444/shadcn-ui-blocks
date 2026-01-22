@@ -1,20 +1,20 @@
 "use client";
 
-import { InputHTMLAttributes } from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import type { InputHTMLAttributes } from "react";
 import { useForm, useFormContext } from "react-hook-form";
 import { z } from "zod";
-import { Input } from "@/registry/ui/input";
-import {
-  FormControl,
-  FormItem,
-  FormField,
-  FormMessage,
-  FormLabel,
-  Form,
-} from "@/registry/ui/form";
-import { Button } from "@/registry/ui/button";
 import { cn } from "@/lib/utils";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "@/registry/ui/button";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/registry/ui/form";
+import { Input } from "@/registry/ui/input";
 
 const schema = z.object({
   email: z.string().email("Invalid email address"),
@@ -37,11 +37,11 @@ export default function InputWithFormDemo() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+      <form className="space-y-4" onSubmit={form.handleSubmit(onSubmit)}>
         <InputWithForm<schemaType>
           name="email"
-          title="Email"
           placeholder="Enter your email"
+          title="Email"
         />
         <Button type="submit">Submit</Button>
       </form>

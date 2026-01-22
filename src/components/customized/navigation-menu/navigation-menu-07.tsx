@@ -1,3 +1,6 @@
+import { BookOpen, Home, Rss, Settings, User } from "lucide-react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/registry/ui/button";
 import {
   NavigationMenu,
@@ -5,9 +8,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/registry/ui/navigation-menu";
-import { cn } from "@/lib/utils";
-import { BookOpen, Home, Rss, Settings, User } from "lucide-react";
-import Link from "next/link";
 
 const navigationMenuItems = [
   { title: "Home", href: "#", icon: Home, isActive: true },
@@ -24,6 +24,7 @@ export default function NavigationMenuWithIcon() {
         {navigationMenuItems.map((item) => (
           <NavigationMenuItem key={item.title}>
             <NavigationMenuLink
+              asChild
               className={cn(
                 buttonVariants({
                   size: "icon",
@@ -31,7 +32,6 @@ export default function NavigationMenuWithIcon() {
                 }),
                 "h-11 w-11"
               )}
-              asChild
             >
               <Link href={item.href}>
                 <item.icon className="h-6! w-6!" />

@@ -24,12 +24,12 @@ const items = [
 
 export default function AccordionBoxDemo() {
   return (
-    <Accordion type="single" collapsible className="max-w-lg my-4 w-full">
+    <Accordion className="my-4 w-full max-w-lg" collapsible type="single">
       {items.map(({ title, content }, index) => (
         <AccordionItem
+          className="border border-b-0 px-4 first:rounded-t-md last:rounded-b-md last:border-b"
           key={index}
           value={`item-${index}`}
-          className="border border-b-0 last:border-b first:rounded-t-md last:rounded-b-md px-4"
         >
           <AccordionTrigger>{title}</AccordionTrigger>
           <AccordionContent>{content}</AccordionContent>

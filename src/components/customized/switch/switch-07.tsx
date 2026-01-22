@@ -1,10 +1,9 @@
 "use client";
 
+import { MoonIcon, SunMediumIcon } from "lucide-react";
 import { Switch as SwitchPrimitive } from "radix-ui";
 import * as React from "react";
-
 import { cn } from "@/lib/utils";
-import { MoonIcon, SunMediumIcon } from "lucide-react";
 
 // Replace the `Switch` component in `@components/ui/switch` with below component and use it here to support this customization.
 const Switch = React.forwardRef<
@@ -24,7 +23,7 @@ const Switch = React.forwardRef<
   >
     <SwitchPrimitive.Thumb
       className={cn(
-        "pointer-events-none flex h-4 w-4 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0 items-center justify-center",
+        "pointer-events-none flex h-4 w-4 items-center justify-center rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0",
         thumbClassName
       )}
     >
@@ -39,6 +38,8 @@ const SwitchCustomizationDemo = () => {
 
   return (
     <Switch
+      checked={isDarkMode}
+      className="h-7 w-12"
       icon={
         isDarkMode ? (
           <MoonIcon className="h-4 w-4" />
@@ -46,9 +47,7 @@ const SwitchCustomizationDemo = () => {
           <SunMediumIcon className="h-4 w-4" />
         )
       }
-      checked={isDarkMode}
       onCheckedChange={setIsDarkMode}
-      className="h-7 w-12"
       thumbClassName="h-6 w-6 data-[state=checked]:translate-x-5"
     />
   );

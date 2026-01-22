@@ -1,5 +1,4 @@
 import {
-  BookTextIcon,
   ChevronDownIcon,
   ChevronsUpDown,
   CircleDotIcon,
@@ -10,7 +9,7 @@ import {
   InfoIcon,
   LoaderCircleIcon,
   LoaderIcon,
-  LucideIcon,
+  type LucideIcon,
   MousePointerClickIcon,
   NotebookTabsIcon,
   RectangleHorizontalIcon,

@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import { Card, CardContent } from "@/registry/ui/card";
 import {
   Carousel,
@@ -18,7 +16,7 @@ export default function CarouselDemo() {
             <div className="p-1">
               <Card>
                 <CardContent className="flex aspect-video items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
+                  <span className="font-semibold text-4xl">{index + 1}</span>
                 </CardContent>
               </Card>
             </div>

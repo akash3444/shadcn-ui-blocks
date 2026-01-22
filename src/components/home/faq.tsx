@@ -4,26 +4,26 @@ import { cn } from "@/lib/utils";
 export function FAQ() {
   return (
     <>
-      <p className="uppercase mb-3 font-semibold text-muted-foreground tracking-tight">
+      <p className="mb-3 font-semibold text-muted-foreground uppercase tracking-tight">
         Frequently Asked Questions
       </p>
-      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 bg-muted/50 gap-1 p-1 rounded-lg border border-border/90">
+      <div className="mt-4 grid grid-cols-1 gap-1 rounded-lg border border-border/90 bg-muted/50 p-1 md:grid-cols-2">
         {faqs.map((faq, index) => (
           <div
-            key={index}
             className={cn(
-              "relative border bg-background -ms-px -mt-px text-start overflow-hidden",
-              "first:rounded-t-md md:first:rounded-tr-none md:nth-[2]:rounded-tr-md md:nth-last-[2]:rounded-bl-md last:rounded-b-md md:last:rounded-bl-none"
+              "relative -ms-px -mt-px overflow-hidden border bg-background text-start",
+              "first:rounded-t-md last:rounded-b-md md:nth-[2]:rounded-tr-md md:nth-last-[2]:rounded-bl-md md:last:rounded-bl-none md:first:rounded-tr-none"
             )}
+            key={index}
           >
             <div className="isolate">
-              <span className="absolute top-0 left-0 py-0.75 px-2 rounded-br-md bg-muted text-[11px] font-mono border-e border-b border-border/50">
+              <span className="absolute top-0 left-0 rounded-br-md border-border/50 border-e border-b bg-muted px-2 py-0.75 font-mono text-[11px]">
                 {(index + 1).toString().padStart(2, "0")}
               </span>
-              <div className="flex items-center gap-2 text-base font-medium border-b border-dashed px-6 ps-11 py-3">
+              <div className="flex items-center gap-2 border-b border-dashed px-6 py-3 ps-11 font-medium text-base">
                 {faq.question}
               </div>
-              <div className="px-6 ps-11 py-5 text-sm text-start text-foreground/70">
+              <div className="px-6 py-5 ps-11 text-start text-foreground/70 text-sm">
                 {faq.answer}
               </div>
             </div>

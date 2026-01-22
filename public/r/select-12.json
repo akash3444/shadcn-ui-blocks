@@ -4,14 +4,8 @@
   "type": "registry:component",
   "title": "Select with Auto-Complete",
   "description": "A select component with auto-complete functionality",
-  "dependencies": [
-    "lucide-react"
-  ],
-  "registryDependencies": [
-    "select",
-    "command",
-    "badge"
-  ],
+  "dependencies": ["lucide-react"],
+  "registryDependencies": ["select", "command", "badge"],
   "files": [
     {
       "path": "src/components/customized/select/select-12.tsx",
