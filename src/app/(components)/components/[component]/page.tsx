@@ -60,7 +60,9 @@ const CustomizedComponentPage = async (props: {
   const components =
     customizedComponents[component as keyof typeof customizedComponents] || [];
 
-  if (!details) return notFound();
+  if (!details) {
+    return notFound();
+  }
 
   return (
     <div>

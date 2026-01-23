@@ -50,14 +50,12 @@ const BlockCategoryJsonLd = ({ category }: { category: string }) => {
   };
 
   return (
-    <>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd),
-        }}
-        type="application/ld+json"
-      />
-    </>
+    <script
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(jsonLd),
+      }}
+      type="application/ld+json"
+    />
   );
 };
 

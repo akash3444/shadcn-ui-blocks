@@ -15,13 +15,13 @@ import {
   FormMessage,
 } from "@/registry/ui/form";
 
-type CheckboxWithFormProps<K> = {
+interface CheckboxWithFormProps<K> {
   name: keyof K & string;
   title?: string;
   description?: string;
   className?: string;
   disabled?: boolean;
-};
+}
 
 export function CheckboxWithForm<K>({
   title,

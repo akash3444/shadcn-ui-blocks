@@ -76,12 +76,12 @@ const data: Payment[] = [
   },
 ];
 
-export type Payment = {
+export interface Payment {
   id: string;
   amount: number;
   status: "pending" | "processing" | "success" | "failed";
   email: string;
-};
+}
 
 export const columns: ColumnDef<Payment>[] = [
   {

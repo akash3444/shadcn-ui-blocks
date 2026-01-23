@@ -35,7 +35,9 @@ export const BlockCodeExplorer = () => {
 const CodeBlock = () => {
   const { block, codeHtml } = useBlockContext();
 
-  if (!block) return null;
+  if (!block) {
+    return null;
+  }
 
   return (
     <div className="relative h-full">

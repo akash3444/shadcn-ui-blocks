@@ -45,7 +45,9 @@ const BlockPage = async (props: { params: Promise<{ block: string }> }) => {
   const { block } = params;
 
   const blockDetails = registry.items.find((item) => item.name === block);
-  if (!blockDetails) notFound();
+  if (!blockDetails) {
+    notFound();
+  }
 
   const { title, description } = blockDetails;
 

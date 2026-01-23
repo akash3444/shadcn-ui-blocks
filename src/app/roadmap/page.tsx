@@ -68,12 +68,13 @@ const RoadmapPage = () => {
 };
 
 const TaskList = ({ tasks }: { tasks: Task[] }) => {
-  if (!tasks)
+  if (!tasks) {
     return (
       <p className="text-center font-medium text-muted-foreground">
         No tasks yet. Stay tuned!
       </p>
     );
+  }
 
   return (
     <ScrollArea className="lg:h-[600px]">

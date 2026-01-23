@@ -23,7 +23,9 @@ export const ThemeToggle = ({
     setMounted(true);
   }, []);
 
-  if (isBlockPreviewPage) return null;
+  if (isBlockPreviewPage) {
+    return null;
+  }
 
   // To avoid flickering
   if (!mounted) {

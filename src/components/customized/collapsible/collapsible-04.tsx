@@ -18,7 +18,10 @@ import { Input } from "@/registry/ui/input";
 import { Label } from "@/registry/ui/label";
 import { Slider } from "@/registry/ui/slider";
 
-type PriceRange = { from: number; to: number };
+interface PriceRange {
+  from: number;
+  to: number;
+}
 
 const CollapsibleFilters = () => {
   return (
