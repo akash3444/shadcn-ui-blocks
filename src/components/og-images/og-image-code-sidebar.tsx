@@ -20,10 +20,10 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { useBlockContext } from "@/providers/block-provider";
+import { useOGImageContext } from "@/providers/og-image-provider";
 
-export const BlockCodeSidebar = () => {
-  const { fileTree } = useBlockContext();
+export const OGImageCodeSidebar = () => {
+  const { fileTree } = useOGImageContext();
 
   if (!fileTree) {
     return null;
@@ -73,7 +73,7 @@ function Tree({ tree }: { tree: ReturnType<typeof pathToTree> }) {
 }
 
 function TreeItem({ item }: { item: NodeItem<unknown> | TreeNode<unknown> }) {
-  const { activeFile, selectFile, isLoadingCode } = useBlockContext();
+  const { activeFile, selectFile, isLoadingCode } = useOGImageContext();
 
   // File
   if ("filename" in item) {

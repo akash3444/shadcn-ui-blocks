@@ -1,12 +1,12 @@
 "use client";
 
 import { File } from "lucide-react";
-import { useBlockContext } from "@/providers/block-provider";
+import { useOGImageContext } from "@/providers/og-image-provider";
 import { CopyButton } from "../copy-button";
-import { BlockCodeSidebar } from "./block-code-sidebar";
+import { OGImageCodeSidebar } from "./og-image-code-sidebar";
 
-export const BlockCodeExplorer = () => {
-  const { activeFile, code } = useBlockContext();
+export const OGImageCodeExplorer = () => {
+  const { activeFile, code } = useOGImageContext();
 
   return (
     <div className="flex divide-x overflow-hidden rounded-lg border">
@@ -15,7 +15,7 @@ export const BlockCodeExplorer = () => {
           Explorer
         </div>
         <div className="w-full">
-          <BlockCodeSidebar />
+          <OGImageCodeSidebar />
         </div>
       </div>
       <div className="flex min-w-0 flex-1 flex-col">
@@ -33,9 +33,9 @@ export const BlockCodeExplorer = () => {
 };
 
 const CodeBlock = () => {
-  const { block, codeHtml } = useBlockContext();
+  const { registryItem, codeHtml } = useOGImageContext();
 
-  if (!block) {
+  if (!registryItem) {
     return null;
   }
 
