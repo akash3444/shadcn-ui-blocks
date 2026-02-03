@@ -6,7 +6,7 @@ function OpengraphImagesLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navbar className="max-w-7xl border-border border-x px-4" />
-      <main>{children}</main>
+      <main className="bg-muted/60">{children}</main>
       <Footer />
     </>
   );

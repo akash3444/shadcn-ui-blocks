@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 // Image metadata
-export const alt = "Shadcn UI Blocks";
+export const alt = "animations.dev";
 export const size = {
   width: 1200,
   height: 630,
@@ -20,8 +20,19 @@ export default async function Image() {
 
   return new ImageResponse(
     // ImageResponse JSX element
-    <div tw="h-full w-full flex items-center justify-center text-8xl text-center leading-[1.2] tracking-tighter p-20 bg-white">
-      Beautifully Designed Shadcn UI Blocks
+    <div tw="relative h-full w-full flex bg-white items-center p-20 justify-center text-center">
+      {/* Logo */}
+      <div tw="flex flex-col items-center">
+        <img
+          alt="animations.dev"
+          height={90}
+          src="https://www.google.com/s2/favicons?domain=animations.dev&sz=256"
+          width={90}
+        />
+        <span tw="mt-12 text-7xl font-medium tracking-tighter">
+          animations.dev
+        </span>
+      </div>
     </div>,
     // ImageResponse options
     {

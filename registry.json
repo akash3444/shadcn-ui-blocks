@@ -5393,6 +5393,30 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "og-01",
+      "type": "registry:component",
+      "title": "OG Image 01",
+      "description": "A simple centered text on white",
+      "files": [
+        {
+          "path": "src/registry/og-images/og-01/opengraph-image.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "og-02",
+      "type": "registry:component",
+      "title": "OG Image 02",
+      "description": "With logo, title and description",
+      "files": [
+        {
+          "path": "src/registry/og-images/og-02/opengraph-image.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
