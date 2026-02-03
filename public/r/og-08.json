@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "og-08",
+  "type": "registry:item",
+  "title": "OG Image 08",
+  "description": "With title, logo, description and author image",
+  "files": [
+    {
+      "path": "src/registry/og-images/og-08/route.tsx",
+      "content": "import { ImageResponse } from \"next/og\";\n\nexport const runtime = \"edge\";\n\nconst interMedium = fetch(\n  new URL(\"../../../assets/fonts/Inter-Medium.ttf\", import.meta.url)\n).then((res) => res.arrayBuffer());\n\nconst interRegular = fetch(\n  new URL(\"../../../assets/fonts/Inter-Regular.ttf\", import.meta.url)\n).then((res) => res.arrayBuffer());\n\nexport async function GET() {\n  const [fontMedium, fontRegular] = await Promise.all([\n    interMedium,\n    interRegular,\n  ]);\n\n  return new ImageResponse(\n    <div tw=\"relative h-full w-full flex flex-col px-20 py-10 bg-white\">\n      <h1 tw=\"text-6xl leading-[1.2] tracking-tighter max-w-2xl\">\n        Beautifully Designed Shadcn UI Blocks\n      </h1>\n      <p tw=\"mt-0 text-2xl text-neutral-500 max-w-2xl leading-relaxed\">\n        Shadcn UI Blocks is a collection of beautifully designed block and\n        components for your next project.\n      </p>\n\n      {/* Footer */}\n      <div tw=\"mt-auto flex items-center justify-between\">\n        {/* Logo */}\n        <div tw=\"flex items-center\">\n          <div tw=\"bg-gray-800 flex text-white h-9 w-9 items-center justify-center rounded-lg\">\n            <svg\n              fill=\"none\"\n              height={30}\n              stroke=\"currentColor\"\n              strokeLinecap=\"round\"\n              strokeLinejoin=\"round\"\n              strokeWidth=\"2\"\n              viewBox=\"0 0 24 24\"\n              width={30}\n              xmlns=\"http://www.w3.org/2000/svg\"\n            >\n              <circle cx=\"12\" cy=\"12\" r=\"10\" />\n              <path d=\"m14.31 8 5.74 9.94\" />\n              <path d=\"M9.69 8h11.48\" />\n              <path d=\"m7.38 12 5.74-9.94\" />\n              <path d=\"M9.69 16 3.95 6.06\" />\n              <path d=\"M14.31 16H2.83\" />\n              <path d=\"m16.62 12-5.74 9.94\" />\n            </svg>\n          </div>\n          <span tw=\"ml-4 text-xl font-medium\">Shadcn UI Blocks</span>\n        </div>\n\n        {/* Made with love by */}\n        <div tw=\"flex items-center text-neutral-600\">\n          Made with love by{\" \"}\n          <img\n            alt=\"Akash Moradiya\"\n            height={40}\n            src=\"https://github.com/akash3444.png\"\n            tw=\"ml-3 rounded-full border border-gray-300\"\n            width={40}\n          />\n        </div>\n      </div>\n    </div>,\n    {\n      width: 1200,\n      height: 630,\n      fonts: [\n        {\n          name: \"Inter\",\n          data: fontMedium,\n          style: \"normal\",\n          weight: 500,\n        },\n        {\n          name: \"Inter\",\n          data: fontRegular,\n          style: \"normal\",\n          weight: 400,\n        },\n      ],\n    }\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/api/og/og-08/route.tsx"
+    }
+  ]
+}

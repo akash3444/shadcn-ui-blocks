@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "og-26",
+  "type": "registry:item",
+  "title": "OG Image 26",
+  "description": "With image on the right",
+  "files": [
+    {
+      "path": "src/registry/og-images/og-26/route.tsx",
+      "content": "import { ImageResponse } from \"next/og\";\n\nexport const runtime = \"edge\";\n\nconst interMedium = fetch(\n  new URL(\"../../../assets/fonts/Inter-Medium.ttf\", import.meta.url)\n).then((res) => res.arrayBuffer());\n\nexport async function GET() {\n  const fontData = await interMedium;\n\n  return new ImageResponse(\n    <div tw=\"relative h-full w-full flex bg-white items-center p-20 justify-center text-center\">\n      {/* Logo */}\n      <div tw=\"flex flex-col items-center\">\n        <img\n          alt=\"animations.dev\"\n          height={90}\n          src=\"https://www.google.com/s2/favicons?domain=animations.dev&sz=256\"\n          width={90}\n        />\n        <span tw=\"mt-12 text-7xl font-medium tracking-tighter\">\n          animations.dev\n        </span>\n      </div>\n    </div>,\n    {\n      width: 1200,\n      height: 630,\n      fonts: [\n        {\n          name: \"Inter\",\n          data: fontData,\n          style: \"normal\",\n          weight: 500,\n        },\n      ],\n    }\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/api/og/og-26/route.tsx"
+    }
+  ]
+}
