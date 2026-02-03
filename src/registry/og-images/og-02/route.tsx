@@ -10,16 +10,28 @@ const interRegular = fetch(
   new URL("../../../assets/fonts/Inter-Regular.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const [fontMedium, fontRegular] = await Promise.all([
     interMedium,
     interRegular,
   ]);
 
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
+
   return new ImageResponse(
-    <div tw="h-full w-full flex flex-col items-center justify-center bg-white">
+    <div
+      style={{
+        color: mode === "dark" ? "#fff" : "#000",
+        background: mode === "dark" ? "#000" : "#fff",
+      }}
+      tw="h-full w-full flex flex-col items-center justify-center"
+    >
       <div tw="flex items-center">
-        <div tw="bg-neutral-800 flex text-white h-9 w-9 items-center justify-center rounded-lg">
+        <div
+          tw={`${mode === "dark" ? "bg-white" : "bg-neutral-800"} flex ${mode === "dark" ? "text-black" : "text-white"} h-9 w-9 items-center justify-center rounded-lg`}
+        >
           <svg
             fill="none"
             height={30}
@@ -47,7 +59,9 @@ export async function GET() {
         Beautifully Designed Shadcn UI Blocks
       </h1>
 
-      <p tw="mt-4 text-center text-2xl text-neutral-500 max-w-2xl mx-auto leading-relaxed">
+      <p
+        tw={`mt-4 text-center text-2xl ${mode === "dark" ? "text-neutral-400" : "text-neutral-500"} max-w-2xl mx-auto leading-relaxed`}
+      >
         Shadcn UI Blocks is a collection of beautifully designed block and
         components for your next project.
       </p>

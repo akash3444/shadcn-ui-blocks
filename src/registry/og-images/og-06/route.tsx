@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -10,20 +11,29 @@ const interRegular = fetch(
   new URL("../../../assets/fonts/Inter-Regular.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const [fontMedium, fontRegular] = await Promise.all([
     interMedium,
     interRegular,
   ]);
 
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
+
   return new ImageResponse(
-    <div tw="relative h-full w-full flex flex-col items-center justify-center px-20 bg-white">
+    <div
+      tw={cn(
+        "relative flex h-full w-full flex-col items-center justify-center px-20",
+        mode === "dark" ? "bg-neutral-900 text-white" : "bg-white text-black"
+      )}
+    >
       {/* Background pattern */}
       <div
         style={{
           backgroundImage: `
-        linear-gradient(to right, rgba(0, 0, 0, 0.06) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 1px, transparent 1px)
+        linear-gradient(to right, ${mode === "dark" ? "rgba(255, 255, 255, 0.06)" : "rgba(0, 0, 0, 0.06)"} 1px, transparent 1px),
+        linear-gradient(to bottom, ${mode === "dark" ? "rgba(255, 255, 255, 0.06)" : "rgba(0, 0, 0, 0.06)"} 1px, transparent 1px)
       `,
           backgroundSize: "32px 32px",
           WebkitMaskImage:
@@ -35,7 +45,14 @@ export async function GET() {
       />
 
       <div tw="flex items-center">
-        <div tw="bg-neutral-800 flex text-white h-9 w-9 items-center justify-center rounded-lg">
+        <div
+          tw={cn(
+            "flex h-9 w-9 items-center justify-center rounded-lg",
+            mode === "dark"
+              ? "bg-white text-black"
+              : "bg-neutral-800 text-white"
+          )}
+        >
           <svg
             fill="none"
             height={30}

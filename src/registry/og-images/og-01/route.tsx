@@ -6,11 +6,21 @@ const interMedium = fetch(
   new URL("../../../assets/fonts/Inter-Medium.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const fontData = await interMedium;
 
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
+
   return new ImageResponse(
-    <div tw="h-full w-full flex items-center justify-center text-8xl text-center leading-[1.2] tracking-tighter p-20 bg-white">
+    <div
+      style={{
+        color: mode === "dark" ? "#fff" : "#000",
+        background: mode === "dark" ? "#000" : "#fff",
+      }}
+      tw="h-full w-full flex items-center justify-center text-8xl text-center leading-[1.2] tracking-tighter p-20"
+    >
       Beautifully Designed Shadcn UI Blocks
     </div>,
     {

@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -6,19 +7,35 @@ const interMedium = fetch(
   new URL("../../../assets/fonts/Inter-Medium.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const fontData = await interMedium;
+
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
 
   return new ImageResponse(
     <div
       style={{
         background:
-          "radial-gradient(125% 125% at 50% 10%, #fff 40%, #6366f1 100%)",
+          mode === "dark"
+            ? "radial-gradient(125% 125% at 50% 10%, rgba(0, 0, 0, 0.95) 40%, #6366f1 100%)"
+            : "radial-gradient(125% 125% at 50% 10%, #fff 40%, #6366f1 100%)",
       }}
-      tw="relative h-full w-full flex flex-col items-center px-20 pt-20"
+      tw={cn(
+        "relative flex h-full w-full flex-col items-center px-20 pt-20",
+        mode === "dark" ? "text-white" : "text-black"
+      )}
     >
       <div tw="flex items-center gap-x-6">
-        <div tw="bg-neutral-800 flex text-white h-9 w-9 items-center justify-center rounded-lg">
+        <div
+          tw={cn(
+            "flex h-9 w-9 items-center justify-center rounded-lg",
+            mode === "dark"
+              ? "bg-white text-black"
+              : "bg-neutral-800 text-white"
+          )}
+        >
           <svg
             fill="none"
             height={30}

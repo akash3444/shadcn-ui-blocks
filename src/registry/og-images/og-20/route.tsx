@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -6,15 +7,26 @@ const interMedium = fetch(
   new URL("../../../assets/fonts/Inter-Medium.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const fontData = await interMedium;
 
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
+
   return new ImageResponse(
-    <div tw="relative h-full w-full flex bg-white">
+    <div
+      tw={cn(
+        "relative flex h-full w-full",
+        mode === "dark" ? "bg-neutral-900 text-white" : "bg-white text-black"
+      )}
+    >
       <div
         style={{
           backgroundImage:
-            "repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)",
+            mode === "dark"
+              ? "repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(255, 255, 255, 0.08) 19px, rgba(255, 255, 255, 0.08) 20px, transparent 20px, transparent 39px, rgba(255, 255, 255, 0.08) 39px, rgba(255, 255, 255, 0.08) 40px),repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(255, 255, 255, 0.08) 19px, rgba(255, 255, 255, 0.08) 20px, transparent 20px, transparent 39px, rgba(255, 255, 255, 0.08) 39px, rgba(255, 255, 255, 0.08) 40px),radial-gradient(circle at 20px 20px, rgba(255, 255, 255, 0.12) 2px, transparent 2px),radial-gradient(circle at 40px 40px, rgba(255, 255, 255, 0.12) 2px, transparent 2px)"
+              : "repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)",
           backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
           maskImage:
             "radial-gradient(ellipse 60% 60% at 50% 50%, transparent 30%, #000 70%)",

@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -10,14 +11,23 @@ const interRegular = fetch(
   new URL("../../../assets/fonts/Inter-Regular.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const [fontMedium, fontRegular] = await Promise.all([
     interMedium,
     interRegular,
   ]);
 
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
+
   return new ImageResponse(
-    <div tw="relative h-full w-full flex flex-col p-20 bg-white">
+    <div
+      tw={cn(
+        "relative flex h-full w-full flex-col p-20",
+        mode === "dark" ? "bg-neutral-900 text-white" : "bg-white text-black"
+      )}
+    >
       {/* Logo */}
       <div tw="flex items-center">
         <div tw="flex text-white h-9 w-9 items-center justify-center rounded-lg">

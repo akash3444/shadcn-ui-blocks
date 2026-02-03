@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -10,19 +11,28 @@ const interRegular = fetch(
   new URL("../../../assets/fonts/Inter-Regular.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const [fontMedium, fontRegular] = await Promise.all([
     interMedium,
     interRegular,
   ]);
 
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
+
   return new ImageResponse(
     <div
       style={{
         background:
-          "linear-gradient(to top right, #fff 0%, #fefce8 70%, #fef9c3 100%)",
+          mode === "dark"
+            ? "linear-gradient(to top right, #000000 0%, #191700 40%, #fce91d 100%)"
+            : "linear-gradient(to top right, #fff 0%, #fefce8 70%, #fef9c3 100%)",
       }}
-      tw="relative h-full w-full flex flex-col p-20"
+      tw={cn(
+        "relative flex h-full w-full flex-col p-20",
+        mode === "dark" ? "text-white" : "text-black"
+      )}
     >
       {/* Logo */}
       <div tw="flex items-center">
@@ -42,7 +52,10 @@ export async function GET() {
           backgroundColor: "rgba(234, 179, 8, 0.15)",
           border: "1px solid rgba(234, 179, 8, 0.15)",
         }}
-        tw="mt-auto mr-auto text-gray-800 py-2 px-4 rounded-full"
+        tw={cn(
+          "mt-auto mr-auto rounded-full px-4 py-2",
+          mode === "dark" ? "text-yellow-50" : "text-neutral-800"
+        )}
       >
         Animation Theory
       </div>
@@ -52,8 +65,10 @@ export async function GET() {
       </h1>
       {/* Description */}
       <p
-        style={{ color: "rgba(66, 32, 6, 0.55)" }}
-        tw="my-0 text-3xl max-w-3xl tracking-tight leading-relaxed"
+        tw={cn(
+          "my-0 max-w-3xl text-3xl leading-relaxed tracking-tight",
+          mode === "dark" ? "text-neutral-400" : "text-[#422006]/55"
+        )}
       >
         Why some animations feel better than others.
       </p>

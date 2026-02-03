@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -10,20 +11,31 @@ const interRegular = fetch(
   new URL("../../../assets/fonts/Inter-Regular.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const [fontMedium, fontRegular] = await Promise.all([
     interMedium,
     interRegular,
   ]);
 
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
+
   return new ImageResponse(
-    <div tw="relative h-full w-full flex flex-col items-center justify-center px-20">
+    <div
+      tw={cn(
+        "relative flex h-full w-full flex-col items-center justify-center px-20",
+        mode === "dark" ? "text-white" : "text-black"
+      )}
+    >
       {/* Background pattern */}
       <div
         style={{
-          background: "#ffffff",
+          background: mode === "dark" ? "#000" : "#fff",
           backgroundImage:
-            "radial-gradient(circle at top center,rgba(255, 140, 60, 0.3),transparent 70%)",
+            mode === "dark"
+              ? "radial-gradient(circle at top center,rgba(255, 140, 60, 0.6),transparent 70%)"
+              : "radial-gradient(circle at top center,rgba(255, 140, 60, 0.3),transparent 70%)",
           filter: "blur(80px)",
           backgroundRepeat: "no-repeat",
         }}
@@ -58,7 +70,12 @@ export async function GET() {
       <h1 tw="mt-8 text-6xl text-center leading-[1.2] tracking-tighter max-w-2xl mx-auto">
         Beautifully Designed Shadcn UI Blocks
       </h1>
-      <p tw="mt-4 text-center text-2xl text-neutral-500 max-w-2xl mx-auto leading-relaxed">
+      <p
+        tw={cn(
+          "mx-auto mt-4 max-w-2xl text-center text-2xl leading-relaxed",
+          mode === "dark" ? "text-neutral-400" : "text-neutral-500"
+        )}
+      >
         Shadcn UI Blocks is a collection of beautifully designed block and
         components for your next project.
       </p>

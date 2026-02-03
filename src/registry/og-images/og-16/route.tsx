@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -14,18 +15,30 @@ const geistMono = fetch(
   new URL("../../../assets/fonts/GeistMono-Regular.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const [fontMedium, fontRegular, fontGeistMono] = await Promise.all([
     interMedium,
     interRegular,
     geistMono,
   ]);
 
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
+
   return new ImageResponse(
-    <div tw="relative h-full w-full flex flex-col p-20 bg-white">
+    <div
+      tw={cn(
+        "relative flex h-full w-full flex-col p-20",
+        mode === "dark" ? "bg-neutral-900 text-white" : "bg-white text-black"
+      )}
+    >
       <span
         style={{ fontFamily: "Geist Mono" }}
-        tw="my-0 text-xl text-neutral-500 max-w-3xl leading-relaxed tracking-wider"
+        tw={cn(
+          "my-0 max-w-3xl text-xl leading-relaxed tracking-wider",
+          mode === "dark" ? "text-neutral-400" : "text-neutral-500"
+        )}
       >
         MODULE 01 - ANIMATION THEORY
       </span>
@@ -67,12 +80,26 @@ export async function GET() {
               <circle cx="12" cy="12" r="10" />
             </svg>
 
-            <span tw="ml-3 text-xl text-neutral-900">~4 min read</span>
+            <span
+              tw={cn(
+                "ml-3 text-xl",
+                mode === "dark" ? "text-neutral-400" : "text-neutral-900"
+              )}
+            >
+              ~4 min read
+            </span>
           </div>
         </div>
 
         {/* Logo */}
-        <div tw="flex items-center bg-neutral-100 rounded-xl py-2.5 px-4">
+        <div
+          tw={cn(
+            "flex items-center rounded-xl px-4 py-2.5",
+            mode === "dark"
+              ? "bg-neutral-800 text-white"
+              : "bg-neutral-100 text-black"
+          )}
+        >
           <img
             alt="animations.dev"
             height={36}

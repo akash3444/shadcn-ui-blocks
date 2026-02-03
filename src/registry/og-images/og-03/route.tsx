@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -6,11 +7,20 @@ const interMedium = fetch(
   new URL("../../../assets/fonts/Inter-Medium.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const fontData = await interMedium;
 
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
+
   return new ImageResponse(
-    <div tw="h-full w-full flex flex-col justify-center px-36 pt-14 bg-white">
+    <div
+      tw={cn(
+        "flex h-full w-full flex-col justify-center px-36 pt-14",
+        mode === "dark" ? "bg-neutral-900 text-white" : "bg-white text-black"
+      )}
+    >
       {/* Logo */}
       <div tw="flex items-center justify-center mb-8">
         <img
@@ -24,7 +34,12 @@ export async function GET() {
         </span>
       </div>
 
-      <div tw="mt-4 flex w-full grow rounded-t-xl border border-neutral-200 border-b-0">
+      <div
+        tw={cn(
+          "mt-4 flex w-full grow rounded-t-xl border border-neutral-200 border-b-0",
+          mode === "dark" ? "border-neutral-500" : "border-neutral-200"
+        )}
+      >
         <img
           alt="Shadcn UI Blocks"
           src="http://localhost:3000/images/og/03.png"

@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -14,24 +15,41 @@ const geistMono = fetch(
   new URL("../../../assets/fonts/GeistMono-Regular.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const [fontMedium, fontRegular, fontGeistMono] = await Promise.all([
     interMedium,
     interRegular,
     geistMono,
   ]);
 
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
+
   return new ImageResponse(
-    <div tw="relative h-full w-full flex bg-white">
-      <div tw="flex absolute top-0 right-0 w-120 h-74 border border-t-0 border-r-0 border-neutral-200 bg-neutral-50 rounded-bl-3xl">
+    <div
+      tw={cn(
+        "relative flex h-full w-full",
+        mode === "dark" ? "bg-neutral-900 text-white" : "bg-white text-black"
+      )}
+    >
+      <div
+        tw={cn(
+          "absolute top-0 right-0 flex h-74 w-120 rounded-bl-3xl border border-t-0 border-r-0",
+          mode === "dark"
+            ? "border-neutral-800 bg-neutral-800"
+            : "border-neutral-200 bg-neutral-50"
+        )}
+      >
         <img
           alt="animations.dev"
           height="100%"
           src="https://animations.dev/_next/image?url=%2Fthumbnails%2Fwhat-makes-it-feel-right.png&w=1080&q=75"
           style={{
             maskImage:
-              "linear-gradient(to bottom, black 0%, black 70%, transparent 100%)",
+              "linear-gradient(to bottom, #000000 0%, #000000 70%, transparent 100%)",
           }}
+          tw="rounded-bl-3xl"
           width="100%"
         />
       </div>
@@ -80,12 +98,26 @@ export async function GET() {
                 <circle cx="12" cy="12" r="10" />
               </svg>
 
-              <span tw="ml-3 text-xl text-neutral-900">~4 min read</span>
+              <span
+                tw={cn(
+                  "ml-3 text-xl",
+                  mode === "dark" ? "text-neutral-400" : "text-neutral-900"
+                )}
+              >
+                ~4 min read
+              </span>
             </div>
           </div>
 
           {/* Logo */}
-          <div tw="flex items-center bg-neutral-100 rounded-xl py-2.5 px-4">
+          <div
+            tw={cn(
+              "flex items-center rounded-xl px-4 py-2.5",
+              mode === "dark"
+                ? "bg-neutral-800 text-white"
+                : "bg-neutral-100 text-black"
+            )}
+          >
             <img
               alt="animations.dev"
               height={36}

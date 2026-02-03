@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -6,11 +7,20 @@ const interMedium = fetch(
   new URL("../../../assets/fonts/Inter-Medium.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const fontData = await interMedium;
 
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
+
   return new ImageResponse(
-    <div tw="relative h-full w-full flex flex-col bg-white items-center p-20 justify-center text-center">
+    <div
+      tw={cn(
+        "relative flex h-full w-full flex-col items-center justify-center p-20 text-center",
+        mode === "dark" ? "bg-neutral-900 text-white" : "bg-white text-black"
+      )}
+    >
       {/* Logo */}
       <div tw="flex items-center">
         <img
@@ -25,7 +35,12 @@ export async function GET() {
       </div>
 
       {/* Title */}
-      <h1 tw="mt-12 text-4xl leading-[1.25] tracking-tighter max-w-3xl text-neutral-400">
+      <h1
+        tw={cn(
+          "mt-12 max-w-3xl text-4xl leading-[1.25] tracking-tighter",
+          mode === "dark" ? "text-neutral-500" : "text-neutral-400"
+        )}
+      >
         Learn the theory and practice behind great animations with the
         interactive learning experience.
       </h1>

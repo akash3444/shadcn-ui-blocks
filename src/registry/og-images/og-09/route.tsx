@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -6,11 +7,20 @@ const interMedium = fetch(
   new URL("../../../assets/fonts/Inter-Medium.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const fontData = await interMedium;
 
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
+
   return new ImageResponse(
-    <div tw="relative h-full w-full flex flex-col bg-white">
+    <div
+      tw={cn(
+        "relative flex h-full w-full flex-col",
+        mode === "dark" ? "bg-neutral-900 text-white" : "bg-white text-black"
+      )}
+    >
       {/* Spill Pattern */}
       <svg
         version="1.1"
@@ -20,9 +30,17 @@ export async function GET() {
         xmlnsSvgjs="http://svgjs.dev/svgjs"
         xmlnsXlink="http://www.w3.org/1999/xlink"
       >
-        <rect fill="hsl(0, 0%, 100%)" height="100%" width="100%" />
-        <g fill="#000">
-          <rect fill="#000" height="40" width="100%" />
+        <rect
+          fill={mode === "dark" ? "hsl(0, 0%, 10%)" : "hsl(0, 0%, 100%)"}
+          height="100%"
+          width="100%"
+        />
+        <g fill={mode === "dark" ? "#fff" : "#000"}>
+          <rect
+            fill={mode === "dark" ? "#fff" : "#000"}
+            height="40"
+            width="100%"
+          />
 
           <rect height="61.06339057750892" rx="20" width="11.1111%" x="0" />
           <rect
@@ -50,7 +68,7 @@ export async function GET() {
             x="88.8888888888%"
           />
         </g>
-        <g fill="hsl(0, 0%, 100%)">
+        <g fill={mode === "dark" ? "hsl(0, 0%, 10%)" : "hsl(0, 0%, 100%)"}>
           <rect
             height="60"
             rx="20"

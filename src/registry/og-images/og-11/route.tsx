@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -10,14 +11,23 @@ const interRegular = fetch(
   new URL("../../../assets/fonts/Inter-Regular.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const [fontMedium, fontRegular] = await Promise.all([
     interMedium,
     interRegular,
   ]);
 
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
+
   return new ImageResponse(
-    <div tw="relative h-full w-full flex items-center p-10 bg-white">
+    <div
+      tw={cn(
+        "relative flex h-full w-full items-center p-10",
+        mode === "dark" ? "bg-neutral-900 text-white" : "bg-white text-black"
+      )}
+    >
       <div tw="flex flex-col">
         <div tw="flex items-center">
           <div tw="bg-neutral-800 flex text-white h-9 w-9 items-center justify-center rounded-lg">
@@ -47,7 +57,12 @@ export async function GET() {
         <h1 tw="mt-8 text-6xl leading-[1.2] tracking-tighter max-w-xl">
           Beautifully Designed Shadcn UI Blocks
         </h1>
-        <p tw="my-0 text-2xl text-neutral-500 max-w-xl leading-relaxed">
+        <p
+          tw={cn(
+            "my-0 max-w-xl text-2xl leading-relaxed",
+            mode === "dark" ? "text-neutral-400" : "text-neutral-500"
+          )}
+        >
           Shadcn UI Blocks is a collection of beautifully designed block and
           components for your next project.
         </p>
