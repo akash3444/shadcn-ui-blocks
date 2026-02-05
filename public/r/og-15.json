@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "og-15",
+  "type": "registry:item",
+  "title": "OG Image 15",
+  "description": "With image on the right",
+  "files": [
+    {
+      "path": "src/registry/og-images/og-15/route.tsx",
+      "content": "import { ImageResponse } from \"next/og\";\nimport { cn } from \"@/lib/utils\";\n\nexport const runtime = \"edge\";\n\nconst interMedium = fetch(\n  new URL(\"../../../assets/fonts/Inter-Medium.ttf\", import.meta.url)\n).then((res) => res.arrayBuffer());\n\nconst interRegular = fetch(\n  new URL(\"../../../assets/fonts/Inter-Regular.ttf\", import.meta.url)\n).then((res) => res.arrayBuffer());\n\nexport async function GET(req: Request) {\n  const [fontMedium, fontRegular] = await Promise.all([\n    interMedium,\n    interRegular,\n  ]);\n\n  const url = new URL(req.url);\n  const values = Object.fromEntries(url.searchParams);\n  const mode = (values.mode || \"light\") as \"dark\" | \"light\";\n\n  return new ImageResponse(\n    <div\n      style={{\n        background:\n          mode === \"dark\"\n            ? \"linear-gradient(to top right, #000000 0%, #191700 40%, #fce91d 100%)\"\n            : \"linear-gradient(to top right, #fff 0%, #fefce8 70%, #fef9c3 100%)\",\n      }}\n      tw={cn(\n        \"relative flex h-full w-full flex-col p-20\",\n        mode === \"dark\" ? \"text-white\" : \"text-black\"\n      )}\n    >\n      {/* Logo */}\n      <div tw=\"flex items-center\">\n        <div tw=\"flex text-white h-9 w-9 items-center justify-center rounded-lg\">\n          <img\n            alt=\"animations.dev\"\n            height={36}\n            src=\"https://www.google.com/s2/favicons?domain=animations.dev&sz=64\"\n            width={36}\n          />\n        </div>\n        <span tw=\"ml-4 text-2xl font-medium\">animations.dev</span>\n      </div>\n\n      <div\n        style={{\n          backgroundColor: \"rgba(234, 179, 8, 0.15)\",\n          border: \"1px solid rgba(234, 179, 8, 0.15)\",\n        }}\n        tw={cn(\n          \"mt-auto mr-auto rounded-full px-4 py-2\",\n          mode === \"dark\" ? \"text-yellow-50\" : \"text-neutral-800\"\n        )}\n      >\n        Animation Theory\n      </div>\n      {/* Title */}\n      <h1 tw=\"text-7xl leading-[1.2] tracking-tighter max-w-3xl\">\n        What makes an animation feel right\n      </h1>\n      {/* Description */}\n      <p\n        tw={cn(\n          \"my-0 max-w-3xl text-3xl leading-relaxed tracking-tight\",\n          mode === \"dark\" ? \"text-neutral-400\" : \"text-[#422006]/55\"\n        )}\n      >\n        Why some animations feel better than others.\n      </p>\n    </div>,\n    {\n      width: 1200,\n      height: 630,\n      fonts: [\n        {\n          name: \"Inter\",\n          data: fontMedium,\n          style: \"normal\",\n          weight: 500,\n        },\n        {\n          name: \"Inter\",\n          data: fontRegular,\n          style: \"normal\",\n          weight: 400,\n        },\n      ],\n    }\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/api/og/og-15/route.tsx"
+    }
+  ]
+}

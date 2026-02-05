@@ -36,7 +36,7 @@ const BlockPreviewPage = async (props: {
 
   const blockDetails = blocks.find((b) => b.name === block);
 
-  if (!(blockDetails && blockDetails.component)) {
+  if (!blockDetails?.component) {
     notFound();
   }
 

@@ -1,0 +1,102 @@
+import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
+
+export const runtime = "edge";
+
+const interMedium = fetch(
+  new URL("../../../assets/fonts/Inter-Medium.ttf", import.meta.url)
+).then((res) => res.arrayBuffer());
+
+const interRegular = fetch(
+  new URL("../../../assets/fonts/Inter-Regular.ttf", import.meta.url)
+).then((res) => res.arrayBuffer());
+
+export async function GET(req: Request) {
+  const [fontMedium, fontRegular] = await Promise.all([
+    interMedium,
+    interRegular,
+  ]);
+
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
+
+  return new ImageResponse(
+    <div
+      tw={cn(
+        "relative flex h-full w-full flex-col items-center justify-center px-20",
+        mode === "dark" ? "text-white" : "text-black"
+      )}
+    >
+      {/* Background pattern */}
+      <div
+        style={{
+          background: mode === "dark" ? "#000" : "#fff",
+          backgroundImage:
+            mode === "dark"
+              ? "radial-gradient(circle at top center,rgba(255, 140, 60, 0.6),transparent 70%)"
+              : "radial-gradient(circle at top center,rgba(255, 140, 60, 0.3),transparent 70%)",
+          filter: "blur(80px)",
+          backgroundRepeat: "no-repeat",
+        }}
+        tw="absolute inset-0 z-0"
+      />
+
+      <div tw="flex items-center">
+        <div tw="bg-neutral-800 flex text-white h-9 w-9 items-center justify-center rounded-lg">
+          <svg
+            fill="none"
+            height={30}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={30}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="m14.31 8 5.74 9.94" />
+            <path d="M9.69 8h11.48" />
+            <path d="m7.38 12 5.74-9.94" />
+            <path d="M9.69 16 3.95 6.06" />
+            <path d="M14.31 16H2.83" />
+            <path d="m16.62 12-5.74 9.94" />
+          </svg>
+        </div>
+        <span tw="ml-4 text-xl font-medium">Shadcn UI Blocks</span>
+      </div>
+
+      <h1 tw="mt-8 text-6xl text-center leading-[1.2] tracking-tighter max-w-2xl mx-auto">
+        Beautifully Designed Shadcn UI Blocks
+      </h1>
+      <p
+        tw={cn(
+          "mx-auto mt-4 max-w-2xl text-center text-2xl leading-relaxed",
+          mode === "dark" ? "text-neutral-400" : "text-neutral-500"
+        )}
+      >
+        Shadcn UI Blocks is a collection of beautifully designed block and
+        components for your next project.
+      </p>
+    </div>,
+    {
+      width: 1200,
+      height: 630,
+      fonts: [
+        {
+          name: "Inter",
+          data: fontMedium,
+          style: "normal",
+          weight: 500,
+        },
+        {
+          name: "Inter",
+          data: fontRegular,
+          style: "normal",
+          weight: 400,
+        },
+      ],
+    }
+  );
+}

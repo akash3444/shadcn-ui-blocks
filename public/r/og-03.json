@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "og-03",
+  "type": "registry:item",
+  "title": "OG Image 03",
+  "description": "With title and image",
+  "files": [
+    {
+      "path": "src/registry/og-images/og-03/route.tsx",
+      "content": "import { ImageResponse } from \"next/og\";\nimport { cn } from \"@/lib/utils\";\n\nexport const runtime = \"edge\";\n\nconst interMedium = fetch(\n  new URL(\"../../../assets/fonts/Inter-Medium.ttf\", import.meta.url)\n).then((res) => res.arrayBuffer());\n\nexport async function GET(req: Request) {\n  const fontData = await interMedium;\n\n  const url = new URL(req.url);\n  const values = Object.fromEntries(url.searchParams);\n  const mode = (values.mode || \"light\") as \"dark\" | \"light\";\n\n  return new ImageResponse(\n    <div\n      tw={cn(\n        \"flex h-full w-full flex-col justify-center px-36 pt-14\",\n        mode === \"dark\" ? \"bg-neutral-900 text-white\" : \"bg-white text-black\"\n      )}\n    >\n      {/* Logo */}\n      <div tw=\"flex items-center justify-center mb-8\">\n        <img\n          alt=\"animations.dev\"\n          height={60}\n          src=\"https://www.google.com/s2/favicons?domain=animations.dev&sz=256\"\n          width={60}\n        />\n        <span tw=\"ml-10 text-6xl font-medium tracking-tighter\">\n          animations.dev\n        </span>\n      </div>\n\n      <div\n        tw={cn(\n          \"mt-4 flex w-full grow rounded-t-xl border border-neutral-200 border-b-0\",\n          mode === \"dark\" ? \"border-neutral-500\" : \"border-neutral-200\"\n        )}\n      >\n        <img\n          alt=\"Shadcn UI Blocks\"\n          src=\"http://localhost:3000/images/og/03.png\"\n          style={{ objectFit: \"cover\" }}\n          tw=\"h-full w-full rounded-t-xl\"\n        />\n      </div>\n    </div>,\n    {\n      width: 1200,\n      height: 630,\n      fonts: [\n        {\n          name: \"Inter\",\n          data: fontData,\n          style: \"normal\",\n          weight: 500,\n        },\n      ],\n    }\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/api/og/og-03/route.tsx"
+    }
+  ]
+}

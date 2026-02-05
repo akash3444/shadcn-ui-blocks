@@ -63,6 +63,13 @@ export function NavigationSheet() {
             >
               Templates
             </Link>
+            <Link
+              className="block"
+              href="/opengraph-images"
+              onClick={() => setOpen(false)}
+            >
+              OG Images
+            </Link>
 
             <div className="border-t pt-4">
               <div className="mb-3 font-semibold">Version</div>

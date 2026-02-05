@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "og-21",
+  "type": "registry:item",
+  "title": "OG Image 21",
+  "description": "With image on the right",
+  "files": [
+    {
+      "path": "src/registry/og-images/og-21/route.tsx",
+      "content": "import { ImageResponse } from \"next/og\";\nimport { cn } from \"@/lib/utils\";\n\nexport const runtime = \"edge\";\n\nconst interRegular = fetch(\n  new URL(\"../../../assets/fonts/Inter-Regular.ttf\", import.meta.url)\n).then((res) => res.arrayBuffer());\n\nexport async function GET(req: Request) {\n  const fontData = await interRegular;\n\n  const url = new URL(req.url);\n  const values = Object.fromEntries(url.searchParams);\n  const mode = (values.mode || \"light\") as \"dark\" | \"light\";\n\n  return new ImageResponse(\n    <div\n      tw={cn(\n        \"relative flex h-full w-full\",\n        mode === \"dark\" ? \"bg-neutral-900 text-white\" : \"bg-white text-black\"\n      )}\n    >\n      <div tw=\"flex flex-col p-20 justify-center w-full\">\n        {/* Logo */}\n        <div tw=\"flex flex-col\">\n          <img\n            alt=\"ui.shadcn.com\"\n            height={90}\n            src=\"https://www.google.com/s2/favicons?domain=ui.shadcn.com&sz=128\"\n            width={90}\n          />\n          <h1\n            style={{ letterSpacing: \"-0.065em\" }}\n            tw=\"mt-12 text-[90px] font-medium max-w-4xl leading-[1.15]\"\n          >\n            The Foundation for your Design System\n          </h1>\n        </div>\n\n        {/* Title */}\n        <div tw=\"mt-6 text-4xl leading-[1.35] tracking-tighter max-w-3xl text-neutral-400\">\n          A set of beautifully designed components that you can customize,\n          extend, and build on.\n        </div>\n      </div>\n    </div>,\n    {\n      width: 1200,\n      height: 630,\n      fonts: [\n        {\n          name: \"Inter\",\n          data: fontData,\n          style: \"normal\",\n          weight: 400,\n        },\n      ],\n    }\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/api/og/og-21/route.tsx"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "og-01",
+  "type": "registry:item",
+  "title": "OG Image 01",
+  "description": "Simple centered text",
+  "files": [
+    {
+      "path": "src/registry/og-images/og-01/route.tsx",
+      "content": "import { ImageResponse } from \"next/og\";\n\nexport const runtime = \"edge\";\n\nconst interMedium = fetch(\n  new URL(\"../../../assets/fonts/Inter-Medium.ttf\", import.meta.url)\n).then((res) => res.arrayBuffer());\n\nexport async function GET(req: Request) {\n  const fontData = await interMedium;\n\n  const url = new URL(req.url);\n  const values = Object.fromEntries(url.searchParams);\n  const mode = (values.mode || \"light\") as \"dark\" | \"light\";\n\n  return new ImageResponse(\n    <div\n      style={{\n        color: mode === \"dark\" ? \"#fff\" : \"#000\",\n        background: mode === \"dark\" ? \"#000\" : \"#fff\",\n      }}\n      tw=\"h-full w-full flex items-center justify-center text-8xl text-center leading-[1.2] tracking-tighter p-20\"\n    >\n      Beautifully Designed Shadcn UI Blocks\n    </div>,\n    {\n      width: 1200,\n      height: 630,\n      fonts: [\n        {\n          name: \"Inter\",\n          data: fontData,\n          style: \"normal\",\n          weight: 500,\n        },\n      ],\n    }\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/api/og/og-01/route.tsx"
+    }
+  ]
+}

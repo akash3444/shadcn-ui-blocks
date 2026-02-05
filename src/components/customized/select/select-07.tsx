@@ -69,10 +69,10 @@ export default function SelectWithFormDemo() {
   );
 }
 
-type OptionType = {
+interface OptionType {
   id: string;
   name: string;
-};
+}
 
 type SelectWithFormProps<K> = {
   name: keyof K & string;

@@ -38,7 +38,7 @@ export const BlockInstallCommandCopyButton = ({ block }: { block: string }) => {
   return (
     <ButtonGroup>
       <Button
-        className="gap-2 text-sm"
+        className="gap-2 text-sm dark:border-background dark:border-e-foreground/15 dark:bg-background"
         onClick={copyInstallCommand}
         size="sm"
         variant="outline"
@@ -56,7 +56,11 @@ export const BlockInstallCommandCopyButton = ({ block }: { block: string }) => {
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className="w-7 px-1.5" size="icon-sm" variant="outline">
+          <Button
+            className="w-7 px-1.5 dark:border-background dark:bg-background"
+            size="icon-sm"
+            variant="outline"
+          >
             <ChevronDown className="size-3.5" />
             <span className="sr-only">Select package manager</span>
           </Button>

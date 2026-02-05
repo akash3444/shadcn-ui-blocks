@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "og-24",
+  "type": "registry:item",
+  "title": "OG Image 24",
+  "description": "With image on the right",
+  "files": [
+    {
+      "path": "src/registry/og-images/og-24/route.tsx",
+      "content": "import { ImageResponse } from \"next/og\";\nimport { cn } from \"@/lib/utils\";\n\nexport const runtime = \"edge\";\n\nconst interMedium = fetch(\n  new URL(\"../../../assets/fonts/Inter-Medium.ttf\", import.meta.url)\n).then((res) => res.arrayBuffer());\n\nexport async function GET(req: Request) {\n  const fontData = await interMedium;\n  const url = new URL(req.url);\n  const values = Object.fromEntries(url.searchParams);\n  const mode = (values.mode || \"light\") as \"dark\" | \"light\";\n\n  return new ImageResponse(\n    <div\n      tw={cn(\n        \"relative flex h-full w-full items-center justify-center p-20 text-center\",\n        mode === \"dark\" ? \"bg-neutral-900 text-white\" : \"bg-white text-black\"\n      )}\n    >\n      {/* Logo */}\n      <div tw=\"flex items-center\">\n        <img\n          alt=\"animations.dev\"\n          height={90}\n          src=\"https://www.google.com/s2/favicons?domain=animations.dev&sz=256\"\n          width={90}\n        />\n        <div\n          tw={cn(\n            \"mx-10 h-26 w-0.5\",\n            mode === \"dark\" ? \"bg-neutral-700\" : \"bg-neutral-200\"\n          )}\n        />\n        <span tw=\"text-7xl font-medium tracking-tighter\">animations.dev</span>\n      </div>\n    </div>,\n    {\n      width: 1200,\n      height: 630,\n      fonts: [\n        {\n          name: \"Inter\",\n          data: fontData,\n          style: \"normal\",\n          weight: 500,\n        },\n      ],\n    }\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/api/og/og-24/route.tsx"
+    }
+  ]
+}

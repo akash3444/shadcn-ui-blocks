@@ -34,7 +34,9 @@ const AvatarGroup = ({
         </Avatar>
       )}
       {displayedAvatars.map((avatar, index) => {
-        if (!React.isValidElement(avatar)) return null;
+        if (!React.isValidElement(avatar)) {
+          return null;
+        }
 
         return (
           <div className="relative -ml-2 hover:z-10" key={index}>

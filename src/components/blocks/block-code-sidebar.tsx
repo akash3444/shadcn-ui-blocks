@@ -25,7 +25,9 @@ import { useBlockContext } from "@/providers/block-provider";
 export const BlockCodeSidebar = () => {
   const { fileTree } = useBlockContext();
 
-  if (!fileTree) return null;
+  if (!fileTree) {
+    return null;
+  }
 
   return (
     <SidebarProvider

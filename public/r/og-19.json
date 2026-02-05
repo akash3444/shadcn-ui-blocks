@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "og-19",
+  "type": "registry:item",
+  "title": "OG Image 19",
+  "description": "With image on the right",
+  "files": [
+    {
+      "path": "src/registry/og-images/og-19/route.tsx",
+      "content": "import { ImageResponse } from \"next/og\";\nimport { cn } from \"@/lib/utils\";\n\nexport const runtime = \"edge\";\n\nconst interMedium = fetch(\n  new URL(\"../../../assets/fonts/Inter-Medium.ttf\", import.meta.url)\n).then((res) => res.arrayBuffer());\n\nexport async function GET(req: Request) {\n  const fontData = await interMedium;\n\n  const url = new URL(req.url);\n  const values = Object.fromEntries(url.searchParams);\n  const mode = (values.mode || \"light\") as \"dark\" | \"light\";\n\n  return new ImageResponse(\n    <div\n      tw={cn(\n        \"relative flex h-full w-full flex-col items-center justify-center p-20 text-center\",\n        mode === \"dark\" ? \"bg-neutral-900 text-white\" : \"bg-white text-black\"\n      )}\n    >\n      {/* Logo */}\n      <div tw=\"flex items-center\">\n        <img\n          alt=\"animations.dev\"\n          height={82}\n          src=\"https://www.google.com/s2/favicons?domain=animations.dev&sz=256\"\n          width={82}\n        />\n        <span tw=\"ml-8 text-6xl font-medium tracking-tighter\">\n          animations.dev\n        </span>\n      </div>\n\n      {/* Title */}\n      <h1\n        tw={cn(\n          \"mt-12 max-w-3xl text-4xl leading-[1.25] tracking-tighter\",\n          mode === \"dark\" ? \"text-neutral-500\" : \"text-neutral-400\"\n        )}\n      >\n        Learn the theory and practice behind great animations with the\n        interactive learning experience.\n      </h1>\n    </div>,\n    {\n      width: 1200,\n      height: 630,\n      fonts: [\n        {\n          name: \"Inter\",\n          data: fontData,\n          style: \"normal\",\n          weight: 500,\n        },\n      ],\n    }\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/api/og/og-19/route.tsx"
+    }
+  ]
+}

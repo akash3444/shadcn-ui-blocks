@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "og-28",
+  "type": "registry:item",
+  "title": "OG Image 28",
+  "description": "With image on the right",
+  "files": [
+    {
+      "path": "src/registry/og-images/og-28/route.tsx",
+      "content": "import { ImageResponse } from \"next/og\";\nimport { cn } from \"@/lib/utils\";\n\nexport const runtime = \"edge\";\n\nconst interMedium = fetch(\n  new URL(\"../../../assets/fonts/Inter-Medium.ttf\", import.meta.url)\n).then((res) => res.arrayBuffer());\n\nexport async function GET(req: Request) {\n  const fontData = await interMedium;\n  const url = new URL(req.url);\n  const values = Object.fromEntries(url.searchParams);\n  const mode = (values.mode || \"light\") as \"dark\" | \"light\";\n\n  return new ImageResponse(\n    <div\n      tw={cn(\n        \"relative flex h-full w-full\",\n        mode === \"dark\"\n          ? \"bg-neutral-900 text-white\"\n          : \"bg-neutral-50 text-black\"\n      )}\n    >\n      <div\n        style={{ transform: \"rotate(-36deg)\" }}\n        tw={cn(\n          \"absolute -inset-x-1/2 -inset-y-6 flex border p-2\",\n          mode === \"dark\"\n            ? \"border-neutral-700 bg-black\"\n            : \"border-neutral-200/70 bg-white\"\n        )}\n      >\n        <div\n          tw={cn(\n            \"h-full w-full border\",\n            mode === \"dark\"\n              ? \"border-neutral-700 bg-neutral-800\"\n              : \"border-neutral-200/50 bg-neutral-50\"\n          )}\n        />\n      </div>\n\n      <div tw=\"flex flex-col items-center p-20 justify-center text-center w-full\">\n        {/* Logo */}\n        <div tw=\"flex items-center\">\n          <img\n            alt=\"animations.dev\"\n            height={90}\n            src=\"https://www.google.com/s2/favicons?domain=animations.dev&sz=256\"\n            width={90}\n          />\n          <span tw=\"ml-12 text-7xl font-medium tracking-tighter\">\n            animations.dev\n          </span>\n        </div>\n      </div>\n    </div>,\n    {\n      width: 1200,\n      height: 630,\n      fonts: [\n        {\n          name: \"Inter\",\n          data: fontData,\n          style: \"normal\",\n          weight: 500,\n        },\n      ],\n    }\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/api/og/og-28/route.tsx"
+    }
+  ]
+}

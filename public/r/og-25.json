@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "og-25",
+  "type": "registry:item",
+  "title": "OG Image 25",
+  "description": "With image on the right",
+  "files": [
+    {
+      "path": "src/registry/og-images/og-25/route.tsx",
+      "content": "import { ImageResponse } from \"next/og\";\nimport { cn } from \"@/lib/utils\";\n\nexport const runtime = \"edge\";\n\nconst interMedium = fetch(\n  new URL(\"../../../assets/fonts/Inter-Medium.ttf\", import.meta.url)\n).then((res) => res.arrayBuffer());\n\nexport async function GET(req: Request) {\n  const fontData = await interMedium;\n  const url = new URL(req.url);\n  const values = Object.fromEntries(url.searchParams);\n  const mode = (values.mode || \"light\") as \"dark\" | \"light\";\n\n  return new ImageResponse(\n    <div\n      tw={cn(\n        \"relative flex h-full w-full\",\n        mode === \"dark\"\n          ? \"bg-neutral-900 text-white\"\n          : \"bg-neutral-50 text-black\"\n      )}\n    >\n      <div tw=\"flex flex-col items-center p-20 justify-center text-center w-full\">\n        {/* Logo */}\n        <div\n          tw={cn(\n            \"relative flex items-center border px-14 py-8 shadow-md\",\n            mode === \"dark\"\n              ? \"border-neutral-700 bg-neutral-800 shadow-black/60\"\n              : \"border-neutral-200 bg-white shadow-neutral-100\"\n          )}\n        >\n          <div\n            tw={cn(\n              \"absolute -inset-y-24 -left-px w-px\",\n              mode === \"dark\" ? \"bg-neutral-700\" : \"bg-neutral-200\"\n            )}\n          />\n          <div\n            tw={cn(\n              \"absolute -inset-y-24 -right-px w-px\",\n              mode === \"dark\" ? \"bg-neutral-700\" : \"bg-neutral-200\"\n            )}\n          />\n          <div\n            tw={cn(\n              \"absolute -inset-x-24 -top-px h-px\",\n              mode === \"dark\" ? \"bg-neutral-700\" : \"bg-neutral-200\"\n            )}\n          />\n          <div\n            tw={cn(\n              \"absolute -inset-x-24 -bottom-px h-px\",\n              mode === \"dark\" ? \"bg-neutral-700\" : \"bg-neutral-200\"\n            )}\n          />\n\n          <img\n            alt=\"animations.dev\"\n            height={86}\n            src=\"https://www.google.com/s2/favicons?domain=animations.dev&sz=256\"\n            width={86}\n          />\n          <span tw=\"ml-12 text-7xl font-medium tracking-tighter\">\n            animations.dev\n          </span>\n        </div>\n      </div>\n    </div>,\n    {\n      width: 1200,\n      height: 630,\n      fonts: [\n        {\n          name: \"Inter\",\n          data: fontData,\n          style: \"normal\",\n          weight: 500,\n        },\n      ],\n    }\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/api/og/og-25/route.tsx"
+    }
+  ]
+}
