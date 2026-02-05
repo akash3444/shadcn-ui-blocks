@@ -27,7 +27,6 @@ export async function GET(req: Request) {
         viewBox="0 0 325 100"
         width="1200px"
         xmlns="http://www.w3.org/2000/svg"
-        xmlnsSvgjs="http://svgjs.dev/svgjs"
         xmlnsXlink="http://www.w3.org/1999/xlink"
       >
         <rect
