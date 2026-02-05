@@ -21,6 +21,6 @@ export async function GET(req: Request) {
   }
 
   return await import(`@/registry/og-images/${id}/route`).then((module) => {
-    return module.GET(req)
+    return module.GET(req);
   });
 }

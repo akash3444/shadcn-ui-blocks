@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -6,14 +7,28 @@ const interMedium = fetch(
   new URL("../../../assets/fonts/Inter-Medium.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const fontData = await interMedium;
 
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
+
   return new ImageResponse(
-    <div tw="relative h-full w-full flex bg-white items-center p-20 justify-center text-center">
+    <div
+      tw={cn(
+        "relative flex h-full w-full items-center justify-center p-20 text-center",
+        mode === "dark" ? "bg-neutral-900 text-white" : "bg-white text-black"
+      )}
+    >
       {/* Logo */}
       <div tw="flex">
-        <div tw="flex bg-neutral-100 rounded-xl p-4">
+        <div
+          tw={cn(
+            "flex rounded-xl p-4",
+            mode === "dark" ? "bg-neutral-800" : "bg-neutral-100"
+          )}
+        >
           <img
             alt="animations.dev"
             height={90}
@@ -21,7 +36,12 @@ export async function GET() {
             width={90}
           />
         </div>
-        <div tw="ml-4 text-7xl flex items-center font-medium tracking-tighter bg-neutral-100 rounded-xl py-4 px-6">
+        <div
+          tw={cn(
+            "ml-4 flex items-center rounded-xl px-6 py-4 font-medium text-7xl tracking-tighter",
+            mode === "dark" ? "bg-neutral-800" : "bg-neutral-100"
+          )}
+        >
           animations.dev
         </div>
       </div>

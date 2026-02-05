@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -6,11 +7,19 @@ const interMedium = fetch(
   new URL("../../../assets/fonts/Inter-Medium.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const fontData = await interMedium;
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
 
   return new ImageResponse(
-    <div tw="h-full w-full flex flex-col justify-center px-36 pt-14 bg-white">
+    <div
+      tw={cn(
+        "flex h-full w-full flex-col justify-center px-36 pt-14",
+        mode === "dark" ? "bg-neutral-900 text-white" : "bg-white text-black"
+      )}
+    >
       {/* Logo */}
       <div tw="flex items-center justify-center mb-2">
         <img
@@ -24,12 +33,22 @@ export async function GET() {
         </span>
       </div>
 
-      <p tw="text-3xl text-neutral-500/80 text-center leading-[1.3] tracking-tight max-w-2xl mx-auto">
+      <p
+        tw={cn(
+          "mx-auto max-w-2xl text-center text-3xl leading-[1.3] tracking-tight",
+          mode === "dark" ? "text-neutral-400/80" : "text-neutral-500/80"
+        )}
+      >
         10,576 designers and engineers have improved their animation skills with
         this course.
       </p>
 
-      <div tw="mt-4 flex w-full grow rounded-t-xl border border-gray-200 border-b-0">
+      <div
+        tw={cn(
+          "mt-4 flex w-full grow rounded-t-xl border border-b-0",
+          mode === "dark" ? "border-neutral-700" : "border-gray-200"
+        )}
+      >
         <img
           alt="Shadcn UI Blocks"
           src="http://localhost:3000/images/og/03.png"

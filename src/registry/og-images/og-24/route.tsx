@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -6,11 +7,19 @@ const interMedium = fetch(
   new URL("../../../assets/fonts/Inter-Medium.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const fontData = await interMedium;
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
 
   return new ImageResponse(
-    <div tw="relative h-full w-full flex bg-white items-center p-20 justify-center text-center">
+    <div
+      tw={cn(
+        "relative flex h-full w-full items-center justify-center p-20 text-center",
+        mode === "dark" ? "bg-neutral-900 text-white" : "bg-white text-black"
+      )}
+    >
       {/* Logo */}
       <div tw="flex items-center">
         <img
@@ -19,7 +28,12 @@ export async function GET() {
           src="https://www.google.com/s2/favicons?domain=animations.dev&sz=256"
           width={90}
         />
-        <div tw="mx-10 h-26 w-0.5 bg-neutral-200" />
+        <div
+          tw={cn(
+            "mx-10 h-26 w-0.5",
+            mode === "dark" ? "bg-neutral-700" : "bg-neutral-200"
+          )}
+        />
         <span tw="text-7xl font-medium tracking-tighter">animations.dev</span>
       </div>
     </div>,

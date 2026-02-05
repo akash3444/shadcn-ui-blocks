@@ -1,5 +1,6 @@
 "use client";
 
+import { useTheme } from "next-themes";
 import {
   createContext,
   type ReactNode,
@@ -22,6 +23,8 @@ const OGImageContext = createContext<{
   fileTree: ReturnType<typeof pathToTree>;
   activeFile: string;
   selectFile: (file: string) => void;
+  mode: "dark" | "light";
+  toggleMode: () => void;
 } | null>(null);
 
 function getFileTreeForOgImage(registryItem: RegistryOgImage) {
@@ -36,7 +39,13 @@ export function OGImageContextProvider({
   children: ReactNode;
   name: string;
 }) {
+  const { resolvedTheme } = useTheme();
+  const [mode, setMode] = useState<"dark" | "light">("light");
   const registryItem = ogImages.find((item) => item.name === name) ?? null;
+
+  useEffect(() => {
+    setMode(resolvedTheme as "dark" | "light");
+  }, [resolvedTheme]);
 
   if (!registryItem) {
     throw new Error(`OG image not found: ${name}`);
@@ -72,6 +81,10 @@ export function OGImageContextProvider({
     updateCodeContent();
   }, [updateCodeContent]);
 
+  const toggleMode = useCallback(() => {
+    setMode((mode) => (mode === "dark" ? "light" : "dark"));
+  }, []);
+
   return (
     <OGImageContext.Provider
       value={{
@@ -82,6 +95,8 @@ export function OGImageContextProvider({
         fileTree,
         activeFile,
         selectFile: setActiveFile,
+        mode,
+        toggleMode,
       }}
     >
       {children}

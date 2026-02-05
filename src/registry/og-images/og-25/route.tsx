@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -6,18 +7,55 @@ const interMedium = fetch(
   new URL("../../../assets/fonts/Inter-Medium.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const fontData = await interMedium;
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
 
   return new ImageResponse(
-    <div tw="relative h-full w-full flex bg-neutral-50">
+    <div
+      tw={cn(
+        "relative flex h-full w-full",
+        mode === "dark"
+          ? "bg-neutral-900 text-white"
+          : "bg-neutral-50 text-black"
+      )}
+    >
       <div tw="flex flex-col items-center p-20 justify-center text-center w-full">
         {/* Logo */}
-        <div tw="relative flex items-center bg-white border border-neutral-200 py-8 px-14 shadow-md shadow-neutral-100">
-          <div tw="absolute -inset-y-24 w-px -left-px bg-neutral-200" />
-          <div tw="absolute -inset-y-24 w-px -right-px bg-neutral-200" />
-          <div tw="absolute -inset-x-24 h-px -top-px bg-neutral-200" />
-          <div tw="absolute -inset-x-24 h-px -bottom-px bg-neutral-200" />
+        <div
+          tw={cn(
+            "relative flex items-center border px-14 py-8 shadow-md",
+            mode === "dark"
+              ? "border-neutral-700 bg-neutral-800 shadow-black/60"
+              : "border-neutral-200 bg-white shadow-neutral-100"
+          )}
+        >
+          <div
+            tw={cn(
+              "absolute -inset-y-24 -left-px w-px",
+              mode === "dark" ? "bg-neutral-700" : "bg-neutral-200"
+            )}
+          />
+          <div
+            tw={cn(
+              "absolute -inset-y-24 -right-px w-px",
+              mode === "dark" ? "bg-neutral-700" : "bg-neutral-200"
+            )}
+          />
+          <div
+            tw={cn(
+              "absolute -inset-x-24 -top-px h-px",
+              mode === "dark" ? "bg-neutral-700" : "bg-neutral-200"
+            )}
+          />
+          <div
+            tw={cn(
+              "absolute -inset-x-24 -bottom-px h-px",
+              mode === "dark" ? "bg-neutral-700" : "bg-neutral-200"
+            )}
+          />
 
           <img
             alt="animations.dev"

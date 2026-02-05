@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -6,16 +7,53 @@ const interMedium = fetch(
   new URL("../../../assets/fonts/Inter-Medium.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const fontData = await interMedium;
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
 
   return new ImageResponse(
-    <div tw="h-full w-full flex flex-col items-center justify-center px-36 bg-neutral-50">
-      <div tw="w-full flex flex-col shadow-md shadow-neutral-100 bg-white pt-14 pb-6">
-        <div tw="absolute -inset-y-24 w-px -left-px bg-neutral-200" />
-        <div tw="absolute -inset-y-24 w-px -right-px bg-neutral-200" />
-        <div tw="absolute -inset-x-24 h-px -top-px bg-neutral-200" />
-        <div tw="absolute -inset-x-24 h-px -bottom-px bg-neutral-200" />
+    <div
+      tw={cn(
+        "flex h-full w-full flex-col items-center justify-center px-36",
+        mode === "dark"
+          ? "bg-neutral-900 text-white"
+          : "bg-neutral-50 text-black"
+      )}
+    >
+      <div
+        tw={cn(
+          "flex w-full flex-col pt-14 pb-6 shadow-md",
+          mode === "dark"
+            ? "bg-black shadow-neutral-900/50"
+            : "bg-white shadow-neutral-100"
+        )}
+      >
+        <div
+          tw={cn(
+            "absolute -inset-y-24 -left-px w-px",
+            mode === "dark" ? "bg-neutral-700" : "bg-neutral-200"
+          )}
+        />
+        <div
+          tw={cn(
+            "absolute -inset-y-24 -right-px w-px",
+            mode === "dark" ? "bg-neutral-700" : "bg-neutral-200"
+          )}
+        />
+        <div
+          tw={cn(
+            "absolute -inset-x-24 -top-px h-px",
+            mode === "dark" ? "bg-neutral-700" : "bg-neutral-200"
+          )}
+        />
+        <div
+          tw={cn(
+            "absolute -inset-x-24 -bottom-px h-px",
+            mode === "dark" ? "bg-neutral-700" : "bg-neutral-200"
+          )}
+        />
 
         {/* Logo */}
         <div tw="flex items-center justify-center">
@@ -29,13 +67,23 @@ export async function GET() {
             animations.dev
           </span>
         </div>
-        <p tw="mt-10 text-3xl text-neutral-500/80 text-center leading-[1.3] tracking-tight max-w-2xl mx-auto">
+        <p
+          tw={cn(
+            "mx-auto mt-10 max-w-2xl text-center text-3xl leading-[1.3] tracking-tight",
+            mode === "dark" ? "text-neutral-400/80" : "text-neutral-500/80"
+          )}
+        >
           Learn the theory and practice behind great animations with the
           interactive learning experience.
         </p>
       </div>
 
-      <p tw="mt-9 text-center text-xl text-neutral-500/90">
+      <p
+        tw={cn(
+          "mt-9 text-center text-xl",
+          mode === "dark" ? "text-neutral-400/70" : "text-neutral-500/90"
+        )}
+      >
         10,576+ designers and engineers have improved their animation skills
         with this course.
       </p>

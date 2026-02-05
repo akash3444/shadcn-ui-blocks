@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { cn } from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -6,17 +7,32 @@ const interMedium = fetch(
   new URL("../../../assets/fonts/Inter-Medium.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export async function GET() {
+export async function GET(req: Request) {
   const fontData = await interMedium;
+  const url = new URL(req.url);
+  const values = Object.fromEntries(url.searchParams);
+  const mode = (values.mode || "light") as "dark" | "light";
 
   return new ImageResponse(
-    <div tw="relative h-full w-full flex bg-neutral-50">
+    <div
+      tw={cn(
+        "relative flex h-full w-full",
+        mode === "dark"
+          ? "bg-neutral-900 text-white"
+          : "bg-neutral-50 text-black"
+      )}
+    >
       <div
         style={{
           transform: "rotate(-36deg)",
           boxShadow: "inset 0 0 3px 1px rgba(0, 0, 0, 0.1)",
         }}
-        tw="absolute flex -inset-y-6 -inset-x-1/2 bg-white p-2 border border-neutral-200/50"
+        tw={cn(
+          "absolute -inset-x-1/2 -inset-y-6 flex border p-2",
+          mode === "dark"
+            ? "border-neutral-700 bg-neutral-800"
+            : "border-neutral-200/50 bg-white"
+        )}
       >
         <div tw="h-full w-full" />
       </div>
