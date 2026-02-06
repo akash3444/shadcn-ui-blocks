@@ -11,6 +11,7 @@ export async function GET(req: Request) {
   const fontData = await interMedium;
 
   const url = new URL(req.url);
+  const origin = `${url.protocol}//${url.host}`;
   const values = Object.fromEntries(url.searchParams);
   const mode = (values.mode || "light") as "dark" | "light";
 
@@ -42,7 +43,7 @@ export async function GET(req: Request) {
       >
         <img
           alt="Shadcn UI Blocks"
-          src="http://localhost:3000/images/og/03.png"
+          src={`${origin}/images/og/03.png`}
           style={{ objectFit: "cover" }}
           tw="h-full w-full rounded-t-xl"
         />
