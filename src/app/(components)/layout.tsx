@@ -8,16 +8,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
-      <div className="md:hidden">
-        <Navbar />
+    <div className="flex min-h-svh flex-col">
+      <Navbar className="w-full max-w-384 ps-4 pe-10" />
+      <div className="flex flex-1">
+        <SidebarProvider
+          style={
+            { "--sidebar-top": "calc(3.5rem + 1px)" } as React.CSSProperties
+          }
+        >
+          <AppSidebar />
+          <main className="w-full">
+            <div className="w-full px-10 pt-6 pb-10">{children}</div>
+          </main>
+        </SidebarProvider>
       </div>
-      <SidebarProvider>
-        <AppSidebar />
-        <main className="w-full">
-          <div className="w-full p-10">{children}</div>
-        </main>
-      </SidebarProvider>
     </div>
   );
 }

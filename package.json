@@ -37,6 +37,7 @@
     "react-dom": "19.2.0",
     "react-dropzone": "^14.2.10",
     "react-hook-form": "^7.53.1",
+    "react-hotkeys-hook": "^5.2.4",
     "react-remove-scroll": "^2.6.3",
     "react-resizable-panels": "^2.1.6",
     "recharts": "2.15.4",

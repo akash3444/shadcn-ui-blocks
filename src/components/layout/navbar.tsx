@@ -10,7 +10,7 @@ import { NavigationSheet } from "./navigation-sheet";
 
 export const Navbar = ({ className }: { className?: string }) => {
   return (
-    <nav className="border-b bg-background px-6 ps-4 pe-2 lg:px-0">
+    <nav className="sticky top-0 z-30 border-b bg-background px-6 ps-4 pe-2 lg:px-0">
       <div
         className={cn(
           "relative z-20 mx-auto flex h-14 max-w-(--breakpoint-lg) items-center justify-between border-primary/8 text-foreground shadow shadow-primary/1",

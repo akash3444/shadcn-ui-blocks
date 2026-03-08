@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export const MainHeading = ({ className, ...props }: ComponentProps<"h1">) => (
   <h1
-    className={cn("font-semibold text-4xl tracking-tight", className)}
+    className={cn("font-semibold text-3xl tracking-tight", className)}
     {...props}
   />
 );
