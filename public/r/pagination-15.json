@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "pagination-15",
-  "type": "registry:component",
   "title": "Pagination with text",
   "description": "A pagination component with text",
   "dependencies": [
@@ -16,5 +15,6 @@
       "content": "import {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/registry/ui/pagination\";\n\nexport default function PaginationDemo() {\n  return (\n    <div className=\"flex w-full max-w-xs items-center justify-between gap-3\">\n      <p className=\"flex-1 whitespace-nowrap text-muted-foreground text-sm\">\n        Showing 5 results\n      </p>\n\n      <Pagination className=\"justify-end\">\n        <PaginationContent className=\"gap-0 divide-x overflow-hidden rounded-lg border\">\n          <PaginationItem>\n            <PaginationPrevious\n              className=\"rounded-none *:[span]:hidden\"\n              href=\"#\"\n              size=\"icon-sm\"\n            />\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationNext\n              className=\"rounded-none *:[span]:hidden\"\n              href=\"#\"\n              size=\"icon-sm\"\n            />\n          </PaginationItem>\n        </PaginationContent>\n      </Pagination>\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

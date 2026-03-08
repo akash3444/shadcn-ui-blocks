@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "spinner-02",
-  "type": "registry:component",
   "title": "Circle Spinner",
   "description": "A circular spinner component",
   "dependencies": [
@@ -13,5 +12,6 @@
       "content": "import { Loader2Icon } from \"lucide-react\";\n\nexport default function SpinnerCircleDemo() {\n  return <Loader2Icon className=\"animate-spin\" />;\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

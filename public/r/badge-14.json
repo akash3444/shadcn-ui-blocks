@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-14",
-  "type": "registry:component",
   "title": "Badge with number",
   "description": "A badge with number component",
   "registryDependencies": [
@@ -13,5 +12,6 @@
       "content": "import { Badge } from \"@/registry/ui/badge\";\n\nconst BadgeWithNumber = () => {\n  return (\n    <div className=\"flex flex-wrap items-center gap-3\">\n      <Badge className=\"gap-2\">\n        Projects <span className=\"opacity-70\">6</span>\n      </Badge>\n      <Badge className=\"gap-2\" variant=\"outline\">\n        Members <span className=\"text-muted-foreground\">11</span>\n      </Badge>\n      <Badge className=\"gap-2\" variant=\"secondary\">\n        Tasks <span className=\"text-muted-foreground\">7</span>\n      </Badge>\n    </div>\n  );\n};\n\nexport default BadgeWithNumber;\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

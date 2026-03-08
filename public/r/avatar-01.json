@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-01",
-  "type": "registry:component",
   "title": "Default Avatar",
   "description": "A default avatar component",
   "registryDependencies": [
@@ -13,5 +12,6 @@
       "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/registry/ui/avatar\";\n\nexport default function AvatarDemo() {\n  return (\n    <Avatar>\n      <AvatarImage alt=\"@shadcn\" src=\"https://github.com/shadcn.png\" />\n      <AvatarFallback>CN</AvatarFallback>\n    </Avatar>\n  );\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

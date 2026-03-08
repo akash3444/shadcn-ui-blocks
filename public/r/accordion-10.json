@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "accordion-10",
-  "type": "registry:component",
   "title": "Icon Accordion",
   "description": "An accordion with icons",
   "dependencies": [
@@ -13,8 +12,9 @@
   "files": [
     {
       "path": "src/components/customized/accordion/accordion-10.tsx",
-      "content": "import { Contrast, Palette, Zap } from \"lucide-react\";\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@/registry/ui/accordion\";\n\nconst items = [\n  {\n    title: \"Is it accessible?\",\n    content: \"Yes. It adheres to the WAI-ARIA design pattern.\",\n    icon: Contrast,\n  },\n  {\n    title: \"Is it styled?\",\n    content:\n      \"Yes. It comes with default styles that matches the other components' aesthetic.\",\n    icon: Palette,\n  },\n  {\n    title: \"Is it animated?\",\n    content:\n      \"Yes. It's animated by default, but you can disable it if you prefer.\",\n    icon: Zap,\n  },\n];\n\nexport default function AccordionIconDemo() {\n  return (\n    <Accordion\n      className=\"my-4 w-full max-w-lg\"\n      collapsible\n      defaultValue=\"item-0\"\n      type=\"single\"\n    >\n      {items.map(({ title, content, icon: Icon }, index) => (\n        <AccordionItem key={index} value={`item-${index}`}>\n          <AccordionTrigger>\n            <div className=\"flex items-start gap-3\">\n              <Icon />\n              {title}\n            </div>\n          </AccordionTrigger>\n          <AccordionContent>{content}</AccordionContent>\n        </AccordionItem>\n      ))}\n    </Accordion>\n  );\n}\n",
+      "content": "import { RotateCcw, ShoppingCart, Truck } from \"lucide-react\";\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@/registry/ui/accordion\";\n\nconst items = [\n  {\n    title: \"Can I change or cancel my order after placing it?\",\n    content:\n      \"Yes, you can change or cancel your order within 1 hour of placement by visiting your account page or contacting our support team. After that, orders may already be processed for shipping.\",\n    icon: ShoppingCart,\n  },\n  {\n    title: \"How long does shipping usually take?\",\n    content:\n      \"Domestic shipping typically takes 3-5 business days, while international orders may take up to 2-3 weeks depending on your location and customs processing times.\",\n    icon: Truck,\n  },\n  {\n    title: \"What is your return policy?\",\n    content:\n      \"We offer a 30-day return policy for most products. Items must be unused and in their original packaging. To initiate a return, simply contact our support with your order details.\",\n    icon: RotateCcw,\n  },\n];\n\nexport default function AccordionIconDemo() {\n  return (\n    <Accordion\n      className=\"my-4 w-full max-w-lg\"\n      collapsible\n      defaultValue=\"item-0\"\n      type=\"single\"\n    >\n      {items.map(({ title, content, icon: Icon }, index) => (\n        <AccordionItem key={index} value={`item-${index}`}>\n          <AccordionTrigger>\n            <div className=\"flex items-start gap-3\">\n              <Icon />\n              {title}\n            </div>\n          </AccordionTrigger>\n          <AccordionContent className=\"pl-9\">{content}</AccordionContent>\n        </AccordionItem>\n      ))}\n    </Accordion>\n  );\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

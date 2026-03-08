@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-14",
-  "type": "registry:component",
   "title": "Avatar Group with Max",
   "description": "Group of avatars with maximum limit component",
   "dependencies": [
@@ -16,5 +15,6 @@
       "content": "import { BadgeCheck, BadgeMinus, BadgeX } from \"lucide-react\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/registry/ui/avatar\";\n\nexport default function AvatarBadge() {\n  return (\n    <div className=\"flex items-center gap-4\">\n      <div className=\"relative\">\n        <Avatar className=\"size-10\">\n          <AvatarImage alt=\"@shadcn\" src=\"https://github.com/shadcn.png\" />\n          <AvatarFallback>CN</AvatarFallback>\n        </Avatar>\n        <div className=\"absolute -right-0.5 -bottom-0.5 flex size-3.5 items-center justify-center rounded-full bg-primary text-[10px] text-primary-foreground leading-none ring-2 ring-background\">\n          3\n        </div>\n      </div>\n      <div className=\"relative\">\n        <Avatar className=\"size-10\">\n          <AvatarImage alt=\"@shadcn\" src=\"https://github.com/shadcn.png\" />\n          <AvatarFallback>CN</AvatarFallback>\n        </Avatar>\n        <BadgeCheck className=\"absolute -right-1 -bottom-1 size-4.5 rounded-full fill-blue-500 text-white\" />\n      </div>\n      <div className=\"relative\">\n        <Avatar className=\"size-10\">\n          <AvatarImage alt=\"@shadcn\" src=\"https://github.com/shadcn.png\" />\n          <AvatarFallback>CN</AvatarFallback>\n        </Avatar>\n        <BadgeMinus className=\"absolute -right-1 -bottom-1 size-4.5 rounded-full fill-amber-500 text-white\" />\n      </div>\n      <div className=\"relative\">\n        <Avatar className=\"size-10\">\n          <AvatarImage alt=\"@shadcn\" src=\"https://github.com/shadcn.png\" />\n          <AvatarFallback>CN</AvatarFallback>\n        </Avatar>\n        <BadgeX className=\"absolute -right-1 -bottom-1 size-4.5 rounded-full fill-red-500 text-white\" />\n      </div>\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

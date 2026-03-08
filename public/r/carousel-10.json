@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "carousel-10",
-  "type": "registry:component",
   "title": "Carousel with Opacity Transition",
   "description": "A carousel with opacity transition effects",
   "registryDependencies": [
@@ -11,8 +10,9 @@
   "files": [
     {
       "path": "src/components/customized/carousel/carousel-10.tsx",
-      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\nimport { Card, CardContent } from \"@/registry/ui/card\";\nimport {\n  Carousel,\n  type CarouselApi,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n} from \"@/registry/ui/carousel\";\n\nexport default function SlideOpacity() {\n  const [api, setApi] = React.useState<CarouselApi>();\n  const [current, setCurrent] = React.useState(0);\n\n  React.useEffect(() => {\n    if (!api) {\n      return;\n    }\n\n    setCurrent(api.selectedScrollSnap() + 1);\n\n    api.on(\"select\", () => {\n      setCurrent(api.selectedScrollSnap() + 1);\n    });\n  }, [api]);\n\n  return (\n    <div className=\"mx-auto max-w-xs\">\n      <Carousel\n        className=\"mx-2 w-full max-w-xs\"\n        opts={{ loop: true }}\n        setApi={setApi}\n      >\n        <CarouselContent>\n          {Array.from({ length: 5 }).map((_, index) => (\n            <CarouselItem className=\"basis-3/5\" key={index}>\n              <Card\n                className={cn(\n                  \"bg-primary text-primary-foreground transition-all duration-500\",\n                  {\n                    \"opacity-30\": index !== current - 1,\n                  }\n                )}\n              >\n                <CardContent className=\"flex aspect-video items-center justify-center p-6\">\n                  <span className=\"font-semibold text-4xl\">{index + 1}</span>\n                </CardContent>\n              </Card>\n            </CarouselItem>\n          ))}\n        </CarouselContent>\n        <CarouselPrevious />\n        <CarouselNext />\n      </Carousel>\n    </div>\n  );\n}\n",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\nimport {\n  Carousel,\n  type CarouselApi,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n} from \"@/registry/ui/carousel\";\n\nconst images = [\n  \"https://www.fffuel.co/images/dddepth-preview/dddepth-248.jpg\",\n  \"https://www.fffuel.co/images/dddepth-preview/dddepth-051.jpg\",\n  \"https://www.fffuel.co/images/dddepth-preview/dddepth-029.jpg\",\n  \"https://www.fffuel.co/images/dddepth-preview/dddepth-038.jpg\",\n  \"https://www.fffuel.co/images/dddepth-preview/dddepth-012.jpg\",\n];\n\nexport default function SlideOpacity() {\n  const [api, setApi] = React.useState<CarouselApi>();\n  const [current, setCurrent] = React.useState(0);\n\n  React.useEffect(() => {\n    if (!api) {\n      return;\n    }\n\n    setCurrent(api.selectedScrollSnap() + 1);\n\n    api.on(\"select\", () => {\n      setCurrent(api.selectedScrollSnap() + 1);\n    });\n  }, [api]);\n\n  return (\n    <Carousel\n      className=\"mx-2 w-full max-w-md\"\n      opts={{ loop: true }}\n      setApi={setApi}\n    >\n      <div className=\"mask-x-from-90%\">\n        <CarouselContent>\n          {images.map((image, index) => (\n            <CarouselItem\n              className={cn(\"basis-3/5 transition-opacity\", {\n                \"opacity-30\": index !== current - 1,\n              })}\n              key={image}\n            >\n              <img\n                alt=\"dddepth-248\"\n                className=\"size-full rounded-xl object-cover\"\n                src={image}\n              />\n            </CarouselItem>\n          ))}\n        </CarouselContent>\n      </div>\n      <CarouselPrevious />\n      <CarouselNext />\n    </Carousel>\n  );\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

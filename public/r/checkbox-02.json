@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "checkbox-02",
-  "type": "registry:component",
   "title": "Disabled Checkbox",
   "description": "A disabled checkbox component",
   "registryDependencies": [
@@ -13,5 +12,6 @@
       "content": "import { Checkbox } from \"@/registry/ui/checkbox\";\n\nexport default function DisabledCheckboxDemo() {\n  return (\n    <div className=\"flex items-center space-x-2\">\n      <Checkbox disabled id=\"terms-disabled\" />\n      <label\n        className=\"font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\"\n        htmlFor=\"terms-disabled\"\n      >\n        Accept terms and conditions\n      </label>\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

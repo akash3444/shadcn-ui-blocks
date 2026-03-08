@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "navbar-04",
-  "type": "registry:block",
   "title": "Navbar 04",
   "description": "A simple navbar block",
   "dependencies": [
@@ -34,5 +33,6 @@
       "content": "import { VisuallyHidden } from \"@radix-ui/react-visually-hidden\";\nimport { Menu } from \"lucide-react\";\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Sheet,\n  SheetContent,\n  SheetTitle,\n  SheetTrigger,\n} from \"@/components/ui/sheet\";\nimport { Logo } from \"@/registry/blocks/navbar-04/components/logo\";\nimport { NavMenu } from \"@/registry/blocks/navbar-04/components/nav-menu\";\n\nexport const NavigationSheet = () => {\n  return (\n    <Sheet>\n      <VisuallyHidden>\n        <SheetTitle>Navigation Menu</SheetTitle>\n      </VisuallyHidden>\n\n      <SheetTrigger asChild>\n        <Button className=\"rounded-full\" size=\"icon\" variant=\"outline\">\n          <Menu />\n        </Button>\n      </SheetTrigger>\n      <SheetContent className=\"px-6 py-3\">\n        <Logo />\n        <NavMenu className=\"mt-6 [&>div]:h-full\" orientation=\"vertical\" />\n      </SheetContent>\n    </Sheet>\n  );\n};\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-10",
-  "type": "registry:component",
   "title": "Badge with Image",
   "description": "A badge with image component",
   "registryDependencies": [
@@ -10,8 +9,9 @@
   "files": [
     {
       "path": "src/components/customized/badge/badge-10.tsx",
-      "content": "import Image from \"next/image\";\nimport { Badge } from \"@/registry/ui/badge\";\n\nconst BadgeWithImageDemo = () => {\n  return (\n    <div className=\"flex flex-wrap items-center gap-3\">\n      <Badge className=\"gap-1.5 rounded-full pl-0.75\" variant=\"outline\">\n        <Image\n          alt=\"\"\n          className=\"h-5 w-5 rounded-full\"\n          height={20}\n          src=\"https://github.com/shadcn.png\"\n          width={20}\n        />\n        shadcn\n      </Badge>\n      <Badge className=\"gap-1.5 rounded-full pr-0.75\" variant=\"outline\">\n        shadcn\n        <Image\n          alt=\"\"\n          className=\"h-5 w-5 rounded-full\"\n          height={20}\n          src=\"https://github.com/shadcn.png\"\n          width={20}\n        />\n      </Badge>\n    </div>\n  );\n};\n\nexport default BadgeWithImageDemo;\n",
+      "content": "import Image from \"next/image\";\nimport { Badge } from \"@/registry/ui/badge\";\n\nconst BadgeWithImageDemo = () => {\n  return (\n    <div className=\"flex flex-wrap items-center gap-3\">\n      <Badge className=\"h-7 gap-1.5 rounded-full pl-0.75\" variant=\"outline\">\n        <Image\n          alt=\"\"\n          className=\"aspect-square rounded-full\"\n          height={20}\n          src=\"https://github.com/shadcn.png\"\n          width={20}\n        />\n        shadcn\n      </Badge>\n      <Badge className=\"h-7 gap-1.5 rounded-full pr-0.75\" variant=\"outline\">\n        shadcn\n        <Image\n          alt=\"\"\n          className=\"h-5 w-5 rounded-full\"\n          height={20}\n          src=\"https://github.com/shadcn.png\"\n          width={20}\n        />\n      </Badge>\n    </div>\n  );\n};\n\nexport default BadgeWithImageDemo;\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

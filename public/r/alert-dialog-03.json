@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-dialog-03",
-  "type": "registry:component",
   "title": "Destructive Alert Dialog",
   "description": "A destructive alert dialog component",
   "dependencies": [
@@ -14,8 +13,9 @@
   "files": [
     {
       "path": "src/components/customized/alert-dialog/alert-dialog-03.tsx",
-      "content": "import { OctagonAlert } from \"lucide-react\";\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@/registry/ui/alert-dialog\";\nimport { Button, buttonVariants } from \"@/registry/ui/button\";\n\nexport default function AlertDialogDestructive() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger asChild>\n        <Button variant=\"outline\">Show Dialog</Button>\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader className=\"items-center\">\n          <AlertDialogTitle>\n            <div className=\"mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-destructive/10\">\n              <OctagonAlert className=\"h-7 w-7 text-destructive\" />\n            </div>\n            Are you absolutely sure?\n          </AlertDialogTitle>\n          <AlertDialogDescription className=\"text-center text-[15px]\">\n            This action cannot be undone. This will permanently delete your\n            account and remove your data from our servers.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter className=\"mt-2 sm:justify-center\">\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction\n            className={buttonVariants({ variant: \"destructive\" })}\n          >\n            Continue\n          </AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  );\n}\n",
+      "content": "import { OctagonAlert } from \"lucide-react\";\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@/registry/ui/alert-dialog\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport default function AlertDialogDestructive() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger asChild>\n        <Button variant=\"outline\">Show Dialog</Button>\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogTitle className=\"w-full\">\n            <div>\n              <div className=\"mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-destructive/10\">\n                <OctagonAlert className=\"h-7 w-7 text-destructive\" />\n              </div>\n              <p className=\"text-center\">Are you absolutely sure?</p>\n            </div>\n          </AlertDialogTitle>\n          <AlertDialogDescription className=\"text-center text-[15px]\">\n            This action cannot be undone. This will permanently delete your\n            account and remove your data from our servers.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter className=\"mt-2 sm:justify-center\">\n          <AlertDialogCancel variant=\"ghost\">Cancel</AlertDialogCancel>\n          <AlertDialogAction variant=\"destructive\">Continue</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  );\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

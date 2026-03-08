@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "checkbox-15",
-  "type": "registry:component",
   "title": "Working Days",
   "description": "A working days component",
   "dependencies": [
@@ -13,8 +12,9 @@
   "files": [
     {
       "path": "src/components/customized/checkbox/checkbox-15.tsx",
-      "content": "import { Checkbox as CheckboxPrimitive } from \"radix-ui\";\nimport { Label } from \"@/components/ui/label\";\nimport { cn } from \"@/lib/utils\";\n\nconst days = [\n  { label: \"M\", value: \"monday\" },\n  { label: \"T\", value: \"tuesday\" },\n  { label: \"W\", value: \"wednesday\" },\n  { label: \"T\", value: \"thursday\" },\n  { label: \"F\", value: \"friday\" },\n  { label: \"S\", value: \"saturday\" },\n  { label: \"S\", value: \"sunday\" },\n];\n\nconst CheckboxCardDemo = () => {\n  return (\n    <div>\n      <Label className=\"ps-1 font-medium text-foreground/80\">\n        Select Working Days\n      </Label>\n      <div className=\"mt-3.5 flex flex-wrap items-center gap-2 rounded-lg bg-muted/50 px-4 py-3\">\n        {days.map((day) => (\n          <CheckboxPrimitive.Root\n            className={cn(\n              \"size-9 cursor-pointer rounded-full border bg-background text-sm\",\n              \"data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground\"\n            )}\n            defaultChecked={day.value === \"monday\" || day.value === \"tuesday\"}\n            key={day.value}\n          >\n            {day.label}\n          </CheckboxPrimitive.Root>\n        ))}\n      </div>\n    </div>\n  );\n};\n\nexport default CheckboxCardDemo;\n",
+      "content": "import { Checkbox as CheckboxPrimitive } from \"radix-ui\";\nimport { Label } from \"@/components/ui/label\";\nimport { cn } from \"@/lib/utils\";\n\nconst days = [\n  { label: \"M\", value: \"monday\" },\n  { label: \"T\", value: \"tuesday\" },\n  { label: \"W\", value: \"wednesday\" },\n  { label: \"T\", value: \"thursday\" },\n  { label: \"F\", value: \"friday\" },\n  { label: \"S\", value: \"saturday\" },\n  { label: \"S\", value: \"sunday\" },\n];\n\nconst CheckboxCardDemo = () => {\n  return (\n    <div>\n      <Label className=\"ps-1 font-medium text-foreground/80\">\n        Select Working Days\n      </Label>\n      <div className=\"mt-3.5 flex flex-wrap items-center gap-2 rounded-lg bg-muted/50 px-4 py-3\">\n        {days.map((day) => (\n          <CheckboxPrimitive.Root\n            className={cn(\n              \"size-9 cursor-pointer rounded-full border bg-background text-sm transition-colors\",\n              \"data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground\"\n            )}\n            defaultChecked={day.value === \"monday\" || day.value === \"tuesday\"}\n            key={day.value}\n          >\n            {day.label}\n          </CheckboxPrimitive.Root>\n        ))}\n      </div>\n    </div>\n  );\n};\n\nexport default CheckboxCardDemo;\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

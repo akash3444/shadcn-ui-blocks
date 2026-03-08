@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "signup-04",
-  "type": "registry:block",
   "title": "Signup 04",
   "description": "A simple signup block",
   "dependencies": [
@@ -26,5 +25,6 @@
       "content": "import { cn } from \"@/lib/utils\";\n\nexport const Logo = ({ className, ...props }: React.ComponentProps<\"img\">) => {\n  return (\n    <img\n      alt=\"logo\"\n      className={cn(\"size-7\", className)}\n      src=\"/images/android-chrome-192x192.png\"\n      {...props}\n    />\n  );\n};\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

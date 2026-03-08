@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "textarea-05",
-  "type": "registry:component",
   "title": "Textarea with Rows",
   "description": "A textarea component with custom rows",
   "registryDependencies": [
@@ -13,5 +12,6 @@
       "content": "import { Textarea } from \"@/registry/ui/textarea\";\n\nexport default function TextareaRowsDemo() {\n  return <Textarea placeholder=\"Type your message here.\" rows={8} />;\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

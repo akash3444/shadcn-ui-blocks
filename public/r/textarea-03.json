@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "textarea-03",
-  "type": "registry:component",
   "title": "Disabled Textarea",
   "description": "A disabled textarea component",
   "registryDependencies": [
@@ -13,5 +12,6 @@
       "content": "import { Textarea } from \"@/registry/ui/textarea\";\n\nexport default function TextareaDisabledDemo() {\n  return <Textarea disabled placeholder=\"Type your message here.\" />;\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

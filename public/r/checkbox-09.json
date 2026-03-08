@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "checkbox-09",
-  "type": "registry:component",
   "title": "Icon Checkbox",
   "description": "A checkbox with custom icon component",
   "dependencies": [
@@ -14,5 +13,6 @@
       "content": "import { BookmarkIcon, CheckIcon, Heart, StarIcon } from \"lucide-react\";\nimport { Checkbox as CheckboxPrimitive } from \"radix-ui\";\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n// Replace the `Checkbox` component in `@components/ui/checkbox` with below component and use it here to support custom icon.\nconst Checkbox = React.forwardRef<\n  React.ElementRef<typeof CheckboxPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> & {\n    icon?: React.ReactNode;\n    checkedIcon?: React.ReactNode;\n  }\n>(({ className, icon, checkedIcon, ...props }, ref) => (\n  <>\n    <CheckboxPrimitive.Root\n      className={cn(\"peer group\", className)}\n      ref={ref}\n      {...props}\n    >\n      <span className=\"group-data-[state=checked]:hidden\">{icon}</span>\n      <span className=\"group-data-[state=unchecked]:hidden\">{checkedIcon}</span>\n\n      {!checkedIcon && (\n        <CheckboxPrimitive.Indicator\n          className={cn(\"flex items-center justify-center text-current\")}\n        >\n          <CheckIcon className=\"h-4 w-4\" />\n        </CheckboxPrimitive.Indicator>\n      )}\n    </CheckboxPrimitive.Root>\n  </>\n));\nCheckbox.displayName = CheckboxPrimitive.Root.displayName;\n\nexport default function CheckboxIconDemo() {\n  return (\n    <div className=\"flex items-center space-x-3\">\n      <Checkbox\n        checkedIcon={<Heart className=\"fill-rose-500 stroke-rose-500\" />}\n        defaultChecked\n        icon={<Heart />}\n      />\n      <Checkbox\n        checkedIcon={<BookmarkIcon className=\"fill-primary\" />}\n        defaultChecked\n        icon={<BookmarkIcon />}\n      />\n      <Checkbox\n        checkedIcon={<StarIcon className=\"fill-yellow-400 stroke-yellow-400\" />}\n        defaultChecked\n        icon={<StarIcon />}\n      />\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

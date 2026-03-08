@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "radio-group-01",
-  "type": "registry:component",
   "title": "Default Radio Group",
   "description": "A default radio group component",
   "registryDependencies": [
@@ -11,8 +10,9 @@
   "files": [
     {
       "path": "src/components/customized/radio-group/radio-group-01.tsx",
-      "content": "import { Label } from \"@/registry/ui/label\";\nimport { RadioGroup, RadioGroupItem } from \"@/registry/ui/radio-group\";\n\nexport default function RadioGroupDemo() {\n  return (\n    <RadioGroup defaultValue=\"comfortable\">\n      <div className=\"flex items-center space-x-2\">\n        <RadioGroupItem id=\"r1\" value=\"default\" />\n        <Label htmlFor=\"r1\">Default</Label>\n      </div>\n      <div className=\"flex items-center space-x-2\">\n        <RadioGroupItem id=\"r2\" value=\"comfortable\" />\n        <Label htmlFor=\"r2\">Comfortable</Label>\n      </div>\n      <div className=\"flex items-center space-x-2\">\n        <RadioGroupItem id=\"r3\" value=\"compact\" />\n        <Label htmlFor=\"r3\">Compact</Label>\n      </div>\n    </RadioGroup>\n  );\n}\n",
+      "content": "import { Label } from \"@/registry/ui/label\";\nimport { RadioGroup, RadioGroupItem } from \"@/registry/ui/radio-group\";\n\nexport default function RadioGroupDemo() {\n  return (\n    <div className=\"flex justify-center\">\n      <RadioGroup defaultValue=\"comfortable\">\n        <div className=\"flex items-center space-x-2\">\n          <RadioGroupItem id=\"r1\" value=\"default\" />\n          <Label htmlFor=\"r1\">Default</Label>\n        </div>\n        <div className=\"flex items-center space-x-2\">\n          <RadioGroupItem id=\"r2\" value=\"comfortable\" />\n          <Label htmlFor=\"r2\">Comfortable</Label>\n        </div>\n        <div className=\"flex items-center space-x-2\">\n          <RadioGroupItem id=\"r3\" value=\"compact\" />\n          <Label htmlFor=\"r3\">Compact</Label>\n        </div>\n      </RadioGroup>\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

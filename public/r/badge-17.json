@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-17",
-  "type": "registry:component",
   "title": "Icon button",
   "description": "An icon button component",
   "dependencies": [
@@ -17,5 +16,6 @@
       "content": "import { Bell, MailIcon, MessageSquare } from \"lucide-react\";\nimport { Button } from \"@/components/ui/button\";\nimport { Badge } from \"@/registry/ui/badge\";\n\nconst BadgeDemo = () => {\n  return (\n    <div className=\"flex items-center gap-5\">\n      <Button className=\"relative\" size=\"icon\" variant=\"outline\">\n        <Bell />\n        <Badge className=\"absolute top-0 right-0 min-w-5.5 translate-x-1/2 -translate-y-1/2 px-1\">\n          2\n        </Badge>\n      </Button>\n      <Button className=\"relative\" size=\"icon\" variant=\"outline\">\n        <MailIcon />\n        <Badge\n          className=\"absolute top-0 right-0 min-w-5.5 translate-x-1/2 -translate-y-1/2 px-1\"\n          variant=\"destructive\"\n        >\n          @\n        </Badge>\n      </Button>\n      <Button className=\"relative rounded-full\" size=\"icon\" variant=\"outline\">\n        <MessageSquare />\n        <Badge\n          className=\"absolute -top-2 -right-2 min-w-4.5 px-0.75 py-0.25\"\n          variant=\"destructive\"\n        >\n          @\n        </Badge>\n      </Button>\n    </div>\n  );\n};\n\nexport default BadgeDemo;\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

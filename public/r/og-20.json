@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "og-20",
-  "type": "registry:item",
   "title": "OG Image 20",
   "description": "With image on the right",
   "files": [
@@ -11,5 +10,6 @@
       "type": "registry:page",
       "target": "app/api/og/og-20/route.tsx"
     }
-  ]
+  ],
+  "type": "registry:item"
 }

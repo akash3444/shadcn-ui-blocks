@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "slider-07",
-  "type": "registry:component",
   "title": "Slider with Thumb Icon",
   "description": "A slider component with a custom thumb icon",
   "dependencies": [
@@ -14,5 +13,6 @@
       "content": "\"use client\";\n\nimport { Settings2 } from \"lucide-react\";\n\nimport { Slider as SliderPrimitive } from \"radix-ui\";\nimport * as React from \"react\";\n\nexport default function SliderWithCustomThumbDemo() {\n  const [progress, setProgress] = React.useState([30]);\n\n  return (\n    <div className=\"relative flex w-full max-w-sm flex-col items-center\">\n      <SliderPrimitive.Root\n        className=\"relative flex w-full touch-none select-none items-center\"\n        defaultValue={progress}\n        max={100}\n        onValueChange={setProgress}\n        step={1}\n      >\n        <SliderPrimitive.Track className=\"relative h-1.5 w-full grow overflow-hidden rounded-full bg-primary/20\">\n          <SliderPrimitive.Range className=\"absolute h-full bg-primary\" />\n        </SliderPrimitive.Track>\n\n        <SliderPrimitive.Thumb className=\"flex h-6 w-6 items-center justify-center rounded-full border border-primary/50 bg-background shadow-sm transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50\">\n          <Settings2 className=\"h-3.5 w-3.5\" />\n        </SliderPrimitive.Thumb>\n      </SliderPrimitive.Root>\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

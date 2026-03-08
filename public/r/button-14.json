@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-14",
-  "type": "registry:component",
   "title": "Rounded Button",
   "description": "A rounded button component",
   "registryDependencies": [
@@ -13,5 +12,6 @@
       "content": "import { StarIcon } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nconst RoundedButtonDemo = () => (\n  <div className=\"flex flex-wrap items-center gap-2\">\n    <Button className=\"rounded-full\">Rounded</Button>\n    <Button className=\"rounded-full\" size=\"icon\">\n      <StarIcon />\n    </Button>\n    <Button className=\"rounded-full\">\n      <StarIcon /> Star\n    </Button>\n  </div>\n);\n\nexport default RoundedButtonDemo;\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

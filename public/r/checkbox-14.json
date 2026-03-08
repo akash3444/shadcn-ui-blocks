@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "checkbox-14",
-  "type": "registry:component",
   "title": "Countries",
   "description": "A countries component",
   "registryDependencies": [
@@ -15,5 +14,6 @@
       "content": "\"use client\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { ScrollArea } from \"@/components/ui/scroll-area\";\nimport { Checkbox } from \"@/registry/ui/checkbox\";\n\nexport default function Checkbox14() {\n  return (\n    <div>\n      <Label className=\"ps-1 font-medium\">Countries</Label>\n      <div className=\"mt-2.5 rounded-lg border bg-muted/30\">\n        <ScrollArea className=\"h-60\">\n          <div className=\"space-y-2 p-4\">\n            {countries.map((country, index) => (\n              <label\n                className=\"flex items-center justify-between gap-6\"\n                htmlFor={country.value}\n                key={country.value}\n              >\n                <span className=\"text-sm\">\n                  {country.flag}&nbsp;&nbsp;{country.label}\n                </span>\n                <Checkbox\n                  className=\"bg-background\"\n                  defaultChecked={index < 3}\n                  id={country.value}\n                  value={country.value}\n                />\n              </label>\n            ))}\n          </div>\n        </ScrollArea>\n      </div>\n    </div>\n  );\n}\nconst countries = [\n  { label: \"United States\", value: \"us\", flag: \"🇺🇸\" },\n  { label: \"Canada\", value: \"ca\", flag: \"🇨🇦\" },\n  { label: \"United Kingdom\", value: \"uk\", flag: \"🇬🇧\" },\n  { label: \"Germany\", value: \"de\", flag: \"🇩🇪\" },\n  { label: \"France\", value: \"fr\", flag: \"🇫🇷\" },\n  { label: \"Japan\", value: \"jp\", flag: \"🇯🇵\" },\n  { label: \"Australia\", value: \"au\", flag: \"🇦🇺\" },\n  { label: \"Brazil\", value: \"br\", flag: \"🇧🇷\" },\n  { label: \"India\", value: \"in\", flag: \"🇮🇳\" },\n  { label: \"China\", value: \"cn\", flag: \"🇨🇳\" },\n  { label: \"South Korea\", value: \"kr\", flag: \"🇰🇷\" },\n  { label: \"Italy\", value: \"it\", flag: \"🇮🇹\" },\n  { label: \"Spain\", value: \"es\", flag: \"🇪🇸\" },\n  { label: \"Netherlands\", value: \"nl\", flag: \"🇳🇱\" },\n  { label: \"Sweden\", value: \"se\", flag: \"🇸🇪\" },\n  { label: \"Norway\", value: \"no\", flag: \"🇳🇴\" },\n  { label: \"Switzerland\", value: \"ch\", flag: \"🇨🇭\" },\n  { label: \"Mexico\", value: \"mx\", flag: \"🇲🇽\" },\n  { label: \"Argentina\", value: \"ar\", flag: \"🇦🇷\" },\n  { label: \"South Africa\", value: \"za\", flag: \"🇿🇦\" },\n];\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

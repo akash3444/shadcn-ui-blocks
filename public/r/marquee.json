@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "marquee",
-  "type": "registry:ui",
   "title": "Marquee",
   "description": "A simple marquee",
   "files": [
@@ -40,5 +39,6 @@
         }
       }
     }
-  }
+  },
+  "type": "registry:ui"
 }

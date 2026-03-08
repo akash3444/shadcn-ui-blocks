@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "hero-06",
-  "type": "registry:block",
   "title": "Hero 06",
   "description": "A simple hero block",
   "dependencies": [
@@ -25,5 +24,6 @@
       "content": "\"use client\";\n\nimport { useTheme } from \"next-themes\";\nimport DotPattern from \"@/components/ui/dot-pattern\";\nimport Particles from \"@/components/ui/particles\";\nimport { cn } from \"@/lib/utils\";\n\nexport const BackgroundPattern = () => {\n  const { resolvedTheme } = useTheme();\n  const isLightTheme = resolvedTheme === \"light\";\n\n  return (\n    <>\n      <DotPattern\n        className={cn(\n          \"mask-[radial-gradient(ellipse,rgba(0,0,0,0.3)_30%,black_50%)]\",\n          \"dark:fill-slate-700\"\n        )}\n        cr={1}\n        cx={1}\n        cy={1}\n        height={20}\n        width={20}\n      />\n      <Particles\n        className=\"absolute inset-0\"\n        color={isLightTheme ? \"#000\" : \"#fff\"}\n        ease={80}\n        quantity={100}\n        refresh\n      />\n    </>\n  );\n};\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

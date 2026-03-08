@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "radio-group-04",
-  "type": "registry:component",
   "title": "Radio Group with Custom Colors",
   "description": "A radio group component with custom color options",
   "registryDependencies": [
@@ -11,8 +10,9 @@
   "files": [
     {
       "path": "src/components/customized/radio-group/radio-group-04.tsx",
-      "content": "import { Label } from \"@/registry/ui/label\";\nimport { RadioGroup, RadioGroupItem } from \"@/registry/ui/radio-group\";\n\nexport default function RadioGroupColorDemo() {\n  return (\n    <RadioGroup className=\"flex items-center gap-3\" defaultValue=\"indigo\">\n      <div className=\"flex items-center space-x-2\">\n        <RadioGroupItem\n          className=\"border-green-500 text-green-500 [&_svg]:fill-green-500\"\n          id=\"color-green\"\n          value=\"green\"\n        />\n        <Label htmlFor=\"color-green\">Green</Label>\n      </div>\n      <div className=\"flex items-center space-x-2\">\n        <RadioGroupItem\n          className=\"border-indigo-500 text-indigo-500 [&_svg]:fill-indigo-500\"\n          id=\"color-indigo\"\n          value=\"indigo\"\n        />\n        <Label htmlFor=\"color-indigo\">Indigo</Label>\n      </div>\n      <div className=\"flex items-center space-x-2\">\n        <RadioGroupItem\n          className=\"border-rose-500 text-rose-500 [&_svg]:fill-rose-500\"\n          id=\"color-rose\"\n          value=\"rose\"\n        />\n        <Label htmlFor=\"color-rose\">Rose</Label>\n      </div>\n    </RadioGroup>\n  );\n}\n",
+      "content": "import { Label } from \"@/registry/ui/label\";\nimport { RadioGroup, RadioGroupItem } from \"@/registry/ui/radio-group\";\n\nexport default function RadioGroupColorDemo() {\n  return (\n    <div className=\"flex justify-center\">\n      <RadioGroup className=\"flex items-center gap-3\" defaultValue=\"indigo\">\n        <div className=\"flex items-center space-x-2\">\n          <RadioGroupItem\n            className=\"border-green-500 data-checked:border-green-500 data-checked:bg-green-500 dark:data-checked:border-green-500 dark:data-checked:bg-green-500\"\n            id=\"color-green\"\n            value=\"green\"\n          />\n          <Label htmlFor=\"color-green\">Green</Label>\n        </div>\n        <div className=\"flex items-center space-x-2\">\n          <RadioGroupItem\n            className=\"border-indigo-500 data-checked:border-indigo-500 data-checked:bg-indigo-500 dark:data-checked:border-indigo-500 dark:data-checked:bg-indigo-500\"\n            id=\"color-indigo\"\n            value=\"indigo\"\n          />\n          <Label htmlFor=\"color-indigo\">Indigo</Label>\n        </div>\n        <div className=\"flex items-center space-x-2\">\n          <RadioGroupItem\n            className=\"border-rose-500 data-checked:border-rose-500 data-checked:bg-rose-500 dark:data-checked:border-rose-500 dark:data-checked:bg-rose-500\"\n            id=\"color-rose\"\n            value=\"rose\"\n          />\n          <Label htmlFor=\"color-rose\">Rose</Label>\n        </div>\n      </RadioGroup>\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

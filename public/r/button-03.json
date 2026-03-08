@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-03",
-  "type": "registry:component",
   "title": "Destructive Button",
   "description": "A destructive button component",
   "registryDependencies": [
@@ -13,5 +12,6 @@
       "content": "import { Button } from \"@/registry/ui/button\";\n\nconst DestructiveButtonDemo = () => (\n  <Button variant=\"destructive\">Destructive</Button>\n);\n\nexport default DestructiveButtonDemo;\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

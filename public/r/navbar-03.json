@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "navbar-03",
-  "type": "registry:block",
   "title": "Navbar 03",
   "description": "A simple navbar block",
   "dependencies": [
@@ -40,5 +39,6 @@
       "type": "registry:file",
       "target": "config/navbar.ts"
     }
-  ]
+  ],
+  "type": "registry:block"
 }

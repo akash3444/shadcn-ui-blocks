@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "slider-06",
-  "type": "registry:component",
   "title": "Slider with Label",
   "description": "A slider component with a label",
   "registryDependencies": [
@@ -13,5 +12,6 @@
       "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { Slider } from \"@/registry/ui/slider\";\n\nexport default function SliderWithLabelDemo() {\n  const [progress, setProgress] = useState([30]);\n\n  return (\n    <div className=\"flex w-full max-w-sm items-center gap-2\">\n      <Slider max={100} onValueChange={setProgress} step={1} value={progress} />\n      <span className=\"w-[5ch]\">{progress[0]}%</span>\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

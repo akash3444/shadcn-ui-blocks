@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-02",
-  "type": "registry:component",
   "title": "Secondary Badge",
   "description": "A secondary badge component",
   "registryDependencies": [
@@ -13,5 +12,6 @@
       "content": "import { Badge } from \"@/registry/ui/badge\";\n\nconst BadgeSecondaryDemo = () => {\n  return <Badge variant=\"secondary\">Secondary</Badge>;\n};\n\nexport default BadgeSecondaryDemo;\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

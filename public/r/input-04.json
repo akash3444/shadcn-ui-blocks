@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-04",
-  "type": "registry:component",
   "title": "Disabled Input",
   "description": "A disabled input component",
   "registryDependencies": [
@@ -13,5 +12,6 @@
       "content": "import { Input } from \"@/registry/ui/input\";\n\nexport default function DisabledInputDemo() {\n  return (\n    <Input className=\"max-w-xs\" disabled placeholder=\"Email\" type=\"email\" />\n  );\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

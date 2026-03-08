@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-23",
-  "type": "registry:component",
   "title": "Button with Tap Animation",
   "description": "A button with tap animation component",
   "dependencies": [
@@ -14,8 +13,9 @@
   "files": [
     {
       "path": "src/components/customized/button/button-23.tsx",
-      "content": "import * as motion from \"framer-motion/client\";\nimport { StarIcon } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nconst ButtonsWithTapAnimation = () => (\n  <div className=\"flex flex-wrap items-center gap-2\">\n    <Button asChild>\n      <motion.button whileTap={{ scale: 0.85 }}>Tap</motion.button>\n    </Button>\n    <Button asChild size=\"icon\">\n      <motion.button whileTap={{ scale: 0.85 }}>\n        <StarIcon />\n      </motion.button>\n    </Button>\n    <Button asChild>\n      <motion.button whileTap={{ scale: 0.85 }}>\n        <StarIcon /> Star\n      </motion.button>\n    </Button>\n  </div>\n);\n\nexport default ButtonsWithTapAnimation;\n",
+      "content": "import { StarIcon } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nconst ButtonsWithTapAnimation = () => (\n  <div className=\"flex flex-wrap items-center gap-2\">\n    <Button asChild>\n      <Button className=\"active:scale-95\">Tap</Button>\n    </Button>\n    <Button asChild size=\"icon\">\n      <Button className=\"active:scale-95\">\n        <StarIcon />\n      </Button>\n    </Button>\n    <Button asChild>\n      <Button className=\"active:scale-95\">\n        <StarIcon /> Star\n      </Button>\n    </Button>\n  </div>\n);\n\nexport default ButtonsWithTapAnimation;\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

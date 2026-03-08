@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "checkbox-10",
-  "type": "registry:component",
   "title": "Multi Color Picker Checkbox",
   "description": "A multi color picker checkbox component",
   "dependencies": [
@@ -14,5 +13,6 @@
       "content": "import { CircleCheck } from \"lucide-react\";\nimport { Checkbox as CheckboxPrimitive } from \"radix-ui\";\nimport { cn } from \"@/lib/utils\";\n\nconst colors = [\"indigo\", \"rose\", \"sky\", \"green\", \"orange\"];\n\nconst CheckboxCardDemo = () => {\n  return (\n    <div className=\"flex flex-wrap items-center gap-2\">\n      {colors.map((color) => (\n        <CheckboxPrimitive.Root\n          className={cn(\"h-8 w-8 rounded-full\", {\n            \"bg-indigo-500 text-indigo-500\": color === \"indigo\",\n            \"bg-rose-500 text-rose-500\": color === \"rose\",\n            \"bg-sky-500 text-sky-500\": color === \"sky\",\n            \"bg-green-500 text-green-500\": color === \"green\",\n            \"bg-orange-500 text-orange-500\": color === \"orange\",\n          })}\n          defaultChecked={color === \"indigo\"}\n          key={color}\n        >\n          <CheckboxPrimitive.Indicator className=\"flex h-full w-full items-center justify-center\">\n            <CircleCheck className=\"h-5 w-5 fill-white stroke-current\" />\n          </CheckboxPrimitive.Indicator>\n        </CheckboxPrimitive.Root>\n      ))}\n    </div>\n  );\n};\n\nexport default CheckboxCardDemo;\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

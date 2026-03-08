@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-otp-03",
-  "type": "registry:component",
   "title": "Separated OTP Input",
   "description": "An OTP input with separated input fields",
   "registryDependencies": [
@@ -13,5 +12,6 @@
       "content": "import { InputOTP, InputOTPGroup, InputOTPSlot } from \"@/registry/ui/input-otp\";\n\nexport default function InputOTPDemo() {\n  return (\n    <InputOTP maxLength={6}>\n      <InputOTPGroup className=\"space-x-2\">\n        <InputOTPSlot className=\"rounded-md border-l\" index={0} />\n        <InputOTPSlot className=\"rounded-md border-l\" index={1} />\n        <InputOTPSlot className=\"rounded-md border-l\" index={2} />\n        <InputOTPSlot className=\"rounded-md border-l\" index={3} />\n      </InputOTPGroup>\n    </InputOTP>\n  );\n}\n",
       "type": "registry:component"
     }
-  ]
+  ],
+  "type": "registry:component"
 }
