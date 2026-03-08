@@ -14,8 +14,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Logo } from "../logo";
-import { VersionSwitcher } from "../version-switcher";
-
 export function NavigationSheet() {
   const [open, setOpen] = useState(false);
 
@@ -70,11 +68,6 @@ export function NavigationSheet() {
             >
               OG Images
             </Link>
-
-            <div className="border-t pt-4">
-              <div className="mb-3 font-semibold">Version</div>
-              <VersionSwitcher className="w-full" />
-            </div>
           </div>
         </ScrollArea>
       </SheetContent>

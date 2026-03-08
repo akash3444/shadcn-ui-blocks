@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 import { ThemeToggle } from "../app-sidebar/theme-toggle";
 import { GithubStarButton } from "../github-star-button";
 import { Logo } from "../logo";
-import { VersionSwitcher } from "../version-switcher";
 import { AppNavigationMenu } from "./app-navigation-menu";
 import { NavigationSheet } from "./navigation-sheet";
 
@@ -42,9 +41,6 @@ export const Navbar = ({ className }: { className?: string }) => {
             </Link>
           </Button>
           <GithubStarButton size="icon-sm" />
-          <div className="hidden sm:block">
-            <VersionSwitcher variant="compact" />
-          </div>
           <ThemeToggle size="icon-sm" />
           <div className="block md:hidden">
             <NavigationSheet />
