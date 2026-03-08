@@ -87,7 +87,7 @@ const BlockCategoryPage = async (props: {
 
   return (
     <>
-      <Navbar />
+      <Navbar className="w-full max-w-384 px-6" />
       <div className="mx-auto max-w-(--breakpoint-2xl) py-12 sm:py-16">
         <Suspense fallback={null}>
           <BlockPreviewList />

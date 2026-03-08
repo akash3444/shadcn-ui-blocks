@@ -1,4 +1,4 @@
-import { blocks, type RegistryBlock } from "@/config/registry";
+import { blocks, categories as registryCategories, type RegistryBlock } from "@/config/registry";
 
 const getBlocksData = () => {
   const categories = [];
@@ -17,8 +17,10 @@ const getBlocksData = () => {
 
   // Generate categories
   for (const category in categorizedBlocks) {
-    const blocks = categorizedBlocks[category];
-    categories.push({ name: category, totalBlocks: blocks.length });
+    const categoryBlocks = categorizedBlocks[category];
+    const registryCategory = registryCategories[category as keyof typeof registryCategories];
+    const title = registryCategory?.title ?? category;
+    categories.push({ name: category, title, totalBlocks: categoryBlocks.length });
   }
 
   const alphabeticallySortedCategories = categories.sort((a, b) =>

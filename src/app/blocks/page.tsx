@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
-import BlockPreviewList from "@/components/blocks/category/block-preview-list";
+import BlockCategoryGrid from "@/components/blocks/category/block-category-grid";
 import { Navbar } from "@/components/layout/navbar";
 import { absoluteUrl } from "@/lib/utils";
 
@@ -15,11 +14,9 @@ export const metadata: Metadata = {
 
 const BlocksPage = () => (
   <>
-    <Navbar />
+    <Navbar className="w-full max-w-384 px-6" />
     <div className="mx-auto max-w-(--breakpoint-2xl) py-12 sm:py-16">
-      <Suspense fallback={null}>
-        <BlockPreviewList />
-      </Suspense>
+      <BlockCategoryGrid />
     </div>
   </>
 );
