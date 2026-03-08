@@ -55,12 +55,12 @@ export const CodeInstallationCommandTabs = ({
           key={tab.value}
           value={tab.value}
         >
-          <div className="flex h-10 items-center justify-between gap-2 rounded-md pr-1.5 pl-3">
+          <div className="flex h-10 items-center justify-between gap-2 rounded-md pr-1 pl-3">
             <code className="line-clamp-1 grow text-[13px]">
               {getInstallationCommand(tab.value, registryUrl)}
             </code>
             <Button
-              className="h-7 w-7 shrink-0"
+              className="size-8 shrink-0 rounded-md"
               onClick={() => {
                 copyToClipboard(getInstallationCommand(tab.value, registryUrl));
               }}
