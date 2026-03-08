@@ -4,15 +4,15 @@ import { Badge } from "@/registry/ui/badge";
 const BadgeWithIconDemo = () => {
   return (
     <div className="flex flex-wrap items-center gap-3">
-      <Badge className="gap-1.5 rounded-full pl-1">
+      <Badge>
         <ArrowLeftIcon className="h-4 w-4" />
         Left
       </Badge>
-      <Badge className="gap-1.5 rounded-full pr-1">
+      <Badge>
         Right
         <ArrowRightIcon className="h-4 w-4" />
       </Badge>
-      <Badge className="gap-1.5 rounded-full pr-1">
+      <Badge variant="destructive">
         Remove
         <XIcon className="h-4 w-4" />
       </Badge>

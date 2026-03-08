@@ -11,7 +11,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/registry/ui/alert-dialog";
-import { Button, buttonVariants } from "@/registry/ui/button";
+import { Button } from "@/registry/ui/button";
 
 export default function AlertDialogWithCustomizedHeader() {
   return (
@@ -20,16 +20,12 @@ export default function AlertDialogWithCustomizedHeader() {
         <Button variant="outline">Show Dialog</Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
-        <div className="-mx-6 -mt-3 flex items-center justify-between border-b px-6 pb-3">
+        <div className="-mx-4 -mt-1 flex items-center justify-between border-b px-4 pb-3">
           <AlertDialogTitle>Delete Account</AlertDialogTitle>
-          <AlertDialogPrimitive.Cancel
-            className={buttonVariants({
-              variant: "ghost",
-              size: "icon",
-              className: "h-7! w-7!",
-            })}
-          >
-            <X />
+          <AlertDialogPrimitive.Cancel asChild>
+            <Button size="icon-sm" variant="ghost">
+              <X />
+            </Button>
           </AlertDialogPrimitive.Cancel>
         </div>
         <AlertDialogHeader className="pt-2">
@@ -45,8 +41,8 @@ export default function AlertDialogWithCustomizedHeader() {
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter className="mt-2">
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction>Continue</AlertDialogAction>
+          <AlertDialogCancel variant="ghost">Cancel</AlertDialogCancel>
+          <AlertDialogAction variant="destructive">Continue</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

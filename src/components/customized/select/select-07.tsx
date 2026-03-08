@@ -17,6 +17,7 @@ import {
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue,
@@ -114,11 +115,13 @@ export function SelectWithForm<K>({
             </FormControl>
 
             <SelectContent>
-              {options.map((item) => (
-                <SelectItem key={`${name}_${item.id}`} value={item.id}>
-                  {item.name}
-                </SelectItem>
-              ))}
+              <SelectGroup>
+                {options.map((item) => (
+                  <SelectItem key={`${name}_${item.id}`} value={item.id}>
+                    {item.name}
+                  </SelectItem>
+                ))}
+              </SelectGroup>
             </SelectContent>
           </Select>
           <FormMessage />

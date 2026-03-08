@@ -29,7 +29,7 @@ export default function NavigationMenuWithActiveItem() {
                 "hover:text-accent-foreground hover:before:scale-x-100",
                 "focus:text-accent-foreground focus:outline-hidden focus:before:scale-x-100",
                 "disabled:pointer-events-none disabled:opacity-50",
-                "data-[state=open]:before:scale-x-100 data-active:before:scale-x-100",
+                "data-active:bg-transparent data-[state=open]:before:scale-x-100 data-active:before:scale-x-100",
                 "hover:bg-transparent focus:bg-transparent active:bg-transparent"
               )}
             >

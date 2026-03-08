@@ -75,7 +75,7 @@ export default function RichNavigationMenu() {
           <NavigationMenuTrigger>Products</NavigationMenuTrigger>
           <NavigationMenuContent className="px-0 py-1">
             <div className="grid w-[900px] grid-cols-3 gap-3 divide-x p-4">
-              <div className="col-span-2">
+              <div className="col-span-2 pe-2">
                 <h6 className="pl-2.5 font-semibold text-muted-foreground text-sm uppercase">
                   Capabilities
                 </h6>
@@ -154,7 +154,7 @@ const ListItem = React.forwardRef<
       <NavigationMenuLink asChild>
         <a
           className={cn(
-            "block select-none rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none flex-col items-start rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
           ref={ref}

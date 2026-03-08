@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { Card, CardContent } from "@/registry/ui/card";
 import {
   Carousel,
   type CarouselApi,
@@ -12,17 +11,23 @@ import {
   CarouselPrevious,
 } from "@/registry/ui/carousel";
 
+const images = [
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-248.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-051.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-029.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-038.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-012.jpg",
+];
+
 export default function CarouselWithThumbs() {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
-  const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
     if (!api) {
       return;
     }
 
-    setCount(api.scrollSnapList().length);
     setCurrent(api.selectedScrollSnap() + 1);
 
     api.on("select", () => {
@@ -41,13 +46,13 @@ export default function CarouselWithThumbs() {
     <div className="mx-auto max-w-xs">
       <Carousel className="w-full max-w-xs" setApi={setApi}>
         <CarouselContent>
-          {Array.from({ length: 12 }).map((_, index) => (
-            <CarouselItem key={index}>
-              <Card>
-                <CardContent className="flex aspect-video items-center justify-center p-6">
-                  <span className="font-semibold text-4xl">{index + 1}</span>
-                </CardContent>
-              </Card>
+          {images.map((image) => (
+            <CarouselItem key={image}>
+              <img
+                alt="dddepth-248"
+                className="size-full rounded-xl object-cover"
+                src={image}
+              />
             </CarouselItem>
           ))}
         </CarouselContent>
@@ -55,20 +60,20 @@ export default function CarouselWithThumbs() {
 
       <Carousel className="mt-4 w-full max-w-xs">
         <CarouselContent className="my-1 flex">
-          {Array.from({ length: count }).map((_, index) => (
+          {images.map((image, index) => (
             <CarouselItem
               className={cn(
-                "basis-1/4 cursor-pointer",
+                "basis-1/4 cursor-pointer transition-opacity",
                 current === index + 1 ? "opacity-100" : "opacity-50"
               )}
-              key={index}
+              key={image}
               onClick={() => handleThumbClick(index)}
             >
-              <Card className="flex aspect-square items-center justify-center p-0">
-                <CardContent className="flex items-center justify-center p-0">
-                  <div className="font-semibold text-2xl">{index + 1}</div>
-                </CardContent>
-              </Card>
+              <img
+                alt="dddepth-248"
+                className="size-full rounded-xl object-cover"
+                src={image}
+              />
             </CarouselItem>
           ))}
         </CarouselContent>

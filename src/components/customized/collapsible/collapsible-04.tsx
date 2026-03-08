@@ -25,7 +25,7 @@ interface PriceRange {
 
 const CollapsibleFilters = () => {
   return (
-    <div className="w-full max-w-xs divide-y-2">
+    <div className="w-full max-w-xs divide-y">
       <PriceRangeFilter />
       <CategoryFilter />
       <RatingFilter />

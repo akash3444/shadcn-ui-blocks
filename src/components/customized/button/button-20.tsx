@@ -9,15 +9,11 @@ const CopyButton = () => {
   const link = "https://www.shadcnui-blocks.com";
 
   return (
-    <div className="flex items-center overflow-hidden rounded-full border p-1">
-      <p className="max-w-[25ch] overflow-hidden text-ellipsis whitespace-nowrap pr-2 pl-4 text-sm">
+    <div className="flex items-center overflow-hidden rounded-xl border p-0.75 ps-0">
+      <p className="max-w-[25ch] select-all overflow-hidden text-ellipsis whitespace-nowrap pr-2 pl-3 text-sm">
         {link}
       </p>
-      <Button
-        className="rounded-full"
-        onClick={() => copyToClipboard(link)}
-        size="icon"
-      >
+      <Button onClick={() => copyToClipboard(link)} size="icon">
         {isCopied ? <Check /> : <Copy />}
       </Button>
     </div>

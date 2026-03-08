@@ -28,7 +28,7 @@ export default function VerticalTabsDemo() {
     >
       <TabsList className="grid h-auto w-fit shrink-0 grid-cols-1 gap-1">
         {tabs.map((tab) => (
-          <TabsTrigger className="py-1.5" key={tab.value} value={tab.value}>
+          <TabsTrigger className="ps-2.5" key={tab.value} value={tab.value}>
             {tab.name}
           </TabsTrigger>
         ))}

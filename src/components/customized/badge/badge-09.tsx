@@ -3,14 +3,14 @@ import { Badge } from "@/registry/ui/badge";
 const StatusBadgeDemo = () => {
   return (
     <div className="flex flex-wrap items-center gap-3">
-      <Badge className="gap-1.5 rounded-full border-amber-600/40 bg-amber-600/10 text-amber-500 shadow-none hover:bg-amber-600/10 dark:bg-amber-600/20">
-        <div className="h-1.5 w-1.5 rounded-full bg-amber-500" /> In Progress
+      <Badge className="gap-1.5 border-amber-600/40 bg-amber-600/10 text-amber-500 shadow-none hover:bg-amber-600/10 dark:bg-amber-600/20">
+        <div className="size-1.5 rounded-full bg-amber-500" /> In Progress
       </Badge>
-      <Badge className="gap-1.5 rounded-full border-red-600/40 bg-red-600/10 text-red-500 shadow-none hover:bg-red-600/10 dark:bg-red-600/30">
-        <div className="h-1.5 w-1.5 rounded-full bg-red-500" /> Blocked
+      <Badge className="gap-1.5 border-destructive/30" variant="destructive">
+        <div className="size-1.5 rounded-full bg-red-400" /> Blocked
       </Badge>
-      <Badge className="gap-1.5 rounded-full border-emerald-600/40 bg-emerald-600/10 text-emerald-500 shadow-none hover:bg-emerald-600/10 dark:bg-emerald-600/20">
-        <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Done
+      <Badge className="gap-1.5 border-emerald-600/40 bg-emerald-600/10 text-emerald-500 shadow-none hover:bg-emerald-600/10 dark:bg-emerald-600/20">
+        <div className="size-1.5 rounded-full bg-emerald-500" /> Done
       </Badge>
     </div>
   );

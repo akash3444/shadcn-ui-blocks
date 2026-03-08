@@ -28,7 +28,7 @@ const tabs = [
 export default function TabsShadowDemo() {
   return (
     <Tabs className="w-full max-w-xs" defaultValue={tabs[0].value}>
-      <TabsList className="h-auto gap-1 bg-background p-0">
+      <TabsList className="gap-1 bg-background p-0 group-data-horizontal/tabs:h-7">
         {tabs.map((tab) => (
           <TabsTrigger
             className="data-[state=active]:shadow-[0_0_8px_1px_rgba(0,0,0,0.1)] dark:data-[state=active]:shadow-[0_0_8px_1px_rgba(255,255,255,0.2)]"

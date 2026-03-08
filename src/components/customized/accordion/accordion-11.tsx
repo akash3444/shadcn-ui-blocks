@@ -1,4 +1,4 @@
-import { Contrast, Palette, Zap } from "lucide-react";
+import { RotateCcw, ShoppingCart, Truck } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -8,21 +8,22 @@ import {
 
 const items = [
   {
-    title: "Is it accessible?",
-    content: "Yes. It adheres to the WAI-ARIA design pattern.",
-    icon: Contrast,
+    title: "Can I change or cancel my order after placing it?",
+    content:
+      "Yes, you can change or cancel your order within 1 hour of placement by visiting your account page or contacting our support team. After that, orders may already be processed for shipping.",
+    icon: ShoppingCart,
   },
   {
-    title: "Is it styled?",
+    title: "How long does shipping usually take?",
     content:
-      "Yes. It comes with default styles that matches the other components' aesthetic.",
-    icon: Palette,
+      "Domestic shipping typically takes 3-5 business days, while international orders may take up to 2-3 weeks depending on your location and customs processing times.",
+    icon: Truck,
   },
   {
-    title: "Is it animated?",
+    title: "What is your return policy?",
     content:
-      "Yes. It's animated by default, but you can disable it if you prefer.",
-    icon: Zap,
+      "We offer a 30-day return policy for most products. Items must be unused and in their original packaging. To initiate a return, simply contact our support with your order details.",
+    icon: RotateCcw,
   },
 ];
 
@@ -42,7 +43,9 @@ export default function AccordionMediaContentDemo() {
               {title}
             </div>
           </AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="relative pl-9">
+            <div className="absolute top-0 bottom-3 left-3 w-px border-l border-dashed" />
+
             {content}
             <div className="mt-4 aspect-18/9 w-full rounded-xl bg-muted" />
           </AccordionContent>

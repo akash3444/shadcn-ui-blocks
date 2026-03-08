@@ -30,7 +30,8 @@ export default function NavigationMenuWithIcon() {
                   size: "icon",
                   variant: item.isActive ? "secondary" : "ghost",
                 }),
-                "h-11 w-11"
+                "h-11 w-11",
+                !item.isActive && "text-muted-foreground"
               )}
             >
               <Link href={item.href}>

@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/registry/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -7,18 +6,26 @@ import {
   CarouselPrevious,
 } from "@/registry/ui/carousel";
 
+const images = [
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-248.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-051.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-029.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-038.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-012.jpg",
+];
+
 export default function CarouselDemo() {
   return (
     <Carousel className="w-full max-w-xs">
       <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-video items-center justify-center p-6">
-                  <span className="font-semibold text-4xl">{index + 1}</span>
-                </CardContent>
-              </Card>
+        {images.map((image) => (
+          <CarouselItem key={image}>
+            <div className="aspect-14/9 p-1">
+              <img
+                alt="dddepth-248"
+                className="size-full rounded-xl object-cover"
+                src={image}
+              />
             </div>
           </CarouselItem>
         ))}

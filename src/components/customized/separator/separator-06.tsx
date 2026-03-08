@@ -14,11 +14,11 @@ export default function SeparatorWithChipVertical() {
         <Button>Get Started</Button>
       </div>
       <div className="flex h-full shrink-0 flex-col items-center justify-center gap-2 overflow-hidden">
-        <Separator orientation="vertical" />
+        <Separator className="mx-auto h-full" orientation="vertical" />
         <span className="rounded-full border bg-muted p-1.5 text-center text-xs">
           OR
         </span>
-        <Separator orientation="vertical" />
+        <Separator className="mx-auto h-full" orientation="vertical" />
       </div>
 
       <div className="grid w-full gap-2">

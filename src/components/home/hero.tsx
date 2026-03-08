@@ -26,7 +26,7 @@ export const Hero = () => {
           <Button
             asChild
             className="group z-10 w-full gap-3 sm:w-auto"
-            size="xl"
+            size="lg"
           >
             <Link href="/blocks">
               Explore Blocks{" "}
@@ -36,7 +36,7 @@ export const Hero = () => {
           <Button
             asChild
             className="group z-10 w-full gap-3 sm:w-auto"
-            size="xl"
+            size="lg"
             variant="outline"
           >
             <Link href="/components/accordion">

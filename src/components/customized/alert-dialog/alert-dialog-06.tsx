@@ -1,4 +1,4 @@
-import { ExternalLink, OctagonAlert, Trash, X } from "lucide-react";
+import { ExternalLink, OctagonAlert, Trash } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -10,7 +10,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/registry/ui/alert-dialog";
-import { Button, buttonVariants } from "@/registry/ui/button";
+import { Button } from "@/registry/ui/button";
 
 export default function AlertDialogWithCustomizedFooter() {
   return (
@@ -18,7 +18,7 @@ export default function AlertDialogWithCustomizedFooter() {
       <AlertDialogTrigger asChild>
         <Button variant="outline">Show Dialog</Button>
       </AlertDialogTrigger>
-      <AlertDialogContent className="overflow-hidden">
+      <AlertDialogContent className="max-w-md!">
         <AlertDialogHeader className="pb-4">
           <AlertDialogTitle>
             <div className="mx-auto mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-destructive/10 sm:mx-0">
@@ -31,19 +31,15 @@ export default function AlertDialogWithCustomizedFooter() {
             account and remove your data from our servers.
           </AlertDialogDescription>
         </AlertDialogHeader>
-        <AlertDialogFooter className="-mx-6 -mb-6 border-t px-6 py-5">
+        <AlertDialogFooter className="border-t">
           <Button
             className="mr-auto -ml-3 text-muted-foreground"
             variant="link"
           >
             Learn more <ExternalLink />
           </Button>
-          <AlertDialogCancel>
-            <X /> Cancel
-          </AlertDialogCancel>
-          <AlertDialogAction
-            className={buttonVariants({ variant: "destructive" })}
-          >
+          <AlertDialogCancel variant="ghost">Cancel</AlertDialogCancel>
+          <AlertDialogAction variant="destructive">
             <Trash />
             Continue
           </AlertDialogAction>

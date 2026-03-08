@@ -3,15 +3,15 @@ import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/tabs";
 export default function TabsMobileNavigationDemo() {
   return (
     <Tabs className="w-full max-w-xs" defaultValue={tabs[0].value}>
-      <TabsList className="grid h-14 w-full grid-cols-4 justify-start rounded-none bg-background p-0">
+      <TabsList className="grid w-full grid-cols-4 justify-start rounded-none bg-background py-0">
         {tabs.map((tab) => (
           <TabsTrigger
-            className="flex h-full flex-col rounded-none border-transparent border-b-2 bg-background data-[state=active]:border-primary data-[state=active]:shadow-none [&>svg]:h-5 [&>svg]:w-5 [&>svg]:shrink-0"
+            className="flex h-full flex-col rounded-none border-transparent border-b-2 bg-background py-2 data-[state=active]:border-primary data-[state=active]:shadow-none [&>svg]:h-5 [&>svg]:w-5 [&>svg]:shrink-0"
             key={tab.value}
             value={tab.value}
           >
             {tab.icon}
-            <code className="mt-1.5 text-[13px]">{tab.name}</code>
+            <code className="mt-0.5 text-[13px]">{tab.name}</code>
           </TabsTrigger>
         ))}
       </TabsList>

@@ -28,7 +28,7 @@ const tabs = [
 export default function TabsBorderedDemo() {
   return (
     <Tabs className="w-full max-w-xs" defaultValue={tabs[0].value}>
-      <TabsList className="h-auto gap-1 bg-background p-0">
+      <TabsList className="gap-1 bg-background p-0 group-data-horizontal/tabs:h-7">
         {tabs.map((tab) => (
           <TabsTrigger
             className="border border-transparent data-[state=active]:border-border data-[state=active]:shadow-none"

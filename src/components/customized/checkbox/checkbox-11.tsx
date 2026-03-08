@@ -25,7 +25,7 @@ const CheckboxCardDemo = () => {
     <div className="grid w-full max-w-sm grid-cols-3 gap-3">
       {options.map((option) => (
         <CheckboxPrimitive.Root
-          className="relative rounded-lg border border-dashed px-4 py-3 text-start text-muted-foreground data-[state=checked]:border-primary data-[state=checked]:border-solid data-[state=checked]:bg-primary/4 data-[state=checked]:text-primary data-[state=checked]:ring data-[state=checked]:ring-primary"
+          className="relative rounded-lg border border-dashed px-4 py-3 text-start text-muted-foreground data-[state=checked]:border-primary data-[state=checked]:border-solid data-[state=checked]:bg-primary/4 data-[state=checked]:text-primary data-[state=checked]:ring dark:data-[state=checked]:ring-transparent"
           defaultChecked={option.defaultChecked}
           key={option.value}
         >

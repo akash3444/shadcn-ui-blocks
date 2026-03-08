@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/registry/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -6,6 +5,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/registry/ui/carousel";
+
+const images = [
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-248.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-051.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-029.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-038.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-012.jpg",
+];
 
 export default function CarouselWithMultipleSlides() {
   return (
@@ -15,15 +22,15 @@ export default function CarouselWithMultipleSlides() {
         align: "start",
       }}
     >
-      <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="font-semibold text-3xl">{index + 1}</span>
-                </CardContent>
-              </Card>
+      <CarouselContent className="-ml-2">
+        {images.map((image) => (
+          <CarouselItem className="pl-2 md:basis-1/2 lg:basis-1/3" key={image}>
+            <div className="aspect-square p-1">
+              <img
+                alt="dddepth-248"
+                className="size-full rounded-xl object-cover"
+                src={image}
+              />
             </div>
           </CarouselItem>
         ))}

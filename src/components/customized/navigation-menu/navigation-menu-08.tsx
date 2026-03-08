@@ -20,7 +20,7 @@ const navigationMenuItems = [
 export default function NavigationMenuMobile() {
   return (
     <NavigationMenu>
-      <NavigationMenuList>
+      <NavigationMenuList className="gap-1">
         {navigationMenuItems.map((item) => (
           <NavigationMenuItem key={item.title}>
             <NavigationMenuLink
@@ -28,11 +28,11 @@ export default function NavigationMenuMobile() {
               asChild
               className={cn(
                 navigationMenuTriggerStyle(),
-                "flex h-auto flex-col items-center px-5 py-2.5"
+                "flex h-auto flex-col items-center px-5 py-3"
               )}
             >
               <Link href={item.href}>
-                <item.icon className="mb-1.5 size-5" />
+                <item.icon className="mb-0.5 size-5" />
                 {item.title}
               </Link>
             </NavigationMenuLink>

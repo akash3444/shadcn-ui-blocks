@@ -24,11 +24,11 @@ const VerticalBorderedTabs = () => {
       defaultValue={tabs[0].value}
       orientation="vertical"
     >
-      <TabsList className="grid h-auto w-fit shrink-0 grid-cols-1 divide-y border p-0">
+      <TabsList className="flex h-auto shrink-0 flex-col divide-y border p-0">
         {tabs.map((item) => (
           <TabsTrigger
             className={cn(
-              "h-10 w-11 rounded-none bg-background p-0 first:rounded-t-md last:rounded-b-md",
+              "h-10 rounded-none bg-background px-2.5 py-2 first:rounded-t-md last:rounded-b-md",
               "data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
             )}
             key={item.value}
@@ -39,7 +39,7 @@ const VerticalBorderedTabs = () => {
         ))}
       </TabsList>
 
-      <div className="flex aspect-square w-full max-w-48 grow items-center justify-center rounded-lg border p-6">
+      <div className="flex aspect-14/9 w-full max-w-60 grow items-center justify-center rounded-lg border p-6">
         {tabs.map((item) => (
           <TabsContent key={item.value} value={item.value}>
             <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted">

@@ -8,7 +8,7 @@ import {
   Settings2,
   User,
 } from "lucide-react";
-import { Avatar, AvatarFallback } from "@/registry/ui/avatar";
+import { Avatar, AvatarImage } from "@/registry/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -27,9 +27,7 @@ export default function ComplexDropdownMenu() {
     <DropdownMenu>
       <DropdownMenuTrigger className="flex items-center gap-3">
         <Avatar>
-          <AvatarFallback className="bg-primary text-primary-foreground">
-            M
-          </AvatarFallback>
+          <AvatarImage src="https://github.com/shadcn.png" />
         </Avatar>
         <div className="flex flex-col text-start">
           <p className="font-medium text-sm">My Workspace</p>
@@ -39,9 +37,7 @@ export default function ComplexDropdownMenu() {
       <DropdownMenuContent className="mt-2 w-72">
         <DropdownMenuItem className="py-3">
           <Avatar>
-            <AvatarFallback className="bg-primary text-primary-foreground">
-              MW
-            </AvatarFallback>
+            <AvatarImage src="https://github.com/shadcn.png" />
           </Avatar>
           <div className="ml-1 flex flex-col">
             <p className="font-medium text-sm">My Workspace</p>

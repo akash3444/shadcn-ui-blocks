@@ -22,7 +22,7 @@ const CheckboxCardDemo = () => {
         {days.map((day) => (
           <CheckboxPrimitive.Root
             className={cn(
-              "size-9 cursor-pointer rounded-full border bg-background text-sm",
+              "size-9 cursor-pointer rounded-full border bg-background text-sm transition-colors",
               "data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
             )}
             defaultChecked={day.value === "monday" || day.value === "tuesday"}

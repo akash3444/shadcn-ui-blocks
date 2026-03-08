@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
 export default function TabsIconDemo() {
   return (
     <Tabs className="w-full max-w-xs" defaultValue={tabs[0].value}>
-      <TabsList className="p-1">
+      <TabsList className="p-1 group-data-horizontal/tabs:h-9">
         {tabs.map((tab) => (
           <TabsTrigger
             className="px-2.5 sm:px-3"

@@ -14,7 +14,7 @@ export default function PricingCard() {
   return (
     <Card className="w-full max-w-xs shadow-border/70 shadow-md">
       <CardHeader>
-        <CardTitle className="font-bold text-2xl tracking-tight">
+        <CardTitle className="font-semibold text-2xl tracking-tight">
           Pro Plan
         </CardTitle>
         <CardDescription>
@@ -24,7 +24,7 @@ export default function PricingCard() {
         </CardDescription>
       </CardHeader>
       <CardContent className="flex items-end text-muted-foreground text-sm leading-6">
-        <span className="font-bold text-4xl text-foreground leading-none">
+        <span className="mt-1 font-semibold text-4xl text-foreground leading-none">
           $20
         </span>
         <span className="mr-1.5 ml-0.5">/mo</span>

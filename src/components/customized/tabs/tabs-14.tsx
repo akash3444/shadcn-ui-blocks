@@ -34,11 +34,11 @@ export default function VerticalLeftBorderedTabsDemo() {
       <TabsList className="grid min-w-28 shrink-0 grid-cols-1 bg-background p-0">
         {tabs.map((tab) => (
           <TabsTrigger
-            className="justify-start rounded-none border-transparent border-l-2 py-1.5 data-[state=active]:border-primary data-[state=active]:bg-primary/5 data-[state=active]:shadow-none"
+            className="justify-start rounded-none border-0 border-transparent border-l-2 py-1.5 ps-2.5 data-[state=active]:border-primary data-[state=active]:bg-primary/5 data-[state=active]:shadow-none group-data-[variant=default]/tabs-list:data-active:shadow-none"
             key={tab.value}
             value={tab.value}
           >
-            <tab.icon className="me-2 h-5 w-5" /> {tab.name}
+            <tab.icon className="me-2 size-5" /> {tab.name}
           </TabsTrigger>
         ))}
       </TabsList>

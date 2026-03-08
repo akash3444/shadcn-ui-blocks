@@ -31,7 +31,7 @@ export default function TabsBootstrapDemo() {
       <TabsList className="w-full justify-start rounded-none border-b bg-background p-0">
         {tabs.map((tab) => (
           <TabsTrigger
-            className="-mb-[2px] h-full rounded-none rounded-t border border-transparent border-b-border bg-background data-[state=active]:border-border data-[state=active]:border-b-background data-[state=active]:shadow-none"
+            className="-mb-0.5 h-full rounded-none rounded-t border border-b-border bg-background group-data-[variant=default]/tabs-list:rounded-b-none group-data-[variant=default]/tabs-list:data-active:border-border group-data-[variant=default]/tabs-list:data-active:border-b-background group-data-[variant=default]/tabs-list:data-active:shadow-none"
             key={tab.value}
             value={tab.value}
           >

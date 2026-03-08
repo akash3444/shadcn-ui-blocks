@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { Card, CardContent } from "@/registry/ui/card";
 import {
   Carousel,
   type CarouselApi,
@@ -11,6 +10,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/registry/ui/carousel";
+
+const images = [
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-248.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-051.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-029.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-038.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-012.jpg",
+];
 
 export default function SlideOpacity() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -29,33 +36,31 @@ export default function SlideOpacity() {
   }, [api]);
 
   return (
-    <div className="mx-auto max-w-xs">
-      <Carousel
-        className="mx-2 w-full max-w-xs"
-        opts={{ loop: true }}
-        setApi={setApi}
-      >
+    <Carousel
+      className="mx-2 w-full max-w-md"
+      opts={{ loop: true }}
+      setApi={setApi}
+    >
+      <div className="mask-x-from-90%">
         <CarouselContent>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem className="basis-3/5" key={index}>
-              <Card
-                className={cn(
-                  "bg-primary text-primary-foreground transition-all duration-500",
-                  {
-                    "opacity-30": index !== current - 1,
-                  }
-                )}
-              >
-                <CardContent className="flex aspect-video items-center justify-center p-6">
-                  <span className="font-semibold text-4xl">{index + 1}</span>
-                </CardContent>
-              </Card>
+          {images.map((image, index) => (
+            <CarouselItem
+              className={cn("basis-3/5 transition-opacity", {
+                "opacity-30": index !== current - 1,
+              })}
+              key={image}
+            >
+              <img
+                alt="dddepth-248"
+                className="size-full rounded-xl object-cover"
+                src={image}
+              />
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </div>
+      </div>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
   );
 }

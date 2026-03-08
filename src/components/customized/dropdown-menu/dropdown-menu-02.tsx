@@ -1,5 +1,5 @@
 import { LogOut, Settings, User } from "lucide-react";
-import { Avatar, AvatarFallback } from "@/registry/ui/avatar";
+import { Avatar, AvatarImage } from "@/registry/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,7 +14,7 @@ export default function DropdownMenuWithIcon() {
     <DropdownMenu>
       <DropdownMenuTrigger className="rounded-full focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2">
         <Avatar>
-          <AvatarFallback>A</AvatarFallback>
+          <AvatarImage src="https://github.com/shadcn.png" />
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
@@ -26,7 +26,7 @@ export default function DropdownMenuWithIcon() {
         <DropdownMenuItem>
           <Settings className="h-4 w-4" /> Settings
         </DropdownMenuItem>
-        <DropdownMenuItem className="text-destructive">
+        <DropdownMenuItem variant="destructive">
           <LogOut className="h-4 w-4" /> Logout
         </DropdownMenuItem>
       </DropdownMenuContent>

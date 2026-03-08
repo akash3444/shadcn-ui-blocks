@@ -28,7 +28,7 @@ const tabs = [
 export default function TabsBoxDemo() {
   return (
     <Tabs className="w-full max-w-xs" defaultValue={tabs[0].value}>
-      <TabsList className="h-auto gap-1 border bg-background p-1">
+      <TabsList className="gap-1 border bg-background p-1 group-data-horizontal/tabs:h-9">
         {tabs.map((tab) => (
           <TabsTrigger
             className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"

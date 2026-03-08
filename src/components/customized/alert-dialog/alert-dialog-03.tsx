@@ -10,7 +10,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/registry/ui/alert-dialog";
-import { Button, buttonVariants } from "@/registry/ui/button";
+import { Button } from "@/registry/ui/button";
 
 export default function AlertDialogDestructive() {
   return (
@@ -19,12 +19,14 @@ export default function AlertDialogDestructive() {
         <Button variant="outline">Show Dialog</Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
-        <AlertDialogHeader className="items-center">
-          <AlertDialogTitle>
-            <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-destructive/10">
-              <OctagonAlert className="h-7 w-7 text-destructive" />
+        <AlertDialogHeader>
+          <AlertDialogTitle className="w-full">
+            <div>
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-destructive/10">
+                <OctagonAlert className="h-7 w-7 text-destructive" />
+              </div>
+              <p className="text-center">Are you absolutely sure?</p>
             </div>
-            Are you absolutely sure?
           </AlertDialogTitle>
           <AlertDialogDescription className="text-center text-[15px]">
             This action cannot be undone. This will permanently delete your
@@ -32,12 +34,8 @@ export default function AlertDialogDestructive() {
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter className="mt-2 sm:justify-center">
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction
-            className={buttonVariants({ variant: "destructive" })}
-          >
-            Continue
-          </AlertDialogAction>
+          <AlertDialogCancel variant="ghost">Cancel</AlertDialogCancel>
+          <AlertDialogAction variant="destructive">Continue</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

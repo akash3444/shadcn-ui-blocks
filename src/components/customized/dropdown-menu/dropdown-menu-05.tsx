@@ -27,7 +27,7 @@ export default function DropdownMenuWithSubMenu() {
           <Ellipsis />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="mt-2">
+      <DropdownMenuContent className="mt-2 w-full">
         <DropdownMenuItem>
           <Eye /> Open conversation details
         </DropdownMenuItem>

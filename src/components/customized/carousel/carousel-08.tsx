@@ -1,8 +1,6 @@
 "use client";
 
 import * as React from "react";
-
-import { Card, CardContent } from "@/registry/ui/card";
 import {
   Carousel,
   type CarouselApi,
@@ -13,6 +11,13 @@ import {
 } from "@/registry/ui/carousel";
 import { Progress } from "@/registry/ui/progress";
 
+const images = [
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-248.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-051.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-029.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-038.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-012.jpg",
+];
 export default function CarouselWithProgress() {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
@@ -37,20 +42,20 @@ export default function CarouselWithProgress() {
     <div className="mx-auto max-w-xs py-4">
       <Carousel className="w-full max-w-xs" setApi={setApi}>
         <CarouselContent>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index}>
-              <Card>
-                <CardContent className="flex aspect-video items-center justify-center p-6">
-                  <span className="font-semibold text-4xl">{index + 1}</span>
-                </CardContent>
-              </Card>
+          {images.map((image) => (
+            <CarouselItem key={image}>
+              <img
+                alt="dddepth-248"
+                className="size-full rounded-xl object-cover"
+                src={image}
+              />
             </CarouselItem>
           ))}
         </CarouselContent>
         <CarouselPrevious className="top-[calc(100%+0.5rem)] left-0 translate-y-0" />
         <CarouselNext className="top-[calc(100%+0.5rem)] left-2 translate-x-full translate-y-0" />
       </Carousel>
-      <Progress className="mt-4 ml-auto w-24" value={progress} />
+      <Progress className="mt-5 ml-auto w-24" value={progress} />
     </div>
   );
 }

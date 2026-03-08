@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { Card, CardContent } from "@/registry/ui/card";
 import {
   Carousel,
   type CarouselApi,
@@ -11,6 +10,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/registry/ui/carousel";
+
+const images = [
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-248.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-051.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-029.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-038.jpg",
+  "https://www.fffuel.co/images/dddepth-preview/dddepth-012.jpg",
+];
 
 export default function SlideScale() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -37,20 +44,21 @@ export default function SlideScale() {
         setApi={setApi}
       >
         <CarouselContent className="py-3">
-          {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem className={cn("basis-[33%]", {})} key={index}>
-              <Card
+          {images.map((image, index) => (
+            <CarouselItem
+              className={cn("aspect-square basis-[33%]", {})}
+              key={image}
+            >
+              <img
+                alt="dddepth-248"
                 className={cn(
-                  "aspect-square transition-transform duration-500",
+                  "size-full rounded-xl object-cover transition-transform",
                   {
                     "scale-[0.6]": index !== current - 1,
                   }
                 )}
-              >
-                <CardContent className="flex items-center justify-center p-6">
-                  <span className="font-semibold text-4xl">{index + 1}</span>
-                </CardContent>
-              </Card>
+                src={image}
+              />
             </CarouselItem>
           ))}
         </CarouselContent>

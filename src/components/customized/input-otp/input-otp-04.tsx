@@ -7,7 +7,7 @@ import {
 
 export default function InputOTPDemo() {
   return (
-    <InputOTP maxLength={6}>
+    <InputOTP containerClassName="gap-3" maxLength={6}>
       <InputOTPGroup className="space-x-1">
         <InputOTPSlot className="rounded-md border-l" index={0} />
         <InputOTPSlot className="rounded-md border-l" index={1} />

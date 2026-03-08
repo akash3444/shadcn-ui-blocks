@@ -37,7 +37,7 @@ export function CheckboxWithForm<K>({
       control={form.control}
       name={name}
       render={({ field }) => (
-        <FormItem className="flex w-full items-center gap-4">
+        <FormItem className="flex w-full items-start gap-4">
           <FormControl>
             <Checkbox
               id={name}

@@ -25,7 +25,7 @@ export default function Checkbox16() {
       <div className="mt-2.5 rounded-lg border bg-muted/30">
         <ScrollArea className="h-64">
           <table className="w-full">
-            <thead className="sticky top-0 rounded-t-lg bg-muted/80 backdrop-blur-sm">
+            <thead className="sticky top-0 z-1 rounded-t-lg bg-muted/80 backdrop-blur-sm">
               <tr className="rounded-t-lg border-b *:first:rounded-tl-lg *:last:rounded-tr-lg">
                 <th className="p-3 text-left font-medium text-muted-foreground text-xs">
                   Notification Type

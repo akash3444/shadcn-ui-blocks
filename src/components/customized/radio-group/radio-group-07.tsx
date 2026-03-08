@@ -23,7 +23,7 @@ const RadioCardsDemo = () => {
     >
       {options.map((option) => (
         <RadioGroupPrimitive.Item
-          className="rounded px-3 py-1 ring-[1px] ring-border data-[state=checked]:ring-2 data-[state=checked]:ring-blue-500"
+          className="rounded-lg px-3 py-1 ring-[1px] ring-border data-[state=checked]:ring-2 data-[state=checked]:ring-blue-500"
           key={option.value}
           value={option.value}
         >
