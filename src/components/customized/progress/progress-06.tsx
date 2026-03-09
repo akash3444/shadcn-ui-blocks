@@ -14,24 +14,27 @@ export default function ProgressAnimationDemo() {
   return (
     <div className="w-[60%]">
       <style>
-        {`@keyframes progress {
-            to {
-              left: calc(100% - 2rem);
-            }
+        {`@keyframes gradient-flow {
+            0% { background-position: 100% 0%; }
+            100% { background-position: -100% 0%; }
           }
-          .progress {
-            transform-origin: center;
-            animation: progress 1.25s ease-in-out infinite;
+          .gradient-flow {
+            background: linear-gradient(
+              90deg,
+              var(--primary),
+              color-mix(in oklch, var(--primary) 40%, transparent),
+              var(--primary)
+            );
+            background-size: 200% 100%;
+            animation: gradient-flow 2s linear infinite;
           }
           `}
       </style>
-      <ProgressPrimitive.Root className="relative h-2 w-full overflow-hidden rounded-full bg-primary/20">
+      <ProgressPrimitive.Root className="relative h-1 w-full overflow-hidden rounded-full bg-primary/20">
         <ProgressPrimitive.Indicator
-          className="relative h-full w-full flex-1 bg-primary transition-all"
+          className="gradient-flow relative h-full w-full flex-1 transition-all"
           style={{ transform: `translateX(-${100 - (progress || 0)}%)` }}
-        >
-          <div className="progress absolute inset-y-0 left-0 h-full w-6 bg-primary-foreground blur-[10px]" />
-        </ProgressPrimitive.Indicator>
+        />
       </ProgressPrimitive.Root>
     </div>
   );

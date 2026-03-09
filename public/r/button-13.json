@@ -12,7 +12,7 @@
   "files": [
     {
       "path": "src/components/customized/button/button-13.tsx",
-      "content": "import { StarIcon } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\nimport { Button } from \"@/registry/ui/button\";\n\nconst ButtonNeon = ({\n  className,\n  ...props\n}: React.ComponentProps<typeof Button>) => (\n  <Button\n    className={cn(\n      \"bg-indigo-500 text-primary-foreground shadow-indigo-400 shadow-lg hover:bg-indigo-600 dark:text-foreground dark:shadow-indigo-700\",\n      className\n    )}\n    {...props}\n  />\n);\n\nconst NeonButtonDemo = () => (\n  <div className=\"flex flex-wrap items-center gap-2\">\n    <ButtonNeon>Neon</ButtonNeon>\n    <ButtonNeon size=\"icon\">\n      <StarIcon />\n    </ButtonNeon>\n    <ButtonNeon>\n      <StarIcon /> Star\n    </ButtonNeon>\n  </div>\n);\n\nexport default NeonButtonDemo;\n",
+      "content": "import { StarIcon } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\nimport { Button } from \"@/registry/ui/button\";\n\nconst ButtonNeon = ({\n  className,\n  ...props\n}: React.ComponentProps<typeof Button>) => (\n  <Button\n    className={cn(\n      \"border-indigo-500 bg-indigo-500 text-primary-foreground shadow-indigo-400/70 shadow-lg hover:bg-indigo-600 dark:text-foreground dark:shadow-indigo-700\",\n      className\n    )}\n    {...props}\n  />\n);\n\nconst NeonButtonDemo = () => (\n  <div className=\"flex flex-wrap items-center gap-2\">\n    <ButtonNeon>Neon</ButtonNeon>\n    <ButtonNeon size=\"icon\">\n      <StarIcon />\n    </ButtonNeon>\n    <ButtonNeon>\n      <StarIcon /> Star\n    </ButtonNeon>\n  </div>\n);\n\nexport default NeonButtonDemo;\n",
       "type": "registry:component"
     }
   ],

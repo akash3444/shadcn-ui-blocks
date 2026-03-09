@@ -42,8 +42,14 @@ export default function CardPost() {
         </Item>
       </CardHeader>
       <CardContent className="p-0">
-        <div className="relative aspect-video border-y bg-muted" />
-        <div className="px-6 py-5">
+        <div className="relative aspect-14/9 border-y">
+          <img
+            alt=""
+            className="size-full object-cover"
+            src="https://www.fffuel.co/images/dddepth-preview/dddepth-032.jpg"
+          />
+        </div>
+        <div className="px-4 py-4">
           <h2 className="font-semibold">Exploring New Horizons</h2>
           <p className="mt-1 text-muted-foreground text-sm">
             Had an amazing time discovering hidden gems! 🌄 Can&apos;t wait to
@@ -53,15 +59,15 @@ export default function CardPost() {
           </p>
         </div>
       </CardContent>
-      <CardFooter className="flex border-t px-2 py-2! pb-0">
-        <Button className="shrink-0 grow text-muted-foreground" variant="ghost">
+      <CardFooter className="flex items-center justify-between border-t px-2 py-2! pb-0">
+        <Button className="shrink-0 text-muted-foreground" variant="ghost">
           <HeartIcon /> <span className="hidden sm:inline">Like</span>
         </Button>
-        <Button className="shrink-0 grow text-muted-foreground" variant="ghost">
+        <Button className="shrink-0 text-muted-foreground" variant="ghost">
           <MessageCircleIcon />
           <span className="hidden sm:inline">Comment</span>
         </Button>
-        <Button className="shrink-0 grow text-muted-foreground" variant="ghost">
+        <Button className="shrink-0 text-muted-foreground" variant="ghost">
           <ShareIcon /> <span className="hidden sm:inline">Share</span>
         </Button>
       </CardFooter>

@@ -8,7 +8,7 @@ const ButtonGradient = ({
 }: React.ComponentProps<typeof Button>) => (
   <Button
     className={cn(
-      "bg-linear-to-r from-blue-500 to-indigo-500 text-primary-foreground shadow-sm hover:to-blue-500 dark:text-foreground",
+      "border-0 bg-linear-to-r from-blue-500 to-indigo-500 text-primary-foreground hover:to-blue-500 dark:text-foreground",
       className
     )}
     {...props}

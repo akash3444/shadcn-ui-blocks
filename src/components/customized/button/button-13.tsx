@@ -8,7 +8,7 @@ const ButtonNeon = ({
 }: React.ComponentProps<typeof Button>) => (
   <Button
     className={cn(
-      "bg-indigo-500 text-primary-foreground shadow-indigo-400 shadow-lg hover:bg-indigo-600 dark:text-foreground dark:shadow-indigo-700",
+      "border-indigo-500 bg-indigo-500 text-primary-foreground shadow-indigo-400/70 shadow-lg hover:bg-indigo-600 dark:text-foreground dark:shadow-indigo-700",
       className
     )}
     {...props}

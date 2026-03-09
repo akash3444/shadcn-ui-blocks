@@ -8,7 +8,7 @@ export default function InputWithErrorMessageDemo() {
         Email Address
       </Label>
       <Input
-        className="border-destructive focus-visible:ring-destructive"
+        className="border-destructive focus-visible:border-destructive/70 focus-visible:ring-destructive/25"
         id="email-address"
         placeholder="Email"
         type="email"

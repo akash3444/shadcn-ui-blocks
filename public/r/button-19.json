@@ -12,7 +12,7 @@
   "files": [
     {
       "path": "src/components/customized/button/button-19.tsx",
-      "content": "import { ChevronDown, ChevronUp } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\nimport { ButtonGroup } from \"@/registry/ui/button-group\";\n\nconst GroupButton2Demo = () => (\n  <ButtonGroup>\n    <Button\n      className=\"gap-1 rounded-none font-semibold first:rounded-l-md last:rounded-r-md hover:bg-green-600/20 hover:text-green-600\"\n      variant=\"outline\"\n    >\n      <ChevronUp className=\"size-5\" /> 39\n    </Button>\n    <Button\n      className=\"rounded-none first:rounded-l-md last:rounded-r-md hover:bg-rose-500/20 hover:text-rose-500\"\n      size=\"icon\"\n      variant=\"outline\"\n    >\n      <ChevronDown className=\"size-5\" />\n    </Button>\n  </ButtonGroup>\n);\n\nexport default GroupButton2Demo;\n",
+      "content": "import { ChevronDown, ChevronUp } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\nimport { ButtonGroup } from \"@/registry/ui/button-group\";\n\nconst GroupButton2Demo = () => (\n  <ButtonGroup>\n    <Button className=\"gap-1 font-semibold\" variant=\"outline\">\n      <ChevronUp className=\"size-5\" /> 39\n    </Button>\n    <Button size=\"icon\" variant=\"outline\">\n      <ChevronDown className=\"size-5\" />\n    </Button>\n  </ButtonGroup>\n);\n\nexport default GroupButton2Demo;\n",
       "type": "registry:component"
     }
   ],

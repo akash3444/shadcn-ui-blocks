@@ -3,7 +3,7 @@ import { Button } from "@/registry/ui/button";
 const SocialLoginButtonDemo = () => {
   return (
     <div className="flex w-full max-w-60 flex-col gap-2">
-      <Button variant="outline">
+      <Button className="gap-3" variant="outline">
         <svg
           className="h-5 w-5"
           fill="currentColor"
@@ -18,7 +18,7 @@ const SocialLoginButtonDemo = () => {
         </svg>
         Sign up with Google
       </Button>
-      <Button variant="outline">
+      <Button className="gap-3" variant="outline">
         <svg
           fill="currentColor"
           height="1em"
@@ -32,7 +32,7 @@ const SocialLoginButtonDemo = () => {
         </svg>
         Sign up with Twitch
       </Button>
-      <Button variant="outline">
+      <Button className="gap-3" variant="outline">
         <svg
           fill="currentColor"
           height="1em"

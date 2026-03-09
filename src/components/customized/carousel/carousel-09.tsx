@@ -59,24 +59,26 @@ export default function CarouselWithThumbs() {
       </Carousel>
 
       <Carousel className="mt-4 w-full max-w-xs">
-        <CarouselContent className="my-1 flex">
-          {images.map((image, index) => (
-            <CarouselItem
-              className={cn(
-                "basis-1/4 cursor-pointer transition-opacity",
-                current === index + 1 ? "opacity-100" : "opacity-50"
-              )}
-              key={image}
-              onClick={() => handleThumbClick(index)}
-            >
-              <img
-                alt="dddepth-248"
-                className="size-full rounded-xl object-cover"
-                src={image}
-              />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
+        <div className="mask-x-from-90%">
+          <CarouselContent className="my-1 flex">
+            {images.map((image, index) => (
+              <CarouselItem
+                className={cn(
+                  "basis-1/4 cursor-pointer transition-opacity",
+                  current === index + 1 ? "opacity-100" : "opacity-50"
+                )}
+                key={image}
+                onClick={() => handleThumbClick(index)}
+              >
+                <img
+                  alt="dddepth-248"
+                  className="size-full rounded-xl object-cover"
+                  src={image}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </div>
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
