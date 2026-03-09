@@ -444,6 +444,136 @@ const IntegrationsSkeleton = () => (
   </div>
 );
 
+const BannerSkeleton = () => (
+  <div className="flex h-full flex-col gap-3 p-4">
+    {/* Banner bar */}
+    <div className="flex items-center justify-center gap-3 rounded-lg bg-primary/5 px-4 py-2.5">
+      <Line className="grow" />
+      <Btn className="w-16" />
+    </div>
+    {/* Page content hint */}
+    <div className="flex flex-1 flex-col items-center justify-center gap-1.5">
+      <Head className="w-1/2" />
+      <Line className="w-1/3" />
+    </div>
+  </div>
+);
+
+const ChangelogSkeleton = () => (
+  <div className="mx-auto flex h-full max-w-4/5 flex-col gap-2 p-4">
+    <Head className="w-1/4" />
+    <Line className="mb-2 w-2/5" />
+    {["a", "b", "c"].map((k) => (
+      <div
+        className="flex items-start gap-3 border-muted-foreground/10 border-t pt-2"
+        key={k}
+      >
+        <Line className="mt-0.5 w-14 shrink-0" />
+        <div className="flex flex-col gap-1">
+          <Head className="w-24" />
+          <Line className="w-36" />
+          <Line className="w-28" />
+        </div>
+      </div>
+    ))}
+  </div>
+);
+
+const CodeBlockSkeleton = () => (
+  <div className="mx-auto flex h-full max-w-4/5 items-center justify-center p-4">
+    <div className="w-full rounded-lg border border-muted-foreground/12 bg-muted-foreground/4 p-3">
+      {/* Traffic lights */}
+      <div className="mb-2.5 flex gap-1.5">
+        {["a", "b", "c"].map((k) => (
+          <div className="size-2 rounded-full bg-muted-foreground/22" key={k} />
+        ))}
+      </div>
+      {/* Code lines with indentation variety */}
+      {(
+        [
+          ["w-3/5", false],
+          ["w-4/5", false],
+          ["w-2/5", true],
+          ["w-3/4", true],
+          ["w-1/2", true],
+          ["w-4/5", true],
+          ["w-2/3", false],
+        ] as [string, boolean][]
+      ).map(([w, indented], i) => (
+        <div
+          className={cn("mb-1.5 flex items-center gap-2", indented && "pl-3")}
+          // biome-ignore lint/suspicious/noArrayIndexKey: static display-only list
+          key={i}
+        >
+          <Line className={w} />
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+const EmptyStateSkeleton = () => (
+  <div className="flex h-full items-center justify-center p-4">
+    <Card className="flex w-2/3 flex-col items-center gap-1.5 py-5">
+      <Icon className="mb-0.5 size-8 rounded-full" />
+      <Head className="w-1/2" />
+      <Line className="w-4/5" />
+      <Line className="w-3/5" />
+      <div className="mt-2 flex gap-2">
+        <Btn className="w-20" />
+        <Ghost className="w-20" />
+      </div>
+    </Card>
+  </div>
+);
+
+const KeyboardShortcutsSkeleton = () => (
+  <div className="mx-auto flex h-full max-w-3/5 flex-col justify-center gap-1 p-4">
+    <Head className="mb-2 w-2/5" />
+    {["a", "b", "c", "d", "e"].map((k) => (
+      <div
+        className="flex items-center justify-between border-muted-foreground/10 border-b py-1.5"
+        key={k}
+      >
+        <Line className="w-2/5" />
+        <Ghost className="h-4 w-12 rounded-md" />
+      </div>
+    ))}
+  </div>
+);
+
+const ProfileSkeleton = () => (
+  <div className="flex h-full items-center justify-center p-4">
+    <Card className="flex w-3/5 flex-col items-center gap-1.5 py-4">
+      <Avatar className="size-12" />
+      <Head className="mt-0.5 w-1/3" />
+      <Line className="w-2/5" />
+      <Line className="mt-1 w-4/5" />
+      <Line className="w-3/4" />
+      <div className="mt-2 flex gap-1.5">
+        <Btn className="w-16" />
+        <Ghost className="size-6 rounded-md" />
+        <Ghost className="size-6 rounded-md" />
+        <Ghost className="size-6 rounded-md" />
+      </div>
+    </Card>
+  </div>
+);
+
+const VerificationSkeleton = () => (
+  <div className="flex h-full flex-col items-center justify-center gap-2 p-4">
+    <Head className="w-2/5" />
+    <Line className="w-3/5" />
+    {/* OTP input slots */}
+    <div className="mt-3 flex gap-1.5">
+      {["a", "b", "c", "d", "e", "f"].map((k) => (
+        <Ghost className="size-5 rounded" key={k} />
+      ))}
+    </div>
+    <Btn className="mt-2 w-2/5" />
+  </div>
+);
+
 const DefaultSkeleton = () => (
   <div className="flex h-full flex-col items-center justify-center gap-3 p-4">
     <Head className="w-1/3" />
@@ -484,6 +614,13 @@ const CATEGORY_SKELETONS: Record<string, React.FC> = {
   orderConfirmation: OrderConfirmationSkeleton,
   setupGuide: SetupGuideSkeleton,
   integrations: IntegrationsSkeleton,
+  banner: BannerSkeleton,
+  changelog: ChangelogSkeleton,
+  codeBlock: CodeBlockSkeleton,
+  emptyState: EmptyStateSkeleton,
+  keyboardShortcuts: KeyboardShortcutsSkeleton,
+  profile: ProfileSkeleton,
+  verification: VerificationSkeleton,
 };
 
 // ─── Category card ────────────────────────────────────────────────────────────
