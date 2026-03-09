@@ -983,6 +983,47 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.timeline],
     files: [{ path: "components/timeline.tsx" }],
   },
+  // Banner Blocks
+  {
+    name: "banner-01",
+    title: "Banner 01",
+    description: "A simple banner block",
+    component: React.lazy(
+      () => import("@/registry/blocks/banner-01/components/banner")
+    ),
+    categories: [categories.banner],
+    files: [{ path: "components/banner.tsx" }],
+  },
+  {
+    name: "banner-02",
+    title: "Banner 02",
+    description: "A simple banner block",
+    component: React.lazy(
+      () => import("@/registry/blocks/banner-02/components/banner")
+    ),
+    categories: [categories.banner],
+    files: [{ path: "components/banner.tsx" }],
+  },
+  {
+    name: "banner-03",
+    title: "Banner 03",
+    description: "A simple banner block",
+    component: React.lazy(
+      () => import("@/registry/blocks/banner-03/components/banner")
+    ),
+    categories: [categories.banner],
+    files: [{ path: "components/banner.tsx" }],
+  },
+  {
+    name: "banner-04",
+    title: "Banner 04",
+    description: "A simple banner block",
+    component: React.lazy(
+      () => import("@/registry/blocks/banner-04/components/banner")
+    ),
+    categories: [categories.banner],
+    files: [{ path: "components/banner.tsx" }],
+  },
   // Blog Blocks
   {
     name: "blog-01",
