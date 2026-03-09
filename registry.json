@@ -6887,50 +6887,6 @@
       ]
     },
     {
-      "name": "navbar-06",
-      "type": "registry:block",
-      "title": "Navbar 06",
-      "description": "A simple navbar block",
-      "files": [
-        {
-          "path": "src/registry/blocks/navbar-06/components/navbar.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-06/components/nav-menu.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "navbar-07",
-      "type": "registry:block",
-      "title": "Navbar 07",
-      "description": "A simple navbar block",
-      "files": [
-        {
-          "path": "src/registry/blocks/navbar-07/components/navbar.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-07/components/nav-menu.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "navbar-08",
-      "type": "registry:block",
-      "title": "Navbar 08",
-      "description": "A simple navbar block",
-      "files": [
-        {
-          "path": "src/registry/blocks/navbar-08/components/navbar.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
       "name": "pricing-07",
       "type": "registry:block",
       "title": "Pricing 07",

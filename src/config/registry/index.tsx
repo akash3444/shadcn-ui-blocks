@@ -1316,45 +1316,6 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.navbar],
     files: [{ path: "components/navbar.tsx" }, { path: "components/logo.tsx" }],
   },
-  {
-    name: "navbar-06",
-    title: "Navbar 06",
-    description: "A simple navbar block",
-    component: React.lazy(
-      () => import("@/registry/blocks/navbar-06/components/navbar")
-    ),
-    layout: NavbarLayout,
-    categories: [categories.navbar],
-    files: [
-      { path: "components/navbar.tsx" },
-      { path: "components/nav-menu.tsx" },
-    ],
-  },
-  {
-    name: "navbar-07",
-    title: "Navbar 07",
-    description: "A simple navbar block",
-    component: React.lazy(
-      () => import("@/registry/blocks/navbar-07/components/navbar")
-    ),
-    layout: NavbarLayout,
-    categories: [categories.navbar],
-    files: [
-      { path: "components/navbar.tsx" },
-      { path: "components/nav-menu.tsx" },
-    ],
-  },
-  {
-    name: "navbar-08",
-    title: "Navbar 08",
-    description: "A simple navbar block",
-    component: React.lazy(
-      () => import("@/registry/blocks/navbar-08/components/navbar")
-    ),
-    layout: NavbarLayout,
-    categories: [categories.navbar],
-    files: [{ path: "components/navbar.tsx" }],
-  },
   // Footer Blocks
   {
     name: "footer-01",
