@@ -1044,6 +1044,354 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.timeline],
     files: [{ path: "components/timeline.tsx" }],
   },
+  // Carousel Blocks
+  {
+    name: "carousel-01",
+    title: "Carousel 01",
+    description: "A simple carousel block",
+    component: React.lazy(
+      () => import("@/registry/blocks/carousel-01/components/carousel")
+    ),
+    categories: [categories.carousel],
+    files: [{ path: "components/carousel.tsx" }],
+  },
+  {
+    name: "carousel-02",
+    title: "Carousel 02",
+    description: "A simple carousel block",
+    component: React.lazy(
+      () => import("@/registry/blocks/carousel-02/components/carousel")
+    ),
+    categories: [categories.carousel],
+    files: [{ path: "components/carousel.tsx" }],
+  },
+  // Changelog Blocks
+  {
+    name: "changelog-01",
+    title: "Changelog 01",
+    description: "A simple changelog block",
+    component: React.lazy(
+      () => import("@/registry/blocks/changelog-01/components/changelog")
+    ),
+    categories: [categories.changelog],
+    files: [{ path: "components/changelog.tsx" }],
+  },
+  {
+    name: "changelog-02",
+    title: "Changelog 02",
+    description: "A simple changelog block",
+    component: React.lazy(
+      () => import("@/registry/blocks/changelog-02/components/changelog")
+    ),
+    categories: [categories.changelog],
+    files: [{ path: "components/changelog.tsx" }],
+  },
+  {
+    name: "changelog-03",
+    title: "Changelog 03",
+    description: "A simple changelog block",
+    component: React.lazy(
+      () => import("@/registry/blocks/changelog-03/components/changelog")
+    ),
+    categories: [categories.changelog],
+    files: [{ path: "components/changelog.tsx" }],
+  },
+  // Code Block Blocks
+  {
+    name: "code-block-01",
+    title: "Code Block 01",
+    description: "A simple code block",
+    component: React.lazy(
+      () => import("@/registry/blocks/code-block-01/components/code-block")
+    ),
+    categories: [categories.codeBlock],
+    files: [{ path: "components/code-block.tsx" }],
+  },
+  {
+    name: "code-block-02",
+    title: "Code Block 02",
+    description: "A simple code block",
+    component: React.lazy(
+      () => import("@/registry/blocks/code-block-02/components/code-block")
+    ),
+    categories: [categories.codeBlock],
+    files: [
+      { path: "components/code-block.tsx" },
+      { path: "components/code-block-header.tsx" },
+      { path: "hooks/use-copy-to-clipboard.tsx" },
+    ],
+  },
+  {
+    name: "code-block-03",
+    title: "Code Block 03",
+    description: "A simple code block",
+    component: React.lazy(
+      () => import("@/registry/blocks/code-block-03/components/code-block")
+    ),
+    categories: [categories.codeBlock],
+    files: [{ path: "components/code-block.tsx" }],
+  },
+  // Empty State Blocks
+  {
+    name: "empty-state-01",
+    title: "Empty State 01",
+    description: "A simple empty state block",
+    component: React.lazy(
+      () => import("@/registry/blocks/empty-state-01/components/empty-state")
+    ),
+    categories: [categories.emptyState],
+    files: [{ path: "components/empty-state.tsx" }],
+  },
+  {
+    name: "empty-state-02",
+    title: "Empty State 02",
+    description: "A simple empty state block",
+    component: React.lazy(
+      () => import("@/registry/blocks/empty-state-02/components/empty-state")
+    ),
+    categories: [categories.emptyState],
+    files: [{ path: "components/empty-state.tsx" }],
+  },
+  {
+    name: "empty-state-03",
+    title: "Empty State 03",
+    description: "A simple empty state block",
+    component: React.lazy(
+      () => import("@/registry/blocks/empty-state-03/components/empty-state")
+    ),
+    categories: [categories.emptyState],
+    files: [{ path: "components/empty-state.tsx" }],
+  },
+  {
+    name: "empty-state-04",
+    title: "Empty State 04",
+    description: "A simple empty state block",
+    component: React.lazy(
+      () => import("@/registry/blocks/empty-state-04/components/empty-state")
+    ),
+    categories: [categories.emptyState],
+    files: [
+      { path: "components/empty-state.tsx" },
+      { path: "components/magicui/marquee.tsx" },
+    ],
+  },
+  // Invite Member Blocks
+  {
+    name: "invite-member-01",
+    title: "Invite Member 01",
+    description: "A simple invite member block",
+    component: React.lazy(
+      () => import("@/registry/blocks/invite-member-01/components/invite-member")
+    ),
+    categories: [categories.inviteMember],
+    files: [{ path: "components/invite-member.tsx" }],
+  },
+  {
+    name: "invite-member-02",
+    title: "Invite Member 02",
+    description: "A simple invite member block",
+    component: React.lazy(
+      () => import("@/registry/blocks/invite-member-02/components/invite-member")
+    ),
+    categories: [categories.inviteMember],
+    files: [{ path: "components/invite-member.tsx" }],
+  },
+  {
+    name: "invite-member-03",
+    title: "Invite Member 03",
+    description: "A simple invite member block",
+    component: React.lazy(
+      () => import("@/registry/blocks/invite-member-03/components/invite-member")
+    ),
+    categories: [categories.inviteMember],
+    files: [{ path: "components/invite-member.tsx" }],
+  },
+  // Keyboard Shortcuts Blocks
+  {
+    name: "keyboard-shortcuts-01",
+    title: "Keyboard Shortcuts 01",
+    description: "A simple keyboard shortcuts block",
+    component: React.lazy(
+      () => import("@/registry/blocks/keyboard-shortcuts-01/components/keyboard-shortcuts")
+    ),
+    categories: [categories.keyboardShortcuts],
+    files: [{ path: "components/keyboard-shortcuts.tsx" }],
+  },
+  {
+    name: "keyboard-shortcuts-02",
+    title: "Keyboard Shortcuts 02",
+    description: "A simple keyboard shortcuts block",
+    component: React.lazy(
+      () => import("@/registry/blocks/keyboard-shortcuts-02/components/keyboard-shortcuts")
+    ),
+    categories: [categories.keyboardShortcuts],
+    files: [{ path: "components/keyboard-shortcuts.tsx" }],
+  },
+  {
+    name: "keyboard-shortcuts-03",
+    title: "Keyboard Shortcuts 03",
+    description: "A simple keyboard shortcuts block",
+    component: React.lazy(
+      () => import("@/registry/blocks/keyboard-shortcuts-03/components/keyboard-shortcuts")
+    ),
+    categories: [categories.keyboardShortcuts],
+    files: [{ path: "components/keyboard-shortcuts.tsx" }],
+  },
+  {
+    name: "keyboard-shortcuts-04",
+    title: "Keyboard Shortcuts 04",
+    description: "A simple keyboard shortcuts block",
+    component: React.lazy(
+      () => import("@/registry/blocks/keyboard-shortcuts-04/components/keyboard-shortcuts")
+    ),
+    categories: [categories.keyboardShortcuts],
+    files: [{ path: "components/keyboard-shortcuts.tsx" }],
+  },
+  // Members Blocks
+  {
+    name: "members-01",
+    title: "Members 01",
+    description: "A simple members block",
+    component: React.lazy(
+      () => import("@/registry/blocks/members-01/components/members")
+    ),
+    categories: [categories.members],
+    files: [{ path: "components/members.tsx" }],
+  },
+  {
+    name: "members-02",
+    title: "Members 02",
+    description: "A simple members block",
+    component: React.lazy(
+      () => import("@/registry/blocks/members-02/components/members")
+    ),
+    categories: [categories.members],
+    files: [{ path: "components/members.tsx" }],
+  },
+  {
+    name: "members-03",
+    title: "Members 03",
+    description: "A simple members block",
+    component: React.lazy(
+      () => import("@/registry/blocks/members-03/components/members")
+    ),
+    categories: [categories.members],
+    files: [{ path: "components/members.tsx" }],
+  },
+  // Order Confirmation Blocks
+  {
+    name: "order-confirmation-01",
+    title: "Order Confirmation 01",
+    description: "A simple order confirmation block",
+    component: React.lazy(
+      () => import("@/registry/blocks/order-confirmation-01/components/order-confirmation")
+    ),
+    categories: [categories.orderConfirmation],
+    files: [{ path: "components/order-confirmation.tsx" }],
+  },
+  {
+    name: "order-confirmation-02",
+    title: "Order Confirmation 02",
+    description: "A simple order confirmation block",
+    component: React.lazy(
+      () => import("@/registry/blocks/order-confirmation-02/components/order-confirmation")
+    ),
+    categories: [categories.orderConfirmation],
+    files: [{ path: "components/order-confirmation.tsx" }],
+  },
+  // Profile Blocks
+  {
+    name: "profile-01",
+    title: "Profile 01",
+    description: "A simple profile block",
+    component: React.lazy(
+      () => import("@/registry/blocks/profile-01/components/profile")
+    ),
+    categories: [categories.profile],
+    files: [{ path: "components/profile.tsx" }],
+  },
+  {
+    name: "profile-02",
+    title: "Profile 02",
+    description: "A simple profile block",
+    component: React.lazy(
+      () => import("@/registry/blocks/profile-02/components/profile")
+    ),
+    categories: [categories.profile],
+    files: [{ path: "components/profile.tsx" }],
+  },
+  {
+    name: "profile-03",
+    title: "Profile 03",
+    description: "A simple profile block",
+    component: React.lazy(
+      () => import("@/registry/blocks/profile-03/components/profile")
+    ),
+    categories: [categories.profile],
+    files: [{ path: "components/profile.tsx" }],
+  },
+  {
+    name: "profile-04",
+    title: "Profile 04",
+    description: "A simple profile block",
+    component: React.lazy(
+      () => import("@/registry/blocks/profile-04/components/profile")
+    ),
+    categories: [categories.profile],
+    files: [{ path: "components/profile.tsx" }],
+  },
+  // Setup Guide Blocks
+  {
+    name: "setup-guide-01",
+    title: "Setup Guide 01",
+    description: "A simple setup guide block",
+    component: React.lazy(
+      () => import("@/registry/blocks/setup-guide-01/components/setup-guide")
+    ),
+    categories: [categories.setupGuide],
+    files: [{ path: "components/setup-guide.tsx" }],
+  },
+  {
+    name: "setup-guide-02",
+    title: "Setup Guide 02",
+    description: "A simple setup guide block",
+    component: React.lazy(
+      () => import("@/registry/blocks/setup-guide-02/components/setup-guide")
+    ),
+    categories: [categories.setupGuide],
+    files: [{ path: "components/setup-guide.tsx" }],
+  },
+  {
+    name: "setup-guide-03",
+    title: "Setup Guide 03",
+    description: "A simple setup guide block",
+    component: React.lazy(
+      () => import("@/registry/blocks/setup-guide-03/components/setup-guide")
+    ),
+    categories: [categories.setupGuide],
+    files: [{ path: "components/setup-guide.tsx" }],
+  },
+  {
+    name: "setup-guide-04",
+    title: "Setup Guide 04",
+    description: "A simple setup guide block",
+    component: React.lazy(
+      () => import("@/registry/blocks/setup-guide-04/components/setup-guide")
+    ),
+    categories: [categories.setupGuide],
+    files: [{ path: "components/setup-guide.tsx" }],
+  },
+  // Verification Blocks
+  {
+    name: "verification-01",
+    title: "Verification 01",
+    description: "A simple verification block",
+    component: React.lazy(
+      () => import("@/registry/blocks/verification-01/components/verification")
+    ),
+    categories: [categories.verification],
+    files: [{ path: "components/verification.tsx" }],
+  },
   // Banner Blocks
   {
     name: "banner-01",

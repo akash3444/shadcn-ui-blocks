@@ -1,0 +1,153 @@
+import { Dot } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+
+const changelogs = [
+  {
+    version: "1.0.0",
+    date: "2025-06-01",
+    title: "Initial Launch",
+    description:
+      "We're live! The very first release of our Shadcn UI blocks is here. This version includes the core blocks, dark mode support, and a complete landing page setup to get you started. Thanks for being here from day one!",
+    features: [
+      "Released 10+ customized Shadcn UI blocks",
+      "Dark mode support",
+      "Landing page with hero, features, and footer sections",
+    ],
+  },
+  {
+    version: "1.1.0",
+    date: "2025-06-10",
+    title: "Pricing Block + Accessibility Improvements",
+    description:
+      "We've added a sleek pricing block with a monthly/yearly toggle. Accessibility improvements make your UI more inclusive, and we fixed a few layout issues to ensure a smoother mobile experience.",
+    features: ["Added pricing block with monthly/yearly toggle"],
+    changes: ["Improved accessibility for buttons and links"],
+    fixes: ["Fixed mobile layout issues on testimonials section"],
+  },
+  {
+    version: "1.2.0",
+    date: "2025-06-20",
+    title: "Blog Layout + Search Enhancements",
+    description:
+      "Introducing a brand-new blog layout designed for content creators. Search now supports fuzzy matching to make discovery easier. We've also optimized assets for faster load times.",
+    features: ["Introduced a clean blog layout for content creators"],
+    changes: [
+      "Search bar now uses fuzzy filtering",
+      "Optimized all images for performance and SEO",
+    ],
+  },
+  {
+    version: "1.3.0",
+    date: "2025-07-01",
+    title: "Premium Blocks & Theme Customization",
+    description:
+      "This is a big one! We're rolling out premium blocks for advanced use cases, along with filtering options and customizable color themes so you can match your brand identity effortlessly.",
+    features: [
+      "Launched premium blocks section",
+      "Added category and search filters",
+      "Introduced customizable color themes",
+    ],
+  },
+  {
+    version: "1.3.1",
+    date: "2025-07-05",
+    title: "Minor Fixes",
+    description:
+      "A quick patch to clean up a few UI glitches. Fixed image paths and polished up the theme switcher to eliminate flicker issues. Nothing major, but definitely smoother!",
+    fixes: [
+      "Fixed broken image links in logo cloud",
+      "Resolved theme switcher flicker issue on dark mode",
+    ],
+  },
+].reverse();
+
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+};
+
+export default function Changelog() {
+  return (
+    <section className="mx-auto max-w-screen-md px-6 py-16">
+      <h2 className="text-balance font-semibold text-4xl tracking-tight sm:text-5xl">
+        Changelog
+      </h2>
+      <p className="mt-2 text-balance text-lg text-muted-foreground tracking-normal sm:mt-4 sm:text-xl">
+        We ship fast. Track all the new features, updates, and fixes in one
+        place.
+      </p>
+
+      <Separator className="mt-10" />
+
+      <div className="mt-10 flex flex-col gap-6">
+        {changelogs.map((changelog) => (
+          <div
+            className="rounded-md bg-muted px-6 py-8 sm:px-8"
+            key={changelog.version}
+          >
+            <div>
+              <div className="flex items-center font-medium text-muted-foreground tracking-tight">
+                v{changelog.version} <Dot />{" "}
+                {formatDate(new Date(changelog.date))}
+              </div>
+              <h3 className="mt-2 font-semibold text-2xl tracking-tight">
+                {changelog.title}
+              </h3>
+              <span className="mt-2 block font-medium text-lg tracking-tight sm:hidden">
+                {changelog.date}
+              </span>
+
+              <p className="mt-3">{changelog.description}</p>
+
+              <div className="mt-4 space-y-4">
+                {changelog.features && (
+                  <div>
+                    <ChangelogSection
+                      items={changelog.features}
+                      title="Features:"
+                    />
+                  </div>
+                )}
+
+                {changelog.changes && (
+                  <ChangelogSection
+                    items={changelog.changes}
+                    title="Changes:"
+                  />
+                )}
+
+                {changelog.fixes && (
+                  <ChangelogSection items={changelog.fixes} title="Fixes:" />
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+const ChangelogSection = ({
+  title,
+  items,
+}: {
+  title: string;
+  items: string[];
+}) => {
+  return (
+    <div>
+      <h4 className="mb-1 flex items-center gap-2 font-medium text-lg">
+        {title}
+      </h4>
+      <ul className="list-disc pl-5">
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
