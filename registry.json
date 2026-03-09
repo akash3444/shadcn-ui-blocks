@@ -6919,6 +6919,10 @@
         {
           "path": "src/registry/blocks/pricing-09/components/pricing.tsx",
           "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/pricing-09/components/magicui/border-beam.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -6927,27 +6931,11 @@
       "type": "registry:block",
       "title": "Pricing 10",
       "description": "A simple pricing block",
-      "files": [
-        {
-          "path": "src/registry/blocks/pricing-10/components/pricing.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/pricing-10/components/magicui/border-beam.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "pricing-11",
-      "type": "registry:block",
-      "title": "Pricing 11",
-      "description": "A simple pricing block",
       "dependencies": ["lucide-react"],
       "registryDependencies": ["badge", "button"],
       "files": [
         {
-          "path": "src/registry/blocks/pricing-11/components/pricing.tsx",
+          "path": "src/registry/blocks/pricing-10/components/pricing.tsx",
           "type": "registry:component"
         }
       ]

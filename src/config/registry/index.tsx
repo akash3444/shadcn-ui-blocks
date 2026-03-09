@@ -700,7 +700,10 @@ export const blocks: RegistryBlock[] = [
       () => import("@/registry/blocks/pricing-09/components/pricing")
     ),
     categories: [categories.pricing],
-    files: [{ path: "components/pricing.tsx" }],
+    files: [
+      { path: "components/pricing.tsx" },
+      { path: "components/magicui/border-beam.tsx" },
+    ],
   },
   {
     name: "pricing-10",
@@ -708,19 +711,6 @@ export const blocks: RegistryBlock[] = [
     description: "A simple pricing block",
     component: React.lazy(
       () => import("@/registry/blocks/pricing-10/components/pricing")
-    ),
-    categories: [categories.pricing],
-    files: [
-      { path: "components/pricing.tsx" },
-      { path: "components/magicui/border-beam.tsx" },
-    ],
-  },
-  {
-    name: "pricing-11",
-    title: "Pricing 11",
-    description: "A simple pricing block",
-    component: React.lazy(
-      () => import("@/registry/blocks/pricing-11/components/pricing")
     ),
     categories: [categories.pricing],
     files: [{ path: "components/pricing.tsx" }],
