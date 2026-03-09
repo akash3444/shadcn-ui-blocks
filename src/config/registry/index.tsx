@@ -1484,51 +1484,6 @@ export const blocks: RegistryBlock[] = [
     files: [{ path: "components/footer.tsx" }],
     layout: FooterLayout,
   },
-  {
-    name: "footer-08",
-    title: "Footer 08",
-    description: "A simple footer block",
-    component: React.lazy(
-      () => import("@/registry/blocks/footer-08/components/footer")
-    ),
-    categories: [categories.footer],
-    files: [{ path: "components/footer.tsx" }],
-    layout: FooterLayout,
-  },
-
-  {
-    name: "footer-10",
-    title: "Footer 10",
-    description: "A simple footer block",
-    component: React.lazy(
-      () => import("@/registry/blocks/footer-10/components/footer")
-    ),
-    categories: [categories.footer],
-    files: [{ path: "components/footer.tsx" }],
-    layout: FooterLayout,
-  },
-  {
-    name: "footer-11",
-    title: "Footer 11",
-    description: "A simple footer block",
-    component: React.lazy(
-      () => import("@/registry/blocks/footer-11/components/footer")
-    ),
-    categories: [categories.footer],
-    files: [{ path: "components/footer.tsx" }],
-    layout: FooterLayout,
-  },
-  {
-    name: "footer-12",
-    title: "Footer 12",
-    description: "A simple footer block",
-    component: React.lazy(
-      () => import("@/registry/blocks/footer-12/components/footer")
-    ),
-    categories: [categories.footer],
-    files: [{ path: "components/footer.tsx" }],
-    layout: FooterLayout,
-  },
   // Logo Cloud Blocks
   {
     name: "logo-cloud-01",

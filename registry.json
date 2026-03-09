@@ -6600,41 +6600,6 @@
       "files": [{ "path": "src/registry/blocks/footer-07/components/footer.tsx", "type": "registry:component" }]
     },
     {
-      "name": "footer-08",
-      "type": "registry:block",
-      "title": "Footer 08",
-      "description": "A simple footer block",
-      "files": [{ "path": "src/registry/blocks/footer-08/components/footer.tsx", "type": "registry:component" }]
-    },
-    {
-      "name": "footer-09",
-      "type": "registry:block",
-      "title": "Footer 09",
-      "description": "A simple footer block",
-      "files": [{ "path": "src/registry/blocks/footer-09/components/footer.tsx", "type": "registry:component" }]
-    },
-    {
-      "name": "footer-10",
-      "type": "registry:block",
-      "title": "Footer 10",
-      "description": "A simple footer block",
-      "files": [{ "path": "src/registry/blocks/footer-10/components/footer.tsx", "type": "registry:component" }]
-    },
-    {
-      "name": "footer-11",
-      "type": "registry:block",
-      "title": "Footer 11",
-      "description": "A simple footer block",
-      "files": [{ "path": "src/registry/blocks/footer-11/components/footer.tsx", "type": "registry:component" }]
-    },
-    {
-      "name": "footer-12",
-      "type": "registry:block",
-      "title": "Footer 12",
-      "description": "A simple footer block",
-      "files": [{ "path": "src/registry/blocks/footer-12/components/footer.tsx", "type": "registry:component" }]
-    },
-    {
       "name": "login-06",
       "type": "registry:block",
       "title": "Login 06",
