@@ -1,4 +1,4 @@
-import { Marquee } from "@/registry/blocks/logo-cloud-06/components/magicui/marquee";
+import { Marquee } from "@/registry/blocks/logo-cloud-13/components/magicui/marquee";
 import {
   Logo01,
   Logo02,

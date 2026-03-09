@@ -1,4 +1,5 @@
 import React, { type JSX } from "react";
+import { DotPattern } from "@/components/magicui/dot-pattern";
 import { NavbarLayout } from "./block-layouts";
 
 export interface BlockCategory {
@@ -11,7 +12,9 @@ export interface RegistryBlock {
   title: string;
   description: string;
   categories: BlockCategory[];
-  component?: React.LazyExoticComponent<() => JSX.Element | Promise<JSX.Element>>;
+  component?: React.LazyExoticComponent<
+    () => JSX.Element | Promise<JSX.Element>
+  >;
   files: { path: string }[];
   layout?: React.FC<{ children: React.ReactNode }>;
 }
@@ -138,6 +141,15 @@ export const categories = {
     title: "Blog",
   },
 } as const;
+
+const FooterLayout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className="relative flex h-full min-h-screen w-full items-end bg-muted/30">
+      <DotPattern className="opacity-50" cx={15} height={24} width={24} />
+      <div className="relative z-10 grow">{children}</div>
+    </div>
+  );
+};
 
 export const blocks: RegistryBlock[] = [
   // Hero Blocks
@@ -1459,6 +1471,7 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.footer],
     files: [{ path: "components/footer.tsx" }],
+    layout: FooterLayout,
   },
   {
     name: "footer-07",
@@ -1469,6 +1482,7 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.footer],
     files: [{ path: "components/footer.tsx" }],
+    layout: FooterLayout,
   },
   {
     name: "footer-08",
@@ -1479,17 +1493,9 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.footer],
     files: [{ path: "components/footer.tsx" }],
+    layout: FooterLayout,
   },
-  {
-    name: "footer-09",
-    title: "Footer 09",
-    description: "A simple footer block",
-    component: React.lazy(
-      () => import("@/registry/blocks/footer-09/components/footer")
-    ),
-    categories: [categories.footer],
-    files: [{ path: "components/footer.tsx" }],
-  },
+
   {
     name: "footer-10",
     title: "Footer 10",
@@ -1499,6 +1505,7 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.footer],
     files: [{ path: "components/footer.tsx" }],
+    layout: FooterLayout,
   },
   {
     name: "footer-11",
@@ -1509,6 +1516,7 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.footer],
     files: [{ path: "components/footer.tsx" }],
+    layout: FooterLayout,
   },
   {
     name: "footer-12",
@@ -1519,6 +1527,7 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.footer],
     files: [{ path: "components/footer.tsx" }],
+    layout: FooterLayout,
   },
   // Logo Cloud Blocks
   {
@@ -2004,7 +2013,8 @@ export const blocks: RegistryBlock[] = [
     title: "Invite Member 01",
     description: "A simple invite member block",
     component: React.lazy(
-      () => import("@/registry/blocks/invite-member-01/components/invite-member")
+      () =>
+        import("@/registry/blocks/invite-member-01/components/invite-member")
     ),
     categories: [categories.inviteMember],
     files: [{ path: "components/invite-member.tsx" }],
@@ -2014,7 +2024,8 @@ export const blocks: RegistryBlock[] = [
     title: "Invite Member 02",
     description: "A simple invite member block",
     component: React.lazy(
-      () => import("@/registry/blocks/invite-member-02/components/invite-member")
+      () =>
+        import("@/registry/blocks/invite-member-02/components/invite-member")
     ),
     categories: [categories.inviteMember],
     files: [{ path: "components/invite-member.tsx" }],
@@ -2024,7 +2035,8 @@ export const blocks: RegistryBlock[] = [
     title: "Invite Member 03",
     description: "A simple invite member block",
     component: React.lazy(
-      () => import("@/registry/blocks/invite-member-03/components/invite-member")
+      () =>
+        import("@/registry/blocks/invite-member-03/components/invite-member")
     ),
     categories: [categories.inviteMember],
     files: [{ path: "components/invite-member.tsx" }],
@@ -2035,7 +2047,10 @@ export const blocks: RegistryBlock[] = [
     title: "Keyboard Shortcuts 01",
     description: "A simple keyboard shortcuts block",
     component: React.lazy(
-      () => import("@/registry/blocks/keyboard-shortcuts-01/components/keyboard-shortcuts")
+      () =>
+        import(
+          "@/registry/blocks/keyboard-shortcuts-01/components/keyboard-shortcuts"
+        )
     ),
     categories: [categories.keyboardShortcuts],
     files: [{ path: "components/keyboard-shortcuts.tsx" }],
@@ -2045,7 +2060,10 @@ export const blocks: RegistryBlock[] = [
     title: "Keyboard Shortcuts 02",
     description: "A simple keyboard shortcuts block",
     component: React.lazy(
-      () => import("@/registry/blocks/keyboard-shortcuts-02/components/keyboard-shortcuts")
+      () =>
+        import(
+          "@/registry/blocks/keyboard-shortcuts-02/components/keyboard-shortcuts"
+        )
     ),
     categories: [categories.keyboardShortcuts],
     files: [{ path: "components/keyboard-shortcuts.tsx" }],
@@ -2055,7 +2073,10 @@ export const blocks: RegistryBlock[] = [
     title: "Keyboard Shortcuts 03",
     description: "A simple keyboard shortcuts block",
     component: React.lazy(
-      () => import("@/registry/blocks/keyboard-shortcuts-03/components/keyboard-shortcuts")
+      () =>
+        import(
+          "@/registry/blocks/keyboard-shortcuts-03/components/keyboard-shortcuts"
+        )
     ),
     categories: [categories.keyboardShortcuts],
     files: [{ path: "components/keyboard-shortcuts.tsx" }],
@@ -2065,7 +2086,10 @@ export const blocks: RegistryBlock[] = [
     title: "Keyboard Shortcuts 04",
     description: "A simple keyboard shortcuts block",
     component: React.lazy(
-      () => import("@/registry/blocks/keyboard-shortcuts-04/components/keyboard-shortcuts")
+      () =>
+        import(
+          "@/registry/blocks/keyboard-shortcuts-04/components/keyboard-shortcuts"
+        )
     ),
     categories: [categories.keyboardShortcuts],
     files: [{ path: "components/keyboard-shortcuts.tsx" }],
@@ -2107,7 +2131,10 @@ export const blocks: RegistryBlock[] = [
     title: "Order Confirmation 01",
     description: "A simple order confirmation block",
     component: React.lazy(
-      () => import("@/registry/blocks/order-confirmation-01/components/order-confirmation")
+      () =>
+        import(
+          "@/registry/blocks/order-confirmation-01/components/order-confirmation"
+        )
     ),
     categories: [categories.orderConfirmation],
     files: [{ path: "components/order-confirmation.tsx" }],
@@ -2117,7 +2144,10 @@ export const blocks: RegistryBlock[] = [
     title: "Order Confirmation 02",
     description: "A simple order confirmation block",
     component: React.lazy(
-      () => import("@/registry/blocks/order-confirmation-02/components/order-confirmation")
+      () =>
+        import(
+          "@/registry/blocks/order-confirmation-02/components/order-confirmation"
+        )
     ),
     categories: [categories.orderConfirmation],
     files: [{ path: "components/order-confirmation.tsx" }],

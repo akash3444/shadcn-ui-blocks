@@ -2,8 +2,8 @@ import { Aperture } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { GoogleLogo } from "@/registry/blocks/login-01/components/icons";
-import { LoginForm } from "@/registry/blocks/login-01/components/login-form";
+import { GoogleLogo } from "@/registry/blocks/login-06/components/icons";
+import { LoginForm } from "@/registry/blocks/login-06/components/login-form";
 
 const Login = () => (
   <div className="flex h-screen items-center justify-center sm:bg-foreground/5">

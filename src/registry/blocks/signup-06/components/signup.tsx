@@ -2,8 +2,8 @@ import { Aperture } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { GoogleLogo } from "@/registry/blocks/signup-01/components/icons";
-import { SignUpForm } from "@/registry/blocks/signup-01/components/signup-form";
+import { GoogleLogo } from "@/registry/blocks/signup-06/components/icons";
+import { SignUpForm } from "@/registry/blocks/signup-06/components/signup-form";
 
 const SignUp = () => (
   <div className="flex h-screen items-center justify-center sm:bg-foreground/5">

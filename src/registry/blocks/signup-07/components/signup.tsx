@@ -2,8 +2,8 @@ import { Aperture } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { GoogleLogo } from "@/registry/blocks/signup-02/components/icons";
-import { SignUpForm } from "@/registry/blocks/signup-02/components/signup-form";
+import { GoogleLogo } from "@/registry/blocks/signup-07/components/icons";
+import { SignUpForm } from "@/registry/blocks/signup-07/components/signup-form";
 import { Testimonials } from "./testimonials";
 
 const SignUp = () => (
