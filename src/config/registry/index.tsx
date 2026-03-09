@@ -241,62 +241,6 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.hero],
     files: [
       { path: "components/hero.tsx" },
-      { path: "components/navbar.tsx" },
-      { path: "components/nav-menu.tsx" },
-    ],
-  },
-  {
-    name: "hero-09",
-    title: "Hero 09",
-    description: "A simple hero block",
-    component: React.lazy(
-      () => import("@/registry/blocks/hero-09/components/hero")
-    ),
-    categories: [categories.hero],
-    files: [
-      { path: "components/hero.tsx" },
-      { path: "components/navbar.tsx" },
-      { path: "components/nav-menu.tsx" },
-    ],
-  },
-  {
-    name: "hero-10",
-    title: "Hero 10",
-    description: "A simple hero block",
-    component: React.lazy(
-      () => import("@/registry/blocks/hero-10/components/hero")
-    ),
-    categories: [categories.hero],
-    files: [
-      { path: "components/hero.tsx" },
-      { path: "components/navbar.tsx" },
-      { path: "components/nav-menu.tsx" },
-    ],
-  },
-  {
-    name: "hero-11",
-    title: "Hero 11",
-    description: "A simple hero block",
-    component: React.lazy(
-      () => import("@/registry/blocks/hero-11/components/hero")
-    ),
-    categories: [categories.hero],
-    files: [
-      { path: "components/hero.tsx" },
-      { path: "components/navbar.tsx" },
-      { path: "components/nav-menu.tsx" },
-    ],
-  },
-  {
-    name: "hero-12",
-    title: "Hero 12",
-    description: "A simple hero block",
-    component: React.lazy(
-      () => import("@/registry/blocks/hero-12/components/hero")
-    ),
-    categories: [categories.hero],
-    files: [
-      { path: "components/hero.tsx" },
       { path: "components/logos.tsx" },
       { path: "components/navbar.tsx" },
       { path: "components/nav-menu.tsx" },
