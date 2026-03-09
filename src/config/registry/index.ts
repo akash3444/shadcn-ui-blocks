@@ -401,6 +401,67 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.pricing],
     files: [{ path: "components/pricing.tsx" }],
   },
+  // CTA Blocks
+  {
+    name: "cta-01",
+    title: "CTA 01",
+    description: "A simple CTA block",
+    component: React.lazy(
+      () => import("@/registry/blocks/cta-01/components/cta")
+    ),
+    categories: [categories.cta],
+    files: [{ path: "components/cta.tsx" }],
+  },
+  {
+    name: "cta-02",
+    title: "CTA 02",
+    description: "A simple CTA block",
+    component: React.lazy(
+      () => import("@/registry/blocks/cta-02/components/cta")
+    ),
+    categories: [categories.cta],
+    files: [{ path: "components/cta.tsx" }],
+  },
+  {
+    name: "cta-03",
+    title: "CTA 03",
+    description: "A simple CTA block",
+    component: React.lazy(
+      () => import("@/registry/blocks/cta-03/components/cta")
+    ),
+    categories: [categories.cta],
+    files: [{ path: "components/cta.tsx" }],
+  },
+  {
+    name: "cta-04",
+    title: "CTA 04",
+    description: "A simple CTA block",
+    component: React.lazy(
+      () => import("@/registry/blocks/cta-04/components/cta")
+    ),
+    categories: [categories.cta],
+    files: [{ path: "components/cta.tsx" }],
+  },
+  {
+    name: "cta-05",
+    title: "CTA 05",
+    description: "A simple CTA block",
+    component: React.lazy(
+      () => import("@/registry/blocks/cta-05/components/cta")
+    ),
+    categories: [categories.cta],
+    files: [{ path: "components/cta.tsx" }],
+  },
+  {
+    name: "cta-06",
+    title: "CTA 06",
+    description: "A simple CTA block",
+    component: React.lazy(
+      () => import("@/registry/blocks/cta-06/components/cta")
+    ),
+    categories: [categories.cta],
+    files: [{ path: "components/cta.tsx" }],
+  },
   // FAQ Blocks
   {
     name: "faq-01",
