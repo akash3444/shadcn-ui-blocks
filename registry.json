@@ -5809,6 +5809,138 @@
           "target": "app/api/og/og-32/route.tsx"
         }
       ]
+    },
+    {
+      "name": "banner-01",
+      "type": "registry:block",
+      "title": "Banner 01",
+      "description": "A simple banner block",
+      "files": [
+        {
+          "path": "src/registry/blocks/banner-01/components/banner.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "banner-02",
+      "type": "registry:block",
+      "title": "Banner 02",
+      "description": "A simple banner block",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "src/registry/blocks/banner-02/components/banner.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "banner-03",
+      "type": "registry:block",
+      "title": "Banner 03",
+      "description": "A simple banner block",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "src/registry/blocks/banner-03/components/banner.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "banner-04",
+      "type": "registry:block",
+      "title": "Banner 04",
+      "description": "A simple banner block",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "src/registry/blocks/banner-04/components/banner.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "cta-01",
+      "type": "registry:block",
+      "title": "CTA 01",
+      "description": "A simple CTA block",
+      "files": [
+        {
+          "path": "src/registry/blocks/cta-01/components/cta.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "cta-02",
+      "type": "registry:block",
+      "title": "CTA 02",
+      "description": "A simple CTA block",
+      "files": [
+        {
+          "path": "src/registry/blocks/cta-02/components/cta.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "cta-03",
+      "type": "registry:block",
+      "title": "CTA 03",
+      "description": "A simple CTA block",
+      "files": [
+        {
+          "path": "src/registry/blocks/cta-03/components/cta.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "cta-04",
+      "type": "registry:block",
+      "title": "CTA 04",
+      "description": "A simple CTA block",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "src/registry/blocks/cta-04/components/cta.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "cta-05",
+      "type": "registry:block",
+      "title": "CTA 05",
+      "description": "A simple CTA block",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "src/registry/blocks/cta-05/components/cta.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "cta-06",
+      "type": "registry:block",
+      "title": "CTA 06",
+      "description": "A simple CTA block",
+      "dependencies": ["lucide-react", "@paper-design/shaders-react"],
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "src/registry/blocks/cta-06/components/cta.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
