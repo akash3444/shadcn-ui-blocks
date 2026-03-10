@@ -8,7 +8,7 @@ import {
   useState,
 } from "react";
 import type { pathToTree } from "to-path-tree";
-import { BLOCK_PRICING, blocks } from "@/config/registry";
+import { blocks } from "@/config/registry";
 import { useBlockTheme } from "@/hooks/use-block-theme";
 import { getFileContent } from "@/lib/file";
 import { getFileTree } from "@/lib/file-tree";
@@ -99,17 +99,12 @@ export const BlockProvider = ({
 
   const { theme, setTheme, iframeRef } = useBlockTheme();
 
-  const isBlockFree = !block.pricing || block.pricing === BLOCK_PRICING.free;
-  const iframeSrc = isBlockFree
-    ? `/blocks/${block.name}/preview`
-    : `https://pro.shadcnui-blocks.com/blocks/${block.slug}/preview?theme=${theme}&preset=vercel`;
+  const iframeSrc = `/blocks/${block.name}/preview`;
 
   const updateCodeContent = async () => {
     setIsLoadingCode(true);
 
     try {
-      if (!isBlockFree) return;
-
       const code = await getFileContent(
         `src/registry/blocks/${block.name}/${activeFile}`
       );

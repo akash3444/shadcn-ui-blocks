@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "code-block-01",
+  "title": "Code Block 01",
+  "description": "A simple code block",
+  "dependencies": [
+    "shiki"
+  ],
+  "files": [
+    {
+      "path": "src/registry/blocks/code-block-01/components/code-block.tsx",
+      "content": "import { codeToHtml } from \"shiki\";\nimport { cn } from \"@/lib/utils\";\n\nexport default async function CodeBlock() {\n  const html = await codeToHtml(code, {\n    lang: \"tsx\",\n    themes: {\n      light: \"github-light\",\n      dark: \"github-dark-default\",\n    },\n  });\n\n  return (\n    <div className=\"flex min-h-dvh items-center justify-center px-6\">\n      <div\n        className={cn(\n          \"grid\",\n          \"[&>pre]:overflow-auto [&>pre]:rounded-lg [&>pre]:border [&>pre]:border-border/50 not-dark:[&>pre]:bg-muted/60! [&>pre]:p-6 [&>pre]:text-sm [&>pre]:leading-[1.6] dark:[&>pre]:border-border/80\"\n        )}\n        dangerouslySetInnerHTML={{ __html: html }}\n      />\n    </div>\n  );\n}\n\nconst code = `const user = {\\n\\tname: \"John Doe\",\n\\trole: \"Frontend Developer\",\n\\texperience: \"2+ years\",\n};\n\nexport default function ProfileCard() {\n\\treturn (\n\\t\\t<div className=\"p-4 border rounded-lg\">\n\\t\\t\\t<h2 className=\"text-lg font-semibold\">{user.name}</h2>\n\\t\\t\\t<p>{user.role}</p>\n\\t\\t\\t<p className=\"text-sm text-muted-foreground\">\n\\t\\t\\t\\tExperience: {user.experience}\n\\t\\t\\t</p>\n\\t\\t</div>\n\\t);\n}\n`;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}

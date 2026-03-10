@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "banner-02",
+  "title": "Banner 02",
+  "description": "A simple banner block",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/blocks/banner-02/components/banner.tsx",
+      "content": "import { ArrowUpRight, X } from \"lucide-react\";\nimport { Button } from \"@/components/ui/button\";\n\nexport default function Banner() {\n  return (\n    <div className=\"px-6 py-10\">\n      <div className=\"relative mx-auto flex min-h-10 max-w-lg flex-wrap items-center justify-between gap-3 rounded-lg bg-muted px-5 py-4 text-center text-sm\">\n        <p>We just released the premium version 🎉</p>\n        <Button>\n          Check it out <ArrowUpRight />\n        </Button>\n        <Button\n          className=\"absolute -top-2.5 -right-2.5 size-6\"\n          size=\"icon\"\n          variant=\"outline\"\n        >\n          <X className=\"size-3\" />\n        </Button>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty-state-04",
+  "title": "Empty State 04",
+  "description": "A simple empty state block",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/blocks/empty-state-04/components/empty-state.tsx",
+      "content": "import { FolderCheck, ImportIcon, PlusIcon } from \"lucide-react\";\nimport { Marquee } from \"@/components/magicui/marquee\";\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyTitle,\n} from \"@/components/ui/empty\";\n\nexport default function EmptyState() {\n  return (\n    <div className=\"px-6 py-10\">\n      <div className=\"mx-auto max-w-sm pt-0\">\n        <Empty className=\"px-0 py-8 md:px-0 md:py-8\">\n          <EmptyHeader>\n            <div className=\"mask-y-from-60% mask-x-from-95% mb-3 w-full max-w-xs space-y-2\">\n              <Marquee className=\"h-56 [--duration:2s]\" repeat={5} vertical>\n                <div className=\"flex w-full items-center gap-3 rounded-lg border px-4 py-3\">\n                  <FolderCheck className=\"shrink-0 fill-muted text-muted-foreground/70\" />\n                  <div className=\"h-5 w-full rounded-lg bg-muted\" />\n                  <div className=\"ms-auto size-6 shrink-0 rounded-full bg-muted\" />\n                </div>\n              </Marquee>\n            </div>\n            <EmptyTitle>No Projects Yet</EmptyTitle>\n            <EmptyDescription>\n              You haven&apos;t created any projects yet. Get started by creating\n              your first project.\n            </EmptyDescription>\n          </EmptyHeader>\n          <EmptyContent>\n            <div className=\"flex flex-wrap gap-2 *:mx-auto\">\n              <Button>\n                <PlusIcon /> Create Project\n              </Button>\n              <Button variant=\"outline\">\n                <ImportIcon /> Import Project\n              </Button>\n            </div>\n          </EmptyContent>\n        </Empty>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "src/registry/blocks/empty-state-04/components/magicui/marquee.tsx",
+      "content": "import type { ComponentPropsWithoutRef } from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ninterface MarqueeProps extends ComponentPropsWithoutRef<\"div\"> {\n  /**\n   * Optional CSS class name to apply custom styles\n   */\n  className?: string;\n  /**\n   * Whether to reverse the animation direction\n   * @default false\n   */\n  reverse?: boolean;\n  /**\n   * Whether to pause the animation on hover\n   * @default false\n   */\n  pauseOnHover?: boolean;\n  /**\n   * Content to be displayed in the marquee\n   */\n  children: React.ReactNode;\n  /**\n   * Whether to animate vertically instead of horizontally\n   * @default false\n   */\n  vertical?: boolean;\n  /**\n   * Number of times to repeat the content\n   * @default 4\n   */\n  repeat?: number;\n}\n\nexport function Marquee({\n  className,\n  reverse = false,\n  pauseOnHover = false,\n  children,\n  vertical = false,\n  repeat = 4,\n  ...props\n}: MarqueeProps) {\n  return (\n    <div\n      {...props}\n      className={cn(\n        \"group flex overflow-hidden p-2 [--duration:40s] [--gap:1rem] [gap:var(--gap)]\",\n        {\n          \"flex-row\": !vertical,\n          \"flex-col\": vertical,\n        },\n        className\n      )}\n    >\n      {Array(repeat)\n        .fill(0)\n        .map((_, i) => (\n          <div\n            className={cn(\"flex shrink-0 justify-around [gap:var(--gap)]\", {\n              \"animate-marquee flex-row\": !vertical,\n              \"animate-marquee-vertical flex-col\": vertical,\n              \"group-hover:[animation-play-state:paused]\": pauseOnHover,\n              \"[animation-direction:reverse]\": reverse,\n            })}\n            key={i}\n          >\n            {children}\n          </div>\n        ))}\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}

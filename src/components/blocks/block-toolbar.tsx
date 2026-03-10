@@ -9,7 +9,6 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { BLOCK_PRICING } from "@/config/registry";
 import { blockScreens } from "@/description/blocks";
 import { absoluteUrl } from "@/lib/utils";
 import { useBlockContext } from "@/providers/block-provider";
@@ -19,7 +18,6 @@ import V0Button from "./v0-button";
 const BlockToolbar = () => {
   const { screenSize, setScreenSize } = useBlockContext();
   const { block, iframeSrc } = useBlockContext();
-  const isFree = !block.pricing || block.pricing === BLOCK_PRICING.free;
 
   return (
     <div className="flex items-center gap-2">
@@ -37,7 +35,7 @@ const BlockToolbar = () => {
           <p>Open preview in new tab</p>
         </TooltipContent>
       </Tooltip>
-      {isFree && <V0Button url={absoluteUrl(`/r/${block.name}.json`)} />}
+      <V0Button url={absoluteUrl(`/r/${block.name}.json`)} />
       <div className="hidden h-8 items-center gap-1 rounded-md border p-1 shadow-xs md:flex">
         {blockScreens.map(({ name, icon: Icon }) => (
           <Tooltip key={name}>
