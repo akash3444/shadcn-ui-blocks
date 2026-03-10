@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "stats-04",
+  "title": "Stats 04",
+  "description": "A simple stats block",
+  "files": [
+    {
+      "path": "src/registry/blocks/stats-04/components/stats.tsx",
+      "content": "function Stats() {\n  return (\n    <div className=\"mx-auto max-w-screen-lg px-6 py-16\">\n      <h2 className=\"text-balance text-center font-semibold text-3xl tracking-tight sm:text-4xl md:text-5xl\">\n        Growing&nbsp;Fast. Loved&nbsp;by&nbsp;Developers.\n      </h2>\n      <p className=\"mt-4 text-center text-lg text-muted-foreground sm:text-xl md:text-2xl\">\n        Trusted by thousands to build modern UIs faster.\n      </p>\n\n      <div className=\"mt-14 grid grid-cols-1 overflow-hidden rounded-2xl border sm:grid-cols-2 md:grid-cols-3\">\n        <div className=\"-m-px border-t border-l p-10\">\n          <span className=\"font-semibold text-5xl\">70%</span>\n          <p className=\"mt-4 text-lg\">Faster UI development</p>\n        </div>\n        <div className=\"-m-px border-t border-l p-10\">\n          <span className=\"font-semibold text-5xl\">5x</span>\n          <p className=\"mt-4 text-lg\">Increase in productivity</p>\n        </div>\n        <div className=\"-m-px border-t border-l p-10 sm:col-span-2 md:col-span-1\">\n          <span className=\"font-semibold text-5xl\">98%</span>\n          <p className=\"mt-4 text-lg\">Customer satisfaction</p>\n        </div>\n      </div>\n    </div>\n  );\n}\n\nexport default Stats;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}

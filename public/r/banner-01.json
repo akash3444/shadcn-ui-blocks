@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "banner-01",
+  "title": "Banner 01",
+  "description": "A simple banner block",
+  "files": [
+    {
+      "path": "src/registry/blocks/banner-01/components/banner.tsx",
+      "content": "import Link from \"next/link\";\n\nexport default function Banner() {\n  return (\n    <div className=\"flex min-h-10 flex-wrap items-center justify-center bg-primary px-3 py-2 text-center text-primary-foreground text-sm\">\n      <span>Your free trial ends in 3 days.</span>\n      <div>\n        <Link className=\"mx-1 underline underline-offset-2\" href=\"#/pricing\">\n          Upgrade\n        </Link>\n        <span>to continue using the full features.</span>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}

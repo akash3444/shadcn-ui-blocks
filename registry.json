@@ -6467,10 +6467,6 @@
         {
           "path": "src/registry/blocks/features-09/components/features.tsx",
           "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/features-09/components/stats-card.tsx",
-          "type": "registry:component"
         }
       ]
     },

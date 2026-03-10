@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cta-03",
+  "title": "CTA 03",
+  "description": "A simple CTA block",
+  "files": [
+    {
+      "path": "src/registry/blocks/cta-03/components/cta.tsx",
+      "content": "import { ArrowUpRight } from \"lucide-react\";\nimport { Button } from \"@/components/ui/button\";\n\nconst CTA = () => {\n  return (\n    <div className=\"px-0 py-16 sm:px-6\">\n      <div className=\"relative mx-auto flex max-w-screen-lg flex-col justify-between gap-0 overflow-hidden bg-gradient-to-r from-muted px-10 ring-2 ring-border sm:rounded-xl sm:shadow-lg md:flex-row md:gap-8\">\n        <div className=\"pt-14 pb-0 md:pb-14\">\n          <h2 className=\"font-semibold text-4xl tracking-tight lg:text-5xl\">\n            Build Beautiful UIs, Faster\n          </h2>\n          <p className=\"mt-4 text-muted-foreground text-xl lg:text-2xl\">\n            Grab this exclusive deal before it's gone.\n          </p>\n          <Button className=\"mt-10\" size=\"lg\">\n            Download Now <ArrowUpRight />\n          </Button>\n        </div>\n        <img\n          alt=\"\"\n          className=\"mt-auto aspect-square w-full max-w-xs md:h-72 md:w-auto md:max-w-none\"\n          src=\"/images/cta-mobile.png\"\n        />\n      </div>\n    </div>\n  );\n};\n\nexport default CTA;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footer-07",
+  "title": "Footer 07",
+  "description": "A simple footer block",
+  "files": [
+    {
+      "path": "src/registry/blocks/footer-07/components/footer.tsx",
+      "content": "import { Dribbble, Github, Twitter, Wheat } from \"lucide-react\";\nimport Link from \"next/link\";\n\nconst links = [\n  {\n    title: \"About\",\n    href: \"/#about\",\n  },\n  {\n    title: \"Contact\",\n    href: \"/#contact\",\n  },\n  {\n    title: \"Terms of Service\",\n    href: \"/#terms\",\n  },\n  {\n    title: \"Privacy Policy\",\n    href: \"/#privacy\",\n  },\n];\n\nconst Footer = () => {\n  return (\n    <footer className=\"border-t bg-background px-6 py-2\">\n      <div className=\"mx-auto w-full max-w-screen-2xl divide-y\">\n        <div className=\"flex flex-col items-center justify-between gap-4 px-2 pt-3 pb-5 sm:flex-row\">\n          <Link className=\"flex items-center gap-2\" href=\"/\">\n            <Wheat />\n            <span className=\"font-bold text-xl\">Bloxxee</span>\n          </Link>\n\n          <ul className=\"flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-medium text-sm\">\n            {links.map(({ title, href }) => (\n              <li key={title}>\n                <Link href={href}>{title}</Link>\n              </li>\n            ))}\n          </ul>\n        </div>\n        <div className=\"flex flex-col-reverse items-center justify-between gap-4 px-2 pt-4 pb-2 sm:flex-row\">\n          <p className=\"font-medium text-muted-foreground text-sm\">\n            Copyright &copy; {new Date().getFullYear()} Bloxxee. All rights\n            reserved.\n          </p>\n\n          <div className=\"flex items-center gap-4\">\n            <Link href=\"/\">\n              <Dribbble className=\"h-5 w-5 text-muted-foreground\" />\n            </Link>\n            <Link href=\"/\">\n              <Twitter className=\"h-5 w-5 text-muted-foreground\" />\n            </Link>\n            <Link href=\"/\">\n              <Github className=\"h-5 w-5 text-muted-foreground\" />\n            </Link>\n          </div>\n        </div>\n      </div>\n    </footer>\n  );\n};\n\nexport default Footer;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}
