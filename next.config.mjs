@@ -26,6 +26,9 @@ const nextConfig = {
       {
         hostname: "github.com",
       },
+      {
+        hostname: "avatars.githubusercontent.com",
+      },
     ],
   },
   outputFileTracingIncludes: {

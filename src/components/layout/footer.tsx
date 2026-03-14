@@ -31,6 +31,20 @@ const footerSections = [
   },
   {
     className: "col-span-full xl:col-span-2",
+    title: "Support",
+    links: [
+      {
+        title: "Sponsors",
+        href: "/sponsors",
+      },
+      {
+        title: "Sponsor on GitHub",
+        href: "https://github.com/sponsors/akash3444",
+      },
+    ],
+  },
+  {
+    className: "col-span-full xl:col-span-2",
     title: "Products",
     links: [
       {

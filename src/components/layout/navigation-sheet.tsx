@@ -68,6 +68,13 @@ export function NavigationSheet() {
             >
               OG Images
             </Link>
+            <Link
+              className="block"
+              href="/sponsors"
+              onClick={() => setOpen(false)}
+            >
+              Sponsors
+            </Link>
           </div>
         </ScrollArea>
       </SheetContent>

@@ -3,7 +3,6 @@
 import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -34,15 +33,12 @@ export function AppNavigationMenu() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Button asChild size="sm" variant="ghost">
-            <Link href="/opengraph-images">
-              OG Images
-              <Badge
-                className="ml-1 bg-blue-500/15 text-blue-400 dark:bg-blue-500/25"
-                variant="secondary"
-              >
-                New
-              </Badge>
-            </Link>
+            <Link href="/opengraph-images">OG Images</Link>
+          </Button>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Button asChild size="sm" variant="ghost">
+            <Link href="/sponsors">Sponsors</Link>
           </Button>
         </NavigationMenuItem>
       </NavigationMenuList>

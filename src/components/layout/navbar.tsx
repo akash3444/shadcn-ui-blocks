@@ -1,4 +1,4 @@
-import { Sparkles } from "lucide-react";
+import { Heart } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -33,11 +33,11 @@ export const Navbar = ({ className }: { className?: string }) => {
         <div className="flex items-center gap-2">
           <Button asChild className="relative" size="sm">
             <Link
-              href="https://pro.shadcnui-blocks.com"
+              href="https://github.com/sponsors/akash3444"
               rel="noopener"
               target="_blank"
             >
-              <Sparkles /> Get Pro
+              <Heart className="size-3.5 fill-current" /> Sponsor Me
             </Link>
           </Button>
           <GithubStarButton size="icon-sm" />
