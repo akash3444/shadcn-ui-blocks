@@ -1,6 +1,7 @@
 "use client";
 
-import { Settings2 } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 
 import { Slider as SliderPrimitive } from "radix-ui";
 import * as React from "react";
@@ -22,7 +23,7 @@ export default function SliderWithCustomThumbDemo() {
         </SliderPrimitive.Track>
 
         <SliderPrimitive.Thumb className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/50 bg-background shadow-sm transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
-          <Settings2 className="h-3.5 w-3.5" />
+          <IconPlaceholder {...getIconProps("Settings2")} className="h-3.5 w-3.5" />
         </SliderPrimitive.Thumb>
       </SliderPrimitive.Root>
     </div>

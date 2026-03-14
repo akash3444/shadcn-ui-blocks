@@ -1,13 +1,7 @@
 "use client";
 
-import {
-  Bell,
-  CalendarCheck,
-  CalendarCog,
-  CalendarPlus,
-  CalendarX,
-  type LucideIcon,
-} from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Checkbox } from "@/registry/ui/checkbox";
@@ -15,7 +9,7 @@ import { Checkbox } from "@/registry/ui/checkbox";
 interface NotificationType {
   label: string;
   value: string;
-  icon: LucideIcon;
+  icon: string;
 }
 
 export default function Checkbox16() {
@@ -46,7 +40,7 @@ export default function Checkbox16() {
                 >
                   <td className="p-3">
                     <div className="flex items-center gap-2.5">
-                      <notificationType.icon className="size-4 text-muted-foreground" />
+                      <IconPlaceholder {...getIconProps(notificationType.icon)} className="size-4 text-muted-foreground" />
                       <span className="text-sm">{notificationType.label}</span>
                     </div>
                   </td>
@@ -77,15 +71,15 @@ export default function Checkbox16() {
 }
 
 const notificationTypes: NotificationType[] = [
-  { label: "New Booking", value: "new-booking", icon: CalendarPlus },
-  { label: "Booking Cancelled", value: "booking-cancelled", icon: CalendarX },
-  { label: "Booking Updated", value: "booking-updated", icon: CalendarCog },
-  { label: "Booking Reminder", value: "booking-reminder-1", icon: Bell },
+  { label: "New Booking", value: "new-booking", icon: "CalendarPlus" },
+  { label: "Booking Cancelled", value: "booking-cancelled", icon: "CalendarX" },
+  { label: "Booking Updated", value: "booking-updated", icon: "CalendarCog" },
+  { label: "Booking Reminder", value: "booking-reminder-1", icon: "Bell" },
   {
     label: "Booking Confirmation",
     value: "booking-confirmation",
-    icon: CalendarCheck,
+    icon: "CalendarCheck",
   },
-  { label: "Payment Reminder", value: "payment-reminder", icon: Bell },
-  { label: "Upcoming Reminder", value: "upcoming-reminder", icon: Bell },
+  { label: "Payment Reminder", value: "payment-reminder", icon: "Bell" },
+  { label: "Upcoming Reminder", value: "upcoming-reminder", icon: "Bell" },
 ];

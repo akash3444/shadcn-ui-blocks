@@ -1,6 +1,7 @@
 "use client";
 
-import { MoonIcon, SunIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { useTheme } from "next-themes";
 import {
   Select,
@@ -25,13 +26,13 @@ export default function ThemeSelector() {
           <SelectLabel>Themes</SelectLabel>
           <SelectItem value="light">
             <div className="flex items-center gap-2">
-              <SunIcon className="h-4 w-4" />
+              <IconPlaceholder {...getIconProps("SunIcon")} className="h-4 w-4" />
               Light
             </div>
           </SelectItem>
           <SelectItem value="dark">
             <div className="flex items-center gap-2">
-              <MoonIcon className="h-4 w-4" />
+              <IconPlaceholder {...getIconProps("MoonIcon")} className="h-4 w-4" />
               Dark
             </div>
           </SelectItem>

@@ -1,4 +1,5 @@
-import { CircleCheck } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Checkbox as CheckboxPrimitive } from "radix-ui";
 import { cn } from "@/lib/utils";
 
@@ -20,7 +21,7 @@ const CheckboxCardDemo = () => {
           key={color}
         >
           <CheckboxPrimitive.Indicator className="flex h-full w-full items-center justify-center">
-            <CircleCheck className="h-5 w-5 fill-white stroke-current" />
+            <IconPlaceholder {...getIconProps("CircleCheck")} className="h-5 w-5 fill-white stroke-current" />
           </CheckboxPrimitive.Indicator>
         </CheckboxPrimitive.Root>
       ))}

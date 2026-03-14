@@ -1,6 +1,7 @@
 "use client";
 
-import { ChevronRight, FileIcon, FolderIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import {
   Collapsible,
   CollapsibleContent,
@@ -58,7 +59,7 @@ const FileTreeItem = ({ name, type, children }: FileTreeItem) => {
   if (type === "file") {
     return (
       <div className="flex items-center gap-2 py-1 pl-10">
-        <FileIcon className="h-4 w-4" /> {name}
+        <IconPlaceholder {...getIconProps("FileIcon")} className="h-4 w-4" /> {name}
       </div>
     );
   }
@@ -66,9 +67,9 @@ const FileTreeItem = ({ name, type, children }: FileTreeItem) => {
   return (
     <Collapsible className="pl-4">
       <CollapsibleTrigger className="group flex w-full items-center gap-2 py-1">
-        <ChevronRight className="h-4 w-4 transition-transform group-data-[state=open]:rotate-90" />
+        <IconPlaceholder {...getIconProps("ChevronRight")} className="h-4 w-4 transition-transform group-data-[state=open]:rotate-90" />
         <span className="flex items-center gap-2">
-          <FolderIcon className="h-4 w-4 fill-current" /> {name}
+          <IconPlaceholder {...getIconProps("FolderIcon")} className="h-4 w-4 fill-current" /> {name}
         </span>
       </CollapsibleTrigger>
       <CollapsibleContent>

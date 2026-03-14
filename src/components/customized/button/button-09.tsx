@@ -1,4 +1,5 @@
-import { StarIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { cn } from "@/lib/utils";
 import { Button } from "@/registry/ui/button";
 
@@ -19,10 +20,10 @@ const GradientButtonDemo = () => (
   <div className="flex flex-wrap items-center gap-2">
     <ButtonGradient>Gradient</ButtonGradient>
     <ButtonGradient size="icon">
-      <StarIcon />
+      <IconPlaceholder {...getIconProps("StarIcon")} />
     </ButtonGradient>
     <ButtonGradient>
-      <StarIcon /> Star
+      <IconPlaceholder {...getIconProps("StarIcon")} /> Star
     </ButtonGradient>
   </div>
 );

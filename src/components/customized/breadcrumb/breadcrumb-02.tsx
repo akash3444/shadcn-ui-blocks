@@ -1,4 +1,5 @@
-import { Slash } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -16,13 +17,13 @@ const BreadcrumbsWithSlashSeparator = () => {
           <BreadcrumbLink href="#">Home</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
-          <Slash />
+          <IconPlaceholder {...getIconProps("Slash")} />
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbLink href="#/components">Components</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
-          <Slash />
+          <IconPlaceholder {...getIconProps("Slash")} />
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbPage>Breadcrumb</BreadcrumbPage>

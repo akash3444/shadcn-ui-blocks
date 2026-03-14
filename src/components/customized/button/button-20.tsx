@@ -1,6 +1,7 @@
 "use client";
 
-import { Check, Copy } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import React from "react";
 import { Button } from "@/registry/ui/button";
 
@@ -14,7 +15,7 @@ const CopyButton = () => {
         {link}
       </p>
       <Button onClick={() => copyToClipboard(link)} size="icon">
-        {isCopied ? <Check /> : <Copy />}
+        {isCopied ? <IconPlaceholder {...getIconProps("Check")} /> : <IconPlaceholder {...getIconProps("Copy")} />}
       </Button>
     </div>
   );

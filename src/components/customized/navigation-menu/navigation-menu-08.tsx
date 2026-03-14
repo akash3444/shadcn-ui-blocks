@@ -1,4 +1,5 @@
-import { BookOpen, Home, Rss, Settings, User } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import {
@@ -10,11 +11,11 @@ import {
 } from "@/registry/ui/navigation-menu";
 
 const navigationMenuItems = [
-  { title: "Home", href: "#", icon: Home, isActive: true },
-  { title: "Blog", href: "#blog", icon: Rss },
-  { title: "Docs", href: "#docs", icon: BookOpen },
-  { title: "Account", href: "#account", icon: Settings },
-  { title: "Settings", href: "#settings", icon: User },
+  { title: "Home", href: "#", icon: "Home", isActive: true },
+  { title: "Blog", href: "#blog", icon: "Rss" },
+  { title: "Docs", href: "#docs", icon: "BookOpen" },
+  { title: "Account", href: "#account", icon: "Settings" },
+  { title: "Settings", href: "#settings", icon: "User" },
 ];
 
 export default function NavigationMenuMobile() {
@@ -32,7 +33,7 @@ export default function NavigationMenuMobile() {
               )}
             >
               <Link href={item.href}>
-                <item.icon className="mb-0.5 size-5" />
+                <IconPlaceholder {...getIconProps(item.icon)} className="mb-0.5 size-5" />
                 {item.title}
               </Link>
             </NavigationMenuLink>

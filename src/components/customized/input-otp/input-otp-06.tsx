@@ -1,4 +1,5 @@
-import { Dot } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/registry/ui/input-otp";
 
 export default function InputOTPDemo() {
@@ -10,7 +11,7 @@ export default function InputOTPDemo() {
         <InputOTPSlot index={2} />
       </InputOTPGroup>
       <div className="text-muted-foreground" role="separator">
-        <Dot />
+        <IconPlaceholder {...getIconProps("Dot")} />
       </div>
       <InputOTPGroup>
         <InputOTPSlot index={3} />

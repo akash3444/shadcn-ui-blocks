@@ -1,4 +1,5 @@
-import { Package, ShoppingCart, Store, Truck } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Fragment } from "react";
 import {
   Breadcrumb,
@@ -12,22 +13,22 @@ const steps = [
   {
     label: "Store",
     href: "#/store",
-    icon: Store,
+    icon: "Store",
   },
   {
     label: "Delivery Tracking",
     href: "#/delivery-tracking",
-    icon: Truck,
+    icon: "Truck",
   },
   {
     label: "Cart",
     href: "#/cart",
-    icon: ShoppingCart,
+    icon: "ShoppingCart",
   },
   {
     label: "Package",
     href: "#/package",
-    icon: Package,
+    icon: "Package",
     active: true,
   },
 ];
@@ -41,11 +42,11 @@ const BreadcrumbsSteps = () => {
             <BreadcrumbItem>
               {step.active ? (
                 <BreadcrumbPage>
-                  <step.icon className="h-5 w-5" />
+                  <IconPlaceholder {...getIconProps(step.icon)} className="h-5 w-5" />
                 </BreadcrumbPage>
               ) : (
                 <BreadcrumbLink href={step.href}>
-                  <step.icon className="h-5 w-5" />
+                  <IconPlaceholder {...getIconProps(step.icon)} className="h-5 w-5" />
                 </BreadcrumbLink>
               )}
             </BreadcrumbItem>

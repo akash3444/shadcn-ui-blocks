@@ -1,9 +1,5 @@
-import {
-  ChevronFirst,
-  ChevronLast,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import {
   Pagination,
   PaginationContent,
@@ -17,12 +13,12 @@ export default function PaginationWithFirstAndLastPageNavigation() {
       <PaginationContent>
         <PaginationItem>
           <PaginationLink aria-label="Go to first page" href="#" size="icon">
-            <ChevronFirst className="h-4 w-4" />
+            <IconPlaceholder {...getIconProps("ChevronFirst")} className="h-4 w-4" />
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
           <PaginationLink aria-label="Go to previous page" href="#" size="icon">
-            <ChevronLeft className="h-4 w-4" />
+            <IconPlaceholder {...getIconProps("ChevronLeft")} className="h-4 w-4" />
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
@@ -38,12 +34,12 @@ export default function PaginationWithFirstAndLastPageNavigation() {
         </PaginationItem>
         <PaginationItem>
           <PaginationLink aria-label="Go to next page" href="#" size="icon">
-            <ChevronRight className="h-4 w-4" />
+            <IconPlaceholder {...getIconProps("ChevronRight")} className="h-4 w-4" />
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
           <PaginationLink aria-label="Go to last page" href="#" size="icon">
-            <ChevronLast className="h-4 w-4" />
+            <IconPlaceholder {...getIconProps("ChevronLast")} className="h-4 w-4" />
           </PaginationLink>
         </PaginationItem>
       </PaginationContent>

@@ -1,6 +1,7 @@
 "use client";
 
-import { MoonIcon, SunMediumIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Switch as SwitchPrimitive } from "radix-ui";
 import * as React from "react";
 import { cn } from "@/lib/utils";
@@ -42,9 +43,9 @@ const SwitchCustomizationDemo = () => {
       className="h-7 w-12"
       icon={
         isDarkMode ? (
-          <MoonIcon className="h-4 w-4" />
+          <IconPlaceholder {...getIconProps("MoonIcon")} className="h-4 w-4" />
         ) : (
-          <SunMediumIcon className="h-4 w-4" />
+          <IconPlaceholder {...getIconProps("SunMediumIcon")} className="h-4 w-4" />
         )
       }
       onCheckedChange={setIsDarkMode}

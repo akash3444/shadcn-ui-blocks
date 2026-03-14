@@ -1,7 +1,8 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { BanIcon, MoreHorizontalIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Button } from "@/registry/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
 
@@ -63,10 +64,10 @@ const UserList = ({ users }: { users: typeof following }) => (
           </div>
           <div className="flex items-center gap-2">
             <Button size="icon" variant="outline">
-              <MoreHorizontalIcon className="h-5 w-5" />
+              <IconPlaceholder {...getIconProps("MoreHorizontalIcon")} className="h-5 w-5" />
             </Button>
             <Button className="text-destructive" size="icon" variant="outline">
-              <BanIcon className="h-5 w-5" />
+              <IconPlaceholder {...getIconProps("BanIcon")} className="h-5 w-5" />
             </Button>
           </div>
         </motion.div>

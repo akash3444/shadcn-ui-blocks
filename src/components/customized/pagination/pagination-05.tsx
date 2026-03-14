@@ -1,4 +1,5 @@
-import { ChevronsLeft, ChevronsRight } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import {
   Pagination,
   PaginationContent,
@@ -12,7 +13,7 @@ export default function PaginationWithIcon() {
       <PaginationContent>
         <PaginationItem>
           <PaginationLink aria-label="Go to previous page" href="#" size="icon">
-            <ChevronsLeft className="h-4 w-4" />
+            <IconPlaceholder {...getIconProps("ChevronsLeft")} className="h-4 w-4" />
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
@@ -28,7 +29,7 @@ export default function PaginationWithIcon() {
         </PaginationItem>
         <PaginationItem>
           <PaginationLink aria-label="Go to next page" href="#" size="icon">
-            <ChevronsRight className="h-4 w-4" />
+            <IconPlaceholder {...getIconProps("ChevronsRight")} className="h-4 w-4" />
           </PaginationLink>
         </PaginationItem>
       </PaginationContent>

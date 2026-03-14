@@ -1,12 +1,7 @@
 "use client";
 
-import {
-  AppleIcon,
-  BananaIcon,
-  CherryIcon,
-  CitrusIcon,
-  GrapeIcon,
-} from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import * as React from "react";
 import {
   Select,
@@ -19,11 +14,11 @@ import {
 } from "@/registry/ui/select";
 
 const fruits = [
-  { value: "apple", label: "Apple", icon: AppleIcon },
-  { value: "banana", label: "Banana", icon: BananaIcon },
-  { value: "cherry", label: "Cherry", icon: CherryIcon },
-  { value: "grapes", label: "Grapes", icon: GrapeIcon },
-  { value: "citrus", label: "Citrus", icon: CitrusIcon },
+  { value: "apple", label: "Apple", icon: "AppleIcon" },
+  { value: "banana", label: "Banana", icon: "BananaIcon" },
+  { value: "cherry", label: "Cherry", icon: "CherryIcon" },
+  { value: "grapes", label: "Grapes", icon: "GrapeIcon" },
+  { value: "citrus", label: "Citrus", icon: "CitrusIcon" },
 ];
 
 export default function SelectWithIconDemo() {
@@ -42,7 +37,7 @@ export default function SelectWithIconDemo() {
           {fruits.map((fruit) => (
             <SelectItem key={fruit.value} value={fruit.value}>
               <div className="flex items-center gap-2">
-                <fruit.icon className="h-4 w-4" /> {fruit.label}
+                <IconPlaceholder {...getIconProps(fruit.icon)} className="h-4 w-4" /> {fruit.label}
               </div>
             </SelectItem>
           ))}

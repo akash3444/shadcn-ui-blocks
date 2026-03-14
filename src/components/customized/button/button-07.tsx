@@ -1,4 +1,5 @@
-import { ChevronDown, Plus, Star, X } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Button } from "@/registry/ui/button";
 import { ButtonGroup } from "@/registry/ui/button-group";
 import {
@@ -14,19 +15,19 @@ const SplitButton = () => {
   return (
     <ButtonGroup>
       <Button variant="outline">
-        <Star /> Star
+        <IconPlaceholder {...getIconProps("Star")} /> Star
       </Button>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button size="icon" variant="outline">
-            <ChevronDown />
+            <IconPlaceholder {...getIconProps("ChevronDown")} />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="min-w-52">
           <DropdownMenuLabel className="flex items-center justify-between gap-2">
             Lists
             <Button className="h-5 w-5" size="icon" variant="ghost">
-              <X />
+              <IconPlaceholder {...getIconProps("X")} />
             </Button>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
@@ -35,7 +36,7 @@ const SplitButton = () => {
           <DropdownMenuItem>✨ Inspiration</DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem>
-            <Plus /> Create List
+            <IconPlaceholder {...getIconProps("Plus")} /> Create List
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

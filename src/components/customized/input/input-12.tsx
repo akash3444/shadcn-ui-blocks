@@ -1,6 +1,7 @@
 "use client";
 
-import { ImageIcon, XCircleIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import Image from "next/image";
 import { useState } from "react";
 import Dropzone from "react-dropzone";
@@ -19,7 +20,7 @@ const ImagePreview = ({
       className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2"
       onClick={onRemove}
     >
-      <XCircleIcon className="h-5 w-5 fill-primary text-primary-foreground" />
+      <IconPlaceholder {...getIconProps("XCircleIcon")} className="h-5 w-5 fill-primary text-primary-foreground" />
     </button>
     <Image
       alt=""
@@ -76,7 +77,7 @@ export default function InputDemo() {
                 )}
               >
                 <input {...getInputProps()} id="profile" />
-                <ImageIcon className="h-16 w-16" strokeWidth={1.25} />
+                <IconPlaceholder {...getIconProps("ImageIcon")} className="h-16 w-16" strokeWidth={1.25} />
               </div>
             )}
           </Dropzone>

@@ -1,12 +1,7 @@
 "use client";
 
-import {
-  ChevronDown,
-  CircleDollarSign,
-  type LucideIcon,
-  Star,
-  Tag,
-} from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { type ReactNode, useState } from "react";
 import { Checkbox } from "@/registry/ui/checkbox";
 import {
@@ -46,7 +41,7 @@ function PriceRangeFilter() {
   };
 
   return (
-    <CollapsibleFilter icon={CircleDollarSign} title="Price Range">
+    <CollapsibleFilter icon="CircleDollarSign" title="Price Range">
       <div className="flex justify-between space-x-4">
         <Input
           className="w-20"
@@ -84,10 +79,11 @@ function RatingFilter() {
   const [hoveredRating, setHoveredRating] = useState<number | null>(null);
 
   return (
-    <CollapsibleFilter icon={Star} title="Rating">
+    <CollapsibleFilter icon="Star" title="Rating">
       <div className="mb-1 flex space-x-1">
         {[1, 2, 3, 4, 5].map((ratingValue) => (
-          <Star
+          <IconPlaceholder
+            {...getIconProps("Star")}
             className={`h-6 w-6 cursor-pointer ${
               (
                 hoveredRating !== null
@@ -119,7 +115,7 @@ const categories = [
 ];
 function CategoryFilter() {
   return (
-    <CollapsibleFilter icon={Tag} title="Category">
+    <CollapsibleFilter icon="Tag" title="Category">
       {categories.map((category) => (
         <div className="mb-2 flex items-center space-x-3" key={category}>
           <Checkbox id={category} />
@@ -132,19 +128,19 @@ function CategoryFilter() {
 
 const CollapsibleFilter = ({
   title,
-  icon: Icon,
+  icon,
   children,
 }: {
   title: string;
-  icon?: LucideIcon;
+  icon?: string;
   children: ReactNode;
 }) => (
   <Collapsible defaultOpen>
     <CollapsibleTrigger className="group flex w-full items-center justify-between py-3">
       <h3 className="flex items-center gap-2 font-semibold text-sm">
-        {!!Icon && <Icon className="h-5 w-5" />} {title}
+        {!!icon && <IconPlaceholder {...getIconProps(icon)} className="h-5 w-5" />} {title}
       </h3>
-      <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
+      <IconPlaceholder {...getIconProps("ChevronDown")} className="h-4 w-4 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
     </CollapsibleTrigger>
     <CollapsibleContent className="pt-1 pb-3">{children}</CollapsibleContent>
   </Collapsible>

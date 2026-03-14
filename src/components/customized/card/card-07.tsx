@@ -1,4 +1,5 @@
-import { ArrowRight, Shapes } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Button } from "@/registry/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/registry/ui/card";
 
@@ -7,7 +8,7 @@ const ProductCard = () => {
     <Card className="max-w-xs gap-0 pt-0 shadow-none">
       <CardHeader className="flex flex-row items-center gap-3 px-5 py-4 font-semibold">
         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
-          <Shapes className="h-5 w-5" />
+          <IconPlaceholder {...getIconProps("Shapes")} className="h-5 w-5" />
         </div>
         Shadcn UI Blocks
       </CardHeader>
@@ -22,7 +23,7 @@ const ProductCard = () => {
 
       <CardFooter className="mt-6">
         <Button className="/blocks">
-          Explore Blocks <ArrowRight />
+          Explore Blocks <IconPlaceholder {...getIconProps("ArrowRight")} />
         </Button>
       </CardFooter>
     </Card>

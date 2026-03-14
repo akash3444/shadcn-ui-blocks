@@ -1,6 +1,7 @@
 "use client";
 
-import { CheckIcon, MinusIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Checkbox as CheckboxPrimitive } from "radix-ui";
 import * as React from "react";
 import { cn } from "@/lib/utils";
@@ -21,8 +22,8 @@ const Checkbox = React.forwardRef<
     <CheckboxPrimitive.Indicator
       className={cn("flex items-center justify-center text-current")}
     >
-      <MinusIcon className="hidden h-4 w-4 group-data-[state=indeterminate]:block" />
-      <CheckIcon className="hidden h-4 w-4 group-data-[state=checked]:block" />
+      <IconPlaceholder {...getIconProps("MinusIcon")} className="hidden h-4 w-4 group-data-[state=indeterminate]:block" />
+      <IconPlaceholder {...getIconProps("CheckIcon")} className="hidden h-4 w-4 group-data-[state=checked]:block" />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 ));

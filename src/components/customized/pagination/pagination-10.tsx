@@ -1,4 +1,5 @@
-import { ChevronsLeft, ChevronsRight } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import {
   Pagination,
   PaginationContent,
@@ -17,7 +18,7 @@ export default function PaginationWithIconAndLabel() {
             href="#"
             size="default"
           >
-            <ChevronsLeft className="h-4 w-4" />
+            <IconPlaceholder {...getIconProps("ChevronsLeft")} className="h-4 w-4" />
             <span>Previous</span>
           </PaginationLink>
         </PaginationItem>
@@ -40,7 +41,7 @@ export default function PaginationWithIconAndLabel() {
             size="default"
           >
             <span>Next</span>
-            <ChevronsRight className="h-4 w-4" />
+            <IconPlaceholder {...getIconProps("ChevronsRight")} className="h-4 w-4" />
           </PaginationLink>
         </PaginationItem>
       </PaginationContent>

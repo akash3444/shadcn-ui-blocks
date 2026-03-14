@@ -1,4 +1,5 @@
-import { Copy } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Button } from "@/registry/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
 
@@ -51,7 +52,7 @@ export default function TabSkewedDemo() {
               size="icon"
               variant="secondary"
             >
-              <Copy className="h-3.5! w-3.5!" />
+              <IconPlaceholder {...getIconProps("Copy")} className="h-3.5! w-3.5!" />
             </Button>
           </div>
         </TabsContent>

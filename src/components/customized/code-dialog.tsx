@@ -1,4 +1,5 @@
-import { Code } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { VisuallyHidden as VisuallyHiddenPrimitive } from "radix-ui";
 import { CopyButton } from "@/components/copy-button";
 import { Button } from "@/components/ui/button";
@@ -49,7 +50,7 @@ export const CodeDialog = async ({
               size="icon"
               variant="ghost"
             >
-              <Code className="size-4" />
+              <IconPlaceholder {...getIconProps("Code")} className="size-4" />
             </Button>
           </DialogTrigger>
         </TooltipTrigger>

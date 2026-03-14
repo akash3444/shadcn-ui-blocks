@@ -1,9 +1,10 @@
-import { StarIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Button } from "@/registry/ui/button";
 
 const FullWidthButtonDemo = () => (
   <Button className="w-full">
-    <StarIcon /> Star
+    <IconPlaceholder {...getIconProps("StarIcon")} /> Star
   </Button>
 );
 

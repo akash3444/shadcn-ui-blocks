@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
-import ComponentBlock from "@/components/component-block";
+import { Suspense } from "react";
+import { ComponentPreview } from "@/app/(components)/components/component-preview";
 import { DescriptionText, MainHeading } from "@/components/typography";
 import { componentsMap } from "@/description/app-sidebar";
-import { customizedComponents } from "@/description/customized-components";
 import { constructMetadata } from "@/lib/metadata";
 import { generateOgImageUrl } from "@/lib/og";
-import { absoluteUrl, cn } from "@/lib/utils";
+import { absoluteUrl } from "@/lib/utils";
 
 export const dynamicParams = false;
 
@@ -20,13 +20,13 @@ export const generateMetadata = async (props: {
 }) => {
   const params = await props.params;
   const details = componentsMap[params.component as keyof typeof componentsMap];
-  const components =
-    customizedComponents[
-      params.component as keyof typeof customizedComponents
-    ] || [];
 
-  const title = `${components.length}+ customized Shadcn UI ${details.title} components`;
-  const description = `Explore a curated collection of ${components.length}+ customized Shacn UI ${details.title} components. Preview, customize, and copy ready-to-use code snippets to streamline your web development workflow.`;
+  if (!details) {
+    return {};
+  }
+
+  const title = `Customized Shadcn UI ${details.title} components`;
+  const description = `Explore a curated collection of customized Shadcn UI ${details.title} components. Preview, customize, and copy ready-to-use code snippets to streamline your web development workflow.`;
 
   return constructMetadata({
     title,
@@ -57,37 +57,21 @@ const CustomizedComponentPage = async (props: {
   const { component } = params;
 
   const details = componentsMap[component as keyof typeof componentsMap];
-  const components =
-    customizedComponents[component as keyof typeof customizedComponents] || [];
 
   if (!details) {
     return notFound();
   }
 
   return (
-    <div>
-      <MainHeading>{details.title}</MainHeading>
-      <DescriptionText className="mt-2">{details.description}</DescriptionText>
-
-      <div
-        className={cn(
-          "mt-8 grid gap-1 rounded-xl border border-border/80 bg-muted/50 p-1",
-          {
-            "lg:grid-cols-2": details.columns === 2,
-            "sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3":
-              details.columns === 3,
-          },
-          details.className
-        )}
-      >
-        {components.map((component, index) => (
-          <ComponentBlock
-            index={index}
-            key={`${component.title}-${index}`}
-            {...component}
-          />
-        ))}
+    <div className="flex flex-col gap-6">
+      <div>
+        <MainHeading>{details.title}</MainHeading>
+        <DescriptionText className="mt-2">{details.description}</DescriptionText>
       </div>
+
+      <Suspense fallback={<div className="min-h-[600px] animate-pulse rounded-lg border bg-muted/50" />}>
+        <ComponentPreview />
+      </Suspense>
     </div>
   );
 };

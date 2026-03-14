@@ -1,4 +1,5 @@
-import { LogOut, Settings, User } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Avatar, AvatarImage } from "@/registry/ui/avatar";
 import {
   DropdownMenu,
@@ -21,13 +22,13 @@ export default function DropdownMenuWithIcon() {
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <User className="h-4 w-4" /> Profile
+          <IconPlaceholder {...getIconProps("User")} className="h-4 w-4" /> Profile
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <Settings className="h-4 w-4" /> Settings
+          <IconPlaceholder {...getIconProps("Settings")} className="h-4 w-4" /> Settings
         </DropdownMenuItem>
         <DropdownMenuItem variant="destructive">
-          <LogOut className="h-4 w-4" /> Logout
+          <IconPlaceholder {...getIconProps("LogOut")} className="h-4 w-4" /> Logout
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

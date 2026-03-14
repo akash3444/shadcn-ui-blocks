@@ -1,4 +1,5 @@
-import { BuildingIcon, StoreIcon, UserRoundIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Avatar, AvatarFallback } from "@/registry/ui/avatar";
 
 export default function AvatarFallbackDemo() {
@@ -17,17 +18,17 @@ export default function AvatarFallbackDemo() {
         </Avatar>
         <Avatar>
           <AvatarFallback className="bg-indigo-500/25 text-indigo-500">
-            <UserRoundIcon className="size-4.5" />
+            <IconPlaceholder {...getIconProps("UserRoundIcon")} className="size-4.5" />
           </AvatarFallback>
         </Avatar>
         <Avatar>
           <AvatarFallback className="bg-indigo-500/25 text-indigo-500">
-            <BuildingIcon className="size-4.5" />
+            <IconPlaceholder {...getIconProps("BuildingIcon")} className="size-4.5" />
           </AvatarFallback>
         </Avatar>
         <Avatar>
           <AvatarFallback className="bg-indigo-500/25 text-indigo-500">
-            <StoreIcon className="size-4.5" />
+            <IconPlaceholder {...getIconProps("StoreIcon")} className="size-4.5" />
           </AvatarFallback>
         </Avatar>
       </div>

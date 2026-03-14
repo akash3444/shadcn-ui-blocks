@@ -1,6 +1,7 @@
 "use client";
 
-import { EyeIcon, EyeOffIcon, LockIcon, MailIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { useState } from "react";
 import {
   InputGroup,
@@ -22,7 +23,7 @@ export default function InputWithAdornmentDemo() {
       {/* <div className="relative flex items-center rounded-md border focus-within:ring-1 focus-within:ring-ring pl-2"> */}
       <InputGroup>
         <InputGroupAddon>
-          <MailIcon className="text-muted-foreground" />
+          <IconPlaceholder {...getIconProps("MailIcon")} className="text-muted-foreground" />
         </InputGroupAddon>
         <InputGroupInput
           className="border-0 shadow-none focus-visible:ring-0"
@@ -33,7 +34,7 @@ export default function InputWithAdornmentDemo() {
       {/* </div> */}
       <InputGroup>
         <InputGroupAddon>
-          <LockIcon className="text-muted-foreground" />
+          <IconPlaceholder {...getIconProps("LockIcon")} className="text-muted-foreground" />
         </InputGroupAddon>
         <InputGroupInput
           className="border-0 shadow-none focus-visible:ring-0"
@@ -44,9 +45,9 @@ export default function InputWithAdornmentDemo() {
         <InputGroupAddon align="inline-end">
           <InputGroupButton onClick={togglePasswordVisibility}>
             {showPassword ? (
-              <EyeOffIcon className="size-4 text-muted-foreground" />
+              <IconPlaceholder {...getIconProps("EyeOffIcon")} className="size-4 text-muted-foreground" />
             ) : (
-              <EyeIcon className="size-4 text-muted-foreground" />
+              <IconPlaceholder {...getIconProps("EyeIcon")} className="size-4 text-muted-foreground" />
             )}
           </InputGroupButton>
         </InputGroupAddon>

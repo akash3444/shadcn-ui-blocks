@@ -1,6 +1,7 @@
 "use client";
 
-import { Check, ChevronsUpDown } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { useState } from "react";
 import { Avatar, AvatarFallback } from "@/registry/ui/avatar";
 import {
@@ -48,7 +49,7 @@ export default function WorkspaceSwitcher() {
             {selectedWorkspace.createdBy}
           </span>
         </div>
-        <ChevronsUpDown className="ml-6 h-4 w-4 text-muted-foreground" />
+        <IconPlaceholder {...getIconProps("ChevronsUpDown")} className="ml-6 h-4 w-4 text-muted-foreground" />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start" className="w-52">
         <DropdownMenuLabel>Workspaces</DropdownMenuLabel>
@@ -71,7 +72,7 @@ export default function WorkspaceSwitcher() {
               </div>
             </div>
             {selectedWorkspace.id === workspace.id && (
-              <Check className="ml-auto" />
+              <IconPlaceholder {...getIconProps("Check")} className="ml-auto" />
             )}
           </DropdownMenuItem>
         ))}

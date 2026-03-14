@@ -1,4 +1,5 @@
-import { ChevronDown } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Select as SelectPrimitive } from "radix-ui";
 import { cn } from "@/lib/utils";
 import {
@@ -21,7 +22,7 @@ export default function SelectWithCustomDropdownIconDemo() {
       >
         <SelectValue placeholder="Select a fruit" />
         <SelectPrimitive.Icon asChild>
-          <ChevronDown className="h-4 w-4 opacity-50" />
+          <IconPlaceholder {...getIconProps("ChevronDown")} className="h-4 w-4 opacity-50" />
         </SelectPrimitive.Icon>
       </SelectPrimitive.Trigger>
       <SelectContent>

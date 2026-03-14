@@ -1,12 +1,7 @@
 "use client";
 
-import {
-  EyeIcon,
-  PencilIcon,
-  ShieldIcon,
-  UserCircleIcon,
-  UserIcon,
-} from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Checkbox } from "@/registry/ui/checkbox";
 
 export default function Checkbox13() {
@@ -20,7 +15,7 @@ export default function Checkbox13() {
         >
           <div className="flex items-center gap-2">
             <div className="flex size-9 items-center justify-center rounded-md bg-muted">
-              <role.icon className="size-4.5" />
+              <IconPlaceholder {...getIconProps(role.icon)} className="size-4.5" />
             </div>
             <div className="flex flex-col gap-0.5">
               <span className="font-medium text-sm">{role.name}</span>
@@ -44,38 +39,38 @@ const roles = [
     name: "Administrator",
     value: "administrator",
     description: "Full system access",
-    icon: ShieldIcon,
+    icon: "ShieldIcon",
     defaultChecked: true,
   },
   {
     name: "Editor",
     value: "editor",
     description: "Content management only",
-    icon: PencilIcon,
+    icon: "PencilIcon",
   },
   {
     name: "Moderator",
     value: "moderator",
     description: "User content moderation",
-    icon: EyeIcon,
+    icon: "EyeIcon",
     defaultChecked: true,
   },
   {
     name: "User",
     value: "user",
     description: "Basic feature access",
-    icon: UserIcon,
+    icon: "UserIcon",
   },
   {
     name: "Viewer",
     value: "viewer",
     description: "Read-only permissions",
-    icon: EyeIcon,
+    icon: "EyeIcon",
   },
   {
     name: "Guest",
     value: "guest",
     description: "Limited public access",
-    icon: UserCircleIcon,
+    icon: "UserCircleIcon",
   },
 ];

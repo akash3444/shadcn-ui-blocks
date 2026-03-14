@@ -1,9 +1,5 @@
-import {
-  HeartIcon,
-  MessageCircleIcon,
-  MoreHorizontalIcon,
-  ShareIcon,
-} from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import Image from "next/image";
 import { Button } from "@/registry/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/registry/ui/card";
@@ -36,7 +32,7 @@ export default function CardPost() {
           </ItemContent>
           <ItemActions className="-me-1">
             <Button size="icon" variant="ghost">
-              <MoreHorizontalIcon />
+              <IconPlaceholder {...getIconProps("MoreHorizontalIcon")} />
             </Button>
           </ItemActions>
         </Item>
@@ -61,14 +57,14 @@ export default function CardPost() {
       </CardContent>
       <CardFooter className="flex items-center justify-between border-t px-2 py-2! pb-0">
         <Button className="shrink-0 text-muted-foreground" variant="ghost">
-          <HeartIcon /> <span className="hidden sm:inline">Like</span>
+          <IconPlaceholder {...getIconProps("HeartIcon")} /> <span className="hidden sm:inline">Like</span>
         </Button>
         <Button className="shrink-0 text-muted-foreground" variant="ghost">
-          <MessageCircleIcon />
+          <IconPlaceholder {...getIconProps("MessageCircleIcon")} />
           <span className="hidden sm:inline">Comment</span>
         </Button>
         <Button className="shrink-0 text-muted-foreground" variant="ghost">
-          <ShareIcon /> <span className="hidden sm:inline">Share</span>
+          <IconPlaceholder {...getIconProps("ShareIcon")} /> <span className="hidden sm:inline">Share</span>
         </Button>
       </CardFooter>
     </Card>

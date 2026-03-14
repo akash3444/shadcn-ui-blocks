@@ -1,17 +1,18 @@
-import { ArrowRight, Star } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Button } from "@/registry/ui/button";
 
 const IconButtonDemo = () => {
   return (
     <div className="flex items-center gap-2">
       <Button size="icon">
-        <Star />
+        <IconPlaceholder {...getIconProps("Star")} />
       </Button>
       <Button>
-        <Star /> Star
+        <IconPlaceholder {...getIconProps("Star")} /> Star
       </Button>
       <Button>
-        Read More <ArrowRight />
+        Read More <IconPlaceholder {...getIconProps("ArrowRight")} />
       </Button>
     </div>
   );

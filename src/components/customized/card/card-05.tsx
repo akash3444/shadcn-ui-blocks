@@ -1,4 +1,5 @@
-import { CircleHelpIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Button } from "@/registry/ui/button";
 import {
   Card,
@@ -30,7 +31,7 @@ export default function PricingCard() {
         <span className="mr-1.5 ml-0.5">/mo</span>
         <Tooltip>
           <TooltipTrigger className="mb-1">
-            <CircleHelpIcon className="h-4 w-4" />
+            <IconPlaceholder {...getIconProps("CircleHelpIcon")} className="h-4 w-4" />
           </TooltipTrigger>
           <TooltipContent className="max-w-xs">
             <p>

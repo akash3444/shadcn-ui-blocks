@@ -1,4 +1,5 @@
-import { OctagonAlert, X } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { AlertDialog as AlertDialogPrimitive } from "radix-ui";
 import {
   AlertDialog,
@@ -24,14 +25,14 @@ export default function AlertDialogWithCustomizedHeader() {
           <AlertDialogTitle>Delete Account</AlertDialogTitle>
           <AlertDialogPrimitive.Cancel asChild>
             <Button size="icon-sm" variant="ghost">
-              <X />
+              <IconPlaceholder {...getIconProps("X")} />
             </Button>
           </AlertDialogPrimitive.Cancel>
         </div>
         <AlertDialogHeader className="pt-2">
           <AlertDialogTitle>
             <div className="mx-auto mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-destructive/10 sm:mx-0">
-              <OctagonAlert className="h-5 w-5 text-destructive" />
+              <IconPlaceholder {...getIconProps("OctagonAlert")} className="h-5 w-5 text-destructive" />
             </div>
             Are you absolutely sure?
           </AlertDialogTitle>

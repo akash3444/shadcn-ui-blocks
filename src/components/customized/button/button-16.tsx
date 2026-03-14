@@ -1,6 +1,7 @@
 "use client";
 
-import { MoonIcon, SunIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Button } from "@/registry/ui/button";
@@ -24,7 +25,7 @@ const ThemeToggleButton = () => {
 
   return (
     <Button className="rounded-full" onClick={toggleTheme} size="icon">
-      {resolvedTheme === "dark" ? <SunIcon /> : <MoonIcon />}
+      {resolvedTheme === "dark" ? <IconPlaceholder {...getIconProps("SunIcon")} /> : <IconPlaceholder {...getIconProps("MoonIcon")} />}
     </Button>
   );
 };

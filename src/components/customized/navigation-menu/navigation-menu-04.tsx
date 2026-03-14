@@ -1,4 +1,5 @@
-import { BookOpen, Home, Rss } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import Link from "next/link";
 import {
   NavigationMenu,
@@ -9,9 +10,9 @@ import {
 } from "@/registry/ui/navigation-menu";
 
 const navigationMenuItems = [
-  { title: "Home", href: "#", icon: Home, isActive: true },
-  { title: "Blog", href: "#blog", icon: Rss },
-  { title: "Docs", href: "#docs", icon: BookOpen },
+  { title: "Home", href: "#", icon: "Home", isActive: true },
+  { title: "Blog", href: "#blog", icon: "Rss" },
+  { title: "Docs", href: "#docs", icon: "BookOpen" },
 ];
 
 export default function NavigationMenuWithActiveItem() {
@@ -26,7 +27,7 @@ export default function NavigationMenuWithActiveItem() {
               className={navigationMenuTriggerStyle()}
             >
               <Link className="flex-row items-center gap-2.5" href={item.href}>
-                <item.icon className="h-5 w-5 shrink-0" />
+                <IconPlaceholder {...getIconProps(item.icon)} className="h-5 w-5 shrink-0" />
                 {item.title}
               </Link>
             </NavigationMenuLink>

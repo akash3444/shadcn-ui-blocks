@@ -1,4 +1,5 @@
-import { Plus } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Accordion as AccordionPrimitive } from "radix-ui";
 import {
   Accordion,
@@ -37,7 +38,7 @@ export default function AccordionDefaultOpenDemo() {
           <AccordionPrimitive.Header className="flex">
             <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 font-medium text-sm transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
               {title}
-              <Plus className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
+              <IconPlaceholder {...getIconProps("Plus")} className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
             </AccordionPrimitive.Trigger>
           </AccordionPrimitive.Header>
           <AccordionContent>{content}</AccordionContent>

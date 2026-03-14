@@ -1,22 +1,23 @@
-import { CircleCheck, Ruler, Smile, SwatchBook } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Checkbox as CheckboxPrimitive } from "radix-ui";
 
 const options = [
   {
     label: "Colors",
     value: "colors",
-    icon: SwatchBook,
+    icon: "SwatchBook",
     defaultChecked: true,
   },
   {
     label: "Emojis",
     value: "emojis",
-    icon: Smile,
+    icon: "Smile",
   },
   {
     label: "Spacing",
     value: "spacing",
-    icon: Ruler,
+    icon: "Ruler",
   },
 ];
 
@@ -29,11 +30,11 @@ const CheckboxCardDemo = () => {
           defaultChecked={option.defaultChecked}
           key={option.value}
         >
-          <option.icon className="mb-3" />
+          <IconPlaceholder {...getIconProps(option.icon)} className="mb-3" />
           <span className="font-medium tracking-tight">{option.label}</span>
 
           <CheckboxPrimitive.Indicator className="absolute top-2 right-2">
-            <CircleCheck className="fill-primary text-primary-foreground" />
+            <IconPlaceholder {...getIconProps("CircleCheck")} className="fill-primary text-primary-foreground" />
           </CheckboxPrimitive.Indicator>
         </CheckboxPrimitive.Root>
       ))}

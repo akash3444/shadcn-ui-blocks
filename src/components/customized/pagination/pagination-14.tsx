@@ -1,6 +1,7 @@
 "use client";
 
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import React from "react";
 import { Button } from "@/registry/ui/button";
 import { Label } from "@/registry/ui/label";
@@ -56,7 +57,7 @@ export default function TablePagination() {
                 size="icon"
                 variant="ghost"
               >
-                <ChevronLeftIcon className="h-4 w-4" />
+                <IconPlaceholder {...getIconProps("ChevronLeftIcon")} className="h-4 w-4" />
               </Button>
             </PaginationItem>
             <PaginationItem>
@@ -66,7 +67,7 @@ export default function TablePagination() {
                 size="icon"
                 variant="ghost"
               >
-                <ChevronRightIcon className="h-4 w-4" />
+                <IconPlaceholder {...getIconProps("ChevronRightIcon")} className="h-4 w-4" />
               </Button>
             </PaginationItem>
           </PaginationContent>

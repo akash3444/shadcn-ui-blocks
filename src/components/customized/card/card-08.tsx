@@ -1,11 +1,12 @@
-import { Quote } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/avatar";
 import { Card, CardContent, CardHeader } from "@/registry/ui/card";
 
 const TestimonialCard = () => {
   return (
     <Card className="relative w-full max-w-sm gap-0 border-none bg-muted/70 pt-0 pb-4 shadow-none">
-      <Quote className="absolute top-3 right-2 h-16 w-16 stroke-[1.5px] text-foreground/10" />
+      <IconPlaceholder {...getIconProps("Quote")} className="absolute top-3 right-2 h-16 w-16 stroke-[1.5px] text-foreground/10" />
       <CardHeader className="py-5">
         <div className="flex items-center gap-3">
           <Avatar className="h-12 w-12">

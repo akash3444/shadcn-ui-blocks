@@ -1,4 +1,5 @@
-import { BookmarkIcon, CheckIcon, Heart, StarIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Checkbox as CheckboxPrimitive } from "radix-ui";
 import * as React from "react";
 import { cn } from "@/lib/utils";
@@ -24,7 +25,7 @@ const Checkbox = React.forwardRef<
         <CheckboxPrimitive.Indicator
           className={cn("flex items-center justify-center text-current")}
         >
-          <CheckIcon className="h-4 w-4" />
+          <IconPlaceholder {...getIconProps("CheckIcon")} className="h-4 w-4" />
         </CheckboxPrimitive.Indicator>
       )}
     </CheckboxPrimitive.Root>
@@ -36,19 +37,19 @@ export default function CheckboxIconDemo() {
   return (
     <div className="flex items-center space-x-3">
       <Checkbox
-        checkedIcon={<Heart className="fill-rose-500 stroke-rose-500" />}
+        checkedIcon={<IconPlaceholder {...getIconProps("Heart")} className="fill-rose-500 stroke-rose-500" />}
         defaultChecked
-        icon={<Heart />}
+        icon={<IconPlaceholder {...getIconProps("Heart")} />}
       />
       <Checkbox
-        checkedIcon={<BookmarkIcon className="fill-primary" />}
+        checkedIcon={<IconPlaceholder {...getIconProps("BookmarkIcon")} className="fill-primary" />}
         defaultChecked
-        icon={<BookmarkIcon />}
+        icon={<IconPlaceholder {...getIconProps("BookmarkIcon")} />}
       />
       <Checkbox
-        checkedIcon={<StarIcon className="fill-yellow-400 stroke-yellow-400" />}
+        checkedIcon={<IconPlaceholder {...getIconProps("StarIcon")} className="fill-yellow-400 stroke-yellow-400" />}
         defaultChecked
-        icon={<StarIcon />}
+        icon={<IconPlaceholder {...getIconProps("StarIcon")} />}
       />
     </div>
   );

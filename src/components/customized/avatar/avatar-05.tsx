@@ -1,4 +1,5 @@
-import { CalendarIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/avatar";
 import {
   HoverCard,
@@ -27,7 +28,7 @@ export default function AvatarHoverCardDemo() {
               The founder of Shadcn UI. I own a computer.
             </p>
             <div className="flex items-center pt-2">
-              <CalendarIcon className="mr-2 h-4 w-4 opacity-70" />{" "}
+              <IconPlaceholder {...getIconProps("CalendarIcon")} className="mr-2 h-4 w-4 opacity-70" />{" "}
               <span className="text-muted-foreground text-xs">
                 Joined December 2021
               </span>

@@ -1,5 +1,6 @@
-import { Loader2Icon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 
 export default function SpinnerCircleDemo() {
-  return <Loader2Icon className="animate-spin" />;
+  return <IconPlaceholder {...getIconProps("Loader2Icon")} className="animate-spin" />;
 }

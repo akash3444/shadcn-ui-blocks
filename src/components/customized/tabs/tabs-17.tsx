@@ -1,19 +1,20 @@
-import { Bot, Settings, User } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { cn } from "@/lib/utils";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
 
 const tabs = [
   {
     value: "profile",
-    icon: User,
+    icon: "User",
   },
   {
     value: "chat",
-    icon: Bot,
+    icon: "Bot",
   },
   {
     value: "settings",
-    icon: Settings,
+    icon: "Settings",
   },
 ];
 
@@ -34,7 +35,7 @@ const VerticalBorderedTabs = () => {
             key={item.value}
             value={item.value}
           >
-            <item.icon className="h-5 w-5" />
+            <IconPlaceholder {...getIconProps(item.icon)} className="h-5 w-5" />
           </TabsTrigger>
         ))}
       </TabsList>
@@ -43,7 +44,7 @@ const VerticalBorderedTabs = () => {
         {tabs.map((item) => (
           <TabsContent key={item.value} value={item.value}>
             <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted">
-              <item.icon />
+              <IconPlaceholder {...getIconProps(item.icon)} />
             </div>
             <p className="mt-4 text-center font-medium text-lg text-muted-foreground capitalize tracking-tight">
               {item.value}

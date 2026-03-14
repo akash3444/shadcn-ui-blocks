@@ -12,7 +12,8 @@ import {
   useReactTable,
   type VisibilityState,
 } from "@tanstack/react-table";
-import { ArrowUpDown, MoreHorizontal, Rows2, Rows3, Rows4 } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/registry/ui/button";
@@ -123,7 +124,7 @@ export const columns: ColumnDef<Payment>[] = [
           variant="ghost"
         >
           Email
-          <ArrowUpDown />
+          <IconPlaceholder {...getIconProps("ArrowUpDown")} />
         </Button>
       );
     },
@@ -155,7 +156,7 @@ export const columns: ColumnDef<Payment>[] = [
           <DropdownMenuTrigger asChild>
             <Button className="h-8 w-8 p-0" variant="ghost">
               <span className="sr-only">Open menu</span>
-              <MoreHorizontal />
+              <IconPlaceholder {...getIconProps("MoreHorizontal")} />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
@@ -225,18 +226,18 @@ export default function DataTableDensityDemo() {
               <SelectLabel>Density</SelectLabel>
               <SelectItem value="compact">
                 <div className="flex items-center gap-2">
-                  <Rows4 className="h-4 w-4" />
+                  <IconPlaceholder {...getIconProps("Rows4")} className="h-4 w-4" />
                   Compact
                 </div>
               </SelectItem>
               <SelectItem className="flex items-center gap-2" value="standard">
                 <div className="flex items-center gap-2">
-                  <Rows3 className="h-4 w-4" /> Standard
+                  <IconPlaceholder {...getIconProps("Rows3")} className="h-4 w-4" /> Standard
                 </div>
               </SelectItem>
               <SelectItem className="flex items-center gap-2" value="flexible">
                 <div className="flex items-center gap-2">
-                  <Rows2 className="h-4 w-4" />
+                  <IconPlaceholder {...getIconProps("Rows2")} className="h-4 w-4" />
                   Flexible
                 </div>
               </SelectItem>

@@ -1,12 +1,5 @@
-import {
-  Copy,
-  Ellipsis,
-  ExternalLink,
-  Eye,
-  MessageCircle,
-  Search,
-  User,
-} from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Button } from "@/registry/ui/button";
 import {
   DropdownMenu,
@@ -24,24 +17,24 @@ export default function DropdownMenuWithSubMenu() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button size="icon" variant="outline">
-          <Ellipsis />
+          <IconPlaceholder {...getIconProps("Ellipsis")} />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="mt-2 w-full">
         <DropdownMenuItem>
-          <Eye /> Open conversation details
+          <IconPlaceholder {...getIconProps("Eye")} /> Open conversation details
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <User /> View full profile
+          <IconPlaceholder {...getIconProps("User")} /> View full profile
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <MessageCircle /> Start conversation
+          <IconPlaceholder {...getIconProps("MessageCircle")} /> Start conversation
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>
-            <Copy className="size-4 text-muted-foreground" />
+            <IconPlaceholder {...getIconProps("Copy")} className="size-4 text-muted-foreground" />
             Copy
           </DropdownMenuSubTrigger>
           <DropdownMenuSubContent>
@@ -51,10 +44,10 @@ export default function DropdownMenuWithSubMenu() {
           </DropdownMenuSubContent>
         </DropdownMenuSub>
         <DropdownMenuItem>
-          <Search /> Search in conversation
+          <IconPlaceholder {...getIconProps("Search")} /> Search in conversation
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <ExternalLink /> Open in new window
+          <IconPlaceholder {...getIconProps("ExternalLink")} /> Open in new window
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

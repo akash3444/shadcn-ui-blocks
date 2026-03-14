@@ -12,7 +12,8 @@ import {
   useReactTable,
   type VisibilityState,
 } from "@tanstack/react-table";
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import * as React from "react";
 
 import { Button } from "@/registry/ui/button";
@@ -115,7 +116,7 @@ export const columns: ColumnDef<Payment>[] = [
           variant="ghost"
         >
           Email
-          <ArrowUpDown />
+          <IconPlaceholder {...getIconProps("ArrowUpDown")} />
         </Button>
       );
     },
@@ -147,7 +148,7 @@ export const columns: ColumnDef<Payment>[] = [
           <DropdownMenuTrigger asChild>
             <Button className="h-8 w-8 p-0" variant="ghost">
               <span className="sr-only">Open menu</span>
-              <MoreHorizontal />
+              <IconPlaceholder {...getIconProps("MoreHorizontal")} />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
@@ -209,7 +210,7 @@ export default function DataTableDemo() {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button className="ml-auto" variant="outline">
-              Columns <ChevronDown />
+              Columns <IconPlaceholder {...getIconProps("ChevronDown")} />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">

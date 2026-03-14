@@ -1,4 +1,5 @@
-import { ChevronsRight, Component, Home, Route } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -15,29 +16,29 @@ const BreadcrumbsSteps = () => {
         <BreadcrumbItem>
           <BreadcrumbLink href="#">
             <div className="flex flex-col items-center gap-1">
-              <Home className="h-4 w-4" />
+              <IconPlaceholder {...getIconProps("Home")} className="h-4 w-4" />
               Home
             </div>
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
-          <ChevronsRight />
+          <IconPlaceholder {...getIconProps("ChevronsRight")} />
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbLink href="#/components">
             <div className="flex flex-col items-center gap-1">
-              <Component className="h-4 w-4" />
+              <IconPlaceholder {...getIconProps("Component")} className="h-4 w-4" />
               Components
             </div>
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
-          <ChevronsRight />
+          <IconPlaceholder {...getIconProps("ChevronsRight")} />
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbPage>
             <div className="flex flex-col items-center gap-1">
-              <Route className="h-4 w-4" />
+              <IconPlaceholder {...getIconProps("Route")} className="h-4 w-4" />
               Breadcrumb
             </div>
           </BreadcrumbPage>

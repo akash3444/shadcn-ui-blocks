@@ -1,4 +1,5 @@
-import { RotateCcw, ShoppingCart, Truck } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { cn } from "@/lib/utils";
 import {
   Accordion,
@@ -12,20 +13,20 @@ const items = [
     title: "Can I change or cancel my order after placing it?",
     content:
       "Yes, you can change or cancel your order within 1 hour of placement by visiting your account page or contacting our support team. After that, orders may already be processed for shipping.",
-    icon: ShoppingCart,
+    icon: "ShoppingCart",
   },
   {
     title: "How long does shipping usually take?",
     content:
       "Domestic shipping typically takes 3-5 business days, while international orders may take up to 2-3 weeks depending on your location and customs processing times.",
-    icon: Truck,
+    icon: "Truck",
     disabled: true,
   },
   {
     title: "What is your return policy?",
     content:
       "We offer a 30-day return policy for most products. Items must be unused and in their original packaging. To initiate a return, simply contact our support with your order details.",
-    icon: RotateCcw,
+    icon: "RotateCcw",
   },
 ];
 
@@ -37,7 +38,7 @@ export default function AccordionItemDisabledDemo() {
       defaultValue="item-0"
       type="single"
     >
-      {items.map(({ title, content, icon: Icon, disabled }, index) => (
+      {items.map(({ title, content, icon, disabled }, index) => (
         <AccordionItem key={index} value={`item-${index}`}>
           <AccordionTrigger
             className={cn({
@@ -46,7 +47,7 @@ export default function AccordionItemDisabledDemo() {
             disabled={disabled}
           >
             <div className="flex items-start gap-3">
-              <Icon />
+              <IconPlaceholder {...getIconProps(icon)} />
               {title}
             </div>
           </AccordionTrigger>

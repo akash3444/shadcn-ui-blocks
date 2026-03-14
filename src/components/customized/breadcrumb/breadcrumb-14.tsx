@@ -1,4 +1,5 @@
-import { Home } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import {
   Breadcrumb,
   BreadcrumbEllipsis,
@@ -21,7 +22,7 @@ export default function BreadcrumbCollapsed() {
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink href="#">
-            <Home className="h-4 w-4" />
+            <IconPlaceholder {...getIconProps("Home")} className="h-4 w-4" />
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />

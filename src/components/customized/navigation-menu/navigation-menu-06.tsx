@@ -1,12 +1,5 @@
-import {
-  CreditCardIcon,
-  Loader,
-  type LucideIcon,
-  SquareCheckIcon,
-  SquareChevronUpIcon,
-  SquarePowerIcon,
-  ToggleRight,
-} from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import Link from "next/link";
 import * as React from "react";
 import { cn } from "@/lib/utils";
@@ -24,46 +17,46 @@ const components: {
   title: string;
   href: string;
   description: string;
-  icon: LucideIcon;
+  icon: string;
 }[] = [
   {
     title: "Accordion",
     href: "/components/accordion",
     description:
       "A vertically stacked set of interactive headings that each reveal a section of content.",
-    icon: SquareChevronUpIcon,
+    icon: "SquareChevronUpIcon",
   },
   {
     title: "Button",
     href: "/components/button",
     description: "Displays a button or a component that looks like a button.",
-    icon: SquarePowerIcon,
+    icon: "SquarePowerIcon",
   },
   {
     title: "Card",
     href: "/components/card",
     description: "Displays a card with header, content, and footer.",
-    icon: CreditCardIcon,
+    icon: "CreditCardIcon",
   },
   {
     title: "Checkbox",
     href: "/components/checkbox",
     description:
       "A control that allows the user to toggle between checked and not checked.",
-    icon: SquareCheckIcon,
+    icon: "SquareCheckIcon",
   },
   {
     title: "Spinner",
     href: "/components/spinner",
     description: "Informs users about the status of ongoing processes.",
-    icon: Loader,
+    icon: "Loader",
   },
   {
     title: "Switch",
     href: "/components/switch",
     description:
       "A control that allows the user to toggle between checked and not checked.",
-    icon: ToggleRight,
+    icon: "ToggleRight",
   },
 ];
 
@@ -147,8 +140,8 @@ export default function RichNavigationMenu() {
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a"> & { icon: LucideIcon }
->(({ className, title, children, icon: Icon, ...props }, ref) => {
+  React.ComponentPropsWithoutRef<"a"> & { icon: string }
+>(({ className, title, children, icon, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
@@ -161,7 +154,7 @@ const ListItem = React.forwardRef<
           {...props}
         >
           <div className="flex items-center gap-2 font-semibold leading-none tracking-tight">
-            <Icon className="h-5 w-5" />
+            <IconPlaceholder {...getIconProps(icon)} className="h-5 w-5" />
             {title}
           </div>
           <p className="mt-2 line-clamp-2 text-muted-foreground text-sm leading-snug">

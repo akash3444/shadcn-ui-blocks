@@ -1,4 +1,5 @@
-import { OctagonAlert } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -22,7 +23,7 @@ export default function AlertDialogWithIcon() {
         <AlertDialogHeader>
           <AlertDialogTitle>
             <div className="mx-auto mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-destructive/10 sm:mx-0">
-              <OctagonAlert className="h-5 w-5 text-destructive" />
+              <IconPlaceholder {...getIconProps("OctagonAlert")} className="h-5 w-5 text-destructive" />
             </div>
             Are you absolutely sure?
           </AlertDialogTitle>

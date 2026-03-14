@@ -1,4 +1,5 @@
-import { StarIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { cn } from "@/lib/utils";
 import { Button } from "@/registry/ui/button";
 
@@ -19,10 +20,10 @@ const NeonButtonDemo = () => (
   <div className="flex flex-wrap items-center gap-2">
     <ButtonNeon>Neon</ButtonNeon>
     <ButtonNeon size="icon">
-      <StarIcon />
+      <IconPlaceholder {...getIconProps("StarIcon")} />
     </ButtonNeon>
     <ButtonNeon>
-      <StarIcon /> Star
+      <IconPlaceholder {...getIconProps("StarIcon")} /> Star
     </ButtonNeon>
   </div>
 );

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+import { fontVariables } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
@@ -9,24 +9,6 @@ import { ThemeToggle } from "@/components/app-sidebar/theme-toggle";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { PackageManagerProvider } from "@/providers/package-manager-provider";
 import { CSPostHogProvider } from "@/providers/posthog-provider";
-
-const inter = localFont({
-  src: [
-    { path: "./fonts/InterVariable.woff2", weight: "100 900", style: "normal" },
-    {
-      path: "./fonts/InterVariable-Italic.woff2",
-      weight: "100 900",
-      style: "italic",
-    },
-  ],
-  variable: "--font-inter",
-});
-
-const geistMono = Geist_Mono({
-  weight: ["400"],
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-});
 
 export const metadata: Metadata = {
   title: "Customized Shadcn UI Blocks & Components | Preview & Copy",
@@ -97,7 +79,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={fontVariables}>
       <head>
         <script
           data-domain="www.shadcnui-blocks.com"
@@ -107,7 +89,7 @@ export default function RootLayout({
         />
         <meta content="ca-pub-4493596981598123" name="google-adsense-account" />
       </head>
-      <body className={cn(inter.variable, geistMono.variable, "antialiased")}>
+      <body className={cn("antialiased")}>
         <script
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(jsonLd),
@@ -117,12 +99,14 @@ export default function RootLayout({
 
         <CSPostHogProvider>
           <ThemeProvider attribute="class">
-            <TooltipProvider>
-              <PackageManagerProvider>{children}</PackageManagerProvider>
-              <div className="fixed right-6 bottom-6">
-                <ThemeToggle />
-              </div>
-            </TooltipProvider>
+            <NuqsAdapter>
+              <TooltipProvider>
+                <PackageManagerProvider>{children}</PackageManagerProvider>
+                <div className="fixed right-6 bottom-6">
+                  <ThemeToggle />
+                </div>
+              </TooltipProvider>
+            </NuqsAdapter>
           </ThemeProvider>
         </CSPostHogProvider>
       </body>

@@ -1,4 +1,5 @@
-import { CircleFadingArrowUp, Rocket } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -22,7 +23,7 @@ export default function AlertDialogInfo() {
       <AlertDialogContent className="sm:max-w-lg!">
         <AlertDialogHeader>
           <div className="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 sm:mx-0">
-            <CircleFadingArrowUp className="h-[18px] w-[18px] text-primary" />
+            <IconPlaceholder {...getIconProps("CircleFadingArrowUp")} className="h-[18px] w-[18px] text-primary" />
           </div>
           <AlertDialogTitle className="font-semibold text-2xl tracking-[-0.015em]">
             New Software Update Available
@@ -45,7 +46,7 @@ export default function AlertDialogInfo() {
         <AlertDialogFooter className="mt-4">
           <AlertDialogCancel>Cancel</AlertDialogCancel>
           <AlertDialogAction>
-            <Rocket /> Update Now
+            <IconPlaceholder {...getIconProps("Rocket")} /> Update Now
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

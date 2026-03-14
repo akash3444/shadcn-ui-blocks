@@ -1,4 +1,5 @@
-import { CircleCheck, CpuIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { RadioGroup as RadioGroupPrimitive } from "radix-ui";
 import { cn } from "@/lib/utils";
 
@@ -35,9 +36,9 @@ const RadioCardsDemo = () => {
           key={option.value}
           value={option.value}
         >
-          <CircleCheck className="absolute top-0 right-0 h-6 w-6 translate-x-1/2 -translate-y-1/2 fill-blue-500 stroke-white text-primary group-data-[state=unchecked]:hidden" />
+          <IconPlaceholder {...getIconProps("CircleCheck")} className="absolute top-0 right-0 h-6 w-6 translate-x-1/2 -translate-y-1/2 fill-blue-500 stroke-white text-primary group-data-[state=unchecked]:hidden" />
 
-          <CpuIcon className="mb-2.5 text-muted-foreground" />
+          <IconPlaceholder {...getIconProps("CpuIcon")} className="mb-2.5 text-muted-foreground" />
           <span className="font-semibold tracking-tight">{option.label}</span>
           <p className="text-xs">{option.description}</p>
         </RadioGroupPrimitive.Item>

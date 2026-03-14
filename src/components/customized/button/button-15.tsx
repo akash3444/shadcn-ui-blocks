@@ -1,6 +1,7 @@
 "use client";
 
-import { Heart } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/registry/ui/button";
@@ -17,7 +18,8 @@ const ToggleButton = () => {
       size="icon"
       variant="secondary"
     >
-      <Heart
+      <IconPlaceholder
+        {...getIconProps("Heart")}
         className={cn("h-5! w-5!", {
           "fill-rose-600 stroke-rose-600": isLiked,
         })}

@@ -1,6 +1,7 @@
 "use client";
 
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import * as React from "react";
 
 import { Button } from "@/registry/ui/button";
@@ -45,7 +46,7 @@ export default function ShowMoreCollapsible() {
           size="sm"
           variant="outline"
         >
-          Show more <ChevronDown />
+          Show more <IconPlaceholder {...getIconProps("ChevronDown")} />
         </Button>
       </CollapsibleTrigger>
       <CollapsibleTrigger asChild>
@@ -54,7 +55,7 @@ export default function ShowMoreCollapsible() {
           size="sm"
           variant="outline"
         >
-          Show less <ChevronUp />
+          Show less <IconPlaceholder {...getIconProps("ChevronUp")} />
         </Button>
       </CollapsibleTrigger>
     </Collapsible>

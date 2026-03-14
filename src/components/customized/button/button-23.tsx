@@ -1,4 +1,5 @@
-import { StarIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Button } from "@/registry/ui/button";
 
 const ButtonsWithTapAnimation = () => (
@@ -8,12 +9,12 @@ const ButtonsWithTapAnimation = () => (
     </Button>
     <Button asChild size="icon">
       <Button className="active:scale-95">
-        <StarIcon />
+        <IconPlaceholder {...getIconProps("StarIcon")} />
       </Button>
     </Button>
     <Button asChild>
       <Button className="active:scale-95">
-        <StarIcon /> Star
+        <IconPlaceholder {...getIconProps("StarIcon")} /> Star
       </Button>
     </Button>
   </div>

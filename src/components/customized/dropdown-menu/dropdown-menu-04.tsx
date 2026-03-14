@@ -1,5 +1,6 @@
 "use client";
-import { ChevronDown, ChevronsUp, ChevronUp, Equal } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { useState } from "react";
 import { Button } from "@/registry/ui/button";
 import {
@@ -25,16 +26,16 @@ export default function DropdownMenuWithRadioGroup() {
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup onValueChange={setPriority} value={priority}>
           <DropdownMenuRadioItem value="highest">
-            <ChevronsUp className="mr-2 h-4 w-4 text-destructive" /> Highest
+            <IconPlaceholder {...getIconProps("ChevronsUp")} className="mr-2 h-4 w-4 text-destructive" /> Highest
           </DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="high">
-            <ChevronUp className="mr-2 h-4 w-4 text-orange-500" /> High
+            <IconPlaceholder {...getIconProps("ChevronUp")} className="mr-2 h-4 w-4 text-orange-500" /> High
           </DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="medium">
-            <Equal className="mr-2 h-4 w-4 text-yellow-500" /> Medium
+            <IconPlaceholder {...getIconProps("Equal")} className="mr-2 h-4 w-4 text-yellow-500" /> Medium
           </DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="low">
-            <ChevronDown className="mr-2 h-4 w-4 text-green-600" /> Low
+            <IconPlaceholder {...getIconProps("ChevronDown")} className="mr-2 h-4 w-4 text-green-600" /> Low
           </DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>

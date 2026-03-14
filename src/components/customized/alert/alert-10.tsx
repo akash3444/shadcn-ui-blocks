@@ -1,6 +1,7 @@
 "use client";
 
-import { CircleFadingArrowUpIcon, XIcon } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { useState } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/registry/ui/alert";
 import { Button } from "@/registry/ui/button";
@@ -20,7 +21,7 @@ export default function AlertWithActionsDemo() {
       {isAlertVisible && (
         <Alert className="flex items-center justify-between pr-2 [&>svg+div]:translate-y-0">
           <div className="flex items-start gap-3">
-            <CircleFadingArrowUpIcon className="mt-0.5 size-4" />
+            <IconPlaceholder {...getIconProps("CircleFadingArrowUpIcon")} className="mt-0.5 size-4" />
             <div className="flex-col justify-center">
               <AlertTitle>Update Available</AlertTitle>
               <AlertDescription>
@@ -34,7 +35,7 @@ export default function AlertWithActionsDemo() {
             size="icon"
             variant="ghost"
           >
-            <XIcon className="h-5 w-5" />
+            <IconPlaceholder {...getIconProps("XIcon")} className="h-5 w-5" />
           </Button>
         </Alert>
       )}

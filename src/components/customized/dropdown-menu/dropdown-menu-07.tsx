@@ -1,13 +1,5 @@
-import {
-  Bolt,
-  ExternalLink,
-  Filter,
-  LogIn,
-  LogOut,
-  Rocket,
-  Settings2,
-  User,
-} from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Avatar, AvatarImage } from "@/registry/ui/avatar";
 import {
   DropdownMenu,
@@ -49,7 +41,7 @@ export default function ComplexDropdownMenu() {
         <DropdownMenuSeparator />
         <DropdownMenuItem className="flex-col items-start">
           <div className="flex items-center gap-1">
-            <Rocket className="mr-1 h-[18px] w-[18px]" />
+            <IconPlaceholder {...getIconProps("Rocket")} className="mr-1 h-[18px] w-[18px]" />
             <span className="font-medium leading-none">Upgrade</span>
           </div>
           <p className="text-muted-foreground">
@@ -58,15 +50,15 @@ export default function ComplexDropdownMenu() {
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <User className="mr-1" /> Invite people
+          <IconPlaceholder {...getIconProps("User")} className="mr-1" /> Invite people
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <Settings2 className="mr-1" /> Preferences
+          <IconPlaceholder {...getIconProps("Settings2")} className="mr-1" /> Preferences
         </DropdownMenuItem>
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>
-            <Filter className="mr-1" />
+            <IconPlaceholder {...getIconProps("Filter")} className="mr-1" />
             Filter sidebar
           </DropdownMenuSubTrigger>
           <DropdownMenuSubContent>
@@ -105,7 +97,7 @@ export default function ComplexDropdownMenu() {
         </DropdownMenuSub>
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>
-            <Bolt className="mr-1" />
+            <IconPlaceholder {...getIconProps("Bolt")} className="mr-1" />
             Tools & settings
           </DropdownMenuSubTrigger>
           <DropdownMenuSubContent className="w-52">
@@ -113,7 +105,7 @@ export default function ComplexDropdownMenu() {
             <DropdownMenuItem>Customize workspace</DropdownMenuItem>
             <DropdownMenuItem>Workspace builder</DropdownMenuItem>
             <DropdownMenuItem>
-              Workspace analytics <ExternalLink className="ml-auto" />
+              Workspace analytics <IconPlaceholder {...getIconProps("ExternalLink")} className="ml-auto" />
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuLabel>Administration</DropdownMenuLabel>
@@ -122,10 +114,10 @@ export default function ComplexDropdownMenu() {
         </DropdownMenuSub>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <LogIn className="mr-1" /> Sign in on mobile
+          <IconPlaceholder {...getIconProps("LogIn")} className="mr-1" /> Sign in on mobile
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <LogOut className="mr-1" /> Sign out
+          <IconPlaceholder {...getIconProps("LogOut")} className="mr-1" /> Sign out
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -1,4 +1,5 @@
-import { ArrowUpRight, CirclePlay } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Button } from "@/registry/ui/button";
 import {
   Card,
@@ -22,10 +23,10 @@ export default function CardBanner() {
       </CardHeader>
       <CardContent className="mx-auto mt-4 flex flex-row gap-2 px-8">
         <Button size="lg">
-          Sign up for free <ArrowUpRight />{" "}
+          Sign up for free <IconPlaceholder {...getIconProps("ArrowUpRight")} />{" "}
         </Button>
         <Button size="lg" variant="outline">
-          Get a demo <CirclePlay />
+          Get a demo <IconPlaceholder {...getIconProps("CirclePlay")} />
         </Button>
       </CardContent>
     </Card>

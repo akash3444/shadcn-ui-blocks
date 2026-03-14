@@ -1,26 +1,27 @@
-import { Bot, Home, Settings, User } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
 
 const tabs = [
   {
     name: "Home",
     value: "home",
-    icon: Home,
+    icon: "Home",
   },
   {
     name: "Profile",
     value: "profile",
-    icon: User,
+    icon: "User",
   },
   {
     name: "Messages",
     value: "messages",
-    icon: Bot,
+    icon: "Bot",
   },
   {
     name: "Settings",
     value: "settings",
-    icon: Settings,
+    icon: "Settings",
   },
 ];
 
@@ -38,7 +39,7 @@ export default function VerticalSharpTabsDemo() {
             key={tab.value}
             value={tab.value}
           >
-            <tab.icon className="me-2 h-5 w-5" /> {tab.name}
+            <IconPlaceholder {...getIconProps(tab.icon)} className="me-2 h-5 w-5" /> {tab.name}
           </TabsTrigger>
         ))}
       </TabsList>

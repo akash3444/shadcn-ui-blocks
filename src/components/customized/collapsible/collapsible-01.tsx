@@ -1,6 +1,7 @@
 "use client";
 
-import { ChevronsUpDown } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import * as React from "react";
 
 import { Button } from "@/registry/ui/button";
@@ -25,7 +26,7 @@ export default function CollapsibleDemo() {
         </h4>
         <CollapsibleTrigger asChild>
           <Button size="sm" variant="ghost">
-            <ChevronsUpDown className="h-4 w-4" />
+            <IconPlaceholder {...getIconProps("ChevronsUpDown")} className="h-4 w-4" />
             <span className="sr-only">Toggle</span>
           </Button>
         </CollapsibleTrigger>

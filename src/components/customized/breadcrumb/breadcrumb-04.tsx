@@ -1,4 +1,5 @@
-import { Dot } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -16,13 +17,13 @@ const BreadcrumbsWithDotSeparator = () => {
           <BreadcrumbLink href="#">Home</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
-          <Dot />
+          <IconPlaceholder {...getIconProps("Dot")} />
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbLink href="#/components">Components</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
-          <Dot />
+          <IconPlaceholder {...getIconProps("Dot")} />
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbPage>Breadcrumb</BreadcrumbPage>

@@ -12,14 +12,8 @@ import {
   useReactTable,
   type VisibilityState,
 } from "@tanstack/react-table";
-import {
-  ArrowUpDown,
-  ChevronDown,
-  Columns3,
-  MoreHorizontal,
-  RefreshCcw,
-  SearchIcon,
-} from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import * as React from "react";
 
 import { Button } from "@/registry/ui/button";
@@ -122,7 +116,7 @@ export const columns: ColumnDef<Payment>[] = [
           variant="ghost"
         >
           Email
-          <ArrowUpDown />
+          <IconPlaceholder {...getIconProps("ArrowUpDown")} />
         </Button>
       );
     },
@@ -154,7 +148,7 @@ export const columns: ColumnDef<Payment>[] = [
           <DropdownMenuTrigger asChild>
             <Button className="h-8 w-8 p-0" variant="ghost">
               <span className="sr-only">Open menu</span>
-              <MoreHorizontal />
+              <IconPlaceholder {...getIconProps("MoreHorizontal")} />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
@@ -217,7 +211,7 @@ export default function DataTableColumnsVisibilityDemo() {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button className="ml-auto" variant="outline">
-              <Columns3 /> Columns <ChevronDown className="ml-3" />
+              <IconPlaceholder {...getIconProps("Columns3")} /> Columns <IconPlaceholder {...getIconProps("ChevronDown")} className="ml-3" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
@@ -229,7 +223,7 @@ export default function DataTableColumnsVisibilityDemo() {
                 placeholder="Search"
                 value={searchQuery}
               />
-              <SearchIcon className="absolute inset-y-0 left-2 my-auto h-4 w-4" />
+              <IconPlaceholder {...getIconProps("SearchIcon")} className="absolute inset-y-0 left-2 my-auto h-4 w-4" />
             </div>
             <DropdownMenuSeparator />
             {table
@@ -264,7 +258,7 @@ export default function DataTableColumnsVisibilityDemo() {
                 setSearchQuery("");
               }}
             >
-              <RefreshCcw /> Reset
+              <IconPlaceholder {...getIconProps("RefreshCcw")} /> Reset
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

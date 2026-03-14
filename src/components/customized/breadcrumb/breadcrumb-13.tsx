@@ -1,4 +1,5 @@
-import { ChevronDown, ChevronsRight } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 
 import {
   Breadcrumb,
@@ -23,13 +24,13 @@ export default function BreadcrumbWithDropdown() {
           <BreadcrumbLink href="#">Home</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
-          <ChevronsRight />
+          <IconPlaceholder {...getIconProps("ChevronsRight")} />
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1">
               Components
-              <ChevronDown className="h-4 w-4" />
+              <IconPlaceholder {...getIconProps("ChevronDown")} className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
               <DropdownMenuItem>Documentation</DropdownMenuItem>
@@ -39,7 +40,7 @@ export default function BreadcrumbWithDropdown() {
           </DropdownMenu>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
-          <ChevronsRight />
+          <IconPlaceholder {...getIconProps("ChevronsRight")} />
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbPage>Breadcrumb</BreadcrumbPage>

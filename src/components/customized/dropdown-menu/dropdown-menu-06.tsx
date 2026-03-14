@@ -1,4 +1,5 @@
-import { EllipsisVertical } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Button } from "@/registry/ui/button";
 import {
   DropdownMenu,
@@ -17,7 +18,7 @@ export default function DropdownMenuWithShortcuts() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button size="icon" variant="outline">
-          <EllipsisVertical />
+          <IconPlaceholder {...getIconProps("EllipsisVertical")} />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-60">

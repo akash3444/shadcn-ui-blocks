@@ -1,4 +1,5 @@
-import { ChevronsRight } from "lucide-react";
+import { IconPlaceholder } from "@/components/icon-placeholder";
+import { getIconProps } from "@/lib/icon-map";
 import { Badge } from "@/registry/ui/badge";
 import {
   Breadcrumb,
@@ -17,13 +18,13 @@ const BreadcrumbTabActiveDemo = () => {
           <BreadcrumbLink href="#">Home</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
-          <ChevronsRight />
+          <IconPlaceholder {...getIconProps("ChevronsRight")} />
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbLink href="#/components">Components</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
-          <ChevronsRight />
+          <IconPlaceholder {...getIconProps("ChevronsRight")} />
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbPage>
