@@ -37,7 +37,7 @@ const FAQ = () => {
   return (
     <div className="flex min-h-screen items-center justify-center px-6 py-12">
       <div className="flex flex-col items-start gap-x-12 gap-y-6 md:flex-row">
-        <h2 className="font-semibold text-4xl leading-[1.15]! tracking-[-0.035em] lg:text-5xl">
+        <h2 className="font-medium text-4xl leading-[1.15]! tracking-[-0.035em] lg:text-5xl">
           Frequently Asked <br /> Questions
         </h2>
 

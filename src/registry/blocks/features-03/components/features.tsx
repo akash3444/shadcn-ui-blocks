@@ -7,7 +7,7 @@ const Features = () => {
       <div className="mx-auto w-full max-w-(--breakpoint-lg) px-6 py-12">
         <h2 className="font-semibold text-3xl leading-10 tracking-tight sm:text-4xl md:text-[40px] md:leading-13">
           Design and Engage: <br />
-          <span className="text-foreground/65">
+          <span className="text-foreground/55">
             Build Smarter Spaces and Strategies
           </span>
         </h2>
@@ -21,7 +21,7 @@ const Features = () => {
               Plan Smarter
             </span>
 
-            <ul className="mt-6 space-y-4">
+            <ul className="mt-6 space-y-5">
               <li>
                 <div className="flex items-start gap-3">
                   <Settings2 className="shrink-0" />

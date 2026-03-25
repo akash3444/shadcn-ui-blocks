@@ -77,11 +77,14 @@ const CTA = () => {
             ship beautiful UIs in minutes, not hours.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button size="lg">
+            <Button
+              className="bg-neutral-950 text-white hover:bg-neutral-950/90"
+              size="lg"
+            >
               Get Started <ArrowUpRight />
             </Button>
             <Button
-              className="dark:border-white/60 dark:bg-white/50 dark:text-black dark:hover:bg-white/80"
+              className="border-white/60 bg-white/50 text-black hover:bg-white/80 dark:border-white/60 dark:bg-white/50 dark:text-black dark:hover:bg-white/80"
               size="lg"
               variant="outline"
             >

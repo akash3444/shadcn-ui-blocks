@@ -1,7 +1,7 @@
 "use client";
 
+import type { ComponentProps } from "react";
 import { Area, AreaChart } from "recharts";
-
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -12,6 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { type ChartConfig, ChartContainer } from "@/components/ui/chart";
+import { cn } from "@/lib/utils";
 
 const data = [
   {
@@ -59,9 +60,18 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function StatsCard() {
+export function StatsCard({
+  className,
+  ...props
+}: ComponentProps<typeof Card>) {
   return (
-    <Card className="overflow-hidden rounded-none rounded-tl-sm border-border/60 border-r-0 border-b-0 pb-0 shadow-none lg:hidden xl:flex">
+    <Card
+      className={cn(
+        "overflow-hidden rounded-none rounded-tl-sm border-border/60 border-r-0 border-b-0 pb-0 shadow-none lg:hidden xl:flex",
+        className
+      )}
+      {...props}
+    >
       <CardHeader>
         <CardTitle className="text-3xl">+2,350</CardTitle>
         <CardDescription>+180.1% from last month</CardDescription>

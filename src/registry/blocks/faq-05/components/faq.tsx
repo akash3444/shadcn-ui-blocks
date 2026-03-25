@@ -50,20 +50,21 @@ const FAQ = () => {
   return (
     <div className="flex min-h-screen items-center justify-center px-6 py-12">
       <div className="max-w-(--breakpoint-lg)">
-        <h2 className="text-center font-semibold text-4xl leading-[1.15]! tracking-[-0.035em] md:text-5xl">
+        <h2 className="text-center font-medium text-4xl leading-[1.15]! tracking-tight md:text-5xl">
           Frequently Asked Questions
         </h2>
         <p className="mt-3 text-center text-muted-foreground text-xl">
           Quick answers to common questions about our products and services.
         </p>
 
-        <div className="mt-12 grid overflow-hidden rounded-xl outline-[1px] outline-border outline-solid -outline-offset-1 md:grid-cols-2">
+        <div className="relative mt-12 grid overflow-hidden rounded-xl md:grid-cols-2">
+          <div className="absolute inset-0 rounded-xl border" />
           {faq.map(({ question, answer, icon: Icon }) => (
-            <div className="-mt-px -ml-px border p-6" key={question}>
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent">
+            <div className="border-e border-b p-6" key={question}>
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-muted">
                 <Icon />
               </div>
-              <div className="mt-3 mb-2 flex items-start gap-2 font-semibold text-[1.35rem] tracking-[-0.02em]">
+              <div className="mt-5 mb-2 flex items-start gap-2 font-medium text-xl tracking-tight">
                 <span>{question}</span>
               </div>
               <p className="text-foreground/70">{answer}</p>

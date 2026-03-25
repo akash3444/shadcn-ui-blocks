@@ -58,7 +58,7 @@ export default function Features() {
       <h2 className="mx-auto mt-5 max-w-4xl text-balance font-semibold text-4xl leading-[1.3] tracking-[-0.02em] sm:text-5xl">
         Advanced Home Security Solutions Built for Modern Living
       </h2>
-      <p className="mt-5 text-muted-foreground text-xl">
+      <p className="mt-4 text-muted-foreground text-xl sm:text-2xl">
         We are constantly always keep pace with the time.
       </p>
 

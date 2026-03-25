@@ -49,7 +49,10 @@ const Features = () => {
 
       <div className="mt-16 grid grid-cols-1 gap-6 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
-          <div className="relative rounded-lg border" key={index}>
+          <div
+            className="relative rounded-lg border border-border/80"
+            key={index}
+          >
             <div className="mask-b-from-50% dark:mask-b-from-40% aspect-[4/5] w-full rounded-t-lg">
               <img
                 alt=""
@@ -58,7 +61,7 @@ const Features = () => {
               />
             </div>
 
-            <div className="mask-t-from-50% absolute inset-x-0 bottom-0 rounded-b-xl bg-background/80 p-6 pt-20">
+            <div className="mask-t-from-50% absolute inset-x-0 bottom-0 rounded-b-lg bg-background/80 p-6 pt-20">
               <h3 className="font-semibold text-xl tracking-[-0.005em]">
                 {feature.title}
               </h3>

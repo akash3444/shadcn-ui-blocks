@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 const blogPosts = [
   {
     title: "Understanding React Server Components",
-    link: "https://example.com/blog/react-server-components",
+    link: "#",
     publishedDate: "2025-06-18",
     author: "Jane Doe",
     image:
@@ -16,7 +16,7 @@ const blogPosts = [
   },
   {
     title: "10 Useful Shadcn UI Components You Should Know",
-    link: "https://example.com/blog/shadcn-ui-components",
+    link: "#",
     publishedDate: "2025-05-30",
     author: "Akash Moradiya",
     image:
@@ -25,7 +25,7 @@ const blogPosts = [
   },
   {
     title: "Building a Personal Blog with Next.js and Contentlayer",
-    link: "https://example.com/blog/nextjs-contentlayer-blog",
+    link: "#",
     publishedDate: "2025-05-15",
     author: "Chris Moore",
     image:
@@ -34,7 +34,7 @@ const blogPosts = [
   },
   {
     title: "The Complete Guide to TypeScript for Beginners",
-    link: "https://example.com/blog/typescript-beginners-guide",
+    link: "#",
     publishedDate: "2025-04-25",
     author: "Emily Johnson",
     image:
@@ -43,7 +43,7 @@ const blogPosts = [
   },
   {
     title: "Optimizing Web Performance with Next.js",
-    link: "https://example.com/blog/nextjs-performance",
+    link: "#",
     publishedDate: "2025-04-10",
     author: "Akash Moradiya",
     image:
@@ -52,7 +52,7 @@ const blogPosts = [
   },
   {
     title: "Deploying Full-Stack Apps on Vercel with Supabase",
-    link: "https://example.com/blog/vercel-supabase-deployment",
+    link: "#",
     publishedDate: "2025-03-28",
     author: "John Smith",
     image:
@@ -96,42 +96,40 @@ export default function Blog() {
       <Separator className="mt-7 mb-10" />
 
       <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
-        {blogPosts.map((post) => (
-          <Link href={post.link} key={post.link}>
+        {blogPosts.map((post, index) => (
+          <Link href={post.link} key={`${post.link}-${index}`}>
             <div>
               <img
                 alt={post.title}
                 className="aspect-[14/9] rounded-lg bg-muted"
                 src={post.image}
               />
-              <div className="mt-4 flex flex-wrap items-center gap-2">
-                {post.tags.map((tag) => (
-                  <Badge className="bg-primary/10 text-primary" key={tag}>
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-              <h3 className="mt-3 font-semibold text-xl">{post.title}</h3>
-              <div className="mt-4 flex items-center justify-between gap-2">
-                <div className="flex items-center gap-1.5 text-muted-foreground text-sm">
-                  <CalendarDays className="h-4 w-4" />{" "}
-                  {formatDate(post.publishedDate)}
+              <div className="px-1">
+                <div className="mt-4 flex flex-wrap items-center gap-2">
+                  {post.tags.map((tag) => (
+                    <Badge key={tag} variant="secondary">
+                      {tag}
+                    </Badge>
+                  ))}
                 </div>
-                <span className="flex items-center gap-2 font-medium text-primary text-sm">
-                  Read Article <ArrowRight className="h-4 w-4" />
-                </span>
+                <h3 className="mt-3 font-semibold text-xl">{post.title}</h3>
+                <div className="mt-4 flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-1.5 text-muted-foreground text-sm">
+                    <CalendarDays className="size-4" />{" "}
+                    {formatDate(post.publishedDate)}
+                  </div>
+                  <Button className="-me-2" variant="ghost">
+                    Read Article <ArrowRight />
+                  </Button>
+                </div>
               </div>
             </div>
           </Link>
         ))}
       </div>
 
-      <Button
-        className="mx-auto mt-16 flex w-full max-w-xs"
-        size="lg"
-        variant="secondary"
-      >
-        Load More
+      <Button className="mx-auto mt-16 flex" size="lg" variant="secondary">
+        Load more articles
       </Button>
     </section>
   );

@@ -37,7 +37,7 @@ export default function Features() {
       <h2 className="mx-auto mt-5 max-w-4xl text-balance font-semibold text-4xl leading-[1.2] tracking-tight sm:text-5xl">
         We are Leading in Smart Assistants with Nearly 20 Years of Experience
       </h2>
-      <p className="mt-5 text-muted-foreground text-xl">
+      <p className="mt-5 text-muted-foreground text-xl sm:text-2xl">
         We are constantly always keep pace with the time.
       </p>
 

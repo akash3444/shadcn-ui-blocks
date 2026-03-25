@@ -72,7 +72,7 @@ const Features = () => {
         <h2 className="text-pretty font-semibold text-4xl tracking-[-0.03em] sm:mx-auto sm:max-w-xl sm:text-center md:text-[2.75rem] md:leading-[1.2]">
           Strengthen Your Strategy
         </h2>
-        <p className="mt-2 text-lg text-muted-foreground sm:text-center sm:text-xl">
+        <p className="mt-2 text-lg text-muted-foreground sm:text-center sm:text-2xl">
           Enhance your strategy with intelligent tools designed for success.
         </p>
         <div className="mt-12 grid gap-6 sm:mt-16 sm:gap-y-8 md:grid-cols-2 lg:grid-cols-3">

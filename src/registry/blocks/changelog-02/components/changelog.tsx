@@ -67,21 +67,21 @@ const changelogs = [
 
 export default function Changelog() {
   return (
-    <section className="mx-auto max-w-screen-md px-6 py-16">
-      <h2 className="text-balance font-semibold text-4xl tracking-tight sm:text-5xl">
+    <section className="mx-auto max-w-3xl px-6 py-16">
+      <h2 className="text-balance font-semibold text-4xl tracking-tight">
         Changelog
       </h2>
-      <p className="mt-2 text-balance text-lg text-muted-foreground tracking-normal sm:mt-4 sm:text-xl">
+      <p className="mt-2 text-balance text-lg text-muted-foreground tracking-normal sm:mt-3 sm:text-xl">
         We ship fast. Track all the new features, updates, and fixes in one
         place.
       </p>
 
-      <Separator className="my-10" />
+      <Separator className="mt-9" />
 
       <div className="flex flex-col divide-y sm:mt-16 sm:divide-y-0">
         {changelogs.map((changelog) => (
           <div
-            className="relative flex items-start gap-8 py-10 first:pt-0 sm:border-l [&>div]:-mt-1"
+            className="relative flex items-start gap-8 py-10 sm:border-l sm:first:pt-0 [&>div]:-mt-1"
             key={changelog.version}
           >
             <div className="sticky top-4 hidden min-w-40 pl-8 font-medium text-lg text-muted-foreground tracking-tight sm:block">

@@ -62,16 +62,16 @@ const changelogs = [
 
 export default function Changelog() {
   return (
-    <section className="mx-auto max-w-screen-md px-6 py-16">
-      <h2 className="text-balance font-semibold text-4xl tracking-tight sm:text-5xl">
+    <section className="mx-auto max-w-3xl px-6 py-16">
+      <h2 className="text-balance font-semibold text-4xl tracking-tight">
         Changelog
       </h2>
-      <p className="mt-2 text-balance text-lg text-muted-foreground tracking-normal sm:mt-4 sm:text-xl">
+      <p className="mt-2 text-balance text-lg text-muted-foreground tracking-normal sm:mt-3 sm:text-xl">
         We ship fast. Track all the new features, updates, and fixes in one
         place.
       </p>
 
-      <Separator className="mt-10" />
+      <Separator className="mt-9" />
 
       <div className="flex flex-col divide-y">
         {changelogs.map((changelog) => (

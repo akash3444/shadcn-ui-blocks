@@ -52,8 +52,8 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="mx-auto flex max-w-screen-xl flex-col px-6 py-12 sm:py-14">
-      <h2 className="text-pretty text-center font-semibold text-4xl tracking-tight sm:text-5xl">
+    <div className="mx-auto flex max-w-7xl flex-col px-6 py-12 sm:py-14">
+      <h2 className="text-pretty text-center font-semibold text-4xl tracking-tight sm:text-[2.75rem]">
         Powerful Features, Built for You
       </h2>
       <p className="mt-3 text-center text-muted-foreground text-xl sm:text-2xl">

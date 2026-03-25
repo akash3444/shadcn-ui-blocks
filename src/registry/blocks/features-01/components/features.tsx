@@ -51,8 +51,11 @@ const Features = () => {
     <div className="flex min-h-screen items-center justify-center py-12">
       <div>
         <h2 className="text-center font-semibold text-4xl tracking-tight sm:text-5xl">
-          Unleash Your Creativity
+          Powerful Features
         </h2>
+        <p className="mt-3 text-center text-muted-foreground text-xl sm:text-2xl">
+          Everything you need to organize, collaborate, and get more done
+        </p>
         <div className="mx-auto mt-10 grid max-w-(--breakpoint-lg) gap-6 px-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <div
@@ -62,7 +65,7 @@ const Features = () => {
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-muted">
                 <feature.icon className="size-5" />
               </div>
-              <span className="font-semibold text-lg">{feature.title}</span>
+              <span className="font-medium text-lg">{feature.title}</span>
               <p className="mt-1 text-[15px] text-foreground/80">
                 {feature.description}
               </p>

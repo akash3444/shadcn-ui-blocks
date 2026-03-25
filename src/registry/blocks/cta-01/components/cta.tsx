@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const CTA = () => {
   return (
     <div className="px-0 py-16 sm:px-6">
-      <div className="relative mx-auto max-w-screen-lg overflow-hidden border-y px-10 py-14 text-center shadow-muted sm:rounded-xl sm:border-x sm:shadow-lg">
+      <div className="relative mx-auto max-w-5xl overflow-hidden border-y bg-card px-10 py-14 text-center sm:rounded-xl sm:border-x sm:shadow-lg/3">
         <h2 className="text-balance font-semibold text-4xl tracking-tight md:leading-tight lg:text-5xl">
           Build Beautiful UIs, Faster
         </h2>
@@ -30,7 +30,7 @@ const CTABackground = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g
-        className="stroke-foreground/4"
+        className="stroke-foreground/6 dark:stroke-foreground/5"
         fill="none"
         strokeLinecap="butt"
         strokeWidth="3.5"

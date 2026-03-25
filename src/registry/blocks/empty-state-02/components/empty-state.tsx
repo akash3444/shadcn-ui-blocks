@@ -24,7 +24,7 @@ export default function EmptyState() {
       <div
         className={cn(
           "mx-auto max-w-2xl rounded-xl border bg-muted/50 p-1.5",
-          "not-dark:*:data-[slot=table-container]:shadow/3 dark:*:data-[slot=table-container]:shadow/50 *:data-[slot=table-container]:rounded-lg *:data-[slot=table-container]:border *:data-[slot=table-container]:bg-background"
+          "not-dark:*:data-[slot=table-container]:shadow/3 dark:*:data-[slot=table-container]:shadow/50 *:data-[slot=table-container]:rounded-lg *:data-[slot=table-container]:border *:data-[slot=table-container]:bg-background dark:*:data-[slot=table-container]:border-foreground/12"
         )}
       >
         <Table>

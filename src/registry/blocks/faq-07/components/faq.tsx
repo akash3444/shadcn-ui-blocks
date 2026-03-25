@@ -39,7 +39,7 @@ const FAQ = () => {
   return (
     <div className="flex min-h-screen items-center justify-center px-6 py-12">
       <div className="w-full max-w-2xl">
-        <h2 className="font-semibold text-4xl leading-[1.15]! tracking-[-0.03em]">
+        <h2 className="font-medium text-4xl leading-[1.15]! tracking-tight">
           Frequently Asked Questions
         </h2>
         <p className="mt-2 text-muted-foreground text-xl">
@@ -54,14 +54,14 @@ const FAQ = () => {
         >
           {faq.map(({ question, answer }, index) => (
             <AccordionItem
-              className="rounded-xl border-none bg-accent px-4 py-1"
+              className="rounded-xl border-none bg-muted px-4"
               key={question}
               value={`question-${index}`}
             >
-              <AccordionPrimitive.Header className="flex">
+              <AccordionPrimitive.Header className="flex items-center">
                 <AccordionPrimitive.Trigger
                   className={cn(
-                    "flex flex-1 items-center justify-between pt-4 pb-3 font-semibold tracking-tight transition-all hover:underline [&[data-state=open]>svg]:rotate-45",
+                    "flex flex-1 items-center justify-between pt-4 pb-3 font-medium tracking-tight transition-all hover:underline [&[data-state=open]>svg]:rotate-45",
                     "text-start text-lg"
                   )}
                 >

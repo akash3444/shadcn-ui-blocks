@@ -71,7 +71,7 @@ const formatDate = (date: string) => {
 
 export default function Blog() {
   return (
-    <section className="mx-auto max-w-screen-xl px-6 py-16">
+    <section className="mx-auto max-w-7xl px-6 py-16">
       {/* Header */}
       <div className="flex items-end justify-between gap-4">
         <div>
@@ -98,29 +98,33 @@ export default function Blog() {
       <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
         {blogPosts.map((post) => (
           <Link href={post.link} key={post.link}>
-            <div className="overflow-hidden rounded-lg bg-muted p-3 pb-6">
+            <div className="overflow-hidden rounded-xl bg-muted p-2 pb-4">
               <div className="relative isolate">
                 <img
                   alt={post.title}
-                  className="aspect-[14/9] rounded bg-muted"
+                  className="aspect-[14/9] rounded-lg bg-muted"
                   src={post.image}
                 />
                 <img
                   alt={post.title}
-                  className="absolute inset-0 -z-10 aspect-[17/9] scale-y-110 rounded bg-muted blur-2xl"
+                  className="absolute inset-0 -z-10 aspect-17/9 scale-y-110 rounded bg-muted blur-2xl"
                   src={post.image}
                 />
               </div>
               <div className="px-2 py-1">
-                <div className="mt-4 flex flex-wrap items-center gap-2">
+                <div className="-ms-0.5 mt-4 flex flex-wrap items-center gap-2">
                   {post.tags.map((tag) => (
-                    <Badge className="bg-primary/10 text-primary" key={tag}>
+                    <Badge
+                      className="bg-indigo-600/10 text-indigo-500 dark:bg-indigo-500/35 dark:text-indigo-300"
+                      key={tag}
+                      variant="secondary"
+                    >
                       {tag}
                     </Badge>
                   ))}
                 </div>
                 <h3 className="mt-4 font-semibold text-xl">{post.title}</h3>
-                <div className="mt-4 flex items-center gap-1">
+                <div className="mt-3 flex items-center gap-1">
                   <div className="flex items-center gap-1.5 text-muted-foreground text-sm">
                     <CalendarDays className="h-4 w-4" />{" "}
                     {formatDate(post.publishedDate)}
@@ -131,7 +135,7 @@ export default function Blog() {
                   </div>
                 </div>
 
-                <Button className="mt-5">
+                <Button className="mt-6">
                   Read Article <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>
@@ -140,12 +144,8 @@ export default function Blog() {
         ))}
       </div>
 
-      <Button
-        className="mx-auto mt-16 flex w-full max-w-xs"
-        size="lg"
-        variant="secondary"
-      >
-        Load More
+      <Button className="mx-auto mt-16 flex" size="lg" variant="secondary">
+        Load more articles
       </Button>
     </section>
   );

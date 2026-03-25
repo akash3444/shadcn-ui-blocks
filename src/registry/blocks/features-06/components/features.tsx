@@ -47,7 +47,7 @@ const Features = () => {
         <h2 className="text-pretty font-semibold text-4xl tracking-[-0.03em] sm:mx-auto sm:max-w-xl sm:text-center md:text-[2.75rem] md:leading-[1.2]">
           Strengthen Your Strategy
         </h2>
-        <p className="mt-2 text-lg text-muted-foreground sm:text-center sm:text-xl">
+        <p className="mt-2 text-lg text-muted-foreground sm:text-center sm:text-2xl">
           Enhance your strategy with intelligent tools designed for success.
         </p>
         <div className="mx-auto mt-8 w-full space-y-20 md:mt-16">
@@ -56,16 +56,16 @@ const Features = () => {
               className="flex flex-col items-center gap-x-12 gap-y-6 md:flex-row md:even:flex-row-reverse"
               key={feature.category}
             >
-              <div className="aspect-[4/3] w-full basis-1/2 rounded-xl border border-border/50 bg-muted" />
+              <div className="aspect-[4.5/3] w-full basis-1/2 rounded-xl border border-border/50 bg-muted" />
               <div className="shrink-0 basis-1/2">
                 <span className="font-medium text-muted-foreground text-sm uppercase">
                   {feature.category}
                 </span>
-                <h4 className="my-3 font-semibold text-3xl tracking-[-0.02em]">
+                <h4 className="my-3 font-semibold text-3xl tracking-[-0.01em]">
                   {feature.title}
                 </h4>
                 <p className="text-muted-foreground">{feature.details}</p>
-                <Button asChild className="mt-6 gap-3 rounded-full" size="lg">
+                <Button asChild className="mt-6 gap-3" size="lg">
                   <Link href={feature.tutorialLink}>
                     Learn More <ArrowRight />
                   </Link>

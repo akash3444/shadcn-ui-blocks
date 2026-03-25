@@ -75,7 +75,7 @@ const Features = () => {
               {feature.description}
             </p>
             <div className="mt-6 -mr-5">
-              <StatsCard />
+              <StatsCard className="rounded-br-lg" />
             </div>
           </div>
         ))}

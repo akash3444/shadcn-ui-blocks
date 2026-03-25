@@ -98,7 +98,7 @@ export default function Blog() {
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         {blogPosts.map((post) => (
           <Link href={post.link} key={post.link}>
-            <div className="flex flex-col gap-x-6 gap-y-4 rounded-lg bg-muted p-3 pb-4 transition-colors hover:bg-muted/50 sm:flex-row sm:items-center sm:pb-3">
+            <div className="flex flex-col gap-x-6 gap-y-4 rounded-xl bg-muted p-2.5 pb-4 transition-colors hover:bg-muted/50 sm:flex-row sm:items-center sm:pe-4 sm:pb-3">
               <img
                 alt={post.title}
                 className="aspect-video w-full rounded-lg bg-muted object-cover sm:aspect-square sm:max-w-40"
@@ -108,7 +108,10 @@ export default function Blog() {
                 <h3 className="font-semibold text-xl">{post.title}</h3>
                 <div className="mt-4 flex flex-wrap items-center gap-2">
                   {post.tags.map((tag) => (
-                    <Badge className="bg-primary/10 text-primary" key={tag}>
+                    <Badge
+                      className="bg-indigo-500/10 text-indigo-500 dark:bg-indigo-500/15 dark:text-indigo-400"
+                      key={tag}
+                    >
                       {tag}
                     </Badge>
                   ))}
@@ -129,12 +132,8 @@ export default function Blog() {
         ))}
       </div>
 
-      <Button
-        className="mx-auto mt-16 flex w-full max-w-xs"
-        size="lg"
-        variant="secondary"
-      >
-        Load More
+      <Button className="mx-auto mt-16 flex" size="lg" variant="secondary">
+        Load more articles
       </Button>
     </section>
   );

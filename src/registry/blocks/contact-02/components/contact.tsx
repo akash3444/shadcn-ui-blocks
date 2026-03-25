@@ -27,9 +27,9 @@ const Contact = () => (
         an email.
       </p>
       <div className="mt-16 flex flex-col gap-16 md:gap-10 lg:flex-row">
-        <div className="grid w-full max-w-3xl grid-cols-1 gap-1 border bg-muted p-1 *:border *:bg-background *:p-6 sm:grid-cols-2 lg:col-span-2">
+        <div className="grid w-full max-w-3xl grid-cols-1 gap-1 border bg-muted p-1 *:border *:bg-background *:p-6 sm:grid-cols-2 lg:col-span-2 dark:*:border-foreground/20">
           <div>
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-foreground/3 bg-foreground/5 text-foreground dark:bg-foreground/10">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-foreground/3 bg-foreground/5 text-foreground dark:border-foreground/20 dark:bg-foreground/10">
               <MailIcon />
             </div>
             <h3 className="mt-6 font-semibold text-xl">Email</h3>
@@ -90,7 +90,7 @@ const Contact = () => (
 
         {/* Form */}
         <div className="w-full max-w-lg border bg-muted p-1">
-          <Card className="relative isolate rounded-none bg-white/50 shadow-none lg:ms-auto">
+          <Card className="relative isolate rounded-none bg-background shadow-none lg:ms-auto dark:border-foreground/20">
             <CardHeader>
               <CardTitle>Contact Us</CardTitle>
               <CardDescription>
