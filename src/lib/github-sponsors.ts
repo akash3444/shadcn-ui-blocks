@@ -12,6 +12,7 @@ interface SponsorsResponse {
   data?: {
     user: {
       sponsorshipsAsMaintainer: {
+        totalCount: number;
         nodes: Array<{
           sponsorEntity: {
             login: string;
@@ -42,6 +43,7 @@ export async function getGitHubSponsors(): Promise<{
     query($login: String!) {
       user(login: $login) {
         sponsorshipsAsMaintainer(first: 100, includePrivate: false, activeOnly: true) {
+          totalCount
           nodes {
             sponsorEntity {
               ... on User {
