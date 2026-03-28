@@ -27,7 +27,7 @@ const Contact = () => (
         an email.
       </p>
       <div className="mt-16 flex flex-col gap-16 md:gap-10 lg:flex-row">
-        <div className="grid w-full max-w-3xl grid-cols-1 gap-1 border bg-muted p-1 *:border *:bg-background *:p-6 sm:grid-cols-2 lg:col-span-2 dark:*:border-foreground/20">
+        <div className="grid w-full max-w-3xl grid-cols-1 gap-1 rounded-xl border bg-muted p-1 *:rounded-lg *:border *:bg-background *:p-6 sm:grid-cols-2 lg:col-span-2 dark:*:border-foreground/20">
           <div>
             <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-foreground/3 bg-foreground/5 text-foreground dark:border-foreground/20 dark:bg-foreground/10">
               <MailIcon />
@@ -89,11 +89,13 @@ const Contact = () => (
         </div>
 
         {/* Form */}
-        <div className="w-full max-w-lg border bg-muted p-1">
-          <Card className="relative isolate rounded-none bg-background shadow-none lg:ms-auto dark:border-foreground/20">
-            <CardHeader>
-              <CardTitle>Contact Us</CardTitle>
-              <CardDescription>
+        <div className="w-full max-w-lg rounded-xl border bg-muted p-1">
+          <Card className="relative isolate rounded-lg bg-background shadow-none lg:ms-auto dark:border-foreground/20">
+            <CardHeader className="gap-1">
+              <CardTitle className="font-semibold text-xl">
+                Contact Us
+              </CardTitle>
+              <CardDescription className="text-base">
                 We'd love to hear from you. Please fill out this form.
               </CardDescription>
             </CardHeader>

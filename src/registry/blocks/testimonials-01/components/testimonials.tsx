@@ -73,7 +73,7 @@ const Testimonials = () => (
       <div className="mx-auto mt-14 max-w-(--breakpoint-xl) columns-1 gap-8 md:columns-2 lg:columns-3">
         {testimonials.map((testimonial) => (
           <div
-            className="mb-8 break-inside-avoid rounded-xl bg-accent p-6"
+            className="mb-8 break-inside-avoid rounded-xl bg-muted p-6 dark:bg-muted/60"
             key={testimonial.id}
           >
             <div className="flex items-center justify-between">
@@ -85,7 +85,7 @@ const Testimonials = () => (
                 </Avatar>
                 <div>
                   <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-gray-500 text-sm">
+                  <p className="text-muted-foreground text-sm">
                     {testimonial.designation}
                   </p>
                 </div>

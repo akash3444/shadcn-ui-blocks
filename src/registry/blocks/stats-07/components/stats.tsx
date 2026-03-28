@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 function Stats() {
   return (
-    <div className="mx-auto max-w-screen-lg px-6 py-16">
+    <div className="mx-auto max-w-5xl px-6 py-16">
       <h2 className="text-balance text-center font-semibold text-3xl tracking-tight sm:text-4xl md:text-5xl">
         Growing&nbsp;Fast. Loved&nbsp;by&nbsp;Developers.
       </h2>
@@ -14,7 +14,7 @@ function Stats() {
         <div
           className={cn(
             "grid grid-cols-1 gap-1 overflow-hidden rounded-xl sm:grid-cols-2 md:grid-cols-3",
-            "*:rounded *:border *:first:rounded-t-xl *:last:rounded-b-xl sm:*:nth-2:rounded-tr-xl sm:*:first:rounded-tl-xl sm:*:first:rounded-tr md:*:nth-2:rounded-tr md:*:last:rounded-e-xl md:*:last:rounded-bl md:*:first:rounded-s-xl"
+            "*:rounded *:border *:first:rounded-t-xl *:last:rounded-b-xl sm:*:nth-2:rounded-tr-xl sm:*:first:rounded-tl-xl sm:*:first:rounded-tr md:*:nth-2:rounded-tr md:*:last:rounded-e-xl md:*:last:rounded-bl md:*:first:rounded-s-xl dark:*:border-foreground/20"
           )}
         >
           <div className="bg-background p-10">

@@ -12,7 +12,7 @@ const LogoCloud = () => {
         <div className="mt-16 grid gap-6 px-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {logos.map((Logo, i) => (
             <div
-              className="flex items-center justify-center rounded border bg-muted py-4 sm:p-10"
+              className="flex items-center justify-center rounded border bg-muted/50 py-4 sm:p-10"
               key={i}
             >
               <Logo />

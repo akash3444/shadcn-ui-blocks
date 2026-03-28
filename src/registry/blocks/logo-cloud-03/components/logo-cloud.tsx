@@ -5,7 +5,7 @@ const LogoCloud = () => {
     <div className="flex min-h-screen flex-col">
       <div className="shrink-0 grow basis-1/2 bg-muted" />
       <div className="relative grow">
-        <div className="inset-x-0 top-0 mx-auto flex w-full flex-col justify-between gap-10 rounded-lg bg-background px-10 py-14 sm:absolute sm:-translate-y-1/2 sm:shadow-lg md:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg) lg:flex-row lg:items-center xl:max-w-(--breakpoint-xl) dark:shadow-foreground/10">
+        <div className="inset-x-0 top-0 mx-auto flex w-full flex-col justify-between gap-10 rounded-lg border border-border/70 bg-background px-10 py-14 shadow-foreground/4 sm:absolute sm:-translate-y-1/2 sm:shadow-lg md:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg) lg:flex-row lg:items-center xl:max-w-(--breakpoint-xl) dark:border-border/70 dark:shadow-foreground/3">
           <div className="shrink-0">
             <h3 className="font-semibold text-4xl tracking-tight">
               Trusted by 1000+ companies

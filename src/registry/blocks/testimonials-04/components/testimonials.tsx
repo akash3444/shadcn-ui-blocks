@@ -98,8 +98,10 @@ const TestimonialList = () =>
             </AvatarFallback>
           </Avatar>
           <div>
-            <p className="font-semibold">{testimonial.name}</p>
-            <p className="text-gray-500 text-sm">{testimonial.designation}</p>
+            <p className="font-medium">{testimonial.name}</p>
+            <p className="text-muted-foreground text-sm">
+              {testimonial.designation}
+            </p>
           </div>
         </div>
         <Button asChild size="icon" variant="ghost">

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const CTA = () => {
   return (
     <div className="px-0 py-16 sm:px-6">
-      <div className="relative mx-auto flex max-w-5xl flex-col justify-between gap-0 overflow-hidden bg-linear-to-r from-muted px-10 ring-2 ring-border sm:rounded-xl sm:shadow-lg/4 md:flex-row md:gap-8">
+      <div className="relative mx-auto flex max-w-5xl flex-col justify-between gap-0 overflow-hidden bg-linear-to-r from-muted px-10 ring-2 ring-border/60 sm:rounded-xl sm:shadow-lg/4 md:flex-row md:gap-8">
         <div className="pt-14 pb-0 md:pb-14">
           <h2 className="font-semibold text-4xl tracking-tight lg:text-5xl">
             Build Beautiful UIs, Faster

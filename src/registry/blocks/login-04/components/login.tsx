@@ -37,7 +37,7 @@ const Login = () => {
 
   return (
     <div className="flex h-screen items-center justify-center">
-      <div className="grid h-full w-full p-4 lg:grid-cols-2">
+      <div className="flex h-full w-full p-4">
         <div className="m-auto flex w-full max-w-xs flex-col items-center">
           <Logo className="h-9 w-9" />
           <p className="mt-4 font-semibold text-xl tracking-tight">
@@ -117,7 +117,13 @@ const Login = () => {
             </p>
           </div>
         </div>
-        <div className="hidden rounded-lg border bg-muted lg:block" />
+        <div className="relative hidden max-w-xl grow lg:block">
+          <img
+            alt="Login"
+            className="absolute inset-0 size-full rounded-xl object-cover"
+            src="/images/ascii-art.png"
+          />
+        </div>
       </div>
     </div>
   );

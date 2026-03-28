@@ -2,7 +2,7 @@ const Stats = () => {
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="mx-auto w-full max-w-(--breakpoint-xl) px-6 py-12 xl:px-0">
-        <h2 className="font-semibold text-4xl tracking-tighter md:text-5xl">
+        <h2 className="font-medium text-4xl tracking-[-0.04em] md:text-5xl">
           The perfect starting point for any project
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-muted-foreground">

@@ -37,7 +37,7 @@ const Login = () => {
 
   return (
     <div className="flex h-screen items-center justify-center">
-      <div className="grid h-full w-full lg:grid-cols-2">
+      <div className="flex h-full w-full">
         <div className="relative m-auto flex w-full max-w-sm flex-col items-center p-8 outline-0 outline-border/40 outline-offset-0.5 sm:outline-2 dark:outline-border/80">
           <div className="absolute inset-x-0 top-0 w-[calc(100%+4rem)] -translate-x-8 border-t max-sm:hidden" />
           <div className="absolute inset-x-0 bottom-0 w-[calc(100%+4rem)] -translate-x-8 border-b max-sm:hidden" />
@@ -127,7 +127,13 @@ const Login = () => {
             </p>
           </div>
         </div>
-        <div className="hidden border-l bg-muted lg:block" />
+        <div className="relative hidden w-full max-w-2xl grow border-l bg-muted lg:block">
+          <img
+            alt="Login"
+            className="absolute inset-0 size-full object-cover"
+            src="/images/ascii-art.png"
+          />
+        </div>
       </div>
     </div>
   );

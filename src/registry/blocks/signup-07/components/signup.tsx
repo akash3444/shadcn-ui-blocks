@@ -30,18 +30,24 @@ const SignUp = () => (
           <SignUpForm />
         </div>
 
-        <p className="mt-6 text-center text-muted-foreground text-sm">
+        <p className="mt-6 text-center text-sm">
           Already have an account?{" "}
-          <Link className="text-foreground" href="#">
+          <Link className="text-muted-foreground" href="#">
             Login
           </Link>
         </p>
       </div>
     </div>
-    <div className="relative flex h-full w-full flex-col overflow-hidden bg-muted/50 pb-20 dark:bg-muted/30">
+    <div className="relative flex h-full w-full flex-col overflow-hidden bg-muted/50 dark:bg-muted/30">
+      <img
+        alt="Sign up"
+        className="absolute inset-0 size-full object-cover"
+        src="/images/ascii-art.png"
+      />
+
       <Testimonials />
 
-      <div
+      {/* <div
         className="absolute inset-0 -top-px -left-px -z-1 dark:opacity-70"
         style={{
           backgroundImage: `
@@ -85,7 +91,7 @@ const SignUp = () => (
           maskComposite: "intersect",
           WebkitMaskComposite: "source-in",
         }}
-      />
+      /> */}
     </div>
   </div>
 );

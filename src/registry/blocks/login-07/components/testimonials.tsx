@@ -73,15 +73,15 @@ export const Testimonials = () => {
   }, [api]);
 
   return (
-    <div className="mx-auto my-auto w-full max-w-screen-xl px-6 py-12 sm:py-14">
-      <h2 className="text-balance text-center font-semibold text-4xl tracking-tight sm:text-5xl">
+    <div className="dark isolate mx-auto my-auto flex h-full w-full max-w-screen-xl flex-col justify-center bg-black/70 px-10 py-12 sm:py-14">
+      <h2 className="text-balance text-center font-semibold text-4xl text-foreground tracking-tight">
         Trusted by Thousands
       </h2>
-      <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-normal sm:mt-4 sm:text-2xl">
+      <p className="mt-2 text-balance text-center text-foreground/60 text-lg tracking-normal sm:mt-3 sm:text-2xl">
         Real stories from real users who&apos;ve seen real results
       </p>
 
-      <div className="mx-auto mt-20 max-w-3xl md:mt-16">
+      <div className="mx-auto mt-20 w-full max-w-3xl md:mt-16">
         <Carousel
           opts={{
             align: "start",
@@ -91,15 +91,15 @@ export const Testimonials = () => {
           <CarouselContent className="select-none">
             {testimonials.map(({ name, avatar, role, testimonial }, index) => (
               <CarouselItem key={index}>
-                <div className="relative flex gap-8 rounded-lg border bg-background p-8 pt-16 pr-8 md:pt-8">
+                <div className="relative flex h-full gap-8 rounded-lg border bg-white/30 p-8 pt-16 pr-8 md:pt-8">
                   {/* Quote */}
                   <span className="absolute top-4 left-6 font-mono text-7xl md:hidden">
                     &#8220;
                   </span>
 
-                  <div className="flex flex-col gap-2">
-                    <p className="grow text-pretty font-medium text-xl leading-relaxed tracking-normal sm:font-semibold sm:text-2xl sm:leading-[1.45] lg:text-3xl">
-                      &quot;{testimonial}&quot;
+                  <div className="flex flex-col items-center gap-2 text-white">
+                    <p className="grow text-pretty text-center font-medium text-xl leading-relaxed tracking-normal sm:font-semibold sm:text-2xl sm:leading-[1.45]">
+                      {testimonial}
                     </p>
                     <div className="mt-6 flex items-center gap-2">
                       <img
@@ -109,7 +109,7 @@ export const Testimonials = () => {
                       />
                       <div className="flex flex-col">
                         <p className="font-semibold text-lg">{name}</p>
-                        <p className="text-muted-foreground text-sm">{role}</p>
+                        <p className="text-sm text-white/80">{role}</p>
                       </div>
                     </div>
                   </div>

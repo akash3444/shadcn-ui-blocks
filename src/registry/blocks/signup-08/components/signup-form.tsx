@@ -51,6 +51,7 @@ export const SignUpForm = () => {
                 <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input
+                    className="bg-background"
                     placeholder="Enter your email"
                     type="email"
                     {...field}
@@ -72,6 +73,7 @@ export const SignUpForm = () => {
                 <FormLabel>Password</FormLabel>
                 <FormControl>
                   <Input
+                    className="bg-background"
                     placeholder="Enter your password"
                     type="password"
                     {...field}

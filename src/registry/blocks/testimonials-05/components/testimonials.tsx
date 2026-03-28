@@ -1,5 +1,6 @@
 import { StarIcon } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
@@ -64,24 +65,28 @@ const Testimonials = () => (
       <h2 className="text-center font-semibold text-5xl tracking-[-0.03em]">
         Loved by Developers
       </h2>
-      <p className="mt-3 text-center text-muted-foreground text-xl">
+      <p className="mt-3 text-center text-muted-foreground text-xl sm:text-2xl">
         See how developers and teams are achieving more with us
       </p>
       <div className="mx-auto mt-8 w-full max-w-(--breakpoint-xl) sm:mt-14">
-        <div className="grid grid-cols-1 overflow-hidden border-background border-r md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 overflow-hidden md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial) => (
             <div
-              className="flex flex-col px-6 py-8 outline-1 outline-border outline-solid"
+              className={cn(
+                "relative flex flex-col px-6 py-10",
+                "before:absolute before:inset-0 before:-m-px before:border-border before:border-r before:border-b before:border-dashed before:content-['']"
+              )}
+              // className={cn("flex flex-col px-6 py-10")}
               key={testimonial.id}
             >
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-center justify-center gap-1">
                 <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
                 <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
                 <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
                 <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
                 <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
               </div>
-              <p className="my-6 max-w-md text-center text-[17px]">
+              <p className="my-6 max-w-md text-pretty text-center text-[17px]">
                 &quot;{testimonial.testimonial}&quot;
               </p>
               <div className="mt-auto flex items-center justify-center gap-3">
@@ -92,7 +97,7 @@ const Testimonials = () => (
                 </Avatar>
                 <div>
                   <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-gray-500 text-sm">
+                  <p className="text-muted-foreground text-sm">
                     {testimonial.designation}
                   </p>
                 </div>

@@ -8,7 +8,7 @@ import { LoginForm } from "@/registry/blocks/login-08/components/login-form";
 const Login = () => (
   <div className="flex h-screen items-center justify-center">
     <div className="mx-auto w-full border border-border/70 pb-0 max-sm:border-t-0 sm:max-w-md sm:rounded-xl sm:bg-card sm:p-1 sm:shadow-lg/3">
-      <div className="border border-border/70 bg-muted/60 px-10 py-14 max-sm:border-x-0 sm:rounded-lg">
+      <div className="border border-border/70 bg-muted/60 px-10 py-14 max-sm:border-x-0 sm:rounded-lg sm:shadow-sm/2">
         <Aperture className="mx-auto size-8" />
         <h1 className="mt-3 text-center font-semibold text-2xl">
           Login to Bloxxee

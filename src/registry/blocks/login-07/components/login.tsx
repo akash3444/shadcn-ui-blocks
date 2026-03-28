@@ -45,10 +45,16 @@ const Login = () => (
         </p>
       </div>
     </div>
-    <div className="relative flex h-full w-full flex-col overflow-hidden bg-muted/50 pb-20 dark:bg-muted/30">
+    <div className="relative flex h-full w-full flex-col overflow-hidden bg-muted/50 dark:bg-muted/30">
+      <img
+        alt="Login"
+        className="absolute inset-0 size-full object-cover"
+        src="/images/ascii-art.png"
+      />
+
       <Testimonials />
 
-      <div
+      {/* <div
         className="absolute inset-0 -top-px -left-px -z-1 dark:opacity-70"
         style={{
           backgroundImage: `
@@ -92,7 +98,7 @@ const Login = () => (
           maskComposite: "intersect",
           WebkitMaskComposite: "source-in",
         }}
-      />
+      /> */}
     </div>
   </div>
 );
