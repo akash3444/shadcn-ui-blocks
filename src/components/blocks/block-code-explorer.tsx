@@ -1,12 +1,13 @@
 "use client";
 
 import { File } from "lucide-react";
+import { capture } from "@/lib/analytics";
 import { useBlockContext } from "@/providers/block-provider";
 import { CopyButton } from "../copy-button";
 import { BlockCodeSidebar } from "./block-code-sidebar";
 
 export const BlockCodeExplorer = () => {
-  const { activeFile, code } = useBlockContext();
+  const { activeFile, code, block } = useBlockContext();
 
   return (
     <div className="flex divide-x overflow-hidden rounded-lg border">
@@ -24,7 +25,15 @@ export const BlockCodeExplorer = () => {
             <File className="size-4" />
             <p className="font-medium leading-none">{activeFile}</p>
           </div>
-          <CopyButton content={code ?? ""} />
+          <CopyButton
+            content={code ?? ""}
+            onCopy={() =>
+              capture("block:code_copied", {
+                block_id: block.name,
+                file_name: activeFile,
+              })
+            }
+          />
         </div>
         <CodeBlock />
       </div>

@@ -84,13 +84,20 @@ const ComponentBlock: FC<BlockProps> = async ({
         <div className="flex items-center">
           <CopyToClipboardButton
             className="h-8 w-8 text-muted-foreground"
+            componentName={name}
+            componentType={type}
             content={code}
             size="icon"
             variant="ghost"
           >
             <Copy />
           </CopyToClipboardButton>
-          <CodeDialog code={code} registryUrl={registryUrl} />
+          <CodeDialog
+            code={code}
+            componentName={name}
+            componentType={type}
+            registryUrl={registryUrl}
+          />
         </div>
       </div>
       <div className="flex min-h-32 w-full flex-1 items-center justify-center rounded px-4 py-5">

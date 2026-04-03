@@ -13,6 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { categories } from "@/config/registry";
+import { capture } from "@/lib/analytics";
 
 const CategoryFilter = () => {
   const { category = "all" } = useParams<{ category: string }>();
@@ -20,6 +21,8 @@ const CategoryFilter = () => {
   const router = useRouter();
 
   const handleSelect = (value: string) => {
+    capture("blocks:category_filter", { category: value });
+
     if (value === "all") {
       router.push(`/blocks?${searchParams.toString()}`);
       return;

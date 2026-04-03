@@ -1,14 +1,20 @@
+"use client";
+
 import { ArrowUpRight, PuzzleIcon, Shapes } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { capture } from "@/lib/analytics";
 import { BackgroundPattern } from "./background-pattern";
 
 export const Hero = () => {
   return (
     <div className="flex min-h-screen items-center justify-center px-4 sm:px-6 xl:px-0">
       <div className="w-full text-center">
-        <Link href="/blocks">
+        <Link
+          href="/blocks"
+          onClick={() => capture("marketing:hero_cta_click", { cta: "badge_blocks" })}
+        >
           <Badge className="border-border bg-background py-1 text-foreground">
             80+ blocks available for free! 🚀
             <ArrowUpRight className="ml-2 size-5" />
@@ -28,7 +34,12 @@ export const Hero = () => {
             className="group z-10 w-full gap-3 sm:w-auto"
             size="lg"
           >
-            <Link href="/blocks">
+            <Link
+              href="/blocks"
+              onClick={() =>
+                capture("marketing:hero_cta_click", { cta: "explore_blocks" })
+              }
+            >
               Explore Blocks{" "}
               <Shapes className="transition-transform group-hover:-rotate-12" />
             </Link>
@@ -39,7 +50,12 @@ export const Hero = () => {
             size="lg"
             variant="outline"
           >
-            <Link href="/components/accordion">
+            <Link
+              href="/components/accordion"
+              onClick={() =>
+                capture("marketing:hero_cta_click", { cta: "view_components" })
+              }
+            >
               View Components
               <PuzzleIcon className="transition-transform group-hover:translate-x-1" />
             </Link>

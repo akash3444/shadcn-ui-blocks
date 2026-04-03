@@ -9,14 +9,25 @@ import {
 } from "@/components/ui/tooltip";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 
-export const CopyButton = ({ content }: { content: string }) => {
+export const CopyButton = ({
+  content,
+  onCopy,
+}: {
+  content: string;
+  onCopy?: () => void;
+}) => {
   const { copyToClipboard, isCopied } = useCopyToClipboard();
+
+  const handleClick = () => {
+    copyToClipboard(content);
+    onCopy?.();
+  };
 
   return (
     <Tooltip delayDuration={1000}>
       <TooltipTrigger asChild>
         <Button
-          onClick={() => copyToClipboard(content)}
+          onClick={handleClick}
           size="icon"
           variant="ghost"
         >

@@ -10,14 +10,23 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { blockScreens } from "@/description/blocks";
+import { capture } from "@/lib/analytics";
 import { absoluteUrl } from "@/lib/utils";
 import { useBlockContext } from "@/providers/block-provider";
 import { BlockInstallCommandCopyButton } from "./block-intsall-command-copy-button";
 import V0Button from "./v0-button";
 
 const BlockToolbar = () => {
-  const { screenSize, setScreenSize } = useBlockContext();
-  const { block, iframeSrc } = useBlockContext();
+  const { screenSize, setScreenSize, block, iframeSrc } = useBlockContext();
+
+  const handleScreenSize = (name: string) => {
+    setScreenSize(name as Parameters<typeof setScreenSize>[0]);
+    capture("block:preview_screen_size", { block_id: block.name, size: name });
+  };
+
+  const handleFullscreen = () => {
+    capture("block:preview_open_fullscreen", { block_id: block.name });
+  };
 
   return (
     <div className="flex items-center gap-2">
@@ -26,7 +35,7 @@ const BlockToolbar = () => {
       <Tooltip>
         <TooltipTrigger>
           <Button asChild size="icon-sm" variant="outline">
-            <Link href={iframeSrc} target="_blank">
+            <Link href={iframeSrc} onClick={handleFullscreen} target="_blank">
               <FullscreenIcon />
             </Link>
           </Button>
@@ -43,7 +52,7 @@ const BlockToolbar = () => {
               <Button
                 className="h-6 w-6"
                 key={name}
-                onClick={() => setScreenSize(name)}
+                onClick={() => handleScreenSize(name)}
                 variant={name === screenSize ? "secondary" : "ghost"}
               >
                 <Icon />
@@ -61,7 +70,7 @@ const BlockToolbar = () => {
 
 const ThemeToggleButton = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useBlockContext();
+  const { theme, setTheme, block } = useBlockContext();
 
   useEffect(() => {
     setMounted(true);
@@ -70,6 +79,10 @@ const ThemeToggleButton = () => {
   const handleThemeToggle = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
+    capture("block:preview_theme_toggled", {
+      block_id: block.name,
+      theme: newTheme,
+    });
   };
 
   if (!mounted) {

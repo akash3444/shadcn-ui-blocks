@@ -6,6 +6,7 @@ import type React from "react";
 import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useDebounce } from "@/hooks/use-debounce";
+import { capture } from "@/lib/analytics";
 
 const PreviewListSearch = () => {
   const searchParams = useSearchParams();
@@ -33,6 +34,7 @@ const PreviewListSearch = () => {
       return;
     }
 
+    capture("blocks:search", { query_length: debouncedQuery.length });
     searchParams.set("q", debouncedQuery);
     router.push(`${pathname}?${searchParams.toString()}`);
   };

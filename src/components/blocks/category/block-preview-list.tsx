@@ -4,6 +4,7 @@ import { useParams, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { categorizedBlocks } from "@/blocks";
 import { blocks as registryBlocks } from "@/config/registry";
+import { capture } from "@/lib/analytics";
 import { Block } from "../block";
 import PreviewListFilter from "./preview-list-filter";
 import { ResultsNotFound } from "./results-not-found";
@@ -39,15 +40,27 @@ const BlockPreviewList = () => {
     setVisibleCount(INITIAL_BLOCK_COUNT);
   }, [query, category]);
 
+  // Track no-results searches
+  useEffect(() => {
+    if (query && filteredBlocks.length === 0) {
+      capture("blocks:search_no_results", { query_length: query.length });
+    }
+  }, [query, filteredBlocks.length]);
+
   // Set up intersection observer for infinite scroll
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
         if (entry?.isIntersecting && visibleCount < filteredBlocks.length) {
-          setVisibleCount((prev) =>
-            Math.min(prev + BLOCKS_PER_LOAD, filteredBlocks.length)
-          );
+          setVisibleCount((prev) => {
+            const next = Math.min(prev + BLOCKS_PER_LOAD, filteredBlocks.length);
+            capture("blocks:load_more", {
+              scope: (category as string) ?? "all",
+              visible_count: next,
+            });
+            return next;
+          });
         }
       },
       {

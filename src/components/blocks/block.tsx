@@ -2,6 +2,7 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { RegistryBlock } from "@/config/registry";
+import { capture } from "@/lib/analytics";
 import { BlockProvider } from "@/providers/block-provider";
 import { BlockCodeExplorer } from "./block-code-explorer";
 import BlockPreview from "./block-preview";
@@ -11,7 +12,16 @@ export function Block({ block }: { block: RegistryBlock }) {
   return (
     <BlockProvider key={block.name} name={block.name}>
       <div className="mx-auto w-full max-w-(--breakpoint-2xl) py-8">
-        <Tabs className="mt-6" defaultValue="preview">
+        <Tabs
+          className="mt-6"
+          defaultValue="preview"
+          onValueChange={(tab) =>
+            capture("block:tab_changed", {
+              block_id: block.name,
+              tab: tab as "preview" | "code",
+            })
+          }
+        >
           <div className="mb-1 flex flex-col flex-wrap justify-between gap-2 pr-1.5 md:flex-row md:items-end">
             <div className="font-medium text-lg">{block.title}</div>
             <div className="flex items-end gap-3">

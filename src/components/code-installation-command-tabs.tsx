@@ -4,6 +4,7 @@ import { Check, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
+import { capture } from "@/lib/analytics";
 import { getInstallationCommand } from "@/lib/shadcn-registry";
 import { BunLogo, NPMLogo, PnpmLogo, YarnLogo } from "./icons";
 
@@ -32,8 +33,12 @@ const tabs = [
 
 export const CodeInstallationCommandTabs = ({
   registryUrl,
+  componentName,
+  componentType,
 }: {
   registryUrl: string;
+  componentName?: string;
+  componentType?: string;
 }) => {
   const { copyToClipboard, isCopied } = useCopyToClipboard();
 
@@ -63,6 +68,13 @@ export const CodeInstallationCommandTabs = ({
               className="size-8 shrink-0 rounded-md"
               onClick={() => {
                 copyToClipboard(getInstallationCommand(tab.value, registryUrl));
+                if (componentName && componentType) {
+                  capture("component:install_command_copied", {
+                    component_name: componentName,
+                    component_type: componentType,
+                    package_manager: tab.value,
+                  });
+                }
               }}
               size="icon"
               variant="secondary"

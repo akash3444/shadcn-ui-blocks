@@ -1,7 +1,7 @@
 "use client";
 
-import posthog from "posthog-js";
 import { createContext, useContext, useEffect, useState } from "react";
+import { capture } from "@/lib/analytics";
 import {
   type PackageManager,
   packageManagers,
@@ -62,7 +62,7 @@ export const PackageManagerProvider = ({
   const setPackageManager = (packageManager: PackageManager) => {
     setSelectedPackageManager(packageManager);
     setStoredPackageManager(packageManager);
-    posthog.capture("block:package_manager_change", {
+    capture("block:package_manager_change", {
       package_manager: packageManager,
     });
   };

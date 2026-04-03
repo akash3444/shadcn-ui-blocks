@@ -14,6 +14,7 @@ import {
   packageManagers,
 } from "@/description/package-managers";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
+import { capture } from "@/lib/analytics";
 import { absoluteUrl } from "@/lib/utils";
 import { usePackageManager } from "@/providers/package-manager-provider";
 
@@ -29,6 +30,10 @@ export const BlockInstallCommandCopyButton = ({ block }: { block: string }) => {
     const installCommand = currentPackageManager.command(blockUrl);
 
     copyToClipboard(installCommand);
+    capture("block:install_command_copied", {
+      block_id: block,
+      package_manager: selectedPackageManager,
+    });
   };
 
   if (!isHydrated) {
