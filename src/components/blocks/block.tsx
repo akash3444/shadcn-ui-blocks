@@ -13,7 +13,7 @@ export function Block({ block }: { block: RegistryBlock }) {
     <BlockProvider key={block.name} name={block.name}>
       <div className="mx-auto w-full max-w-(--breakpoint-2xl) py-8">
         <Tabs
-          className="mt-6"
+          className="mt-6 gap-0"
           defaultValue="preview"
           onValueChange={(tab) =>
             capture("block:tab_changed", {
@@ -22,14 +22,16 @@ export function Block({ block }: { block: RegistryBlock }) {
             })
           }
         >
-          <div className="mb-1 flex flex-col flex-wrap justify-between gap-2 pr-1.5 md:flex-row md:items-end">
-            <div className="font-medium text-lg">{block.title}</div>
-            <div className="flex items-end gap-3">
-              <BlockToolbar />
-              <TabsList className="h-8 max-md:ms-auto max-md:hidden">
-                <TabsTrigger value="preview">Preview</TabsTrigger>
-                <TabsTrigger value="code">Code</TabsTrigger>
-              </TabsList>
+          <div className="pe-1.5">
+            <div className="mb-4 flex flex-col flex-wrap justify-between gap-2 md:flex-row md:items-end">
+              <div className="font-medium text-lg">{block.title}</div>
+              <div className="flex items-end gap-3">
+                <BlockToolbar />
+                <TabsList className="h-8 bg-input/30 max-md:ms-auto max-md:hidden dark:*:data-[state=active]:border-transparent! dark:*:data-[state=active]:bg-foreground/10!">
+                  <TabsTrigger value="preview">Preview</TabsTrigger>
+                  <TabsTrigger value="code">Code</TabsTrigger>
+                </TabsList>
+              </div>
             </div>
           </div>
 

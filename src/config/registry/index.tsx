@@ -1868,6 +1868,9 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.inviteMember],
     files: [{ path: "components/invite-member.tsx" }],
+    layout: ({ children }: { children: React.ReactNode }) => (
+      <div className="min-h-screen">{children}</div>
+    ),
   },
   {
     name: "invite-member-02",
@@ -1879,6 +1882,9 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.inviteMember],
     files: [{ path: "components/invite-member.tsx" }],
+    layout: ({ children }: { children: React.ReactNode }) => (
+      <div className="min-h-screen">{children}</div>
+    ),
   },
   {
     name: "invite-member-03",
@@ -1890,6 +1896,9 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.inviteMember],
     files: [{ path: "components/invite-member.tsx" }],
+    layout: ({ children }: { children: React.ReactNode }) => (
+      <div className="min-h-screen">{children}</div>
+    ),
   },
   // Keyboard Shortcuts Blocks
   {

@@ -91,13 +91,13 @@ export const Testimonials = () => {
           <CarouselContent className="select-none">
             {testimonials.map(({ name, avatar, role, testimonial }, index) => (
               <CarouselItem key={index}>
-                <div className="relative flex h-full gap-8 rounded-lg border bg-white/70 p-8 pt-16 pr-8 md:pt-8">
+                <div className="relative flex h-full gap-8 rounded-lg border bg-white/30 p-8 pt-16 pr-8 md:pt-8">
                   {/* Quote */}
                   <span className="absolute top-4 left-6 font-mono text-7xl md:hidden">
                     &#8220;
                   </span>
 
-                  <div className="flex flex-col items-center gap-2">
+                  <div className="flex flex-col items-center gap-2 text-white">
                     <p className="grow text-pretty text-center font-medium text-xl leading-relaxed tracking-normal sm:font-semibold sm:text-2xl sm:leading-[1.45]">
                       {testimonial}
                     </p>
@@ -109,7 +109,7 @@ export const Testimonials = () => {
                       />
                       <div className="flex flex-col">
                         <p className="font-semibold text-lg">{name}</p>
-                        <p className="text-black/60 text-sm">{role}</p>
+                        <p className="text-sm text-white/80">{role}</p>
                       </div>
                     </div>
                   </div>

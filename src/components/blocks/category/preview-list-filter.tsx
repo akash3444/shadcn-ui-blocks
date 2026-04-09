@@ -3,8 +3,8 @@ import PreviewListSearch from "./preview-list-search";
 
 const PreviewListFilter = ({ numberOfBlocks }: { numberOfBlocks: number }) => {
   return (
-    <div className="flex items-center justify-between rounded-lg border border-border/50 bg-muted py-2 ps-2 pe-4">
-      <div className="flex items-end gap-3">
+    <div className="flex items-center justify-between rounded-xl border border-border/70 bg-background py-2 ps-2 pe-4 shadow-xs/3">
+      <div className="flex grow items-end gap-2">
         <CategoryFilter />
         <PreviewListSearch />
       </div>

@@ -34,7 +34,7 @@ import {
 export default function InviteMember() {
   return (
     <Dialog open>
-      <DialogContent className="max-w-sm! pb-2">
+      <DialogContent className="max-w-sm! pb-1.5">
         <DialogHeader>
           <DialogTitle>Invite Members</DialogTitle>
           <DialogDescription>Invite members to your team.</DialogDescription>
@@ -80,7 +80,7 @@ export default function InviteMember() {
           </ScrollArea>
         </div>
 
-        <div className="-mx-4 rounded bg-muted px-5 py-4">
+        <div className="-mx-4.5 rounded-md bg-muted px-5 py-4">
           <p className="font-medium text-sm">Copy link and share with others</p>
           <InputGroup className="mt-2 bg-background">
             <InputGroupInput

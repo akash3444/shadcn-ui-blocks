@@ -45,7 +45,7 @@ const BlockToolbar = () => {
         </TooltipContent>
       </Tooltip>
       <V0Button url={absoluteUrl(`/r/${block.name}.json`)} />
-      <div className="hidden h-8 items-center gap-1 rounded-md border p-1 shadow-xs md:flex">
+      <div className="hidden h-8 items-center gap-1 rounded-md border bg-background p-1 shadow-xs md:flex dark:bg-input/30">
         {blockScreens.map(({ name, icon: Icon }) => (
           <Tooltip key={name}>
             <TooltipTrigger asChild>

@@ -10,7 +10,7 @@ export const BlockCodeExplorer = () => {
   const { activeFile, code, block } = useBlockContext();
 
   return (
-    <div className="flex divide-x overflow-hidden rounded-lg border">
+    <div className="flex divide-x overflow-hidden rounded-xl border">
       <div className="w-full max-w-[20rem] shrink-0">
         <div className="flex h-12 items-center border-b bg-sidebar pr-4 pl-7 font-medium">
           Explorer

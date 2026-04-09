@@ -48,14 +48,14 @@ const PreviewListSearch = () => {
   }, [query]);
 
   return (
-    <div className="relative">
+    <div className="relative w-full max-w-80">
       <Input
-        className="w-full max-w-60 bg-background ps-9"
+        className="w-full bg-muted/50 ps-9"
         onChange={handleChange}
         placeholder="Search"
         value={value}
       />
-      <SearchIcon className="absolute inset-y-0 start-2 my-auto h-5 w-5 text-muted-foreground" />
+      <SearchIcon className="absolute inset-s-2 inset-y-0 my-auto h-5 w-5 text-muted-foreground" />
     </div>
   );
 };

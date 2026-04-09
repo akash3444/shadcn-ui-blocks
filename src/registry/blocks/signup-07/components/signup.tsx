@@ -46,52 +46,6 @@ const SignUp = () => (
       />
 
       <Testimonials />
-
-      {/* <div
-        className="absolute inset-0 -top-px -left-px -z-1 dark:opacity-70"
-        style={{
-          backgroundImage: `
-        linear-gradient(to right, color-mix(in srgb,var(--foreground) 20%, transparent) 1px, transparent 1px),
-        linear-gradient(to bottom, color-mix(in srgb,var(--foreground) 20%, transparent) 1px, transparent 1px)
-      `,
-          backgroundSize: "20px 20px",
-          backgroundPosition: "0 0, 0 0",
-          maskImage: `
-        repeating-linear-gradient(
-          to right,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        ),
-        repeating-linear-gradient(
-          to bottom,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        )
-      `,
-          WebkitMaskImage: `
-        repeating-linear-gradient(
-          to right,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        ),
-        repeating-linear-gradient(
-          to bottom,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        )
-      `,
-          maskComposite: "intersect",
-          WebkitMaskComposite: "source-in",
-        }}
-      /> */}
     </div>
   </div>
 );

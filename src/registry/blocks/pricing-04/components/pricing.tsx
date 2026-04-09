@@ -68,7 +68,7 @@ const Pricing = () => {
   const [selectedBillingPeriod, setSelectedBillingPeriod] = useState("monthly");
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-accent px-6 py-12">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-muted/70 px-6 py-12 dark:bg-muted/50">
       <h2 className="text-center font-semibold text-5xl tracking-[-0.03em]">
         Our Plans
       </h2>
@@ -106,7 +106,7 @@ const Pricing = () => {
             key={plan.name}
           >
             {plan.isPopular && (
-              <Badge className="absolute top-0 right-0 rounded-none rounded-bl-lg px-5 py-1 uppercase">
+              <Badge className="absolute top-2 right-2 px-2.5 py-1 uppercase">
                 Most Popular
               </Badge>
             )}
