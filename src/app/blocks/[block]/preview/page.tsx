@@ -42,13 +42,19 @@ const BlockPreviewPage = async (props: {
 
   if (blockDetails.layout) {
     return (
-      <blockDetails.layout>
-        <blockDetails.component />
-      </blockDetails.layout>
+      <div className="font-geist">
+        <blockDetails.layout>
+          <blockDetails.component />
+        </blockDetails.layout>
+      </div>
     );
   }
 
-  return <blockDetails.component />;
+  return (
+    <div className="font-geist">
+      <blockDetails.component />
+    </div>
+  );
 };
 
 export default BlockPreviewPage;

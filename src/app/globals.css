@@ -44,6 +44,8 @@
   --color-sidebar-ring: var(--sidebar-ring);
 
   --font-inter: var(--font-inter);
+  --font-satoshi: var(--font-satoshi);
+  --font-geist: var(--font-geist);
 
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;

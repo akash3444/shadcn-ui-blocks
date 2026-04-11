@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
 import "./globals.css";
@@ -20,6 +20,28 @@ const inter = localFont({
     },
   ],
   variable: "--font-inter",
+});
+
+const geist = Geist({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  variable: "--font-geist",
+});
+
+const satoshi = localFont({
+  src: [
+    {
+      path: "./fonts/satoshi/Satoshi-Variable.woff2",
+      weight: "100 900",
+      style: "normal",
+    },
+    {
+      path: "./fonts/satoshi/Satoshi-VariableItalic.woff2",
+      weight: "100 900",
+      style: "italic",
+    },
+  ],
+  variable: "--font-satoshi",
 });
 
 const geistMono = Geist_Mono({
@@ -107,7 +129,15 @@ export default function RootLayout({
         />
         <meta content="ca-pub-4493596981598123" name="google-adsense-account" />
       </head>
-      <body className={cn(inter.variable, geistMono.variable, "antialiased")}>
+      <body
+        className={cn(
+          inter.variable,
+          geist.variable,
+          geistMono.variable,
+          satoshi.variable,
+          "antialiased"
+        )}
+      >
         <script
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(jsonLd),
