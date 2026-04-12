@@ -166,7 +166,7 @@ const Blog = () => {
                   </Badge>
                 </div>
 
-                <h3 className="mt-4 font-semibold text-2xl tracking-tight">
+                <h3 className="mt-4 font-medium text-[1.5rem] tracking-tight">
                   {post.title}
                 </h3>
                 <p className="mt-2 line-clamp-3 text-ellipsis text-muted-foreground">
@@ -186,7 +186,7 @@ const Blog = () => {
         </div>
       </div>
       <aside className="sticky top-8 w-full shrink-0 lg:max-w-sm">
-        <h3 className="font-semibold text-xl tracking-tight">Categories</h3>
+        <h3 className="font-medium text-xl tracking-tight">Categories</h3>
         <div className="mt-4 grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1">
           {categories.map((category) => (
             <div

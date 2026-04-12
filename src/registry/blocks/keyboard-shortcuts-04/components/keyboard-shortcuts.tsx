@@ -5,7 +5,7 @@ export default function KeyboardShortcuts() {
     <div className="px-6 py-8 sm:py-12">
       <div className="mx-auto max-w-184 border">
         <div className="relative overflow-hidden border-b p-6">
-          <h2 className="font-semibold text-2xl tracking-tight">
+          <h2 className="font-medium text-2xl tracking-tight">
             Keyboard Shortcuts
           </h2>
           <p className="mt-1 text-muted-foreground">

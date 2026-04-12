@@ -96,7 +96,7 @@ const Blog = () => {
   return (
     <div className="mx-auto max-w-(--breakpoint-xl) px-6 py-16 xl:px-0">
       <div className="flex items-end justify-between">
-        <h2 className="font-semibold text-3xl tracking-tight">
+        <h2 className="font-medium text-[1.5rem] tracking-tight">
           Today&apos;s Posts
         </h2>
         <Select defaultValue="recommended">
@@ -128,7 +128,7 @@ const Blog = () => {
             <CardContent className="px-4 pt-0 pb-5">
               <Badge variant="secondary">{post.category}</Badge>
 
-              <h3 className="mt-4 font-semibold text-2xl text-[1.4rem] tracking-[-0.015em]">
+              <h3 className="mt-4 font-medium text-[1.4rem] text-xl tracking-[-0.02em]">
                 {post.title}
               </h3>
               <div className="mt-6 flex items-center justify-between">

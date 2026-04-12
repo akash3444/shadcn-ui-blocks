@@ -12,11 +12,11 @@ const CTA = () => {
         />
 
         <div className="relative isolate bg-linear-to-r from-black to-black/50 px-10 py-14">
-          <h2 className="font-semibold text-4xl text-white tracking-tight sm:text-5xl">
+          <h2 className="font-satoshi font-semibold text-4xl text-white tracking-tight sm:text-5xl">
             Build Beautiful UIs, Faster
           </h2>
-          <p className="mt-4 max-w-lg text-2xl/normal text-white/85">
-            Get seamless access to everything you need, right from your phone.
+          <p className="mt-4 max-w-md text-lg text-white/85 md:text-xl">
+            Get seamless access to everything you need, right from your phone
           </p>
           <Button
             className="mt-10 bg-white text-black ring-4 ring-white/30 hover:bg-white/90"

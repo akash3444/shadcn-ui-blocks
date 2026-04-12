@@ -75,15 +75,15 @@ const Team = () => {
   }, [api]);
 
   return (
-    <div className="mx-auto max-w-screen-xl px-16 py-12">
-      <h2 className="text-balance font-semibold text-3xl capitalize tracking-tight sm:text-4xl md:text-5xl">
+    <div className="mx-auto max-w-7xl px-6 py-12">
+      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl capitalize tracking-tight md:text-5xl">
         Meet our amazing team
       </h2>
-      <p className="mt-2.5 text-balance text-muted-foreground sm:text-lg md:text-xl">
-        Our team is made up of a diverse group of individuals who are dedicated
+      <p className="mt-3.5 text-balance text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">
+        Our team is made up of a diverse group of dedicated individuals
       </p>
 
-      <div className="mt-10">
+      <div className="mt-14">
         <Carousel
           opts={{
             align: "start",
@@ -100,10 +100,10 @@ const Team = () => {
                   <div className="mx-auto aspect-square max-w-40 select-none overflow-hidden rounded-full bg-muted">
                     <img alt={member.name} src={member.image} />
                   </div>
-                  <p className="mt-4 text-center font-semibold text-lg">
+                  <p className="mt-6 text-center font-medium text-lg">
                     {member.name}
                   </p>
-                  <p className="mt-0.5 text-center font-medium text-muted-foreground text-sm">
+                  <p className="mt-0.5 text-center text-muted-foreground">
                     {member.role}
                   </p>
                   <div className="mt-5 flex items-center justify-center gap-4">

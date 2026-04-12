@@ -50,10 +50,10 @@ export default function Timeline() {
                   <span className="font-medium text-base">{company}</span>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-xl tracking-[-0.01em]">
+                  <h3 className="font-medium text-xl tracking-[-0.01em]">
                     {title}
                   </h3>
-                  <div className="mt-1 flex items-center gap-2 text-sm">
+                  <div className="mt-2 flex items-center gap-2 text-sm">
                     <Calendar className="h-4 w-4" />
                     <span>{period}</span>
                   </div>

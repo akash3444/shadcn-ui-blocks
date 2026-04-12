@@ -152,11 +152,11 @@ const FAQ = () => {
   )?.faqs;
 
   return (
-    <div className="mx-auto max-w-screen-xl px-6 py-12 sm:py-14">
-      <h2 className="text-balance text-center font-semibold text-4xl tracking-tight sm:text-5xl">
+    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-14">
+      <h2 className="text-balance text-center font-medium font-satoshi text-4xl tracking-tight sm:text-5xl">
         Frequently Asked Questions
       </h2>
-      <p className="mt-5 text-balance text-center text-lg text-muted-foreground tracking-normal sm:text-2xl">
+      <p className="mt-5 text-balance text-center text-lg text-muted-foreground md:text-2xl md:tracking-[-0.015em]">
         Find answers to common questions about our products and services.
       </p>
 
@@ -167,7 +167,7 @@ const FAQ = () => {
             <div className="pt-8 pb-10" key={category}>
               <div className="mb-2 flex items-center gap-3 pb-3 pl-2">
                 <Icon className="size-6" />
-                <span className="font-semibold text-lg">{category}</span>
+                <span className="font-medium text-lg">{category}</span>
               </div>
               <FAQList faqs={faqs} />
             </div>
@@ -211,7 +211,7 @@ function FAQList({ faqs }: { faqs: (typeof categorizedFaqs)[0]["faqs"] }) {
           key={index}
           value={faq.question}
         >
-          <AccordionTrigger className="font-semibold text-lg">
+          <AccordionTrigger className="font-medium text-lg">
             <div className="flex items-center gap-2">{faq.question}</div>
           </AccordionTrigger>
           <AccordionContent className="text-base">

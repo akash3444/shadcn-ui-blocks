@@ -51,13 +51,13 @@ const Features = () => {
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="w-full max-w-(--breakpoint-lg) px-6 py-10">
-        <h2 className="text-pretty font-semibold text-4xl tracking-[-0.03em] sm:max-w-xl md:text-[2.5rem] md:leading-[1.2]">
-          Strengthen Your Strategy
+        <h2 className="text-pretty font-satoshi font-semibold text-4xl tracking-tight md:text-5xl">
+          Designed for Speed and Scalability
         </h2>
-        <p className="mt-2 text-lg text-muted-foreground sm:text-2xl">
+        <p className="mt-4 text-lg text-muted-foreground md:text-2xl">
           Enhance your strategy with intelligent tools designed for success.
         </p>
-        <div className="mx-auto mt-10 grid w-full gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-12 grid w-full gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <Card
               className="flex flex-col overflow-hidden rounded-xl border pb-0 shadow-none"
@@ -65,10 +65,10 @@ const Features = () => {
             >
               <CardHeader>
                 <feature.icon />
-                <h4 className="mt-3! font-semibold text-xl tracking-tight">
+                <h4 className="mt-3! font-medium text-xl tracking-tight">
                   {feature.title}
                 </h4>
-                <p className="mt-1 text-[17px] text-muted-foreground">
+                <p className="text-[17px] text-muted-foreground">
                   {feature.description}
                 </p>
               </CardHeader>

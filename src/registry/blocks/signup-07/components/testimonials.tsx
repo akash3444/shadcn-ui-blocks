@@ -73,11 +73,11 @@ export const Testimonials = () => {
   }, [api]);
 
   return (
-    <div className="dark isolate mx-auto my-auto flex h-full w-full max-w-screen-xl flex-col justify-center bg-black/70 px-10 py-12 sm:py-14">
-      <h2 className="text-balance text-center font-semibold text-4xl text-foreground tracking-tight">
+    <div className="dark isolate mx-auto my-auto flex h-full w-full max-w-7xl flex-col justify-center bg-black/70 px-10 py-12 sm:py-14">
+      <h2 className="text-balance text-center font-medium text-4xl text-foreground tracking-tight">
         Trusted by Thousands
       </h2>
-      <p className="mt-2 text-balance text-center text-foreground/60 text-lg tracking-normal sm:mt-3 sm:text-2xl">
+      <p className="mt-2 text-balance text-center text-foreground/80 text-lg tracking-normal sm:mt-3 sm:text-2xl">
         Real stories from real users who&apos;ve seen real results
       </p>
 
@@ -98,7 +98,7 @@ export const Testimonials = () => {
                   </span>
 
                   <div className="flex flex-col items-center gap-2 text-white">
-                    <p className="grow text-pretty text-center font-medium text-xl leading-relaxed tracking-normal sm:font-semibold sm:text-2xl sm:leading-[1.45]">
+                    <p className="grow text-pretty text-center font-medium text-xl leading-relaxed tracking-normal sm:text-2xl sm:leading-[1.45]">
                       {testimonial}
                     </p>
                     <div className="mt-6 flex items-center gap-2">
@@ -108,7 +108,7 @@ export const Testimonials = () => {
                         src={avatar}
                       />
                       <div className="flex flex-col">
-                        <p className="font-semibold text-lg">{name}</p>
+                        <p className="font-medium text-lg">{name}</p>
                         <p className="text-sm text-white/80">{role}</p>
                       </div>
                     </div>

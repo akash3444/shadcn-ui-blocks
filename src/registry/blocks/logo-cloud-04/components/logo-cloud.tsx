@@ -6,7 +6,7 @@ const LogoCloud = () => {
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div>
-        <p className="text-center font-medium text-xl">
+        <p className="text-center font-medium text-foreground/80 text-xl">
           More than 2.2 million companies worldwide already trust us
         </p>
         <div className="mt-16 grid gap-6 px-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

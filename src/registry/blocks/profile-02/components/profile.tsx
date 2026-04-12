@@ -92,7 +92,7 @@ export default function Profile() {
                 </AvatarFallback>
               </Avatar>
             </div>
-            <span className="font-semibold text-xl">John Doe</span>
+            <span className="font-medium text-xl tracking-tight">John Doe</span>
             <span className="text-muted-foreground">john.doe@example.com</span>
 
             <div className="mt-5 flex w-full items-center gap-2">
@@ -146,7 +146,7 @@ export default function Profile() {
               </div>
 
               <div className="mask-t-from-50% absolute inset-x-0 bottom-0 rounded-b-xl bg-background/80 p-6 pt-20">
-                <h3 className="font-semibold text-xl tracking-[-0.005em]">
+                <h3 className="font-medium text-xl tracking-[-0.005em]">
                   {project.name}
                 </h3>
                 <p className="mt-1.5 text-base text-foreground/90">

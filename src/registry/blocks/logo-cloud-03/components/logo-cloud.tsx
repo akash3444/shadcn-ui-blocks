@@ -7,10 +7,10 @@ const LogoCloud = () => {
       <div className="relative grow">
         <div className="inset-x-0 top-0 mx-auto flex w-full flex-col justify-between gap-10 rounded-lg border border-border/70 bg-background px-10 py-14 shadow-foreground/4 sm:absolute sm:-translate-y-1/2 sm:shadow-lg md:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg) lg:flex-row lg:items-center xl:max-w-(--breakpoint-xl) dark:border-border/70 dark:shadow-foreground/3">
           <div className="shrink-0">
-            <h3 className="font-semibold text-4xl tracking-tight">
+            <h3 className="font-medium text-3xl tracking-tight">
               Trusted by 1000+ companies
             </h3>
-            <p className="mt-5 max-w-xl text-lg lg:max-w-md xl:max-w-xl">
+            <p className="mt-3 max-w-xl text-foreground/80 text-lg lg:max-w-md xl:max-w-xl">
               Trusted by industry leaders and visionaries who are shaping the
               future, solving global challenges, and driving innovation forward.
             </p>

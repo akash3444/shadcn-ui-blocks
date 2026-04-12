@@ -47,7 +47,7 @@ const SignUp = () => {
       <div className="grid h-full w-full p-4 lg:grid-cols-2">
         <div className="m-auto flex w-full max-w-xs flex-col items-center">
           <Logo className="h-9 w-9" />
-          <p className="mt-4 font-semibold text-xl tracking-tight">
+          <p className="mt-4 font-medium text-xl">
             Sign up for Shadcn UI Blocks
           </p>
 

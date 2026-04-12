@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 export default function Members() {
   return (
     <div className="px-6 py-12">
-      <div className="mx-auto max-w-screen-md">
+      <div className="mx-auto max-w-3xl">
         <div className="flex justify-between gap-4 rounded-lg bg-muted/90 px-6 py-5 max-[32rem]:flex-col min-[32rem]:items-center">
           <div>
-            <h2 className="font-semibold text-lg">Members</h2>
+            <h2 className="font-medium text-lg">Members</h2>
             <div className="mt-0.5 flex items-center text-muted-foreground text-sm">
               <span>Team Avengers</span> <Dot /> <span>10 Members</span>
             </div>
@@ -22,7 +22,7 @@ export default function Members() {
           </div>
         </div>
 
-        <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-6 lg:grid-cols-3 min-[32rem]:grid-cols-2">
+        <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-8 lg:grid-cols-3 min-[32rem]:grid-cols-2">
           {members.map((member) => (
             <div key={member.name}>
               <div className="aspect-square rounded-lg bg-muted">
@@ -33,7 +33,7 @@ export default function Members() {
                 />
               </div>
 
-              <h3 className="mt-3 font-semibold text-lg">{member.name}</h3>
+              <h3 className="mt-3 font-medium text-lg">{member.name}</h3>
               <p className="text-muted-foreground text-sm">{member.role}</p>
             </div>
           ))}

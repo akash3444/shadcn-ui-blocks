@@ -47,11 +47,11 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="mx-auto max-w-screen-xl px-6 py-12 sm:py-14">
-      <h2 className="text-balance text-center font-semibold text-4xl tracking-tight sm:text-5xl">
+    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-14">
+      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl">
         Testimonials
       </h2>
-      <p className="mt-2.5 text-balance text-center text-lg text-muted-foreground tracking-normal sm:text-2xl">
+      <p className="mt-2.5 text-balance text-center text-lg text-muted-foreground tracking-[-0.015em] sm:text-2xl">
         What our customers say about us
       </p>
 
@@ -62,8 +62,8 @@ const Testimonials = () => {
             key={index}
           >
             {/* Quote */}
-            <span className="absolute top-5 left-4 font-mono text-7xl">
-              &#8220;
+            <span className="absolute top-2 left-4 font-satoshi text-8xl text-foreground/30">
+              &ldquo;
             </span>
 
             <p className="grow py-6 font-medium text-lg">{testimonial}</p>
@@ -71,7 +71,7 @@ const Testimonials = () => {
             <div className="flex items-center gap-3 py-3.5">
               <img alt="" className="h-10 w-10 rounded-full" src={avatar} />
               <div className="flex flex-col">
-                <p className="font-semibold">{name}</p>
+                <p className="font-medium">{name}</p>
                 <p className="text-muted-foreground text-sm">{role}</p>
               </div>
             </div>

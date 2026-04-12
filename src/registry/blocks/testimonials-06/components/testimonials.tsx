@@ -106,13 +106,13 @@ const Testimonials = () => {
   return (
     <div className="flex min-h-screen w-full items-center justify-center px-6 py-12">
       <div className="w-full">
-        <h2 className="text-center font-semibold text-5xl tracking-[-0.03em]">
-          Testimonials
+        <h2 className="text-center font-satoshi font-semibold text-4xl tracking-[-0.03em] md:text-5xl">
+          People love using it
         </h2>
-        <p className="mt-3 text-center text-muted-foreground text-xl sm:text-2xl">
-          See what our users have to say about us
+        <p className="mt-4 text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">
+          Real feedback from those who've made it part of their workflow
         </p>
-        <div className="container mx-auto mt-14 w-full px-12 lg:max-w-(--breakpoint-lg) xl:max-w-(--breakpoint-xl)">
+        <div className="container mx-auto mt-14 w-full px-12 lg:mt-16 lg:max-w-(--breakpoint-lg) xl:max-w-(--breakpoint-xl)">
           <Carousel setApi={setApi}>
             <CarouselContent>
               {testimonials.map((testimonial) => (
@@ -203,14 +203,14 @@ const TestimonialCard = ({
         <p className="mt-6 font-medium text-lg leading-normal tracking-[-0.015em] sm:text-2xl lg:text-[1.75rem] lg:leading-normal! xl:text-3xl">
           {testimonial.testimonial}
         </p>
-        <div className="mt-6 flex items-center gap-4 sm:hidden md:flex">
+        <div className="mt-10 flex items-center gap-4 sm:hidden md:flex">
           <Avatar className="size-10">
             <AvatarFallback className="bg-primary font-medium text-primary-foreground text-xl">
               {testimonial.name.charAt(0)}
             </AvatarFallback>
           </Avatar>
           <div>
-            <p className="font-semibold text-lg">{testimonial.name}</p>
+            <p className="font-medium">{testimonial.name}</p>
             <p className="text-muted-foreground text-sm">
               {testimonial.designation}
             </p>

@@ -21,10 +21,10 @@ const CTA = () => {
           />
 
           <div className="relative isolate pt-12 pb-0 md:pb-12">
-            <h2 className="font-semibold text-4xl tracking-tight lg:text-5xl/tight">
-              Ready to Transform Your Workflow?
+            <h2 className="font-satoshi font-semibold text-4xl tracking-tight lg:text-5xl/tight">
+              Ready to transform your workflow?
             </h2>
-            <p className="mt-2 text-muted-foreground text-xl sm:mt-4 lg:text-2xl">
+            <p className="mt-2 text-muted-foreground text-xl tracking-[-0.015em] sm:mt-4 lg:text-2xl">
               Join thousands of developers using our tools.
             </p>
             <Button className="mt-5 sm:mt-10" size="lg">

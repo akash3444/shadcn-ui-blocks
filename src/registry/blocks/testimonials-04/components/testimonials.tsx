@@ -64,19 +64,19 @@ const testimonials = [
 const Testimonials = () => (
   <div className="flex min-h-screen items-center justify-center py-12">
     <div className="h-full w-full">
-      <h2 className="text-pretty px-6 text-center font-semibold text-5xl tracking-[-0.03em]">
+      <h2 className="text-pretty px-6 text-center font-satoshi font-semibold text-4xl tracking-[-0.03em] md:text-5xl">
         Success Stories
       </h2>
-      <p className="mt-3 text-center text-muted-foreground text-xl">
+      <p className="mt-3.5 px-6 text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">
         Real stories from people who use and love our product every day
       </p>
       <div className="relative mt-14">
         <div className="absolute inset-y-0 left-0 z-10 w-[15%] bg-linear-to-r from-background to-transparent" />
         <div className="absolute inset-y-0 right-0 z-10 w-[15%] bg-linear-to-l from-background to-transparent" />
-        <Marquee className="[--duration:20s]" pauseOnHover>
+        <Marquee className="[--duration:60s]" pauseOnHover>
           <TestimonialList />
         </Marquee>
-        <Marquee className="mt-0 [--duration:20s]" pauseOnHover reverse>
+        <Marquee className="mt-0 [--duration:60s]" pauseOnHover reverse>
           <TestimonialList />
         </Marquee>
       </div>

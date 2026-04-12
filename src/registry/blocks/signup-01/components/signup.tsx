@@ -88,7 +88,7 @@ const SignUp = () => {
 
         <div className="relative isolate flex flex-col items-center">
           <Logo className="h-9 w-9" />
-          <p className="mt-4 font-semibold text-xl tracking-tight">
+          <p className="mt-4 font-medium text-xl">
             Sign up for Shadcn UI Blocks
           </p>
 

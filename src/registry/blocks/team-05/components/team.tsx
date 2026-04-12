@@ -66,13 +66,13 @@ const Team = () => {
   return (
     <div className="mx-auto flex max-w-(--breakpoint-xl) flex-col justify-center gap-16 px-6 py-8 sm:py-12 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
-        <b className="text-center font-semibold text-muted-foreground text-sm uppercase">
+        <b className="text-center font-satoshi font-semibold text-muted-foreground text-sm uppercase">
           We&apos;re hiring!
         </b>
-        <h2 className="mt-3 font-semibold text-4xl tracking-tighter sm:text-5xl">
+        <h2 className="mt-3 font-satoshi font-semibold text-4xl tracking-tighter sm:text-5xl">
           Meet Our Team
         </h2>
-        <p className="mt-6 text-base text-muted-foreground sm:text-lg">
+        <p className="mt-6 text-base text-muted-foreground sm:text-xl">
           Our philosophy is simple — hire a team of diverse, passionate people
           and foster a culture that empowers you to do you best work.
         </p>
@@ -94,10 +94,10 @@ const Team = () => {
               src={member.imageUrl}
               width={600}
             />
-            <h3 className="mt-4 font-semibold text-lg">{member.name}</h3>
+            <h3 className="mt-4 font-medium text-lg">{member.name}</h3>
             <p className="text-muted-foreground text-sm">{member.title}</p>
             <p className="mt-3">{member.bio}</p>
-            <div className="mt-4 flex items-center gap-2.5">
+            <div className="mt-6 flex items-center gap-2.5">
               <Button
                 asChild
                 className="bg-accent text-muted-foreground shadow-none hover:bg-accent"

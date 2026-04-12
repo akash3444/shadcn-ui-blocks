@@ -47,9 +47,7 @@ const Login = () => {
       <div className="grid h-full w-full p-4 lg:grid-cols-2">
         <div className="m-auto flex w-full max-w-xs flex-col items-center">
           <Logo className="h-9 w-9" />
-          <p className="mt-4 font-semibold text-xl tracking-tight">
-            Log in to Shadcn UI Blocks
-          </p>
+          <p className="mt-4 font-medium text-xl">Log in to Shadcn UI Blocks</p>
 
           <div className="mt-8 flex items-center gap-3">
             <Button

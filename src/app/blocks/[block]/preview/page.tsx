@@ -42,7 +42,12 @@ const BlockPreviewPage = async (props: {
 
   if (blockDetails.layout) {
     return (
-      <div className="font-geist">
+      <div
+        className="font-geist"
+        style={{
+          fontFeatureSettings: '"ss03" on',
+        }}
+      >
         <blockDetails.layout>
           <blockDetails.component />
         </blockDetails.layout>
@@ -51,7 +56,12 @@ const BlockPreviewPage = async (props: {
   }
 
   return (
-    <div className="font-geist">
+    <div
+      className="font-geist"
+      style={{
+        fontFeatureSettings: '"ss03" on',
+      }}
+    >
       <blockDetails.component />
     </div>
   );

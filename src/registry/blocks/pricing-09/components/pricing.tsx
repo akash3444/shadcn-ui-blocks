@@ -61,8 +61,8 @@ const pricingPlans: PricingPlan[] = [
 const Pricing = () => {
   return (
     <section className="mx-auto max-w-6xl px-6 py-16">
-      <h2 className="text-balance text-center font-semibold text-4xl tracking-tight sm:text-5xl">
-        Choose Your Perfect Plan
+      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-[-0.035em] sm:text-5xl">
+        Pick your plan
       </h2>
       <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-normal sm:mt-4 sm:text-2xl">
         Flexible pricing designed to grow with you ready.
@@ -114,14 +114,16 @@ const PlanCard = ({ plan }: { plan: PricingPlan }) => {
         )}
         <plan.icon className="mb-5 text-primary" />
         <div className="flex items-center gap-1">
-          <h3 className="font-semibold text-2xl">{plan.name}</h3>
+          <h3 className="font-medium text-2xl tracking-tight">{plan.name}</h3>
         </div>
         <p className="mt-1 mb-2 text-muted-foreground">{plan.description}</p>
       </div>
 
       <div className="shadow/5 dark:shadow/45 mt-1 grow rounded-lg border bg-background px-6 pt-5 pb-10">
-        <p className="mt-4 font-semibold text-4xl">${plan.price}</p>
-        <p className="mt-1 font-medium text-muted-foreground text-sm tracking-normal">
+        <p className="mt-4 font-satoshi font-semibold text-4xl">
+          ${plan.price}
+        </p>
+        <p className="mt-1 text-muted-foreground text-sm tracking-normal">
           one-time payment
         </p>
         <Button

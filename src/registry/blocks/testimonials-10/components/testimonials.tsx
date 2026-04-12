@@ -43,24 +43,24 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="mx-auto max-w-screen-xl px-6 py-12 sm:py-14">
-      <h2 className="text-balance text-center font-semibold text-4xl tracking-tight sm:text-5xl">
+    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-14">
+      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl">
         Loved by Our Users
       </h2>
-      <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-normal sm:mt-4 sm:text-2xl">
+      <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-[-0.015em] sm:mt-4 sm:text-2xl">
         Their experiences speak louder than words
       </p>
 
       <div className="mx-auto mt-16 max-w-5xl columns-1 gap-6 sm:columns-2 lg:columns-3">
         {testimonials.map(({ name, avatar, role, testimonial }, index) => (
           <div
-            className="mb-6 break-inside-avoid rounded-lg border bg-muted p-1.5"
+            className="mb-6 break-inside-avoid rounded-lg border bg-muted p-1"
             key={index}
           >
-            <div className="relative flex flex-col rounded-md border bg-gradient-to-bl from-muted/50 via-background to-background px-5 pt-10 pb-3 dark:border-muted-foreground/30 dark:bg-background">
+            <div className="relative flex flex-col rounded-md border bg-linear-to-bl from-muted/50 via-background to-background px-5 pt-10 pb-3 dark:border-muted-foreground/30 dark:bg-background">
               {/* Quote */}
-              <span className="absolute top-5 left-4 font-mono text-7xl text-muted-foreground">
-                &#8220;
+              <span className="absolute top-0 left-4 font-satoshi text-9xl text-foreground/30">
+                &ldquo;
               </span>
 
               <p className="grow py-6 font-medium text-lg">{testimonial}</p>
@@ -71,7 +71,7 @@ const Testimonials = () => {
                   src={avatar}
                 />
                 <div className="flex flex-col">
-                  <p className="font-semibold">{name}</p>
+                  <p className="font-medium">{name}</p>
                   <p className="text-muted-foreground text-sm">{role}</p>
                 </div>
               </div>

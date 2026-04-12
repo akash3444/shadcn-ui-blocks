@@ -40,12 +40,12 @@ export default function Profile() {
             <AvatarFallback className="font-medium text-2xl">CN</AvatarFallback>
           </Avatar>
         </div>
-        <span className="font-semibold text-2xl">John Doe</span>
-        <span className="text-muted-foreground">john.doe@example.com</span>
+        <span className="font-medium text-2xl tracking-tight">John Doe</span>
+        <span className="mt-1 text-muted-foreground">john.doe@example.com</span>
 
         <div className="mt-8">
-          <h2 className="font-semibold text-lg">About</h2>
-          <p className="mt-0.5 text-muted-foreground">
+          <h2 className="font-medium text-lg">About</h2>
+          <p className="mt-1 text-muted-foreground">
             I&apos;m a passionate software developer with over 5 years of
             experience building web applications. I love working with modern
             technologies and creating user-friendly interfaces that solve

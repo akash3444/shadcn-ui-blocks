@@ -50,7 +50,7 @@ const Features = () => {
   return (
     <div className="flex min-h-screen items-center justify-center py-12">
       <div>
-        <h2 className="mx-auto max-w-3xl text-center font-semibold text-4xl tracking-tight sm:text-5xl/tight">
+        <h2 className="mx-auto max-w-3xl text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl/tight">
           Everything You Need to Build, Manage, and Grow Without Limits
         </h2>
         <div className="mx-auto mt-10 grid max-w-(--breakpoint-lg) gap-6 px-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
@@ -62,7 +62,7 @@ const Features = () => {
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-muted">
                 <feature.icon className="size-5" />
               </div>
-              <span className="font-semibold text-lg">{feature.title}</span>
+              <span className="font-medium text-lg">{feature.title}</span>
               <p className="mt-1 text-[15px] text-foreground/80">
                 {feature.description}
               </p>

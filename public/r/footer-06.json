@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "src/registry/blocks/footer-06/components/footer.tsx",
-      "content": "import { Wheat } from \"lucide-react\";\nimport Link from \"next/link\";\n\nconst Footer = () => {\n  return (\n    <footer className=\"flex items-center justify-between border-t bg-background px-6 py-4\">\n      <Link className=\"flex items-center gap-2\" href=\"/\">\n        <Wheat />\n        <span className=\"font-bold text-xl\">Bloxxee</span>\n      </Link>\n\n      <p className=\"font-medium text-muted-foreground text-sm\">\n        Copyright &copy; {new Date().getFullYear()} Bloxxee. All rights\n        reserved.\n      </p>\n    </footer>\n  );\n};\n\nexport default Footer;\n",
+      "content": "import { Wheat } from \"lucide-react\";\nimport Link from \"next/link\";\n\nconst Footer = () => {\n  return (\n    <footer className=\"flex items-center justify-between border-t bg-background px-6 py-4\">\n      <Link className=\"flex items-center gap-2\" href=\"/\">\n        <Wheat />\n        <span className=\"font-medium text-xl\">Bloxxee</span>\n      </Link>\n\n      <p className=\"font-medium text-muted-foreground text-sm\">\n        Copyright &copy; {new Date().getFullYear()} Bloxxee. All rights\n        reserved.\n      </p>\n    </footer>\n  );\n};\n\nexport default Footer;\n",
       "type": "registry:component"
     }
   ],

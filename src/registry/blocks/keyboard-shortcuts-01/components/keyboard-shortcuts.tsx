@@ -12,7 +12,7 @@ export default function KeyboardShortcuts() {
     <div className="px-6 py-12">
       <Card className="mx-auto max-w-sm border bg-muted/20">
         <CardHeader>
-          <CardTitle>Keyboard Shortcuts</CardTitle>
+          <CardTitle className="font-medium">Keyboard Shortcuts</CardTitle>
           <CardDescription>
             A list of keyboard shortcuts for the application
           </CardDescription>

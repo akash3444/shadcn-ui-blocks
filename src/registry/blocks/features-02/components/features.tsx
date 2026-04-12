@@ -20,10 +20,10 @@ const Features = () => {
   return (
     <div className="flex min-h-screen items-center justify-center px-6 py-12">
       <div className="w-full grow sm:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg)">
-        <h2 className="font-semibold text-4xl tracking-tight sm:text-[2.5rem]">
-          Powerful Features to Boost Your Workflow
+        <h2 className="font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl">
+          Features that help you build better
         </h2>
-        <div className="mt-10 grid w-full gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid w-full gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <div
               className="flex w-full flex-col text-start"
@@ -38,10 +38,10 @@ const Features = () => {
                 />
               </div>
               <div className="px-1">
-                <span className="font-semibold text-2xl tracking-[-0.015em]">
+                <span className="font-medium text-[22px] tracking-[-0.015em]">
                   {feature.title}
                 </span>
-                <p className="mt-1.5 max-w-[25ch] text-[17px] text-muted-foreground">
+                <p className="mt-1 max-w-[25ch] text-[17px] text-muted-foreground">
                   {feature.description}
                 </p>
               </div>

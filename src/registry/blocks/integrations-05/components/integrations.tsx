@@ -1,10 +1,10 @@
 export default function Integrations() {
   return (
-    <div className="mx-auto flex max-w-screen-xl flex-col px-6 py-12 sm:py-14">
-      <h2 className="text-center font-semibold text-4xl tracking-tight sm:text-5xl">
+    <div className="mx-auto flex max-w-7xl flex-col px-6 py-12 sm:py-14">
+      <h2 className="text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl">
         Our Integrations
       </h2>
-      <p className="mt-3 text-center text-muted-foreground text-xl sm:text-xl">
+      <p className="mt-3.5 text-pretty text-center text-muted-foreground text-xl sm:text-xl">
         Connect your favorite tools and services to your account.
       </p>
       <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -32,7 +32,7 @@ export default function Integrations() {
                 </div>
               </div>
               <div>
-                <h3 className="py-2 font-semibold text-xl">
+                <h3 className="py-2 font-medium text-xl">
                   {integration.title}
                 </h3>
                 <p className="mt-4 mb-2 text-pretty text-muted-foreground tracking-normal">

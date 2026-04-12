@@ -47,8 +47,8 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="mx-auto max-w-screen-xl px-6 py-12 sm:py-14">
-      <h2 className="text-balance text-center font-semibold text-4xl tracking-tight sm:text-5xl">
+    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-14">
+      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl">
         Testimonials
       </h2>
       <p className="mt-2.5 text-balance text-center text-lg text-muted-foreground tracking-normal sm:text-2xl">
@@ -68,7 +68,7 @@ const Testimonials = () => {
             <div className="flex items-center gap-3 px-5 py-3.5">
               <img alt="" className="h-10 w-10 rounded-full" src={avatar} />
               <div className="flex flex-col">
-                <p className="font-semibold">{name}</p>
+                <p className="font-medium">{name}</p>
                 <p className="text-muted-foreground text-sm">{role}</p>
               </div>
             </div>

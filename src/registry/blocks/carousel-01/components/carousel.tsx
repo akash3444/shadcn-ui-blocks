@@ -22,7 +22,7 @@ export default function CarouselDemo() {
       <div>
         <div className="flex items-end justify-between">
           <div>
-            <h2 className="font-bold text-3xl">dddepth</h2>
+            <h2 className="font-medium text-3xl">dddepth</h2>
             <p className="mt-2 text-pretty text-lg text-muted-foreground leading-snug">
               A Curated Collection of AI-generated Abstract 3D Shapes
             </p>

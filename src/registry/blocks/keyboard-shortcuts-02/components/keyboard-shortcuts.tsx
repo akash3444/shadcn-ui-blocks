@@ -19,7 +19,7 @@ export default function KeyboardShortcuts() {
           <KeyboardIcon className="mask-r-from-55% mask-r-to-75% dark:mask-r-from-50% absolute -top-1 -right-1 size-11 -rotate-45 stroke-[1.5px] text-muted-foreground opacity-60 dark:opacity-40" />
 
           <CardHeader className="relative isolate">
-            <CardTitle>Keyboard Shortcuts</CardTitle>
+            <CardTitle className="font-medium">Keyboard Shortcuts</CardTitle>
             <CardDescription>
               A list of keyboard shortcuts for the application
             </CardDescription>

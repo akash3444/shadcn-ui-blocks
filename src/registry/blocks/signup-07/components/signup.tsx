@@ -11,7 +11,7 @@ const SignUp = () => (
     <div className="flex h-screen items-center justify-center">
       <div className="mx-auto w-full max-w-md px-10 py-14 sm:rounded-2xl sm:border sm:bg-card sm:shadow-2xl/5">
         <Aperture className="mx-auto size-8" />
-        <h1 className="mt-3 text-center font-semibold text-2xl">
+        <h1 className="mt-3 text-center font-medium text-2xl">
           Sign up to Bloxxee
         </h1>
 

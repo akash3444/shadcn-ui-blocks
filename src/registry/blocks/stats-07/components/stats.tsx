@@ -3,11 +3,11 @@ import { cn } from "@/lib/utils";
 function Stats() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="text-balance text-center font-semibold text-3xl tracking-tight sm:text-4xl md:text-5xl">
-        Growing&nbsp;Fast. Loved&nbsp;by&nbsp;Developers.
+      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-tight md:text-5xl">
+        Built with scale in mind
       </h2>
-      <p className="mt-4 text-center text-lg text-muted-foreground sm:text-xl md:text-2xl">
-        Trusted by thousands to build modern UIs faster.
+      <p className="mt-4 text-center text-muted-foreground text-xl tracking-[-0.015em] sm:text-lg md:text-2xl">
+        A quick look at the impact and adoption of our UI components
       </p>
 
       <div className="mt-14 rounded-2xl border bg-muted p-1">
@@ -18,16 +18,22 @@ function Stats() {
           )}
         >
           <div className="bg-background p-10">
-            <span className="font-semibold text-5xl">70%</span>
-            <p className="mt-4 text-lg">Faster UI development</p>
+            <span className="font-satoshi font-semibold text-5xl">70%</span>
+            <p className="mt-4 text-foreground/80 text-xl">
+              Faster UI development
+            </p>
           </div>
           <div className="bg-background p-10">
-            <span className="font-semibold text-5xl">5x</span>
-            <p className="mt-4 text-lg">Increase in productivity</p>
+            <span className="font-satoshi font-semibold text-5xl">5x</span>
+            <p className="mt-4 text-foreground/80 text-xl">
+              Increase in productivity
+            </p>
           </div>
           <div className="bg-background p-10 sm:col-span-2 md:col-span-1">
-            <span className="font-semibold text-5xl">98%</span>
-            <p className="mt-4 text-lg">Customer satisfaction</p>
+            <span className="font-satoshi font-semibold text-5xl">98%</span>
+            <p className="mt-4 text-foreground/80 text-xl">
+              Customer satisfaction
+            </p>
           </div>
         </div>
       </div>

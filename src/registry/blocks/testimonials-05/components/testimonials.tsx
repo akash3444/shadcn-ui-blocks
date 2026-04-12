@@ -62,13 +62,13 @@ const testimonials = [
 const Testimonials = () => (
   <div className="flex min-h-screen items-center justify-center px-6 py-12">
     <div>
-      <h2 className="text-center font-semibold text-5xl tracking-[-0.03em]">
+      <h2 className="text-center font-satoshi font-semibold text-4xl tracking-[-0.03em] md:text-5xl">
         Loved by Developers
       </h2>
-      <p className="mt-3 text-center text-muted-foreground text-xl sm:text-2xl">
+      <p className="mt-4 text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">
         See how developers and teams are achieving more with us
       </p>
-      <div className="mx-auto mt-8 w-full max-w-(--breakpoint-xl) sm:mt-14">
+      <div className="mx-auto mt-8 w-full max-w-(--breakpoint-xl) sm:mt-14 lg:mt-16">
         <div className="grid grid-cols-1 overflow-hidden md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial) => (
             <div
@@ -87,7 +87,7 @@ const Testimonials = () => (
                 <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
               </div>
               <p className="my-6 max-w-md text-pretty text-center text-[17px]">
-                &quot;{testimonial.testimonial}&quot;
+                {testimonial.testimonial}
               </p>
               <div className="mt-auto flex items-center justify-center gap-3">
                 <Avatar className="size-9">
@@ -96,7 +96,7 @@ const Testimonials = () => (
                   </AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="font-semibold">{testimonial.name}</p>
+                  <p className="font-medium">{testimonial.name}</p>
                   <p className="text-muted-foreground text-sm">
                     {testimonial.designation}
                   </p>

@@ -67,13 +67,13 @@ export function StatsCard({
   return (
     <Card
       className={cn(
-        "overflow-hidden rounded-none rounded-tl-sm border-border/60 border-r-0 border-b-0 pb-0 shadow-none lg:hidden xl:flex",
+        "overflow-hidden rounded-none rounded-tl-xl border-border/60 border-r-0 border-b-0 pb-0 shadow-none lg:hidden xl:flex",
         className
       )}
       {...props}
     >
       <CardHeader>
-        <CardTitle className="text-3xl">+2,350</CardTitle>
+        <CardTitle className="font-satoshi text-3xl">+2,350</CardTitle>
         <CardDescription>+180.1% from last month</CardDescription>
         <CardAction>
           <Button size="sm" variant="ghost">

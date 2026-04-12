@@ -81,11 +81,11 @@ const faqs: FrequentlyAskedQuestion[] = [
 export default function FAQ() {
   return (
     <div className="bg-muted/50" id="faq">
-      <div className="mx-auto max-w-(--breakpoint-xl) px-6 py-24 text-center">
-        <h2 className="mx-auto mt-5 max-w-4xl text-balance font-semibold text-4xl leading-[1.1] tracking-tight sm:text-5xl">
+      <div className="mx-auto max-w-7xl px-6 py-24 text-center">
+        <h2 className="mx-auto mt-5 max-w-4xl text-balance font-medium font-satoshi text-4xl leading-[1.1] tracking-tight sm:text-5xl">
           Frequently Asked Questions
         </h2>
-        <p className="mt-5 text-muted-foreground text-xl">
+        <p className="mt-5 text-muted-foreground text-xl md:text-2xl md:tracking-[-0.015em]">
           Find answers to common questions about our products and services.
         </p>
 

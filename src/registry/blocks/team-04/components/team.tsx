@@ -7,14 +7,14 @@ const teamMembers = [
   {
     name: "John Doe",
     title: "Founder & CEO",
-    bio: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
+    bio: "Former founder of Opendoor. Early staff at Spotify.",
     imageUrl:
       "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     name: "Jane Doe",
     title: "Engineering Manager",
-    bio: "Lead engineering teams at Figma, Pitch, and Protocol Labs.",
+    bio: "Lead engineering teams at Figma and Protocol Labs.",
     imageUrl:
       "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
@@ -42,21 +42,21 @@ const teamMembers = [
   {
     name: "Sarah Williams",
     title: "Product Designer",
-    bio: "Founding design team at Figma. Former Pleo, Stripe, and Tile.",
+    bio: "Founding design team at Figma. Former Pleo and Stripe.",
     imageUrl:
       "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     name: "Michael Brown",
     title: "UX Researcher",
-    bio: "Lead user research for Slack. Contractor for Netflix and Udacity.",
+    bio: "Lead user research for Slack. Contractor for Netflix.",
     imageUrl:
       "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     name: "Elizabeth Johnson",
     title: "Customer Success",
-    bio: "Lead CX at Wealthsimple. Former PagerDuty and Sqreen.",
+    bio: "Lead CX at Wealthsimple. Former PagerDuty.",
     imageUrl:
       "https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
@@ -66,13 +66,13 @@ const Team = () => {
   return (
     <div className="mx-auto flex max-w-(--breakpoint-xl) flex-col justify-center gap-16 px-6 py-8 sm:py-16 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
-        <b className="text-center font-semibold text-muted-foreground text-sm uppercase">
+        <b className="text-center font-satoshi font-semibold text-muted-foreground text-sm uppercase">
           We&apos;re hiring!
         </b>
-        <h2 className="mt-3 font-semibold text-4xl tracking-tighter sm:text-5xl">
+        <h2 className="mt-3 font-satoshi font-semibold text-4xl tracking-tighter sm:text-5xl">
           Meet Our Team
         </h2>
-        <p className="mt-6 text-base text-muted-foreground sm:text-lg">
+        <p className="mt-6 text-base text-muted-foreground sm:text-xl">
           Our philosophy is simple — hire a team of diverse, passionate people
           and foster a culture that empowers you to do you best work.
         </p>
@@ -97,9 +97,9 @@ const Team = () => {
               src={member.imageUrl}
               width={120}
             />
-            <h3 className="mt-5 font-semibold text-lg">{member.name}</h3>
+            <h3 className="mt-5 font-medium text-lg">{member.name}</h3>
             <p className="text-muted-foreground text-sm">{member.title}</p>
-            <p className="mt-2 mb-6 text-pretty">{member.bio}</p>
+            <p className="mt-3 mb-6 text-pretty">{member.bio}</p>
             <div className="mt-auto flex items-center gap-4">
               <Link href="#" target="_blank">
                 <TwitterIcon className="h-5 w-5 stroke-muted-foreground" />

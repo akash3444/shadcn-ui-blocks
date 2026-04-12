@@ -23,8 +23,8 @@ export default function SetupGuide() {
   return (
     <div className="px-6">
       <Card className="mx-auto my-10 max-w-xl gap-1 overflow-hidden rounded-xl border bg-card pb-0 sm:my-16">
-        <CardHeader className="px-8">
-          <CardTitle className="font-semibold text-2xl tracking-tight">
+        <CardHeader className="gap-1.5 px-8">
+          <CardTitle className="font-medium text-2xl tracking-[-0.03em]">
             Get Started with Your Account
           </CardTitle>
           <CardDescription className="text-base text-muted-foreground">

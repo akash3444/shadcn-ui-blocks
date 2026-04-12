@@ -43,30 +43,30 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="mx-auto max-w-screen-xl px-6 py-12 sm:py-14">
-      <h2 className="text-balance text-center font-semibold text-4xl tracking-tight sm:text-5xl">
+    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-14">
+      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl">
         Loved by Our Users
       </h2>
-      <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-normal sm:mt-4 sm:text-2xl">
+      <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-[-0.015em] sm:mt-4 sm:text-2xl">
         Their experiences speak louder than words
       </p>
 
       <div className="mx-auto mt-16 max-w-5xl columns-1 gap-6 sm:columns-2 lg:columns-3">
         {testimonials.map(({ name, avatar, role, testimonial }, index) => (
           <div
-            className="relative mb-6 flex break-inside-avoid flex-col rounded-lg border border-primary/20 bg-gradient-to-br from-primary/20 to-primary/10 px-5 pt-10 pb-3"
+            className="relative mb-6 flex break-inside-avoid flex-col rounded-lg border border-primary/20 bg-linear-to-br from-primary/20 to-primary/10 px-5 pt-10 pb-3"
             key={index}
           >
             {/* Quote */}
-            <span className="absolute top-5 left-4 select-none font-mono text-7xl text-primary/80">
-              &#8220;
+            <span className="absolute top-0 left-4 select-none font-satoshi text-9xl text-primary/50">
+              &ldquo;
             </span>
 
             <p className="grow py-6 font-medium text-lg">{testimonial}</p>
             <div className="mt-2 flex items-center gap-3 py-3.5 sm:mt-4">
               <img alt="" className="size-12 rounded-full" src={avatar} />
               <div className="flex flex-col">
-                <p className="font-semibold">{name}</p>
+                <p className="font-medium">{name}</p>
                 <p className="text-muted-foreground text-sm">{role}</p>
               </div>
             </div>

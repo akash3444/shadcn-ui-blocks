@@ -34,7 +34,7 @@ export default function Features() {
       <strong className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
         Why Choose Us
       </strong>
-      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-semibold text-4xl leading-[1.2] tracking-tight sm:text-5xl">
+      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-satoshi font-semibold text-4xl/tight tracking-tight sm:text-5xl/tight">
         We are Leading in Smart Assistants with Nearly 20 Years of Experience
       </h2>
       <p className="mt-5 text-muted-foreground text-xl sm:text-2xl">
@@ -51,10 +51,10 @@ export default function Features() {
 
             <div className="isolate flex flex-col items-center gap-2">
               <plusPoint.icon className="size-14 stroke-[1.5px] text-foreground" />
-              <h3 className="mt-8 font-semibold text-xl tracking-[-0.005em]">
+              <h3 className="mt-8 font-medium text-xl tracking-[-0.005em]">
                 {plusPoint.title}
               </h3>
-              <p className="text-balance text-muted-foreground">
+              <p className="text-balance text-base text-muted-foreground">
                 {plusPoint.description}
               </p>
               <Button className="mt-6">

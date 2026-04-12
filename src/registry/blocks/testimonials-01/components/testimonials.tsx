@@ -64,13 +64,13 @@ const testimonials = [
 const Testimonials = () => (
   <div className="flex min-h-screen items-center justify-center px-6 py-12">
     <div>
-      <h2 className="text-center font-semibold text-5xl tracking-[-0.03em]">
-        Testimonials
+      <h2 className="text-center font-satoshi font-semibold text-4xl tracking-[-0.03em] md:text-5xl">
+        What developers are saying
       </h2>
-      <p className="mt-2.5 text-center text-muted-foreground text-xl">
-        What our users say about our products and services
+      <p className="mt-3.5 text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">
+        Feedback from developers building real products with our components{" "}
       </p>
-      <div className="mx-auto mt-14 max-w-(--breakpoint-xl) columns-1 gap-8 md:columns-2 lg:columns-3">
+      <div className="mx-auto mt-14 max-w-(--breakpoint-xl) columns-1 gap-8 md:columns-2 lg:mt-16 lg:columns-3">
         {testimonials.map((testimonial) => (
           <div
             className="mb-8 break-inside-avoid rounded-xl bg-muted p-6 dark:bg-muted/60"
@@ -84,7 +84,7 @@ const Testimonials = () => (
                   </AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="font-semibold">{testimonial.name}</p>
+                  <p className="font-medium">{testimonial.name}</p>
                   <p className="text-muted-foreground text-sm">
                     {testimonial.designation}
                   </p>

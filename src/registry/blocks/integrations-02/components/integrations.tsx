@@ -8,7 +8,7 @@ export default function Integrations() {
     <div className="px-6">
       <div className="mx-auto my-12 flex w-full max-w-md flex-col rounded-lg border bg-muted p-1.5 shadow-xl/5 sm:my-14">
         <div className="rounded-md border bg-card p-6">
-          <h2 className="font-semibold text-3xl tracking-tight">
+          <h2 className="font-medium text-3xl tracking-tight">
             Our Integrations
           </h2>
           <p className="mt-1.5 text-pretty text-muted-foreground">
@@ -32,7 +32,7 @@ export default function Integrations() {
                   className="size-8 rounded"
                   src={`https://www.google.com/s2/favicons?domain=${encodeURIComponent(integration.url)}&sz=64`}
                 />
-                <h3 className="font-semibold">{integration.title}</h3>
+                <h3 className="font-medium">{integration.title}</h3>
 
                 {integration.status === "connected" ? (
                   <Badge className="ms-auto h-6">

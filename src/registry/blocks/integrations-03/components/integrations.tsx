@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 export default function Integrations() {
   return (
     <div className="mx-auto flex max-w-screen-xl flex-col px-6 py-12 sm:py-14">
-      <h2 className="text-center font-semibold text-4xl tracking-tight sm:text-5xl">
+      <h2 className="text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl">
         Our Integrations
       </h2>
-      <p className="mt-3 text-pretty text-center text-muted-foreground text-xl sm:text-2xl">
+      <p className="mt-3.5 text-pretty text-center text-muted-foreground text-xl sm:text-2xl">
         Connect your favorite tools and services to your account.
       </p>
       <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -24,7 +24,7 @@ export default function Integrations() {
                 src={`https://www.google.com/s2/favicons?domain=${encodeURIComponent(integration.url)}&sz=64`}
               />
             </div>
-            <h3 className="font-semibold text-lg">{integration.title}</h3>
+            <h3 className="font-medium text-lg">{integration.title}</h3>
 
             {integration.status === "connected" ? (
               <Badge className="ms-auto">

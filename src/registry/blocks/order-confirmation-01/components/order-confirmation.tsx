@@ -8,7 +8,7 @@ export default function OrderConfirmation() {
         <div className="flex size-12 items-center justify-center rounded-full border border-green-500/12 bg-green-500/10">
           <Check className="size-6 text-green-500" />
         </div>
-        <p className="mt-5 font-semibold text-2xl">Order Confirmed!</p>
+        <p className="mt-5 font-medium text-2xl">Order Confirmed!</p>
         <p className="mt-2 text-muted-foreground text-sm sm:text-base">
           Thank you for your purchase. We've sent a confirmation to your email.
         </p>

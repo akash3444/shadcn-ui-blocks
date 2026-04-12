@@ -59,14 +59,14 @@ const pricingPlans: PricingPlan[] = [
 const Pricing = () => {
   return (
     <section className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="text-balance text-center font-semibold text-4xl tracking-tight sm:text-5xl">
-        Choose Your Perfect Plan
+      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-[-0.035em] sm:text-5xl">
+        Plans & Pricing
       </h2>
       <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-normal sm:mt-4 sm:text-2xl">
         Flexible pricing designed to grow with your needs. when ready.
       </p>
 
-      <div className="mt-12 grid grid-cols-1 gap-1 rounded-xl border bg-muted/40 p-1 sm:grid-cols-2 md:grid-cols-3">
+      <div className="mt-12 grid grid-cols-1 gap-1 rounded-xl border bg-muted/40 p-1 sm:grid-cols-2 md:mt-15 md:grid-cols-3">
         {pricingPlans.map((plan) => (
           <PlanCard key={plan.name} plan={plan} />
         ))}
@@ -84,13 +84,15 @@ const PlanCard = ({ plan }: { plan: PricingPlan }) => {
       <div className="rounded-t-lg border-b border-dashed p-6">
         <plan.icon className="mb-5 text-primary" />
         <div className="flex items-center gap-1">
-          <h3 className="font-semibold text-2xl">{plan.name}</h3>
+          <h3 className="font-medium text-2xl tracking-tight">{plan.name}</h3>
         </div>
         <p className="my-2 text-muted-foreground">{plan.description}</p>
       </div>
       <div className="px-6 pt-5 pb-10">
-        <p className="mt-4 font-semibold text-4xl">${plan.price}</p>
-        <p className="mt-1 font-medium text-muted-foreground text-sm tracking-normal">
+        <p className="mt-4 font-satoshi font-semibold text-4xl">
+          ${plan.price}
+        </p>
+        <p className="mt-1 text-muted-foreground text-sm tracking-normal">
           one-time payment
         </p>
         <Button

@@ -14,7 +14,7 @@ const LogoCloud = () => {
   return (
     <div className="flex min-h-screen items-center justify-center px-6">
       <div className="overflow-hidden">
-        <p className="text-center font-medium text-xl">
+        <p className="text-center font-medium text-foreground/80 text-xl">
           More than 2.2 million companies worldwide already trust us
         </p>
 

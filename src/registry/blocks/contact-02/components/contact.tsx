@@ -19,10 +19,10 @@ const Contact = () => (
       <b className="font-semibold text-muted-foreground text-sm uppercase">
         Contact Us
       </b>
-      <h2 className="mt-3 font-semibold text-3xl tracking-tight md:text-4xl">
+      <h2 className="mt-3 font-satoshi font-semibold text-4xl tracking-tight">
         Chat with our friendly team!
       </h2>
-      <p className="mt-3 text-base text-muted-foreground sm:text-lg">
+      <p className="mt-3 text-lg text-muted-foreground md:text-xl">
         We&apos;d love to hear from you. Please fill out this form or shoot us
         an email.
       </p>
@@ -32,7 +32,7 @@ const Contact = () => (
             <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-foreground/3 bg-foreground/5 text-foreground dark:border-foreground/20 dark:bg-foreground/10">
               <MailIcon />
             </div>
-            <h3 className="mt-6 font-semibold text-xl">Email</h3>
+            <h3 className="mt-6 font-medium text-xl">Email</h3>
             <p className="my-2.5 text-muted-foreground">
               Our friendly team is here to help.
             </p>
@@ -47,7 +47,7 @@ const Contact = () => (
             <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-foreground/3 bg-foreground/5 text-foreground dark:bg-foreground/10">
               <MessageCircle />
             </div>
-            <h3 className="mt-6 font-semibold text-xl">Live chat</h3>
+            <h3 className="mt-6 font-medium text-xl">Live chat</h3>
             <p className="my-2.5 text-muted-foreground">
               Our friendly team is here to help.
             </p>
@@ -59,7 +59,7 @@ const Contact = () => (
             <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-foreground/3 bg-foreground/5 text-foreground dark:bg-foreground/10">
               <MapPinIcon />
             </div>
-            <h3 className="mt-6 font-semibold text-xl">Office</h3>
+            <h3 className="mt-6 font-medium text-xl">Office</h3>
             <p className="my-2.5 text-muted-foreground">
               Come say hello at our office HQ.
             </p>
@@ -75,7 +75,7 @@ const Contact = () => (
             <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-foreground/3 bg-foreground/5 text-foreground dark:bg-foreground/10">
               <PhoneIcon />
             </div>
-            <h3 className="mt-6 font-semibold text-xl">Phone</h3>
+            <h3 className="mt-6 font-medium text-xl">Phone</h3>
             <p className="my-2.5 text-muted-foreground">
               Mon-Fri from 8am to 5pm.
             </p>
@@ -92,9 +92,7 @@ const Contact = () => (
         <div className="w-full max-w-lg rounded-xl border bg-muted p-1">
           <Card className="relative isolate rounded-lg bg-background shadow-none lg:ms-auto dark:border-foreground/20">
             <CardHeader className="gap-1">
-              <CardTitle className="font-semibold text-xl">
-                Contact Us
-              </CardTitle>
+              <CardTitle className="font-medium text-xl">Contact Us</CardTitle>
               <CardDescription className="text-base">
                 We'd love to hear from you. Please fill out this form.
               </CardDescription>

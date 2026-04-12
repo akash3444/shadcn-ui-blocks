@@ -53,7 +53,7 @@ export default function Timeline() {
               <div className="space-y-3 pt-2 sm:pt-1">
                 <p className="font-medium text-base">{company}</p>
                 <div>
-                  <h3 className="font-semibold text-xl tracking-[-0.01em]">
+                  <h3 className="font-medium text-xl tracking-[-0.01em]">
                     {title}
                   </h3>
                   <div className="mt-2 flex items-center gap-2 text-sm">

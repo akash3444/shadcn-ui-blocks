@@ -71,11 +71,11 @@ export default function Timeline() {
                     {date}
                   </span>
                 </div>
-                <div className="relative space-y-2 border-l-2 pb-10 pl-6 group-last:pb-4 sm:pl-8">
+                <div className="relative space-y-1 border-l pb-10 pl-6 group-last:pb-4 sm:pl-8">
                   {/* Timeline Dot */}
                   <div className="absolute top-4 -left-px h-3 w-3 -translate-x-1/2 rounded-full border-2 border-primary bg-background" />
 
-                  <h3 className="mt-2 font-semibold text-lg tracking-[-0.01em]">
+                  <h3 className="mt-2 font-medium text-lg tracking-[-0.01em]">
                     {title}
                   </h3>
                   <p className="text-muted-foreground text-sm sm:text-base">

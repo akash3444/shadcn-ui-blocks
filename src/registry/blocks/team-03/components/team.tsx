@@ -52,13 +52,13 @@ const Team = () => {
   return (
     <div className="mx-auto flex max-w-(--breakpoint-xl) flex-col justify-center gap-14 px-6 py-8 sm:py-16 lg:flex-row lg:px-8">
       <div className="sm:max-w-sm lg:max-w-xs">
-        <b className="font-semibold text-muted-foreground text-sm uppercase">
+        <b className="font-satoshi font-semibold text-muted-foreground text-sm uppercase">
           Our team
         </b>
-        <h2 className="mt-3 font-semibold text-3xl tracking-tight md:text-4xl">
+        <h2 className="mt-3 font-satoshi font-semibold text-3xl tracking-tight md:text-4xl">
           Leadership Team
         </h2>
-        <p className="mt-4 text-base sm:text-lg">
+        <p className="mt-4 text-base text-foreground/80 sm:text-lg">
           We&apos;re a cross-disciplinary team that loves to create great
           experiences for our customers.
         </p>
@@ -81,9 +81,9 @@ const Team = () => {
               width={120}
             />
             <div>
-              <h3 className="font-semibold text-lg">{member.name}</h3>
+              <h3 className="font-medium text-lg">{member.name}</h3>
               <p className="text-muted-foreground text-sm">{member.title}</p>
-              <p className="mt-2">{member.bio}</p>
+              <p className="mt-2 text-foreground/90">{member.bio}</p>
               <div className="mt-4 flex items-center gap-2.5">
                 <Button
                   asChild

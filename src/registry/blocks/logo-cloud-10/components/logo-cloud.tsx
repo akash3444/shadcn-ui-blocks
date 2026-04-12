@@ -12,9 +12,9 @@ import {
 
 const LogoCloud = () => {
   return (
-    <div className="mx-auto max-w-screen-lg px-6 py-12">
-      <p className="text-balance text-center font-medium text-lg">
-        Trusted by teams and companies around the world.
+    <div className="mx-auto max-w-5xl px-6 py-12">
+      <p className="text-balance text-center font-medium text-foreground/80 text-lg">
+        Trusted by teams and companies around the world
       </p>
       <Marquee
         pauseOnHover

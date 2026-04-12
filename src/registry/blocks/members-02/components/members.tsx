@@ -13,10 +13,10 @@ import {
 export default function Members() {
   return (
     <div className="px-6 py-12">
-      <div className="mx-auto max-w-screen-md">
+      <div className="mx-auto max-w-3xl">
         <div className="flex justify-between gap-4 rounded-lg bg-muted/90 px-6 py-5 max-[32rem]:flex-col min-[32rem]:items-center">
           <div>
-            <h2 className="font-semibold text-lg">Members</h2>
+            <h2 className="font-medium text-lg">Members</h2>
             <div className="mt-0.5 flex items-center text-muted-foreground text-sm">
               <span>Team Avengers</span> <Dot /> <span>10 Members</span>
             </div>

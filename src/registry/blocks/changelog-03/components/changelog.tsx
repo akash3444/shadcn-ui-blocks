@@ -72,10 +72,10 @@ const formatDate = (date: Date) => {
 export default function Changelog() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-16">
-      <h2 className="text-balance font-semibold text-4xl tracking-tight">
+      <h2 className="text-balance font-satoshi font-semibold text-4xl tracking-tight">
         Changelog
       </h2>
-      <p className="mt-2 text-balance text-lg text-muted-foreground tracking-normal sm:mt-3 sm:text-xl">
+      <p className="mt-2 text-balance text-lg text-muted-foreground tracking-[-0.015em] sm:mt-3 sm:text-xl">
         We ship fast. Track all the new features, updates, and fixes in one
         place.
       </p>
@@ -89,20 +89,20 @@ export default function Changelog() {
             key={changelog.version}
           >
             <div>
-              <div className="flex items-center font-medium text-muted-foreground tracking-tight">
+              <div className="flex items-center text-muted-foreground tracking-tight">
                 v{changelog.version} <Dot />{" "}
                 {formatDate(new Date(changelog.date))}
               </div>
-              <h3 className="mt-3 font-semibold text-2xl tracking-tight">
+              <h3 className="mt-3 font-medium text-2xl tracking-tight">
                 {changelog.title}
               </h3>
-              <span className="mt-2 block font-medium text-lg tracking-tight sm:hidden">
+              <span className="mt-2 block text-lg text-muted-foreground tracking-tight sm:hidden">
                 {changelog.date}
               </span>
 
-              <p className="mt-3">{changelog.description}</p>
+              <p className="mt-3 text-foreground/80">{changelog.description}</p>
 
-              <div className="mt-4 space-y-4">
+              <div className="mt-4 space-y-4 text-foreground/80">
                 {changelog.features && (
                   <div>
                     <ChangelogSection
@@ -140,7 +140,7 @@ const ChangelogSection = ({
 }) => {
   return (
     <div>
-      <h4 className="mb-1 flex items-center gap-2 font-medium text-lg">
+      <h4 className="mb-1 flex items-center gap-2 font-medium text-foreground text-lg">
         {title}
       </h4>
       <ul className="list-disc pl-5">

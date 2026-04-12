@@ -60,7 +60,7 @@ export default function OrderConfirmation() {
         <div className="flex size-12 items-center justify-center rounded-full border border-green-500/12 bg-green-500/10">
           <Check className="size-6 text-green-500" />
         </div>
-        <p className="mt-7 font-semibold text-3xl tracking-[-0.005em]">
+        <p className="mt-7 font-medium text-3xl tracking-tight">
           Thank you for your purchase!
         </p>
         <p className="mt-4 text-muted-foreground text-sm sm:text-base">

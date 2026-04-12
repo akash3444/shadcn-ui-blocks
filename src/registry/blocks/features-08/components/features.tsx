@@ -48,24 +48,24 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="mx-auto flex max-w-screen-xl flex-col px-6 py-12 sm:py-14">
-      <h2 className="text-pretty text-center font-semibold text-4xl tracking-tight sm:text-[2.75rem]">
-        Powerful Features, Built for You
+    <div className="mx-auto flex max-w-7xl flex-col px-6 py-12 sm:py-14">
+      <h2 className="text-pretty text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-[2.75rem]">
+        A better way to build interfaces
       </h2>
-      <p className="mt-3 text-center text-muted-foreground text-xl sm:text-2xl">
+      <p className="mt-3.5 text-center text-muted-foreground text-xl sm:text-2xl">
         Designed for speed, flexibility, and ease of use.
       </p>
 
       <div className="mt-16 grid grid-cols-1 gap-6 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
-          <div className="rounded-lg border px-5 py-7" key={index}>
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/15">
+          <div className="rounded-xl border px-6 py-7" key={index}>
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/5 text-primary dark:bg-primary/15">
               <feature.icon />
             </div>
-            <h3 className="mt-5 font-semibold text-xl tracking-[-0.005em]">
+            <h3 className="mt-5 font-medium text-lg tracking-[-0.005em]">
               {feature.title}
             </h3>
-            <p className="mt-2 text-base text-foreground/90">
+            <p className="mt-2 text-base text-foreground/70">
               {feature.description}
             </p>
           </div>

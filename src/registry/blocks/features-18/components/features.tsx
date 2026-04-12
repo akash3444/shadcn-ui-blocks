@@ -42,7 +42,7 @@ const plusPoints = [
     icon: LockIcon,
     title: "Secure & Reliable",
     description:
-      "Built with the latest security technologies to protect your home and family.",
+      "Built with the latest security technologies to protect your home.",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function Features() {
       <strong className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
         Why Choose Us
       </strong>
-      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-semibold text-4xl leading-[1.3] tracking-[-0.02em] sm:text-5xl">
+      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-satoshi font-semibold text-4xl leading-[1.3] tracking-[-0.02em] sm:text-5xl">
         Advanced Home Security Solutions Built for Modern Living
       </h2>
       <p className="mt-4 text-muted-foreground text-xl sm:text-2xl">
@@ -78,13 +78,13 @@ export default function Features() {
             key={index}
           >
             <plusPoint.icon className="size-12 fill-foreground/10 stroke-[1.5px] text-foreground" />
-            <h3 className="mt-8 font-semibold text-xl tracking-[-0.005em]">
+            <h3 className="mt-6 font-medium text-lg tracking-[-0.005em]">
               {plusPoint.title}
             </h3>
-            <p className="text-balance text-muted-foreground">
+            <p className="mb-6 text-balance text-muted-foreground">
               {plusPoint.description}
             </p>
-            <Button className="mt-6 font-medium" variant="link">
+            <Button className="mt-auto font-medium" variant="link">
               Learn More <ArrowUpRightIcon />
             </Button>
           </div>

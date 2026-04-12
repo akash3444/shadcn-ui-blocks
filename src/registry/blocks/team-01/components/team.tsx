@@ -58,12 +58,12 @@ const Team = () => {
         <b className="text-center font-semibold text-muted-foreground text-sm uppercase">
           We&apos;re hiring!
         </b>
-        <h2 className="mt-4 font-semibold text-4xl tracking-tighter sm:text-5xl">
+        <h2 className="mt-4 font-satoshi font-semibold text-4xl tracking-tighter sm:text-5xl">
           Meet Our Team
         </h2>
-        <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-          Our philosophy is simple — hire a team of diverse, passionate people
-          and foster a culture that empowers you to do you best work.
+        <p className="mt-4 text-base text-muted-foreground sm:text-xl">
+          Our philosophy is simple — hire a team of passionate people and foster
+          a culture that empowers you to do you best work.
         </p>
       </div>
 
@@ -77,7 +77,7 @@ const Team = () => {
               src={member.imageUrl}
               width={120}
             />
-            <h3 className="mt-4 font-semibold text-lg">{member.name}</h3>
+            <h3 className="mt-5 font-medium text-lg">{member.name}</h3>
             <p className="text-muted-foreground">{member.title}</p>
           </div>
         ))}

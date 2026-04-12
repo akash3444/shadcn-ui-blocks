@@ -35,8 +35,12 @@ export default function Profile() {
             </Avatar>
           </div>
           <div className="flex flex-col gap-0.5 sm:gap-1">
-            <span className="font-semibold text-lg sm:text-2xl">John Doe</span>
-            <span className="text-muted-foreground">john.doe@example.com</span>
+            <span className="font-medium text-lg tracking-tight sm:text-2xl">
+              John Doe
+            </span>
+            <span className="text-muted-foreground sm:text-lg">
+              john.doe@example.com
+            </span>
           </div>
         </div>
 

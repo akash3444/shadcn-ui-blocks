@@ -78,15 +78,15 @@ const FAQ = () => {
   const secondHalfFaqs = faqs.slice(Math.ceil(totalFaqs / 2));
 
   return (
-    <div className="mx-auto max-w-screen-xl px-6 py-12 sm:py-14">
-      <h2 className="text-balance text-center font-semibold text-4xl tracking-tight sm:text-5xl">
+    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-14">
+      <h2 className="text-balance text-center font-medium font-satoshi text-4xl tracking-tight sm:text-5xl">
         Frequently Asked Questions
       </h2>
-      <p className="mt-5 text-balance text-center text-lg text-muted-foreground sm:text-2xl">
+      <p className="mt-5 text-balance text-center text-lg text-muted-foreground md:text-2xl md:tracking-[-0.015em]">
         Find answers to common questions about our products and services.
       </p>
 
-      <div className="mx-auto mt-16 max-w-screen-lg">
+      <div className="mx-auto mt-16 max-w-5xl">
         <Accordion
           className="grid grid-cols-1 gap-4 md:grid-cols-2"
           collapsible

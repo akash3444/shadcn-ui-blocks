@@ -8,40 +8,48 @@ import {
 
 function Stats() {
   return (
-    <div className="mx-auto max-w-screen-lg px-6 py-16">
-      <h2 className="text-balance text-center font-semibold text-3xl tracking-tight sm:text-4xl md:text-5xl">
-        Growing&nbsp;Fast. Loved&nbsp;by&nbsp;Developers.
+    <div className="mx-auto max-w-5xl px-6 py-16">
+      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-tight md:text-5xl">
+        Numbers that matter
       </h2>
-      <p className="mt-4 text-center text-lg text-muted-foreground sm:text-xl md:text-2xl">
-        Trusted by thousands to build modern UIs faster.
+      <p className="mt-4 text-center text-muted-foreground text-xl tracking-[-0.015em] sm:text-lg md:text-2xl">
+        A quick look at the impact and adoption of our UI components
       </p>
 
       <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         <div className="rounded-xl border border-blue-200 bg-blue-50 p-6 py-7 dark:border-blue-400/30 dark:bg-blue-500/15">
-          <MonitorSmartphone className="mb-7 h-10 w-10 text-blue-500" />
-          <span className="font-semibold text-5xl">70%</span>
-          <p className="mt-4 text-lg">Faster UI development</p>
+          <MonitorSmartphone className="mb-7 h-10 w-10 stroke-[1.75px] text-blue-500" />
+          <span className="font-satoshi font-semibold text-5xl">70%</span>
+          <p className="mt-4 text-foreground/80 text-xl">
+            Faster UI development
+          </p>
         </div>
         <div className="rounded-xl border border-green-600/30 bg-green-50 p-6 py-7 dark:border-green-500/30 dark:bg-green-500/15">
-          <FastForward className="mb-7 h-10 w-10 text-green-600" />
-          <span className="font-semibold text-5xl">5x</span>
-          <p className="mt-4 text-lg">Increase in productivity</p>
+          <FastForward className="mb-7 h-10 w-10 stroke-[1.75px] text-green-600" />
+          <span className="font-satoshi font-semibold text-5xl">5x</span>
+          <p className="mt-4 text-foreground/80 text-xl">
+            Increase in productivity
+          </p>
         </div>
         <div className="row-span-2 flex flex-col overflow-hidden rounded-xl border border-red-200 bg-red-50 p-6 py-7 pb-0 dark:border-red-400/30 dark:bg-red-400/15">
-          <HeartHandshake className="mb-7 h-10 w-10 text-red-500" />
-          <span className="font-semibold text-5xl">98%</span>
-          <p className="mt-4 mb-2 text-lg">Customer satisfaction</p>
+          <HeartHandshake className="mb-7 h-10 w-10 stroke-[1.75px] text-red-500" />
+          <span className="font-satoshi font-semibold text-5xl">98%</span>
+          <p className="mt-4 mb-2 text-foreground/80 text-xl">
+            Customer satisfaction
+          </p>
           <PersonalGoalsIllustration className="mt-auto -mb-2 h-auto w-full" />
         </div>
         <div className="rounded-xl border border-amber-600/30 bg-amber-50 p-6 py-7 dark:border-amber-500/30 dark:bg-amber-500/15">
-          <TrendingUp className="mb-7 h-10 w-10 text-amber-600" />
-          <span className="font-semibold text-5xl">300%</span>
-          <p className="mt-4 text-lg">Growth in last 6 months</p>
+          <TrendingUp className="mb-7 h-10 w-10 stroke-[1.75px] text-amber-600" />
+          <span className="font-satoshi font-semibold text-5xl">300%</span>
+          <p className="mt-4 text-foreground/80 text-xl">
+            Growth in last 6 months
+          </p>
         </div>
         <div className="rounded-xl border border-purple-200 bg-purple-50 p-6 py-7 dark:border-purple-400/30 dark:bg-purple-400/15">
-          <Users className="mb-7 h-10 w-10 text-purple-500" />
-          <span className="font-semibold text-5xl">120K+</span>
-          <p className="mt-4 text-lg">Daily active users</p>
+          <Users className="mb-7 h-10 w-10 stroke-[1.75px] text-purple-500" />
+          <span className="font-satoshi font-semibold text-5xl">120K+</span>
+          <p className="mt-4 text-foreground/80 text-xl">Daily active users</p>
         </div>
       </div>
     </div>

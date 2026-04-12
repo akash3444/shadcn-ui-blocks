@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 export default function SetupGuide() {
   return (
     <div className="mx-auto max-w-(--breakpoint-md) px-6 py-10 sm:py-16">
-      <h2 className="font-semibold text-2xl tracking-tight sm:text-3xl">
+      <h2 className="font-medium text-2xl tracking-[-0.03em] sm:text-3xl">
         Get Started with Your Account
       </h2>
       <p className="mt-2 text-muted-foreground sm:text-lg">

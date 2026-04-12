@@ -19,7 +19,7 @@ export default function Profile() {
   return (
     <div className="min-h-dvh bg-muted/50 px-6 py-10">
       <div className="mx-auto w-full max-w-2xl border bg-background">
-        <div className="relative border-b p-3">
+        <div className="relative border-b border-dashed p-3">
           <div className="overflow-hidden p-3">
             <div
               className="absolute inset-0 -top-px z-0"
@@ -94,7 +94,9 @@ export default function Profile() {
                   </AvatarFallback>
                 </Avatar>
               </div>
-              <span className="font-semibold text-xl">John Doe</span>
+              <span className="font-medium text-xl tracking-tight">
+                John Doe
+              </span>
               <span className="text-muted-foreground">
                 john.doe@example.com
               </span>
@@ -171,7 +173,7 @@ const Projects = () => {
           </div>
 
           <div className="mask-t-from-50% absolute inset-x-0 bottom-0 rounded-b-xl bg-background/80 p-6 pt-20">
-            <h3 className="font-semibold text-xl tracking-[-0.005em]">
+            <h3 className="font-medium text-xl tracking-[-0.005em]">
               {project.name}
             </h3>
             <p className="mt-1.5 text-base text-foreground/90">

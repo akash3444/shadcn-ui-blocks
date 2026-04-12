@@ -60,15 +60,15 @@ const pricingPlans: PricingPlan[] = [
 
 const Pricing = () => {
   return (
-    <section className="mx-auto max-w-screen-lg px-6 py-16">
-      <h2 className="text-balance text-center font-semibold text-4xl tracking-tight sm:text-5xl">
-        Simple, Transparent Pricing
+    <section className="mx-auto max-w-5xl px-6 py-16">
+      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-[-0.035em] sm:text-5xl">
+        Pricing that makes sense
       </h2>
       <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-normal sm:mt-4 sm:text-2xl">
-        No hidden fees, no surprises. Just great value.
+        Choose a plan that fits your needs with no hidden costs
       </p>
 
-      <div className="mt-12 grid grid-cols-1 gap-y-8 sm:grid-cols-2 md:grid-cols-3">
+      <div className="mt-12 grid grid-cols-1 gap-y-8 sm:grid-cols-2 md:mt-16 md:grid-cols-3">
         {pricingPlans.map((plan) => (
           <PlanCard key={plan.name} plan={plan} />
         ))}
@@ -97,14 +97,16 @@ const PlanCard = ({ plan }: { plan: PricingPlan }) => {
       >
         <plan.icon className="mb-5 text-primary" />
         <div className="flex items-center gap-1">
-          <h3 className="font-semibold text-2xl">{plan.name}</h3>
+          <h3 className="font-medium text-2xl tracking-tight">{plan.name}</h3>
         </div>
         <p className="my-2 text-muted-foreground">{plan.description}</p>
       </div>
       <Separator />
       <div className="px-6 pt-5 pb-10">
-        <p className="mt-4 font-semibold text-4xl">${plan.price}</p>
-        <p className="mt-1 font-medium text-muted-foreground text-sm tracking-normal">
+        <p className="mt-4 font-satoshi font-semibold text-4xl">
+          ${plan.price}
+        </p>
+        <p className="mt-1 text-muted-foreground text-sm tracking-normal">
           one-time payment
         </p>
         <Button className="my-6 w-full" size="lg">

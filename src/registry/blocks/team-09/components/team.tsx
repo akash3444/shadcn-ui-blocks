@@ -46,12 +46,12 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="mx-auto max-w-screen-xl px-6 py-12">
-      <h2 className="text-balance text-center font-semibold text-3xl capitalize tracking-tight sm:text-4xl md:text-5xl">
+    <div className="mx-auto max-w-7xl px-6 py-12">
+      <h2 className="text-balance text-center font-satoshi font-semibold text-3xl capitalize tracking-tight sm:text-4xl md:text-5xl">
         Meet our amazing team
       </h2>
-      <p className="mt-2.5 text-balance text-center text-muted-foreground sm:text-lg md:text-xl">
-        Our team is made up of a diverse group of individuals who are dedicated
+      <p className="mt-3.5 text-balance text-center text-muted-foreground tracking-[-0.015em] sm:text-lg md:text-2xl">
+        Our team is made up of a diverse group of dedicated individuals
       </p>
 
       <div className="mt-12 grid grid-cols-1 gap-4 sm:mt-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -60,13 +60,13 @@ const Team = () => {
             <div className="mx-auto aspect-square max-w-48 overflow-hidden rounded-full bg-muted">
               <img alt={member.name} src={member.image} />
             </div>
-            <p className="mt-4 text-center font-semibold text-lg">
+            <p className="mt-6 text-center font-medium text-lg">
               {member.name}
             </p>
-            <p className="mt-0.5 text-center font-medium text-muted-foreground text-sm">
+            <p className="mt-0.5 text-center text-muted-foreground">
               {member.role}
             </p>
-            <div className="mt-5 flex items-center justify-center gap-4">
+            <div className="mt-6 flex items-center justify-center gap-4">
               <Link href="#" target="_blank">
                 <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary" />
               </Link>

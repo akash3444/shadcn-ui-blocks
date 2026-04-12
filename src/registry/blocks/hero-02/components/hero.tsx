@@ -17,7 +17,7 @@ export default function Hero() {
               Just released v1.0.0 <ArrowUpRight className="ml-1 size-4" />
             </Link>
           </Badge>
-          <h1 className="mt-6 max-w-[17ch] font-semibold text-4xl leading-[1.2]! tracking-[-0.035em] md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem]">
+          <h1 className="mt-6 max-w-[17ch] font-satoshi font-semibold text-4xl leading-[1.2]! tracking-tight md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem]">
             Customized Shadcn UI Blocks & Components
           </h1>
           <p className="mt-6 max-w-[60ch] text-foreground/80 sm:text-lg">

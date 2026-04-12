@@ -35,7 +35,7 @@ export default function InviteMember() {
     <Dialog open>
       <DialogContent className="max-w-sm!">
         <DialogHeader>
-          <DialogTitle>Invite Members</DialogTitle>
+          <DialogTitle className="font-medium">Invite Members</DialogTitle>
           <DialogDescription>Invite members to your team.</DialogDescription>
         </DialogHeader>
 

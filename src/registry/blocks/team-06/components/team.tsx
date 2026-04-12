@@ -43,12 +43,12 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="mx-auto max-w-screen-xl px-6 py-12">
-      <h2 className="text-balance text-center font-semibold text-3xl capitalize tracking-tight sm:text-4xl md:text-5xl">
+    <div className="mx-auto max-w-7xl px-6 py-12">
+      <h2 className="text-balance text-center font-satoshi font-semibold text-3xl capitalize tracking-tight sm:text-4xl md:text-5xl">
         Meet our amazing team
       </h2>
-      <p className="mt-2.5 text-balance text-center text-muted-foreground sm:text-lg md:text-xl">
-        Our team is made up of a diverse group of individuals who are dedicated
+      <p className="mt-3.5 text-balance text-center text-muted-foreground tracking-[-0.015em] sm:text-lg md:text-2xl">
+        Our team is made up of a diverse group of dedicated individuals
       </p>
 
       <div className="mt-12 grid grid-cols-1 gap-10 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4">
@@ -57,10 +57,8 @@ const Team = () => {
             <div className="aspect-square overflow-hidden rounded-lg">
               <img alt={member.name} src={member.image} />
             </div>
-            <p className="mt-4 font-semibold text-lg">{member.name}</p>
-            <p className="mt-0.5 font-medium text-muted-foreground text-sm">
-              {member.role}
-            </p>
+            <p className="mt-4 font-medium text-lg">{member.name}</p>
+            <p className="text-muted-foreground">{member.role}</p>
           </div>
         ))}
       </div>

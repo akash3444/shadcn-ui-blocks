@@ -48,9 +48,9 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="mx-auto flex max-w-screen-xl flex-col px-6 py-12 sm:py-14">
-      <h2 className="text-pretty text-center font-semibold text-4xl tracking-tight sm:text-[2.75rem]">
-        Powerful Features, Built for You
+    <div className="mx-auto flex max-w-7xl flex-col px-6 py-12 sm:py-14">
+      <h2 className="text-pretty text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-[2.75rem]">
+        Ship with Confidence
       </h2>
       <p className="mt-3 text-center text-muted-foreground text-xl sm:text-2xl">
         Designed for speed, flexibility, and ease of use.
@@ -63,14 +63,14 @@ const Features = () => {
             key={index}
           >
             <div className="flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/15">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/7 text-primary dark:bg-primary/10">
                 <feature.icon className="h-5 w-5" />
               </div>
-              <h3 className="font-semibold text-xl tracking-[-0.005em]">
+              <h3 className="font-medium text-lg tracking-[-0.005em]">
                 {feature.title}
               </h3>
             </div>
-            <p className="mt-4 text-base text-foreground/90">
+            <p className="mt-4 text-base text-foreground/80">
               {feature.description}
             </p>
           </div>

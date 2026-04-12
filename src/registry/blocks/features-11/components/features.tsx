@@ -52,33 +52,36 @@ const features = [
 const Features = () => {
   return (
     <div className="mx-auto flex max-w-7xl flex-col px-6 py-12 sm:py-14">
-      <h2 className="text-pretty text-center font-semibold text-4xl tracking-tight sm:text-[2.75rem]">
+      <h2 className="text-pretty text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-[2.75rem]">
         Powerful Features, Built for You
       </h2>
-      <p className="mt-3 text-center text-muted-foreground text-xl sm:text-2xl">
+      <p className="mt-3.5 text-center text-muted-foreground text-xl sm:text-2xl">
         Designed for speed, flexibility, and ease of use.
       </p>
 
       <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
           <div
-            className="rounded-xl border border-border/45 bg-muted/75 p-1"
+            className="rounded-xl border border-border/45 bg-muted/75 p-1 dark:border-border/65"
             key={index}
           >
-            <div className="flex h-full flex-col rounded-lg border border-border/85 bg-background/70 px-5 pt-7 pb-5 shadow-sm/3">
+            <div className="flex h-full flex-col rounded-lg border border-border/85 bg-background/70 px-6 py-7 shadow-sm/3 dark:border-foreground/13">
               <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/15">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/7 text-primary dark:bg-primary/10">
                   <feature.icon className="h-5 w-5" />
                 </div>
-                <h3 className="font-semibold text-xl tracking-[-0.005em]">
+                <h3 className="font-medium text-lg tracking-[-0.005em]">
                   {feature.title}
                 </h3>
               </div>
-              <p className="my-4 text-base text-foreground/90">
-                {feature.description}
-              </p>
+              <p className="my-4 text-foreground/80">{feature.description}</p>
 
-              <Button asChild className="!px-0 me-auto mt-auto" variant="link">
+              <Button
+                asChild
+                className="me-auto mt-2"
+                size="sm"
+                variant="secondary"
+              >
                 <Link href="#" target="_blank">
                   Learn more <ArrowUpRight />
                 </Link>

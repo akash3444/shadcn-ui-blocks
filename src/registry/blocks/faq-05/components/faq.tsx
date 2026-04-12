@@ -50,10 +50,10 @@ const FAQ = () => {
   return (
     <div className="flex min-h-screen items-center justify-center px-6 py-12">
       <div className="max-w-(--breakpoint-lg)">
-        <h2 className="text-center font-medium text-4xl leading-[1.15]! tracking-tight md:text-5xl">
+        <h2 className="text-center font-medium font-satoshi text-4xl leading-[1.15]! tracking-tight md:text-5xl">
           Frequently Asked Questions
         </h2>
-        <p className="mt-3 text-center text-muted-foreground text-xl">
+        <p className="mt-3 text-center text-muted-foreground text-xl md:text-2xl md:tracking-[-0.015em]">
           Quick answers to common questions about our products and services.
         </p>
 
@@ -62,7 +62,7 @@ const FAQ = () => {
           {faq.map(({ question, answer, icon: Icon }) => (
             <div className="border-e border-b p-6" key={question}>
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-muted">
-                <Icon />
+                <Icon className="size-5" />
               </div>
               <div className="mt-5 mb-2 flex items-start gap-2 font-medium text-xl tracking-tight">
                 <span>{question}</span>

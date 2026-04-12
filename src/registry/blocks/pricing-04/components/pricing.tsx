@@ -69,7 +69,7 @@ const Pricing = () => {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-muted/70 px-6 py-12 dark:bg-muted/50">
-      <h2 className="text-center font-semibold text-5xl tracking-[-0.03em]">
+      <h2 className="text-center font-satoshi font-semibold text-4xl tracking-[-0.03em] sm:text-5xl">
         Our Plans
       </h2>
       <p className="mt-3 text-center text-muted-foreground text-xl">
@@ -111,11 +111,13 @@ const Pricing = () => {
               </Badge>
             )}
             <h3 className="font-medium text-lg">{plan.name}</h3>
-            <p className="mt-2 font-semibold text-4xl">
-              $
-              {selectedBillingPeriod === "monthly"
-                ? plan.price
-                : plan.price * ((100 - YEARLY_DISCOUNT) / 100)}
+            <p className="mt-4 font-semibold text-4xl">
+              <span className="font-satoshi">
+                $
+                {selectedBillingPeriod === "monthly"
+                  ? plan.price
+                  : plan.price * ((100 - YEARLY_DISCOUNT) / 100)}
+              </span>
               <span className="ml-1.5 font-normal text-muted-foreground text-sm">
                 /month
               </span>

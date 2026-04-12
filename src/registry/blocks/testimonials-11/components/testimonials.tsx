@@ -75,11 +75,11 @@ const Testimonials = () => {
   }, [api]);
 
   return (
-    <div className="mx-auto max-w-screen-xl px-6 py-12 sm:py-14">
-      <h2 className="text-balance text-center font-semibold text-4xl tracking-tight sm:text-5xl">
-        Trusted by Thousands
+    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-14">
+      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl">
+        What others think
       </h2>
-      <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-normal sm:mt-4 sm:text-2xl">
+      <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-[-0.015em] sm:mt-4 sm:text-2xl">
         Real stories from real users who&apos;ve seen real results
       </p>
 
@@ -95,12 +95,12 @@ const Testimonials = () => {
               <CarouselItem key={index}>
                 <div className="relative flex gap-8 rounded-lg border bg-muted/70 p-8 pt-16 pr-8 md:pt-8">
                   {/* Quote */}
-                  <span className="absolute top-4 left-6 font-mono text-7xl md:hidden">
-                    &#8220;
+                  <span className="absolute top-3 left-6.5 font-satoshi text-8xl md:hidden">
+                    &ldquo;
                   </span>
 
                   <div className="flex flex-col gap-2">
-                    <p className="grow font-medium text-xl leading-relaxed tracking-normal sm:font-semibold sm:text-2xl sm:leading-[1.45] lg:text-3xl">
+                    <p className="grow font-medium text-xl leading-relaxed tracking-tight sm:text-2xl sm:leading-[1.45] lg:text-3xl">
                       {testimonial}
                     </p>
                     <div className="mt-6 flex items-center gap-2 md:mt-0">
@@ -110,8 +110,8 @@ const Testimonials = () => {
                         src={avatar}
                       />
                       <div className="flex flex-col">
-                        <p className="font-semibold text-lg">{name}</p>
-                        <p className="text-muted-foreground text-sm">{role}</p>
+                        <p className="font-medium text-lg">{name}</p>
+                        <p className="text-muted-foreground">{role}</p>
                       </div>
                     </div>
                   </div>

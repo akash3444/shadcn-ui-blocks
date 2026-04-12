@@ -56,7 +56,7 @@ const Features = () => {
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="w-full max-w-(--breakpoint-lg) px-6 py-12">
-        <h2 className="max-w-lg font-semibold text-4xl tracking-[-0.03em] md:text-5xl md:leading-14">
+        <h2 className="max-w-lg font-satoshi font-semibold text-4xl tracking-[-0.03em] md:text-5xl md:leading-14">
           Boost Your Strategy with Smart Features
         </h2>
         <div className="mx-auto mt-6 grid w-full gap-12 md:mt-10 md:grid-cols-2">

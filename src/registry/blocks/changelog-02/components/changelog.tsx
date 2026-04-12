@@ -68,10 +68,10 @@ const changelogs = [
 export default function Changelog() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-16">
-      <h2 className="text-balance font-semibold text-4xl tracking-tight">
+      <h2 className="text-balance font-satoshi font-semibold text-4xl tracking-tight">
         Changelog
       </h2>
-      <p className="mt-2 text-balance text-lg text-muted-foreground tracking-normal sm:mt-3 sm:text-xl">
+      <p className="mt-2 text-balance text-lg text-muted-foreground tracking-[-0.015em] sm:mt-3 sm:text-xl">
         We ship fast. Track all the new features, updates, and fixes in one
         place.
       </p>
@@ -84,8 +84,8 @@ export default function Changelog() {
             className="relative flex items-start gap-8 py-10 sm:border-l sm:first:pt-0 [&>div]:-mt-1"
             key={changelog.version}
           >
-            <div className="sticky top-4 hidden min-w-40 pl-8 font-medium text-lg text-muted-foreground tracking-tight sm:block">
-              <p className="relative z-10 bg-background pl-3 leading-none">
+            <div className="sticky top-5 mt-1.5 hidden min-w-40 pl-8 text-lg text-muted-foreground tracking-tight sm:block">
+              <p className="relative z-10 bg-background pl-3 text-base leading-none">
                 {changelog.date}
               </p>
               {/* Dot */}
@@ -101,10 +101,10 @@ export default function Changelog() {
               <div className="absolute inset-0 -z-10 my-auto h-px w-full bg-border" />
             </div>
             <div>
-              <h3 className="-mt-[0.2lh] font-semibold text-2xl">
+              <h3 className="-mt-[0.2lh] font-medium text-2xl tracking-tight">
                 {changelog.title}
               </h3>
-              <span className="mt-2 block font-medium text-lg text-muted-foreground tracking-tight sm:hidden">
+              <span className="mt-2 block text-lg text-muted-foreground tracking-tight sm:hidden">
                 {changelog.date}
               </span>
 
