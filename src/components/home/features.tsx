@@ -1,160 +1,114 @@
 import {
-  BadgeCheck,
+  Copy,
+  Gift,
+  Moon,
   MoveRightIcon,
   PuzzleIcon,
-  ShapesIcon,
+  Shapes,
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
 import { FAQ } from "./faq";
 
 export const Features = () => {
   return (
-    <section className="mx-auto max-w-(--breakpoint-lg) px-6 py-20 lg:px-0">
-      <h2 className="text-center font-semibold text-5xl tracking-tight">
-        Core Features
-      </h2>
-      <div className="mt-20 mb-14 grid grid-cols-1 gap-8 md:grid-cols-2">
-        <div className="rounded-xl border border-border/80 bg-muted/50 p-1">
-          <Card className="relative h-full gap-3 overflow-hidden rounded-lg border-border/90 bg-background shadow-xs/5 dark:shadow-xs/40">
-            <DashedTopFadeGrid />
-
-            <CardHeader className="isolate gap-3 pb-0">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/7 dark:bg-primary/15">
-                <ShapesIcon className="h-5 w-5" />
+    <>
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-(--breakpoint-lg)">
+          <h2 className="max-w-[35ch] text-balance font-medium text-[2.5rem]/tight tracking-tight">
+            Built for developers who ship
+          </h2>
+          <p className="mt-2 max-w-[48ch] text-pretty text-base text-foreground/65 sm:text-lg">
+            Every block and component is production-ready — just preview, copy,
+            and paste into your project.
+          </p>
+          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {/* Featured wide card */}
+            <div className="relative overflow-hidden rounded-xl border border-border/70 bg-muted/40 p-6 sm:col-span-2">
+              <DashedTopFadeGrid />
+              <div className="isolate">
+                <Shapes className="size-6 text-primary" />
+                <h3 className="mt-4 font-semibold text-xl tracking-tight">
+                  200+ Production-Ready Blocks
+                </h3>
+                <p className="mt-2 max-w-[44ch] text-pretty text-foreground/65 text-sm">
+                  Hero sections, pricing tables, testimonials, feature grids,
+                  footers — every section type you need, designed and coded to
+                  production quality.
+                </p>
+                <Button asChild className="mt-6 rounded-full" size="sm">
+                  <Link href="/blocks">
+                    Browse Blocks <MoveRightIcon className="size-4" />
+                  </Link>
+                </Button>
               </div>
-              <h3 className="mt-4 font-semibold text-2xl tracking-tight">
-                Blocks
-              </h3>
-            </CardHeader>
-            <CardContent className="isolate">
-              <p className="text-foreground/70">
-                Blocks are uniquely designed sections that make building your
-                website easy. Simply preview, copy the code, and add a fresh new
-                section to your site instantly.
-              </p>
-              <ul className="mt-6 space-y-5 text-[15px]">
-                <li className="flex items-start gap-2">
-                  <BadgeCheck className="h-4.5 w-4.5" />
-                  <div>
-                    <h6 className="mb-1 font-semibold leading-[1.1]">
-                      Fully responsive
-                    </h6>
-                    <p className="text-foreground/70 text-sm">
-                      Each block is optimized for perfect display on any device.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-2">
-                  <BadgeCheck className="h-4.5 w-4.5" />
-                  <div>
-                    <h6 className="mb-1 font-semibold leading-[1.1]">
-                      Easily preview and copy
-                    </h6>
-                    <p className="text-foreground/70 text-sm">
-                      Quickly view how blocks look and grab the code in one
-                      click.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-2">
-                  <BadgeCheck className="h-4.5 w-4.5" />
-                  <div>
-                    <h6 className="mb-1 font-semibold leading-[1.1]">
-                      Absolutely Free to Use
-                    </h6>
-                    <p className="text-foreground/70 text-sm">
-                      Use all blocks without any restrictions or fees.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </CardContent>
-            <CardFooter className="mt-auto pt-1">
-              <Button asChild>
-                <Link href="/blocks">
-                  View Blocks <MoveRightIcon />
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-        </div>
-        <div className="rounded-xl border border-border/80 bg-muted/50 p-1">
-          <Card className="relative h-full gap-3 overflow-hidden rounded-lg border-border/90 bg-background shadow-xs/5 dark:shadow-xs/40">
-            <DashedTopFadeGrid />
+            </div>
 
-            <CardHeader className="isolate gap-3 pb-0">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/7 dark:bg-primary/15">
-                <PuzzleIcon className="h-5 w-5" />
+            {/* Dark mode card */}
+            <div className="relative overflow-hidden rounded-xl border border-border/70 bg-muted/40 p-6">
+              <DashedTopFadeGrid />
+              <div className="isolate">
+                <Moon className="size-6 text-primary" />
+                <h3 className="mt-4 font-semibold text-lg tracking-tight">
+                  Dark Mode Ready
+                </h3>
+                <p className="mt-2 text-pretty text-foreground/65 text-sm">
+                  Every block ships with light and dark mode built in. No extra
+                  work needed.
+                </p>
               </div>
-              <h3 className="mt-4 font-semibold text-2xl tracking-tight">
-                Customized Components
-              </h3>
-            </CardHeader>
-            <CardContent className="isolate">
-              <p className="text-foreground/70">
-                Enhance your design with our collection of customized Shadcn UI
-                components, crafted to give you more flexibility and style
-                options for a polished, unique look.
-              </p>
+            </div>
 
-              <ul className="mt-6 space-y-5 text-[15px]">
-                <li className="flex items-start gap-2">
-                  <BadgeCheck className="h-4.5 w-4.5" />
-                  <div>
-                    <h6 className="mb-1 font-semibold leading-[1.1]">
-                      Multiple Variants
-                    </h6>
-                    <p className="text-foreground/70 text-sm">
-                      Access wide range of component styles to fit any design
-                      need.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-2">
-                  <BadgeCheck className="h-4.5 w-4.5" />
-                  <div>
-                    <h6 className="mb-1 font-semibold leading-[1.1]">
-                      Fully Customizable
-                    </h6>
-                    <p className="text-foreground/70 text-sm">
-                      Adjust colors, sizes, and styles to match your brand.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-2">
-                  <BadgeCheck className="h-4.5 w-4.5" />
-                  <div>
-                    <h6 className="mb-1 font-semibold leading-[1.1]">
-                      Absolutely Free to Use
-                    </h6>
-                    <p className="text-foreground/70 text-sm">
-                      Enjoy unlimited access to all components at no cost.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </CardContent>
-            <CardFooter className="pt-6">
-              <Button asChild>
-                <Link href="/components/accordion">
-                  Explore Components
-                  <MoveRightIcon />
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
+            {/* Copy card */}
+            <div className="relative overflow-hidden rounded-xl border border-border/70 bg-muted/40 p-6">
+              <DashedTopFadeGrid />
+              <div className="isolate">
+                <Copy className="size-6 text-primary" />
+                <h3 className="mt-4 font-semibold text-lg tracking-tight">
+                  One-Click Copy
+                </h3>
+                <p className="mt-2 text-pretty text-foreground/65 text-sm">
+                  Clean code, ready to paste. No reformatting required.
+                </p>
+              </div>
+            </div>
+
+            {/* Components card */}
+            <div className="relative overflow-hidden rounded-xl border border-border/70 bg-muted/40 p-6">
+              <DashedTopFadeGrid />
+              <div className="isolate">
+                <PuzzleIcon className="size-6 text-primary" />
+                <h3 className="mt-4 font-semibold text-lg tracking-tight">
+                  25+ Component Variants
+                </h3>
+                <p className="mt-2 text-pretty text-foreground/65 text-sm">
+                  Extended shadcn/ui components with more styles and sizes than
+                  the defaults.
+                </p>
+              </div>
+            </div>
+
+            {/* Free card */}
+            <div className="relative overflow-hidden rounded-xl border border-border/70 bg-primary/5 p-6">
+              <div className="isolate">
+                <Gift className="size-6 text-primary" />
+                <h3 className="mt-4 font-semibold text-lg tracking-tight">
+                  Free Forever
+                </h3>
+                <p className="mt-2 text-pretty text-foreground/65 text-sm">
+                  No account, no paywall. Use anything here in personal and
+                  commercial projects.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <FAQ />
-    </section>
+      <section className="mx-auto max-w-(--breakpoint-lg) px-6 pb-20 lg:px-0">
+        <FAQ />
+      </section>
+    </>
   );
 };
 
