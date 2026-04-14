@@ -7082,6 +7082,54 @@
       ]
     },
     {
+      "name": "stats-08",
+      "type": "registry:block",
+      "title": "Stats 08",
+      "description": "A simple stats block",
+      "files": [
+        {
+          "path": "src/registry/blocks/stats-08/components/stats.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "stats-09",
+      "type": "registry:block",
+      "title": "Stats 09",
+      "description": "A simple stats block",
+      "files": [
+        {
+          "path": "src/registry/blocks/stats-09/components/stats.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "stats-10",
+      "type": "registry:block",
+      "title": "Stats 10",
+      "description": "A simple stats block",
+      "files": [
+        {
+          "path": "src/registry/blocks/stats-10/components/stats.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "stats-11",
+      "type": "registry:block",
+      "title": "Stats 11",
+      "description": "A simple stats block",
+      "files": [
+        {
+          "path": "src/registry/blocks/stats-11/components/stats.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "team-06",
       "type": "registry:block",
       "title": "Team 06",

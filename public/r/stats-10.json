@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "stats-10",
+  "title": "Stats 10",
+  "description": "A simple stats block",
+  "files": [
+    {
+      "path": "src/registry/blocks/stats-10/components/stats.tsx",
+      "content": "import { ArrowUpRightIcon } from \"lucide-react\";\nimport { Button } from \"@/components/ui/button\";\nimport { cn } from \"@/lib/utils\";\n\nconst Stats = () => {\n  return (\n    <div className=\"flex min-h-screen items-center justify-center\">\n      <div className=\"mx-auto flex max-w-(--breakpoint-xl) flex-col items-start gap-10 px-6 py-12 md:flex-row\">\n        <div className=\"max-w-md lg:max-w-lg\">\n          <h2 className=\"font-satoshi font-semibold text-4xl tracking-tighter md:text-5xl\">\n            Numbers that matter\n          </h2>\n          <p className=\"mt-4 text-muted-foreground text-xl tracking-[-0.01em] sm:mt-5 md:text-2xl/snug\">\n            Continuously improving with feedback from developers building modern\n            applications.\n          </p>\n          <Button className=\"mt-8\" size=\"lg\">\n            View all stats <ArrowUpRightIcon />\n          </Button>\n        </div>\n\n        <div\n          className={cn(\n            \"grow\",\n            \"space-y-4 *:space-y-3 *:rounded-xl *:bg-muted *:p-6 dark:*:bg-muted/70\"\n          )}\n        >\n          <div className=\"\">\n            <div className=\"font-satoshi font-semibold text-5xl\">96%</div>\n            <p className=\"text-foreground/80 text-lg\">\n              of customers say they have a better brand experience\n            </p>\n          </div>\n          <div className=\"\">\n            <div className=\"font-satoshi font-semibold text-5xl\">95%</div>\n            <p className=\"text-foreground/80 text-lg\">\n              of customers say they gather more data, more easily\n            </p>\n          </div>\n          <div className=\"\">\n            <div className=\"font-satoshi font-semibold text-5xl\">87%</div>\n            <p className=\"text-foreground/80 text-lg\">\n              of customers say they reveal deeper insights from data\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  );\n};\n\nexport default Stats;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}

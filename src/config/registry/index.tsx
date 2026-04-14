@@ -1624,6 +1624,46 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.stats],
     files: [{ path: "components/stats.tsx" }],
   },
+  {
+    name: "stats-08",
+    title: "Stats 08",
+    description: "A simple stats block",
+    component: React.lazy(
+      () => import("@/registry/blocks/stats-08/components/stats")
+    ),
+    categories: [categories.stats],
+    files: [{ path: "components/stats.tsx" }],
+  },
+  {
+    name: "stats-09",
+    title: "Stats 09",
+    description: "A simple stats block",
+    component: React.lazy(
+      () => import("@/registry/blocks/stats-09/components/stats")
+    ),
+    categories: [categories.stats],
+    files: [{ path: "components/stats.tsx" }],
+  },
+  {
+    name: "stats-10",
+    title: "Stats 10",
+    description: "A simple stats block",
+    component: React.lazy(
+      () => import("@/registry/blocks/stats-10/components/stats")
+    ),
+    categories: [categories.stats],
+    files: [{ path: "components/stats.tsx" }],
+  },
+  {
+    name: "stats-11",
+    title: "Stats 11",
+    description: "A simple stats block",
+    component: React.lazy(
+      () => import("@/registry/blocks/stats-11/components/stats")
+    ),
+    categories: [categories.stats],
+    files: [{ path: "components/stats.tsx" }],
+  },
   // Contact Blocks
   {
     name: "contact-01",
