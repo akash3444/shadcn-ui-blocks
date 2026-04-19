@@ -7,13 +7,13 @@ import {
   Logo06,
   Logo07,
   Logo08,
-} from "./logos";
+} from "@/components/logos";
 
 const logos = [Logo01, Logo02, Logo03, Logo07, Logo05, Logo06, Logo04, Logo08];
 
 const LogoCloud = () => {
   return (
-    <section className="mx-auto max-w-screen-lg px-12 py-12">
+    <section className="mx-auto max-w-5xl px-12 py-12">
       <p className="text-balance text-center font-medium text-muted-foreground text-sm uppercase">
         Trusted by teams and companies around the world
       </p>

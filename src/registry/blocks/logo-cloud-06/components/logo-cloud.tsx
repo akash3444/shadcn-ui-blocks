@@ -14,13 +14,13 @@ const LogoCloud = () => {
   return (
     <div className="flex min-h-screen items-center justify-center px-6">
       <div className="overflow-hidden">
-        <p className="text-center font-medium text-foreground/80 text-xl">
+        <p className="text-center font-medium text-foreground/80 text-xl tracking-[-0.01em]">
           More than 2.2 million companies worldwide already trust us
         </p>
 
-        <div className="mt-10 flex max-w-(--breakpoint-xl) items-center justify-center gap-x-14 gap-y-10">
+        <div className="mt-10 flex max-w-(--breakpoint-lg) items-center justify-center gap-x-14 gap-y-10 *:h-14">
           <Marquee
-            className="mask-x-from-70% mask-x-to-90% [--duration:20s] [&_svg]:mr-10"
+            className="mask-x-from-75% [--duration:20s] [&_svg]:mr-10"
             pauseOnHover
           >
             <Logo01 />

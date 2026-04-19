@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { blockCategories, categorizedBlocks } from "@/blocks";
 import BlockCategoryJsonLd from "@/components/blocks/category/block-category-json-ld";
 import BlockPreviewList from "@/components/blocks/category/block-preview-list";
+import Footer from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { constructMetadata } from "@/lib/metadata";
 import { generateOgImageUrl } from "@/lib/og";
@@ -95,6 +96,8 @@ const BlockCategoryPage = async (props: {
 
         <BlockCategoryJsonLd category={category} />
       </div>
+
+      <Footer className="dark bg-background/90 text-foreground" />
     </div>
   );
 };

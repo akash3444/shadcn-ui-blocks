@@ -17,7 +17,7 @@ const LogoCloud = () => {
           More than 2.2 million companies worldwide already trust us
         </p>
 
-        <div className="mt-20 flex max-w-(--breakpoint-lg) flex-wrap items-center justify-center gap-x-14 gap-y-10">
+        <div className="mt-20 flex max-w-(--breakpoint-lg) flex-wrap items-center justify-center gap-x-14 gap-y-12 *:h-10">
           <Logo01 />
           <Logo02 />
           <Logo03 />

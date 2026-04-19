@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BlockCategoryGrid from "@/components/blocks/category/block-category-grid";
+import Footer from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { absoluteUrl } from "@/lib/utils";
 
@@ -15,9 +16,12 @@ export const metadata: Metadata = {
 const BlocksPage = () => (
   <>
     <Navbar className="w-full max-w-384 px-6" />
-    <div className="mx-auto max-w-(--breakpoint-2xl) py-12 sm:py-16">
+
+    <div className="mx-auto mb-8 max-w-(--breakpoint-2xl) py-12 sm:py-16">
       <BlockCategoryGrid />
     </div>
+
+    <Footer />
   </>
 );
 

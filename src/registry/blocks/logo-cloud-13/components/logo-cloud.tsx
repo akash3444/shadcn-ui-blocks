@@ -1,4 +1,3 @@
-import { Marquee } from "@/registry/blocks/logo-cloud-13/components/magicui/marquee";
 import {
   Logo01,
   Logo02,
@@ -8,13 +7,14 @@ import {
   Logo06,
   Logo07,
   Logo08,
-} from "./logos";
+} from "@/components/logos";
+import { Marquee } from "@/registry/blocks/logo-cloud-13/components/magicui/marquee";
 
 const logos = [Logo01, Logo02, Logo03, Logo07, Logo05, Logo06, Logo04, Logo08];
 
 const LogoCloud = () => {
   return (
-    <section className="mx-auto max-w-screen-lg px-12 py-12">
+    <section className="mx-auto max-w-5xl px-12 py-12">
       <p className="text-balance text-center font-medium text-muted-foreground text-sm uppercase">
         Trusted by teams and companies around the world
       </p>
@@ -33,7 +33,7 @@ const LogoCloud = () => {
           <Marquee className="p-0 [--gap:0px]">
             {logos.map((Logo, index) => (
               <div
-                className="flex w-full items-center justify-center border-e p-6 even:bg-muted/60 dark:even:bg-muted/30"
+                className="flex w-full items-center justify-center border-e px-10 py-6 even:bg-muted/60 dark:even:bg-muted/30"
                 key={index}
               >
                 <Logo className="h-6 sm:h-8" />

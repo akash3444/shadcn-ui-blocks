@@ -1,9 +1,11 @@
 import Link from "next/link";
+import type { ComponentProps } from "react";
 import { blockCategories } from "@/blocks";
 import { Separator } from "@/components/ui/separator";
 import { config } from "@/config";
 import { components } from "@/description/app-sidebar";
-import { capitalize } from "@/lib/utils";
+import { capitalize, cn } from "@/lib/utils";
+import { FooterLicense } from "./footer-license";
 import { Logo } from "../logo";
 import { GithubLogo, TwitterLogo } from "../ui/icons";
 
@@ -59,9 +61,9 @@ const footerSections = [
   },
 ];
 
-const Footer = () => {
+const Footer = ({ className, ...props }: ComponentProps<"footer">) => {
   return (
-    <footer className="border-t bg-muted/50">
+    <footer className={cn("border-t bg-muted/50", className)} {...props}>
       <div className="mx-auto max-w-(--breakpoint-xl)">
         <div className="grid grid-cols-2 gap-x-8 gap-y-10 px-6 py-12 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 xl:px-0">
           <div className="col-span-full lg:col-span-2">
@@ -77,6 +79,7 @@ const Footer = () => {
               A collection of customized Shadcn UI blocks and components, ready
               for preview and copy.
             </p>
+            <FooterLicense />
           </div>
 
           {footerSections.map(({ title, links, className }, index) => (

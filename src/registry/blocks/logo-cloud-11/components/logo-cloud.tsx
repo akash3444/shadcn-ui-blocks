@@ -1,10 +1,19 @@
-import { Logo01, Logo02, Logo03, Logo04 } from "./logos";
+import {
+  Logo01,
+  Logo02,
+  Logo03,
+  Logo04,
+  Logo05,
+  Logo06,
+  Logo07,
+  Logo08,
+} from "@/components/logos";
 
-const logos = [Logo01, Logo02, Logo03, Logo04, Logo03, Logo04, Logo02, Logo01];
+const logos = [Logo01, Logo02, Logo03, Logo04, Logo05, Logo06, Logo07, Logo08];
 
 const LogoCloud = () => {
   return (
-    <section className="mx-auto max-w-screen-lg px-6 py-12">
+    <section className="mx-auto max-w-5xl px-6 py-12">
       <p className="text-balance text-center font-medium text-muted-foreground text-sm uppercase">
         Trusted by teams and companies around the world
       </p>
@@ -14,7 +23,7 @@ const LogoCloud = () => {
             className="flex w-full items-center justify-center rounded-md border border-dashed bg-background p-6 dark:border-foreground/15"
             key={index}
           >
-            <Logo className="h-6 sm:h-8" />
+            <Logo className="h-7 sm:h-8" />
           </div>
         ))}
       </div>
