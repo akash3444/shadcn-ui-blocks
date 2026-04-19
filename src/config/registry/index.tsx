@@ -1553,6 +1553,34 @@ export const blocks: RegistryBlock[] = [
       { path: "components/magicui/marquee.tsx" },
     ],
   },
+  {
+    name: "logo-cloud-14",
+    title: "Logo Cloud 14",
+    description: "A simple logo cloud block",
+    component: React.lazy(
+      () => import("@/registry/blocks/logo-cloud-14/components/logo-cloud")
+    ),
+    categories: [categories.logoCloud],
+    files: [
+      { path: "components/logo-cloud.tsx" },
+      { path: "components/logos.tsx" },
+    ],
+  },
+  {
+    name: "logo-cloud-15",
+    title: "Logo Cloud 15",
+    description: "A simple logo cloud block",
+    component: React.lazy(
+      () => import("@/registry/blocks/logo-cloud-15/components/logo-cloud")
+    ),
+    categories: [categories.logoCloud],
+    files: [
+      { path: "components/logo-cloud.tsx" },
+      { path: "components/logos.tsx" },
+      { path: "components/ui/marquee.tsx" },
+      { path: "components/magicui/border-beam.tsx" },
+    ],
+  },
   // Stats Blocks
   {
     name: "stats-01",

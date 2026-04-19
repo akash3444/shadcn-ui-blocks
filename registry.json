@@ -6883,6 +6883,46 @@
       ]
     },
     {
+      "name": "logo-cloud-14",
+      "type": "registry:block",
+      "title": "Logo Cloud 14",
+      "description": "A simple logo cloud block",
+      "files": [
+        {
+          "path": "src/registry/blocks/logo-cloud-14/components/logo-cloud.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/logo-cloud-14/components/logos.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "logo-cloud-15",
+      "type": "registry:block",
+      "title": "Logo Cloud 15",
+      "description": "A simple logo cloud block",
+      "files": [
+        {
+          "path": "src/registry/blocks/logo-cloud-15/components/logo-cloud.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/logo-cloud-15/components/logos.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/logo-cloud-15/components/ui/marquee.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/logo-cloud-15/components/magicui/border-beam.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "pricing-07",
       "type": "registry:block",
       "title": "Pricing 07",
