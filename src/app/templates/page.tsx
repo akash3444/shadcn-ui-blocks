@@ -1,13 +1,12 @@
-import { Layers } from "lucide-react";
-import type { Metadata } from "next";
-import Link from "next/link";
-import { Logo } from "@/components/logo";
 import TemplateCard from "@/components/templates/template-card";
 import { Button } from "@/components/ui/button";
 import { NextLogo, ShadcnLogo, TailwindLogo } from "@/components/ui/icons";
 import { categories, categorizedTemplates } from "@/description/templates";
 import { constructMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/utils";
+import { Layers } from "lucide-react";
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = constructMetadata({
   title: "Beautifully Designed Shadcn UI Templates",
@@ -40,26 +39,23 @@ export default function TemplatesPage() {
       {/* Hero */}
       <div className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden">
         <div className="relative z-1 mx-auto max-w-4xl space-y-8 px-6 text-center">
-          <div className="relative inline-flex items-center justify-center gap-4 overflow-hidden rounded-full bg-accent py-1.5 pr-2 pl-4">
+          <div className="relative inline-flex items-center justify-center gap-4">
             <span className="text-sm">Built using</span>
             <div className="flex items-center justify-center gap-3">
               <NextLogo className="h-6 w-6" />
               <TailwindLogo className="h-6 w-6 text-sky-400" />
               <ShadcnLogo className="h-5 w-5" />
-              <Logo className="h-6 w-6 [&_svg]:h-4 [&_svg]:w-4" />
             </div>
           </div>
-          <h1 className="font-semibold text-[2.5rem] leading-[1.15]! tracking-[-0.035em] sm:text-5xl lg:text-6xl">
+          <h1 className="text-balance font-semibold font-satoshi text-[2.5rem] leading-[1.2]! tracking-[-0.035em] sm:text-5xl md:text-6xl lg:text-7xl">
             <span className="text-blue-500">Beautifully Designed</span> Shadcn
-            UI Templates for Every Project
+            UI Templates
           </h1>
-          <p className="sm:text-xl">
+          <p className="text-lg sm:text-2xl max-w-xl mx-auto text-foreground/90">
             Discover a collection of premium Shadcn UI templates designed to
-            make your project shine. With modern designs and smooth
-            functionality, these templates help you build stunning UIs with
-            ease!
+            make your project shine.
           </p>
-          <Button asChild className="!px-6 h-13 text-lg" size="lg">
+          <Button asChild className="mt-2 sm:mt-6 px-6! h-13 text-lg rounded-full" size="lg">
             <Link href="#templates">
               <Layers className="mr-2 h-5! w-5!" /> Browse Templates
             </Link>
@@ -78,7 +74,7 @@ export default function TemplatesPage() {
 
             return (
               <div key={category.slug}>
-                <h2 className="mb-5 font-bold text-3xl tracking-tight sm:text-4xl">
+                <h2 className="mb-5 font-semibold font-satoshi text-3xl tracking-tight sm:text-4xl">
                   {category.name} Templates
                 </h2>
                 {templates?.length ? (

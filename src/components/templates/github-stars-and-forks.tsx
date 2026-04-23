@@ -21,12 +21,12 @@ export default async function GithubStarsAndForks({ repo }: { repo: string }) {
   return (
     <div className="flex flex-col gap-5">
       <div className="flex items-center gap-5 text-muted-foreground text-sm">
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <Eye className="h-5 w-5 text-foreground" />
           <span className="whitespace-nowrap">
             {views?.count} {views?.count > 1 ? "views" : "view"}
           </span>
-        </div>
+        </div> */}
         <div className="flex items-center gap-2">
           <Star className="h-5 w-5 text-foreground" />
           <span className="whitespace-nowrap">
