@@ -334,10 +334,7 @@ export const blocks: RegistryBlock[] = [
       () => import("@/registry/blocks/features-09/components/features")
     ),
     categories: [categories.features],
-    files: [
-      { path: "components/features.tsx" },
-      { path: "components/stats-card.tsx" },
-    ],
+    files: [{ path: "components/features.tsx" }],
   },
   {
     name: "features-10",
@@ -347,7 +344,10 @@ export const blocks: RegistryBlock[] = [
       () => import("@/registry/blocks/features-10/components/features")
     ),
     categories: [categories.features],
-    files: [{ path: "components/features.tsx" }],
+    files: [
+      { path: "components/features.tsx" },
+      { path: "components/stats-card.tsx" },
+    ],
   },
   {
     name: "features-11",

@@ -515,6 +515,14 @@
         {
           "path": "src/registry/blocks/hero-06/components/background-pattern.tsx",
           "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/hero-06/components/ui/dot-pattern.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/hero-06/components/ui/particles.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -532,6 +540,10 @@
       "files": [
         {
           "path": "src/registry/blocks/hero-07/components/hero.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/hero-07/components/ui/animated-grid-pattern.tsx",
           "type": "registry:component"
         }
       ]
@@ -727,6 +739,10 @@
         {
           "path": "src/registry/blocks/logo-cloud-06/components/logos.tsx",
           "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/logo-cloud-06/components/ui/marquee.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -745,6 +761,10 @@
         },
         {
           "path": "src/registry/blocks/logo-cloud-07/components/logos.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/logo-cloud-07/components/ui/marquee.tsx",
           "type": "registry:component"
         }
       ]
@@ -1209,6 +1229,10 @@
       "files": [
         {
           "path": "src/registry/blocks/testimonials-04/components/testimonials.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/testimonials-04/components/ui/marquee.tsx",
           "type": "registry:component"
         }
       ]
@@ -6478,6 +6502,10 @@
       "files": [
         {
           "path": "src/registry/blocks/features-10/components/features.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/features-10/components/stats-card.tsx",
           "type": "registry:component"
         }
       ]
