@@ -1,18 +1,18 @@
-import { Aperture } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { GoogleLogo } from "@/registry/blocks/login-07/components/icons";
 import { LoginForm } from "@/registry/blocks/login-07/components/login-form";
+import { Logo } from "@/registry/blocks/login-07/components/logo";
 import { Testimonials } from "./testimonials";
 
 const Login = () => (
   <div className="grid grid-cols-1 lg:grid-cols-2 lg:divide-x">
     <div className="flex h-screen items-center justify-center">
       <div className="mx-auto w-full max-w-md px-10 py-14 sm:rounded-2xl sm:border sm:bg-card sm:shadow-2xl/5">
-        <Aperture className="mx-auto size-8" />
-        <h1 className="mt-3 text-center font-medium text-2xl">
-          Login to Bloxxee
+        <Logo className="mx-auto size-9" />
+        <h1 className="mt-3 text-center font-medium text-2xl tracking-[-0.015em]">
+          Login to Shadcn UI Blocks
         </h1>
 
         <div className="mt-10">

@@ -20,10 +20,10 @@ const Features = () => {
   return (
     <div className="flex min-h-screen items-center justify-center px-6 py-12">
       <div className="w-full grow sm:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg)">
-        <h2 className="font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl">
+        <h2 className="font-satoshi font-semibold max-w-sm mx-auto text-center text-4xl tracking-tight sm:text-5xl/[1.2]">
           Features that help you build better
         </h2>
-        <div className="mt-12 grid w-full gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-18 grid w-full gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <div
               className="flex w-full flex-col text-start"

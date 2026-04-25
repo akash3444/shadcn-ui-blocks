@@ -1104,6 +1104,7 @@ export const blocks: RegistryBlock[] = [
       { path: "components/login.tsx" },
       { path: "components/login-form.tsx" },
       { path: "components/icons.tsx" },
+      { path: "components/logo.tsx" },
     ],
   },
   {
@@ -1119,6 +1120,7 @@ export const blocks: RegistryBlock[] = [
       { path: "components/login-form.tsx" },
       { path: "components/icons.tsx" },
       { path: "components/testimonials.tsx" },
+      { path: "components/logo.tsx" },
     ],
   },
   {
@@ -1133,6 +1135,7 @@ export const blocks: RegistryBlock[] = [
       { path: "components/login.tsx" },
       { path: "components/login-form.tsx" },
       { path: "components/icons.tsx" },
+      { path: "components/logo.tsx" },
     ],
   },
   // Signup Blocks
@@ -1198,6 +1201,7 @@ export const blocks: RegistryBlock[] = [
       { path: "components/signup.tsx" },
       { path: "components/signup-form.tsx" },
       { path: "components/icons.tsx" },
+      { path: "components/logo.tsx" },
     ],
   },
   {
@@ -1213,6 +1217,7 @@ export const blocks: RegistryBlock[] = [
       { path: "components/signup-form.tsx" },
       { path: "components/icons.tsx" },
       { path: "components/testimonials.tsx" },
+      { path: "components/logo.tsx" },
     ],
   },
   {
@@ -1227,6 +1232,7 @@ export const blocks: RegistryBlock[] = [
       { path: "components/signup.tsx" },
       { path: "components/signup-form.tsx" },
       { path: "components/icons.tsx" },
+      { path: "components/logo.tsx" },
     ],
   },
   // Navbar Blocks

@@ -44,13 +44,13 @@ const Features = () => {
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="w-full max-w-(--breakpoint-lg) px-6 py-10">
-        <h2 className="text-pretty text-center font-satoshi font-semibold text-4xl tracking-tight md:text-[2.75rem]">
-          Designed for Speed and Scalability
+<h2 className="text-pretty text-center max-w-md mx-auto font-satoshi font-semibold text-4xl tracking-tight md:text-5xl/[1.2]">
+          Designed for <br /> Speed and Scalability
         </h2>
-        <p className="mt-3 text-center text-lg text-muted-foreground md:text-2xl">
+        <p className="mt-5 text-lg text-center max-w-md mx-auto text-muted-foreground md:text-2xl">
           Enhance your strategy with intelligent tools designed for success.
         </p>
-        <div className="mx-auto mt-8 w-full space-y-20 md:mt-16">
+        <div className="mx-auto mt-8 w-full space-y-20 md:mt-18">
           {features.map((feature) => (
             <div
               className="flex flex-col items-center gap-x-12 gap-y-6 md:flex-row md:even:flex-row-reverse"

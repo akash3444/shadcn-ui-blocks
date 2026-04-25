@@ -51,13 +51,13 @@ const Features = () => {
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="w-full max-w-(--breakpoint-lg) px-6 py-10">
-        <h2 className="text-pretty font-satoshi font-semibold text-4xl tracking-tight md:text-5xl">
-          Designed for Speed and Scalability
+        <h2 className="text-pretty text-center max-w-md mx-auto font-satoshi font-semibold text-4xl tracking-tight md:text-5xl/[1.2]">
+          Designed for <br /> Speed and Scalability
         </h2>
-        <p className="mt-4 text-lg text-muted-foreground md:text-2xl">
+        <p className="mt-5 text-lg text-center max-w-md mx-auto text-muted-foreground md:text-2xl">
           Enhance your strategy with intelligent tools designed for success.
         </p>
-        <div className="mx-auto mt-12 grid w-full gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-18 grid w-full gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <Card
               className="flex flex-col overflow-hidden rounded-xl border pb-0 shadow-none"

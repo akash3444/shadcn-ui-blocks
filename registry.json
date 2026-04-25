@@ -6717,6 +6717,10 @@
         {
           "path": "src/registry/blocks/login-06/components/icons.tsx",
           "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/login-06/components/logo.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -6748,6 +6752,10 @@
         {
           "path": "src/registry/blocks/login-07/components/testimonials.tsx",
           "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/login-07/components/logo.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -6774,6 +6782,10 @@
         },
         {
           "path": "src/registry/blocks/login-08/components/icons.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/login-08/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -7000,6 +7012,10 @@
         {
           "path": "src/registry/blocks/signup-06/components/icons.tsx",
           "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/signup-06/components/logo.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -7031,6 +7047,10 @@
         {
           "path": "src/registry/blocks/signup-07/components/testimonials.tsx",
           "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/signup-07/components/logo.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -7057,6 +7077,10 @@
         },
         {
           "path": "src/registry/blocks/signup-08/components/icons.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/signup-08/components/logo.tsx",
           "type": "registry:component"
         }
       ]
