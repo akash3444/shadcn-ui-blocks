@@ -140,6 +140,10 @@ export const categories = {
     name: "blog",
     title: "Blog",
   },
+  notFound: {
+    name: "notFound",
+    title: "Not Found",
+  },
 } as const;
 
 const FooterLayout = ({ children }: { children: React.ReactNode }) => {
@@ -772,6 +776,16 @@ export const blocks: RegistryBlock[] = [
     description: "A simple CTA block",
     component: React.lazy(
       () => import("@/registry/blocks/cta-06/components/cta")
+    ),
+    categories: [categories.cta],
+    files: [{ path: "components/cta.tsx" }],
+  },
+  {
+    name: "cta-07",
+    title: "CTA 07",
+    description: "A simple CTA block",
+    component: React.lazy(
+      () => import("@/registry/blocks/cta-07/components/cta")
     ),
     categories: [categories.cta],
     files: [{ path: "components/cta.tsx" }],
@@ -2279,5 +2293,86 @@ export const blocks: RegistryBlock[] = [
     ),
     categories: [categories.blog],
     files: [{ path: "components/blog.tsx" }],
+  },
+  // Not Found Blocks
+  {
+    name: "not-found-01",
+    title: "Not Found 01",
+    description: "A simple 404 not found block",
+    component: React.lazy(
+      () => import("@/registry/blocks/not-found-01/components/not-found")
+    ),
+    categories: [categories.notFound],
+    files: [{ path: "components/not-found.tsx" }],
+  },
+  {
+    name: "not-found-02",
+    title: "Not Found 02",
+    description: "A 404 not found block with big text, suggestions, and actions",
+    component: React.lazy(
+      () => import("@/registry/blocks/not-found-02/components/not-found")
+    ),
+    categories: [categories.notFound],
+    files: [{ path: "components/not-found.tsx" }],
+  },
+  {
+    name: "not-found-03",
+    title: "Not Found 03",
+    description: "A 404 not found block with a split layout",
+    component: React.lazy(
+      () => import("@/registry/blocks/not-found-03/components/not-found")
+    ),
+    categories: [categories.notFound],
+    files: [{ path: "components/not-found.tsx" }],
+  },
+  {
+    name: "not-found-04",
+    title: "Not Found 04",
+    description: "A 404 not found block with a search input",
+    component: React.lazy(
+      () => import("@/registry/blocks/not-found-04/components/not-found")
+    ),
+    categories: [categories.notFound],
+    files: [{ path: "components/not-found.tsx" }],
+  },
+  {
+    name: "not-found-05",
+    title: "Not Found 05",
+    description: "A minimal 404 not found block",
+    component: React.lazy(
+      () => import("@/registry/blocks/not-found-05/components/not-found")
+    ),
+    categories: [categories.notFound],
+    files: [{ path: "components/not-found.tsx" }],
+  },
+  {
+    name: "not-found-06",
+    title: "Not Found 06",
+    description: "A 404 not found block with popular page cards",
+    component: React.lazy(
+      () => import("@/registry/blocks/not-found-06/components/not-found")
+    ),
+    categories: [categories.notFound],
+    files: [{ path: "components/not-found.tsx" }],
+  },
+  {
+    name: "not-found-07",
+    title: "Not Found 07",
+    description: "A humorous 404 not found block with a glitch effect",
+    component: React.lazy(
+      () => import("@/registry/blocks/not-found-07/components/not-found")
+    ),
+    categories: [categories.notFound],
+    files: [{ path: "components/not-found.tsx" }],
+  },
+  {
+    name: "not-found-08",
+    title: "Not Found 08",
+    description: "A 404 not found block with a full-page background text",
+    component: React.lazy(
+      () => import("@/registry/blocks/not-found-08/components/not-found")
+    ),
+    categories: [categories.notFound],
+    files: [{ path: "components/not-found.tsx" }],
   },
 ];

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "not-found-01",
+  "title": "Not Found 01",
+  "description": "A simple 404 not found block",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/blocks/not-found-01/components/not-found.tsx",
+      "content": "import Link from \"next/link\";\nimport { Button } from \"@/components/ui/button\";\n\nexport default function NotFound() {\n  return (\n    <div className=\"flex min-h-screen flex-col items-center justify-center px-6 text-center\">\n      <h1 className=\"mt-4 font-medium text-[2.5rem]/none tracking-[-0.02em]\">\n        Page not found\n      </h1>\n      <p className=\"mt-6 max-w-sm text-muted-foreground\">\n        Sorry, we couldn&apos;t find the page you&apos;re looking for. It may\n        have been moved or deleted.\n      </p>\n      <div className=\"mt-10 flex gap-3\">\n        <Button asChild>\n          <Link href=\"/\">Go home</Link>\n        </Button>\n        <Button asChild variant=\"outline\">\n          <Link href=\"/contact\">Contact support</Link>\n        </Button>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}

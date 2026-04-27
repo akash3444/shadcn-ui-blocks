@@ -7253,6 +7253,21 @@
       ]
     },
     {
+      "name": "cta-07",
+      "type": "registry:block",
+      "title": "CTA 07",
+      "description": "A simple CTA block",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/cta-07/components/cta.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "carousel-01",
       "type": "registry:block",
       "title": "Carousel 01",
@@ -8853,6 +8868,177 @@
       "files": [
         {
           "path": "src/registry/blocks/blog-06/components/blog.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "not-found-01",
+      "type": "registry:block",
+      "title": "Not Found 01",
+      "description": "A simple 404 not found block",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/not-found-01/components/not-found.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "not-found-02",
+      "type": "registry:block",
+      "title": "Not Found 02",
+      "description": "A 404 not found block with big text, suggestions, and actions",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/not-found-02/components/not-found.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "not-found-03",
+      "type": "registry:block",
+      "title": "Not Found 03",
+      "description": "A 404 not found block with a split layout",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/not-found-03/components/not-found.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "not-found-04",
+      "type": "registry:block",
+      "title": "Not Found 04",
+      "description": "A 404 not found block with a search input",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/not-found-04/components/not-found.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "not-found-05",
+      "type": "registry:block",
+      "title": "Not Found 05",
+      "description": "A minimal 404 not found block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/not-found-05/components/not-found.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "not-found-06",
+      "type": "registry:block",
+      "title": "Not Found 06",
+      "description": "A 404 not found block with popular page cards",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/not-found-06/components/not-found.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "not-found-07",
+      "type": "registry:block",
+      "title": "Not Found 07",
+      "description": "A humorous 404 not found block with a glitch effect",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/not-found-07/components/not-found.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/not-found-07/components/glitch-text.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "cssVars": {
+        "theme": {
+          "--animate-glitch-after": "glitch var(--after-duration) infinite linear alternate-reverse",
+          "--animate-glitch-before": "glitch var(--before-duration) infinite linear alternate-reverse"
+        }
+      },
+      "css": {
+        "@keyframes glitch": {
+          "0%":   { "clip-path": "inset(20% 0 50% 0)" },
+          "5%":   { "clip-path": "inset(10% 0 60% 0)" },
+          "10%":  { "clip-path": "inset(15% 0 55% 0)" },
+          "15%":  { "clip-path": "inset(25% 0 35% 0)" },
+          "20%":  { "clip-path": "inset(30% 0 40% 0)" },
+          "25%":  { "clip-path": "inset(40% 0 20% 0)" },
+          "30%":  { "clip-path": "inset(10% 0 60% 0)" },
+          "35%":  { "clip-path": "inset(15% 0 55% 0)" },
+          "40%":  { "clip-path": "inset(25% 0 35% 0)" },
+          "45%":  { "clip-path": "inset(30% 0 40% 0)" },
+          "50%":  { "clip-path": "inset(20% 0 50% 0)" },
+          "55%":  { "clip-path": "inset(10% 0 60% 0)" },
+          "60%":  { "clip-path": "inset(15% 0 55% 0)" },
+          "65%":  { "clip-path": "inset(25% 0 35% 0)" },
+          "70%":  { "clip-path": "inset(30% 0 40% 0)" },
+          "75%":  { "clip-path": "inset(40% 0 20% 0)" },
+          "80%":  { "clip-path": "inset(20% 0 50% 0)" },
+          "85%":  { "clip-path": "inset(10% 0 60% 0)" },
+          "90%":  { "clip-path": "inset(15% 0 55% 0)" },
+          "95%":  { "clip-path": "inset(25% 0 35% 0)" },
+          "100%": { "clip-path": "inset(30% 0 40% 0)" }
+        }
+      }
+    },
+    {
+      "name": "not-found-08",
+      "type": "registry:block",
+      "title": "Not Found 08",
+      "description": "A 404 not found block with a full-page background text",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/not-found-08/components/not-found.tsx",
           "type": "registry:component"
         }
       ]

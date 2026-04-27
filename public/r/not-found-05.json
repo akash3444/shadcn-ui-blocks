@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "not-found-05",
+  "title": "Not Found 05",
+  "description": "A minimal 404 not found block",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/blocks/not-found-05/components/not-found.tsx",
+      "content": "import { ArrowLeftIcon, OctagonXIcon } from \"lucide-react\";\nimport Link from \"next/link\";\nimport { Button } from \"@/components/ui/button\";\n\nexport default function NotFound() {\n  return (\n    <div className=\"flex min-h-screen flex-col items-center justify-center gap-5 px-6 text-center\">\n      <div className=\"flex size-12 items-center justify-center rounded-2xl border bg-muted\">\n        <OctagonXIcon className=\"size-6 text-muted-foreground\" />\n      </div>\n      <h1 className=\"font-medium text-4xl tracking-tight\">\n        This page doesn&apos;t exist\n      </h1>\n      <Button asChild className=\"mt-4\" variant=\"secondary\">\n        <Link href=\"/\">\n          <ArrowLeftIcon />\n          Go back home\n        </Link>\n      </Button>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}

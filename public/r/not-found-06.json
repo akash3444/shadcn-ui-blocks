@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "not-found-06",
+  "title": "Not Found 06",
+  "description": "A 404 not found block with popular page cards",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/blocks/not-found-06/components/not-found.tsx",
+      "content": "import {\n  ArrowLeft,\n  ArrowRightIcon,\n  BookOpenIcon,\n  HomeIcon,\n  MailIcon,\n  OctagonXIcon,\n  TagIcon,\n} from \"lucide-react\";\nimport Link from \"next/link\";\nimport { Button } from \"@/components/ui/button\";\n\nconst pages = [\n  {\n    icon: HomeIcon,\n    title: \"Home\",\n    description: \"Back to the main page\",\n    href: \"/\",\n  },\n  {\n    icon: BookOpenIcon,\n    title: \"Blog\",\n    description: \"Read our latest articles\",\n    href: \"/blog\",\n  },\n  {\n    icon: TagIcon,\n    title: \"Pricing\",\n    description: \"View our plans and pricing\",\n    href: \"/pricing\",\n  },\n  {\n    icon: MailIcon,\n    title: \"Contact\",\n    description: \"Get in touch with us\",\n    href: \"/contact\",\n  },\n];\n\nexport default function NotFound() {\n  return (\n    <div className=\"flex min-h-screen flex-col items-center justify-center px-6 text-center\">\n      <div className=\"flex size-12 items-center justify-center rounded-2xl border bg-muted\">\n        <OctagonXIcon className=\"size-6 text-muted-foreground\" />\n      </div>\n      <h1 className=\"mt-6 font-medium text-[2rem] tracking-tight\">\n        Page not found\n      </h1>\n      <p className=\"mt-2 max-w-sm text-muted-foreground\">\n        Here are some pages that might help you find what you&apos;re looking\n        for.\n      </p>\n      <div className=\"mt-10 grid w-full max-w-lg gap-3 sm:grid-cols-2\">\n        {pages.map((page) => (\n          <Link\n            className=\"group flex items-center gap-4 rounded-xl border p-4 text-left transition-colors hover:bg-muted/50\"\n            href={page.href}\n            key={page.href}\n          >\n            <div className=\"flex size-9 shrink-0 items-center justify-center rounded-lg border bg-background\">\n              <page.icon className=\"size-4 text-muted-foreground\" />\n            </div>\n            <div className=\"min-w-0 flex-1\">\n              <p className=\"font-medium text-sm\">{page.title}</p>\n              <p className=\"truncate text-muted-foreground text-xs\">\n                {page.description}\n              </p>\n            </div>\n            <ArrowRightIcon className=\"size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5\" />\n          </Link>\n        ))}\n      </div>\n      <Button asChild className=\"mt-8\" variant=\"outline\">\n        <Link href=\"/\">\n          <ArrowLeft /> Go home\n        </Link>\n      </Button>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}
