@@ -574,6 +574,20 @@ const VerificationSkeleton = () => (
   </div>
 );
 
+const NotFoundSkeleton = () => (
+  <div className="flex h-full flex-col items-center justify-center gap-2 p-4">
+    {/* Large 404 number */}
+    <div className="h-9 w-24 rounded-lg bg-primary/22" />
+    {/* Title */}
+    <Head className="mt-1 w-2/5" />
+    {/* Description */}
+    <Line className="w-3/5" />
+    <Line className="w-2/5" />
+    {/* Go home button */}
+    <Btn className="mt-3 w-24" />
+  </div>
+);
+
 const DefaultSkeleton = () => (
   <div className="flex h-full flex-col items-center justify-center gap-3 p-4">
     <Head className="w-1/3" />
@@ -621,6 +635,7 @@ const CATEGORY_SKELETONS: Record<string, React.FC> = {
   keyboardShortcuts: KeyboardShortcutsSkeleton,
   profile: ProfileSkeleton,
   verification: VerificationSkeleton,
+  notFound: NotFoundSkeleton,
 };
 
 // ─── Category card ────────────────────────────────────────────────────────────
