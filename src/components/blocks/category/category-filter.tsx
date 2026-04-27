@@ -24,7 +24,7 @@ const CategoryFilter = () => {
     capture("blocks:category_filter", { category: value });
 
     if (value === "all") {
-      router.push(`/blocks?${searchParams.toString()}`);
+      router.push(`/blocks/categories/all?${searchParams.toString()}`);
       return;
     }
 

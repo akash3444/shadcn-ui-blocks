@@ -32,9 +32,10 @@ const keywordsTemplate = [
 ];
 
 export const generateStaticParams = async () => {
-  return blockCategories.map((category) => ({
-    category: category.name,
-  }));
+  return [
+    { category: "all" },
+    ...blockCategories.map((category) => ({ category: category.name })),
+  ];
 };
 
 export const generateMetadata = async (props: {
@@ -42,6 +43,16 @@ export const generateMetadata = async (props: {
 }): Promise<Metadata> => {
   const params = await props.params;
   const { category } = params;
+
+  if (category === "all") {
+    return constructMetadata({
+      title: "All Shadcn UI Blocks",
+      description:
+        "Browse all beautifully designed blocks built with Shadcn UI. Preview, customize, and copy code snippets effortlessly.",
+      alternates: { canonical: absoluteUrl("/blocks/categories/all") },
+    });
+  }
+
   const blocks = categorizedBlocks[category];
   const title = `${blocks.length}+ ${capitalize(
     category

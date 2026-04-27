@@ -16,9 +16,10 @@ const BlockPreviewList = () => {
   const searchParams = useSearchParams();
   const q = searchParams.get("q");
   const { category } = useParams();
-  const blocks = category
-    ? categorizedBlocks[category as string]
-    : registryBlocks;
+  const blocks =
+    category && category !== "all"
+      ? categorizedBlocks[category as string]
+      : registryBlocks;
   const query = q ?? "";
 
   const filteredBlocks = blocks.filter((block) => {
