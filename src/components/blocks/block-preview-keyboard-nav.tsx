@@ -88,6 +88,13 @@ export function BlockPreviewKeyboardNav({ blockName }: { blockName: string }) {
       }
     };
 
+    const handleT = () => {
+      const { classList } = document.documentElement;
+      const isDark = classList.contains("dark");
+      classList.remove(isDark ? "dark" : "light");
+      classList.add(isDark ? "light" : "dark");
+    };
+
     const handleKeyDown = (e: KeyboardEvent) => {
       const target = e.target as HTMLElement;
       if (
@@ -106,6 +113,8 @@ export function BlockPreviewKeyboardNav({ blockName }: { blockName: string }) {
         handleArrowDown();
       } else if (e.key === "ArrowUp") {
         handleArrowUp();
+      } else if (e.key === "t") {
+        handleT();
       }
     };
 
