@@ -6,6 +6,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import type { WebSite, WithContext } from "schema-dts";
 import { ThemeToggle } from "@/components/app-sidebar/theme-toggle";
+import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { PackageManagerProvider } from "@/providers/package-manager-provider";
 import { CSPostHogProvider } from "@/providers/posthog-provider";
@@ -152,6 +153,7 @@ export default function RootLayout({
               <div className="fixed right-6 bottom-6">
                 <ThemeToggle />
               </div>
+              <Toaster />
             </TooltipProvider>
           </ThemeProvider>
         </CSPostHogProvider>
