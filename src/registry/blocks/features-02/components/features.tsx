@@ -18,11 +18,14 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center px-6 py-12">
+    <div className="flex min-h-screen items-center justify-center px-6 py-20">
       <div className="w-full grow sm:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg)">
-        <h2 className="font-satoshi font-semibold max-w-sm mx-auto text-center text-4xl tracking-tight sm:text-5xl/[1.2]">
-          Features that help you build better
+        <h2 className="mx-auto text-center font-medium text-4xl tracking-[-0.045em] sm:text-[2.75rem]/[1.2]">
+          Where ideas take shape
         </h2>
+        <p className="mt-3 text-pretty text-center text-lg text-muted-foreground tracking-[-0.01em] sm:text-2xl">
+          No complex configs. Just copy, paste, and start building
+        </p>
         <div className="mt-18 grid w-full gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <div
@@ -32,7 +35,7 @@ const Features = () => {
               <div className="relative mb-5 aspect-4/5 w-full overflow-hidden rounded-xl sm:mb-6">
                 <img
                   alt=""
-                  className="size-full object-cover"
+                  className="size-full bg-muted object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   src={feature.image}
                 />

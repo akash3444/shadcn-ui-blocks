@@ -9,7 +9,7 @@ const Hero = () => {
       <Navbar />
 
       <div className="mx-auto flex max-w-5xl flex-col items-center px-6 py-12 text-center">
-        <h2 className="text-balance font-medium font-satoshi text-4xl leading-[1.4] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+        <h2 className="text-balance font-medium text-4xl leading-[1.4] tracking-[-0.04em] sm:text-5xl md:text-6xl lg:text-7xl">
           Beautifully Designed{" "}
           <span className="inline-block rounded-md bg-primary px-1.5 py-0.5 text-primary-foreground leading-[1.1] tracking-tight sm:rounded-lg sm:px-3.5">
             Premium
@@ -21,7 +21,7 @@ const Hero = () => {
           build your next project.
         </p>
         <div className="mx-auto mt-10 flex w-full max-w-xs flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button className="w-full sm:w-auto">
+          <Button className="w-full sm:w-auto" size="lg">
             Get Started <ArrowUpRight />
           </Button>
           <Button className="w-full sm:w-auto" size="lg" variant="outline">
@@ -30,10 +30,10 @@ const Hero = () => {
         </div>
 
         <div className="mt-24 flex flex-col items-center gap-4">
-          <p className="font-medium text-muted-foreground text-xs uppercase">
+          <p className="font-medium text-muted-foreground text-sm uppercase">
             Trusted by engineers at
           </p>
-          <div className="mx-auto mt-4 grid max-w-5xl grid-cols-2 place-items-center gap-6 grayscale-100 sm:grid-cols-3 sm:gap-x-10 sm:gap-y-12 md:grid-cols-4">
+          <div className="mx-auto mt-4 grid max-w-5xl grid-cols-2 place-items-center gap-6 text-foreground/70 sm:grid-cols-3 sm:gap-x-10 sm:gap-y-12 md:grid-cols-4">
             <Logo01 className="h-7 sm:h-8" />
             <Logo02 className="h-7 sm:h-8" />
             <Logo03 className="h-7 sm:h-8" />

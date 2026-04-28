@@ -51,21 +51,21 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="mx-auto flex max-w-7xl flex-col px-6 py-12 sm:py-14">
-      <h2 className="text-pretty text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-[2.75rem]">
-        Powerful Features, Built for You
+    <div className="mx-auto flex max-w-7xl flex-col px-6 py-20">
+      <h2 className="text-pretty text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
+        Built to just work
       </h2>
-      <p className="mt-3.5 text-center text-muted-foreground text-xl sm:text-2xl">
-        Designed for speed, flexibility, and ease of use.
+      <p className="mt-3 text-pretty text-center text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
+        Designed for speed, flexibility, and ease of use
       </p>
 
       <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
           <div
-            className="rounded-xl border border-border/45 bg-muted/75 p-1 dark:border-border/65"
+            className="rounded-xl border border-border/45 bg-muted/75 p-1 shadow-xs/3 dark:border-border/65"
             key={index}
           >
-            <div className="flex h-full flex-col rounded-lg border border-border/85 bg-background/70 px-6 py-7 shadow-sm/3 dark:border-foreground/13">
+            <div className="flex h-full flex-col rounded-lg border border-border/75 bg-card px-6 py-7 shadow-xs/1 dark:border-foreground/13">
               <div className="flex items-center gap-3">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/7 text-primary dark:bg-primary/10">
                   <feature.icon className="h-5 w-5" />

@@ -34,17 +34,17 @@ export default function Features() {
       <strong className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
         Why Choose Us
       </strong>
-      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-satoshi font-semibold text-4xl/tight tracking-tight sm:text-5xl/tight">
+      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-medium text-4xl/tight tracking-[-0.04em] sm:text-[2.75rem]">
         We are Leading in Smart Assistants with Nearly 20 Years of Experience
       </h2>
-      <p className="mt-5 text-muted-foreground text-xl sm:text-2xl">
+      <p className="mt-5 text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
         We are constantly always keep pace with the time.
       </p>
 
       <div className="mt-16 flex flex-wrap justify-center gap-4">
         {plusPoints.map((plusPoint) => (
           <div
-            className="relative w-full overflow-hidden rounded-lg border bg-gradient-to-b from-foreground/3 px-6 py-10 sm:max-w-xs"
+            className="relative w-full overflow-hidden rounded-lg border bg-linear-to-b from-foreground/3 px-6 py-10 sm:max-w-xs"
             key={plusPoint.title}
           >
             <BackgroundPattern />

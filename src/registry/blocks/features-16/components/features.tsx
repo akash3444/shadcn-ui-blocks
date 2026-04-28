@@ -35,16 +35,15 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="mx-auto flex max-w-7xl flex-col px-6 py-12 sm:py-14">
-      <h2 className="text-pretty text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl">
-        A better way to build interfaces
+    <div className="mx-auto flex max-w-7xl flex-col px-6 py-20">
+      <h2 className="text-pretty text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
+        Consistency first
       </h2>
-      <p className="mt-4 text-center text-muted-foreground text-xl sm:text-2xl">
-        Simplify your development process with flexible, production-ready UI
-        components
+      <p className="mt-3 text-pretty text-center text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
+        Maintain a clean and consistent UI across your app
       </p>
 
-      <div className="mt-16 grid grid-cols-1 gap-6 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-6 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
           <div
             className="relative rounded-lg border border-border/80"

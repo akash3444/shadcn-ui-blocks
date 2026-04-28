@@ -17,15 +17,15 @@ export default function Hero() {
               Just released v1.0.0 <ArrowUpRight className="ml-1 size-4" />
             </Link>
           </Badge>
-          <h1 className="mt-6 max-w-[17ch] font-satoshi font-semibold text-4xl leading-[1.2]! tracking-tight md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem]">
-            Customized Shadcn UI Blocks & Components
+          <h1 className="mt-6 max-w-[17ch] font-medium text-4xl leading-[1.2]! tracking-[-0.04em] md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem]">
+            A better way to build clean interfaces
           </h1>
-          <p className="mt-6 max-w-[60ch] text-foreground/80 text-lg">
+          <p className="mt-4 max-w-[60ch] text-foreground/60 text-lg sm:mt-6 sm:text-xl/normal">
             Explore a collection of Shadcn UI blocks and components, ready to
             preview and copy. Streamline your development workflow with
             easy-to-implement examples.
           </p>
-          <div className="mt-12 flex items-center gap-4">
+          <div className="mt-8 flex items-center gap-4 sm:mt-12">
             <Button className="rounded-full text-base" size="lg">
               Get Started <ArrowUpRight className="h-5! w-5!" />
             </Button>

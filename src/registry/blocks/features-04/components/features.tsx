@@ -54,38 +54,36 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <div className="w-full max-w-(--breakpoint-lg) px-6 py-12">
-        <h2 className="max-w-lg font-satoshi font-semibold text-4xl tracking-[-0.03em] md:text-5xl md:leading-14">
-          Boost Your Strategy with Smart Features
-        </h2>
-        <div className="mx-auto mt-6 grid w-full gap-12 md:mt-10 md:grid-cols-2">
-          <div>
-            <Accordion className="w-full" defaultValue="item-0" type="single">
-              {features.map(({ title, description, icon: Icon }, index) => (
-                <AccordionItem
-                  className="group/accordion-item data-[state=open]:border-primary data-[state=open]:border-b-2"
-                  key={index}
-                  value={`item-${index}`}
-                >
-                  <AccordionTrigger className="text-lg group-first/accordion-item:pt-0 [&>svg]:hidden">
-                    <div className="flex items-center gap-4">
-                      <Icon />
-                      {title}
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-[17px] text-muted-foreground leading-relaxed">
-                    {description}
-                    <div className="mt-6 mb-2 aspect-video w-full rounded-xl bg-muted md:hidden" />
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-
-          {/* Media */}
-          <div className="hidden h-full w-full rounded-xl bg-muted md:block" />
+    <div className="mx-auto w-full max-w-(--breakpoint-lg) px-6 py-20">
+      <h2 className="max-w-lg text-pretty font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem] md:leading-14">
+        Build scalable interfaces with minimal effort
+      </h2>
+      <div className="mx-auto mt-8 grid w-full gap-12 md:mt-12 md:grid-cols-2">
+        <div>
+          <Accordion className="w-full" defaultValue="item-0" type="single">
+            {features.map(({ title, description, icon: Icon }, index) => (
+              <AccordionItem
+                className="group/accordion-item data-[state=open]:border-primary data-[state=open]:border-b-2"
+                key={index}
+                value={`item-${index}`}
+              >
+                <AccordionTrigger className="text-lg group-first/accordion-item:pt-0 [&>svg]:hidden">
+                  <div className="flex items-center gap-4">
+                    <Icon />
+                    {title}
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-[17px] text-muted-foreground leading-relaxed">
+                  {description}
+                  <div className="mt-6 mb-2 aspect-video w-full rounded-xl bg-muted md:hidden" />
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
+
+        {/* Media */}
+        <div className="hidden h-full w-full rounded-xl bg-muted md:block" />
       </div>
     </div>
   );

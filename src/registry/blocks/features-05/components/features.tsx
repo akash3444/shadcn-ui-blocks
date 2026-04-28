@@ -49,13 +49,13 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <div className="w-full max-w-(--breakpoint-lg) px-6 py-10">
-        <h2 className="text-pretty text-center max-w-md mx-auto font-satoshi font-semibold text-4xl tracking-tight md:text-5xl/[1.2]">
-          Designed for <br /> Speed and Scalability
+    <div className="px-6 py-20">
+      <div className="mx-auto w-full max-w-(--breakpoint-lg)">
+        <h2 className="text-pretty text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
+          What makes it different
         </h2>
-        <p className="mt-5 text-lg text-center max-w-md mx-auto text-muted-foreground md:text-2xl">
-          Enhance your strategy with intelligent tools designed for success.
+        <p className="mt-3 text-center text-lg text-muted-foreground tracking-[-0.01em] md:text-2xl">
+          Minimal setup, clean structure, and easy customization
         </p>
         <div className="mx-auto mt-18 grid w-full gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (

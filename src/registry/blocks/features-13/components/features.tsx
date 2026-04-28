@@ -48,12 +48,12 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="mx-auto flex max-w-7xl flex-col px-6 py-12 sm:py-14">
-      <h2 className="text-pretty text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-[2.75rem]">
-        Ship with Confidence
+    <div className="mx-auto flex max-w-7xl flex-col px-6 py-20">
+      <h2 className="text-pretty text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
+        Engineered for speed
       </h2>
-      <p className="mt-4 text-center text-muted-foreground text-xl sm:text-2xl">
-        Designed for speed, flexibility, and ease of use.
+      <p className="mt-3 text-pretty text-center text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
+        Designed for speed, flexibility, and ease of use
       </p>
 
       <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

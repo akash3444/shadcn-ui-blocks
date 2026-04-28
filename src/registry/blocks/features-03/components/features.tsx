@@ -5,10 +5,10 @@ const Features = () => {
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="mx-auto w-full max-w-(--breakpoint-lg) px-6 py-12">
-        <h2 className="font-satoshi font-semibold text-3xl leading-10 tracking-tight sm:text-4xl md:text-[40px] md:leading-13">
-          Design and Engage: <br />
-          <span className="text-foreground/55">
-            Build Smarter Spaces and Strategies
+        <h2 className="font-medium text-3xl leading-10 tracking-[-0.04em] sm:text-4xl md:text-[40px] md:leading-13">
+          Design and engage: <br />
+          <span className="text-muted-foreground/80">
+            Build smarter spaces and strategies
           </span>
         </h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-3">
@@ -17,7 +17,7 @@ const Features = () => {
             {/* Media 1 Mobile */}
             <div className="mb-6 aspect-video w-full rounded-xl bg-background md:hidden" />
 
-            <span className="font-satoshi font-semibold text-xl">
+            <span className="font-medium text-xl tracking-[-0.01em]">
               Plan Smarter
             </span>
 
@@ -57,7 +57,7 @@ const Features = () => {
             {/* Media 2 Mobile */}
             <div className="mb-6 aspect-video w-full rounded-xl bg-background md:hidden" />
 
-            <span className="font-satoshi font-semibold text-xl">
+            <span className="font-medium text-xl tracking-[-0.01em]">
               Plan Smarter
             </span>
 

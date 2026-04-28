@@ -69,13 +69,13 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <div className="w-full max-w-(--breakpoint-xl) px-6 py-10">
-        <h2 className="text-pretty font-satoshi font-semibold text-4xl tracking-[-0.03em] sm:mx-auto sm:max-w-xl sm:text-center md:text-[2.75rem] md:leading-[1.2]">
-          Strengthen Your Strategy
+    <div className="px-6 py-20">
+      <div className="mx-auto w-full max-w-(--breakpoint-xl)">
+        <h2 className="text-pretty font-medium text-4xl tracking-[-0.04em] sm:mx-auto sm:max-w-xl sm:text-center md:text-[2.75rem] md:leading-[1.2]">
+          Strengthen your strategy
         </h2>
-        <p className="mt-3 text-lg text-muted-foreground/80 sm:text-center sm:text-2xl">
-          Enhance your strategy with intelligent tools designed for success.
+        <p className="mt-3 text-pretty text-muted-foreground text-xl -tracking-[0.01em] sm:text-center md:text-2xl">
+          No complex configs. Just copy, paste, and start building
         </p>
         <div className="mt-12 grid gap-6 sm:mt-18 sm:gap-y-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (

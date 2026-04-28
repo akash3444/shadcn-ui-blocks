@@ -55,11 +55,11 @@ export default function Features() {
       <strong className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
         Why Choose Us
       </strong>
-      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-satoshi font-semibold text-4xl leading-[1.3] tracking-[-0.02em] sm:text-5xl">
+      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-medium text-4xl leading-[1.3] tracking-[-0.04em] sm:text-[2.75rem]">
         Advanced Home Security Solutions Built for Modern Living
       </h2>
-      <p className="mt-4 text-muted-foreground text-xl sm:text-2xl">
-        We are constantly always keep pace with the time.
+      <p className="mt-4 text-pretty text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
+        We are constantly always keep pace with the time
       </p>
 
       <div className="relative mx-auto mt-16 grid max-w-5xl grid-cols-1 border nth-3:border sm:grid-cols-2 lg:grid-cols-3">
