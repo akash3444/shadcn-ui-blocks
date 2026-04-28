@@ -33,6 +33,10 @@ interface AnalyticsEvents {
   "block:v0_opened": { block_id: string };
   "block:preview_screen_size": { block_id: string; size: string };
   "block:preview_theme_toggled": { block_id: string; theme: string };
+  "block:preview_color_theme_changed": {
+    block_id: string;
+    color_theme: string;
+  };
   "block:package_manager_change": { package_manager: string };
   // Discovery
   "blocks:search": { query_length: number };

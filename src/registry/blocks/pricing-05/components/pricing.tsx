@@ -67,7 +67,7 @@ const Pricing = () => {
             className={cn(
               "relative rounded-lg border p-7 lg:rounded-none lg:last:rounded-r-xl lg:first:rounded-l-xl",
               {
-                "border-primary ring-1 ring-inset": plan.isPopular,
+                "border-primary ring-1 ring-primary ring-inset": plan.isPopular,
               }
             )}
             key={plan.name}

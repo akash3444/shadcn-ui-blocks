@@ -58,7 +58,7 @@ const Features = () => {
 
       <div className="mt-16 grid grid-cols-1 gap-6 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
-          <div className="rounded-xl border px-6 py-7" key={index}>
+          <div className="rounded-xl border bg-card px-6 py-7" key={index}>
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/5 text-primary dark:bg-primary/15">
               <feature.icon />
             </div>

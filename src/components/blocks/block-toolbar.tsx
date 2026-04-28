@@ -1,14 +1,22 @@
 "use client";
 
-import { FullscreenIcon, Moon, Sun } from "lucide-react";
+import { FullscreenIcon, Moon, Paintbrush, Sun } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { BLOCK_THEMES } from "@/config/block-themes";
 import { blockScreens } from "@/description/blocks";
 import { capture } from "@/lib/analytics";
 import { absoluteUrl } from "@/lib/utils";
@@ -31,6 +39,7 @@ const BlockToolbar = () => {
   return (
     <div className="flex items-center gap-2">
       <BlockInstallCommandCopyButton block={block.name} />
+      <ColorThemePicker />
       <ThemeToggleButton />
       <Tooltip>
         <TooltipTrigger>
@@ -65,6 +74,83 @@ const BlockToolbar = () => {
         ))}
       </div>
     </div>
+  );
+};
+
+const ColorThemePicker = () => {
+  const [mounted, setMounted] = useState(false);
+  const { colorTheme, setColorTheme, theme, block } = useBlockContext();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const handleChange = (value: string) => {
+    setColorTheme(value);
+    capture("block:preview_color_theme_changed", {
+      block_id: block.name,
+      color_theme: value,
+    });
+  };
+
+  if (!mounted) {
+    return (
+      <div className="h-8 w-[130px] rounded-md border bg-transparent max-sm:hidden" />
+    );
+  }
+
+  const activeTheme = BLOCK_THEMES.find((t) => t.id === colorTheme);
+  const swatchColor =
+    activeTheme?.id !== "default"
+      ? activeTheme?.cssVars[theme]?.primary
+      : undefined;
+
+  return (
+    <Select onValueChange={handleChange} value={colorTheme}>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <SelectTrigger
+            className="h-8 w-[130px] bg-background text-xs max-sm:hidden"
+            size="sm"
+          >
+            <span className="flex items-center gap-1.5">
+              {swatchColor ? (
+                <span
+                  className="size-3 shrink-0 rounded-full border border-black/10 dark:border-white/10"
+                  style={{ backgroundColor: swatchColor }}
+                />
+              ) : (
+                <Paintbrush className="size-3 shrink-0 text-muted-foreground" />
+              )}
+              <SelectValue placeholder="Theme" />
+            </span>
+          </SelectTrigger>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>Preview theme</p>
+        </TooltipContent>
+      </Tooltip>
+      <SelectContent align="end">
+        {BLOCK_THEMES.map((t) => {
+          const primaryColor = t.cssVars[theme]?.primary;
+          return (
+            <SelectItem key={t.id} value={t.id}>
+              <span className="flex items-center gap-2">
+                {primaryColor ? (
+                  <span
+                    className="size-3 shrink-0 rounded-full border border-black/10 dark:border-white/10"
+                    style={{ backgroundColor: primaryColor }}
+                  />
+                ) : (
+                  <span className="size-3 shrink-0 rounded-full border border-muted-foreground/50 border-dashed" />
+                )}
+                {t.label}
+              </span>
+            </SelectItem>
+          );
+        })}
+      </SelectContent>
+    </Select>
   );
 };
 

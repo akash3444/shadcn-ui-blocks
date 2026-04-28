@@ -21,7 +21,7 @@ const Hero = () => {
           build your next project.
         </p>
         <div className="mx-auto mt-10 flex w-full max-w-xs flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button className="w-full sm:w-auto" size="lg">
+          <Button className="w-full sm:w-auto">
             Get Started <ArrowUpRight />
           </Button>
           <Button className="w-full sm:w-auto" size="lg" variant="outline">
@@ -33,7 +33,7 @@ const Hero = () => {
           <p className="font-medium text-muted-foreground text-xs uppercase">
             Trusted by engineers at
           </p>
-          <div className="mx-auto mt-4 grid max-w-screen-lg grid-cols-2 place-items-center gap-6 grayscale-100 sm:grid-cols-3 sm:gap-x-10 sm:gap-y-12 md:grid-cols-4">
+          <div className="mx-auto mt-4 grid max-w-5xl grid-cols-2 place-items-center gap-6 grayscale-100 sm:grid-cols-3 sm:gap-x-10 sm:gap-y-12 md:grid-cols-4">
             <Logo01 className="h-7 sm:h-8" />
             <Logo02 className="h-7 sm:h-8" />
             <Logo03 className="h-7 sm:h-8" />

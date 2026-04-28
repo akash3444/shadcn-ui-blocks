@@ -28,8 +28,11 @@ const BlockContext = createContext<{
   block: (typeof blocks)[number];
   theme: Theme;
   setTheme: (theme: Theme) => void;
+  colorTheme: string;
+  setColorTheme: (id: string) => void;
   iframeRef: React.RefObject<HTMLIFrameElement | null>;
   iframeSrc: string;
+  handleIframeLoad: () => void;
 }>({
   codeHtml: null,
   code: null,
@@ -42,8 +45,11 @@ const BlockContext = createContext<{
   block: {} as (typeof blocks)[number],
   theme: "light",
   setTheme: () => {},
+  colorTheme: "default",
+  setColorTheme: () => {},
   iframeRef: { current: null },
   iframeSrc: "",
+  handleIframeLoad: () => {},
 });
 
 const transformCode = (code: string) => {
@@ -97,7 +103,14 @@ export const BlockProvider = ({
   const [codeHtml, setCodeHtml] = useState<string | null>(null);
   const [isLoadingCode, setIsLoadingCode] = useState(false);
 
-  const { theme, setTheme, iframeRef } = useBlockTheme();
+  const {
+    theme,
+    setTheme,
+    colorTheme,
+    setColorTheme,
+    iframeRef,
+    handleIframeLoad,
+  } = useBlockTheme();
 
   const iframeSrc = `/blocks/${block.name}/preview`;
 
@@ -137,8 +150,11 @@ export const BlockProvider = ({
         block,
         theme,
         setTheme,
+        colorTheme,
+        setColorTheme,
         iframeRef,
         iframeSrc,
+        handleIframeLoad,
       }}
     >
       {children}

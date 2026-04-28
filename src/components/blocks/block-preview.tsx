@@ -19,6 +19,7 @@ const BlockPreview = () => {
     screenSize: selectedScreenSize,
     iframeRef,
     iframeSrc,
+    handleIframeLoad: applyTheme,
   } = useBlockContext();
   const blockScreen = blockScreens.find(
     ({ name }) => name === selectedScreenSize
@@ -35,6 +36,7 @@ const BlockPreview = () => {
       iframeRef.current.style.height = `${iframeRef.current.contentWindow?.document.body.scrollHeight}px`;
     }
     setIsIframeHeightDefined(true);
+    applyTheme();
   };
 
   return (
