@@ -1,14 +1,13 @@
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 export default function Integrations() {
   return (
-    <div className="px-6">
-      <div className="mx-auto my-12 flex w-full max-w-md flex-col rounded-lg border bg-muted p-1.5 shadow-xl/5 sm:my-14">
+    <div className="my-12 px-6 sm:my-14">
+      <div className="mx-auto flex w-full max-w-md flex-col rounded-lg border bg-muted p-1 shadow-lg/2">
         <div className="rounded-md border bg-card p-6">
-          <h2 className="font-medium text-3xl tracking-tight">
+          <h2 className="font-medium text-2xl tracking-tight">
             Our Integrations
           </h2>
           <p className="mt-1.5 text-pretty text-muted-foreground">
@@ -18,13 +17,7 @@ export default function Integrations() {
           <div className="mx-auto mt-8 flex w-full flex-col gap-3">
             {integrations.map((integration) => (
               <div
-                className={cn(
-                  "flex items-center gap-3 rounded-lg border bg-card px-3 py-3",
-                  {
-                    "border-primary/10 bg-primary/8":
-                      integration.status === "connected",
-                  }
-                )}
+                className="flex items-center gap-3 rounded-lg border bg-card px-3 py-3"
                 key={integration.title}
               >
                 <img
@@ -35,11 +28,15 @@ export default function Integrations() {
                 <h3 className="font-medium">{integration.title}</h3>
 
                 {integration.status === "connected" ? (
-                  <Badge className="ms-auto h-6">
-                    Connected <Check />
+                  <Badge className="ms-auto h-7 min-w-26 rounded-lg bg-emerald-600/10 px-3 text-emerald-600 text-sm">
+                    Connected
                   </Badge>
                 ) : (
-                  <Button className="ms-auto h-7" size="sm" variant="outline">
+                  <Button
+                    className="ms-auto h-7 min-w-26"
+                    size="sm"
+                    variant="outline"
+                  >
                     Connect <ArrowUpRight />
                   </Button>
                 )}

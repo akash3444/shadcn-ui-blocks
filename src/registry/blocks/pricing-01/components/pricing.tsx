@@ -51,16 +51,19 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center px-6 py-12">
-      <h2 className="text-center font-satoshi font-semibold text-4xl tracking-[-0.03em] sm:text-5xl">
+    <div className="px-6 py-20">
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
         Our Plans
       </h2>
-      <p className="mt-3 text-center text-muted-foreground text-xl">
-        Choose the plan that fits your needs and get started today
+      <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] md:text-2xl">
+        Choose the plan that fits your needs
       </p>
       <div className="mx-auto mt-12 grid max-w-(--breakpoint-lg) grid-cols-1 gap-8 sm:mt-16 lg:grid-cols-3">
         {plans.map((plan) => (
-          <div className="rounded-lg border p-6" key={plan.name}>
+          <div
+            className="rounded-lg border border-border/85 bg-card p-6 shadow-xs/3"
+            key={plan.name}
+          >
             <h3 className="font-medium text-lg">{plan.name}</h3>
             <p className="mt-2 font-satoshi font-semibold text-4xl">
               ${plan.price}

@@ -58,15 +58,15 @@ const pricingPlans: PricingPlan[] = [
 
 const Pricing = () => {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-[-0.035em] sm:text-5xl">
+    <section className="mx-auto max-w-6xl px-6 py-20">
+      <h2 className="text-balance text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
         Plans & Pricing
       </h2>
-      <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-normal sm:mt-4 sm:text-2xl">
-        Flexible pricing designed to grow with your needs. when ready.
+      <p className="mt-2 text-balance text-center text-lg text-muted-foreground -tracking-[0.01em] sm:mt-4 sm:text-2xl">
+        Flexible pricing designed to grow with you ready
       </p>
 
-      <div className="mt-12 grid grid-cols-1 gap-1 rounded-xl border bg-muted/40 p-1 sm:grid-cols-2 md:mt-15 md:grid-cols-3">
+      <div className="mt-12 grid grid-cols-1 gap-1 rounded-xl border bg-muted/40 p-1 sm:mt-16 sm:grid-cols-2 md:mt-15 md:grid-cols-3">
         {pricingPlans.map((plan) => (
           <PlanCard key={plan.name} plan={plan} />
         ))}

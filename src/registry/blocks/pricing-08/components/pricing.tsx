@@ -60,15 +60,15 @@ const pricingPlans: PricingPlan[] = [
 
 const Pricing = () => {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-[-0.035em] sm:text-5xl">
+    <section className="mx-auto max-w-5xl px-6 py-20">
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
         Pricing that makes sense
       </h2>
-      <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-normal sm:mt-4 sm:text-2xl">
+      <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] md:text-2xl">
         Choose a plan that fits your needs with no hidden costs
       </p>
 
-      <div className="mt-12 grid grid-cols-1 gap-y-8 sm:grid-cols-2 md:mt-16 md:grid-cols-3">
+      <div className="mt-12 grid grid-cols-1 gap-y-8 shadow-xs/2 sm:grid-cols-2 md:mt-16 md:grid-cols-3">
         {pricingPlans.map((plan) => (
           <PlanCard key={plan.name} plan={plan} />
         ))}
@@ -80,8 +80,8 @@ const Pricing = () => {
 const PlanCard = ({ plan }: { plan: PricingPlan }) => {
   return (
     <div
-      className={cn("border bg-muted/50", {
-        "relative border border-primary bg-background ring ring-primary ring-inset":
+      className={cn("border bg-card", {
+        "relative border border-primary bg-card ring ring-primary ring-inset":
           plan.isRecommended,
       })}
     >
@@ -92,7 +92,7 @@ const PlanCard = ({ plan }: { plan: PricingPlan }) => {
       )}
       <div
         className={cn("p-6", {
-          "bg-gradient-to-bl from-primary/15": plan.isRecommended,
+          "bg-linear-to-bl from-primary/15": plan.isRecommended,
         })}
       >
         <plan.icon className="mb-5 text-primary" />

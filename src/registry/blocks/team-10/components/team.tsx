@@ -75,12 +75,12 @@ const Team = () => {
   }, [api]);
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-12">
-      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl capitalize tracking-tight md:text-5xl">
-        Meet our amazing team
+    <div className="mx-auto max-w-7xl px-6 py-20">
+      <h2 className="text-balance text-center font-medium text-3xl capitalize tracking-[-0.04em] sm:text-4xl md:text-[2.75rem]">
+        Our core team
       </h2>
-      <p className="mt-3.5 text-balance text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">
-        Our team is made up of a diverse group of dedicated individuals
+      <p className="mt-3 text-balance text-center text-lg text-muted-foreground tracking-[-0.01em] md:text-2xl">
+        Passionate people building great products
       </p>
 
       <div className="mt-14">

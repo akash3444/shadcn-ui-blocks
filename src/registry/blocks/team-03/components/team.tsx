@@ -50,12 +50,12 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="mx-auto flex max-w-(--breakpoint-xl) flex-col justify-center gap-14 px-6 py-8 sm:py-16 lg:flex-row lg:px-8">
+    <div className="mx-auto flex max-w-(--breakpoint-xl) flex-col justify-center gap-14 px-6 py-20 lg:flex-row lg:px-8">
       <div className="sm:max-w-sm lg:max-w-xs">
-        <b className="font-satoshi font-semibold text-muted-foreground text-sm uppercase">
+        <b className="font-medium text-muted-foreground text-sm uppercase">
           Our team
         </b>
-        <h2 className="mt-3 font-satoshi font-semibold text-3xl tracking-tight md:text-4xl">
+        <h2 className="mt-3 font-medium text-3xl tracking-[-0.04em] md:text-4xl">
           Leadership Team
         </h2>
         <p className="mt-4 text-base text-foreground/80 sm:text-lg">

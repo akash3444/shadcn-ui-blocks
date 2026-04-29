@@ -111,7 +111,7 @@ const PlanCard = ({
 
   return (
     <div
-      className={cn("rounded-lg p-6 ring ring-border", {
+      className={cn("rounded-lg bg-card p-6 shadow-xs/3 ring ring-border/85", {
         "relative bg-primary/5 ring-2 ring-primary": plan.isRecommended,
       })}
     >

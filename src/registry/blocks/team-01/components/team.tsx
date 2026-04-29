@@ -53,15 +53,15 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-4 py-14 sm:px-6 lg:px-8">
+    <div className="flex flex-col items-center justify-center px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-xl text-center">
-        <b className="text-center font-semibold text-muted-foreground text-sm uppercase">
+        <b className="text-center font-medium text-muted-foreground text-sm uppercase">
           We&apos;re hiring!
         </b>
-        <h2 className="mt-4 font-satoshi font-semibold text-4xl tracking-tighter sm:text-5xl">
+        <h2 className="mt-4 font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
           Meet Our Team
         </h2>
-        <p className="mt-4 text-base text-muted-foreground sm:text-xl">
+        <p className="mt-4 text-base text-muted-foreground -tracking-[0.01em] sm:text-xl">
           Our philosophy is simple — hire a team of passionate people and foster
           a culture that empowers you to do you best work.
         </p>

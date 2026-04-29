@@ -46,12 +46,12 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="mx-auto max-w-7xl px-6 py-12">
-      <h2 className="text-balance text-center font-satoshi font-semibold text-3xl capitalize tracking-tight sm:text-4xl md:text-5xl">
-        Meet our amazing team
+    <div className="mx-auto max-w-7xl px-6 py-20">
+      <h2 className="text-balance text-center font-medium text-3xl capitalize tracking-[-0.04em] sm:text-4xl md:text-[2.75rem]">
+        Our core team
       </h2>
-      <p className="mt-3.5 text-balance text-center text-muted-foreground tracking-[-0.015em] sm:text-lg md:text-2xl">
-        Our team is made up of a diverse group of dedicated individuals
+      <p className="mt-3 text-balance text-center text-lg text-muted-foreground tracking-[-0.01em] md:text-2xl">
+        Passionate people building great products
       </p>
 
       <div className="mt-12 grid grid-cols-1 gap-2 rounded-xl border border-border/75 bg-muted p-2 sm:mt-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:border-border/60">

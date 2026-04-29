@@ -3,17 +3,17 @@ import { Button } from "@/components/ui/button";
 
 export default function Integrations() {
   return (
-    <div className="mx-auto flex max-w-7xl flex-col px-6 py-12 sm:py-14">
-      <h2 className="text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl">
+    <div className="mx-auto flex max-w-7xl flex-col px-6 py-20">
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
         Our Integrations
       </h2>
-      <p className="mt-3.5 text-pretty text-center text-muted-foreground text-xl sm:text-2xl">
-        Connect your favorite tools and services to your account.
+      <p className="mt-3 text-pretty text-center text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
+        Connect your favorite tools and services
       </p>
-      <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid grid-cols-1 gap-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
         {integrations.map((integration) => (
           <div
-            className="flex flex-col items-start rounded-lg border bg-card p-6"
+            className="flex flex-col items-start rounded-lg border bg-card p-6 shadow-xs/3"
             key={integration.title}
           >
             <div className="grow">

@@ -68,16 +68,16 @@ const Pricing = () => {
   const [selectedBillingPeriod, setSelectedBillingPeriod] = useState("monthly");
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-muted/70 px-6 py-12 dark:bg-muted/50">
-      <h2 className="text-center font-satoshi font-semibold text-4xl tracking-[-0.03em] sm:text-5xl">
+    <div className="px-6 py-20">
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
         Our Plans
       </h2>
-      <p className="mt-3 text-center text-muted-foreground text-xl">
-        Choose the plan that fits your needs and get started today
+      <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] md:text-2xl">
+        Choose the plan that fits your needs
       </p>
 
       <Tabs
-        className="mt-8"
+        className="mx-auto mt-8 max-w-max"
         onValueChange={setSelectedBillingPeriod}
         value={selectedBillingPeriod}
       >
@@ -99,8 +99,8 @@ const Pricing = () => {
       <div className="mx-auto mt-12 grid max-w-(--breakpoint-lg) grid-cols-1 items-center gap-8 sm:mt-16 lg:grid-cols-3 lg:gap-0">
         {plans.map((plan) => (
           <div
-            className={cn("relative rounded-lg border bg-background p-6 px-8", {
-              "z-1 overflow-hidden px-10 py-14 shadow-[0px_2px_12px_0px_rgba(0,0,0,0.07)] lg:-mx-2":
+            className={cn("relative rounded-lg border bg-card/50 p-6 px-8", {
+              "z-1 overflow-hidden bg-card px-10 py-14 shadow-[0px_1px_6px_0px_rgba(0,0,0,0.07)] lg:-mx-2":
                 plan.isPopular,
             })}
             key={plan.name}

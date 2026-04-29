@@ -1,20 +1,20 @@
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 export default function Integrations() {
   return (
-    <div className="mx-auto flex max-w-screen-xl flex-col px-6 py-12 sm:py-14">
-      <h2 className="text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl">
-        Our Integrations
+    <div className="mx-auto flex max-w-7xl flex-col px-6 py-12 sm:py-14">
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
+        Connect your tools
       </h2>
-      <p className="mt-3.5 text-pretty text-center text-muted-foreground text-xl sm:text-2xl">
-        Connect your favorite tools and services to your account.
+      <p className="mt-3 text-pretty text-center text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
+        Connect your favorite tools and services to your account
       </p>
-      <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid grid-cols-1 gap-5 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
         {integrations.map((integration) => (
           <div
-            className="flex items-center gap-4 rounded-lg border bg-card pe-4"
+            className="flex items-center gap-4 rounded-lg border border-border/85 bg-card pe-4 shadow-xs/2"
             key={integration.title}
           >
             <div className="border-e border-dashed p-4">
@@ -27,8 +27,8 @@ export default function Integrations() {
             <h3 className="font-medium text-lg">{integration.title}</h3>
 
             {integration.status === "connected" ? (
-              <Badge className="ms-auto">
-                Connected <Check />
+              <Badge className="ms-auto h-7 min-w-26 rounded-lg bg-emerald-600/10 px-3 text-emerald-600 text-sm">
+                Connected
               </Badge>
             ) : (
               <Button className="ms-auto h-7.5" size="sm" variant="outline">
@@ -93,7 +93,7 @@ const integrations = [
     title: "Linear",
     description: "Project management tool for tracking tasks and projects.",
     url: "https://linear.app/",
-    status: "pending",
+    status: "connected",
   },
   {
     title: "Plausible",

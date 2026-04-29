@@ -53,21 +53,22 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center px-6 py-12">
-      <h2 className="text-center font-satoshi font-semibold text-4xl tracking-[-0.03em] sm:text-5xl">
+    <div className="px-6 py-20">
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
         Our Plans
       </h2>
-      <p className="mt-3 text-center text-muted-foreground text-xl">
-        Choose the plan that fits your needs and get started today
+      <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] md:text-2xl">
+        Choose the plan that fits your needs
       </p>
 
       <div className="mx-auto mt-12 grid max-w-(--breakpoint-lg) grid-cols-1 items-center gap-10 sm:mt-16 lg:grid-cols-3 lg:gap-0">
         {plans.map((plan) => (
           <div
             className={cn(
-              "relative rounded-xl border p-7 lg:rounded-none lg:last:rounded-r-xl lg:first:rounded-l-xl",
+              "relative rounded-xl border bg-card/50 p-7 lg:rounded-none lg:last:rounded-r-xl lg:first:rounded-l-xl",
               {
-                "rounded-xl! border-2 border-primary py-12": plan.isPopular,
+                "rounded-xl! border-2 border-primary bg-card py-12":
+                  plan.isPopular,
               }
             )}
             key={plan.name}
