@@ -8,32 +8,32 @@ import {
 
 function Stats() {
   return (
-    <div className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-tight md:text-5xl">
+    <div className="mx-auto max-w-5xl px-6 py-20">
+      <h2 className="text-balance text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
         Numbers that matter
       </h2>
-      <p className="mt-4 text-center text-muted-foreground text-xl tracking-[-0.015em] sm:text-lg md:text-2xl">
+      <p className="mt-3.5 text-pretty text-center text-muted-foreground text-xl tracking-[-0.015em] sm:text-lg md:text-2xl">
         A quick look at the impact and adoption of our UI components
       </p>
 
       <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         <div className="rounded-xl border border-blue-200 bg-blue-50 p-6 py-7 dark:border-blue-400/30 dark:bg-blue-500/15">
           <MonitorSmartphone className="mb-7 h-10 w-10 stroke-[1.75px] text-blue-500" />
-          <span className="font-satoshi font-semibold text-5xl">70%</span>
+          <span className="font-medium text-5xl">70%</span>
           <p className="mt-4 text-foreground/80 text-xl">
             Faster UI development
           </p>
         </div>
         <div className="rounded-xl border border-green-600/30 bg-green-50 p-6 py-7 dark:border-green-500/30 dark:bg-green-500/15">
           <FastForward className="mb-7 h-10 w-10 stroke-[1.75px] text-green-600" />
-          <span className="font-satoshi font-semibold text-5xl">5x</span>
+          <span className="font-medium text-5xl">5x</span>
           <p className="mt-4 text-foreground/80 text-xl">
             Increase in productivity
           </p>
         </div>
         <div className="row-span-2 flex flex-col overflow-hidden rounded-xl border border-red-200 bg-red-50 p-6 py-7 pb-0 dark:border-red-400/30 dark:bg-red-400/15">
           <HeartHandshake className="mb-7 h-10 w-10 stroke-[1.75px] text-red-500" />
-          <span className="font-satoshi font-semibold text-5xl">98%</span>
+          <span className="font-medium text-5xl">98%</span>
           <p className="mt-4 mb-2 text-foreground/80 text-xl">
             Customer satisfaction
           </p>
@@ -41,14 +41,14 @@ function Stats() {
         </div>
         <div className="rounded-xl border border-amber-600/30 bg-amber-50 p-6 py-7 dark:border-amber-500/30 dark:bg-amber-500/15">
           <TrendingUp className="mb-7 h-10 w-10 stroke-[1.75px] text-amber-600" />
-          <span className="font-satoshi font-semibold text-5xl">300%</span>
+          <span className="font-medium text-5xl">300%</span>
           <p className="mt-4 text-foreground/80 text-xl">
             Growth in last 6 months
           </p>
         </div>
         <div className="rounded-xl border border-purple-200 bg-purple-50 p-6 py-7 dark:border-purple-400/30 dark:bg-purple-400/15">
           <Users className="mb-7 h-10 w-10 stroke-[1.75px] text-purple-500" />
-          <span className="font-satoshi font-semibold text-5xl">120K+</span>
+          <span className="font-medium text-5xl">120K+</span>
           <p className="mt-4 text-foreground/80 text-xl">Daily active users</p>
         </div>
       </div>

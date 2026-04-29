@@ -68,7 +68,7 @@ const changelogs = [
 export default function Changelog() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-16">
-      <h2 className="text-balance font-satoshi font-semibold text-4xl tracking-tight">
+      <h2 className="text-balance font-medium text-4xl tracking-tight">
         Changelog
       </h2>
       <p className="mt-2 text-balance text-lg text-muted-foreground tracking-[-0.015em] sm:mt-3 sm:text-xl">
@@ -101,7 +101,7 @@ export default function Changelog() {
               <div className="absolute inset-0 -z-10 my-auto h-px w-full bg-border" />
             </div>
             <div>
-              <h3 className="-mt-[0.2lh] font-medium text-2xl tracking-tight">
+              <h3 className="-mt-[0.2lh] font-medium text-2xl tracking-[-0.02em]">
                 {changelog.title}
               </h3>
               <span className="mt-2 block text-lg text-muted-foreground tracking-tight sm:hidden">

@@ -16,10 +16,10 @@ import { Textarea } from "@/components/ui/textarea";
 const Contact = () => (
   <div className="flex min-h-screen items-center justify-center py-16">
     <div className="mx-auto w-full max-w-(--breakpoint-xl) px-6 xl:px-0">
-      <b className="font-semibold text-muted-foreground text-sm uppercase">
+      <b className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
         Contact Us
       </b>
-      <h2 className="mt-3 font-satoshi font-semibold text-4xl tracking-tight">
+      <h2 className="mt-3 font-medium text-4xl tracking-[-0.035em]">
         Chat with our friendly team!
       </h2>
       <p className="mt-3 text-lg text-muted-foreground md:text-xl">

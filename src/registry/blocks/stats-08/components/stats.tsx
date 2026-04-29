@@ -2,10 +2,10 @@ const Stats = () => {
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="mx-auto max-w-(--breakpoint-xl) py-12 text-center">
-        <h2 className="font-satoshi font-semibold text-4xl tracking-tight md:text-5xl">
+        <h2 className="font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
           Why Should You Choose Us?
         </h2>
-        <p className="mt-4 text-muted-foreground text-xl md:text-2xl">
+        <p className="mt-3.5 text-muted-foreground text-xl md:text-2xl">
           Because after switching to us...
         </p>
 
@@ -13,7 +13,7 @@ const Stats = () => {
           <div className="mx-auto mt-16 grid max-w-5xl justify-center gap-x-8 gap-y-8 sm:mt-24 sm:grid-cols-2 lg:grid-cols-3">
             <div className="flex flex-col items-center rounded-xl bg-foreground/95 px-6 py-12 dark:bg-foreground/5">
               <Shape1 className="size-14" />
-              <span className="mt-10 font-satoshi font-semibold text-5xl text-background dark:text-foreground">
+              <span className="mt-10 font-medium text-5xl text-background dark:text-foreground">
                 96%
               </span>
               <p className="mt-6 text-background/80 text-lg dark:text-foreground/80">
@@ -22,7 +22,7 @@ const Stats = () => {
             </div>
             <div className="flex flex-col items-center rounded-xl bg-foreground/95 px-6 py-12 dark:bg-foreground/5">
               <Shape2 className="size-14" />
-              <span className="mt-10 font-satoshi font-semibold text-5xl text-background dark:text-foreground">
+              <span className="mt-10 font-medium text-5xl text-background dark:text-foreground">
                 95%
               </span>
               <p className="mt-6 text-background/80 text-lg dark:text-foreground/80">
@@ -31,7 +31,7 @@ const Stats = () => {
             </div>
             <div className="flex flex-col items-center rounded-xl bg-foreground/95 px-6 py-12 dark:bg-foreground/5">
               <Shape3 className="size-14" />
-              <span className="mt-10 font-satoshi font-semibold text-5xl text-background dark:text-foreground">
+              <span className="mt-10 font-medium text-5xl text-background dark:text-foreground">
                 87%
               </span>
               <p className="mt-6 text-background/80 text-lg dark:text-foreground/80">

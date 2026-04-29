@@ -4,12 +4,10 @@ import Link from "next/link";
 const Contact = () => (
   <div className="flex min-h-screen items-center justify-center py-16">
     <div className="text-center">
-      <b className="font-semibold text-muted-foreground text-sm uppercase">
+      <b className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
         Contact Us
       </b>
-      <h2 className="mt-3 font-satoshi font-semibold text-4xl tracking-tight">
-        Get In Touch
-      </h2>
+      <h2 className="mt-3 font-medium text-4xl tracking-tight">Get In Touch</h2>
       <p className="mt-3 text-lg text-muted-foreground md:text-xl">
         Our friendly team is always here to chat
       </p>

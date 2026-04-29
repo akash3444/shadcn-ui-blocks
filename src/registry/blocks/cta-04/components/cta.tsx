@@ -21,8 +21,8 @@ const CTA = () => {
           />
 
           <div className="relative isolate pt-12 pb-0 md:pb-12">
-            <h2 className="font-satoshi font-semibold text-4xl tracking-tight lg:text-5xl/tight">
-              Ready to transform your workflow?
+            <h2 className="font-medium text-4xl tracking-[-0.04em] lg:text-5xl/[1.2]">
+              Build something you're proud of today
             </h2>
             <p className="mt-2 text-muted-foreground text-xl tracking-[-0.015em] sm:mt-4 lg:text-2xl">
               Join thousands of developers using our tools.

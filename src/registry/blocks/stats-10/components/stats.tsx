@@ -5,16 +5,16 @@ import { cn } from "@/lib/utils";
 const Stats = () => {
   return (
     <div className="flex min-h-screen items-center justify-center">
-      <div className="mx-auto flex max-w-(--breakpoint-xl) flex-col items-start gap-10 px-6 py-12 md:flex-row">
+      <div className="mx-auto flex max-w-(--breakpoint-xl) flex-col items-start gap-14 px-6 py-12 sm:gap-10 md:flex-row">
         <div className="max-w-md lg:max-w-lg">
-          <h2 className="font-satoshi font-semibold text-4xl tracking-tighter md:text-5xl">
+          <h2 className="font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
             Numbers that matter
           </h2>
-          <p className="mt-4 text-muted-foreground text-xl tracking-[-0.01em] sm:mt-5 md:text-2xl/snug">
+          <p className="mt-3.5 text-muted-foreground text-xl tracking-[-0.01em] md:text-2xl/normal">
             Continuously improving with feedback from developers building modern
             applications.
           </p>
-          <Button className="mt-8" size="lg">
+          <Button className="mt-8 sm:mt-10" size="lg">
             View all stats <ArrowUpRightIcon />
           </Button>
         </div>
@@ -26,19 +26,19 @@ const Stats = () => {
           )}
         >
           <div className="">
-            <div className="font-satoshi font-semibold text-5xl">96%</div>
+            <div className="font-medium text-5xl">96%</div>
             <p className="text-foreground/80 text-lg">
               of customers say they have a better brand experience
             </p>
           </div>
           <div className="">
-            <div className="font-satoshi font-semibold text-5xl">95%</div>
+            <div className="font-medium text-5xl">95%</div>
             <p className="text-foreground/80 text-lg">
               of customers say they gather more data, more easily
             </p>
           </div>
           <div className="">
-            <div className="font-satoshi font-semibold text-5xl">87%</div>
+            <div className="font-medium text-5xl">87%</div>
             <p className="text-foreground/80 text-lg">
               of customers say they reveal deeper insights from data
             </p>

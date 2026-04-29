@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const CTA = () => {
   return (
-    <div className="px-0 py-16 sm:px-6">
+    <div className="px-0 py-20 sm:px-6">
       <div className="relative flex w-full flex-col items-center justify-center py-16">
         <h2 className="font-medium text-5xl tracking-tighter">
           Ready to Build Faster?

@@ -66,7 +66,7 @@ const Pricing = () => {
         Flexible pricing designed to grow with you ready
       </p>
 
-      <div className="mt-12 grid grid-cols-1 gap-1 rounded-xl border bg-muted/40 p-1 sm:mt-16 sm:grid-cols-2 md:mt-15 md:grid-cols-3">
+      <div className="mt-12 grid grid-cols-1 gap-1 rounded-xl border bg-muted/40 p-1 sm:mt-16 sm:mt-16 sm:grid-cols-2 md:mt-15 md:grid-cols-3">
         {pricingPlans.map((plan) => (
           <PlanCard key={plan.name} plan={plan} />
         ))}

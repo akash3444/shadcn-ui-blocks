@@ -69,10 +69,10 @@ const CTA = () => {
         </div>
 
         <div className="relative isolate">
-          <h2 className="text-balance font-medium font-satoshi text-4xl text-black/85 tracking-tight md:leading-tight lg:text-[3.25rem]">
-            Ready to Build Faster?
+          <h2 className="text-balance font-medium text-4xl text-black/85 tracking-[-0.04em] md:leading-tight lg:text-[2.75rem]">
+            Turn your vision into reality
           </h2>
-          <p className="mt-4 text-balance text-black/80 text-xl/normal md:mt-2.5">
+          <p className="mt-4 text-balance text-black/70 text-xl/normal md:mt-2.5 lg:text-[1.4rem]/normal">
             Join thousands of developers using our premium component library to
             ship beautiful UIs in minutes, not hours.
           </p>
