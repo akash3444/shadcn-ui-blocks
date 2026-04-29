@@ -1,3 +1,4 @@
+import type { SVGProps } from "react";
 
 export const Logo01 = (props: SVGProps<SVGSVGElement>) => (
   <svg

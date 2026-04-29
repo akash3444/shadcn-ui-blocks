@@ -14,7 +14,7 @@ interface PricingPlan {
 const pricingPlans: PricingPlan[] = [
   {
     name: "Starter",
-    description: "Perfect for individuals just getting started.",
+    description: "Perfect for individuals who are just getting started.",
     price: 29,
     isRecommended: false,
     icon: Box,
