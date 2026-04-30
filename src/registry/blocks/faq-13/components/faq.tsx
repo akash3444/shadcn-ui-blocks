@@ -54,18 +54,18 @@ const faqs = [
 export default function FAQ() {
   return (
     <div className="mx-auto max-w-(--breakpoint-lg) px-6 py-14">
-      <h2 className="mt-5 max-w-4xl text-balance font-satoshi font-semibold text-4xl leading-[1.1] tracking-tight">
+      <h2 className="mt-5 max-w-4xl text-balance font-medium text-4xl leading-[1.1] tracking-[-0.04em]">
         Frequently Asked Questions
       </h2>
       <p className="mt-2 text-lg text-muted-foreground sm:text-xl">
         Find answers to common questions about our products and services.
       </p>
 
-      <div className="mt-8 grid grid-cols-1 gap-1 rounded-lg border border-border/50 bg-muted p-1 md:grid-cols-2">
+      <div className="mt-8 grid grid-cols-1 gap-1 rounded-lg border border-border/75 bg-muted p-0.75 md:grid-cols-2">
         {faqs.map((faq, index) => (
           <div
             className={cn(
-              "relative -ms-px -mt-px overflow-hidden border bg-card text-start",
+              "relative overflow-hidden border border-border/90 bg-background text-start",
               "first:rounded-t-md last:rounded-b-md md:nth-[2]:rounded-tr-md md:nth-last-[2]:rounded-bl-md md:last:rounded-bl-none md:first:rounded-tr-none"
             )}
             key={index}

@@ -80,16 +80,16 @@ const faqs: FrequentlyAskedQuestion[] = [
 
 export default function FAQ() {
   return (
-    <div className="bg-muted/50" id="faq">
-      <div className="mx-auto max-w-7xl px-6 py-24 text-center">
-        <h2 className="mx-auto mt-5 max-w-4xl text-balance font-medium font-satoshi text-4xl leading-[1.1] tracking-tight sm:text-5xl">
+    <div>
+      <div className="px-6 py-20 text-center">
+        <h2 className="text-balance text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
           Frequently Asked Questions
         </h2>
-        <p className="mt-5 text-muted-foreground text-xl md:text-2xl md:tracking-[-0.015em]">
-          Find answers to common questions about our products and services.
+        <p className="mt-3 text-balance text-center text-lg text-muted-foreground md:text-2xl md:tracking-[-0.015em]">
+          Find answers to common questions about our products and services
         </p>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2">
+        <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 sm:mt-16 md:grid-cols-2">
           {faqs.map((faq, index) => (
             <div
               className={cn(
@@ -99,7 +99,7 @@ export default function FAQ() {
               key={index}
             >
               <div className="isolate">
-                <div className="flex items-center gap-2 font-medium text-lg">
+                <div className="flex items-center gap-2 font-medium text-lg tracking-tight">
                   <faq.icon className="mr-2.5 size-5 shrink-0 text-primary" />
                   {faq.question}
                 </div>

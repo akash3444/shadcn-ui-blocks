@@ -60,10 +60,10 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <div className="flex min-h-screen items-center justify-center px-6 py-12">
+  <div className="px-6 py-20">
     <div>
-      <h2 className="text-center font-satoshi font-semibold text-4xl tracking-[-0.03em] md:text-5xl">
-        Loved by Developers
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
+        Loved by developers
       </h2>
       <p className="mt-4 text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">
         See how developers and teams are achieving more with us
@@ -76,7 +76,6 @@ const Testimonials = () => (
                 "relative flex flex-col px-6 py-10",
                 "before:absolute before:inset-0 before:-m-px before:border-border before:border-r before:border-b before:border-dashed before:content-['']"
               )}
-              // className={cn("flex flex-col px-6 py-10")}
               key={testimonial.id}
             >
               <div className="flex items-center justify-center gap-1">

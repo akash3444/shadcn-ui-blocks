@@ -67,9 +67,9 @@ const FAQ = () => {
   const [value, setValue] = useState<string>();
 
   return (
-    <div className="flex min-h-screen items-center justify-center px-6 py-12">
-      <div className="w-full max-w-(--breakpoint-lg)">
-        <h2 className="font-medium font-satoshi text-4xl leading-[1.15]! tracking-tight md:text-5xl">
+    <div className="px-6 py-20">
+      <div className="mx-auto w-full max-w-(--breakpoint-lg)">
+        <h2 className="font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
           Frequently Asked Questions
         </h2>
 

@@ -62,9 +62,9 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <div className="flex min-h-screen items-center justify-center px-6 py-12">
+  <div className="px-6 py-20">
     <div>
-      <h2 className="text-center font-satoshi font-semibold text-4xl tracking-[-0.03em] md:text-5xl">
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
         Trusted by many
       </h2>
       <p className="mt-3.5 text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">
@@ -73,7 +73,7 @@ const Testimonials = () => (
       <div className="mx-auto mt-14 max-w-(--breakpoint-xl) columns-1 gap-8 md:columns-2 lg:mt-16 lg:columns-3">
         {testimonials.map((testimonial) => (
           <div
-            className="mb-8 break-inside-avoid rounded-xl border border-border/60 p-6 shadow-sm/4 dark:shadow-foreground/50 dark:shadow-lg/7"
+            className="mb-8 break-inside-avoid rounded-xl border border-border/85 bg-card p-6 shadow-xs/3 dark:shadow-foreground/50 dark:shadow-lg/7"
             key={testimonial.id}
           >
             <div className="flex items-center justify-between">

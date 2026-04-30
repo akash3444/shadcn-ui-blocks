@@ -12,7 +12,7 @@ const BlockPreviewLayout = async ({
   const { block } = await params;
 
   return (
-    <div className="block-preview-wrapper not-dark:bg-neutral-50/70">
+    <div className="block-preview-wrapper min-h-screen not-dark:bg-neutral-50/50">
       {process.env.NODE_ENV === "development" && (
         <>
           <BlockPreviewKeyboardNav blockName={block} />

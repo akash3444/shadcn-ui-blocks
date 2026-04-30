@@ -48,25 +48,30 @@ const faq = [
 
 const FAQ = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center px-6 py-12">
+    <div className="flex min-h-screen items-center justify-center px-6 py-20">
       <div className="max-w-(--breakpoint-lg)">
-        <h2 className="text-center font-medium font-satoshi text-4xl leading-[1.15]! tracking-tight md:text-5xl">
+        <h2 className="text-center font-medium text-4xl/snug tracking-[-0.04em] md:text-[2.75rem]">
           Frequently Asked Questions
         </h2>
         <p className="mt-3 text-center text-muted-foreground text-xl md:text-2xl md:tracking-[-0.015em]">
           Quick answers to common questions about our products and services.
         </p>
 
-        <div className="mt-12 grid gap-4 rounded-xl md:grid-cols-2">
+        <div className="mt-12 grid gap-4 rounded-xl sm:mt-16 md:grid-cols-2">
           {faq.map(({ question, answer, icon: Icon }) => (
-            <div className="rounded-xl border p-6" key={question}>
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-muted">
-                <Icon className="size-5" />
+            <div
+              className="rounded-xl border border-border/85 bg-card p-6 shadow-xs/3"
+              key={question}
+            >
+              <div className="flex items-center gap-3">
+                <div className="flex size-9 items-center justify-center rounded-full bg-foreground/5">
+                  <Icon className="size-4.5" />
+                </div>
+                <span className="font-medium text-[1.175rem] tracking-tight">
+                  {question}
+                </span>
               </div>
-              <div className="mt-5 mb-2 flex items-start gap-2 font-medium text-xl tracking-tight">
-                <span>{question}</span>
-              </div>
-              <p className="text-foreground/70">{answer}</p>
+              <p className="mt-3 text-foreground/70">{answer}</p>
             </div>
           ))}
         </div>

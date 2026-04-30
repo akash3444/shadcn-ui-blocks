@@ -43,18 +43,18 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-14">
-      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl">
+    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-20">
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
         What Our Customers Say
       </h2>
       <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-[-0.015em] sm:mt-4 sm:text-2xl">
         Real feedback from real users who trust our platform
       </p>
 
-      <div className="mx-auto mt-14 max-w-5xl columns-1 gap-1 rounded-xl border bg-muted/35 p-1 sm:columns-2 lg:columns-3">
+      <div className="mx-auto mt-14 max-w-5xl columns-1 gap-1 rounded-xl border border-border/90 bg-muted/35 p-1 sm:columns-2 lg:columns-3">
         {testimonials.map(({ name, avatar, role, testimonial }, index) => (
           <div
-            className="shadow/5 relative mb-1 flex break-inside-avoid flex-col rounded-lg border bg-background px-5 pt-10 pb-3"
+            className="relative mb-1 flex break-inside-avoid flex-col rounded-lg border border-border/85 bg-background px-5 pt-10 pb-3 shadow-xs/3"
             key={index}
           >
             {/* Quote */}

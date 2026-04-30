@@ -43,8 +43,8 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-14">
-      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl">
+    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-20">
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
         Loved by Our Users
       </h2>
       <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-[-0.015em] sm:mt-4 sm:text-2xl">

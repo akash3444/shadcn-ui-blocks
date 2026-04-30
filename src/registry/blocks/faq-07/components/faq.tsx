@@ -37,9 +37,9 @@ const faq = [
 
 const FAQ = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center px-6 py-12">
-      <div className="w-full max-w-2xl">
-        <h2 className="font-medium font-satoshi text-4xl leading-[1.15]! tracking-tight">
+    <div className="px-6 py-20">
+      <div className="mx-auto w-full max-w-2xl">
+        <h2 className="font-medium text-4xl/snug tracking-[-0.04em]">
           Frequently Asked Questions
         </h2>
         <p className="mt-2 text-muted-foreground text-xl">

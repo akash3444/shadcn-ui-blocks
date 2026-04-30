@@ -104,38 +104,36 @@ const Testimonials = () => {
   }, [api]);
 
   return (
-    <div className="flex min-h-screen w-full items-center justify-center px-6 py-12">
-      <div className="w-full">
-        <h2 className="text-center font-satoshi font-semibold text-4xl tracking-[-0.03em] md:text-5xl">
-          People love using it
-        </h2>
-        <p className="mt-4 text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">
-          Real feedback from those who've made it part of their workflow
-        </p>
-        <div className="container mx-auto mt-14 w-full px-12 lg:mt-16 lg:max-w-(--breakpoint-lg) xl:max-w-(--breakpoint-xl)">
-          <Carousel setApi={setApi}>
-            <CarouselContent>
-              {testimonials.map((testimonial) => (
-                <CarouselItem key={testimonial.id}>
-                  <TestimonialCard testimonial={testimonial} />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-          <div className="flex items-center justify-center gap-2">
-            {Array.from({ length: count }).map((_, index) => (
-              <button
-                className={cn("h-3.5 w-3.5 rounded-full border-2", {
-                  "border-primary bg-primary": current === index + 1,
-                })}
-                key={index}
-                onClick={() => api?.scrollTo(index)}
-                type="button"
-              />
+    <div className="px-6 py-20">
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
+        People love using it
+      </h2>
+      <p className="mt-4 text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">
+        Real feedback from those who've made it part of their workflow
+      </p>
+      <div className="container mx-auto mt-14 w-full px-12 lg:mt-16 lg:max-w-(--breakpoint-lg) xl:max-w-(--breakpoint-xl)">
+        <Carousel setApi={setApi}>
+          <CarouselContent>
+            {testimonials.map((testimonial) => (
+              <CarouselItem key={testimonial.id}>
+                <TestimonialCard testimonial={testimonial} />
+              </CarouselItem>
             ))}
-          </div>
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+        <div className="flex items-center justify-center gap-2">
+          {Array.from({ length: count }).map((_, index) => (
+            <button
+              className={cn("h-3.5 w-3.5 rounded-full border-2", {
+                "border-primary bg-primary": current === index + 1,
+              })}
+              key={index}
+              onClick={() => api?.scrollTo(index)}
+              type="button"
+            />
+          ))}
         </div>
       </div>
     </div>

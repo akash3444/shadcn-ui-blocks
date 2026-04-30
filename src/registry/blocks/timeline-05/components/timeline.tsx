@@ -47,9 +47,7 @@ export default function Timeline() {
           <div className="relative pb-10 pl-10 last:pb-0" key={index}>
             {/* Timeline Icon */}
             <div className="absolute left-px flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full border border-muted-foreground/40 bg-accent ring-8 ring-background">
-              <span className="font-satoshi font-semibold text-lg">
-                {index + 1}
-              </span>
+              <span className="font-medium text-lg">{index + 1}</span>
             </div>
 
             {/* Content */}

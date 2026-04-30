@@ -1,74 +1,81 @@
+import { PlusIcon } from "lucide-react";
+import { Accordion as AccordionPrimitive } from "radix-ui";
 import {
-  BadgeDollarSign,
-  Route,
-  ShieldCheck,
-  Truck,
-  Undo2,
-  UserRoundCheck,
-} from "lucide-react";
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+} from "@/components/ui/accordion";
+import { cn } from "@/lib/utils";
 
 const faq = [
   {
-    icon: Undo2,
     question: "What is your return policy?",
     answer:
       "You can return unused items in their original packaging within 30 days for a refund or exchange. Contact support for assistance.",
   },
   {
-    icon: Route,
     question: "How do I track my order?",
     answer:
       "Track your order using the link provided in your confirmation email, or log into your account to view tracking details.",
   },
   {
-    icon: Truck,
     question: "Do you ship internationally?",
     answer:
       "Yes, we ship worldwide. Shipping fees and delivery times vary by location, and customs duties may apply for some countries.",
   },
   {
-    icon: BadgeDollarSign,
     question: "What payment methods do you accept?",
     answer:
       "We accept Visa, MasterCard, American Express, PayPal, Apple Pay, and Google Pay, ensuring secure payment options for all customers.",
   },
   {
-    icon: ShieldCheck,
     question: "What if I receive a damaged item?",
     answer:
       "Please contact our support team within 48 hours of delivery with photos of the damaged item. We’ll arrange a replacement or refund.",
-  },
-  {
-    icon: UserRoundCheck,
-    question: "How can I contact customer support?",
-    answer:
-      "Reach out via email at support@example.com or call us at 1-800-123-4567 for assistance with any inquiries.",
   },
 ];
 
 const FAQ = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center px-6 py-12">
-      <div className="max-w-(--breakpoint-lg)">
-        <h2 className="text-center font-medium font-satoshi text-4xl leading-[1.15]! tracking-tight md:text-5xl">
+    <div className="px-6 py-20">
+      <div className="mx-auto w-full max-w-2xl">
+        <h2 className="font-medium text-4xl/snug tracking-[-0.04em]">
           Frequently Asked Questions
         </h2>
-        <p className="mt-3 text-center text-muted-foreground text-xl md:text-2xl md:tracking-[-0.015em]">
+        <p className="mt-2 text-muted-foreground text-xl">
           Quick answers to common questions about our products and services.
         </p>
 
-        <div className="mt-12 grid overflow-hidden rounded-xl outline-[1px] outline-background outline-solid -outline-offset-1 md:grid-cols-2">
-          {faq.map(({ question, answer, icon: Icon }) => (
-            <div className="-mt-px -ml-px border p-6" key={question}>
-              <div className="flex size-10 items-center justify-center rounded-full bg-muted">
-                <Icon className="size-5" />
-              </div>
-              <div className="mt-5 mb-2 flex items-start gap-2 font-medium text-xl tracking-tight">
-                <span>{question}</span>
-              </div>
-              <p className="text-foreground/70">{answer}</p>
-            </div>
-          ))}
+        <div className="mt-8 rounded-xl border border-border/65 bg-muted p-1 sm:mt-10">
+          <Accordion
+            className="space-y-px rounded-lg border border-border/65 bg-border/20"
+            collapsible
+            defaultValue="question-0"
+            type="single"
+          >
+            {faq.map(({ question, answer }, index) => (
+              <AccordionItem
+                className="border-none bg-background px-4 first:rounded-t-lg last:rounded-b-lg"
+                key={question}
+                value={`question-${index}`}
+              >
+                <AccordionPrimitive.Header className="flex items-center">
+                  <AccordionPrimitive.Trigger
+                    className={cn(
+                      "flex flex-1 items-center justify-between pt-4 pb-3 font-medium tracking-tight transition-all hover:underline [&[data-state=open]>svg]:rotate-45",
+                      "text-start text-lg"
+                    )}
+                  >
+                    {question}
+                    <PlusIcon className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-base text-muted-foreground">
+                  {answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </div>

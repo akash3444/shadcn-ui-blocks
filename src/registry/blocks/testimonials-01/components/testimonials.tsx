@@ -62,9 +62,9 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <div className="flex min-h-screen items-center justify-center px-6 py-12">
+  <div className="px-6 py-20">
     <div>
-      <h2 className="text-center font-satoshi font-semibold text-4xl tracking-[-0.03em] md:text-5xl">
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
         What developers are saying
       </h2>
       <p className="mt-3.5 text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">

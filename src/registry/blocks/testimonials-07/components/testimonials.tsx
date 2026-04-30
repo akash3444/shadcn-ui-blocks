@@ -47,8 +47,8 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-14">
-      <h2 className="text-balance text-center font-satoshi font-semibold text-4xl tracking-tight sm:text-5xl">
+    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-20">
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
         Testimonials
       </h2>
       <p className="mt-2.5 text-balance text-center text-lg text-muted-foreground tracking-normal sm:text-2xl">
@@ -58,7 +58,7 @@ const Testimonials = () => {
       <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {testimonials.map(({ name, avatar, role, testimonial }, index) => (
           <div
-            className="relative flex flex-col rounded-lg border pb-1"
+            className="relative flex flex-col rounded-lg border border-border/85 bg-card pb-1 shadow-xs/3"
             key={index}
           >
             <p className="grow rounded-t-lg px-5 py-6 font-medium text-lg">

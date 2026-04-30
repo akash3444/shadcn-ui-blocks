@@ -61,7 +61,7 @@ export default function Timeline() {
                 }
               )}
             >
-              <span className="font-satoshi font-semibold text-lg">
+              <span className="font-medium text-lg">
                 {completed ? <Check className="h-5 w-5" /> : index + 1}
               </span>
             </div>

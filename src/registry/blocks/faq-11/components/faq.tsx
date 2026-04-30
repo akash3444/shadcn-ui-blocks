@@ -152,15 +152,15 @@ const FAQ = () => {
   )?.faqs;
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-14">
-      <h2 className="text-balance text-center font-medium font-satoshi text-4xl tracking-tight sm:text-5xl">
+    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-20">
+      <h2 className="text-balance text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
         Frequently Asked Questions
       </h2>
-      <p className="mt-5 text-balance text-center text-lg text-muted-foreground md:text-2xl md:tracking-[-0.015em]">
-        Find answers to common questions about our products and services.
+      <p className="mt-3 text-balance text-center text-lg text-muted-foreground md:text-2xl md:tracking-[-0.015em]">
+        Find answers to common questions about our products and services
       </p>
 
-      <div className="mx-auto mt-16 max-w-4xl">
+      <div className="mx-auto mt-12 max-w-4xl sm:mt-16">
         {/* Mobile FAQs */}
         <div className="flex flex-col divide-y sm:hidden">
           {categorizedFaqs.map(({ category, icon: Icon, faqs }) => (

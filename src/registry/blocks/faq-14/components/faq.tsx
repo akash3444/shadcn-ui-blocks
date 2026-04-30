@@ -55,7 +55,7 @@ const faqs = [
 const FAQ = () => {
   return (
     <div className="mx-auto max-w-2xl px-6 py-12 sm:py-14">
-      <h2 className="text-balance font-medium font-satoshi text-4xl tracking-tight">
+      <h2 className="text-balance font-medium text-4xl/[1.3] tracking-[-0.04em]">
         Got Questions? We've Got Answers
       </h2>
       <p className="mt-2.5 text-balance text-lg text-muted-foreground tracking-normal">
