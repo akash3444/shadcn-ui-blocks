@@ -98,7 +98,7 @@ const BlockCategoryPage = async (props: {
   const { category } = params;
 
   return (
-    <div className="bg-[#fafafa] dark:bg-foreground/2">
+    <div>
       <Navbar className="w-full max-w-384 px-6" />
       <div className="mx-auto max-w-(--breakpoint-2xl) py-12 sm:py-16">
         <Suspense fallback={null}>
