@@ -185,7 +185,14 @@ export const blocks: RegistryBlock[] = [
       () => import("@/registry/blocks/hero-03/components/hero")
     ),
     categories: [categories.hero],
-    files: [{ path: "components/hero.tsx" }],
+    files: [
+      { path: "components/hero.tsx" },
+      { path: "components/gradient-text.tsx" },
+      { path: "components/navbar.tsx" },
+      { path: "components/logo.tsx" },
+      { path: "components/nav-menu.tsx" },
+      { path: "components/navigation-sheet.tsx" },
+    ],
   },
   {
     name: "hero-04",

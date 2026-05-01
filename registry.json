@@ -553,15 +553,39 @@
       "title": "Hero 03",
       "description": "A simple hero block",
       "dependencies": [
-        "lucide-react"
+        "lucide-react",
+        "motion",
+        "@radix-ui/react-visually-hidden"
       ],
       "registryDependencies": [
         "badge",
-        "button"
+        "button",
+        "navigation-menu",
+        "sheet"
       ],
       "files": [
         {
           "path": "src/registry/blocks/hero-03/components/hero.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/hero-03/components/gradient-text.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/hero-03/components/navbar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/hero-03/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/hero-03/components/nav-menu.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/hero-03/components/navigation-sheet.tsx",
           "type": "registry:component"
         }
       ]
