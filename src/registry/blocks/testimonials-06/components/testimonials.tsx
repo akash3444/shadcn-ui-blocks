@@ -35,7 +35,7 @@ const testimonials = [
       "An amazing tool that simplifies complex tasks. Highly recommended for professionals in the industry. " +
       "The intuitive interface makes it easy to onboard new team members, and the automation features save us countless hours every week. ",
     portraitImage:
-      "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     id: 3,

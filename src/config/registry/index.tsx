@@ -1062,6 +1062,19 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.testimonials],
     files: [{ path: "components/testimonials.tsx" }],
   },
+  {
+    name: "testimonials-13",
+    title: "Testimonials 13",
+    description: "A simple testimonials block",
+    component: React.lazy(
+      () => import("@/registry/blocks/testimonials-13/components/testimonials")
+    ),
+    categories: [categories.testimonials],
+    files: [
+      { path: "components/testimonials.tsx" },
+      { path: "components/ui/marquee.tsx" },
+    ],
+  },
   // Login Blocks
   {
     name: "login-01",
@@ -2315,7 +2328,8 @@ export const blocks: RegistryBlock[] = [
   {
     name: "not-found-02",
     title: "Not Found 02",
-    description: "A 404 not found block with big text, suggestions, and actions",
+    description:
+      "A 404 not found block with big text, suggestions, and actions",
     component: React.lazy(
       () => import("@/registry/blocks/not-found-02/components/not-found")
     ),

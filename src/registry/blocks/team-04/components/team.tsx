@@ -16,7 +16,7 @@ const teamMembers = [
     title: "Engineering Manager",
     bio: "Lead engineering teams at Figma and Protocol Labs.",
     imageUrl:
-      "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     name: "Bob Smith",

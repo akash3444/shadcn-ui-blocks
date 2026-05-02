@@ -8861,6 +8861,22 @@
       ]
     },
     {
+      "name": "testimonials-13",
+      "type": "registry:block",
+      "title": "Testimonials 13",
+      "description": "A simple testimonials block",
+      "files": [
+        {
+          "path": "src/registry/blocks/testimonials-13/components/testimonials.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/testimonials-13/components/ui/marquee.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "blog-04",
       "type": "registry:block",
       "title": "Blog 04",

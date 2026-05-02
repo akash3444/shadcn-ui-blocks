@@ -25,7 +25,7 @@ const blogPosts = [
     title: "Understanding React Server Components",
     author: "Jane Smith",
     authorImage:
-      "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=128",
+      "https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=128",
     date: "Nov 28, 2024",
     image:
       "https://cdn.pixabay.com/photo/2020/02/13/06/49/seascape-4844697_1280.jpg",
