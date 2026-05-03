@@ -38,7 +38,6 @@ interface AnalyticsEvents {
     color_theme: string;
   };
   "block:package_manager_change": { package_manager: string };
-  "block:primitive_library_change": { primitive_library: string };
   "block:primitive_library_changed": { block_id: string; primitive_library: string };
   // Discovery
   "blocks:search": { query_length: number };

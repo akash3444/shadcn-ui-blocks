@@ -1,7 +1,6 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-import { capture } from "@/lib/analytics";
 
 export type PrimitiveLibrary = "radix" | "base";
 
@@ -57,9 +56,6 @@ export const PrimitiveProvider = ({
   const setPrimitive = (primitive: PrimitiveLibrary) => {
     setSelectedPrimitive(primitive);
     setStoredPrimitive(primitive);
-    capture("block:primitive_library_change", {
-      primitive_library: primitive,
-    });
   };
 
   useEffect(() => {
