@@ -1,16 +1,39 @@
+"use client";
+
+import { Suspense, use } from "react";
 import { codeToHtml } from "shiki";
 import { cn } from "@/lib/utils";
 import { ScrollArea, ScrollBar } from "@/registry/ui/radix/scroll-area";
 import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/radix/tabs";
 
-export default async function CodeBlock() {
-  const html = await codeToHtml(code, {
-    lang: "tsx",
-    themes: {
-      light: "github-light",
-      dark: "github-dark-default",
-    },
-  });
+const code = `const user = {\n\tname: "John Doe",
+\trole: "Frontend Developer",
+\texperience: "2+ years",
+};
+
+export default function ProfileCard() {
+\treturn (
+\t\t<div className="p-4 border rounded-lg">
+\t\t\t<h2 className="text-lg font-semibold">{user.name}</h2>
+\t\t\t<p>{user.role}</p>
+\t\t\t<p className="text-sm text-muted-foreground">
+\t\t\t\tExperience: {user.experience}
+\t\t\t</p>
+\t\t</div>
+\t);
+}
+`;
+
+const htmlPromise = codeToHtml(code, {
+  lang: "tsx",
+  themes: {
+    light: "github-light",
+    dark: "github-dark-default",
+  },
+});
+
+function CodeBlockInner() {
+  const html = use(htmlPromise);
 
   return (
     <div className="flex min-h-dvh items-center justify-center px-6">
@@ -45,20 +68,10 @@ export default async function CodeBlock() {
   );
 }
 
-const code = `const user = {\n\tname: "John Doe",
-\trole: "Frontend Developer",
-\texperience: "2+ years",
-};
-
-export default function ProfileCard() {
-\treturn (
-\t\t<div className="p-4 border rounded-lg">
-\t\t\t<h2 className="text-lg font-semibold">{user.name}</h2>
-\t\t\t<p>{user.role}</p>
-\t\t\t<p className="text-sm text-muted-foreground">
-\t\t\t\tExperience: {user.experience}
-\t\t\t</p>
-\t\t</div>
-\t);
+export default function CodeBlock() {
+  return (
+    <Suspense>
+      <CodeBlockInner />
+    </Suspense>
+  );
 }
-`;

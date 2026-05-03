@@ -1,31 +1,9 @@
+"use client";
+
+import { Suspense, use } from "react";
 import { codeToHtml } from "shiki";
 import { cn } from "@/lib/utils";
 import { CodeBlockHeader } from "./code-block-header";
-
-export default async function CodeBlock() {
-  const html = await codeToHtml(code, {
-    lang: "tsx",
-    themes: {
-      light: "github-light",
-      dark: "github-dark-default",
-    },
-  });
-
-  return (
-    <div className="flex min-h-dvh items-center justify-center px-6">
-      <div className="rounded-lg border border-border/70 bg-muted/70 p-1 pt-0">
-        <CodeBlockHeader code={code} />
-        <div
-          className={cn(
-            "grid",
-            "[&>pre]:overflow-auto [&>pre]:rounded-lg [&>pre]:border [&>pre]:border-border/70 [&>pre]:p-6 [&>pre]:text-sm [&>pre]:leading-[1.6] [&>pre]:shadow-2xs/2 dark:[&>pre]:border-border/80"
-          )}
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </div>
-    </div>
-  );
-}
 
 const code = `const user = {\n\tname: "John Doe",
 \trole: "Frontend Developer",
@@ -44,3 +22,38 @@ export default function ProfileCard() {
 \t);
 }
 `;
+
+const htmlPromise = codeToHtml(code, {
+  lang: "tsx",
+  themes: {
+    light: "github-light",
+    dark: "github-dark-default",
+  },
+});
+
+function CodeBlockInner() {
+  const html = use(htmlPromise);
+
+  return (
+    <div className="flex min-h-dvh items-center justify-center px-6">
+      <div className="rounded-lg border border-border/70 bg-muted/70 p-1 pt-0">
+        <CodeBlockHeader code={code} />
+        <div
+          className={cn(
+            "grid",
+            "[&>pre]:overflow-auto [&>pre]:rounded-lg [&>pre]:border [&>pre]:border-border/70 [&>pre]:p-6 [&>pre]:text-sm [&>pre]:leading-[1.6] [&>pre]:shadow-2xs/2 dark:[&>pre]:border-border/80"
+          )}
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      </div>
+    </div>
+  );
+}
+
+export default function CodeBlock() {
+  return (
+    <Suspense>
+      <CodeBlockInner />
+    </Suspense>
+  );
+}

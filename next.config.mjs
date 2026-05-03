@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  serverExternalPackages: ["shiki"],
   redirects() {
     return [
       {
@@ -47,6 +46,7 @@ const nextConfig = {
       "public/images/templates/**/*",
       "public/r/**/*",
       "node_modules/@shikijs/langs/**/*",
+      "node_modules/@shikijs/themes/**/*",
     ],
   },
   outputFileTracingRoot: process.cwd(),

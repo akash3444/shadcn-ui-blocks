@@ -1,27 +1,8 @@
+"use client";
+
+import { Suspense, use } from "react";
 import { codeToHtml } from "shiki";
 import { cn } from "@/lib/utils";
-
-export default async function CodeBlock() {
-  const html = await codeToHtml(code, {
-    lang: "tsx",
-    themes: {
-      light: "github-light",
-      dark: "github-dark-default",
-    },
-  });
-
-  return (
-    <div className="flex min-h-dvh items-center justify-center px-6">
-      <div
-        className={cn(
-          "grid",
-          "[&>pre]:overflow-auto [&>pre]:rounded-lg [&>pre]:border [&>pre]:border-border/50 not-dark:[&>pre]:bg-muted/60! [&>pre]:p-6 [&>pre]:text-sm [&>pre]:leading-[1.6] dark:[&>pre]:border-border/80"
-        )}
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-    </div>
-  );
-}
 
 const code = `const user = {\n\tname: "John Doe",
 \trole: "Frontend Developer",
@@ -40,3 +21,35 @@ export default function ProfileCard() {
 \t);
 }
 `;
+
+const htmlPromise = codeToHtml(code, {
+  lang: "tsx",
+  themes: {
+    light: "github-light",
+    dark: "github-dark-default",
+  },
+});
+
+function CodeBlockInner() {
+  const html = use(htmlPromise);
+
+  return (
+    <div className="flex min-h-dvh items-center justify-center px-6">
+      <div
+        className={cn(
+          "grid",
+          "[&>pre]:overflow-auto [&>pre]:rounded-lg [&>pre]:border [&>pre]:border-border/50 not-dark:[&>pre]:bg-muted/60! [&>pre]:p-6 [&>pre]:text-sm [&>pre]:leading-[1.6] dark:[&>pre]:border-border/80"
+        )}
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    </div>
+  );
+}
+
+export default function CodeBlock() {
+  return (
+    <Suspense>
+      <CodeBlockInner />
+    </Suspense>
+  );
+}
