@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Badge } from "@/registry/ui/radix/badge";
 import { Button } from "@/registry/ui/radix/button";
 import { cn } from "@/lib/utils";
-import AnimatedGridPattern from "@/registry/blocks/hero-07/components/ui/animated-grid-pattern";
+import AnimatedGridPattern from "@/registry/blocks/shared/hero-07/components/ui/animated-grid-pattern";
 
 export default function Hero() {
   return (

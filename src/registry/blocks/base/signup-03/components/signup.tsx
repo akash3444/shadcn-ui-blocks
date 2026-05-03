@@ -8,7 +8,7 @@ import { Button } from "@/registry/ui/base/button";
 import { Field, FieldError, FieldLabel } from "@/registry/ui/base/field";
 import { Input } from "@/registry/ui/base/input";
 import { Separator } from "@/registry/ui/base/separator";
-import { Logo } from "@/registry/blocks/signup-03/components/logo";
+import { Logo } from "@/registry/blocks/base/signup-03/components/logo";
 
 const formSchema = z.object({
   email: z.string().email(),

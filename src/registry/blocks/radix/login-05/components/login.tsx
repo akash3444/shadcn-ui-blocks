@@ -15,7 +15,7 @@ import { Button } from "@/registry/ui/radix/button";
 import { Field, FieldError, FieldLabel } from "@/registry/ui/radix/field";
 import { Input } from "@/registry/ui/radix/input";
 import { Separator } from "@/registry/ui/radix/separator";
-import { Logo } from "@/registry/blocks/login-05/components/logo";
+import { Logo } from "@/registry/blocks/radix/login-05/components/logo";
 
 const formSchema = z.object({
   email: z.string().email(),

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-04",
+  "title": "Banner Card",
+  "description": "A banner card component",
+  "registryDependencies": [
+    "card",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/card/card-04.tsx",
+      "content": "import { ArrowUpRight, CirclePlay } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/ui/card\";\n\nexport default function CardBanner() {\n  return (\n    <Card className=\"w-full max-w-2xl bg-muted py-10 text-center shadow-none\">\n      <CardHeader className=\"px-8\">\n        <CardTitle className=\"mb-2 font-medium text-4xl tracking-tight\">\n          Power up your scheduling\n        </CardTitle>\n        <CardDescription className=\"mx-auto max-w-lg text-lg text-muted-foreground\">\n          Get started with the world&apos;s leading Scheduling Automation\n          Platform in seconds - for free.\n        </CardDescription>\n      </CardHeader>\n      <CardContent className=\"mx-auto mt-4 flex flex-row gap-2 px-8\">\n        <Button size=\"lg\">\n          Sign up for free <ArrowUpRight />{\" \"}\n        </Button>\n        <Button size=\"lg\" variant=\"outline\">\n          Get a demo <CirclePlay />\n        </Button>\n      </CardContent>\n    </Card>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

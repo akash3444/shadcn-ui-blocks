@@ -1,5 +1,5 @@
 import { PlusIcon } from "lucide-react";
-import { Accordion as AccordionPrimitive } from "radix-ui";
+import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
 import {
   Accordion,
   AccordionContent,
@@ -49,9 +49,8 @@ const FAQ = () => {
         <div className="mt-8 rounded-xl border border-border/65 bg-muted p-1 sm:mt-10">
           <Accordion
             className="space-y-px rounded-lg border border-border/65 bg-border/20"
-            collapsible
-            defaultValue="question-0"
-            type="single"
+            openMultiple={false}
+            defaultValue={["question-0"]}
           >
             {faq.map(({ question, answer }, index) => (
               <AccordionItem
@@ -62,7 +61,7 @@ const FAQ = () => {
                 <AccordionPrimitive.Header className="flex items-center">
                   <AccordionPrimitive.Trigger
                     className={cn(
-                      "flex flex-1 items-center justify-between pt-4 pb-3 font-medium tracking-tight transition-all hover:underline [&[data-state=open]>svg]:rotate-45",
+                      "flex flex-1 items-center justify-between pt-4 pb-3 font-medium tracking-tight transition-all hover:underline [&[aria-expanded=true]>svg]:rotate-45",
                       "text-start text-lg"
                     )}
                   >

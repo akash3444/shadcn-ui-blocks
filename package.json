@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "generate-screenshots": "node --loader ts-node/esm src/lib/generate-block-screenshots.ts",
-    "registry:build": "shadcn build",
+    "registry:build": "shadcn build registry-radix.json -o ./public/r/radix && shadcn build registry-base.json -o ./public/r/base && shadcn build registry.json -o ./public/r",
     "test": "vitest run",
     "test:watch": "vitest"
   },

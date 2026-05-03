@@ -1,7 +1,7 @@
 import { Search } from "lucide-react";
 import { Button } from "@/registry/ui/radix/button";
 import { Input } from "@/registry/ui/radix/input";
-import { Logo } from "@/registry/blocks/navbar-05/components/logo";
+import { Logo } from "@/registry/blocks/shared/navbar-05/components/logo";
 
 const Navbar = () => {
   return (

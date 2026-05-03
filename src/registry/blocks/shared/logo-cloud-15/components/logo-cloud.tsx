@@ -13,7 +13,7 @@ import {
   Logo08,
 } from "@/components/logos";
 import { Marquee } from "@/registry/ui/radix/marquee";
-import { BorderBeam } from "@/registry/blocks/logo-cloud-15/components/magicui/border-beam";
+import { BorderBeam } from "@/registry/blocks/shared/logo-cloud-15/components/magicui/border-beam";
 
 const BEAM_DURATION = 8; // must match BorderBeam duration prop
 const BEAM_SIZE = 100; // must match BorderBeam size prop

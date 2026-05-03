@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { Button } from "@/registry/ui/base/button";
 import { Separator } from "@/registry/ui/base/separator";
-import { GoogleLogo } from "@/registry/blocks/login-06/components/icons";
-import { LoginForm } from "@/registry/blocks/login-06/components/login-form";
-import { Logo } from "@/registry/blocks/login-06/components/logo";
+import { GoogleLogo } from "@/registry/blocks/base/login-06/components/icons";
+import { LoginForm } from "@/registry/blocks/base/login-06/components/login-form";
+import { Logo } from "@/registry/blocks/base/login-06/components/logo";
 
 const Login = () => (
   <div className="flex h-screen items-center justify-center sm:bg-foreground/5">

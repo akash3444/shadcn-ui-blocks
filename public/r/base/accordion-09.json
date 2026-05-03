@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-09",
+  "title": "Expand Icon Accordion",
+  "description": "An accordion with a custom expand icon",
+  "dependencies": [
+    "lucide-react",
+    "radix-ui"
+  ],
+  "registryDependencies": [
+    "accordion"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/accordion/accordion-09.tsx",
+      "content": "import { Plus } from \"lucide-react\";\nimport { Accordion as AccordionPrimitive } from \"radix-ui\";\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n} from \"@/registry/ui/accordion\";\n\nconst items = [\n  {\n    title: \"Can I change or cancel my order after placing it?\",\n    content:\n      \"Yes, you can change or cancel your order within 1 hour of placement by visiting your account page or contacting our support team. After that, orders may already be processed for shipping.\",\n  },\n  {\n    title: \"How long does shipping usually take?\",\n    content:\n      \"Domestic shipping typically takes 3-5 business days, while international orders may take up to 2-3 weeks depending on your location and customs processing times.\",\n  },\n  {\n    title: \"What is your return policy?\",\n    content:\n      \"We offer a 30-day return policy for most products. Items must be unused and in their original packaging. To initiate a return, simply contact our support with your order details.\",\n  },\n];\n\nexport default function AccordionDefaultOpenDemo() {\n  return (\n    <Accordion\n      className=\"my-4 w-full max-w-lg\"\n      collapsible\n      defaultValue=\"item-0\"\n      type=\"single\"\n    >\n      {items.map(({ title, content }, index) => (\n        <AccordionItem key={index} value={`item-${index}`}>\n          <AccordionPrimitive.Header className=\"flex\">\n            <AccordionPrimitive.Trigger className=\"flex flex-1 items-center justify-between py-4 font-medium text-sm transition-all hover:underline [&[data-state=open]>svg]:rotate-45\">\n              {title}\n              <Plus className=\"h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200\" />\n            </AccordionPrimitive.Trigger>\n          </AccordionPrimitive.Header>\n          <AccordionContent>{content}</AccordionContent>\n        </AccordionItem>\n      ))}\n    </Accordion>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

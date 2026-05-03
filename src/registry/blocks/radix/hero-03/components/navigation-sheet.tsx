@@ -7,8 +7,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/registry/ui/radix/sheet";
-import { Logo } from "@/registry/blocks/navbar-04/components/logo";
-import { NavMenu } from "@/registry/blocks/navbar-04/components/nav-menu";
+import { Logo } from "@/registry/blocks/radix/navbar-04/components/logo";
+import { NavMenu } from "@/registry/blocks/radix/navbar-04/components/nav-menu";
 
 export const NavigationSheet = () => {
   return (

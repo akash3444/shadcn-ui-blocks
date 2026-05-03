@@ -82,1610 +82,6 @@
       }
     },
     {
-      "name": "blog-01",
-      "type": "registry:block",
-      "title": "Blog 01",
-      "description": "A simple blog post list",
-      "registryDependencies": [
-        "badge",
-        "card",
-        "select"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/blog-01/components/blog.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "blog-02",
-      "type": "registry:block",
-      "title": "Blog 02",
-      "description": "A simple blog post list",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card",
-        "select"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/blog-02/components/blog.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "blog-03",
-      "type": "registry:block",
-      "title": "Blog 03",
-      "description": "A simple blog post list",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge",
-        "card"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/blog-03/components/blog.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "contact-01",
-      "type": "registry:block",
-      "title": "Contact 01",
-      "description": "A simple contact form",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/contact-01/components/contact.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "contact-02",
-      "type": "registry:block",
-      "title": "Contact 02",
-      "description": "A simple contact form",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "card",
-        "checkbox",
-        "input",
-        "label",
-        "textarea"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/contact-02/components/contact.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "contact-03",
-      "type": "registry:block",
-      "title": "Contact 03",
-      "description": "A simple contact form",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/contact-03/components/contact.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "faq-01",
-      "type": "registry:block",
-      "title": "FAQ 01",
-      "description": "A simple FAQ component",
-      "registryDependencies": [
-        "accordion"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/faq-01/components/faq.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "faq-02",
-      "type": "registry:block",
-      "title": "FAQ 02",
-      "description": "A simple FAQ component",
-      "registryDependencies": [
-        "accordion"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/faq-02/components/faq.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "faq-03",
-      "type": "registry:block",
-      "title": "FAQ 03",
-      "description": "A simple FAQ component",
-      "dependencies": [
-        "lucide-react",
-        "radix-ui"
-      ],
-      "registryDependencies": [
-        "accordion"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/faq-03/components/faq.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "faq-04",
-      "type": "registry:block",
-      "title": "FAQ 04",
-      "description": "A simple FAQ component",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/faq-04/components/faq.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "faq-05",
-      "type": "registry:block",
-      "title": "FAQ 05",
-      "description": "A simple FAQ component",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/faq-05/components/faq.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "faq-06",
-      "type": "registry:block",
-      "title": "FAQ 06",
-      "description": "A simple FAQ component",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/faq-06/components/faq.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "faq-07",
-      "type": "registry:block",
-      "title": "FAQ 07",
-      "description": "A simple FAQ component",
-      "dependencies": [
-        "lucide-react",
-        "radix-ui"
-      ],
-      "registryDependencies": [
-        "accordion"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/faq-07/components/faq.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "features-01",
-      "type": "registry:block",
-      "title": "Features 01",
-      "description": "A simple features block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/features-01/components/features.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "features-02",
-      "type": "registry:block",
-      "title": "Features 02",
-      "description": "A simple features block",
-      "files": [
-        {
-          "path": "src/registry/blocks/features-02/components/features.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "features-03",
-      "type": "registry:block",
-      "title": "Features 03",
-      "description": "A simple features block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/features-03/components/features.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "features-04",
-      "type": "registry:block",
-      "title": "Features 04",
-      "description": "A simple features block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "accordion"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/features-04/components/features.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "features-05",
-      "type": "registry:block",
-      "title": "Features 05",
-      "description": "A simple features block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "card"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/features-05/components/features.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "features-06",
-      "type": "registry:block",
-      "title": "Features 06",
-      "description": "A simple features block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/features-06/components/features.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "features-07",
-      "type": "registry:block",
-      "title": "Features 07",
-      "description": "A simple features block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/features-07/components/features.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "footer-01",
-      "type": "registry:block",
-      "title": "Footer 01",
-      "description": "A simple footer block",
-      "registryDependencies": [
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/footer-01/components/footer.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "footer-02",
-      "type": "registry:block",
-      "title": "Footer 02",
-      "description": "A simple footer block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/footer-02/components/footer.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "footer-03",
-      "type": "registry:block",
-      "title": "Footer 03",
-      "description": "A simple footer block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "input",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/footer-03/components/footer.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "footer-04",
-      "type": "registry:block",
-      "title": "Footer 04",
-      "description": "A simple footer block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "input",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/footer-04/components/footer.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "footer-05",
-      "type": "registry:block",
-      "title": "Footer 05",
-      "description": "A simple footer block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/footer-05/components/footer.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "hero-01",
-      "type": "registry:block",
-      "title": "Hero 01",
-      "description": "A simple hero block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge",
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/hero-01/components/hero.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "hero-02",
-      "type": "registry:block",
-      "title": "Hero 02",
-      "description": "A simple hero block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge",
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/hero-02/components/hero.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "hero-03",
-      "type": "registry:block",
-      "title": "Hero 03",
-      "description": "A simple hero block",
-      "dependencies": [
-        "lucide-react",
-        "motion",
-        "@radix-ui/react-visually-hidden"
-      ],
-      "registryDependencies": [
-        "badge",
-        "button",
-        "navigation-menu",
-        "sheet"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/hero-03/components/hero.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/hero-03/components/gradient-text.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/hero-03/components/navbar.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/hero-03/components/logo.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/hero-03/components/nav-menu.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/hero-03/components/navigation-sheet.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "hero-04",
-      "type": "registry:block",
-      "title": "Hero 04",
-      "description": "A simple hero block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge",
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/hero-04/components/hero.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "hero-05",
-      "type": "registry:block",
-      "title": "Hero 05",
-      "description": "A simple hero block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge",
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/hero-05/components/hero.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "hero-06",
-      "type": "registry:block",
-      "title": "Hero 06",
-      "description": "A simple hero block",
-      "dependencies": [
-        "lucide-react",
-        "next-themes"
-      ],
-      "registryDependencies": [
-        "badge",
-        "button",
-        "https://www.shadcnui-blocks.com/r/dot-pattern.json",
-        "https://www.shadcnui-blocks.com/r/particles.json"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/hero-06/components/hero.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/hero-06/components/background-pattern.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/hero-06/components/ui/dot-pattern.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/hero-06/components/ui/particles.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "hero-07",
-      "type": "registry:block",
-      "title": "Hero 07",
-      "description": "A simple hero block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge",
-        "button",
-        "https://www.shadcnui-blocks.com/r/animated-grid-pattern.json"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/hero-07/components/hero.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/hero-07/components/ui/animated-grid-pattern.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "login-01",
-      "type": "registry:block",
-      "title": "Login 01",
-      "description": "A simple login block",
-      "dependencies": [
-        "react-hook-form",
-        "zod",
-        "@hookform/resolvers"
-      ],
-      "registryDependencies": [
-        "button",
-        "field",
-        "input",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/login-01/components/login.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/login-01/components/logo.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "login-02",
-      "type": "registry:block",
-      "title": "Login 02",
-      "description": "A simple login block",
-      "dependencies": [
-        "react-hook-form",
-        "zod",
-        "@hookform/resolvers"
-      ],
-      "registryDependencies": [
-        "button",
-        "field",
-        "input",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/login-02/components/login.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/login-02/components/logo.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "login-03",
-      "type": "registry:block",
-      "title": "Login 03",
-      "description": "A simple login block",
-      "dependencies": [
-        "react-hook-form",
-        "zod",
-        "@hookform/resolvers"
-      ],
-      "registryDependencies": [
-        "button",
-        "field",
-        "input",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/login-03/components/login.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/login-03/components/logo.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "login-04",
-      "type": "registry:block",
-      "title": "Login 04",
-      "description": "A simple login block",
-      "dependencies": [
-        "react-hook-form",
-        "zod",
-        "@hookform/resolvers"
-      ],
-      "registryDependencies": [
-        "button",
-        "field",
-        "input",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/login-04/components/login.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/login-04/components/logo.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "login-05",
-      "type": "registry:block",
-      "title": "Login 05",
-      "description": "A simple login block",
-      "dependencies": [
-        "@hookform/resolvers",
-        "lucide-react",
-        "react-hook-form",
-        "zod"
-      ],
-      "registryDependencies": [
-        "button",
-        "field",
-        "input",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/login-05/components/login.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/login-05/components/logo.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "logo-cloud-01",
-      "type": "registry:block",
-      "title": "Logo Cloud 01",
-      "description": "A simple logos block",
-      "files": [
-        {
-          "path": "src/registry/blocks/logo-cloud-01/components/logo-cloud.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/logo-cloud-01/components/logos.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "logo-cloud-02",
-      "type": "registry:block",
-      "title": "Logo Cloud 02",
-      "description": "A simple logos block",
-      "files": [
-        {
-          "path": "src/registry/blocks/logo-cloud-02/components/logo-cloud.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/logo-cloud-02/components/logos.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "logo-cloud-03",
-      "type": "registry:block",
-      "title": "Logo Cloud 03",
-      "description": "A simple logos block",
-      "files": [
-        {
-          "path": "src/registry/blocks/logo-cloud-03/components/logo-cloud.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/logo-cloud-03/components/logos.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "logo-cloud-04",
-      "type": "registry:block",
-      "title": "Logo Cloud 04",
-      "description": "A simple logos block",
-      "files": [
-        {
-          "path": "src/registry/blocks/logo-cloud-04/components/logo-cloud.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/logo-cloud-04/components/logos.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "logo-cloud-05",
-      "type": "registry:block",
-      "title": "Logo Cloud 05",
-      "description": "A simple logos block",
-      "files": [
-        {
-          "path": "src/registry/blocks/logo-cloud-05/components/logo-cloud.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/logo-cloud-05/components/logos.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "logo-cloud-06",
-      "type": "registry:block",
-      "title": "Logo Cloud 06",
-      "description": "A simple logos block",
-      "registryDependencies": [
-        "https://www.shadcnui-blocks.com/r/marquee.json"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/logo-cloud-06/components/logo-cloud.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/logo-cloud-06/components/logos.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/logo-cloud-06/components/ui/marquee.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "logo-cloud-07",
-      "type": "registry:block",
-      "title": "Logo Cloud 07",
-      "description": "A simple logos block",
-      "registryDependencies": [
-        "https://www.shadcnui-blocks.com/r/marquee.json"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/logo-cloud-07/components/logo-cloud.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/logo-cloud-07/components/logos.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/logo-cloud-07/components/ui/marquee.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "navbar-01",
-      "type": "registry:block",
-      "title": "Navbar 01",
-      "description": "A simple navbar block",
-      "dependencies": [
-        "lucide-react",
-        "@radix-ui/react-visually-hidden"
-      ],
-      "registryDependencies": [
-        "button",
-        "navigation-menu",
-        "sheet"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/navbar-01/components/navbar.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-01/components/logo.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-01/components/nav-menu.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-01/components/navigation-sheet.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "navbar-02",
-      "type": "registry:block",
-      "title": "Navbar 02",
-      "description": "A simple navbar block",
-      "dependencies": [
-        "lucide-react",
-        "@radix-ui/react-visually-hidden"
-      ],
-      "registryDependencies": [
-        "button",
-        "navigation-menu",
-        "sheet"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/navbar-02/components/navbar.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-02/components/logo.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-02/components/nav-menu.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-02/components/navigation-sheet.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "navbar-03",
-      "type": "registry:block",
-      "title": "Navbar 03",
-      "description": "A simple navbar block",
-      "dependencies": [
-        "lucide-react",
-        "@radix-ui/react-visually-hidden"
-      ],
-      "registryDependencies": [
-        "button",
-        "navigation-menu",
-        "sheet"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/navbar-03/components/navbar.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-03/components/logo.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-03/components/nav-menu.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-03/components/navigation-sheet.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-03/config/navbar.ts",
-          "type": "registry:file",
-          "target": "config/navbar.ts"
-        }
-      ]
-    },
-    {
-      "name": "navbar-04",
-      "type": "registry:block",
-      "title": "Navbar 04",
-      "description": "A simple navbar block",
-      "dependencies": [
-        "lucide-react",
-        "@radix-ui/react-visually-hidden"
-      ],
-      "registryDependencies": [
-        "button",
-        "navigation-menu",
-        "sheet"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/navbar-04/components/navbar.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-04/components/logo.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-04/components/nav-menu.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-04/components/navigation-sheet.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "navbar-05",
-      "type": "registry:block",
-      "title": "Navbar 05",
-      "description": "A simple navbar block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "input"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/navbar-05/components/navbar.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/navbar-05/components/logo.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "pricing-01",
-      "type": "registry:block",
-      "title": "Pricing 01",
-      "description": "A simple pricing block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/pricing-01/components/pricing.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "pricing-02",
-      "type": "registry:block",
-      "title": "Pricing 02",
-      "description": "A simple pricing block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge",
-        "button",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/pricing-02/components/pricing.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "pricing-03",
-      "type": "registry:block",
-      "title": "Pricing 03",
-      "description": "A simple pricing block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge",
-        "button",
-        "separator",
-        "tabs",
-        "tooltip"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/pricing-03/components/pricing.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "pricing-04",
-      "type": "registry:block",
-      "title": "Pricing 04",
-      "description": "A simple pricing block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge",
-        "button",
-        "separator",
-        "tabs",
-        "tooltip"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/pricing-04/components/pricing.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "pricing-05",
-      "type": "registry:block",
-      "title": "Pricing 05",
-      "description": "A simple pricing block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge",
-        "button",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/pricing-05/components/pricing.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "pricing-06",
-      "type": "registry:block",
-      "title": "Pricing 06",
-      "description": "A simple pricing block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge",
-        "button",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/pricing-06/components/pricing.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "signup-01",
-      "type": "registry:block",
-      "title": "Signup 01",
-      "description": "A simple signup block",
-      "dependencies": [
-        "@hookform/resolvers",
-        "react-hook-form",
-        "zod"
-      ],
-      "registryDependencies": [
-        "button",
-        "field",
-        "input",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/signup-01/components/signup.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/signup-01/components/logo.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "signup-02",
-      "type": "registry:block",
-      "title": "Signup 02",
-      "description": "A simple signup block",
-      "dependencies": [
-        "@hookform/resolvers",
-        "react-hook-form",
-        "zod"
-      ],
-      "registryDependencies": [
-        "button",
-        "field",
-        "input",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/signup-02/components/signup.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/signup-02/components/logo.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "signup-03",
-      "type": "registry:block",
-      "title": "Signup 03",
-      "description": "A simple signup block",
-      "dependencies": [
-        "@hookform/resolvers",
-        "react-hook-form",
-        "zod"
-      ],
-      "registryDependencies": [
-        "button",
-        "field",
-        "input",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/signup-03/components/signup.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/signup-03/components/logo.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "signup-04",
-      "type": "registry:block",
-      "title": "Signup 04",
-      "description": "A simple signup block",
-      "dependencies": [
-        "@hookform/resolvers",
-        "react-hook-form",
-        "zod"
-      ],
-      "registryDependencies": [
-        "button",
-        "field",
-        "input",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/signup-04/components/signup.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/signup-04/components/logo.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "signup-05",
-      "type": "registry:block",
-      "title": "Signup 05",
-      "description": "A simple signup block",
-      "dependencies": [
-        "@hookform/resolvers",
-        "lucide-react",
-        "react-hook-form",
-        "zod"
-      ],
-      "registryDependencies": [
-        "button",
-        "field",
-        "input",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/signup-05/components/signup.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/signup-05/components/logo.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "stats-01",
-      "type": "registry:block",
-      "title": "Stats 01",
-      "description": "A simple stats block",
-      "files": [
-        {
-          "path": "src/registry/blocks/stats-01/components/stats.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "stats-02",
-      "type": "registry:block",
-      "title": "Stats 02",
-      "description": "A simple stats block",
-      "files": [
-        {
-          "path": "src/registry/blocks/stats-02/components/stats.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "team-01",
-      "type": "registry:block",
-      "title": "Team 01",
-      "description": "A simple team block",
-      "files": [
-        {
-          "path": "src/registry/blocks/team-01/components/team.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "team-02",
-      "type": "registry:block",
-      "title": "Team 02",
-      "description": "A simple team block",
-      "files": [
-        {
-          "path": "src/registry/blocks/team-02/components/team.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "team-03",
-      "type": "registry:block",
-      "title": "Team 03",
-      "description": "A simple team block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/team-03/components/team.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "team-04",
-      "type": "registry:block",
-      "title": "Team 04",
-      "description": "A simple team block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/team-04/components/team.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "team-05",
-      "type": "registry:block",
-      "title": "Team 05",
-      "description": "A simple team block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/team-05/components/team.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "testimonials-01",
-      "type": "registry:block",
-      "title": "Testimonials 01",
-      "description": "A simple testimonial block",
-      "registryDependencies": [
-        "avatar",
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/testimonials-01/components/testimonials.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "testimonials-02",
-      "type": "registry:block",
-      "title": "Testimonials 02",
-      "description": "A simple testimonial block",
-      "registryDependencies": [
-        "avatar",
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/testimonials-02/components/testimonials.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "testimonials-03",
-      "type": "registry:block",
-      "title": "Testimonials 03",
-      "description": "A simple testimonial block",
-      "registryDependencies": [
-        "avatar"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/testimonials-03/components/testimonials.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "testimonials-04",
-      "type": "registry:block",
-      "title": "Testimonials 04",
-      "description": "A simple testimonial block",
-      "registryDependencies": [
-        "avatar",
-        "button",
-        "https://www.shadcnui-blocks.com/r/marquee.json"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/testimonials-04/components/testimonials.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/testimonials-04/components/ui/marquee.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "testimonials-05",
-      "type": "registry:block",
-      "title": "Testimonials 05",
-      "description": "A simple testimonial block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "avatar"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/testimonials-05/components/testimonials.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "testimonials-06",
-      "type": "registry:block",
-      "title": "Testimonials 06",
-      "description": "A simple testimonial block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "avatar",
-        "carousel"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/testimonials-06/components/testimonials.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "timeline-01",
-      "type": "registry:block",
-      "title": "Timeline 01",
-      "description": "A simple timeline block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/timeline-01/components/timeline.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "timeline-02",
-      "type": "registry:block",
-      "title": "Timeline 02",
-      "description": "A simple timeline block with vertically spaced dots",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/timeline-02/components/timeline.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "timeline-03",
-      "type": "registry:block",
-      "title": "Timeline 03",
-      "description": "A simple timeline block with icons",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/timeline-03/components/timeline.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "timeline-04",
-      "type": "registry:block",
-      "title": "Timeline 04",
-      "description": "A simple timeline with custom elements",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/timeline-04/components/timeline.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "timeline-05",
-      "type": "registry:block",
-      "title": "Timeline 05",
-      "description": "A simple timeline block for process steps",
-      "files": [
-        {
-          "path": "src/registry/blocks/timeline-05/components/timeline.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "timeline-06",
-      "type": "registry:block",
-      "title": "Timeline 06",
-      "description": "A simple timeline block for process steps with completion status",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/timeline-06/components/timeline.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "timeline-07",
-      "type": "registry:block",
-      "title": "Timeline 07",
-      "description": "A simple timeline block with changelog",
-      "files": [
-        {
-          "path": "src/registry/blocks/timeline-07/components/timeline.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
       "name": "accordion-01",
       "type": "registry:component",
       "title": "Default Accordion",
@@ -7120,13 +5516,1617 @@
       ]
     },
     {
+      "name": "blog-01",
+      "type": "registry:block",
+      "title": "Blog 01",
+      "description": "A simple blog post list",
+      "registryDependencies": [
+        "badge",
+        "card",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/blog-01/components/blog.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "blog-02",
+      "type": "registry:block",
+      "title": "Blog 02",
+      "description": "A simple blog post list",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/blog-02/components/blog.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "blog-03",
+      "type": "registry:block",
+      "title": "Blog 03",
+      "description": "A simple blog post list",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/blog-03/components/blog.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "contact-01",
+      "type": "registry:block",
+      "title": "Contact 01",
+      "description": "A simple contact form",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/contact-01/components/contact.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "contact-02",
+      "type": "registry:block",
+      "title": "Contact 02",
+      "description": "A simple contact form",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "card",
+        "checkbox",
+        "input",
+        "label",
+        "textarea"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/contact-02/components/contact.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "contact-03",
+      "type": "registry:block",
+      "title": "Contact 03",
+      "description": "A simple contact form",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/contact-03/components/contact.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "faq-01",
+      "type": "registry:block",
+      "title": "FAQ 01",
+      "description": "A simple FAQ component",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/faq-01/components/faq.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "faq-02",
+      "type": "registry:block",
+      "title": "FAQ 02",
+      "description": "A simple FAQ component",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/faq-02/components/faq.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "faq-03",
+      "type": "registry:block",
+      "title": "FAQ 03",
+      "description": "A simple FAQ component",
+      "dependencies": [
+        "lucide-react",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/faq-03/components/faq.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "faq-04",
+      "type": "registry:block",
+      "title": "FAQ 04",
+      "description": "A simple FAQ component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/faq-04/components/faq.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "faq-05",
+      "type": "registry:block",
+      "title": "FAQ 05",
+      "description": "A simple FAQ component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/faq-05/components/faq.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "faq-06",
+      "type": "registry:block",
+      "title": "FAQ 06",
+      "description": "A simple FAQ component",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/faq-06/components/faq.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "faq-07",
+      "type": "registry:block",
+      "title": "FAQ 07",
+      "description": "A simple FAQ component",
+      "dependencies": [
+        "lucide-react",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/faq-07/components/faq.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "features-01",
+      "type": "registry:block",
+      "title": "Features 01",
+      "description": "A simple features block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/features-01/components/features.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "features-02",
+      "type": "registry:block",
+      "title": "Features 02",
+      "description": "A simple features block",
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/features-02/components/features.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "features-03",
+      "type": "registry:block",
+      "title": "Features 03",
+      "description": "A simple features block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/features-03/components/features.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "features-04",
+      "type": "registry:block",
+      "title": "Features 04",
+      "description": "A simple features block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/features-04/components/features.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "features-05",
+      "type": "registry:block",
+      "title": "Features 05",
+      "description": "A simple features block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "card"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/features-05/components/features.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "features-06",
+      "type": "registry:block",
+      "title": "Features 06",
+      "description": "A simple features block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/features-06/components/features.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "features-07",
+      "type": "registry:block",
+      "title": "Features 07",
+      "description": "A simple features block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/features-07/components/features.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "footer-01",
+      "type": "registry:block",
+      "title": "Footer 01",
+      "description": "A simple footer block",
+      "registryDependencies": [
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/footer-01/components/footer.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "footer-02",
+      "type": "registry:block",
+      "title": "Footer 02",
+      "description": "A simple footer block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/footer-02/components/footer.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "footer-03",
+      "type": "registry:block",
+      "title": "Footer 03",
+      "description": "A simple footer block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "input",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/footer-03/components/footer.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "footer-04",
+      "type": "registry:block",
+      "title": "Footer 04",
+      "description": "A simple footer block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "input",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/footer-04/components/footer.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "footer-05",
+      "type": "registry:block",
+      "title": "Footer 05",
+      "description": "A simple footer block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/footer-05/components/footer.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-01",
+      "type": "registry:block",
+      "title": "Hero 01",
+      "description": "A simple hero block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/hero-01/components/hero.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-02",
+      "type": "registry:block",
+      "title": "Hero 02",
+      "description": "A simple hero block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/hero-02/components/hero.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-03",
+      "type": "registry:block",
+      "title": "Hero 03",
+      "description": "A simple hero block",
+      "dependencies": [
+        "lucide-react",
+        "motion",
+        "@radix-ui/react-visually-hidden"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "navigation-menu",
+        "sheet"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/hero-03/components/hero.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/hero-03/components/gradient-text.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/hero-03/components/navbar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/hero-03/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/hero-03/components/nav-menu.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/hero-03/components/navigation-sheet.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-04",
+      "type": "registry:block",
+      "title": "Hero 04",
+      "description": "A simple hero block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/hero-04/components/hero.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-05",
+      "type": "registry:block",
+      "title": "Hero 05",
+      "description": "A simple hero block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/hero-05/components/hero.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-06",
+      "type": "registry:block",
+      "title": "Hero 06",
+      "description": "A simple hero block",
+      "dependencies": [
+        "lucide-react",
+        "next-themes"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "https://www.shadcnui-blocks.com/r/dot-pattern.json",
+        "https://www.shadcnui-blocks.com/r/particles.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/hero-06/components/hero.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/shared/hero-06/components/background-pattern.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/shared/hero-06/components/ui/dot-pattern.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/shared/hero-06/components/ui/particles.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-07",
+      "type": "registry:block",
+      "title": "Hero 07",
+      "description": "A simple hero block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "https://www.shadcnui-blocks.com/r/animated-grid-pattern.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/hero-07/components/hero.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/shared/hero-07/components/ui/animated-grid-pattern.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "login-01",
+      "type": "registry:block",
+      "title": "Login 01",
+      "description": "A simple login block",
+      "dependencies": [
+        "react-hook-form",
+        "zod",
+        "@hookform/resolvers"
+      ],
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/login-01/components/login.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/login-01/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "login-02",
+      "type": "registry:block",
+      "title": "Login 02",
+      "description": "A simple login block",
+      "dependencies": [
+        "react-hook-form",
+        "zod",
+        "@hookform/resolvers"
+      ],
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/login-02/components/login.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/login-02/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "login-03",
+      "type": "registry:block",
+      "title": "Login 03",
+      "description": "A simple login block",
+      "dependencies": [
+        "react-hook-form",
+        "zod",
+        "@hookform/resolvers"
+      ],
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/login-03/components/login.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/login-03/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "login-04",
+      "type": "registry:block",
+      "title": "Login 04",
+      "description": "A simple login block",
+      "dependencies": [
+        "react-hook-form",
+        "zod",
+        "@hookform/resolvers"
+      ],
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/login-04/components/login.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/login-04/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "login-05",
+      "type": "registry:block",
+      "title": "Login 05",
+      "description": "A simple login block",
+      "dependencies": [
+        "@hookform/resolvers",
+        "lucide-react",
+        "react-hook-form",
+        "zod"
+      ],
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/login-05/components/login.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/login-05/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "logo-cloud-01",
+      "type": "registry:block",
+      "title": "Logo Cloud 01",
+      "description": "A simple logos block",
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-01/components/logo-cloud.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-01/components/logos.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "logo-cloud-02",
+      "type": "registry:block",
+      "title": "Logo Cloud 02",
+      "description": "A simple logos block",
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-02/components/logo-cloud.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-02/components/logos.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "logo-cloud-03",
+      "type": "registry:block",
+      "title": "Logo Cloud 03",
+      "description": "A simple logos block",
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-03/components/logo-cloud.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-03/components/logos.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "logo-cloud-04",
+      "type": "registry:block",
+      "title": "Logo Cloud 04",
+      "description": "A simple logos block",
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-04/components/logo-cloud.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-04/components/logos.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "logo-cloud-05",
+      "type": "registry:block",
+      "title": "Logo Cloud 05",
+      "description": "A simple logos block",
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-05/components/logo-cloud.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-05/components/logos.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "logo-cloud-06",
+      "type": "registry:block",
+      "title": "Logo Cloud 06",
+      "description": "A simple logos block",
+      "registryDependencies": [
+        "https://www.shadcnui-blocks.com/r/marquee.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-06/components/logo-cloud.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-06/components/logos.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-06/components/ui/marquee.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "logo-cloud-07",
+      "type": "registry:block",
+      "title": "Logo Cloud 07",
+      "description": "A simple logos block",
+      "registryDependencies": [
+        "https://www.shadcnui-blocks.com/r/marquee.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-07/components/logo-cloud.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-07/components/logos.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/shared/logo-cloud-07/components/ui/marquee.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "navbar-01",
+      "type": "registry:block",
+      "title": "Navbar 01",
+      "description": "A simple navbar block",
+      "dependencies": [
+        "lucide-react",
+        "@radix-ui/react-visually-hidden"
+      ],
+      "registryDependencies": [
+        "button",
+        "navigation-menu",
+        "sheet"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/navbar-01/components/navbar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/navbar-01/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/navbar-01/components/nav-menu.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/navbar-01/components/navigation-sheet.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "navbar-02",
+      "type": "registry:block",
+      "title": "Navbar 02",
+      "description": "A simple navbar block",
+      "dependencies": [
+        "lucide-react",
+        "@radix-ui/react-visually-hidden"
+      ],
+      "registryDependencies": [
+        "button",
+        "navigation-menu",
+        "sheet"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/navbar-02/components/navbar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/navbar-02/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/navbar-02/components/nav-menu.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/navbar-02/components/navigation-sheet.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "navbar-03",
+      "type": "registry:block",
+      "title": "Navbar 03",
+      "description": "A simple navbar block",
+      "dependencies": [
+        "lucide-react",
+        "@radix-ui/react-visually-hidden"
+      ],
+      "registryDependencies": [
+        "button",
+        "navigation-menu",
+        "sheet"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/navbar-03/components/navbar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/navbar-03/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/navbar-03/components/nav-menu.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/navbar-03/components/navigation-sheet.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/navbar-03/config/navbar.ts",
+          "type": "registry:file",
+          "target": "config/navbar.ts"
+        }
+      ]
+    },
+    {
+      "name": "navbar-04",
+      "type": "registry:block",
+      "title": "Navbar 04",
+      "description": "A simple navbar block",
+      "dependencies": [
+        "lucide-react",
+        "@radix-ui/react-visually-hidden"
+      ],
+      "registryDependencies": [
+        "button",
+        "navigation-menu",
+        "sheet"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/navbar-04/components/navbar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/navbar-04/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/navbar-04/components/nav-menu.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/navbar-04/components/navigation-sheet.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "navbar-05",
+      "type": "registry:block",
+      "title": "Navbar 05",
+      "description": "A simple navbar block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/navbar-05/components/navbar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/shared/navbar-05/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "pricing-01",
+      "type": "registry:block",
+      "title": "Pricing 01",
+      "description": "A simple pricing block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/pricing-01/components/pricing.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "pricing-02",
+      "type": "registry:block",
+      "title": "Pricing 02",
+      "description": "A simple pricing block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/pricing-02/components/pricing.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "pricing-03",
+      "type": "registry:block",
+      "title": "Pricing 03",
+      "description": "A simple pricing block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "separator",
+        "tabs",
+        "tooltip"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/pricing-03/components/pricing.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "pricing-04",
+      "type": "registry:block",
+      "title": "Pricing 04",
+      "description": "A simple pricing block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "separator",
+        "tabs",
+        "tooltip"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/pricing-04/components/pricing.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "pricing-05",
+      "type": "registry:block",
+      "title": "Pricing 05",
+      "description": "A simple pricing block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/pricing-05/components/pricing.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "pricing-06",
+      "type": "registry:block",
+      "title": "Pricing 06",
+      "description": "A simple pricing block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/pricing-06/components/pricing.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "signup-01",
+      "type": "registry:block",
+      "title": "Signup 01",
+      "description": "A simple signup block",
+      "dependencies": [
+        "@hookform/resolvers",
+        "react-hook-form",
+        "zod"
+      ],
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/signup-01/components/signup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/signup-01/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "signup-02",
+      "type": "registry:block",
+      "title": "Signup 02",
+      "description": "A simple signup block",
+      "dependencies": [
+        "@hookform/resolvers",
+        "react-hook-form",
+        "zod"
+      ],
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/signup-02/components/signup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/signup-02/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "signup-03",
+      "type": "registry:block",
+      "title": "Signup 03",
+      "description": "A simple signup block",
+      "dependencies": [
+        "@hookform/resolvers",
+        "react-hook-form",
+        "zod"
+      ],
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/signup-03/components/signup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/signup-03/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "signup-04",
+      "type": "registry:block",
+      "title": "Signup 04",
+      "description": "A simple signup block",
+      "dependencies": [
+        "@hookform/resolvers",
+        "react-hook-form",
+        "zod"
+      ],
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/signup-04/components/signup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/signup-04/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "signup-05",
+      "type": "registry:block",
+      "title": "Signup 05",
+      "description": "A simple signup block",
+      "dependencies": [
+        "@hookform/resolvers",
+        "lucide-react",
+        "react-hook-form",
+        "zod"
+      ],
+      "registryDependencies": [
+        "button",
+        "field",
+        "input",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/signup-05/components/signup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/signup-05/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "stats-01",
+      "type": "registry:block",
+      "title": "Stats 01",
+      "description": "A simple stats block",
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/stats-01/components/stats.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "stats-02",
+      "type": "registry:block",
+      "title": "Stats 02",
+      "description": "A simple stats block",
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/stats-02/components/stats.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "team-01",
+      "type": "registry:block",
+      "title": "Team 01",
+      "description": "A simple team block",
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/team-01/components/team.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "team-02",
+      "type": "registry:block",
+      "title": "Team 02",
+      "description": "A simple team block",
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/team-02/components/team.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "team-03",
+      "type": "registry:block",
+      "title": "Team 03",
+      "description": "A simple team block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/team-03/components/team.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "team-04",
+      "type": "registry:block",
+      "title": "Team 04",
+      "description": "A simple team block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/team-04/components/team.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "team-05",
+      "type": "registry:block",
+      "title": "Team 05",
+      "description": "A simple team block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/team-05/components/team.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "testimonials-01",
+      "type": "registry:block",
+      "title": "Testimonials 01",
+      "description": "A simple testimonial block",
+      "registryDependencies": [
+        "avatar",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/testimonials-01/components/testimonials.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "testimonials-02",
+      "type": "registry:block",
+      "title": "Testimonials 02",
+      "description": "A simple testimonial block",
+      "registryDependencies": [
+        "avatar",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/testimonials-02/components/testimonials.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "testimonials-03",
+      "type": "registry:block",
+      "title": "Testimonials 03",
+      "description": "A simple testimonial block",
+      "registryDependencies": [
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/testimonials-03/components/testimonials.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "testimonials-04",
+      "type": "registry:block",
+      "title": "Testimonials 04",
+      "description": "A simple testimonial block",
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "https://www.shadcnui-blocks.com/r/marquee.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/testimonials-04/components/testimonials.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/radix/testimonials-04/components/ui/marquee.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "testimonials-05",
+      "type": "registry:block",
+      "title": "Testimonials 05",
+      "description": "A simple testimonial block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/testimonials-05/components/testimonials.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "testimonials-06",
+      "type": "registry:block",
+      "title": "Testimonials 06",
+      "description": "A simple testimonial block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "avatar",
+        "carousel"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/testimonials-06/components/testimonials.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "timeline-01",
+      "type": "registry:block",
+      "title": "Timeline 01",
+      "description": "A simple timeline block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/timeline-01/components/timeline.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "timeline-02",
+      "type": "registry:block",
+      "title": "Timeline 02",
+      "description": "A simple timeline block with vertically spaced dots",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/timeline-02/components/timeline.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "timeline-03",
+      "type": "registry:block",
+      "title": "Timeline 03",
+      "description": "A simple timeline block with icons",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/timeline-03/components/timeline.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "timeline-04",
+      "type": "registry:block",
+      "title": "Timeline 04",
+      "description": "A simple timeline with custom elements",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/timeline-04/components/timeline.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "timeline-05",
+      "type": "registry:block",
+      "title": "Timeline 05",
+      "description": "A simple timeline block for process steps",
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/timeline-05/components/timeline.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "timeline-06",
+      "type": "registry:block",
+      "title": "Timeline 06",
+      "description": "A simple timeline block for process steps with completion status",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/timeline-06/components/timeline.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "timeline-07",
+      "type": "registry:block",
+      "title": "Timeline 07",
+      "description": "A simple timeline block with changelog",
+      "files": [
+        {
+          "path": "src/registry/blocks/shared/timeline-07/components/timeline.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "banner-01",
       "type": "registry:block",
       "title": "Banner 01",
       "description": "A simple banner block",
       "files": [
         {
-          "path": "src/registry/blocks/banner-01/components/banner.tsx",
+          "path": "src/registry/blocks/shared/banner-01/components/banner.tsx",
           "type": "registry:component"
         }
       ]
@@ -7144,7 +7144,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/banner-02/components/banner.tsx",
+          "path": "src/registry/blocks/shared/banner-02/components/banner.tsx",
           "type": "registry:component"
         }
       ]
@@ -7162,7 +7162,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/banner-03/components/banner.tsx",
+          "path": "src/registry/blocks/shared/banner-03/components/banner.tsx",
           "type": "registry:component"
         }
       ]
@@ -7180,7 +7180,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/banner-04/components/banner.tsx",
+          "path": "src/registry/blocks/shared/banner-04/components/banner.tsx",
           "type": "registry:component"
         }
       ]
@@ -7192,7 +7192,7 @@
       "description": "A simple CTA block",
       "files": [
         {
-          "path": "src/registry/blocks/cta-01/components/cta.tsx",
+          "path": "src/registry/blocks/shared/cta-01/components/cta.tsx",
           "type": "registry:component"
         }
       ]
@@ -7204,7 +7204,7 @@
       "description": "A simple CTA block",
       "files": [
         {
-          "path": "src/registry/blocks/cta-02/components/cta.tsx",
+          "path": "src/registry/blocks/shared/cta-02/components/cta.tsx",
           "type": "registry:component"
         }
       ]
@@ -7216,7 +7216,7 @@
       "description": "A simple CTA block",
       "files": [
         {
-          "path": "src/registry/blocks/cta-03/components/cta.tsx",
+          "path": "src/registry/blocks/shared/cta-03/components/cta.tsx",
           "type": "registry:component"
         }
       ]
@@ -7234,7 +7234,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/cta-04/components/cta.tsx",
+          "path": "src/registry/blocks/shared/cta-04/components/cta.tsx",
           "type": "registry:component"
         }
       ]
@@ -7252,7 +7252,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/cta-05/components/cta.tsx",
+          "path": "src/registry/blocks/shared/cta-05/components/cta.tsx",
           "type": "registry:component"
         }
       ]
@@ -7271,7 +7271,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/cta-06/components/cta.tsx",
+          "path": "src/registry/blocks/shared/cta-06/components/cta.tsx",
           "type": "registry:component"
         }
       ]
@@ -7286,7 +7286,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/cta-07/components/cta.tsx",
+          "path": "src/registry/blocks/shared/cta-07/components/cta.tsx",
           "type": "registry:component"
         }
       ]
@@ -7302,7 +7302,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/carousel-block-01/components/carousel.tsx",
+          "path": "src/registry/blocks/shared/carousel-block-01/components/carousel.tsx",
           "type": "registry:component"
         }
       ]
@@ -7317,7 +7317,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/carousel-block-02/components/carousel.tsx",
+          "path": "src/registry/blocks/shared/carousel-block-02/components/carousel.tsx",
           "type": "registry:component"
         }
       ]
@@ -7329,7 +7329,7 @@
       "description": "A simple changelog block",
       "files": [
         {
-          "path": "src/registry/blocks/changelog-01/components/changelog.tsx",
+          "path": "src/registry/blocks/radix/changelog-01/components/changelog.tsx",
           "type": "registry:component"
         }
       ]
@@ -7341,7 +7341,7 @@
       "description": "A simple changelog block",
       "files": [
         {
-          "path": "src/registry/blocks/changelog-02/components/changelog.tsx",
+          "path": "src/registry/blocks/radix/changelog-02/components/changelog.tsx",
           "type": "registry:component"
         }
       ]
@@ -7353,7 +7353,7 @@
       "description": "A simple changelog block",
       "files": [
         {
-          "path": "src/registry/blocks/changelog-03/components/changelog.tsx",
+          "path": "src/registry/blocks/radix/changelog-03/components/changelog.tsx",
           "type": "registry:component"
         }
       ]
@@ -7368,7 +7368,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/code-block-01/components/code-block.tsx",
+          "path": "src/registry/blocks/shared/code-block-01/components/code-block.tsx",
           "type": "registry:component"
         }
       ]
@@ -7383,15 +7383,15 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/code-block-02/components/code-block.tsx",
+          "path": "src/registry/blocks/shared/code-block-02/components/code-block.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/code-block-02/components/code-block-header.tsx",
+          "path": "src/registry/blocks/shared/code-block-02/components/code-block-header.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/code-block-02/hooks/use-copy-to-clipboard.tsx",
+          "path": "src/registry/blocks/shared/code-block-02/hooks/use-copy-to-clipboard.tsx",
           "type": "registry:component"
         }
       ]
@@ -7410,7 +7410,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/code-block-03/components/code-block.tsx",
+          "path": "src/registry/blocks/radix/code-block-03/components/code-block.tsx",
           "type": "registry:component"
         }
       ]
@@ -7429,7 +7429,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/empty-state-01/components/empty-state.tsx",
+          "path": "src/registry/blocks/shared/empty-state-01/components/empty-state.tsx",
           "type": "registry:component"
         }
       ]
@@ -7448,7 +7448,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/empty-state-02/components/empty-state.tsx",
+          "path": "src/registry/blocks/shared/empty-state-02/components/empty-state.tsx",
           "type": "registry:component"
         }
       ]
@@ -7467,7 +7467,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/empty-state-03/components/empty-state.tsx",
+          "path": "src/registry/blocks/radix/empty-state-03/components/empty-state.tsx",
           "type": "registry:component"
         }
       ]
@@ -7485,11 +7485,11 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/empty-state-04/components/empty-state.tsx",
+          "path": "src/registry/blocks/shared/empty-state-04/components/empty-state.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/empty-state-04/components/magicui/marquee.tsx",
+          "path": "src/registry/blocks/shared/empty-state-04/components/magicui/marquee.tsx",
           "type": "registry:component"
         }
       ]
@@ -7514,7 +7514,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/invite-member-01/components/invite-member.tsx",
+          "path": "src/registry/blocks/radix/invite-member-01/components/invite-member.tsx",
           "type": "registry:component"
         }
       ]
@@ -7536,7 +7536,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/invite-member-02/components/invite-member.tsx",
+          "path": "src/registry/blocks/radix/invite-member-02/components/invite-member.tsx",
           "type": "registry:component"
         }
       ]
@@ -7558,7 +7558,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/invite-member-03/components/invite-member.tsx",
+          "path": "src/registry/blocks/radix/invite-member-03/components/invite-member.tsx",
           "type": "registry:component"
         }
       ]
@@ -7574,7 +7574,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/keyboard-shortcuts-01/components/keyboard-shortcuts.tsx",
+          "path": "src/registry/blocks/shared/keyboard-shortcuts-01/components/keyboard-shortcuts.tsx",
           "type": "registry:component"
         }
       ]
@@ -7593,7 +7593,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/keyboard-shortcuts-02/components/keyboard-shortcuts.tsx",
+          "path": "src/registry/blocks/shared/keyboard-shortcuts-02/components/keyboard-shortcuts.tsx",
           "type": "registry:component"
         }
       ]
@@ -7608,7 +7608,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/keyboard-shortcuts-03/components/keyboard-shortcuts.tsx",
+          "path": "src/registry/blocks/shared/keyboard-shortcuts-03/components/keyboard-shortcuts.tsx",
           "type": "registry:component"
         }
       ]
@@ -7623,7 +7623,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/keyboard-shortcuts-04/components/keyboard-shortcuts.tsx",
+          "path": "src/registry/blocks/shared/keyboard-shortcuts-04/components/keyboard-shortcuts.tsx",
           "type": "registry:component"
         }
       ]
@@ -7643,7 +7643,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/members-01/components/members.tsx",
+          "path": "src/registry/blocks/radix/members-01/components/members.tsx",
           "type": "registry:component"
         }
       ]
@@ -7663,7 +7663,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/members-02/components/members.tsx",
+          "path": "src/registry/blocks/radix/members-02/components/members.tsx",
           "type": "registry:component"
         }
       ]
@@ -7681,7 +7681,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/members-03/components/members.tsx",
+          "path": "src/registry/blocks/shared/members-03/components/members.tsx",
           "type": "registry:component"
         }
       ]
@@ -7699,7 +7699,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/order-confirmation-01/components/order-confirmation.tsx",
+          "path": "src/registry/blocks/shared/order-confirmation-01/components/order-confirmation.tsx",
           "type": "registry:component"
         }
       ]
@@ -7717,7 +7717,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/order-confirmation-02/components/order-confirmation.tsx",
+          "path": "src/registry/blocks/radix/order-confirmation-02/components/order-confirmation.tsx",
           "type": "registry:component"
         }
       ]
@@ -7738,7 +7738,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/profile-01/components/profile.tsx",
+          "path": "src/registry/blocks/radix/profile-01/components/profile.tsx",
           "type": "registry:component"
         }
       ]
@@ -7759,7 +7759,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/profile-02/components/profile.tsx",
+          "path": "src/registry/blocks/radix/profile-02/components/profile.tsx",
           "type": "registry:component"
         }
       ]
@@ -7781,7 +7781,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/profile-03/components/profile.tsx",
+          "path": "src/registry/blocks/radix/profile-03/components/profile.tsx",
           "type": "registry:component"
         }
       ]
@@ -7803,7 +7803,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/profile-04/components/profile.tsx",
+          "path": "src/registry/blocks/radix/profile-04/components/profile.tsx",
           "type": "registry:component"
         }
       ]
@@ -7815,7 +7815,7 @@
       "description": "A simple setup guide block",
       "files": [
         {
-          "path": "src/registry/blocks/setup-guide-01/components/setup-guide.tsx",
+          "path": "src/registry/blocks/shared/setup-guide-01/components/setup-guide.tsx",
           "type": "registry:component"
         }
       ]
@@ -7827,7 +7827,7 @@
       "description": "A simple setup guide block",
       "files": [
         {
-          "path": "src/registry/blocks/setup-guide-02/components/setup-guide.tsx",
+          "path": "src/registry/blocks/radix/setup-guide-02/components/setup-guide.tsx",
           "type": "registry:component"
         }
       ]
@@ -7839,7 +7839,7 @@
       "description": "A simple setup guide block",
       "files": [
         {
-          "path": "src/registry/blocks/setup-guide-03/components/setup-guide.tsx",
+          "path": "src/registry/blocks/shared/setup-guide-03/components/setup-guide.tsx",
           "type": "registry:component"
         }
       ]
@@ -7851,7 +7851,7 @@
       "description": "A simple setup guide block",
       "files": [
         {
-          "path": "src/registry/blocks/setup-guide-04/components/setup-guide.tsx",
+          "path": "src/registry/blocks/shared/setup-guide-04/components/setup-guide.tsx",
           "type": "registry:component"
         }
       ]
@@ -7863,7 +7863,7 @@
       "description": "A simple verification block",
       "files": [
         {
-          "path": "src/registry/blocks/verification-01/components/verification.tsx",
+          "path": "src/registry/blocks/shared/verification-01/components/verification.tsx",
           "type": "registry:component"
         }
       ]
@@ -7875,19 +7875,19 @@
       "description": "A simple hero block",
       "files": [
         {
-          "path": "src/registry/blocks/hero-08/components/hero.tsx",
+          "path": "src/registry/blocks/radix/hero-08/components/hero.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/hero-08/components/navbar.tsx",
+          "path": "src/registry/blocks/radix/hero-08/components/navbar.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/hero-08/components/nav-menu.tsx",
+          "path": "src/registry/blocks/radix/hero-08/components/nav-menu.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/hero-08/components/logos.tsx",
+          "path": "src/registry/blocks/radix/hero-08/components/logos.tsx",
           "type": "registry:component"
         }
       ]
@@ -7899,7 +7899,7 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/features-08/components/features.tsx",
+          "path": "src/registry/blocks/shared/features-08/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -7911,7 +7911,7 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/features-09/components/features.tsx",
+          "path": "src/registry/blocks/shared/features-09/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -7923,11 +7923,11 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/features-10/components/features.tsx",
+          "path": "src/registry/blocks/shared/features-10/components/features.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/features-10/components/stats-card.tsx",
+          "path": "src/registry/blocks/shared/features-10/components/stats-card.tsx",
           "type": "registry:component"
         }
       ]
@@ -7939,7 +7939,7 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/features-11/components/features.tsx",
+          "path": "src/registry/blocks/shared/features-11/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -7951,7 +7951,7 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/features-12/components/features.tsx",
+          "path": "src/registry/blocks/shared/features-12/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -7963,7 +7963,7 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/features-13/components/features.tsx",
+          "path": "src/registry/blocks/shared/features-13/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -7975,7 +7975,7 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/features-14/components/features.tsx",
+          "path": "src/registry/blocks/shared/features-14/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -7987,7 +7987,7 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/features-15/components/features.tsx",
+          "path": "src/registry/blocks/shared/features-15/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -7999,7 +7999,7 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/features-16/components/features.tsx",
+          "path": "src/registry/blocks/shared/features-16/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -8017,7 +8017,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/features-17/components/features.tsx",
+          "path": "src/registry/blocks/shared/features-17/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -8035,7 +8035,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/features-18/components/features.tsx",
+          "path": "src/registry/blocks/shared/features-18/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -8047,7 +8047,7 @@
       "description": "A simple FAQ block",
       "files": [
         {
-          "path": "src/registry/blocks/faq-08/components/faq.tsx",
+          "path": "src/registry/blocks/radix/faq-08/components/faq.tsx",
           "type": "registry:component"
         }
       ]
@@ -8059,7 +8059,7 @@
       "description": "A simple FAQ block",
       "files": [
         {
-          "path": "src/registry/blocks/faq-09/components/faq.tsx",
+          "path": "src/registry/blocks/radix/faq-09/components/faq.tsx",
           "type": "registry:component"
         }
       ]
@@ -8071,7 +8071,7 @@
       "description": "A simple FAQ block",
       "files": [
         {
-          "path": "src/registry/blocks/faq-10/components/faq.tsx",
+          "path": "src/registry/blocks/radix/faq-10/components/faq.tsx",
           "type": "registry:component"
         }
       ]
@@ -8083,7 +8083,7 @@
       "description": "A simple FAQ block",
       "files": [
         {
-          "path": "src/registry/blocks/faq-11/components/faq.tsx",
+          "path": "src/registry/blocks/radix/faq-11/components/faq.tsx",
           "type": "registry:component"
         }
       ]
@@ -8098,7 +8098,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/faq-12/components/faq.tsx",
+          "path": "src/registry/blocks/shared/faq-12/components/faq.tsx",
           "type": "registry:component"
         }
       ]
@@ -8110,7 +8110,7 @@
       "description": "A simple FAQ block",
       "files": [
         {
-          "path": "src/registry/blocks/faq-13/components/faq.tsx",
+          "path": "src/registry/blocks/shared/faq-13/components/faq.tsx",
           "type": "registry:component"
         }
       ]
@@ -8128,7 +8128,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/faq-14/components/faq.tsx",
+          "path": "src/registry/blocks/radix/faq-14/components/faq.tsx",
           "type": "registry:component"
         }
       ]
@@ -8140,7 +8140,7 @@
       "description": "A simple footer block",
       "files": [
         {
-          "path": "src/registry/blocks/footer-06/components/footer.tsx",
+          "path": "src/registry/blocks/shared/footer-06/components/footer.tsx",
           "type": "registry:component"
         }
       ]
@@ -8152,7 +8152,7 @@
       "description": "A simple footer block",
       "files": [
         {
-          "path": "src/registry/blocks/footer-07/components/footer.tsx",
+          "path": "src/registry/blocks/shared/footer-07/components/footer.tsx",
           "type": "registry:component"
         }
       ]
@@ -8176,19 +8176,19 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/login-06/components/login.tsx",
+          "path": "src/registry/blocks/radix/login-06/components/login.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/login-06/components/login-form.tsx",
+          "path": "src/registry/blocks/radix/login-06/components/login-form.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/login-06/components/icons.tsx",
+          "path": "src/registry/blocks/radix/login-06/components/icons.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/login-06/components/logo.tsx",
+          "path": "src/registry/blocks/radix/login-06/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -8212,23 +8212,23 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/login-07/components/login.tsx",
+          "path": "src/registry/blocks/radix/login-07/components/login.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/login-07/components/login-form.tsx",
+          "path": "src/registry/blocks/radix/login-07/components/login-form.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/login-07/components/icons.tsx",
+          "path": "src/registry/blocks/radix/login-07/components/icons.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/login-07/components/testimonials.tsx",
+          "path": "src/registry/blocks/radix/login-07/components/testimonials.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/login-07/components/logo.tsx",
+          "path": "src/registry/blocks/radix/login-07/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -8252,19 +8252,19 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/login-08/components/login.tsx",
+          "path": "src/registry/blocks/radix/login-08/components/login.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/login-08/components/login-form.tsx",
+          "path": "src/registry/blocks/radix/login-08/components/login-form.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/login-08/components/icons.tsx",
+          "path": "src/registry/blocks/radix/login-08/components/icons.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/login-08/components/logo.tsx",
+          "path": "src/registry/blocks/radix/login-08/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -8276,11 +8276,11 @@
       "description": "A simple logo cloud block",
       "files": [
         {
-          "path": "src/registry/blocks/logo-cloud-08/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-08/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/logo-cloud-08/components/logos.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-08/components/logos.tsx",
           "type": "registry:component"
         }
       ]
@@ -8292,11 +8292,11 @@
       "description": "A simple logo cloud block",
       "files": [
         {
-          "path": "src/registry/blocks/logo-cloud-09/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-09/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/logo-cloud-09/components/logos.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-09/components/logos.tsx",
           "type": "registry:component"
         }
       ]
@@ -8308,15 +8308,15 @@
       "description": "A simple logo cloud block",
       "files": [
         {
-          "path": "src/registry/blocks/logo-cloud-10/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-10/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/logo-cloud-10/components/logos.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-10/components/logos.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/logo-cloud-10/components/magicui/marquee.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-10/components/magicui/marquee.tsx",
           "type": "registry:component"
         }
       ]
@@ -8328,11 +8328,11 @@
       "description": "A simple logo cloud block",
       "files": [
         {
-          "path": "src/registry/blocks/logo-cloud-11/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-11/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/logo-cloud-11/components/logos.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-11/components/logos.tsx",
           "type": "registry:component"
         }
       ]
@@ -8344,11 +8344,11 @@
       "description": "A simple logo cloud block",
       "files": [
         {
-          "path": "src/registry/blocks/logo-cloud-12/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-12/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/logo-cloud-12/components/logos.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-12/components/logos.tsx",
           "type": "registry:component"
         }
       ]
@@ -8360,15 +8360,15 @@
       "description": "A simple logo cloud block",
       "files": [
         {
-          "path": "src/registry/blocks/logo-cloud-13/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-13/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/logo-cloud-13/components/logos.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-13/components/logos.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/logo-cloud-13/components/magicui/marquee.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-13/components/magicui/marquee.tsx",
           "type": "registry:component"
         }
       ]
@@ -8380,11 +8380,11 @@
       "description": "A simple logo cloud block",
       "files": [
         {
-          "path": "src/registry/blocks/logo-cloud-14/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-14/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/logo-cloud-14/components/logos.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-14/components/logos.tsx",
           "type": "registry:component"
         }
       ]
@@ -8396,19 +8396,19 @@
       "description": "A simple logo cloud block",
       "files": [
         {
-          "path": "src/registry/blocks/logo-cloud-15/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-15/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/logo-cloud-15/components/logos.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-15/components/logos.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/logo-cloud-15/components/ui/marquee.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-15/components/ui/marquee.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/logo-cloud-15/components/magicui/border-beam.tsx",
+          "path": "src/registry/blocks/shared/logo-cloud-15/components/magicui/border-beam.tsx",
           "type": "registry:component"
         }
       ]
@@ -8420,7 +8420,7 @@
       "description": "A simple pricing block",
       "files": [
         {
-          "path": "src/registry/blocks/pricing-07/components/pricing.tsx",
+          "path": "src/registry/blocks/radix/pricing-07/components/pricing.tsx",
           "type": "registry:component"
         }
       ]
@@ -8432,7 +8432,7 @@
       "description": "A simple pricing block",
       "files": [
         {
-          "path": "src/registry/blocks/pricing-08/components/pricing.tsx",
+          "path": "src/registry/blocks/radix/pricing-08/components/pricing.tsx",
           "type": "registry:component"
         }
       ]
@@ -8444,11 +8444,11 @@
       "description": "A simple pricing block",
       "files": [
         {
-          "path": "src/registry/blocks/pricing-09/components/pricing.tsx",
+          "path": "src/registry/blocks/shared/pricing-09/components/pricing.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/pricing-09/components/magicui/border-beam.tsx",
+          "path": "src/registry/blocks/shared/pricing-09/components/magicui/border-beam.tsx",
           "type": "registry:component"
         }
       ]
@@ -8467,7 +8467,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/pricing-10/components/pricing.tsx",
+          "path": "src/registry/blocks/shared/pricing-10/components/pricing.tsx",
           "type": "registry:component"
         }
       ]
@@ -8491,19 +8491,19 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/signup-06/components/signup.tsx",
+          "path": "src/registry/blocks/radix/signup-06/components/signup.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/signup-06/components/signup-form.tsx",
+          "path": "src/registry/blocks/radix/signup-06/components/signup-form.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/signup-06/components/icons.tsx",
+          "path": "src/registry/blocks/radix/signup-06/components/icons.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/signup-06/components/logo.tsx",
+          "path": "src/registry/blocks/radix/signup-06/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -8527,23 +8527,23 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/signup-07/components/signup.tsx",
+          "path": "src/registry/blocks/radix/signup-07/components/signup.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/signup-07/components/signup-form.tsx",
+          "path": "src/registry/blocks/radix/signup-07/components/signup-form.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/signup-07/components/icons.tsx",
+          "path": "src/registry/blocks/radix/signup-07/components/icons.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/signup-07/components/testimonials.tsx",
+          "path": "src/registry/blocks/radix/signup-07/components/testimonials.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/signup-07/components/logo.tsx",
+          "path": "src/registry/blocks/radix/signup-07/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -8567,19 +8567,19 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/signup-08/components/signup.tsx",
+          "path": "src/registry/blocks/radix/signup-08/components/signup.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/signup-08/components/signup-form.tsx",
+          "path": "src/registry/blocks/radix/signup-08/components/signup-form.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/signup-08/components/icons.tsx",
+          "path": "src/registry/blocks/radix/signup-08/components/icons.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/signup-08/components/logo.tsx",
+          "path": "src/registry/blocks/radix/signup-08/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -8591,7 +8591,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/stats-03/components/stats.tsx",
+          "path": "src/registry/blocks/shared/stats-03/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8603,7 +8603,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/stats-04/components/stats.tsx",
+          "path": "src/registry/blocks/shared/stats-04/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8615,7 +8615,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/stats-05/components/stats.tsx",
+          "path": "src/registry/blocks/shared/stats-05/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8627,7 +8627,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/stats-06/components/stats.tsx",
+          "path": "src/registry/blocks/shared/stats-06/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8639,7 +8639,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/stats-07/components/stats.tsx",
+          "path": "src/registry/blocks/shared/stats-07/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8651,7 +8651,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/stats-08/components/stats.tsx",
+          "path": "src/registry/blocks/shared/stats-08/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8663,7 +8663,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/stats-09/components/stats.tsx",
+          "path": "src/registry/blocks/shared/stats-09/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8675,7 +8675,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/stats-10/components/stats.tsx",
+          "path": "src/registry/blocks/shared/stats-10/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8687,7 +8687,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/stats-11/components/stats.tsx",
+          "path": "src/registry/blocks/shared/stats-11/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8699,7 +8699,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/team-06/components/team.tsx",
+          "path": "src/registry/blocks/shared/team-06/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8711,7 +8711,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/team-07/components/team.tsx",
+          "path": "src/registry/blocks/shared/team-07/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8723,7 +8723,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/team-08/components/team.tsx",
+          "path": "src/registry/blocks/shared/team-08/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8735,7 +8735,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/team-09/components/team.tsx",
+          "path": "src/registry/blocks/shared/team-09/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8747,7 +8747,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/team-10/components/team.tsx",
+          "path": "src/registry/blocks/shared/team-10/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8759,7 +8759,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/team-11/components/team.tsx",
+          "path": "src/registry/blocks/shared/team-11/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8771,7 +8771,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/team-12/components/team.tsx",
+          "path": "src/registry/blocks/shared/team-12/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8783,7 +8783,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/team-13/components/team.tsx",
+          "path": "src/registry/blocks/shared/team-13/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8795,7 +8795,7 @@
       "description": "A simple testimonials block",
       "files": [
         {
-          "path": "src/registry/blocks/testimonials-07/components/testimonials.tsx",
+          "path": "src/registry/blocks/radix/testimonials-07/components/testimonials.tsx",
           "type": "registry:component"
         }
       ]
@@ -8807,7 +8807,7 @@
       "description": "A simple testimonials block",
       "files": [
         {
-          "path": "src/registry/blocks/testimonials-08/components/testimonials.tsx",
+          "path": "src/registry/blocks/radix/testimonials-08/components/testimonials.tsx",
           "type": "registry:component"
         }
       ]
@@ -8819,7 +8819,7 @@
       "description": "A simple testimonials block",
       "files": [
         {
-          "path": "src/registry/blocks/testimonials-09/components/testimonials.tsx",
+          "path": "src/registry/blocks/shared/testimonials-09/components/testimonials.tsx",
           "type": "registry:component"
         }
       ]
@@ -8831,7 +8831,7 @@
       "description": "A simple testimonials block",
       "files": [
         {
-          "path": "src/registry/blocks/testimonials-10/components/testimonials.tsx",
+          "path": "src/registry/blocks/shared/testimonials-10/components/testimonials.tsx",
           "type": "registry:component"
         }
       ]
@@ -8843,7 +8843,7 @@
       "description": "A simple testimonials block",
       "files": [
         {
-          "path": "src/registry/blocks/testimonials-11/components/testimonials.tsx",
+          "path": "src/registry/blocks/shared/testimonials-11/components/testimonials.tsx",
           "type": "registry:component"
         }
       ]
@@ -8855,7 +8855,7 @@
       "description": "A simple testimonials block",
       "files": [
         {
-          "path": "src/registry/blocks/testimonials-12/components/testimonials.tsx",
+          "path": "src/registry/blocks/shared/testimonials-12/components/testimonials.tsx",
           "type": "registry:component"
         }
       ]
@@ -8867,11 +8867,11 @@
       "description": "A simple testimonials block",
       "files": [
         {
-          "path": "src/registry/blocks/testimonials-13/components/testimonials.tsx",
+          "path": "src/registry/blocks/radix/testimonials-13/components/testimonials.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/testimonials-13/components/ui/marquee.tsx",
+          "path": "src/registry/blocks/radix/testimonials-13/components/ui/marquee.tsx",
           "type": "registry:component"
         }
       ]
@@ -8883,7 +8883,7 @@
       "description": "A simple blog block",
       "files": [
         {
-          "path": "src/registry/blocks/blog-04/components/blog.tsx",
+          "path": "src/registry/blocks/radix/blog-04/components/blog.tsx",
           "type": "registry:component"
         }
       ]
@@ -8895,7 +8895,7 @@
       "description": "A simple blog block",
       "files": [
         {
-          "path": "src/registry/blocks/blog-05/components/blog.tsx",
+          "path": "src/registry/blocks/radix/blog-05/components/blog.tsx",
           "type": "registry:component"
         }
       ]
@@ -8907,7 +8907,7 @@
       "description": "A simple blog block",
       "files": [
         {
-          "path": "src/registry/blocks/blog-06/components/blog.tsx",
+          "path": "src/registry/blocks/radix/blog-06/components/blog.tsx",
           "type": "registry:component"
         }
       ]
@@ -8922,7 +8922,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/not-found-01/components/not-found.tsx",
+          "path": "src/registry/blocks/shared/not-found-01/components/not-found.tsx",
           "type": "registry:component"
         }
       ]
@@ -8940,7 +8940,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/not-found-02/components/not-found.tsx",
+          "path": "src/registry/blocks/shared/not-found-02/components/not-found.tsx",
           "type": "registry:component"
         }
       ]
@@ -8958,7 +8958,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/not-found-03/components/not-found.tsx",
+          "path": "src/registry/blocks/shared/not-found-03/components/not-found.tsx",
           "type": "registry:component"
         }
       ]
@@ -8977,7 +8977,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/not-found-04/components/not-found.tsx",
+          "path": "src/registry/blocks/shared/not-found-04/components/not-found.tsx",
           "type": "registry:component"
         }
       ]
@@ -8995,7 +8995,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/not-found-05/components/not-found.tsx",
+          "path": "src/registry/blocks/shared/not-found-05/components/not-found.tsx",
           "type": "registry:component"
         }
       ]
@@ -9013,7 +9013,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/not-found-06/components/not-found.tsx",
+          "path": "src/registry/blocks/shared/not-found-06/components/not-found.tsx",
           "type": "registry:component"
         }
       ]
@@ -9028,11 +9028,11 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/not-found-07/components/not-found.tsx",
+          "path": "src/registry/blocks/shared/not-found-07/components/not-found.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/not-found-07/components/glitch-text.tsx",
+          "path": "src/registry/blocks/shared/not-found-07/components/glitch-text.tsx",
           "type": "registry:component"
         }
       ],
@@ -9120,7 +9120,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/not-found-08/components/not-found.tsx",
+          "path": "src/registry/blocks/shared/not-found-08/components/not-found.tsx",
           "type": "registry:component"
         }
       ]
@@ -9132,7 +9132,7 @@
       "description": "A simple integrations block",
       "files": [
         {
-          "path": "src/registry/blocks/integrations-01/components/integrations.tsx",
+          "path": "src/registry/blocks/shared/integrations-01/components/integrations.tsx",
           "type": "registry:component"
         }
       ]
@@ -9144,7 +9144,7 @@
       "description": "A simple integrations block",
       "files": [
         {
-          "path": "src/registry/blocks/integrations-02/components/integrations.tsx",
+          "path": "src/registry/blocks/shared/integrations-02/components/integrations.tsx",
           "type": "registry:component"
         }
       ]
@@ -9156,7 +9156,7 @@
       "description": "A simple integrations block",
       "files": [
         {
-          "path": "src/registry/blocks/integrations-03/components/integrations.tsx",
+          "path": "src/registry/blocks/shared/integrations-03/components/integrations.tsx",
           "type": "registry:component"
         }
       ]
@@ -9168,7 +9168,7 @@
       "description": "A simple integrations block",
       "files": [
         {
-          "path": "src/registry/blocks/integrations-04/components/integrations.tsx",
+          "path": "src/registry/blocks/shared/integrations-04/components/integrations.tsx",
           "type": "registry:component"
         }
       ]
@@ -9180,7 +9180,7 @@
       "description": "A simple integrations block",
       "files": [
         {
-          "path": "src/registry/blocks/integrations-05/components/integrations.tsx",
+          "path": "src/registry/blocks/shared/integrations-05/components/integrations.tsx",
           "type": "registry:component"
         }
       ]

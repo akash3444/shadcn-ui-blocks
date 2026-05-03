@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-14",
+  "title": "Vertical Left Bordered Tabs",
+  "description": "Vertical tabs with left border",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/tabs/tabs-14.tsx",
+      "content": "import { Bot, Home, Settings, User } from \"lucide-react\";\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/registry/ui/tabs\";\n\nconst tabs = [\n  {\n    name: \"Home\",\n    value: \"home\",\n    icon: Home,\n  },\n  {\n    name: \"Profile\",\n    value: \"profile\",\n    icon: User,\n  },\n  {\n    name: \"Messages\",\n    value: \"messages\",\n    icon: Bot,\n  },\n  {\n    name: \"Settings\",\n    value: \"settings\",\n    icon: Settings,\n  },\n];\n\nexport default function VerticalLeftBorderedTabsDemo() {\n  return (\n    <Tabs\n      className=\"flex w-full max-w-md flex-row items-start justify-center gap-4\"\n      defaultValue={tabs[0].value}\n      orientation=\"vertical\"\n    >\n      <TabsList className=\"grid min-w-28 shrink-0 grid-cols-1 bg-background p-0\">\n        {tabs.map((tab) => (\n          <TabsTrigger\n            className=\"justify-start rounded-none border-0 border-transparent border-l-2 py-1.5 ps-2.5 data-[state=active]:border-primary data-[state=active]:bg-primary/5 data-[state=active]:shadow-none group-data-[variant=default]/tabs-list:data-active:shadow-none\"\n            key={tab.value}\n            value={tab.value}\n          >\n            <tab.icon className=\"me-2 size-5\" /> {tab.name}\n          </TabsTrigger>\n        ))}\n      </TabsList>\n\n      <div className=\"flex h-40 w-full max-w-xs items-center justify-center rounded-md border font-medium text-muted-foreground\">\n        {tabs.map((tab) => (\n          <TabsContent\n            className=\"flex h-full items-center justify-center\"\n            key={tab.value}\n            value={tab.value}\n          >\n            {tab.name} Content\n          </TabsContent>\n        ))}\n      </div>\n    </Tabs>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

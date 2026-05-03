@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-07",
+  "title": "OTP Input with Inner Shadow",
+  "description": "An OTP input with inner shadow styling",
+  "registryDependencies": [
+    "input-otp"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/input-otp/input-otp-07.tsx",
+      "content": "import { InputOTP, InputOTPGroup, InputOTPSlot } from \"@/registry/ui/input-otp\";\n\nexport default function InputOTPDemo() {\n  return (\n    <InputOTP maxLength={6}>\n      <InputOTPGroup className=\"space-x-2\">\n        <InputOTPSlot\n          className=\"rounded-md border-accent/90 border-l shadow-inner dark:shadow-primary/10\"\n          index={0}\n        />\n        <InputOTPSlot\n          className=\"rounded-md border-accent/90 border-l shadow-inner dark:shadow-primary/10\"\n          index={1}\n        />\n        <InputOTPSlot\n          className=\"rounded-md border-accent/90 border-l shadow-inner dark:shadow-primary/10\"\n          index={2}\n        />\n        <InputOTPSlot\n          className=\"rounded-md border-accent/90 border-l shadow-inner dark:shadow-primary/10\"\n          index={3}\n        />\n      </InputOTPGroup>\n    </InputOTP>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -8,11 +8,11 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/registry/ui/radix/sheet";
-import { Logo } from "@/registry/blocks/navbar-03/components/logo";
+import { Logo } from "@/registry/blocks/radix/navbar-03/components/logo";
 import {
   foods,
   travelMenuItems,
-} from "@/registry/blocks/navbar-03/config/navbar";
+} from "@/registry/blocks/radix/navbar-03/config/navbar";
 
 export const NavigationSheet = () => {
   return (

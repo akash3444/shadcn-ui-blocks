@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-02",
+  "title": "Clickable Avatar",
+  "description": "A clickable avatar component",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/avatar/avatar-02.tsx",
+      "content": "import Link from \"next/link\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/registry/ui/avatar\";\n\nexport default function ClickableAvatarDemo() {\n  return (\n    <Link href=\"https://github.com/shadcn\" target=\"_blank\">\n      <Avatar>\n        <AvatarImage alt=\"@shadcn\" src=\"https://github.com/shadcn.png\" />\n        <AvatarFallback>CN</AvatarFallback>\n      </Avatar>\n    </Link>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

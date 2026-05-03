@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { Button } from "@/registry/ui/radix/button";
 import { Separator } from "@/registry/ui/radix/separator";
-import { GoogleLogo } from "@/registry/blocks/login-08/components/icons";
-import { LoginForm } from "@/registry/blocks/login-08/components/login-form";
-import { Logo } from "@/registry/blocks/login-08/components/logo";
+import { GoogleLogo } from "@/registry/blocks/radix/login-08/components/icons";
+import { LoginForm } from "@/registry/blocks/radix/login-08/components/login-form";
+import { Logo } from "@/registry/blocks/radix/login-08/components/logo";
 
 const Login = () => (
   <div className="flex h-screen items-center justify-center">

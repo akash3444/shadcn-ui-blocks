@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-05",
+  "title": "Carousel with Slide Status (Alternate)",
+  "description": "An alternate carousel with slide status indicator",
+  "registryDependencies": [
+    "carousel",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/carousel/carousel-05.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport {\n  Carousel,\n  type CarouselApi,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n} from \"@/registry/ui/carousel\";\n\nconst images = [\n  \"https://www.fffuel.co/images/dddepth-preview/dddepth-248.jpg\",\n  \"https://www.fffuel.co/images/dddepth-preview/dddepth-051.jpg\",\n  \"https://www.fffuel.co/images/dddepth-preview/dddepth-029.jpg\",\n  \"https://www.fffuel.co/images/dddepth-preview/dddepth-038.jpg\",\n  \"https://www.fffuel.co/images/dddepth-preview/dddepth-012.jpg\",\n];\n\nexport default function SlideStatus() {\n  const [api, setApi] = React.useState<CarouselApi>();\n  const [current, setCurrent] = React.useState(0);\n  const [count, setCount] = React.useState(0);\n\n  React.useEffect(() => {\n    if (!api) {\n      return;\n    }\n\n    setCount(api.scrollSnapList().length);\n    setCurrent(api.selectedScrollSnap() + 1);\n\n    api.on(\"select\", () => {\n      setCurrent(api.selectedScrollSnap() + 1);\n    });\n  }, [api]);\n\n  return (\n    <div className=\"mx-auto max-w-xs\">\n      <Carousel className=\"w-full max-w-xs\" setApi={setApi}>\n        <CarouselContent>\n          {images.map((image) => (\n            <CarouselItem className=\"aspect-video\" key={image}>\n              <img\n                alt=\"dddepth-248\"\n                className=\"size-full rounded-xl object-cover\"\n                src={image}\n              />\n            </CarouselItem>\n          ))}\n        </CarouselContent>\n        <CarouselPrevious />\n        <CarouselNext />\n      </Carousel>\n      <div className=\"mt-4 text-center text-muted-foreground text-sm\">\n        {current} / {count}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

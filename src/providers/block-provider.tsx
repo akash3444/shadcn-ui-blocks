@@ -15,6 +15,7 @@ import { getFileTree } from "@/lib/file-tree";
 import { codeToHtml } from "@/lib/shiki";
 import type { BlockScreenSize, BlockScreenSizeUnion } from "@/types/blocks";
 import type { Theme } from "@/types/theme";
+import { usePrimitive } from "./primitive-provider";
 
 const BlockContext = createContext<{
   codeHtml: string | null;
@@ -73,13 +74,40 @@ const transformCode = (code: string) => {
     "@/config"
   );
 
-  // Replace `@/registry/.../ui` with `@/components/ui`
+  // Replace `@/registry/ui/radix/` and `@/registry/ui/base/` with `@/components/ui/`
+  transformedCode = transformedCode.replace(
+    /@\/registry\/ui\/(radix|base)\//g,
+    "@/components/ui/"
+  );
+
+  // Replace remaining `@/registry/.../ui` with `@/components/ui`
   transformedCode = transformedCode.replace(
     /@\/registry\/(.+)\/ui/g,
     "@/components/ui"
   );
 
   return transformedCode;
+};
+
+const getBlockFiles = (
+  block: (typeof blocks)[number],
+  primitive: "radix" | "base"
+) => {
+  if (block.primitives) {
+    return block.primitives[primitive].files;
+  }
+  return block.files ?? [];
+};
+
+const getBlockFilePath = (
+  block: (typeof blocks)[number],
+  primitive: "radix" | "base",
+  activeFile: string
+) => {
+  if (block.primitives) {
+    return `src/registry/blocks/${primitive}/${block.name}/${activeFile}`;
+  }
+  return `src/registry/blocks/shared/${block.name}/${activeFile}`;
 };
 
 export const BlockProvider = ({
@@ -89,15 +117,18 @@ export const BlockProvider = ({
   children: ReactNode;
   name: string;
 }) => {
-  const block = blocks.find((block) => block.name === name);
+  const block = blocks.find((b) => b.name === name);
 
   if (!block) {
     throw new Error("Block not found");
   }
 
-  const fileTree = getFileTree(block as (typeof blocks)[number]);
+  const { selectedPrimitive } = usePrimitive();
 
-  const [activeFile, setActiveFile] = useState(block?.files[0]?.path);
+  const activeFiles = getBlockFiles(block, selectedPrimitive);
+  const fileTree = getFileTree(block as (typeof blocks)[number], selectedPrimitive);
+
+  const [activeFile, setActiveFile] = useState(activeFiles[0]?.path);
   const [screenSize, setScreenSize] = useState<BlockScreenSizeUnion>("desktop");
   const [code, setCode] = useState<string | null>(null);
   const [codeHtml, setCodeHtml] = useState<string | null>(null);
@@ -112,16 +143,16 @@ export const BlockProvider = ({
     handleIframeLoad,
   } = useBlockTheme();
 
-  const iframeSrc = `/blocks/${block.name}/preview`;
+  const iframeSrc = `/blocks/${block.name}/preview?primitive=${selectedPrimitive}`;
 
   const updateCodeContent = async () => {
+    if (!activeFile) return;
     setIsLoadingCode(true);
 
     try {
-      const code = await getFileContent(
-        `src/registry/blocks/${block.name}/${activeFile}`
-      );
-      const transformedCode = transformCode(code);
+      const filePath = getBlockFilePath(block, selectedPrimitive, activeFile);
+      const rawCode = await getFileContent(filePath);
+      const transformedCode = transformCode(rawCode);
       setCode(transformedCode);
 
       const formattedCode = await codeToHtml(transformedCode ?? "");
@@ -131,10 +162,16 @@ export const BlockProvider = ({
     }
   };
 
-  // Update the code content when the active file changes
+  // Reset active file when primitive changes
+  useEffect(() => {
+    const files = getBlockFiles(block, selectedPrimitive);
+    setActiveFile(files[0]?.path);
+  }, [selectedPrimitive]);
+
+  // Update the code content when the active file or primitive changes
   useEffect(() => {
     updateCodeContent();
-  }, [activeFile]);
+  }, [activeFile, selectedPrimitive]);
 
   return (
     <BlockContext.Provider
@@ -143,7 +180,7 @@ export const BlockProvider = ({
         code,
         isLoadingCode,
         fileTree,
-        activeFile,
+        activeFile: activeFile ?? "",
         screenSize,
         setScreenSize,
         selectFile: setActiveFile,

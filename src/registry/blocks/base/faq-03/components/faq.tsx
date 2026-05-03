@@ -1,7 +1,7 @@
 "use client";
 
 import { PlusIcon } from "lucide-react";
-import { Accordion as AccordionPrimitive } from "radix-ui";
+import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
 import { useState } from "react";
 import {
   Accordion,
@@ -76,17 +76,16 @@ const FAQ = () => {
         <div className="mt-6 grid w-full gap-x-10 md:grid-cols-2">
           <Accordion
             className="w-full"
-            collapsible
-            onValueChange={setValue}
-            type="single"
-            value={value}
+            openMultiple={false}
+            onValueChange={(val) => setValue(val[0])}
+            value={value ? [value] : []}
           >
             {faq.slice(0, 5).map(({ question, answer }, index) => (
               <AccordionItem key={question} value={`question-${index}`}>
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger
                     className={cn(
-                      "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45",
+                      "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[aria-expanded=true]>svg]:rotate-45",
                       "text-start text-lg"
                     )}
                   >
@@ -103,17 +102,16 @@ const FAQ = () => {
 
           <Accordion
             className="w-full"
-            collapsible
-            onValueChange={setValue}
-            type="single"
-            value={value}
+            openMultiple={false}
+            onValueChange={(val) => setValue(val[0])}
+            value={value ? [value] : []}
           >
             {faq.slice(5).map(({ question, answer }, index) => (
               <AccordionItem key={question} value={`question-${index + 5}`}>
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger
                     className={cn(
-                      "flex flex-1 items-center justify-between py-4 font-medium tracking-tight transition-all hover:underline [&[data-state=open]>svg]:rotate-45",
+                      "flex flex-1 items-center justify-between py-4 font-medium tracking-tight transition-all hover:underline [&[aria-expanded=true]>svg]:rotate-45",
                       "text-start text-lg"
                     )}
                   >

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-09",
+  "title": "Spinner Circle 3",
+  "description": "A circle spinner component variation 3",
+  "files": [
+    {
+      "path": "src/components/customized/spinner/spinner-09.tsx",
+      "content": "const SpinnerCircle3 = () => (\n  <div className=\"h-7 w-7 animate-spin rounded-full border-[3px] border-secondary border-t-primary\" />\n);\n\nexport default SpinnerCircle3;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

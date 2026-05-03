@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { Button } from "@/registry/ui/base/button";
 import { Separator } from "@/registry/ui/base/separator";
-import { GoogleLogo } from "@/registry/blocks/login-07/components/icons";
-import { LoginForm } from "@/registry/blocks/login-07/components/login-form";
-import { Logo } from "@/registry/blocks/login-07/components/logo";
+import { GoogleLogo } from "@/registry/blocks/base/login-07/components/icons";
+import { LoginForm } from "@/registry/blocks/base/login-07/components/login-form";
+import { Logo } from "@/registry/blocks/base/login-07/components/logo";
 import { Testimonials } from "./testimonials";
 
 const Login = () => (

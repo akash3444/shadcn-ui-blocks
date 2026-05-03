@@ -1,8 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/registry/ui/radix/button";
-import { Logo } from "@/registry/blocks/navbar-03/components/logo";
-import { NavMenu } from "@/registry/blocks/navbar-03/components/nav-menu";
-import { NavigationSheet } from "@/registry/blocks/navbar-03/components/navigation-sheet";
+import { Logo } from "@/registry/blocks/radix/navbar-03/components/logo";
+import { NavMenu } from "@/registry/blocks/radix/navbar-03/components/nav-menu";
+import { NavigationSheet } from "@/registry/blocks/radix/navbar-03/components/navigation-sheet";
 
 const Navbar = () => {
   return (

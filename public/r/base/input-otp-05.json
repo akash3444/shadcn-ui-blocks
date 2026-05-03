@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-05",
+  "title": "Secondary OTP Input",
+  "description": "An OTP input with secondary styling",
+  "registryDependencies": [
+    "input-otp"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/input-otp/input-otp-05.tsx",
+      "content": "import { InputOTP, InputOTPGroup, InputOTPSlot } from \"@/registry/ui/input-otp\";\n\nexport default function InputOTPDemo() {\n  return (\n    <InputOTP maxLength={6}>\n      <InputOTPGroup className=\"space-x-2\">\n        <InputOTPSlot\n          className=\"rounded-md border-accent border-l bg-secondary font-semibold shadow-none\"\n          index={0}\n        />\n        <InputOTPSlot\n          className=\"rounded-md border-accent border-l bg-secondary font-semibold shadow-none\"\n          index={1}\n        />\n        <InputOTPSlot\n          className=\"rounded-md border-accent border-l bg-secondary font-semibold shadow-none\"\n          index={2}\n        />\n        <InputOTPSlot\n          className=\"rounded-md border-accent border-l bg-secondary font-semibold shadow-none\"\n          index={3}\n        />\n      </InputOTPGroup>\n    </InputOTP>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

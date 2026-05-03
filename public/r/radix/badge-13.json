@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-13",
+  "title": "Clickable Link Badge",
+  "description": "A clickable link badge component",
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/badge/badge-13.tsx",
+      "content": "import Image from \"next/image\";\nimport Link from \"next/link\";\nimport { Badge } from \"@/registry/ui/badge\";\n\nconst ClickableLinkBadgeDemo = () => {\n  return (\n    <Badge asChild className=\"h-7 gap-1.5 pl-0.75\" variant=\"outline\">\n      <Link href=\"https://github.com/shadcn\" target=\"_blank\">\n        <Image\n          alt=\"\"\n          className=\"h-5 w-5 rounded-full\"\n          height={20}\n          src=\"https://github.com/shadcn.png\"\n          width={20}\n        />\n        shadcn\n      </Link>\n    </Badge>\n  );\n};\n\nexport default ClickableLinkBadgeDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

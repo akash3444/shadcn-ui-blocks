@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-04",
+  "title": "Info Alert Dialog",
+  "description": "An info alert dialog component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert-dialog",
+    "button",
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/alert-dialog/alert-dialog-04.tsx",
+      "content": "import { CircleFadingArrowUp, Rocket } from \"lucide-react\";\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@/registry/ui/alert-dialog\";\nimport { Badge } from \"@/registry/ui/badge\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport default function AlertDialogInfo() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger asChild>\n        <Button variant=\"outline\">Show Dialog</Button>\n      </AlertDialogTrigger>\n      <AlertDialogContent className=\"sm:max-w-lg!\">\n        <AlertDialogHeader>\n          <div className=\"mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 sm:mx-0\">\n            <CircleFadingArrowUp className=\"h-[18px] w-[18px] text-primary\" />\n          </div>\n          <AlertDialogTitle className=\"font-semibold text-2xl tracking-[-0.015em]\">\n            New Software Update Available\n          </AlertDialogTitle>\n          <AlertDialogDescription className=\"text-[15px]\">\n            A new software update is available for your device. Please update to\n            the latest version to continue using the app.\n          </AlertDialogDescription>\n          <div className=\"mt-6! flex flex-wrap gap-2\">\n            <Badge variant=\"outline\">Faster Performance</Badge>\n            <Badge variant=\"outline\">Advanced Blocks</Badge>\n            <Badge variant=\"outline\">Customized Components</Badge>\n            <Badge variant=\"outline\">UI Revamp</Badge>\n            <Badge variant=\"outline\">Security Improvements</Badge>\n            <Badge variant=\"outline\">Other Improvements</Badge>\n            <Badge variant=\"outline\">Bug Fixes</Badge>\n            <Badge variant=\"outline\">+ much more</Badge>\n          </div>\n        </AlertDialogHeader>\n        <AlertDialogFooter className=\"mt-4\">\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction>\n            <Rocket /> Update Now\n          </AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

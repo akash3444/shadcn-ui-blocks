@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-05",
+  "title": "Customized Header Alert Dialog",
+  "description": "An alert dialog with customized header",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert-dialog",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/alert-dialog/alert-dialog-05.tsx",
+      "content": "import { OctagonAlert, X } from \"lucide-react\";\nimport { AlertDialog as AlertDialogPrimitive } from \"radix-ui\";\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@/registry/ui/alert-dialog\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport default function AlertDialogWithCustomizedHeader() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger asChild>\n        <Button variant=\"outline\">Show Dialog</Button>\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <div className=\"-mx-4 -mt-1 flex items-center justify-between border-b px-4 pb-3\">\n          <AlertDialogTitle>Delete Account</AlertDialogTitle>\n          <AlertDialogPrimitive.Cancel asChild>\n            <Button size=\"icon-sm\" variant=\"ghost\">\n              <X />\n            </Button>\n          </AlertDialogPrimitive.Cancel>\n        </div>\n        <AlertDialogHeader className=\"pt-2\">\n          <AlertDialogTitle>\n            <div className=\"mx-auto mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-destructive/10 sm:mx-0\">\n              <OctagonAlert className=\"h-5 w-5 text-destructive\" />\n            </div>\n            Are you absolutely sure?\n          </AlertDialogTitle>\n          <AlertDialogDescription className=\"text-[15px]\">\n            This action cannot be undone. This will permanently delete your\n            account and remove your data from our servers.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter className=\"mt-2\">\n          <AlertDialogCancel variant=\"ghost\">Cancel</AlertDialogCancel>\n          <AlertDialogAction variant=\"destructive\">Continue</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

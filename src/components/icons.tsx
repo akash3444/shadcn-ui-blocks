@@ -247,3 +247,15 @@ export const BunLogo = (props: SVGProps<SVGSVGElement>) => (
     </g>
   </svg>
 );
+
+export const RadixUI = (props: SVGProps<SVGSVGElement>) => (
+  <svg {...props} fill="currentColor" viewBox="4 0 17 25">
+    <path d="M12 25a8 8 0 1 1 0-16v16zM12 0H4v8h8V0zM17 8a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+  </svg>
+);
+
+export const BaseUI = (props: SVGProps<SVGSVGElement>) => (
+  <svg {...props} aria-label="Base UI" fill="currentColor" viewBox="0 0 17 24">
+    <path d="M9.5 7.015A.477.477 0 0 0 9 7.5V23a8 8 0 0 0 .5-15.985ZM8 9.8V23c-4.418 0-8-3.94-8-8.8V1c4.418 0 8 3.94 8 8.8Z" />
+  </svg>
+);

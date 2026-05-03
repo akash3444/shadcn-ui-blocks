@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-05",
+  "title": "Spinner Sizes",
+  "description": "A spinner component with different sizes",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/spinner/spinner-05.tsx",
+      "content": "import { Loader2Icon } from \"lucide-react\";\n\nexport default function SpinnerSizesDemo() {\n  return (\n    <div className=\"flex flex-wrap items-center gap-4\">\n      <Loader2Icon className=\"h-4 w-4 animate-spin\" />\n      <Loader2Icon className=\"h-5 w-5 animate-spin\" />\n      <Loader2Icon className=\"h-6 w-6 animate-spin\" />\n      <Loader2Icon className=\"h-8 w-8 animate-spin\" />\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

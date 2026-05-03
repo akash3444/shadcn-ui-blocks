@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-11",
+  "title": "Card Checkbox",
+  "description": "A card checkbox component",
+  "dependencies": [
+    "lucide-react",
+    "radix-ui"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/checkbox/checkbox-11.tsx",
+      "content": "import { CircleCheck, Ruler, Smile, SwatchBook } from \"lucide-react\";\nimport { Checkbox as CheckboxPrimitive } from \"radix-ui\";\n\nconst options = [\n  {\n    label: \"Colors\",\n    value: \"colors\",\n    icon: SwatchBook,\n    defaultChecked: true,\n  },\n  {\n    label: \"Emojis\",\n    value: \"emojis\",\n    icon: Smile,\n  },\n  {\n    label: \"Spacing\",\n    value: \"spacing\",\n    icon: Ruler,\n  },\n];\n\nconst CheckboxCardDemo = () => {\n  return (\n    <div className=\"grid w-full max-w-sm grid-cols-3 gap-3\">\n      {options.map((option) => (\n        <CheckboxPrimitive.Root\n          className=\"relative rounded-lg border border-dashed px-4 py-3 text-start text-muted-foreground data-[state=checked]:border-primary data-[state=checked]:border-solid data-[state=checked]:bg-primary/4 data-[state=checked]:text-primary data-[state=checked]:ring dark:data-[state=checked]:ring-transparent\"\n          defaultChecked={option.defaultChecked}\n          key={option.value}\n        >\n          <option.icon className=\"mb-3\" />\n          <span className=\"font-medium tracking-tight\">{option.label}</span>\n\n          <CheckboxPrimitive.Indicator className=\"absolute top-2 right-2\">\n            <CircleCheck className=\"fill-primary text-primary-foreground\" />\n          </CheckboxPrimitive.Indicator>\n        </CheckboxPrimitive.Root>\n      ))}\n    </div>\n  );\n};\n\nexport default CheckboxCardDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

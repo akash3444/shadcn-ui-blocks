@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-11",
+  "title": "Carousel with Scale Transition",
+  "description": "A carousel with scale transition effects",
+  "registryDependencies": [
+    "carousel",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/carousel/carousel-11.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\nimport {\n  Carousel,\n  type CarouselApi,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n} from \"@/registry/ui/carousel\";\n\nconst images = [\n  \"https://www.fffuel.co/images/dddepth-preview/dddepth-248.jpg\",\n  \"https://www.fffuel.co/images/dddepth-preview/dddepth-051.jpg\",\n  \"https://www.fffuel.co/images/dddepth-preview/dddepth-029.jpg\",\n  \"https://www.fffuel.co/images/dddepth-preview/dddepth-038.jpg\",\n  \"https://www.fffuel.co/images/dddepth-preview/dddepth-012.jpg\",\n];\n\nexport default function SlideScale() {\n  const [api, setApi] = React.useState<CarouselApi>();\n  const [current, setCurrent] = React.useState(0);\n  console.log(\"current :\", current);\n\n  React.useEffect(() => {\n    if (!api) {\n      return;\n    }\n\n    setCurrent(api.selectedScrollSnap() + 1);\n\n    api.on(\"select\", () => {\n      setCurrent(api.selectedScrollSnap() + 1);\n    });\n  }, [api]);\n\n  return (\n    <div className=\"mx-auto max-w-xs\">\n      <Carousel\n        className=\"w-full max-w-xs\"\n        opts={{ loop: true }}\n        setApi={setApi}\n      >\n        <CarouselContent className=\"py-3\">\n          {images.map((image, index) => (\n            <CarouselItem\n              className={cn(\"aspect-square basis-[33%]\", {})}\n              key={image}\n            >\n              <img\n                alt=\"dddepth-248\"\n                className={cn(\n                  \"size-full rounded-xl object-cover transition-transform\",\n                  {\n                    \"scale-[0.6]\": index !== current - 1,\n                  }\n                )}\n                src={image}\n              />\n            </CarouselItem>\n          ))}\n        </CarouselContent>\n        <CarouselPrevious />\n        <CarouselNext />\n      </Carousel>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

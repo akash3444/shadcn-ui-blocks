@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-13",
+  "title": "Roles",
+  "description": "A roles component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "checkbox"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/checkbox/checkbox-13.tsx",
+      "content": "\"use client\";\n\nimport {\n  EyeIcon,\n  PencilIcon,\n  ShieldIcon,\n  UserCircleIcon,\n  UserIcon,\n} from \"lucide-react\";\nimport { Checkbox } from \"@/registry/ui/checkbox\";\n\nexport default function Checkbox13() {\n  return (\n    <div className=\"w-full max-w-xs space-y-3 rounded-lg border p-4\">\n      {roles.map((role) => (\n        <label\n          className=\"flex items-center justify-between gap-2\"\n          htmlFor={role.value}\n          key={role.value}\n        >\n          <div className=\"flex items-center gap-2\">\n            <div className=\"flex size-9 items-center justify-center rounded-md bg-muted\">\n              <role.icon className=\"size-4.5\" />\n            </div>\n            <div className=\"flex flex-col gap-0.5\">\n              <span className=\"font-medium text-sm\">{role.name}</span>\n              <span className=\"text-muted-foreground text-sm\">\n                {role.description}\n              </span>\n            </div>\n          </div>\n          <Checkbox\n            defaultChecked={role.defaultChecked}\n            id={role.value}\n            value={role.value}\n          />\n        </label>\n      ))}\n    </div>\n  );\n}\nconst roles = [\n  {\n    name: \"Administrator\",\n    value: \"administrator\",\n    description: \"Full system access\",\n    icon: ShieldIcon,\n    defaultChecked: true,\n  },\n  {\n    name: \"Editor\",\n    value: \"editor\",\n    description: \"Content management only\",\n    icon: PencilIcon,\n  },\n  {\n    name: \"Moderator\",\n    value: \"moderator\",\n    description: \"User content moderation\",\n    icon: EyeIcon,\n    defaultChecked: true,\n  },\n  {\n    name: \"User\",\n    value: \"user\",\n    description: \"Basic feature access\",\n    icon: UserIcon,\n  },\n  {\n    name: \"Viewer\",\n    value: \"viewer\",\n    description: \"Read-only permissions\",\n    icon: EyeIcon,\n  },\n  {\n    name: \"Guest\",\n    value: \"guest\",\n    description: \"Limited public access\",\n    icon: UserCircleIcon,\n  },\n];\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

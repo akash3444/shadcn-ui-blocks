@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { Button } from "@/registry/ui/radix/button";
 import { Separator } from "@/registry/ui/radix/separator";
-import { GoogleLogo } from "@/registry/blocks/signup-07/components/icons";
-import { Logo } from "@/registry/blocks/signup-07/components/logo";
-import { SignUpForm } from "@/registry/blocks/signup-07/components/signup-form";
+import { GoogleLogo } from "@/registry/blocks/radix/signup-07/components/icons";
+import { Logo } from "@/registry/blocks/radix/signup-07/components/logo";
+import { SignUpForm } from "@/registry/blocks/radix/signup-07/components/signup-form";
 import { Testimonials } from "./testimonials";
 
 const SignUp = () => (

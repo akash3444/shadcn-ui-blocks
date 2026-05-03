@@ -9,6 +9,7 @@ import { ThemeToggle } from "@/components/app-sidebar/theme-toggle";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { PackageManagerProvider } from "@/providers/package-manager-provider";
+import { PrimitiveProvider } from "@/providers/primitive-provider";
 import { CSPostHogProvider } from "@/providers/posthog-provider";
 
 const inter = localFont({
@@ -149,7 +150,9 @@ export default function RootLayout({
         <CSPostHogProvider>
           <ThemeProvider attribute="class">
             <TooltipProvider>
-              <PackageManagerProvider>{children}</PackageManagerProvider>
+              <PackageManagerProvider>
+                <PrimitiveProvider>{children}</PrimitiveProvider>
+              </PackageManagerProvider>
               <div className="fixed right-6 bottom-6">
                 <ThemeToggle />
               </div>

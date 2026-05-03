@@ -2,7 +2,7 @@ import { ArrowUpRight, CirclePlay } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/registry/ui/radix/badge";
 import { Button } from "@/registry/ui/radix/button";
-import { BackgroundPattern } from "@/registry/blocks/hero-06/components/background-pattern";
+import { BackgroundPattern } from "@/registry/blocks/shared/hero-06/components/background-pattern";
 
 export default function Hero() {
   return (

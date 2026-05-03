@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 import {
   foods,
   travelMenuItems,
-} from "@/registry/blocks/navbar-03/config/navbar";
+} from "@/registry/blocks/base/navbar-03/config/navbar";
 
 export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => (
   <NavigationMenu {...props}>
