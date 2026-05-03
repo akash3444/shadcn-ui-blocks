@@ -50,7 +50,7 @@ const PreviewListSearch = () => {
   return (
     <div className="relative w-full max-w-80">
       <Input
-        className="w-full bg-muted/50 ps-9"
+        className="w-full bg-background ps-9"
         onChange={handleChange}
         placeholder="Search"
         value={value}
