@@ -76,7 +76,6 @@ const FAQ = () => {
         <div className="mt-6 grid w-full gap-x-10 md:grid-cols-2">
           <Accordion
             className="w-full"
-            openMultiple={false}
             onValueChange={(val) => setValue(val[0])}
             value={value ? [value] : []}
           >
@@ -102,7 +101,6 @@ const FAQ = () => {
 
           <Accordion
             className="w-full"
-            openMultiple={false}
             onValueChange={(val) => setValue(val[0])}
             value={value ? [value] : []}
           >

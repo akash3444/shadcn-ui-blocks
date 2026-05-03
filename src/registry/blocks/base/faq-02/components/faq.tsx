@@ -41,7 +41,7 @@ const FAQ = () => {
           Frequently Asked <br /> Questions
         </h2>
 
-        <Accordion className="max-w-xl" defaultValue="question-0" type="single">
+        <Accordion className="max-w-xl" defaultValue={["question-0"]}>
           {faq.map(({ question, answer }, index) => (
             <AccordionItem key={question} value={`question-${index}`}>
               <AccordionTrigger className="text-left text-lg">

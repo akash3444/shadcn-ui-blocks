@@ -70,14 +70,16 @@ export default function Profile() {
             />
 
             <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
-                  className="absolute top-4 right-4 z-1"
-                  size="icon"
-                  variant="outline"
-                >
-                  <PencilIcon className="size-4" />
-                </Button>
+              <TooltipTrigger
+                render={
+                  <Button
+                    className="absolute top-4 right-4 z-1"
+                    size="icon"
+                    variant="outline"
+                  />
+                }
+              >
+                <PencilIcon className="size-4" />
               </TooltipTrigger>
               <TooltipContent>Edit Profile</TooltipContent>
             </Tooltip>
@@ -113,10 +115,10 @@ export default function Profile() {
                   <Bluesky />
                 </Button>
                 <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button size="icon" variant="secondary">
-                      <MoreHorizontalIcon />
-                    </Button>
+                  <DropdownMenuTrigger
+                    render={<Button size="icon" variant="secondary" />}
+                  >
+                    <MoreHorizontalIcon />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
                     <DropdownMenuItem>

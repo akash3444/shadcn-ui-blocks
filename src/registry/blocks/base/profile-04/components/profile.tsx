@@ -6,6 +6,7 @@ import {
   UserIcon,
 } from "lucide-react";
 import type { SVGProps } from "react";
+import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/base/avatar";
 import { Button } from "@/registry/ui/base/button";
 import {
@@ -16,7 +17,6 @@ import {
 } from "@/registry/ui/base/dropdown-menu";
 import { ScrollArea, ScrollBar } from "@/registry/ui/base/scroll-area";
 import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/base/tabs";
-import { cn } from "@/lib/utils";
 
 export default function Profile() {
   return (
@@ -63,10 +63,10 @@ export default function Profile() {
             <Bluesky />
           </Button>
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button size="icon" variant="secondary">
-                <MoreHorizontalIcon />
-              </Button>
+            <DropdownMenuTrigger
+              render={<Button size="icon" variant="secondary" />}
+            >
+              <MoreHorizontalIcon />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem>

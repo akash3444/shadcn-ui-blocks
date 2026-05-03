@@ -1,5 +1,10 @@
 import { Menu } from "lucide-react";
 import Link from "next/link";
+import { Logo } from "@/registry/blocks/base/navbar-03/components/logo";
+import {
+  foods,
+  travelMenuItems,
+} from "@/registry/blocks/base/navbar-03/config/navbar";
 import { Button } from "@/registry/ui/base/button";
 import {
   Sheet,
@@ -7,19 +12,12 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/registry/ui/base/sheet";
-import { Logo } from "@/registry/blocks/base/navbar-03/components/logo";
-import {
-  foods,
-  travelMenuItems,
-} from "@/registry/blocks/base/navbar-03/config/navbar";
 
 export const NavigationSheet = () => {
   return (
     <Sheet>
-      <SheetTrigger asChild>
-        <Button size="icon" variant="outline">
-          <Menu />
-        </Button>
+      <SheetTrigger render={<Button size="icon" variant="outline" />}>
+        <Menu />
       </SheetTrigger>
       <SheetContent className="px-6 py-3">
         <SheetTitle className="sr-only">Navigation Menu</SheetTitle>

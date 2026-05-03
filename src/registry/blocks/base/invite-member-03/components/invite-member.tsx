@@ -62,15 +62,18 @@ export default function InviteMember() {
                   <ItemDescription>{person.email}</ItemDescription>
                 </ItemContent>
                 <ItemActions>
-                  <Tooltip delayDuration={500}>
-                    <TooltipTrigger asChild>
-                      <Button
-                        className="rounded-full"
-                        size="icon"
-                        variant="secondary"
-                      >
-                        <UserPlusIcon />
-                      </Button>
+                  <Tooltip>
+                    <TooltipTrigger
+                      delay={500}
+                      render={
+                        <Button
+                          className="rounded-full"
+                          size="icon"
+                          variant="secondary"
+                        />
+                      }
+                    >
+                      <UserPlusIcon />
                     </TooltipTrigger>
                     <TooltipContent>Send invite</TooltipContent>
                   </Tooltip>

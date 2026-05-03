@@ -63,7 +63,7 @@ const FAQ = () => {
       </p>
 
       <div className="mx-auto mt-8 max-w-2xl">
-        <Accordion collapsible defaultValue={faqs[0].question} type="single">
+        <Accordion defaultValue={[faqs[0].question]}>
           {faqs.map((faq, index) => (
             <AccordionItem
               className="border border-b-0 bg-muted/35 last:border-b"

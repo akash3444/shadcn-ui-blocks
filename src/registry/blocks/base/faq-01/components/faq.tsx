@@ -44,7 +44,7 @@ const FAQ = () => {
         <Accordion
           className="mt-6"
           defaultValue={["question-0"]}
-          type="multiple"
+          multiple
         >
           {faq.map(({ question, answer }, index) => (
             <AccordionItem key={question} value={`question-${index}`}>

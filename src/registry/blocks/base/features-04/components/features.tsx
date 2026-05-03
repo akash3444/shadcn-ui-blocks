@@ -60,7 +60,7 @@ const Features = () => {
       </h2>
       <div className="mx-auto mt-8 grid w-full gap-12 md:mt-12 md:grid-cols-2">
         <div>
-          <Accordion className="w-full" defaultValue="item-0" type="single">
+          <Accordion className="w-full" defaultValue={["item-0"]}>
             {features.map(({ title, description, icon: Icon }, index) => (
               <AccordionItem
                 className="group/accordion-item data-[state=open]:border-primary data-[state=open]:border-b-2"

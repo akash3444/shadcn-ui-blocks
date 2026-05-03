@@ -90,10 +90,12 @@ const Testimonials = () => (
                   </p>
                 </div>
               </div>
-              <Button asChild size="icon" variant="ghost">
-                <Link href="#" target="_blank">
-                  <TwitterLogo className="h-4 w-4" />
-                </Link>
+              <Button
+                render={<Link href="#" target="_blank" />}
+                size="icon"
+                variant="ghost"
+              >
+                <TwitterLogo className="h-4 w-4" />
               </Button>
             </div>
             <p className="mt-5 text-[17px]">{testimonial.testimonial}</p>

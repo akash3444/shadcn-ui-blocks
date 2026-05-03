@@ -14,23 +14,35 @@ export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => (
   <NavigationMenu {...props}>
     <NavigationMenuList className="data-[orientation=vertical]:-ms-2 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start data-[orientation=vertical]:justify-start">
       <NavigationMenuItem>
-        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-          <Link href="#">Home</Link>
+        <NavigationMenuLink
+          className={navigationMenuTriggerStyle()}
+          render={<Link href="#" />}
+        >
+          Home
         </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-          <Link href="#">Blog</Link>
+        <NavigationMenuLink
+          className={navigationMenuTriggerStyle()}
+          render={<Link href="#" />}
+        >
+          Blog
         </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-          <Link href="#">About</Link>
+        <NavigationMenuLink
+          className={navigationMenuTriggerStyle()}
+          render={<Link href="#" />}
+        >
+          About
         </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-          <Link href="#">Contact Us</Link>
+        <NavigationMenuLink
+          className={navigationMenuTriggerStyle()}
+          render={<Link href="#" />}
+        >
+          Contact Us
         </NavigationMenuLink>
       </NavigationMenuItem>
     </NavigationMenuList>

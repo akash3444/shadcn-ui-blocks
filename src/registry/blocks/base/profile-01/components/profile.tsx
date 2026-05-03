@@ -19,14 +19,16 @@ export default function Profile() {
     <div className="min-h-dvh bg-muted/50 px-6 py-10">
       <div className="relative mx-auto flex w-full max-w-md flex-col items-center rounded-xl border border-border/55 bg-background px-8 py-10 shadow-[0_0_10px_rgba(0,0,0,0.04)] dark:border-border/75 dark:shadow-[0_0_20px_rgba(0,0,0,0.4)]">
         <Tooltip>
-          <TooltipTrigger asChild>
-            <Button
-              className="absolute top-4 right-4"
-              size="icon"
-              variant="outline"
-            >
-              <PencilIcon className="size-4" />
-            </Button>
+          <TooltipTrigger
+            render={
+              <Button
+                className="absolute top-4 right-4"
+                size="icon"
+                variant="outline"
+              />
+            }
+          >
+            <PencilIcon className="size-4" />
           </TooltipTrigger>
           <TooltipContent>Edit Profile</TooltipContent>
         </Tooltip>
@@ -65,10 +67,10 @@ export default function Profile() {
             <Bluesky />
           </Button>
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button size="icon" variant="secondary">
-                <MoreHorizontalIcon />
-              </Button>
+            <DropdownMenuTrigger
+              render={<Button size="icon" variant="secondary" />}
+            >
+              <MoreHorizontalIcon />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem>

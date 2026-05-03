@@ -89,8 +89,6 @@ const FAQ = () => {
       <div className="mx-auto mt-12 max-w-5xl sm:mt-16">
         <Accordion
           className="grid grid-cols-1 gap-4 md:grid-cols-2"
-          collapsible
-          type="single"
         >
           <div className="space-y-4">
             <AccordionItemList faqs={firstHalfFaqs} />

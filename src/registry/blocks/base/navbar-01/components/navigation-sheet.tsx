@@ -1,4 +1,6 @@
 import { Menu } from "lucide-react";
+import { Logo } from "@/registry/blocks/base/navbar-01/components/logo";
+import { NavMenu } from "@/registry/blocks/base/navbar-01/components/nav-menu";
 import { Button } from "@/registry/ui/base/button";
 import {
   Sheet,
@@ -6,16 +8,12 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/registry/ui/base/sheet";
-import { Logo } from "@/registry/blocks/base/navbar-01/components/logo";
-import { NavMenu } from "@/registry/blocks/base/navbar-01/components/nav-menu";
 
 export const NavigationSheet = () => {
   return (
     <Sheet>
-      <SheetTrigger asChild>
-        <Button size="icon" variant="outline">
-          <Menu />
-        </Button>
+      <SheetTrigger render={<Button size="icon" variant="outline" />}>
+        <Menu />
       </SheetTrigger>
       <SheetContent className="px-6 py-3">
         <SheetTitle className="sr-only">Navigation Menu</SheetTitle>

@@ -62,7 +62,7 @@ const FAQ = () => {
       </p>
 
       <div className="mx-auto mt-12 max-w-2xl sm:mt-16">
-        <Accordion className="space-y-4" collapsible type="single">
+        <Accordion className="space-y-4">
           {faqs.map((faq, index) => (
             <AccordionItem
               className="rounded-xl border-b-0 bg-muted px-5"

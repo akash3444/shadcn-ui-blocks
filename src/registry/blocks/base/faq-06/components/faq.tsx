@@ -49,7 +49,6 @@ const FAQ = () => {
         <div className="mt-8 rounded-xl border border-border/65 bg-muted p-1 sm:mt-10">
           <Accordion
             className="space-y-px rounded-lg border border-border/65 bg-border/20"
-            openMultiple={false}
             defaultValue={["question-0"]}
           >
             {faq.map(({ question, answer }, index) => (

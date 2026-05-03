@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import type { ComponentProps } from "react";
+import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -9,7 +10,6 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/registry/ui/base/navigation-menu";
-import { cn } from "@/lib/utils";
 
 const links = [
   {
@@ -46,12 +46,12 @@ export const NavMenu = ({
         {links.map((link) => (
           <NavigationMenuItem key={link.href}>
             <NavigationMenuLink
-              asChild
               className={navigationMenuTriggerStyle({
                 className: cn({ "text-xl": orientation === "vertical" }),
               })}
+              render={<Link href={link.href} />}
             >
-              <Link href={link.href}>{link.label}</Link>
+              {link.label}
             </NavigationMenuLink>
           </NavigationMenuItem>
         ))}

@@ -48,7 +48,6 @@ const FAQ = () => {
 
         <Accordion
           className="mt-8 space-y-4 sm:mt-10"
-          openMultiple={false}
           defaultValue={["question-0"]}
         >
           {faq.map(({ question, answer }, index) => (

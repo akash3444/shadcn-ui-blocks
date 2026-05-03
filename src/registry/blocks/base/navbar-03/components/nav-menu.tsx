@@ -2,7 +2,12 @@
 
 import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
-import React, { type ComponentProps } from "react";
+import type { ComponentProps, ComponentPropsWithRef } from "react";
+import { cn } from "@/lib/utils";
+import {
+  foods,
+  travelMenuItems,
+} from "@/registry/blocks/base/navbar-03/config/navbar";
 import { Button } from "@/registry/ui/base/button";
 import {
   NavigationMenu,
@@ -12,18 +17,13 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/registry/ui/base/navigation-menu";
-import { cn } from "@/lib/utils";
-import {
-  foods,
-  travelMenuItems,
-} from "@/registry/blocks/base/navbar-03/config/navbar";
 
 export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => (
   <NavigationMenu {...props}>
     <NavigationMenuList className="gap-1 space-x-0 text-sm">
       <NavigationMenuItem>
-        <Button asChild variant="ghost">
-          <Link href="#">Home</Link>
+        <Button render={<Link href="#" />} variant="ghost">
+          Home
         </Button>
       </NavigationMenuItem>
       <NavigationMenuItem>
@@ -64,29 +64,32 @@ export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => (
   </NavigationMenu>
 );
 
-const ListItem = React.forwardRef<
-  React.ElementRef<typeof Link>,
-  React.ComponentPropsWithoutRef<typeof Link> & { icon: LucideIcon }
->(({ className, title, children, ...props }, ref) => {
+const ListItem = ({
+  className,
+  title,
+  children,
+  icon: Icon,
+  ...props
+}: ComponentPropsWithRef<typeof Link> & { icon: LucideIcon }) => {
   return (
     <li>
-      <NavigationMenuLink asChild>
-        <Link
-          className={cn(
-            "block select-none space-y-2 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          ref={ref}
-          {...props}
-        >
-          <props.icon className="mb-4 size-6" />
-          <div className="font-semibold text-sm leading-none">{title}</div>
-          <p className="line-clamp-2 text-muted-foreground text-sm leading-snug">
-            {children}
-          </p>
-        </Link>
+      <NavigationMenuLink
+        render={
+          <Link
+            className={cn(
+              "block select-none space-y-2 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              className
+            )}
+            {...props}
+          />
+        }
+      >
+        <Icon className="mb-4 size-6" />
+        <div className="font-semibold text-sm leading-none">{title}</div>
+        <p className="line-clamp-2 text-muted-foreground text-sm leading-snug">
+          {children}
+        </p>
       </NavigationMenuLink>
     </li>
   );
-});
-ListItem.displayName = "ListItem";
+};

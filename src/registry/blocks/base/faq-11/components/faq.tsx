@@ -204,7 +204,7 @@ const FAQ = () => {
 
 function FAQList({ faqs }: { faqs: (typeof categorizedFaqs)[0]["faqs"] }) {
   return (
-    <Accordion className="space-y-4" collapsible type="single">
+    <Accordion className="space-y-4">
       {faqs?.map((faq, index) => (
         <AccordionItem
           className="rounded-xl border-b-0 bg-muted px-5"

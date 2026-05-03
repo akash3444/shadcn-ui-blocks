@@ -8,10 +8,10 @@ import {
   Logo05,
   Logo06,
 } from "@/components/logos";
+import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/base/avatar";
 import { Button } from "@/registry/ui/base/button";
 import { Marquee } from "@/registry/ui/base/marquee";
-import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
@@ -127,10 +127,12 @@ const TestimonialList = ({ className, ...props }: ComponentProps<"div">) =>
                 </p>
               </div>
             </div>
-            <Button asChild size="icon" variant="ghost">
-              <Link href="#" target="_blank">
-                <TwitterLogo className="h-4 w-4" />
-              </Link>
+            <Button
+              render={<Link href="#" target="_blank" />}
+              size="icon"
+              variant="ghost"
+            >
+              <TwitterLogo className="h-4 w-4" />
             </Button>
           </div>
           <p className="mt-5 text-[17px]">{testimonial.testimonial}</p>

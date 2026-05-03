@@ -12,13 +12,11 @@ export default function Hero() {
 
       <div className="mt-16 max-w-3xl text-center">
         <Badge
-          asChild
           className="rounded-full border-border py-1"
+          render={<Link href="#" />}
           variant="secondary"
         >
-          <Link href="#">
-            Just released v1.0.0 <ArrowUpRight className="ml-1 size-4" />
-          </Link>
+          Just released v1.0.0 <ArrowUpRight className="ml-1 size-4" />
         </Badge>
         <h1 className="mx-auto mt-6 max-w-xl font-medium text-4xl tracking-[-0.045em] sm:text-[2.75rem] md:text-6xl/[1.2]">
           Ship{" "}
