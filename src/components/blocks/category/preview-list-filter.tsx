@@ -1,17 +1,22 @@
 import CategoryFilter from "./category-filter";
 import PreviewListSearch from "./preview-list-search";
+import ResetFiltersButton from "./reset-filters-button";
 
 const PreviewListFilter = ({ numberOfBlocks }: { numberOfBlocks: number }) => {
   return (
-    <div className="flex items-center justify-between rounded-xl border border-border/70 bg-muted/50 py-2 ps-2 pe-4 shadow-xs/3">
-      <div className="flex grow items-end gap-2">
+    <div className="flex justify-between gap-2 max-sm:flex-col">
+      <div className="flex items-center gap-1 rounded-xl border border-border/70 bg-muted/50 p-1">
         <CategoryFilter />
         <PreviewListSearch />
+        <ResetFiltersButton />
       </div>
-      <p className="text-muted-foreground text-sm max-sm:hidden">
-        <span className="font-medium text-foreground">{numberOfBlocks}</span>{" "}
-        {numberOfBlocks === 1 ? "block" : "blocks"} found
-      </p>
+
+      <div className="flex grow items-center gap-2 rounded-xl border border-border/70 bg-muted/50 px-4 max-sm:hidden">
+        <p className="ms-auto text-muted-foreground text-sm">
+          <span className="font-medium text-foreground">{numberOfBlocks}</span>{" "}
+          {numberOfBlocks === 1 ? "block" : "blocks"} found
+        </p>
+      </div>
     </div>
   );
 };
