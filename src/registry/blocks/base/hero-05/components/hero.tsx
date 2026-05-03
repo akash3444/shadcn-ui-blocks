@@ -25,11 +25,11 @@ export default function Hero() {
             easy-to-implement examples.
           </p>
           <div className="mt-8 flex items-center gap-4 sm:mt-12">
-            <Button className="rounded-full text-base" size="lg">
+            <Button className="rounded-full" size="lg">
               Get Started <ArrowUpRight className="h-5! w-5!" />
             </Button>
             <Button
-              className="rounded-full text-base shadow-none"
+              className="rounded-full shadow-none"
               size="lg"
               variant="outline"
             >

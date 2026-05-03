@@ -1,9 +1,9 @@
 import { ArrowUpRight, CirclePlay } from "lucide-react";
 import Link from "next/link";
-import { Badge } from "@/registry/ui/radix/badge";
-import { Button } from "@/registry/ui/radix/button";
 import { cn } from "@/lib/utils";
 import AnimatedGridPattern from "@/registry/blocks/radix/hero-07/components/ui/animated-grid-pattern";
+import { Badge } from "@/registry/ui/radix/badge";
+import { Button } from "@/registry/ui/radix/button";
 
 export default function Hero() {
   return (
@@ -35,11 +35,11 @@ export default function Hero() {
           blocks that give you a solid foundation for any UI.
         </p>
         <div className="mt-12 flex items-center justify-center gap-4">
-          <Button className="rounded-full text-base" size="lg">
+          <Button className="rounded-full" size="lg">
             Get Started <ArrowUpRight className="h-5! w-5!" />
           </Button>
           <Button
-            className="rounded-full text-base shadow-none"
+            className="rounded-full shadow-none"
             size="lg"
             variant="outline"
           >
