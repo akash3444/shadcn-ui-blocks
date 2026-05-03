@@ -46,7 +46,6 @@ const nextConfig = {
       "public/images/templates/**/*",
       "public/r/**/*",
       "node_modules/@shikijs/langs/**/*",
-      "node_modules/@shikijs/themes/**/*",
     ],
   },
   outputFileTracingRoot: process.cwd(),
