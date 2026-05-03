@@ -5567,7 +5567,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/blog-03/components/blog.tsx",
+          "path": "src/registry/blocks/radix/blog-03/components/blog.tsx",
           "type": "registry:component"
         }
       ]
@@ -5778,7 +5778,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/features-03/components/features.tsx",
+          "path": "src/registry/blocks/radix/features-03/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -5814,7 +5814,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/features-05/components/features.tsx",
+          "path": "src/registry/blocks/radix/features-05/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -5957,7 +5957,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/hero-01/components/hero.tsx",
+          "path": "src/registry/blocks/radix/hero-01/components/hero.tsx",
           "type": "registry:component"
         }
       ]
@@ -5976,7 +5976,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/hero-02/components/hero.tsx",
+          "path": "src/registry/blocks/radix/hero-02/components/hero.tsx",
           "type": "registry:component"
         }
       ]
@@ -6038,7 +6038,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/hero-04/components/hero.tsx",
+          "path": "src/registry/blocks/radix/hero-04/components/hero.tsx",
           "type": "registry:component"
         }
       ]
@@ -6057,7 +6057,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/hero-05/components/hero.tsx",
+          "path": "src/registry/blocks/radix/hero-05/components/hero.tsx",
           "type": "registry:component"
         }
       ]
@@ -6079,19 +6079,19 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/hero-06/components/hero.tsx",
+          "path": "src/registry/blocks/radix/hero-06/components/hero.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/hero-06/components/background-pattern.tsx",
+          "path": "src/registry/blocks/radix/hero-06/components/background-pattern.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/hero-06/components/ui/dot-pattern.tsx",
+          "path": "src/registry/blocks/radix/hero-06/components/ui/dot-pattern.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/hero-06/components/ui/particles.tsx",
+          "path": "src/registry/blocks/radix/hero-06/components/ui/particles.tsx",
           "type": "registry:component"
         }
       ]
@@ -6111,11 +6111,11 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/hero-07/components/hero.tsx",
+          "path": "src/registry/blocks/radix/hero-07/components/hero.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/hero-07/components/ui/animated-grid-pattern.tsx",
+          "path": "src/registry/blocks/radix/hero-07/components/ui/animated-grid-pattern.tsx",
           "type": "registry:component"
         }
       ]
@@ -6346,15 +6346,15 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/logo-cloud-06/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/radix/logo-cloud-06/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-06/components/logos.tsx",
+          "path": "src/registry/blocks/radix/logo-cloud-06/components/logos.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-06/components/ui/marquee.tsx",
+          "path": "src/registry/blocks/radix/logo-cloud-06/components/ui/marquee.tsx",
           "type": "registry:component"
         }
       ]
@@ -6369,15 +6369,15 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/logo-cloud-07/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/radix/logo-cloud-07/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-07/components/logos.tsx",
+          "path": "src/registry/blocks/radix/logo-cloud-07/components/logos.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-07/components/ui/marquee.tsx",
+          "path": "src/registry/blocks/radix/logo-cloud-07/components/ui/marquee.tsx",
           "type": "registry:component"
         }
       ]
@@ -6533,11 +6533,11 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/navbar-05/components/navbar.tsx",
+          "path": "src/registry/blocks/radix/navbar-05/components/navbar.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/navbar-05/components/logo.tsx",
+          "path": "src/registry/blocks/radix/navbar-05/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -6862,7 +6862,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/team-03/components/team.tsx",
+          "path": "src/registry/blocks/radix/team-03/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -6880,7 +6880,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/team-04/components/team.tsx",
+          "path": "src/registry/blocks/radix/team-04/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -6898,7 +6898,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/team-05/components/team.tsx",
+          "path": "src/registry/blocks/radix/team-05/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -7021,7 +7021,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/timeline-01/components/timeline.tsx",
+          "path": "src/registry/blocks/radix/timeline-01/components/timeline.tsx",
           "type": "registry:component"
         }
       ]
@@ -7039,7 +7039,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/timeline-02/components/timeline.tsx",
+          "path": "src/registry/blocks/radix/timeline-02/components/timeline.tsx",
           "type": "registry:component"
         }
       ]
@@ -7057,7 +7057,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/timeline-03/components/timeline.tsx",
+          "path": "src/registry/blocks/radix/timeline-03/components/timeline.tsx",
           "type": "registry:component"
         }
       ]
@@ -7075,7 +7075,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/timeline-04/components/timeline.tsx",
+          "path": "src/registry/blocks/radix/timeline-04/components/timeline.tsx",
           "type": "registry:component"
         }
       ]
@@ -7144,7 +7144,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/banner-02/components/banner.tsx",
+          "path": "src/registry/blocks/radix/banner-02/components/banner.tsx",
           "type": "registry:component"
         }
       ]
@@ -7162,7 +7162,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/banner-03/components/banner.tsx",
+          "path": "src/registry/blocks/radix/banner-03/components/banner.tsx",
           "type": "registry:component"
         }
       ]
@@ -7180,7 +7180,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/banner-04/components/banner.tsx",
+          "path": "src/registry/blocks/radix/banner-04/components/banner.tsx",
           "type": "registry:component"
         }
       ]
@@ -7190,9 +7190,12 @@
       "type": "registry:block",
       "title": "CTA 01",
       "description": "A simple CTA block",
+      "registryDependencies": [
+        "button"
+      ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/cta-01/components/cta.tsx",
+          "path": "src/registry/blocks/radix/cta-01/components/cta.tsx",
           "type": "registry:component"
         }
       ]
@@ -7202,9 +7205,15 @@
       "type": "registry:block",
       "title": "CTA 02",
       "description": "A simple CTA block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/cta-02/components/cta.tsx",
+          "path": "src/registry/blocks/radix/cta-02/components/cta.tsx",
           "type": "registry:component"
         }
       ]
@@ -7214,9 +7223,15 @@
       "type": "registry:block",
       "title": "CTA 03",
       "description": "A simple CTA block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/cta-03/components/cta.tsx",
+          "path": "src/registry/blocks/radix/cta-03/components/cta.tsx",
           "type": "registry:component"
         }
       ]
@@ -7234,7 +7249,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/cta-04/components/cta.tsx",
+          "path": "src/registry/blocks/radix/cta-04/components/cta.tsx",
           "type": "registry:component"
         }
       ]
@@ -7252,7 +7267,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/cta-05/components/cta.tsx",
+          "path": "src/registry/blocks/radix/cta-05/components/cta.tsx",
           "type": "registry:component"
         }
       ]
@@ -7271,7 +7286,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/cta-06/components/cta.tsx",
+          "path": "src/registry/blocks/radix/cta-06/components/cta.tsx",
           "type": "registry:component"
         }
       ]
@@ -7286,7 +7301,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/cta-07/components/cta.tsx",
+          "path": "src/registry/blocks/radix/cta-07/components/cta.tsx",
           "type": "registry:component"
         }
       ]
@@ -7302,7 +7317,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/carousel-block-01/components/carousel.tsx",
+          "path": "src/registry/blocks/radix/carousel-block-01/components/carousel.tsx",
           "type": "registry:component"
         }
       ]
@@ -7317,7 +7332,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/carousel-block-02/components/carousel.tsx",
+          "path": "src/registry/blocks/radix/carousel-block-02/components/carousel.tsx",
           "type": "registry:component"
         }
       ]
@@ -7383,15 +7398,15 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/code-block-02/components/code-block.tsx",
+          "path": "src/registry/blocks/radix/code-block-02/components/code-block.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/code-block-02/components/code-block-header.tsx",
+          "path": "src/registry/blocks/radix/code-block-02/components/code-block-header.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/code-block-02/hooks/use-copy-to-clipboard.tsx",
+          "path": "src/registry/blocks/radix/code-block-02/hooks/use-copy-to-clipboard.tsx",
           "type": "registry:component"
         }
       ]
@@ -7429,7 +7444,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/empty-state-01/components/empty-state.tsx",
+          "path": "src/registry/blocks/radix/empty-state-01/components/empty-state.tsx",
           "type": "registry:component"
         }
       ]
@@ -7448,7 +7463,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/empty-state-02/components/empty-state.tsx",
+          "path": "src/registry/blocks/radix/empty-state-02/components/empty-state.tsx",
           "type": "registry:component"
         }
       ]
@@ -7485,11 +7500,11 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/empty-state-04/components/empty-state.tsx",
+          "path": "src/registry/blocks/radix/empty-state-04/components/empty-state.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/empty-state-04/components/magicui/marquee.tsx",
+          "path": "src/registry/blocks/radix/empty-state-04/components/magicui/marquee.tsx",
           "type": "registry:component"
         }
       ]
@@ -7574,7 +7589,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/keyboard-shortcuts-01/components/keyboard-shortcuts.tsx",
+          "path": "src/registry/blocks/radix/keyboard-shortcuts-01/components/keyboard-shortcuts.tsx",
           "type": "registry:component"
         }
       ]
@@ -7593,7 +7608,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/keyboard-shortcuts-02/components/keyboard-shortcuts.tsx",
+          "path": "src/registry/blocks/radix/keyboard-shortcuts-02/components/keyboard-shortcuts.tsx",
           "type": "registry:component"
         }
       ]
@@ -7608,7 +7623,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/keyboard-shortcuts-03/components/keyboard-shortcuts.tsx",
+          "path": "src/registry/blocks/radix/keyboard-shortcuts-03/components/keyboard-shortcuts.tsx",
           "type": "registry:component"
         }
       ]
@@ -7623,7 +7638,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/keyboard-shortcuts-04/components/keyboard-shortcuts.tsx",
+          "path": "src/registry/blocks/radix/keyboard-shortcuts-04/components/keyboard-shortcuts.tsx",
           "type": "registry:component"
         }
       ]
@@ -7681,7 +7696,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/members-03/components/members.tsx",
+          "path": "src/registry/blocks/radix/members-03/components/members.tsx",
           "type": "registry:component"
         }
       ]
@@ -7699,7 +7714,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/order-confirmation-01/components/order-confirmation.tsx",
+          "path": "src/registry/blocks/radix/order-confirmation-01/components/order-confirmation.tsx",
           "type": "registry:component"
         }
       ]
@@ -7815,7 +7830,7 @@
       "description": "A simple setup guide block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/setup-guide-01/components/setup-guide.tsx",
+          "path": "src/registry/blocks/radix/setup-guide-01/components/setup-guide.tsx",
           "type": "registry:component"
         }
       ]
@@ -7839,7 +7854,7 @@
       "description": "A simple setup guide block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/setup-guide-03/components/setup-guide.tsx",
+          "path": "src/registry/blocks/radix/setup-guide-03/components/setup-guide.tsx",
           "type": "registry:component"
         }
       ]
@@ -7851,7 +7866,7 @@
       "description": "A simple setup guide block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/setup-guide-04/components/setup-guide.tsx",
+          "path": "src/registry/blocks/radix/setup-guide-04/components/setup-guide.tsx",
           "type": "registry:component"
         }
       ]
@@ -7863,7 +7878,7 @@
       "description": "A simple verification block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/verification-01/components/verification.tsx",
+          "path": "src/registry/blocks/radix/verification-01/components/verification.tsx",
           "type": "registry:component"
         }
       ]
@@ -7923,11 +7938,11 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/features-10/components/features.tsx",
+          "path": "src/registry/blocks/radix/features-10/components/features.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/features-10/components/stats-card.tsx",
+          "path": "src/registry/blocks/radix/features-10/components/stats-card.tsx",
           "type": "registry:component"
         }
       ]
@@ -7939,7 +7954,7 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/features-11/components/features.tsx",
+          "path": "src/registry/blocks/radix/features-11/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -7951,7 +7966,7 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/features-12/components/features.tsx",
+          "path": "src/registry/blocks/radix/features-12/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -7975,7 +7990,7 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/features-14/components/features.tsx",
+          "path": "src/registry/blocks/radix/features-14/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -8017,7 +8032,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/features-17/components/features.tsx",
+          "path": "src/registry/blocks/radix/features-17/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -8035,7 +8050,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/features-18/components/features.tsx",
+          "path": "src/registry/blocks/radix/features-18/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -8396,19 +8411,19 @@
       "description": "A simple logo cloud block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/logo-cloud-15/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/radix/logo-cloud-15/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-15/components/logos.tsx",
+          "path": "src/registry/blocks/radix/logo-cloud-15/components/logos.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-15/components/ui/marquee.tsx",
+          "path": "src/registry/blocks/radix/logo-cloud-15/components/ui/marquee.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-15/components/magicui/border-beam.tsx",
+          "path": "src/registry/blocks/radix/logo-cloud-15/components/magicui/border-beam.tsx",
           "type": "registry:component"
         }
       ]
@@ -8444,11 +8459,11 @@
       "description": "A simple pricing block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/pricing-09/components/pricing.tsx",
+          "path": "src/registry/blocks/radix/pricing-09/components/pricing.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/pricing-09/components/magicui/border-beam.tsx",
+          "path": "src/registry/blocks/radix/pricing-09/components/magicui/border-beam.tsx",
           "type": "registry:component"
         }
       ]
@@ -8467,7 +8482,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/pricing-10/components/pricing.tsx",
+          "path": "src/registry/blocks/radix/pricing-10/components/pricing.tsx",
           "type": "registry:component"
         }
       ]
@@ -8675,7 +8690,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/stats-10/components/stats.tsx",
+          "path": "src/registry/blocks/radix/stats-10/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8747,7 +8762,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/team-10/components/team.tsx",
+          "path": "src/registry/blocks/radix/team-10/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8843,7 +8858,7 @@
       "description": "A simple testimonials block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/testimonials-11/components/testimonials.tsx",
+          "path": "src/registry/blocks/radix/testimonials-11/components/testimonials.tsx",
           "type": "registry:component"
         }
       ]
@@ -8922,7 +8937,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/not-found-01/components/not-found.tsx",
+          "path": "src/registry/blocks/radix/not-found-01/components/not-found.tsx",
           "type": "registry:component"
         }
       ]
@@ -8940,7 +8955,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/not-found-02/components/not-found.tsx",
+          "path": "src/registry/blocks/radix/not-found-02/components/not-found.tsx",
           "type": "registry:component"
         }
       ]
@@ -8958,7 +8973,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/not-found-03/components/not-found.tsx",
+          "path": "src/registry/blocks/radix/not-found-03/components/not-found.tsx",
           "type": "registry:component"
         }
       ]
@@ -8977,7 +8992,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/not-found-04/components/not-found.tsx",
+          "path": "src/registry/blocks/radix/not-found-04/components/not-found.tsx",
           "type": "registry:component"
         }
       ]
@@ -8995,7 +9010,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/not-found-05/components/not-found.tsx",
+          "path": "src/registry/blocks/radix/not-found-05/components/not-found.tsx",
           "type": "registry:component"
         }
       ]
@@ -9013,7 +9028,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/not-found-06/components/not-found.tsx",
+          "path": "src/registry/blocks/radix/not-found-06/components/not-found.tsx",
           "type": "registry:component"
         }
       ]
@@ -9028,11 +9043,11 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/not-found-07/components/not-found.tsx",
+          "path": "src/registry/blocks/radix/not-found-07/components/not-found.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/not-found-07/components/glitch-text.tsx",
+          "path": "src/registry/blocks/radix/not-found-07/components/glitch-text.tsx",
           "type": "registry:component"
         }
       ],
@@ -9120,7 +9135,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/not-found-08/components/not-found.tsx",
+          "path": "src/registry/blocks/radix/not-found-08/components/not-found.tsx",
           "type": "registry:component"
         }
       ]
@@ -9132,7 +9147,7 @@
       "description": "A simple integrations block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/integrations-01/components/integrations.tsx",
+          "path": "src/registry/blocks/radix/integrations-01/components/integrations.tsx",
           "type": "registry:component"
         }
       ]
@@ -9144,7 +9159,7 @@
       "description": "A simple integrations block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/integrations-02/components/integrations.tsx",
+          "path": "src/registry/blocks/radix/integrations-02/components/integrations.tsx",
           "type": "registry:component"
         }
       ]
@@ -9156,7 +9171,7 @@
       "description": "A simple integrations block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/integrations-03/components/integrations.tsx",
+          "path": "src/registry/blocks/radix/integrations-03/components/integrations.tsx",
           "type": "registry:component"
         }
       ]

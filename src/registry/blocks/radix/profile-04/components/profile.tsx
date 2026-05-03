@@ -6,7 +6,12 @@ import {
   UserIcon,
 } from "lucide-react";
 import type { SVGProps } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/radix/avatar";
+import { cn } from "@/lib/utils";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/ui/radix/avatar";
 import { Button } from "@/registry/ui/radix/button";
 import {
   DropdownMenu,
@@ -16,7 +21,6 @@ import {
 } from "@/registry/ui/radix/dropdown-menu";
 import { ScrollArea, ScrollBar } from "@/registry/ui/radix/scroll-area";
 import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/radix/tabs";
-import { cn } from "@/lib/utils";
 
 export default function Profile() {
   return (
@@ -68,7 +72,7 @@ export default function Profile() {
                 <MoreHorizontalIcon />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent className="w-fit">
               <DropdownMenuItem>
                 <Hashnode />
                 Follow on Hashnode
@@ -94,7 +98,7 @@ export default function Profile() {
                 "rounded-none bg-transparent p-0",
                 "*:rounded-none *:border-0 *:border-b-2 *:px-4 *:text-muted-foreground",
                 "*:data-[state=active]:border-foreground *:data-[state=active]:border-b-2 *:data-[state=active]:bg-transparent",
-                "*:data-[state=active]:text-foreground *:data-[state=active]:shadow-none"
+                "*:data-[state=active]:text-foreground *:data-[state=active]:shadow-none!"
               )}
             >
               <TabsTrigger value="profile">Profile</TabsTrigger>

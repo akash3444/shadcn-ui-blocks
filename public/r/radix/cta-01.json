@@ -3,9 +3,12 @@
   "name": "cta-01",
   "title": "CTA 01",
   "description": "A simple CTA block",
+  "registryDependencies": [
+    "button"
+  ],
   "files": [
     {
-      "path": "src/registry/blocks/shared/cta-01/components/cta.tsx",
+      "path": "src/registry/blocks/radix/cta-01/components/cta.tsx",
       "content": "\"use client\";\n\nimport { Button } from \"@/registry/ui/radix/button\";\n\nconst CTA = () => {\n  return (\n    <div className=\"px-0 py-20 sm:px-6\">\n      <div className=\"relative flex w-full flex-col items-center justify-center py-16\">\n        <h2 className=\"font-medium text-5xl tracking-tighter\">\n          Ready to Build Faster?\n        </h2>\n        <p className=\"mx-auto mt-6 max-w-xl text-center text-muted-foreground text-xl/normal\">\n          Join thousands of developers using our premium component library to\n          ship beautiful UIs in minutes, not hours.\n        </p>\n        <Button className=\"mt-8\">Get Started</Button>\n      </div>\n    </div>\n  );\n};\n\nexport default CTA;\n",
       "type": "registry:component"
     }

@@ -43,7 +43,7 @@ export default function InviteMember() {
 
   return (
     <Dialog open>
-      <DialogContent className="max-w-sm! pb-0">
+      <DialogContent className="max-w-sm!">
         <DialogHeader>
           <DialogTitle className="font-medium">Invite Member</DialogTitle>
           <DialogDescription>Invite a member to your team.</DialogDescription>
@@ -92,7 +92,7 @@ export default function InviteMember() {
             />
           </div>
 
-          <DialogFooter className="-mx-6 mt-10 border-t px-6 py-4">
+          <DialogFooter className="mt-10 border-t">
             <Button>
               <UserPlus /> Send Invite
             </Button>

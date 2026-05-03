@@ -7,6 +7,7 @@ import {
   LayoutDashboardIcon,
   Zap,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { Badge } from "@/registry/ui/base/badge";
 import { Button } from "@/registry/ui/base/button";
 import {
@@ -17,12 +18,11 @@ import {
   CardTitle,
 } from "@/registry/ui/base/card";
 import { Progress } from "@/registry/ui/base/progress";
-import { cn } from "@/lib/utils";
 
 export default function SetupGuide() {
   return (
-    <div className="px-6">
-      <Card className="mx-auto my-10 max-w-xl gap-1 overflow-hidden rounded-xl border bg-card pb-0 sm:my-16">
+    <div className="px-6 py-12">
+      <Card className="mx-auto my-10 max-w-xl gap-1 overflow-hidden rounded-xl bg-card pb-0 sm:my-16">
         <CardHeader className="gap-1.5 px-8">
           <CardTitle className="font-medium text-2xl tracking-[-0.03em]">
             Get Started with Your Account

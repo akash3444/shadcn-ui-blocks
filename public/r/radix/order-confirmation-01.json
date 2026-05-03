@@ -11,7 +11,7 @@
   ],
   "files": [
     {
-      "path": "src/registry/blocks/shared/order-confirmation-01/components/order-confirmation.tsx",
+      "path": "src/registry/blocks/radix/order-confirmation-01/components/order-confirmation.tsx",
       "content": "import { Check, Eye, Home } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/radix/button\";\n\nexport default function OrderConfirmation() {\n  return (\n    <div className=\"flex min-h-screen items-center justify-center px-6\">\n      <div className=\"mx-auto flex w-full max-w-sm flex-col items-center rounded-xl border bg-card px-6 pt-8 pb-10 text-center\">\n        <div className=\"flex size-12 items-center justify-center rounded-full border border-green-500/12 bg-green-500/10\">\n          <Check className=\"size-6 text-green-500\" />\n        </div>\n        <p className=\"mt-5 font-medium text-2xl\">Order Confirmed!</p>\n        <p className=\"mt-2 text-muted-foreground text-sm sm:text-base\">\n          Thank you for your purchase. We've sent a confirmation to your email.\n        </p>\n\n        <div className=\"mt-12 flex flex-wrap items-center gap-2\">\n          <Button className=\"grow\">\n            <Eye /> View Order\n          </Button>\n          <Button className=\"grow\" variant=\"outline\">\n            <Home /> Go to Home\n          </Button>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }

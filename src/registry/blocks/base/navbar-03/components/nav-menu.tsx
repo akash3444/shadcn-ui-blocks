@@ -77,15 +77,15 @@ const ListItem = ({
         render={
           <Link
             className={cn(
-              "block select-none space-y-2 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              "select-none flex-col items-start rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
               className
             )}
             {...props}
           />
         }
       >
-        <Icon className="mb-4 size-6" />
-        <div className="font-semibold text-sm leading-none">{title}</div>
+        <Icon className="mb-3 size-6" />
+        <div className="font-medium leading-none">{title}</div>
         <p className="line-clamp-2 text-muted-foreground text-sm leading-snug">
           {children}
         </p>

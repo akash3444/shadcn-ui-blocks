@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "src/registry/blocks/shared/not-found-08/components/not-found.tsx",
+      "path": "src/registry/blocks/radix/not-found-08/components/not-found.tsx",
       "content": "import Link from \"next/link\";\nimport { Button } from \"@/registry/ui/radix/button\";\n\nexport default function NotFound() {\n  return (\n    <div className=\"relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center\">\n      <p className=\"pointer-events-none absolute inset-0 flex select-none items-center justify-center font-black text-[40vw] text-foreground/2 leading-none\">\n        404\n      </p>\n      <div className=\"relative z-10\">\n        <h1 className=\"font-medium text-4xl/none tracking-tight\">\n          Page not found\n        </h1>\n        <p className=\"mx-auto mt-5 max-w-sm text-lg text-muted-foreground\">\n          The page you&apos;re looking for doesn&apos;t exist or may have been\n          moved.\n        </p>\n        <div className=\"mt-8 flex justify-center gap-3\">\n          <Button asChild>\n            <Link href=\"/\">Go home</Link>\n          </Button>\n          <Button asChild variant=\"outline\">\n            <Link href=\"/contact\">Contact support</Link>\n          </Button>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }

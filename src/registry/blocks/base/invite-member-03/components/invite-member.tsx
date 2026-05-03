@@ -83,7 +83,7 @@ export default function InviteMember() {
           </ScrollArea>
         </div>
 
-        <div className="-mx-4.5 rounded-md bg-muted px-5 py-4">
+        <div className="-mx-2.5 rounded-md border border-border/50 bg-muted px-5 py-4">
           <p className="font-medium text-sm">Copy link and share with others</p>
           <InputGroup className="mt-2 bg-background">
             <InputGroupInput

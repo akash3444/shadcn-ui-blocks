@@ -118,7 +118,7 @@ export default function Profile() {
                       <MoreHorizontalIcon />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent>
+                  <DropdownMenuContent className="w-fit">
                     <DropdownMenuItem>
                       <Hashnode />
                       Follow on Hashnode

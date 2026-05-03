@@ -68,7 +68,7 @@ export default function Profile() {
             >
               <MoreHorizontalIcon />
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent className="w-fit">
               <DropdownMenuItem>
                 <Hashnode />
                 Follow on Hashnode
@@ -94,7 +94,7 @@ export default function Profile() {
                 "rounded-none bg-transparent p-0",
                 "*:rounded-none *:border-0 *:border-b-2 *:px-4 *:text-muted-foreground",
                 "*:data-[state=active]:border-foreground *:data-[state=active]:border-b-2 *:data-[state=active]:bg-transparent",
-                "*:data-[state=active]:text-foreground *:data-[state=active]:shadow-none"
+                "*:data-[state=active]:text-foreground *:data-[state=active]:shadow-none!"
               )}
             >
               <TabsTrigger value="profile">Profile</TabsTrigger>
