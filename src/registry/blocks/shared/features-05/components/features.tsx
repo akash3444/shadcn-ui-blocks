@@ -60,7 +60,7 @@ const Features = () => {
         <div className="mx-auto mt-18 grid w-full gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <Card
-              className="flex flex-col overflow-hidden rounded-xl border pb-0 shadow-none"
+              className="flex flex-col overflow-hidden rounded-xl pb-0 shadow-none"
               key={feature.title}
             >
               <CardHeader>

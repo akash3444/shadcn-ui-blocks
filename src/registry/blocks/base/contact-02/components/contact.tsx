@@ -103,7 +103,7 @@ const Contact = () => (
                   <div className="col-span-2 sm:col-span-1">
                     <Label htmlFor="firstName">First Name</Label>
                     <Input
-                      className="mt-2 h-10 bg-white shadow-none"
+                      className="mt-2 bg-white shadow-none"
                       id="firstName"
                       placeholder="First name"
                     />
@@ -111,7 +111,7 @@ const Contact = () => (
                   <div className="col-span-2 sm:col-span-1">
                     <Label htmlFor="lastName">Last Name</Label>
                     <Input
-                      className="mt-2 h-10 bg-white shadow-none"
+                      className="mt-2 bg-white shadow-none"
                       id="lastName"
                       placeholder="Last name"
                     />
@@ -119,7 +119,7 @@ const Contact = () => (
                   <div className="col-span-2">
                     <Label htmlFor="email">Email</Label>
                     <Input
-                      className="mt-2 h-10 bg-white shadow-none"
+                      className="mt-2 bg-white shadow-none"
                       id="email"
                       placeholder="Email"
                       type="email"

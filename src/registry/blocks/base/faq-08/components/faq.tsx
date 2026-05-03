@@ -51,7 +51,7 @@ const FAQ = () => {
         <Accordion className="space-y-4">
           {faqs.map((faq, index) => (
             <AccordionItem
-              className="rounded-lg border-b-0 bg-muted px-6"
+              className="rounded-lg not-last:border-b-0 bg-muted px-6"
               key={index}
               value={faq.question}
             >

@@ -6,13 +6,13 @@ import {
   Plane,
   Waypoints,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/registry/ui/base/accordion";
-import { cn } from "@/lib/utils";
 
 const faqs = [
   {
@@ -66,7 +66,7 @@ const FAQ = () => {
         <Accordion defaultValue={[faqs[0].question]}>
           {faqs.map((faq, index) => (
             <AccordionItem
-              className="border border-b-0 bg-muted/35 last:border-b"
+              className="border not-last:border-b-0 bg-muted/35 last:border-b"
               key={`${faq.question}-${index}`}
               value={faq.question}
             >

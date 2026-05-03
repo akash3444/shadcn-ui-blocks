@@ -1,7 +1,7 @@
 import { codeToHtml } from "shiki";
+import { cn } from "@/lib/utils";
 import { ScrollArea, ScrollBar } from "@/registry/ui/radix/scroll-area";
 import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/radix/tabs";
-import { cn } from "@/lib/utils";
 
 export default async function CodeBlock() {
   const html = await codeToHtml(code, {
@@ -22,7 +22,7 @@ export default async function CodeBlock() {
               className={cn(
                 "items-end gap-2 rounded-none bg-transparent ps-2 pt-0.5 pb-0",
                 "*:rounded-none *:border-0 *:border-b-2 *:text-muted-foreground",
-                "*:data-[state=active]:border-foreground *:data-[state=active]:bg-transparent *:data-[state=active]:text-foreground *:data-[state=active]:shadow-none"
+                "*:data-[state=active]:border-foreground *:data-[state=active]:bg-transparent *:data-[state=active]:text-foreground *:data-[state=active]:shadow-none!"
               )}
             >
               <TabsTrigger value="profile-card.tsx">

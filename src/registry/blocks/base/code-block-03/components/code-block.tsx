@@ -1,7 +1,6 @@
 import { codeToHtml } from "shiki";
-import { ScrollArea, ScrollBar } from "@/registry/ui/base/scroll-area";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/base/tabs";
 import { cn } from "@/lib/utils";
+import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/base/tabs";
 
 export default async function CodeBlock() {
   const html = await codeToHtml(code, {
@@ -16,22 +15,17 @@ export default async function CodeBlock() {
     <div className="flex min-h-dvh items-center justify-center px-6">
       <div className="rounded-lg border border-border/70 bg-muted/70 p-1 pt-0">
         <Tabs defaultValue="profile-card.tsx">
-          <ScrollArea className="grid max-w-full">
-            <ScrollBar orientation="horizontal" />
-            <TabsList
-              className={cn(
-                "items-end gap-2 rounded-none bg-transparent ps-2 pt-0.5 pb-0",
-                "*:rounded-none *:border-0 *:border-b-2 *:text-muted-foreground",
-                "*:data-[state=active]:border-foreground *:data-[state=active]:bg-transparent *:data-[state=active]:text-foreground *:data-[state=active]:shadow-none"
-              )}
-            >
-              <TabsTrigger value="profile-card.tsx">
-                profile-card.tsx
-              </TabsTrigger>
-              <TabsTrigger value="profile.tsx">profile.tsx</TabsTrigger>
-              <TabsTrigger value="page.tsx">page.tsx</TabsTrigger>
-            </TabsList>
-          </ScrollArea>
+          <TabsList
+            className={cn(
+              "items-end gap-2 rounded-none bg-transparent ps-2 pt-0.5 pb-0",
+              "*:rounded-none *:border-0 *:border-b-2 *:text-muted-foreground",
+              "*:data-active:border-foreground *:data-active:bg-transparent *:data-active:text-foreground *:data-active:shadow-none!"
+            )}
+          >
+            <TabsTrigger value="profile-card.tsx">profile-card.tsx</TabsTrigger>
+            <TabsTrigger value="profile.tsx">profile.tsx</TabsTrigger>
+            <TabsTrigger value="page.tsx">page.tsx</TabsTrigger>
+          </TabsList>
         </Tabs>
         <div
           className={cn(

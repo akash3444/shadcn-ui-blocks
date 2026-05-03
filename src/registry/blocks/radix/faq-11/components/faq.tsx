@@ -7,6 +7,7 @@ import {
   Users,
 } from "lucide-react";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 import {
   Accordion,
   AccordionContent,
@@ -14,7 +15,6 @@ import {
   AccordionTrigger,
 } from "@/registry/ui/radix/accordion";
 import { Button } from "@/registry/ui/radix/button";
-import { cn } from "@/lib/utils";
 
 const categorizedFaqs = [
   {
@@ -207,7 +207,7 @@ function FAQList({ faqs }: { faqs: (typeof categorizedFaqs)[0]["faqs"] }) {
     <Accordion className="space-y-4" collapsible type="single">
       {faqs?.map((faq, index) => (
         <AccordionItem
-          className="rounded-xl border-b-0 bg-muted px-5"
+          className="rounded-xl not-last:border-b-0 bg-muted px-5"
           key={index}
           value={faq.question}
         >
