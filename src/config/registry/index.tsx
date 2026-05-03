@@ -1836,21 +1836,21 @@ export const blocks: RegistryBlock[] = [
   },
   // Carousel Blocks
   {
-    name: "carousel-01",
-    title: "Carousel 01",
+    name: "carousel-block-01",
+    title: "Carousel Block 01",
     description: "A simple carousel block",
     component: React.lazy(
-      () => import("@/registry/blocks/carousel-01/components/carousel")
+      () => import("@/registry/blocks/carousel-block-01/components/carousel")
     ),
     categories: [categories.carousel],
     files: [{ path: "components/carousel.tsx" }],
   },
   {
-    name: "carousel-02",
-    title: "Carousel 02",
+    name: "carousel-block-02",
+    title: "Carousel Block 02",
     description: "A simple carousel block",
     component: React.lazy(
-      () => import("@/registry/blocks/carousel-02/components/carousel")
+      () => import("@/registry/blocks/carousel-block-02/components/carousel")
     ),
     categories: [categories.carousel],
     files: [{ path: "components/carousel.tsx" }],
