@@ -5,8 +5,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/ui/radix/card";
-import { Kbd } from "@/registry/ui/radix/kbd";
+} from "@/registry/bases/radix/ui/card";
+import { Kbd } from "@/registry/bases/radix/ui/kbd";
 import { cn } from "@/lib/utils";
 
 export default function KeyboardShortcuts() {

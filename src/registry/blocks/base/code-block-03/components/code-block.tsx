@@ -3,7 +3,7 @@
 import { Suspense, use } from "react";
 import { codeToHtml } from "shiki";
 import { cn } from "@/lib/utils";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/base/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/registry/bases/base/ui/tabs";
 
 const code = `const user = {\n\tname: "John Doe",
 \trole: "Frontend Developer",

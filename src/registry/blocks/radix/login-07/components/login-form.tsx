@@ -4,14 +4,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Mail } from "lucide-react";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
-import { Button } from "@/registry/ui/radix/button";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   Field,
   FieldDescription,
   FieldError,
   FieldLabel,
-} from "@/registry/ui/radix/field";
-import { Input } from "@/registry/ui/radix/input";
+} from "@/registry/bases/radix/ui/field";
+import { Input } from "@/registry/bases/radix/ui/input";
 
 const formSchema = z.object({
   email: z.string().email({

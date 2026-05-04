@@ -8,7 +8,7 @@ import {
   foods,
   travelMenuItems,
 } from "@/registry/blocks/base/navbar-03/config/navbar";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,7 +16,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/registry/ui/base/navigation-menu";
+} from "@/registry/bases/base/ui/navigation-menu";
 
 export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => (
   <NavigationMenu {...props}>

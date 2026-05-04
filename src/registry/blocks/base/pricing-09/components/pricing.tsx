@@ -1,6 +1,6 @@
 import { Box, CircleCheck, Gem, type LucideIcon, Users } from "lucide-react";
-import { Badge } from "@/registry/ui/base/badge";
-import { Button } from "@/registry/ui/base/button";
+import { Badge } from "@/registry/bases/base/ui/badge";
+import { Button } from "@/registry/bases/base/ui/button";
 import { cn } from "@/lib/utils";
 import { BorderBeam } from "./magicui/border-beam";
 

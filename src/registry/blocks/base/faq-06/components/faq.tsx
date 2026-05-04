@@ -4,7 +4,7 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-} from "@/registry/ui/base/accordion";
+} from "@/registry/bases/base/ui/accordion";
 import { cn } from "@/lib/utils";
 
 const faq = [

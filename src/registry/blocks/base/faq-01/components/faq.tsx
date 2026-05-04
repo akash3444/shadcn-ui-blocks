@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/ui/base/accordion";
+} from "@/registry/bases/base/ui/accordion";
 
 const faq = [
   {

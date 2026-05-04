@@ -1,8 +1,8 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import DotPattern from "@/registry/ui/radix/dot-pattern";
-import Particles from "@/registry/ui/radix/particles";
+import DotPattern from "@/registry/bases/radix/ui/dot-pattern";
+import Particles from "@/registry/bases/radix/ui/particles";
 import { cn } from "@/lib/utils";
 
 export const BackgroundPattern = () => {

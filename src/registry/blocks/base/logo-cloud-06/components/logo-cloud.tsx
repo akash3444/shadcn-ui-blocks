@@ -8,7 +8,7 @@ import {
   Logo07,
   Logo08,
 } from "@/components/logos";
-import { Marquee } from "@/registry/ui/base/marquee";
+import { Marquee } from "@/registry/bases/base/ui/marquee";
 
 const LogoCloud = () => {
   return (

@@ -4,9 +4,9 @@ import NumberFlow from "@number-flow/react";
 import { Box, CircleCheck, Gem, type LucideIcon, Users } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { Badge } from "@/registry/ui/radix/badge";
-import { Button } from "@/registry/ui/radix/button";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/radix/tabs";
+import { Badge } from "@/registry/bases/radix/ui/badge";
+import { Button } from "@/registry/bases/radix/ui/button";
+import { Tabs, TabsList, TabsTrigger } from "@/registry/bases/radix/ui/tabs";
 
 interface PricingPlan {
   name: string;

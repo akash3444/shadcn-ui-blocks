@@ -1,17 +1,17 @@
 import { MailIcon, MapPinIcon, MessageCircle, PhoneIcon } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/ui/base/card";
-import { Checkbox } from "@/registry/ui/base/checkbox";
-import { Input } from "@/registry/ui/base/input";
-import { Label } from "@/registry/ui/base/label";
-import { Textarea } from "@/registry/ui/base/textarea";
+} from "@/registry/bases/base/ui/card";
+import { Checkbox } from "@/registry/bases/base/ui/checkbox";
+import { Input } from "@/registry/bases/base/ui/input";
+import { Label } from "@/registry/bases/base/ui/label";
+import { Textarea } from "@/registry/bases/base/ui/textarea";
 
 const Contact = () => (
   <div className="flex min-h-screen items-center justify-center py-16">

@@ -8,7 +8,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/ui/radix/carousel";
+} from "@/registry/bases/radix/ui/carousel";
 import { cn } from "@/lib/utils";
 
 const testimonials = [

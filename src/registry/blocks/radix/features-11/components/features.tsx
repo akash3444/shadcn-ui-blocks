@@ -8,7 +8,7 @@ import {
   Zap,
 } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/registry/ui/radix/button";
+import { Button } from "@/registry/bases/radix/ui/button";
 
 const features = [
   {

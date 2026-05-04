@@ -4,10 +4,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
-import { Button } from "@/registry/ui/radix/button";
-import { Field, FieldError, FieldLabel } from "@/registry/ui/radix/field";
-import { Input } from "@/registry/ui/radix/input";
-import { Separator } from "@/registry/ui/radix/separator";
+import { Button } from "@/registry/bases/radix/ui/button";
+import { Field, FieldError, FieldLabel } from "@/registry/bases/radix/ui/field";
+import { Input } from "@/registry/bases/radix/ui/input";
+import { Separator } from "@/registry/bases/radix/ui/separator";
 import { Logo } from "@/registry/blocks/radix/login-02/components/logo";
 
 const formSchema = z.object({

@@ -1,12 +1,12 @@
 import { ApertureIcon } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/registry/ui/base/input-otp";
+} from "@/registry/bases/base/ui/input-otp";
 
 export default function Verification() {
   return (

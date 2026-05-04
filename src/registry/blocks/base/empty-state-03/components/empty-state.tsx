@@ -5,7 +5,7 @@ import {
   PlusIcon,
   Receipt,
 } from "lucide-react";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -13,8 +13,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/ui/base/empty";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/base/tabs";
+} from "@/registry/bases/base/ui/empty";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/bases/base/ui/tabs";
 import { cn } from "@/lib/utils";
 
 export default function EmptyState() {

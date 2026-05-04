@@ -2,7 +2,7 @@
 
 import type { ComponentProps } from "react";
 import { Area, AreaChart } from "recharts";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 import {
   Card,
   CardAction,
@@ -10,8 +10,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/ui/base/card";
-import { type ChartConfig, ChartContainer } from "@/registry/ui/base/chart";
+} from "@/registry/bases/base/ui/card";
+import { type ChartConfig, ChartContainer } from "@/registry/bases/base/ui/chart";
 import { cn } from "@/lib/utils";
 
 const data = [

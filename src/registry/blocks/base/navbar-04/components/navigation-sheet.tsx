@@ -1,13 +1,13 @@
 import { Menu } from "lucide-react";
 import { Logo } from "@/registry/blocks/base/navbar-04/components/logo";
 import { NavMenu } from "@/registry/blocks/base/navbar-04/components/nav-menu";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 import {
   Sheet,
   SheetContent,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/ui/base/sheet";
+} from "@/registry/bases/base/ui/sheet";
 
 export const NavigationSheet = () => {
   return (

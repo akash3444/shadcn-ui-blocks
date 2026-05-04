@@ -1,7 +1,7 @@
 import { Box, CircleCheck, Gem, type LucideIcon, Users } from "lucide-react";
-import { Badge } from "@/registry/ui/base/badge";
-import { Button } from "@/registry/ui/base/button";
-import { Separator } from "@/registry/ui/base/separator";
+import { Badge } from "@/registry/bases/base/ui/badge";
+import { Button } from "@/registry/bases/base/ui/button";
+import { Separator } from "@/registry/bases/base/ui/separator";
 import { cn } from "@/lib/utils";
 
 interface PricingPlan {

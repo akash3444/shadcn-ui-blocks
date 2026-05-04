@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button } from "@/registry/ui/base/button";
-import { Separator } from "@/registry/ui/base/separator";
+import { Button } from "@/registry/bases/base/ui/button";
+import { Separator } from "@/registry/bases/base/ui/separator";
 import { GoogleLogo } from "@/registry/blocks/base/signup-07/components/icons";
 import { Logo } from "@/registry/blocks/base/signup-07/components/logo";
 import { SignUpForm } from "@/registry/blocks/base/signup-07/components/signup-form";

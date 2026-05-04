@@ -6,7 +6,7 @@ import {
   LayoutDashboardIcon,
   Zap,
 } from "lucide-react";
-import { Badge } from "@/registry/ui/base/badge";
+import { Badge } from "@/registry/bases/base/ui/badge";
 import { cn } from "@/lib/utils";
 
 export default function SetupGuide() {

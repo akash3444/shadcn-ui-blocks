@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { UserPlus } from "lucide-react";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -12,16 +12,16 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/ui/base/dialog";
-import { Field, FieldError, FieldLabel } from "@/registry/ui/base/field";
-import { Input } from "@/registry/ui/base/input";
+} from "@/registry/bases/base/ui/dialog";
+import { Field, FieldError, FieldLabel } from "@/registry/bases/base/ui/field";
+import { Input } from "@/registry/bases/base/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/ui/base/select";
+} from "@/registry/bases/base/ui/select";
 
 const formSchema = z.object({
   email: z.string().email(),

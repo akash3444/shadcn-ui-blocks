@@ -1,11 +1,11 @@
 import { ApertureIcon } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/registry/ui/radix/button";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/registry/ui/radix/input-otp";
+} from "@/registry/bases/radix/ui/input-otp";
 import { cn } from "@/lib/utils";
 
 export default function Verification() {

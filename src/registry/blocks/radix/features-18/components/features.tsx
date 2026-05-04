@@ -7,7 +7,7 @@ import {
   ShieldCheckIcon,
   ZapIcon,
 } from "lucide-react";
-import { Button } from "@/registry/ui/radix/button";
+import { Button } from "@/registry/bases/radix/ui/button";
 import { cn } from "@/lib/utils";
 
 const plusPoints = [

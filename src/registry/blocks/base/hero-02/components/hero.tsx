@@ -1,7 +1,7 @@
 import { ArrowUpRight, CirclePlay } from "lucide-react";
 import Link from "next/link";
-import { Badge } from "@/registry/ui/base/badge";
-import { Button } from "@/registry/ui/base/button";
+import { Badge } from "@/registry/bases/base/ui/badge";
+import { Button } from "@/registry/bases/base/ui/button";
 
 export default function Hero() {
   return (

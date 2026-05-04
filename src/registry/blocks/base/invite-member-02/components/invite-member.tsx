@@ -1,20 +1,20 @@
 "use client";
 
 import { Search, UserPlusIcon } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/base/avatar";
-import { Button } from "@/registry/ui/base/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/bases/base/ui/avatar";
+import { Button } from "@/registry/bases/base/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@/registry/ui/base/dialog";
+} from "@/registry/bases/base/ui/dialog";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/ui/base/input-group";
+} from "@/registry/bases/base/ui/input-group";
 import {
   Item,
   ItemActions,
@@ -22,13 +22,13 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/registry/ui/base/item";
-import { ScrollArea } from "@/registry/ui/base/scroll-area";
+} from "@/registry/bases/base/ui/item";
+import { ScrollArea } from "@/registry/bases/base/ui/scroll-area";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/ui/base/tooltip";
+} from "@/registry/bases/base/ui/tooltip";
 
 export default function InviteMember() {
   return (

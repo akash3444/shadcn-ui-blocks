@@ -1,7 +1,7 @@
 import { ArrowLeftIcon, SearchIcon, SearchXIcon } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/registry/ui/base/button";
-import { Input } from "@/registry/ui/base/input";
+import { Button } from "@/registry/bases/base/ui/button";
+import { Input } from "@/registry/bases/base/ui/input";
 
 export default function NotFound() {
   return (

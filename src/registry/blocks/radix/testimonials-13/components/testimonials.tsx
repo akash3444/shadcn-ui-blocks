@@ -8,9 +8,9 @@ import {
   Logo05,
   Logo06,
 } from "@/components/logos";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/radix/avatar";
-import { Button } from "@/registry/ui/radix/button";
-import { Marquee } from "@/registry/ui/radix/marquee";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/bases/radix/ui/avatar";
+import { Button } from "@/registry/bases/radix/ui/button";
+import { Marquee } from "@/registry/bases/radix/ui/marquee";
 import { cn } from "@/lib/utils";
 
 const testimonials = [

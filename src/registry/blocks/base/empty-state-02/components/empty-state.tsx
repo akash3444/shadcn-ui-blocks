@@ -1,5 +1,5 @@
 import { ImportIcon, PlusIcon, Receipt } from "lucide-react";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -7,7 +7,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/ui/base/empty";
+} from "@/registry/bases/base/ui/empty";
 import {
   Table,
   TableBody,
@@ -15,7 +15,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/ui/base/table";
+} from "@/registry/bases/base/ui/table";
 import { cn } from "@/lib/utils";
 
 export default function EmptyState() {

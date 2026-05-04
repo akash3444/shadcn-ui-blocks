@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 import { Logo01, Logo02, Logo03, Logo04 } from "./logos";
 import Navbar from "./navbar";
 

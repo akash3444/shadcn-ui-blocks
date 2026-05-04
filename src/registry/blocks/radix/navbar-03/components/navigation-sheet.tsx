@@ -1,13 +1,13 @@
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { Menu } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/registry/ui/radix/button";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   Sheet,
   SheetContent,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/ui/radix/sheet";
+} from "@/registry/bases/radix/ui/sheet";
 import { Logo } from "@/registry/blocks/radix/navbar-03/components/logo";
 import {
   foods,

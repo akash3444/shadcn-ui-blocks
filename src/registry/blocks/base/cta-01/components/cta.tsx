@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 
 const CTA = () => {
   return (

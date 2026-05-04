@@ -1,5 +1,5 @@
 import { SunIcon } from "lucide-react";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 import { Logo } from "@/registry/blocks/base/navbar-02/components/logo";
 import { NavMenu } from "@/registry/blocks/base/navbar-02/components/nav-menu";
 import { NavigationSheet } from "@/registry/blocks/base/navbar-02/components/navigation-sheet";

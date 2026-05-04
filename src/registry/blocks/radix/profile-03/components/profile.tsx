@@ -1,19 +1,19 @@
 import { MoreHorizontalIcon, PencilIcon } from "lucide-react";
 import type { SVGProps } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/radix/avatar";
-import { Button } from "@/registry/ui/radix/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/bases/radix/ui/avatar";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/ui/radix/dropdown-menu";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/radix/tabs";
+} from "@/registry/bases/radix/ui/dropdown-menu";
+import { Tabs, TabsList, TabsTrigger } from "@/registry/bases/radix/ui/tabs";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/ui/radix/tooltip";
+} from "@/registry/bases/radix/ui/tooltip";
 
 export default function Profile() {
   return (

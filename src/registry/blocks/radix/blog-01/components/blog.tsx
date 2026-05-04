@@ -1,13 +1,13 @@
 import Image from "next/image";
-import { Badge } from "@/registry/ui/radix/badge";
-import { Card, CardContent, CardHeader } from "@/registry/ui/radix/card";
+import { Badge } from "@/registry/bases/radix/ui/badge";
+import { Card, CardContent, CardHeader } from "@/registry/bases/radix/ui/card";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/ui/radix/select";
+} from "@/registry/bases/radix/ui/select";
 
 const blogPosts = [
   {

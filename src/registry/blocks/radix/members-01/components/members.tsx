@@ -1,6 +1,6 @@
 import { Dot, Eye, Pencil, ShieldCheck, UserPlus } from "lucide-react";
-import { Avatar, AvatarFallback } from "@/registry/ui/radix/avatar";
-import { Button } from "@/registry/ui/radix/button";
+import { Avatar, AvatarFallback } from "@/registry/bases/radix/ui/avatar";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   Table,
   TableBody,
@@ -8,7 +8,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/ui/radix/table";
+} from "@/registry/bases/radix/ui/table";
 
 export default function Members() {
   return (

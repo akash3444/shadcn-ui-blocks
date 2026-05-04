@@ -1,6 +1,6 @@
 import { CircleCheck } from "lucide-react";
-import { Button } from "@/registry/ui/radix/button";
-import { Separator } from "@/registry/ui/radix/separator";
+import { Button } from "@/registry/bases/radix/ui/button";
+import { Separator } from "@/registry/bases/radix/ui/separator";
 
 const plans = [
   {

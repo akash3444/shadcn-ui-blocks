@@ -5,7 +5,7 @@ import {
   PlusIcon,
   Receipt,
 } from "lucide-react";
-import { Button } from "@/registry/ui/radix/button";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   Empty,
   EmptyContent,
@@ -13,8 +13,8 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/ui/radix/empty";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/radix/tabs";
+} from "@/registry/bases/radix/ui/empty";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/bases/radix/ui/tabs";
 import { cn } from "@/lib/utils";
 
 export default function EmptyState() {

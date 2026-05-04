@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ComponentProps } from "react";
-import { Avatar, AvatarFallback } from "@/registry/ui/radix/avatar";
-import { Button } from "@/registry/ui/radix/button";
+import { Avatar, AvatarFallback } from "@/registry/bases/radix/ui/avatar";
+import { Button } from "@/registry/bases/radix/ui/button";
 
 const testimonials = [
   {

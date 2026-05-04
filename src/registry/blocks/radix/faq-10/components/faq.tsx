@@ -14,7 +14,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/ui/radix/accordion";
+} from "@/registry/bases/radix/ui/accordion";
 
 type FrequentlyAskedQuestion = {
   question: string;

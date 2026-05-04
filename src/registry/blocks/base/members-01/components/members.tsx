@@ -1,6 +1,6 @@
 import { Dot, Eye, Pencil, ShieldCheck, UserPlus } from "lucide-react";
-import { Avatar, AvatarFallback } from "@/registry/ui/base/avatar";
-import { Button } from "@/registry/ui/base/button";
+import { Avatar, AvatarFallback } from "@/registry/bases/base/ui/avatar";
+import { Button } from "@/registry/bases/base/ui/button";
 import {
   Table,
   TableBody,
@@ -8,7 +8,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/ui/base/table";
+} from "@/registry/bases/base/ui/table";
 
 export default function Members() {
   return (

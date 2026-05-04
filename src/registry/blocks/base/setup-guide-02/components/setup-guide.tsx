@@ -8,16 +8,16 @@ import {
   Zap,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Badge } from "@/registry/ui/base/badge";
-import { Button } from "@/registry/ui/base/button";
+import { Badge } from "@/registry/bases/base/ui/badge";
+import { Button } from "@/registry/bases/base/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/ui/base/card";
-import { Progress } from "@/registry/ui/base/progress";
+} from "@/registry/bases/base/ui/card";
+import { Progress } from "@/registry/bases/base/ui/progress";
 
 export default function SetupGuide() {
   return (

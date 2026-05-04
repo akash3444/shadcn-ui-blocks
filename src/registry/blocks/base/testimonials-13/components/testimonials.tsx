@@ -9,9 +9,9 @@ import {
   Logo06,
 } from "@/components/logos";
 import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/base/avatar";
-import { Button } from "@/registry/ui/base/button";
-import { Marquee } from "@/registry/ui/base/marquee";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/bases/base/ui/avatar";
+import { Button } from "@/registry/bases/base/ui/button";
+import { Marquee } from "@/registry/bases/base/ui/marquee";
 
 const testimonials = [
   {

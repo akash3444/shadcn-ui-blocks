@@ -6,7 +6,7 @@ import {
   SquareDashedMousePointer,
   Zap,
 } from "lucide-react";
-import { Badge } from "@/registry/ui/base/badge";
+import { Badge } from "@/registry/bases/base/ui/badge";
 
 const features = [
   {

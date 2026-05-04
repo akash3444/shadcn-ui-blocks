@@ -1,19 +1,19 @@
 import { MoreHorizontalIcon, PencilIcon } from "lucide-react";
 import type { SVGProps } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/base/avatar";
-import { Button } from "@/registry/ui/base/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/bases/base/ui/avatar";
+import { Button } from "@/registry/bases/base/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/ui/base/dropdown-menu";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/base/tabs";
+} from "@/registry/bases/base/ui/dropdown-menu";
+import { Tabs, TabsList, TabsTrigger } from "@/registry/bases/base/ui/tabs";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/ui/base/tooltip";
+} from "@/registry/bases/base/ui/tooltip";
 
 export default function Profile() {
   return (

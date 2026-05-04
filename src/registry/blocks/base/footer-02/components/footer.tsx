@@ -5,7 +5,7 @@ import {
   TwitterIcon,
 } from "lucide-react";
 import Link from "next/link";
-import { Separator } from "@/registry/ui/base/separator";
+import { Separator } from "@/registry/bases/base/ui/separator";
 
 const footerSections = [
   {

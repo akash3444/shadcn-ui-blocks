@@ -1,7 +1,7 @@
 "use client";
 
 import { Check, Copy } from "lucide-react";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 
 export function CodeBlockHeader({ code }: { code: string }) {

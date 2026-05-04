@@ -1,5 +1,5 @@
 import { Check } from "lucide-react";
-import { Separator } from "@/registry/ui/radix/separator";
+import { Separator } from "@/registry/bases/radix/ui/separator";
 
 interface OrderItem {
   id: string;

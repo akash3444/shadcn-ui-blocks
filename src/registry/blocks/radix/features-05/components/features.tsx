@@ -6,7 +6,7 @@ import {
   Users,
   Zap,
 } from "lucide-react";
-import { Card, CardContent, CardHeader } from "@/registry/ui/radix/card";
+import { Card, CardContent, CardHeader } from "@/registry/bases/radix/ui/card";
 
 const features = [
   {

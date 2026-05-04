@@ -1,5 +1,5 @@
 import { StarIcon } from "lucide-react";
-import { Avatar, AvatarFallback } from "@/registry/ui/radix/avatar";
+import { Avatar, AvatarFallback } from "@/registry/bases/radix/ui/avatar";
 import { cn } from "@/lib/utils";
 
 const testimonials = [

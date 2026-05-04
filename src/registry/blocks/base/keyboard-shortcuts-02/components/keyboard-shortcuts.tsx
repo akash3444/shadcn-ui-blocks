@@ -5,8 +5,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/ui/base/card";
-import { Kbd } from "@/registry/ui/base/kbd";
+} from "@/registry/bases/base/ui/card";
+import { Kbd } from "@/registry/bases/base/ui/kbd";
 import { cn } from "@/lib/utils";
 
 export default function KeyboardShortcuts() {

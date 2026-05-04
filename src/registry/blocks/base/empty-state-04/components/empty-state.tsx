@@ -1,13 +1,13 @@
 import { FolderCheck, ImportIcon, PlusIcon } from "lucide-react";
 import { Marquee } from "@/components/magicui/marquee";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 import {
   Empty,
   EmptyContent,
   EmptyDescription,
   EmptyHeader,
   EmptyTitle,
-} from "@/registry/ui/base/empty";
+} from "@/registry/bases/base/ui/empty";
 
 export default function EmptyState() {
   return (

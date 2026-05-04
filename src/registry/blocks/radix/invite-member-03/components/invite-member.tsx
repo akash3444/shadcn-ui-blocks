@@ -1,21 +1,21 @@
 "use client";
 
 import { Copy, Search, UserPlusIcon } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/radix/avatar";
-import { Button } from "@/registry/ui/radix/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/bases/radix/ui/avatar";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@/registry/ui/radix/dialog";
+} from "@/registry/bases/radix/ui/dialog";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/registry/ui/radix/input-group";
+} from "@/registry/bases/radix/ui/input-group";
 import {
   Item,
   ItemActions,
@@ -23,13 +23,13 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/registry/ui/radix/item";
-import { ScrollArea } from "@/registry/ui/radix/scroll-area";
+} from "@/registry/bases/radix/ui/item";
+import { ScrollArea } from "@/registry/bases/radix/ui/scroll-area";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/ui/radix/tooltip";
+} from "@/registry/bases/radix/ui/tooltip";
 
 export default function InviteMember() {
   return (

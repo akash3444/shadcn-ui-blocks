@@ -4,7 +4,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/ui/radix/carousel";
+} from "@/registry/bases/radix/ui/carousel";
 
 const images = [
   "https://www.fffuel.co/images/dddepth-preview/dddepth-321.jpg",

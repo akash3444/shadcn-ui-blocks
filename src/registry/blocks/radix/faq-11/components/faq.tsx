@@ -13,8 +13,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/ui/radix/accordion";
-import { Button } from "@/registry/ui/radix/button";
+} from "@/registry/bases/radix/ui/accordion";
+import { Button } from "@/registry/bases/radix/ui/button";
 
 const categorizedFaqs = [
   {

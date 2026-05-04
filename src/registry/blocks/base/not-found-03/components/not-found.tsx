@@ -1,7 +1,7 @@
 import { OctagonXIcon } from "lucide-react";
 import Link from "next/link";
 import type { SVGProps } from "react";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 
 export default function NotFound() {
   return (

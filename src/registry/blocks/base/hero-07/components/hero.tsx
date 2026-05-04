@@ -2,8 +2,8 @@ import { ArrowUpRight, CirclePlay } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import AnimatedGridPattern from "@/registry/blocks/base/hero-07/components/ui/animated-grid-pattern";
-import { Badge } from "@/registry/ui/base/badge";
-import { Button } from "@/registry/ui/base/button";
+import { Badge } from "@/registry/bases/base/ui/badge";
+import { Button } from "@/registry/bases/base/ui/button";
 
 export default function Hero() {
   return (

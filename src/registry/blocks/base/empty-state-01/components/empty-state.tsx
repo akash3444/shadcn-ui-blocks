@@ -1,12 +1,12 @@
 import { Folders, ImportIcon, PlusIcon } from "lucide-react";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/ui/base/card";
+} from "@/registry/bases/base/ui/card";
 import {
   Empty,
   EmptyContent,
@@ -14,7 +14,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/ui/base/empty";
+} from "@/registry/bases/base/ui/empty";
 
 export default function EmptyState() {
   return (

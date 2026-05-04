@@ -2,7 +2,7 @@
 
 import type { ComponentProps } from "react";
 import { Area, AreaChart } from "recharts";
-import { Button } from "@/registry/ui/radix/button";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   Card,
   CardAction,
@@ -10,8 +10,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/ui/radix/card";
-import { type ChartConfig, ChartContainer } from "@/registry/ui/radix/chart";
+} from "@/registry/bases/radix/ui/card";
+import { type ChartConfig, ChartContainer } from "@/registry/bases/radix/ui/chart";
 import { cn } from "@/lib/utils";
 
 const data = [

@@ -74,13 +74,7 @@ const transformCode = (code: string) => {
     "@/config"
   );
 
-  // Replace `@/registry/ui/radix/` and `@/registry/ui/base/` with `@/components/ui/`
-  transformedCode = transformedCode.replace(
-    /@\/registry\/ui\/(radix|base)\//g,
-    "@/components/ui/"
-  );
-
-  // Replace remaining `@/registry/.../ui` with `@/components/ui`
+  // Replace `@/registry/.../ui` (e.g. `@/registry/bases/radix/ui`) with `@/components/ui`
   transformedCode = transformedCode.replace(
     /@\/registry\/(.+)\/ui/g,
     "@/components/ui"

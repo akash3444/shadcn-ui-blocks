@@ -1,5 +1,5 @@
 import { Building2, Calendar } from "lucide-react";
-import { Badge } from "@/registry/ui/radix/badge";
+import { Badge } from "@/registry/bases/radix/ui/badge";
 
 const experiences = [
   {

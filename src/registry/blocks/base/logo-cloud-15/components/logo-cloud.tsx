@@ -12,7 +12,7 @@ import {
   Logo07,
   Logo08,
 } from "@/components/logos";
-import { Marquee } from "@/registry/ui/base/marquee";
+import { Marquee } from "@/registry/bases/base/ui/marquee";
 import { BorderBeam } from "@/registry/blocks/base/logo-cloud-15/components/magicui/border-beam";
 
 const BEAM_DURATION = 8; // must match BorderBeam duration prop

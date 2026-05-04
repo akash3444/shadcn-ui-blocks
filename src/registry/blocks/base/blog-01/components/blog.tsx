@@ -1,13 +1,13 @@
 import Image from "next/image";
-import { Badge } from "@/registry/ui/base/badge";
-import { Card, CardContent, CardHeader } from "@/registry/ui/base/card";
+import { Badge } from "@/registry/bases/base/ui/badge";
+import { Card, CardContent, CardHeader } from "@/registry/bases/base/ui/card";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/ui/base/select";
+} from "@/registry/bases/base/ui/select";
 
 const blogPosts = [
   {

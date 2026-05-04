@@ -4,15 +4,15 @@ import NumberFlow from "@number-flow/react";
 import { CircleCheck, CircleHelp } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { Badge } from "@/registry/ui/radix/badge";
-import { Button } from "@/registry/ui/radix/button";
-import { Separator } from "@/registry/ui/radix/separator";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/radix/tabs";
+import { Badge } from "@/registry/bases/radix/ui/badge";
+import { Button } from "@/registry/bases/radix/ui/button";
+import { Separator } from "@/registry/bases/radix/ui/separator";
+import { Tabs, TabsList, TabsTrigger } from "@/registry/bases/radix/ui/tabs";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/ui/radix/tooltip";
+} from "@/registry/bases/radix/ui/tooltip";
 
 const tooltipContent = {
   styles: "Choose from a variety of styles to suit your preferences.",

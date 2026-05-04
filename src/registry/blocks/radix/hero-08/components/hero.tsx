@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { Button } from "@/registry/ui/radix/button";
+import { Button } from "@/registry/bases/radix/ui/button";
 import { Logo01, Logo02, Logo03, Logo04 } from "./logos";
 import Navbar from "./navbar";
 

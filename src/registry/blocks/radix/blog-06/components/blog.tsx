@@ -1,8 +1,8 @@
 import { ArrowRight, CalendarDays, Dot, Mails, User } from "lucide-react";
 import Link from "next/link";
-import { Badge } from "@/registry/ui/radix/badge";
-import { Button } from "@/registry/ui/radix/button";
-import { Separator } from "@/registry/ui/radix/separator";
+import { Badge } from "@/registry/bases/radix/ui/badge";
+import { Button } from "@/registry/bases/radix/ui/button";
+import { Separator } from "@/registry/bases/radix/ui/separator";
 
 const blogPosts = [
   {

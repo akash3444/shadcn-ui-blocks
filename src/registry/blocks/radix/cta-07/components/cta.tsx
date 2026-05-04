@@ -1,7 +1,7 @@
 "use client";
 
 import type { SVGProps } from "react";
-import { Button } from "@/registry/ui/radix/button";
+import { Button } from "@/registry/bases/radix/ui/button";
 
 const CTA = () => {
   return (

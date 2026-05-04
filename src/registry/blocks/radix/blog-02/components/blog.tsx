@@ -1,15 +1,15 @@
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { Badge } from "@/registry/ui/radix/badge";
-import { Button } from "@/registry/ui/radix/button";
-import { Card, CardContent, CardHeader } from "@/registry/ui/radix/card";
+import { Badge } from "@/registry/bases/radix/ui/badge";
+import { Button } from "@/registry/bases/radix/ui/button";
+import { Card, CardContent, CardHeader } from "@/registry/bases/radix/ui/card";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/ui/radix/select";
+} from "@/registry/bases/radix/ui/select";
 
 const blogPosts = [
   {

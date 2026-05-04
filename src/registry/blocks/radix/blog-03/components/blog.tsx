@@ -11,8 +11,8 @@ import {
   Scale,
 } from "lucide-react";
 import Image from "next/image";
-import { Badge } from "@/registry/ui/radix/badge";
-import { Card, CardContent } from "@/registry/ui/radix/card";
+import { Badge } from "@/registry/bases/radix/ui/badge";
+import { Card, CardContent } from "@/registry/bases/radix/ui/card";
 
 const blogPosts = [
   {

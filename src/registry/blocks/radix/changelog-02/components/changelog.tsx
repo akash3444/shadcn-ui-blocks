@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/ui/radix/separator";
+import { Separator } from "@/registry/bases/radix/ui/separator";
 import { cn } from "@/lib/utils";
 
 const changelogs = [

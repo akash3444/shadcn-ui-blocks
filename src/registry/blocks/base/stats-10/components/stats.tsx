@@ -1,5 +1,5 @@
 import { ArrowUpRightIcon } from "lucide-react";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 import { cn } from "@/lib/utils";
 
 const Stats = () => {

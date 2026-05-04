@@ -11,16 +11,16 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/ui/radix/avatar";
-import { Button } from "@/registry/ui/radix/button";
+} from "@/registry/bases/radix/ui/avatar";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/ui/radix/dropdown-menu";
-import { ScrollArea, ScrollBar } from "@/registry/ui/radix/scroll-area";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/radix/tabs";
+} from "@/registry/bases/radix/ui/dropdown-menu";
+import { ScrollArea, ScrollBar } from "@/registry/bases/radix/ui/scroll-area";
+import { Tabs, TabsList, TabsTrigger } from "@/registry/bases/radix/ui/tabs";
 
 export default function Profile() {
   return (

@@ -3,7 +3,7 @@
 import { StarIcon } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Avatar, AvatarFallback } from "@/registry/ui/base/avatar";
+import { Avatar, AvatarFallback } from "@/registry/bases/base/ui/avatar";
 import {
   Carousel,
   type CarouselApi,
@@ -11,7 +11,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/ui/base/carousel";
+} from "@/registry/bases/base/ui/carousel";
 import { cn } from "@/lib/utils";
 
 const testimonials = [

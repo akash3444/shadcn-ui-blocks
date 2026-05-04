@@ -1,6 +1,6 @@
 import { CircleCheck } from "lucide-react";
-import { Button } from "@/registry/ui/base/button";
-import { Separator } from "@/registry/ui/base/separator";
+import { Button } from "@/registry/bases/base/ui/button";
+import { Separator } from "@/registry/bases/base/ui/separator";
 
 const plans = [
   {

@@ -6,7 +6,7 @@ import {
   type CarouselApi,
   CarouselContent,
   CarouselItem,
-} from "@/registry/ui/base/carousel";
+} from "@/registry/bases/base/ui/carousel";
 import { cn } from "@/lib/utils";
 
 const testimonials = [

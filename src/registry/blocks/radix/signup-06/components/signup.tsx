@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button } from "@/registry/ui/radix/button";
-import { Separator } from "@/registry/ui/radix/separator";
+import { Button } from "@/registry/bases/radix/ui/button";
+import { Separator } from "@/registry/bases/radix/ui/separator";
 import { GoogleLogo } from "@/registry/blocks/radix/signup-06/components/icons";
 import { Logo } from "@/registry/blocks/radix/signup-06/components/logo";
 import { SignUpForm } from "@/registry/blocks/radix/signup-06/components/signup-form";

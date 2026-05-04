@@ -8,7 +8,7 @@ import {
   foods,
   travelMenuItems,
 } from "@/registry/blocks/radix/navbar-03/config/navbar";
-import { Button } from "@/registry/ui/radix/button";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,7 +16,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/registry/ui/radix/navigation-menu";
+} from "@/registry/bases/radix/ui/navigation-menu";
 
 export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => (
   <NavigationMenu {...props}>

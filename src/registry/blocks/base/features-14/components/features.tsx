@@ -4,7 +4,7 @@ import {
   CogIcon,
   ShieldCheckIcon,
 } from "lucide-react";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 
 const plusPoints = [
   {

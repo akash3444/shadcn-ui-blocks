@@ -3,7 +3,7 @@
 import { NeuroNoise } from "@paper-design/shaders-react";
 import { ArrowUpRight } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 
 const CTA = () => {
   const { resolvedTheme } = useTheme();

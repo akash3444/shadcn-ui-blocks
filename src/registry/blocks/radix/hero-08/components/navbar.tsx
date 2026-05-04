@@ -1,11 +1,11 @@
 import { ArrowUpRight, Menu, Wheat, X } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/registry/ui/radix/button";
+import { Button } from "@/registry/bases/radix/ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/ui/radix/popover";
+} from "@/registry/bases/radix/ui/popover";
 import { NavMenu } from "./nav-menu";
 
 const Navbar = () => {

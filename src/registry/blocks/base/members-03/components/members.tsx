@@ -1,5 +1,5 @@
 import { Dot, Search, UserPlus } from "lucide-react";
-import { Button } from "@/registry/ui/base/button";
+import { Button } from "@/registry/bases/base/ui/button";
 
 export default function Members() {
   return (

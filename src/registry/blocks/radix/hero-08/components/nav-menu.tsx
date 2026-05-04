@@ -8,7 +8,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from "@/registry/ui/radix/navigation-menu";
+} from "@/registry/bases/radix/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
 const links = [

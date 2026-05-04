@@ -9,7 +9,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from "@/registry/ui/base/navigation-menu";
+} from "@/registry/bases/base/ui/navigation-menu";
 
 const links = [
   {

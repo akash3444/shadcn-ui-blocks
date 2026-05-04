@@ -1,8 +1,8 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import DotPattern from "@/registry/ui/base/dot-pattern";
-import Particles from "@/registry/ui/base/particles";
+import DotPattern from "@/registry/bases/base/ui/dot-pattern";
+import Particles from "@/registry/bases/base/ui/particles";
 import { cn } from "@/lib/utils";
 
 export const BackgroundPattern = () => {

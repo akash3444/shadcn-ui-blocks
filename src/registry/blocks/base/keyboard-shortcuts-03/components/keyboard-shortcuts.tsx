@@ -1,4 +1,4 @@
-import { Kbd } from "@/registry/ui/base/kbd";
+import { Kbd } from "@/registry/bases/base/ui/kbd";
 
 export default function KeyboardShortcuts() {
   return (

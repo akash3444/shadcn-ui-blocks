@@ -5,9 +5,9 @@ import {
   TwitterIcon,
 } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/registry/ui/radix/button";
-import { Input } from "@/registry/ui/radix/input";
-import { Separator } from "@/registry/ui/radix/separator";
+import { Button } from "@/registry/bases/radix/ui/button";
+import { Input } from "@/registry/bases/radix/ui/input";
+import { Separator } from "@/registry/bases/radix/ui/separator";
 
 const footerSections = [
   {

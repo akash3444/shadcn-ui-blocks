@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback } from "@/registry/ui/base/avatar";
+import { Avatar, AvatarFallback } from "@/registry/bases/base/ui/avatar";
 
 const testimonials = [
   {

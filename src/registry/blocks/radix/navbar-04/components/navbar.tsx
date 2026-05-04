@@ -1,4 +1,4 @@
-import { Button } from "@/registry/ui/radix/button";
+import { Button } from "@/registry/bases/radix/ui/button";
 import { Logo } from "@/registry/blocks/radix/navbar-04/components/logo";
 import { NavMenu } from "@/registry/blocks/radix/navbar-04/components/nav-menu";
 import { NavigationSheet } from "@/registry/blocks/radix/navbar-04/components/navigation-sheet";
