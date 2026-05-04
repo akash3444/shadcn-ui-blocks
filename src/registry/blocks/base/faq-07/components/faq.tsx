@@ -1,11 +1,11 @@
-import { PlusIcon } from "lucide-react";
 import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
+import { PlusIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
 } from "@/registry/bases/base/ui/accordion";
-import { cn } from "@/lib/utils";
 
 const faq = [
   {
@@ -59,7 +59,7 @@ const FAQ = () => {
               <AccordionPrimitive.Header className="flex items-center">
                 <AccordionPrimitive.Trigger
                   className={cn(
-                    "flex flex-1 items-center justify-between pt-4 pb-3 font-medium tracking-tight transition-all hover:underline [&[aria-expanded=true]>svg]:rotate-45",
+                    "flex flex-1 items-center justify-between py-4 font-medium tracking-tight transition-all hover:underline aria-expanded:pb-3 [&[aria-expanded=true]>svg]:rotate-45",
                     "text-start text-lg"
                   )}
                 >
