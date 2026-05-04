@@ -99,7 +99,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/api/og",
+        url: "/images/og-image.png",
         height: 630,
         width: 1200,
         alt: "Effortless Shadcn UI Component Previews & Code Snippets",
