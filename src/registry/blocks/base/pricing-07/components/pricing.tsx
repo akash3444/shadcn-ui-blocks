@@ -1,11 +1,12 @@
 "use client";
 
+import NumberFlow from "@number-flow/react";
 import { Box, CircleCheck, Gem, type LucideIcon, Users } from "lucide-react";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 import { Badge } from "@/registry/ui/base/badge";
 import { Button } from "@/registry/ui/base/button";
 import { Tabs, TabsList, TabsTrigger } from "@/registry/ui/base/tabs";
-import { cn } from "@/lib/utils";
 
 interface PricingPlan {
   name: string;
@@ -128,7 +129,7 @@ const PlanCard = ({
         {plan.description}
       </p>
       <p className="mt-4 font-semibold text-4xl">
-        <span className="font-satoshi">${price}</span>
+        <NumberFlow className="font-satoshi" prefix="$" value={price} />
         <span className="ms-0.5 font-normal text-lg text-muted-foreground tracking-tight">
           /month
         </span>

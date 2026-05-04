@@ -1,7 +1,9 @@
 "use client";
 
+import NumberFlow from "@number-flow/react";
 import { ArrowUpRight, CircleCheck, CircleHelp } from "lucide-react";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 import { Badge } from "@/registry/ui/radix/badge";
 import { Button } from "@/registry/ui/radix/button";
 import { Separator } from "@/registry/ui/radix/separator";
@@ -11,7 +13,6 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/registry/ui/radix/tooltip";
-import { cn } from "@/lib/utils";
 
 const tooltipContent = {
   styles: "Choose from a variety of styles to suit your preferences.",
@@ -112,12 +113,15 @@ const Pricing = () => {
             )}
             <h3 className="font-medium text-lg">{plan.name}</h3>
             <p className="mt-4 font-semibold text-4xl">
-              <span className="font-satoshi">
-                $
-                {selectedBillingPeriod === "monthly"
-                  ? plan.price
-                  : plan.price * ((100 - YEARLY_DISCOUNT) / 100)}
-              </span>
+              <NumberFlow
+                className="font-satoshi"
+                prefix="$"
+                value={
+                  selectedBillingPeriod === "monthly"
+                    ? plan.price
+                    : plan.price * ((100 - YEARLY_DISCOUNT) / 100)
+                }
+              />
               <span className="ml-1.5 font-normal text-muted-foreground text-sm">
                 /month
               </span>

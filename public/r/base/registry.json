@@ -6587,7 +6587,8 @@
       "title": "Pricing 03",
       "description": "A simple pricing block",
       "dependencies": [
-        "lucide-react"
+        "lucide-react",
+        "@number-flow/react"
       ],
       "registryDependencies": [
         "badge",
@@ -6609,7 +6610,8 @@
       "title": "Pricing 04",
       "description": "A simple pricing block",
       "dependencies": [
-        "lucide-react"
+        "lucide-react",
+        "@number-flow/react"
       ],
       "registryDependencies": [
         "badge",
@@ -8433,6 +8435,9 @@
       "type": "registry:block",
       "title": "Pricing 07",
       "description": "A simple pricing block",
+      "dependencies": [
+        "@number-flow/react"
+      ],
       "files": [
         {
           "path": "src/registry/blocks/base/pricing-07/components/pricing.tsx",
