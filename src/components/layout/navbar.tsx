@@ -7,20 +7,21 @@ import { GithubStarButton } from "../github-star-button";
 import { Logo } from "../logo";
 import { AppNavigationMenu } from "./app-navigation-menu";
 import { NavigationSheet } from "./navigation-sheet";
+import { CommandMenu } from "../command-menu";
 
 export const Navbar = ({ className }: { className?: string }) => {
   return (
     <nav className="sticky top-0 z-30 border-b bg-background px-6 ps-4 pe-2 lg:px-0">
       <div
         className={cn(
-          "relative z-20 mx-auto flex h-14 max-w-(--breakpoint-lg) items-center justify-between border-primary/8 text-foreground shadow shadow-primary/1",
+          "relative z-20 mx-auto flex h-14 max-w-(--breakpoint-xl) items-center justify-between border-primary/8 text-foreground shadow shadow-primary/1",
           className
         )}
       >
         <div className="flex items-center gap-2">
           <Link className="flex items-center gap-2" href="/">
             <Logo className="font-bold" />
-            <span className="hidden font-semibold text-lg tracking-tight lg:block">
+            <span className="hidden font-semibold text-lg tracking-tight xl:block whitespace-nowrap">
               Shadcn UI Blocks
             </span>
           </Link>
@@ -31,6 +32,9 @@ export const Navbar = ({ className }: { className?: string }) => {
         </div>
 
         <div className="flex items-center gap-2">
+          <div className="w-full flex-1 md:w-auto md:flex-none">
+            <CommandMenu />
+          </div>
           <Button asChild className="relative" size="sm">
             <Link
               href="https://github.com/sponsors/akash3444"
