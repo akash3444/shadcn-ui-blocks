@@ -34,7 +34,7 @@ describe("Public JSON Parity", () => {
 				const jsonPath = join(PUBLIC_R_DIR, `${name}.json`);
 				expect(
 					existsSync(jsonPath),
-					`Missing public/r/${name}.json — run "pnpm registry:build" to rebuild`,
+					`Missing public/r/${name}.json — run "bun run registry:build" to rebuild`,
 				).toBe(true);
 			},
 		);
@@ -52,7 +52,7 @@ describe("Public JSON Parity", () => {
 
 				expect(
 					actual,
-					`File list mismatch in public/r/${name}.json — run "pnpm registry:build"`,
+					`File list mismatch in public/r/${name}.json — run "bun run registry:build"`,
 				).toEqual(expected);
 			},
 		);
@@ -77,7 +77,7 @@ describe("Public JSON Parity", () => {
 				const sourceContent = readFileSync(join(ROOT, filePath), "utf-8");
 				expect(
 					publishedFile.content,
-					`Stale content for "${filePath}" in public/r/${itemName}.json — run "pnpm registry:build"`,
+					`Stale content for "${filePath}" in public/r/${itemName}.json — run "bun run registry:build"`,
 				).toBe(sourceContent);
 			},
 		);
@@ -95,7 +95,7 @@ describe("Public JSON Parity", () => {
 
 				expect(
 					actual,
-					`npm dependency mismatch for "${name}" — run "pnpm registry:build"`,
+					`npm dependency mismatch for "${name}" — run "bun run registry:build"`,
 				).toEqual(expected);
 			},
 		);
@@ -111,7 +111,7 @@ describe("Public JSON Parity", () => {
 
 				expect(
 					actual,
-					`Registry dependency mismatch for "${name}" — run "pnpm registry:build"`,
+					`Registry dependency mismatch for "${name}" — run "bun run registry:build"`,
 				).toEqual(expected);
 			},
 		);

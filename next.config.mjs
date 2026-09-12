@@ -40,7 +40,6 @@ const nextConfig = {
   outputFileTracingExcludes: {
     "*": [
       ".next/cache/webpack",
-      ".pnpm-store/**/*",
       ".git/**/*",
       "public/images/blocks/**/*",
       "public/images/templates/**/*",

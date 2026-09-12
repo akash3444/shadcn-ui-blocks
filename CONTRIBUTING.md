@@ -26,10 +26,10 @@ cd shadcn-ui-blocks
 
 ### 2. Install Dependencies
 
-Install the required packages using pnpm:
+Install the required packages using Bun:
 
 ```bash
-pnpm install
+bun install
 ```
 
 ### 3. Run the Project Locally
@@ -37,7 +37,7 @@ pnpm install
 Start the development server:
 
 ```bash
-pnpm run dev
+bun run dev
 ```
 
 The website should now be accessible at `http://localhost:3000`.
