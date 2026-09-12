@@ -43,7 +43,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --font-geist: var(--font-geist-variable);
+  --font-geist: var(--font-geist);
   --font-satoshi: var(--font-satoshi);
 
   --animate-marquee: marquee var(--duration) infinite linear;
@@ -135,7 +135,7 @@
     }
   }
   --font-general-sans: "General Sans", "Helvetica Neue", Arial, sans-serif;
-  --font-sans: var(--font-geist-variable);
+  --font-sans: var(--font-geist);
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);

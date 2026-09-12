@@ -15,7 +15,7 @@ import { PrimitiveProvider } from "@/providers/primitive-provider";
 
 const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-geist-variable",
+  variable: "--font-geist",
 });
 
 const satoshi = localFont({
