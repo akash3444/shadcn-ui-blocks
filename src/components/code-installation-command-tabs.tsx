@@ -32,11 +32,11 @@ const tabs = [
 ];
 
 export const CodeInstallationCommandTabs = ({
-  registryUrl,
+  registryItem,
   componentName,
   componentType,
 }: {
-  registryUrl: string;
+  registryItem: string;
   componentName?: string;
   componentType?: string;
 }) => {
@@ -62,12 +62,14 @@ export const CodeInstallationCommandTabs = ({
         >
           <div className="flex h-10 items-center justify-between gap-2 rounded-md pr-1 pl-3">
             <code className="line-clamp-1 grow text-[13px]">
-              {getInstallationCommand(tab.value, registryUrl)}
+              {getInstallationCommand(tab.value, registryItem)}
             </code>
             <Button
               className="size-8 shrink-0 rounded-md"
               onClick={() => {
-                copyToClipboard(getInstallationCommand(tab.value, registryUrl));
+                copyToClipboard(
+                  getInstallationCommand(tab.value, registryItem)
+                );
                 if (componentName && componentType) {
                   capture("component:install_command_copied", {
                     component_name: componentName,

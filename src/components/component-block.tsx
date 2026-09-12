@@ -6,7 +6,6 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { config } from "@/config";
 import { getFileContent } from "@/lib/file";
 import { cn } from "@/lib/utils";
 import { CopyToClipboardButton } from "./copy-to-clipboard-button";
@@ -37,8 +36,7 @@ const ComponentBlock: FC<BlockProps> = async ({
 }) => {
   const src = `src/components/customized/${type}/${name}.tsx`;
   const code = await getFileContent(src);
-  const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
-  const registryUrl = `${protocol}://${config.appUrl}/r/${name}.json`;
+  const registryItem = `@shadcnui-blocks/${name}`;
 
   // Dynamically import the component from its path
   const DynamicComponent = dynamic(() =>
@@ -96,7 +94,7 @@ const ComponentBlock: FC<BlockProps> = async ({
             code={code}
             componentName={name}
             componentType={type}
-            registryUrl={registryUrl}
+            registryItem={registryItem}
           />
         </div>
       </div>

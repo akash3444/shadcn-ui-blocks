@@ -105,7 +105,7 @@
   --popover-foreground: var(--color-neutral-950); /* Neutral 950 */
   --primary: var(--color-neutral-900); /* Neutral 900 */
   --primary-foreground: var(--color-zinc-50); /* Zinc 50 */
-  --secondary: var(--color-neutral-1000); /* Neutral 100 */
+  --secondary: var(--color-neutral-100); /* Neutral 100 */
   --secondary-foreground: var(--color-neutral-900); /* Neutral 900 */
   --muted: var(--color-neutral-100); /* Neutral 100 */
   --muted-foreground: var(--color-neutral-500); /* Neutral 500 */

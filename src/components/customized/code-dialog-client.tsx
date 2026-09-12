@@ -4,13 +4,13 @@ import { Code } from "lucide-react";
 import { VisuallyHidden as VisuallyHiddenPrimitive } from "radix-ui";
 import { CopyButton } from "@/components/copy-button";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import {
   Tooltip,
   TooltipContent,
@@ -29,7 +29,7 @@ const CodeHtml = ({ html }: { html: string }) => (
 interface CodeDialogClientProps {
   code: string;
   codeHtml: string;
-  registryUrl?: string;
+  registryItem?: string;
   componentName?: string;
   componentType?: string;
 }
@@ -37,7 +37,7 @@ interface CodeDialogClientProps {
 export const CodeDialogClient = ({
   code,
   codeHtml,
-  registryUrl,
+  registryItem,
   componentName,
   componentType,
 }: CodeDialogClientProps) => {
@@ -61,13 +61,10 @@ export const CodeDialogClient = ({
   };
 
   return (
-    <Dialog onOpenChange={handleOpenChange}>
-      <VisuallyHiddenPrimitive.VisuallyHidden>
-        <DialogTitle>View component code</DialogTitle>
-      </VisuallyHiddenPrimitive.VisuallyHidden>
+    <Sheet onOpenChange={handleOpenChange}>
       <Tooltip>
         <TooltipTrigger asChild>
-          <DialogTrigger asChild>
+          <SheetTrigger asChild>
             <Button
               className="h-8 w-8 text-muted-foreground transition-colors hover:text-foreground"
               size="icon"
@@ -75,40 +72,46 @@ export const CodeDialogClient = ({
             >
               <Code className="size-4" />
             </Button>
-          </DialogTrigger>
+          </SheetTrigger>
         </TooltipTrigger>
         <TooltipContent side="bottom">View code</TooltipContent>
       </Tooltip>
 
-      <DialogContent className="w-full gap-0 overflow-hidden rounded-xl border bg-card p-0 shadow-xl sm:max-w-2xl">
-        {registryUrl && (
-          <div className="border-b bg-muted/30 px-6 py-5">
+      <SheetContent
+        className="w-full gap-0 overflow-hidden border bg-card p-0 sm:max-w-2xl"
+        side="right"
+      >
+        <VisuallyHiddenPrimitive.VisuallyHidden>
+          <SheetTitle>View component code</SheetTitle>
+        </VisuallyHiddenPrimitive.VisuallyHidden>
+        {registryItem && (
+          <div className="border-b bg-muted/30 ps-6 pe-4 py-5">
             <h2 className="mb-3 font-semibold text-base">
               Installation Command
             </h2>
             <CodeInstallationCommandTabs
               componentName={componentName}
               componentType={componentType}
-              registryUrl={registryUrl}
+              registryItem={registryItem}
             />
           </div>
         )}
 
-        <div className="flex flex-col">
-          <div className="flex items-center justify-between gap-4 border-b bg-muted/20 py-2.5 ps-6 pe-4">
+        <div className="flex min-h-0 flex-1 flex-col">
+          <div className="flex items-center justify-between gap-4 border-b bg-muted/20 py-1.5 ps-6 pe-4">
             <span className="font-medium text-muted-foreground text-sm">
               Component Code
             </span>
             <CopyButton content={code} onCopy={handleCodeCopy} />
           </div>
 
-          <ScrollArea className="max-h-[min(28rem,70vh)]" type="auto">
+          <ScrollArea className="min-h-0 flex-1" type="auto">
             <ScrollArea className="grid" orientation="horizontal" type="auto">
               <CodeHtml html={codeHtml} />
             </ScrollArea>
           </ScrollArea>
         </div>
-      </DialogContent>
-    </Dialog>
+      </SheetContent>
+    </Sheet>
   );
 };
