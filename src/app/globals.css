@@ -43,37 +43,80 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --font-inter: var(--font-inter);
+  --font-geist: var(--font-geist-variable);
   --font-satoshi: var(--font-satoshi);
-  --font-geist: var(--font-geist);
 
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
-  --animate-glitch-after: glitch var(--after-duration) infinite linear alternate-reverse;
-  --animate-glitch-before: glitch var(--before-duration) infinite linear alternate-reverse;
+  --animate-glitch-after: glitch var(--after-duration) infinite linear
+    alternate-reverse;
+  --animate-glitch-before: glitch var(--before-duration) infinite linear
+    alternate-reverse;
 
   @keyframes glitch {
-    0%   { clip-path: inset(20% 0 50% 0); }
-    5%   { clip-path: inset(10% 0 60% 0); }
-    10%  { clip-path: inset(15% 0 55% 0); }
-    15%  { clip-path: inset(25% 0 35% 0); }
-    20%  { clip-path: inset(30% 0 40% 0); }
-    25%  { clip-path: inset(40% 0 20% 0); }
-    30%  { clip-path: inset(10% 0 60% 0); }
-    35%  { clip-path: inset(15% 0 55% 0); }
-    40%  { clip-path: inset(25% 0 35% 0); }
-    45%  { clip-path: inset(30% 0 40% 0); }
-    50%  { clip-path: inset(20% 0 50% 0); }
-    55%  { clip-path: inset(10% 0 60% 0); }
-    60%  { clip-path: inset(15% 0 55% 0); }
-    65%  { clip-path: inset(25% 0 35% 0); }
-    70%  { clip-path: inset(30% 0 40% 0); }
-    75%  { clip-path: inset(40% 0 20% 0); }
-    80%  { clip-path: inset(20% 0 50% 0); }
-    85%  { clip-path: inset(10% 0 60% 0); }
-    90%  { clip-path: inset(15% 0 55% 0); }
-    95%  { clip-path: inset(25% 0 35% 0); }
-    100% { clip-path: inset(30% 0 40% 0); }
+    0% {
+      clip-path: inset(20% 0 50% 0);
+    }
+    5% {
+      clip-path: inset(10% 0 60% 0);
+    }
+    10% {
+      clip-path: inset(15% 0 55% 0);
+    }
+    15% {
+      clip-path: inset(25% 0 35% 0);
+    }
+    20% {
+      clip-path: inset(30% 0 40% 0);
+    }
+    25% {
+      clip-path: inset(40% 0 20% 0);
+    }
+    30% {
+      clip-path: inset(10% 0 60% 0);
+    }
+    35% {
+      clip-path: inset(15% 0 55% 0);
+    }
+    40% {
+      clip-path: inset(25% 0 35% 0);
+    }
+    45% {
+      clip-path: inset(30% 0 40% 0);
+    }
+    50% {
+      clip-path: inset(20% 0 50% 0);
+    }
+    55% {
+      clip-path: inset(10% 0 60% 0);
+    }
+    60% {
+      clip-path: inset(15% 0 55% 0);
+    }
+    65% {
+      clip-path: inset(25% 0 35% 0);
+    }
+    70% {
+      clip-path: inset(30% 0 40% 0);
+    }
+    75% {
+      clip-path: inset(40% 0 20% 0);
+    }
+    80% {
+      clip-path: inset(20% 0 50% 0);
+    }
+    85% {
+      clip-path: inset(10% 0 60% 0);
+    }
+    90% {
+      clip-path: inset(15% 0 55% 0);
+    }
+    95% {
+      clip-path: inset(25% 0 35% 0);
+    }
+    100% {
+      clip-path: inset(30% 0 40% 0);
+    }
   }
   @keyframes marquee {
     from {
@@ -91,11 +134,12 @@
       transform: translateY(calc(-100% - var(--gap)));
     }
   }
-  --font-sans: var(--font-sans);
+  --font-general-sans: "General Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-geist-variable);
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-general-sans);
 }
 
 :root {
@@ -172,10 +216,18 @@
     @apply border-border outline-ring/50;
   }
   html {
-    @apply scroll-smooth font-sans;
+    @apply scroll-smooth;
   }
   body {
-    @apply font-inter bg-background text-foreground;
+    @apply font-sans bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    --font-weight-normal: 500;
+    --font-weight-medium: 525;
+    --font-weight-semibold: 535;
   }
 }
 
@@ -184,7 +236,7 @@
   @apply hidden max-w-60 rounded-lg md:block group-data-[state=collapsed]:hidden border border-muted-foreground/10 w-fit bg-muted p-4 text-center;
 }
 #carbonads .carbon-wrap img {
-  @apply flex-col w-fit max-w-25  border-none rounded-lg mx-auto mb-4;
+  @apply flex-col w-fit max-w-25 border-none rounded-lg mx-auto mb-4;
 }
 #carbonads .carbon-text {
   @apply basis-auto text-center text-xs font-medium leading-tight inline-block;

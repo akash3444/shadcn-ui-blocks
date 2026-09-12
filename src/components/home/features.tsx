@@ -16,7 +16,7 @@ export const Features = () => {
     <>
       <section className="px-6 py-20">
         <div className="mx-auto max-w-(--breakpoint-lg)">
-          <h2 className="max-w-[35ch] text-balance font-medium text-[2.5rem]/tight tracking-tight">
+          <h2 className="max-w-[35ch] text-balance font-heading font-semibold text-[2.5rem]/tight tracking-[-0.02em]">
             Built for developers who ship
           </h2>
           <p className="mt-2 max-w-[48ch] text-pretty text-base text-foreground/65 sm:text-lg">
@@ -29,7 +29,7 @@ export const Features = () => {
               <DashedTopFadeGrid />
               <div className="isolate">
                 <Shapes className="size-6 text-primary" />
-                <h3 className="mt-4 font-semibold text-xl tracking-tight">
+                <h3 className="mt-4 font-heading font-semibold text-xl">
                   200+ Production-Ready Blocks
                 </h3>
                 <p className="mt-2 max-w-[44ch] text-pretty text-foreground/65 text-sm">
@@ -38,10 +38,7 @@ export const Features = () => {
                   production quality.
                 </p>
                 <Link
-                  className={cn(
-                    buttonVariants({ size: "sm" }),
-                    "mt-6"
-                  )}
+                  className={cn(buttonVariants({ size: "sm" }), "mt-6")}
                   href="/blocks"
                 >
                   Browse Blocks <ArrowRightIcon />
@@ -54,7 +51,7 @@ export const Features = () => {
               <DashedTopFadeGrid />
               <div className="isolate">
                 <Moon className="size-6 text-primary" />
-                <h3 className="mt-4 font-semibold text-lg tracking-tight">
+                <h3 className="mt-4 font-heading font-semibold text-lg">
                   Dark Mode Ready
                 </h3>
                 <p className="mt-2 text-pretty text-foreground/65 text-sm">
@@ -69,7 +66,7 @@ export const Features = () => {
               <DashedTopFadeGrid />
               <div className="isolate">
                 <Copy className="size-6 text-primary" />
-                <h3 className="mt-4 font-semibold text-lg tracking-tight">
+                <h3 className="mt-4 font-heading font-semibold text-lg">
                   One-Click Copy
                 </h3>
                 <p className="mt-2 text-pretty text-foreground/65 text-sm">
@@ -83,7 +80,7 @@ export const Features = () => {
               <DashedTopFadeGrid />
               <div className="isolate">
                 <PuzzleIcon className="size-6 text-primary" />
-                <h3 className="mt-4 font-semibold text-lg tracking-tight">
+                <h3 className="mt-4 font-heading font-semibold text-lg">
                   25+ Component Variants
                 </h3>
                 <p className="mt-2 text-pretty text-foreground/65 text-sm">
@@ -97,7 +94,7 @@ export const Features = () => {
             <div className="relative overflow-hidden rounded-xl border border-border/70 bg-primary/5 p-6">
               <div className="isolate">
                 <Gift className="size-6 text-primary" />
-                <h3 className="mt-4 font-semibold text-lg tracking-tight">
+                <h3 className="mt-4 font-heading font-semibold text-lg">
                   Free Forever
                 </h3>
                 <p className="mt-2 text-pretty text-foreground/65 text-sm">

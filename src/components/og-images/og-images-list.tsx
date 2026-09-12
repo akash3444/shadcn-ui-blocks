@@ -60,11 +60,13 @@ export function OgImagesList({ ogImages }: OgImagesListProps) {
           <Tabs className="gap-0 border-b" defaultValue="preview">
             <div className="flex items-center justify-between border-b bg-muted/35 px-4 py-2.5 dark:bg-white/15">
               <div className="flex items-center gap-4">
-                <h2 className="flex items-center gap-1 font-medium">
+                <h2 className="flex items-center gap-1">
                   <span className="mt-0.5 font-mono text-muted-foreground text-sm">
                     {(index + 1).toString().padStart(2, "0")}.
                   </span>{" "}
-                  <span>{ogImage.description}</span>
+                  <span className="font-heading font-semibold tracking-[0.02em]">
+                    {ogImage.description}
+                  </span>
                 </h2>
                 {!!ogImage.categories?.length && (
                   <div className="flex items-center gap-1.5">
