@@ -5,9 +5,9 @@ import { Separator } from "@/components/ui/separator";
 import { config } from "@/config";
 import { components } from "@/description/app-sidebar";
 import { capitalize, cn } from "@/lib/utils";
-import { FooterLicense } from "./footer-license";
 import { Logo } from "../logo";
 import { GithubLogo, TwitterLogo } from "../ui/icons";
+import { FooterLicense } from "./footer-license";
 
 const footerSections = [
   {
@@ -70,7 +70,7 @@ const Footer = ({ className, ...props }: ComponentProps<"footer">) => {
             {/* Logo */}
             <Link className="flex items-center gap-2.5" href="/">
               <Logo />
-              <span className="font-semibold text-lg tracking-tight">
+              <span className="font-heading font-semibold text-lg">
                 Shadcn UI Blocks
               </span>
             </Link>
@@ -84,7 +84,9 @@ const Footer = ({ className, ...props }: ComponentProps<"footer">) => {
 
           {footerSections.map(({ title, links, className }, index) => (
             <div className={className} key={index}>
-              <h6 className="font-semibold">{title}</h6>
+              <h6 className="font-heading font-semibold tracking-[0.005em]">
+                {title}
+              </h6>
               <ul className="mt-6 space-y-4">
                 {links.map(({ title, href }) => (
                   <li key={title}>

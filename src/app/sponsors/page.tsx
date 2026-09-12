@@ -29,7 +29,7 @@ export default async function SponsorsPage() {
 
         <div className="mx-auto max-w-(--breakpoint-xl) px-6 pt-16 pb-20 xl:px-0">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="font-semibold text-4xl tracking-tight md:text-5xl">
+            <h1 className="font-heading font-semibold text-4xl tracking-[-0.025em] md:text-5xl">
               Sponsors
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">

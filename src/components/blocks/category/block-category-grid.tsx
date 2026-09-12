@@ -664,7 +664,7 @@ const CategoryCard = ({
       </div>
 
       <div className="flex items-center justify-between border-t px-4 py-3">
-        <span className="font-medium text-sm">{title}</span>
+        <span className="font-heading font-medium text-sm">{title}</span>
         <Badge
           className="shrink-0 text-muted-foreground text-xs tabular-nums"
           variant="secondary"
@@ -681,7 +681,7 @@ const CategoryCard = ({
 const BlockCategoryGrid = () => (
   <div className="px-6">
     <div className="mb-6">
-      <h1 className="font-semibold text-2xl tracking-tight">
+      <h1 className="font-heading font-semibold text-2xl tracking-[-0.02em]">
         Browse by Category
       </h1>
       <p className="mt-1 text-muted-foreground text-sm">

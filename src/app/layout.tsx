@@ -10,23 +10,10 @@ import { CarbonAdTracker } from "@/components/carbon-ad-tracker";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { PackageManagerProvider } from "@/providers/package-manager-provider";
-import { PrimitiveProvider } from "@/providers/primitive-provider";
 import { CSPostHogProvider } from "@/providers/posthog-provider";
-
-const inter = localFont({
-  src: [
-    { path: "./fonts/InterVariable.woff2", weight: "100 900", style: "normal" },
-    {
-      path: "./fonts/InterVariable-Italic.woff2",
-      weight: "100 900",
-      style: "italic",
-    },
-  ],
-  variable: "--font-inter",
-});
+import { PrimitiveProvider } from "@/providers/primitive-provider";
 
 const geist = Geist({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
   variable: "--font-geist",
 });
@@ -124,6 +111,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link
+          crossOrigin="anonymous"
+          href="https://cdn.fontshare.com"
+          rel="preconnect"
+        />
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=general-sans@1&display=swap"
+          rel="stylesheet"
+        />
         <script
           data-domain="www.shadcnui-blocks.com"
           data-website-id="67bf0ef528e2eaab259e0c50"
@@ -134,11 +130,10 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          inter.variable,
           geist.variable,
           geistMono.variable,
           satoshi.variable,
-          "antialiased"
+          "font-normal font-sans antialiased"
         )}
       >
         <script

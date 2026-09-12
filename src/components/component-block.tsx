@@ -58,7 +58,9 @@ const ComponentBlock: FC<BlockProps> = async ({
           <span className="font-mono text-muted-foreground text-sm">
             {(index + 1).toString().padStart(2, "0")}.
           </span>
-          <span className="font-medium text-sm">{title}</span>
+          <span className="font-heading font-semibold text-sm tracking-[0.015em]">
+            {title}
+          </span>
           {credit && (
             <a
               className="text-muted-foreground text-xs hover:text-foreground hover:underline"

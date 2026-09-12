@@ -21,7 +21,7 @@ const TemplateCard = ({ template }: { template: Template }) => {
         />
       </div>
       <div className="border-t p-4 pb-6">
-        <h3 className="font-semibold text-xl">{template.name}</h3>
+        <h3 className="font-heading font-semibold text-xl">{template.name}</h3>
         <p className="mt-2 text-muted-foreground">{template.description}</p>
         <div className="mt-4">
           <GithubStarsAndForks repo={template.repo} />

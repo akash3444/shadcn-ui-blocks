@@ -47,7 +47,7 @@ export default function TemplatesPage() {
               <ShadcnLogo className="h-5 w-5" />
             </div>
           </div>
-          <h1 className="text-balance font-satoshi font-semibold text-[2.5rem] leading-[1.2]! tracking-[-0.035em] sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="text-balance font-heading font-semibold text-[2.5rem] leading-[1.22]! tracking-[-0.015em] sm:text-5xl md:text-6xl">
             <span className="text-blue-500">Beautifully Designed</span> Shadcn
             UI Templates
           </h1>
@@ -75,7 +75,7 @@ export default function TemplatesPage() {
 
             return (
               <div key={category.slug}>
-                <h2 className="mb-5 font-satoshi font-semibold text-3xl tracking-tight sm:text-4xl">
+                <h2 className="mb-5 font-heading font-semibold text-3xl tracking-[-0.02em] sm:text-4xl">
                   {category.name} Templates
                 </h2>
                 {templates?.length ? (

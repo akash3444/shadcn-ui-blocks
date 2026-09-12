@@ -10,10 +10,10 @@ import { BackgroundPattern } from "./background-pattern";
 export const Hero = () => {
   return (
     <div className="relative flex min-h-dvh flex-col items-center justify-center px-6 pt-14 text-center">
-      <p className="font-mono text-foreground/45 text-sm uppercase tracking-[0.2em]">
+      <p className="font-heading font-medium text-foreground/45 text-sm uppercase tracking-[0.1em]">
         shadcn/ui blocks & components
       </p>
-      <h1 className="relative z-10 mx-auto mt-8 max-w-[22ch] text-balance font-medium text-5xl tracking-tight md:text-6xl lg:text-7xl/[1.2]">
+      <h1 className="relative z-10 mx-auto mt-8 max-w-[22ch] text-balance font-heading font-semibold text-5xl tracking-[-0.015em] md:text-6xl/[1.2]">
         Build Beautiful Interfaces Faster Than Ever
       </h1>
       <p className="mx-auto mt-8 max-w-[44ch] text-pretty text-base text-foreground/65 sm:text-lg">
@@ -48,21 +48,21 @@ export const Hero = () => {
       {/* Stats row */}
       <div className="relative z-10 mt-16 flex items-center gap-8">
         <div>
-          <div className="font-semibold text-3xl tabular-nums tracking-tight">
+          <div className="font-heading font-semibold text-3xl tabular-nums tracking-tight">
             200+
           </div>
           <div className="mt-1 text-foreground/50 text-sm">Blocks</div>
         </div>
         <div className="h-8 w-px bg-border" />
         <div>
-          <div className="font-semibold text-3xl tabular-nums tracking-tight">
+          <div className="font-heading font-semibold text-3xl tabular-nums tracking-tight">
             100%
           </div>
           <div className="mt-1 text-foreground/50 text-sm">Free</div>
         </div>
         <div className="h-8 w-px bg-border" />
         <div>
-          <div className="font-semibold text-3xl tabular-nums tracking-tight">
+          <div className="font-heading font-semibold text-3xl tabular-nums tracking-tight">
             25+
           </div>
           <div className="mt-1 text-foreground/50 text-sm">Components</div>
