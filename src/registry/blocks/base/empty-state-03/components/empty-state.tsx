@@ -45,7 +45,7 @@ export default function EmptyState() {
                 <EmptyMedia variant="icon">
                   <Receipt />
                 </EmptyMedia>
-                <EmptyTitle>No Invoices Yet</EmptyTitle>
+                <EmptyTitle className="font-heading">No Invoices Yet</EmptyTitle>
                 <EmptyDescription>
                   You haven&apos;t created any invoices yet. Get started by
                   creating your first invoice.
@@ -70,7 +70,7 @@ export default function EmptyState() {
                 <EmptyMedia variant="icon">
                   <BadgeDollarSign />
                 </EmptyMedia>
-                <EmptyTitle>No Payments Yet</EmptyTitle>
+                <EmptyTitle className="font-heading">No Payments Yet</EmptyTitle>
                 <EmptyDescription>
                   You haven&apos;t received any payments yet. Payments will
                   appear here once your invoices are paid.
@@ -92,7 +92,7 @@ export default function EmptyState() {
                 <EmptyMedia variant="icon">
                   <CreditCard />
                 </EmptyMedia>
-                <EmptyTitle>No Subscriptions Yet</EmptyTitle>
+                <EmptyTitle className="font-heading">No Subscriptions Yet</EmptyTitle>
                 <EmptyDescription>
                   You don&apos;t have any active subscriptions. Create recurring
                   billing plans for your customers.

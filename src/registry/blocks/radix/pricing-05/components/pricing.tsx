@@ -54,7 +54,7 @@ const plans = [
 const Pricing = () => {
   return (
     <div className="px-6 py-20">
-      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
+      <h2 className="text-center font-heading font-medium text-4xl tracking-[-0.02em] sm:text-[2.75rem]">
         Our Plans
       </h2>
       <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] md:text-2xl">
@@ -77,8 +77,8 @@ const Pricing = () => {
                 Most Popular
               </Badge>
             )}
-            <h3 className="font-medium text-lg">{plan.name}</h3>
-            <p className="mt-4 font-satoshi font-semibold text-4xl">
+            <h3 className="font-heading font-medium text-lg">{plan.name}</h3>
+            <p className="mt-4 font-heading font-semibold text-4xl">
               ${plan.price}
             </p>
             <p className="mt-4 text-muted-foreground">{plan.description}</p>

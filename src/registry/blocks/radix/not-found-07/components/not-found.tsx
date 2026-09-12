@@ -15,7 +15,7 @@ export default function NotFound() {
           404
         </GlitchText>
       </div>
-      <h1 className="mt-2 font-semibold text-2xl tracking-tight">
+      <h1 className="mt-2 font-heading font-semibold text-2xl tracking-[-0.015em]">
         You found the void
       </h1>
       <p className="mt-3 max-w-sm text-muted-foreground">

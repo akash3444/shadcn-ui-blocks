@@ -40,11 +40,11 @@ export default function Profile() {
             <AvatarFallback className="font-medium text-2xl">CN</AvatarFallback>
           </Avatar>
         </div>
-        <span className="font-medium text-2xl tracking-tight">John Doe</span>
+        <span className="font-heading font-medium text-2xl tracking-[-0.015em]">John Doe</span>
         <span className="mt-1 text-muted-foreground">john.doe@example.com</span>
 
         <div className="mt-8">
-          <h2 className="font-medium text-lg">About</h2>
+          <h2 className="font-heading font-medium text-lg">About</h2>
           <p className="mt-1 text-muted-foreground">
             I&apos;m a passionate software developer with over 5 years of
             experience building web applications. I love working with modern

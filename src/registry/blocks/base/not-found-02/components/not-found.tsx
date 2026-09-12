@@ -13,10 +13,10 @@ const suggestions = [
 export default function NotFound() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-6">
-      <p className="select-none font-satoshi font-semibold text-[8rem] text-muted-foreground/50 leading-none tracking-tight">
+      <p className="select-none font-heading font-semibold text-[8rem] text-muted-foreground/50 leading-none tracking-[-0.015em]">
         404
       </p>
-      <h1 className="mt-2 font-medium text-3xl tracking-tight">
+      <h1 className="mt-2 font-heading font-medium text-3xl tracking-[-0.015em]">
         Page not found
       </h1>
       <p className="mt-3 max-w-sm text-pretty text-center text-muted-foreground">

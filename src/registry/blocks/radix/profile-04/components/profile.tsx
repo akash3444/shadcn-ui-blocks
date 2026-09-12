@@ -39,7 +39,7 @@ export default function Profile() {
             </Avatar>
           </div>
           <div className="flex flex-col gap-0.5 sm:gap-1">
-            <span className="font-medium text-lg tracking-tight sm:text-2xl">
+            <span className="font-heading font-medium text-lg tracking-[-0.015em] sm:text-2xl">
               John Doe
             </span>
             <span className="text-muted-foreground sm:text-lg">
@@ -118,7 +118,7 @@ export default function Profile() {
         <div className="space-y-8 py-8">
           <div>
             <div className="-ms-px flex items-center justify-between gap-2.5 border border-b-0 border-dashed bg-muted/50 px-4 py-3">
-              <h2 className="flex items-center gap-2.5 font-medium text-lg">
+              <h2 className="flex items-center gap-2.5 font-heading font-medium text-lg">
                 <UserIcon className="size-5 fill-foreground/8" />
                 Personal Information
               </h2>
@@ -137,7 +137,7 @@ export default function Profile() {
 
           <div>
             <div className="-ms-px flex items-center justify-between gap-2.5 border border-b-0 border-dashed bg-muted/50 px-4 py-3">
-              <h2 className="flex items-center gap-2.5 font-medium text-lg">
+              <h2 className="flex items-center gap-2.5 font-heading font-medium text-lg">
                 <MapPinIcon className="size-5 fill-foreground/8" />
                 Location
               </h2>
@@ -156,7 +156,7 @@ export default function Profile() {
 
           <div>
             <div className="-ms-px flex items-center justify-between gap-2.5 border border-b-0 border-dashed bg-muted/50 px-4 py-3">
-              <h2 className="flex items-center gap-2.5 font-medium text-lg">
+              <h2 className="flex items-center gap-2.5 font-heading font-medium text-lg">
                 <BriefcaseIcon className="size-5 fill-foreground/8" />
                 Professional Details
               </h2>
@@ -181,7 +181,7 @@ export default function Profile() {
 function UserInfo({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <h3 className="mb-1 font-medium text-muted-foreground text-sm">
+      <h3 className="mb-1 font-heading font-medium text-muted-foreground text-sm">
         {label}
       </h3>
       <p className="text-foreground">{value}</p>

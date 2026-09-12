@@ -4,7 +4,7 @@ import { Button } from "@/registry/bases/base/ui/button";
 const Features = () => {
   return (
     <div className="mx-auto w-full max-w-(--breakpoint-lg) px-6 py-20">
-      <h2 className="font-medium text-3xl leading-10 tracking-[-0.04em] sm:text-4xl md:text-[40px] md:leading-13">
+      <h2 className="font-heading font-medium text-3xl leading-10 tracking-[-0.02em] sm:text-4xl md:text-[40px] md:leading-13">
         Design and engage: <br />
         <span className="text-muted-foreground/80">
           Build smarter spaces and strategies

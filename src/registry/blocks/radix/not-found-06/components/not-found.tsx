@@ -43,7 +43,7 @@ export default function NotFound() {
       <div className="flex size-12 items-center justify-center rounded-2xl border bg-muted">
         <OctagonXIcon className="size-6 text-muted-foreground" />
       </div>
-      <h1 className="mt-6 font-medium text-[2rem] tracking-tight">
+      <h1 className="mt-6 font-heading font-medium text-[2rem] tracking-[-0.015em]">
         Page not found
       </h1>
       <p className="mt-2 max-w-sm text-muted-foreground">

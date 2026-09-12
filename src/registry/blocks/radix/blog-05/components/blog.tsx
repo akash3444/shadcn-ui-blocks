@@ -75,7 +75,7 @@ export default function Blog() {
       {/* Header */}
       <div className="flex items-end justify-between gap-4">
         <div>
-          <h2 className="text-balance font-medium text-2xl tracking-tight">
+          <h2 className="text-balance font-heading font-medium text-2xl tracking-[-0.015em]">
             Welcome to our blog!
           </h2>
           <p className="mt-0.5 text-pretty text-lg text-muted-foreground tracking-normal">
@@ -105,7 +105,7 @@ export default function Blog() {
                 src={post.image}
               />
               <div className="px-1 sm:px-0">
-                <h3 className="font-medium text-xl tracking-[-0.015em]">
+                <h3 className="font-heading font-medium text-xl tracking-[-0.015em]">
                   {post.title}
                 </h3>
                 <div className="mt-4 flex flex-wrap items-center gap-2">

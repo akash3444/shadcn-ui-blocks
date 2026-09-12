@@ -9,7 +9,7 @@ export default function NotFound() {
       <div className="flex size-12 items-center justify-center rounded-2xl border bg-muted">
         <SearchXIcon className="size-6 text-muted-foreground" />
       </div>
-      <h1 className="mt-6 font-medium text-4xl/none tracking-tight">
+      <h1 className="mt-6 font-heading font-medium text-4xl/none tracking-[-0.015em]">
         Page not found
       </h1>
       <p className="mt-4 max-w-sm text-pretty text-muted-foreground">

@@ -19,7 +19,7 @@ export default function Hero() {
             Just released v1.0.0 <ArrowUpRight className="ml-1 size-4" />
           </Link>
         </Badge>
-        <h1 className="mx-auto mt-6 max-w-xl font-medium text-4xl tracking-tighter sm:text-[2.75rem] md:text-6xl/[1.2]">
+        <h1 className="mx-auto mt-6 max-w-xl font-heading font-medium text-4xl tracking-[-0.02em] sm:text-[2.75rem] md:text-6xl/[1.2]">
           Ship better UI without&nbsp;the&nbsp;hassle
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-foreground/70 text-xl md:text-2xl/normal">

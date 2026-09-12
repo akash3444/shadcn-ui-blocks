@@ -5,7 +5,7 @@ import { Button } from "@/registry/bases/radix/ui/button";
 export default function Integrations() {
   return (
     <div className="mx-auto flex max-w-7xl flex-col px-6 py-12 sm:py-14">
-      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
+      <h2 className="text-center font-heading font-medium text-4xl tracking-[-0.02em] sm:text-[2.75rem]">
         Connect your tools
       </h2>
       <p className="mt-3 text-pretty text-center text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
@@ -24,7 +24,7 @@ export default function Integrations() {
                 src={`https://www.google.com/s2/favicons?domain=${encodeURIComponent(integration.url)}&sz=64`}
               />
             </div>
-            <h3 className="font-medium text-lg">{integration.title}</h3>
+            <h3 className="font-heading font-medium text-lg">{integration.title}</h3>
 
             {integration.status === "connected" ? (
               <Badge className="ms-auto h-7 min-w-26 rounded-lg bg-emerald-600/10 px-3 text-emerald-600 text-sm">

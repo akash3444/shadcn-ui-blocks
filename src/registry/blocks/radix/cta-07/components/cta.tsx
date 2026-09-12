@@ -8,7 +8,7 @@ const CTA = () => {
     <div className="px-0 py-16 sm:px-6">
       <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center justify-center rounded-3xl bg-foreground py-16 text-background dark:bg-foreground/7 dark:text-foreground">
         <Logo className="size-14" />
-        <h2 className="mt-10 font-medium text-5xl tracking-tighter">
+        <h2 className="mt-10 font-heading font-medium text-5xl tracking-[-0.02em]">
           Ready to Build Faster?
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-center text-muted-foreground text-xl/normal">

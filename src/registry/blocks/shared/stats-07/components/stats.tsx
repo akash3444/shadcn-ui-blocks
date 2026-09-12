@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 function Stats() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
-      <h2 className="text-balance text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
+      <h2 className="text-balance text-center font-heading font-medium text-4xl tracking-[-0.02em] md:text-[2.75rem]">
         Built with scale in mind
       </h2>
       <p className="mt-3.5 text-center text-muted-foreground text-xl tracking-[-0.015em] sm:text-lg md:text-2xl">
@@ -18,19 +18,19 @@ function Stats() {
           )}
         >
           <div className="bg-background p-10">
-            <span className="font-medium text-5xl">70%</span>
+            <span className="font-heading font-medium text-5xl">70%</span>
             <p className="mt-4 text-foreground/80 text-xl">
               Faster UI development
             </p>
           </div>
           <div className="bg-background p-10">
-            <span className="font-medium text-5xl">5x</span>
+            <span className="font-heading font-medium text-5xl">5x</span>
             <p className="mt-4 text-foreground/80 text-xl">
               Increase in productivity
             </p>
           </div>
           <div className="bg-background p-10 sm:col-span-2 md:col-span-1">
-            <span className="font-medium text-5xl">98%</span>
+            <span className="font-heading font-medium text-5xl">98%</span>
             <p className="mt-4 text-foreground/80 text-xl">
               Customer satisfaction
             </p>

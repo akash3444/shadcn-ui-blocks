@@ -77,7 +77,7 @@ const Footer = () => {
 
           {/* Subscribe Newsletter */}
           <div className="w-full max-w-xs">
-            <h6 className="font-medium">Stay up to date</h6>
+            <h6 className="font-heading font-medium">Stay up to date</h6>
             <form className="mt-6 flex items-center gap-2">
               <Input placeholder="Enter your email" type="email" />
               <Button>Subscribe</Button>

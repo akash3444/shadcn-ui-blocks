@@ -4,7 +4,7 @@ import { Button } from "@/registry/bases/base/ui/button";
 export default function Integrations() {
   return (
     <div className="mx-auto flex max-w-7xl flex-col px-6 py-20">
-      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
+      <h2 className="text-center font-heading font-medium text-4xl tracking-[-0.02em] sm:text-[2.75rem]">
         Our Integrations
       </h2>
       <p className="mt-3 text-pretty text-center text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
@@ -22,7 +22,7 @@ export default function Integrations() {
                 className="size-10 rounded"
                 src={`https://www.google.com/s2/favicons?domain=${encodeURIComponent(integration.url)}&sz=64`}
               />
-              <h3 className="mt-5 font-medium text-xl">{integration.title}</h3>
+              <h3 className="mt-5 font-heading font-medium text-xl">{integration.title}</h3>
               <p className="mt-1 text-pretty text-muted-foreground tracking-normal">
                 {integration.description}
               </p>

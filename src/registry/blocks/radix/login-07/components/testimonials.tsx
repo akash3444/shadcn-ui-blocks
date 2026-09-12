@@ -74,7 +74,7 @@ export const Testimonials = () => {
 
   return (
     <div className="dark isolate mx-auto my-auto flex h-full w-full max-w-7xl flex-col justify-center bg-black/70 px-10 py-12 sm:py-14">
-      <h2 className="text-balance text-center font-medium text-4xl text-foreground tracking-tight">
+      <h2 className="text-balance text-center font-heading font-medium text-4xl text-foreground tracking-[-0.015em]">
         Trusted by Thousands
       </h2>
       <p className="mt-2 text-balance text-center text-foreground/80 text-lg tracking-normal sm:mt-3 sm:text-2xl">
@@ -98,7 +98,7 @@ export const Testimonials = () => {
                   </span>
 
                   <div className="flex flex-col items-center gap-2 text-white">
-                    <p className="grow text-pretty text-center font-medium text-xl leading-relaxed tracking-normal sm:text-2xl sm:leading-[1.45]">
+                    <p className="grow text-pretty text-center font-heading font-medium text-xl leading-relaxed tracking-normal sm:text-2xl sm:leading-[1.45]">
                       {testimonial}
                     </p>
                     <div className="mt-6 flex items-center gap-2">

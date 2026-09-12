@@ -123,13 +123,13 @@ const PlanCard = ({
       )}
       <plan.icon className="mb-4 text-primary" />
       <div className="flex items-center gap-1">
-        <h3 className="font-medium text-2xl tracking-tight">{plan.name}</h3>
+        <h3 className="font-heading font-medium text-2xl tracking-[-0.015em]">{plan.name}</h3>
       </div>
       <p className="mt-2 min-h-[2lh] text-muted-foreground">
         {plan.description}
       </p>
-      <p className="mt-4 font-semibold text-4xl">
-        <NumberFlow className="font-satoshi" prefix="$" value={price} />
+      <p className="mt-4 font-heading font-semibold text-4xl">
+        <NumberFlow className="font-heading" prefix="$" value={price} />
         <span className="ms-0.5 font-normal text-lg text-muted-foreground tracking-tight">
           /month
         </span>

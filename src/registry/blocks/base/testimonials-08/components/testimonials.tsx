@@ -48,7 +48,7 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 sm:py-20">
-      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
+      <h2 className="text-center font-heading font-medium text-4xl tracking-[-0.02em] md:text-[2.75rem]">
         Testimonials
       </h2>
       <p className="mt-2.5 text-balance text-center text-lg text-muted-foreground tracking-[-0.015em] sm:text-2xl">
@@ -62,7 +62,7 @@ const Testimonials = () => {
             key={index}
           >
             {/* Quote */}
-            <span className="absolute top-2 left-4 font-satoshi text-8xl text-foreground/30">
+            <span className="absolute top-2 left-4 font-heading text-8xl text-foreground/30">
               &ldquo;
             </span>
 

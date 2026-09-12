@@ -8,7 +8,7 @@ export default function NotFound() {
         404
       </p>
       <div className="relative z-10">
-        <h1 className="font-medium text-4xl/none tracking-tight">
+        <h1 className="font-heading font-medium text-4xl/none tracking-[-0.015em]">
           Page not found
         </h1>
         <p className="mx-auto mt-5 max-w-sm text-lg text-muted-foreground">
