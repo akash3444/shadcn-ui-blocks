@@ -1,5 +1,6 @@
-export { cn } from "cn"
+import { config } from "@/config";
 
+export { cn } from "cn";
 
 export function capitalize(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);

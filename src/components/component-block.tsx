@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/tooltip";
 import { getFileContent } from "@/lib/file";
 import { cn } from "@/lib/utils";
+import { TooltipProvider as RegistryTooltipProvider } from "@/registry/ui/tooltip";
 import { CopyToClipboardButton } from "./copy-to-clipboard-button";
 import { CodeDialog } from "./customized/code-dialog";
 
@@ -99,7 +100,9 @@ const ComponentBlock: FC<BlockProps> = async ({
         </div>
       </div>
       <div className="flex min-h-32 w-full flex-1 items-center justify-center rounded px-4 py-5">
-        <DynamicComponent />
+        <RegistryTooltipProvider>
+          <DynamicComponent />
+        </RegistryTooltipProvider>
       </div>
     </div>
   );
