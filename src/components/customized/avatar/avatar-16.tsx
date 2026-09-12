@@ -1,3 +1,4 @@
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,8 +8,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/avatar";
+} from "@/registry/ui/dropdown-menu";
 
 export default function AvatarDropdownMenu() {
   return (

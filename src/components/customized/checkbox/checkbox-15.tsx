@@ -1,6 +1,6 @@
 import { Checkbox as CheckboxPrimitive } from "radix-ui";
-import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
+import { Label } from "@/registry/ui/label";
 
 const days = [
   { label: "M", value: "monday" },

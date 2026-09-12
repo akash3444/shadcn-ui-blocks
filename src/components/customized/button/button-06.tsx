@@ -1,5 +1,5 @@
-import { Spinner } from "@/components/ui/spinner";
 import { Button } from "@/registry/ui/button";
+import { Spinner } from "@/registry/ui/spinner";
 
 const LoadingButtonDemo = () => {
   return (

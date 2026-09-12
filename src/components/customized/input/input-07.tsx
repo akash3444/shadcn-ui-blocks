@@ -2,13 +2,13 @@
 
 import { EyeIcon, EyeOffIcon, LockIcon, MailIcon } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/registry/ui/button";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/components/ui/input-group";
-import { Button } from "@/registry/ui/button";
+} from "@/registry/ui/input-group";
 
 export default function InputWithAdornmentDemo() {
   const [showPassword, setShowPassword] = useState(false);

@@ -1,6 +1,6 @@
 import { Bell, MailIcon, MessageSquare } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/registry/ui/badge";
+import { Button } from "@/registry/ui/button";
 
 const BadgeDemo = () => {
   return (

@@ -1,8 +1,8 @@
 "use client";
 
-import { Label } from "@/components/ui/label";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Checkbox } from "@/registry/ui/checkbox";
+import { Label } from "@/registry/ui/label";
+import { ScrollArea } from "@/registry/ui/scroll-area";
 
 export default function Checkbox14() {
   return (
