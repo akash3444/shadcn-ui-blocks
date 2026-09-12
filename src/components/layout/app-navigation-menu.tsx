@@ -36,11 +36,6 @@ export function AppNavigationMenu() {
             <Link href="/opengraph-images">OG Images</Link>
           </Button>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Button asChild size="sm" variant="ghost">
-            <Link href="/sponsors">Sponsors</Link>
-          </Button>
-        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );
