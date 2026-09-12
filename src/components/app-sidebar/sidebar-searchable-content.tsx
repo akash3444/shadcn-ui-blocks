@@ -133,30 +133,30 @@ export function SidebarSearchableContent({
                   return (
                     <SidebarMenuItem key={item.title}>
                       <AppSidebarMenuButton
-                        asChild
                         className="gap-x-3"
+                        render={
+                          <Link
+                            data-sidebar-result
+                            href={item.url}
+                            onKeyDown={handleItemKeyDown}
+                          />
+                        }
                         tooltip={item.title}
                         url={item.url}
                       >
-                        <Link
-                          data-sidebar-result
-                          href={item.url}
-                          onKeyDown={handleItemKeyDown}
-                        >
-                          <item.icon className="shrink-0" />
-                          <span className="font-medium">{item.title}</span>
-                          {item.isNew ? (
-                            <Badge className="ml-auto rounded-full px-1.5 py-0 text-[10px] leading-4">
-                              New
-                            </Badge>
-                          ) : (
-                            !!fileCount && (
-                              <span className="ml-auto text-muted-foreground/60 text-xs tabular-nums">
-                                {fileCount}
-                              </span>
-                            )
-                          )}
-                        </Link>
+                        <item.icon className="shrink-0" />
+                        <span className="font-medium">{item.title}</span>
+                        {item.isNew ? (
+                          <Badge className="ml-auto rounded-full px-1.5 py-0 text-[10px] leading-4">
+                            New
+                          </Badge>
+                        ) : (
+                          !!fileCount && (
+                            <span className="ml-auto text-muted-foreground/60 text-xs tabular-nums">
+                              {fileCount}
+                            </span>
+                          )
+                        )}
                       </AppSidebarMenuButton>
                     </SidebarMenuItem>
                   );

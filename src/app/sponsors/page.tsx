@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { getGitHubSponsors } from "@/lib/github-sponsors";
 import { constructMetadata } from "@/lib/metadata";
@@ -36,15 +36,14 @@ export default async function SponsorsPage() {
               A huge thank you to everyone who supports Shadcn UI Blocks on
               GitHub Sponsors. Your generosity helps keep this project going.
             </p>
-            <Button asChild className="mt-6" size="lg">
-              <Link
-                href="https://github.com/sponsors/akash3444"
-                rel="noopener"
-                target="_blank"
-              >
-                <Heart className="size-4 fill-current" /> Sponsor me on GitHub
-              </Link>
-            </Button>
+            <Link
+              className={cn(buttonVariants({ size: "lg" }), "mt-6")}
+              href="https://github.com/sponsors/akash3444"
+              rel="noopener"
+              target="_blank"
+            >
+              <Heart className="size-4 fill-current" /> Sponsor me on GitHub
+            </Link>
           </div>
 
           <div className="my-24">

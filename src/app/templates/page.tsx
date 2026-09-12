@@ -1,12 +1,12 @@
-import TemplateCard from "@/components/templates/template-card";
-import { Button } from "@/components/ui/button";
-import { NextLogo, ShadcnLogo, TailwindLogo } from "@/components/ui/icons";
-import { categories, categorizedTemplates } from "@/description/templates";
-import { constructMetadata } from "@/lib/metadata";
-import { absoluteUrl } from "@/lib/utils";
 import { Layers } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import TemplateCard from "@/components/templates/template-card";
+import { buttonVariants } from "@/components/ui/button";
+import { NextLogo, ShadcnLogo, TailwindLogo } from "@/components/ui/icons";
+import { categories, categorizedTemplates } from "@/description/templates";
+import { constructMetadata } from "@/lib/metadata";
+import { absoluteUrl, cn } from "@/lib/utils";
 
 export const metadata: Metadata = constructMetadata({
   title: "Beautifully Designed Shadcn UI Templates",
@@ -47,19 +47,20 @@ export default function TemplatesPage() {
               <ShadcnLogo className="h-5 w-5" />
             </div>
           </div>
-          <h1 className="text-balance font-semibold font-satoshi text-[2.5rem] leading-[1.2]! tracking-[-0.035em] sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="text-balance font-satoshi font-semibold text-[2.5rem] leading-[1.2]! tracking-[-0.035em] sm:text-5xl md:text-6xl lg:text-7xl">
             <span className="text-blue-500">Beautifully Designed</span> Shadcn
             UI Templates
           </h1>
-          <p className="text-lg sm:text-2xl max-w-xl mx-auto text-foreground/90">
+          <p className="mx-auto max-w-xl text-foreground/90 text-lg sm:text-2xl">
             Discover a collection of premium Shadcn UI templates designed to
             make your project shine.
           </p>
-          <Button asChild className="mt-2 sm:mt-6 px-6! h-13 text-lg rounded-full" size="lg">
-            <Link href="#templates">
-              <Layers className="mr-2 h-5! w-5!" /> Browse Templates
-            </Link>
-          </Button>
+          <Link
+            className={cn(buttonVariants({ size: "lg" }), "mt-2 sm:mt-6")}
+            href="#templates"
+          >
+            <Layers /> Browse Templates
+          </Link>
         </div>
       </div>
 
@@ -74,7 +75,7 @@ export default function TemplatesPage() {
 
             return (
               <div key={category.slug}>
-                <h2 className="mb-5 font-semibold font-satoshi text-3xl tracking-tight sm:text-4xl">
+                <h2 className="mb-5 font-satoshi font-semibold text-3xl tracking-tight sm:text-4xl">
                   {category.name} Templates
                 </h2>
                 {templates?.length ? (

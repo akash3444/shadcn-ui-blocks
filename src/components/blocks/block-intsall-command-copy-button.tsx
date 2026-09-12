@@ -88,13 +88,17 @@ export const BlockInstallCommandCopyButton = ({ block }: { block: string }) => {
       {/* Segment 2: package manager selector */}
       <DropdownMenu>
         <Tooltip>
-          <TooltipTrigger asChild>
-            <DropdownMenuTrigger asChild>
-              <Button className="px-2.5" size="icon-sm" variant="outline">
-                <pm.logo className="size-4" />
-                <span className="sr-only">Select package manager</span>
-              </Button>
-            </DropdownMenuTrigger>
+          <TooltipTrigger
+            render={
+              <DropdownMenuTrigger
+                render={
+                  <Button className="px-2.5" size="icon-sm" variant="outline" />
+                }
+              />
+            }
+          >
+            <pm.logo className="size-4" />
+            <span className="sr-only">Select package manager</span>
           </TooltipTrigger>
           <TooltipContent>
             <p>Select Package manager</p>
@@ -120,13 +124,17 @@ export const BlockInstallCommandCopyButton = ({ block }: { block: string }) => {
       {/* Segment 3: primitive library selector */}
       <DropdownMenu>
         <Tooltip>
-          <TooltipTrigger asChild>
-            <DropdownMenuTrigger asChild>
-              <Button className="px-2.5" size="icon-sm" variant="outline">
-                <PrimitiveIcon className="size-3.5 text-foreground" />
-                <span className="sr-only">Select primitive library</span>
-              </Button>
-            </DropdownMenuTrigger>
+          <TooltipTrigger
+            render={
+              <DropdownMenuTrigger
+                render={
+                  <Button className="px-2.5" size="icon-sm" variant="outline" />
+                }
+              />
+            }
+          >
+            <PrimitiveIcon className="size-3.5 text-foreground" />
+            <span className="sr-only">Select primitive library</span>
           </TooltipTrigger>
           <TooltipContent>
             <p>Select Primitive library</p>

@@ -1,7 +1,7 @@
 import { Eye } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import type { Template } from "@/description/templates";
 import { GithubLogo } from "../ui/icons";
 import GithubStarsAndForks from "./github-stars-and-forks";
@@ -29,19 +29,20 @@ const TemplateCard = ({ template }: { template: Template }) => {
 
         <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <Button asChild>
-              <Link href={template.url} target="_blank">
-                Live Preview <Eye />
-              </Link>
-            </Button>
-            <Button asChild>
-              <Link
-                href={`https://github.com/${template.repo}`}
-                target="_blank"
-              >
-                Github <GithubLogo />
-              </Link>
-            </Button>
+            <Link
+              className={buttonVariants()}
+              href={template.url}
+              target="_blank"
+            >
+              Live Preview <Eye />
+            </Link>
+            <Link
+              className={buttonVariants()}
+              href={`https://github.com/${template.repo}`}
+              target="_blank"
+            >
+              Github <GithubLogo />
+            </Link>
           </div>
         </div>
       </div>

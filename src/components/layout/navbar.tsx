@@ -1,6 +1,6 @@
 import { Heart } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "../app-sidebar/theme-toggle";
 import { GithubStarButton } from "../github-star-button";
@@ -31,15 +31,14 @@ export const Navbar = ({ className }: { className?: string }) => {
         </div>
 
         <div className="flex items-center gap-2">
-          <Button asChild className="relative" size="sm">
-            <Link
-              href="https://github.com/sponsors/akash3444"
-              rel="noopener"
-              target="_blank"
-            >
-              <Heart className="size-3.5 fill-current" /> Sponsor Me
-            </Link>
-          </Button>
+          <Link
+            className={cn(buttonVariants({ size: "sm" }), "relative")}
+            href="https://github.com/sponsors/akash3444"
+            rel="noopener"
+            target="_blank"
+          >
+            <Heart className="size-3.5 fill-current" /> Sponsor Me
+          </Link>
           <GithubStarButton size="icon-sm" />
           <ThemeToggle size="icon-sm" />
           <div className="block md:hidden">

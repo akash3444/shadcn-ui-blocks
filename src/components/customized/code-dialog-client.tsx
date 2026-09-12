@@ -1,7 +1,6 @@
 "use client";
 
 import { Code } from "lucide-react";
-import { VisuallyHidden as VisuallyHiddenPrimitive } from "radix-ui";
 import { CopyButton } from "@/components/copy-button";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -63,29 +62,31 @@ export const CodeDialogClient = ({
   return (
     <Sheet onOpenChange={handleOpenChange}>
       <Tooltip>
-        <TooltipTrigger asChild>
-          <SheetTrigger asChild>
-            <Button
-              className="h-8 w-8 text-muted-foreground transition-colors hover:text-foreground"
-              size="icon"
-              variant="ghost"
-            >
-              <Code className="size-4" />
-            </Button>
-          </SheetTrigger>
+        <TooltipTrigger
+          render={
+            <SheetTrigger
+              render={
+                <Button
+                  className="size-8 text-muted-foreground transition-colors hover:text-foreground"
+                  size="icon"
+                  variant="ghost"
+                />
+              }
+            />
+          }
+        >
+          <Code className="size-4" />
         </TooltipTrigger>
         <TooltipContent side="bottom">View code</TooltipContent>
       </Tooltip>
 
       <SheetContent
-        className="w-full gap-0 overflow-hidden border bg-card p-0 sm:max-w-2xl"
+        className="w-full gap-0 overflow-hidden border bg-card p-0 data-[side=right]:sm:max-w-xl"
         side="right"
       >
-        <VisuallyHiddenPrimitive.VisuallyHidden>
-          <SheetTitle>View component code</SheetTitle>
-        </VisuallyHiddenPrimitive.VisuallyHidden>
+        <SheetTitle className="sr-only">View component code</SheetTitle>
         {registryItem && (
-          <div className="border-b bg-muted/30 ps-6 pe-4 py-5">
+          <div className="border-b bg-muted/30 py-5 ps-6 pe-4">
             <h2 className="mb-3 font-semibold text-base">
               Installation Command
             </h2>
@@ -105,10 +106,8 @@ export const CodeDialogClient = ({
             <CopyButton content={code} onCopy={handleCodeCopy} />
           </div>
 
-          <ScrollArea className="min-h-0 flex-1" type="auto">
-            <ScrollArea className="grid" orientation="horizontal" type="auto">
-              <CodeHtml html={codeHtml} />
-            </ScrollArea>
+          <ScrollArea className="min-h-0 flex-1">
+            <CodeHtml html={codeHtml} />
           </ScrollArea>
         </div>
       </SheetContent>

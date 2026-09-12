@@ -1,13 +1,14 @@
 import {
+  ArrowRightIcon,
   Copy,
   Gift,
   Moon,
-  MoveRightIcon,
   PuzzleIcon,
   Shapes,
 } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { FAQ } from "./faq";
 
 export const Features = () => {
@@ -36,11 +37,15 @@ export const Features = () => {
                   footers — every section type you need, designed and coded to
                   production quality.
                 </p>
-                <Button asChild className="mt-6 rounded-full" size="sm">
-                  <Link href="/blocks">
-                    Browse Blocks <MoveRightIcon className="size-4" />
-                  </Link>
-                </Button>
+                <Link
+                  className={cn(
+                    buttonVariants({ size: "sm" }),
+                    "mt-6"
+                  )}
+                  href="/blocks"
+                >
+                  Browse Blocks <ArrowRightIcon />
+                </Link>
               </div>
             </div>
 

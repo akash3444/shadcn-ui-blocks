@@ -3,7 +3,7 @@
 import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -17,24 +17,36 @@ export function AppNavigationMenu() {
     <NavigationMenu>
       <NavigationMenuList className="space-x-0">
         <NavigationMenuItem>
-          <Button asChild size="sm" variant="ghost">
-            <Link href="/blocks">Blocks</Link>
-          </Button>
+          <NavigationMenuLink
+            className={buttonVariants({ size: "sm", variant: "ghost" })}
+            render={<Link href="/blocks" />}
+          >
+            Blocks
+          </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Button asChild size="sm" variant="ghost">
-            <Link href="/components/accordion">Components</Link>
-          </Button>
+          <NavigationMenuLink
+            className={buttonVariants({ size: "sm", variant: "ghost" })}
+            render={<Link href="/components/accordion" />}
+          >
+            Components
+          </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Button asChild size="sm" variant="ghost">
-            <Link href="/templates">Templates</Link>
-          </Button>
+          <NavigationMenuLink
+            className={buttonVariants({ size: "sm", variant: "ghost" })}
+            render={<Link href="/templates" />}
+          >
+            Templates
+          </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Button asChild size="sm" variant="ghost">
-            <Link href="/opengraph-images">OG Images</Link>
-          </Button>
+          <NavigationMenuLink
+            className={buttonVariants({ size: "sm", variant: "ghost" })}
+            render={<Link href="/opengraph-images" />}
+          >
+            OG Images
+          </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
@@ -47,25 +59,22 @@ const ListItem = React.forwardRef<
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>
-      <NavigationMenuLink asChild>
-        <Link
-          className={cn(
-            "block select-none rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          ref={ref}
-          {...props}
-        >
-          {props.icon && <props.icon className="mb-3 h-5 w-5" />}
-          {title && (
-            <div className="font-medium text-sm leading-none">{title}</div>
-          )}
-          {children && (
-            <div className="mt-2 line-clamp-2 text-muted-foreground text-sm leading-snug">
-              {children}
-            </div>
-          )}
-        </Link>
+      <NavigationMenuLink
+        className={cn(
+          "block select-none rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+          className
+        )}
+        render={<Link ref={ref} {...props} />}
+      >
+        {props.icon && <props.icon className="mb-3 h-5 w-5" />}
+        {title && (
+          <div className="font-medium text-sm leading-none">{title}</div>
+        )}
+        {children && (
+          <div className="mt-2 line-clamp-2 text-muted-foreground text-sm leading-snug">
+            {children}
+          </div>
+        )}
       </NavigationMenuLink>
     </li>
   );

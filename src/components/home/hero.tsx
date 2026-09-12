@@ -2,8 +2,9 @@
 
 import { ArrowRight, Shapes } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { capture } from "@/lib/analytics";
+import { cn } from "@/lib/utils";
 import { BackgroundPattern } from "./background-pattern";
 
 export const Hero = () => {
@@ -20,33 +21,29 @@ export const Hero = () => {
         Preview, copy, and ship — no setup required.
       </p>
       <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row">
-        <Button asChild className="group gap-3 rounded-full" size="lg">
-          <Link
-            href="/blocks"
-            onClick={() =>
-              capture("marketing:hero_cta_click", { cta: "explore_blocks" })
-            }
-          >
-            Explore Blocks{" "}
-            <Shapes className="transition-transform group-hover:-rotate-12" />
-          </Link>
-        </Button>
-        <Button
-          asChild
-          className="group gap-2 rounded-full"
-          size="lg"
-          variant="ghost"
+        <Link
+          className={cn(buttonVariants({ size: "lg" }), "group")}
+          href="/blocks"
+          onClick={() =>
+            capture("marketing:hero_cta_click", { cta: "explore_blocks" })
+          }
         >
-          <Link
-            href="/components/accordion"
-            onClick={() =>
-              capture("marketing:hero_cta_click", { cta: "view_components" })
-            }
-          >
-            View Components{" "}
-            <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </Button>
+          Explore Blocks{" "}
+          <Shapes className="transition-transform group-hover:-rotate-12" />
+        </Link>
+        <Link
+          className={cn(
+            buttonVariants({ size: "lg", variant: "ghost" }),
+            "group"
+          )}
+          href="/components/accordion"
+          onClick={() =>
+            capture("marketing:hero_cta_click", { cta: "view_components" })
+          }
+        >
+          View Components{" "}
+          <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+        </Link>
       </div>
       {/* Stats row */}
       <div className="relative z-10 mt-16 flex items-center gap-8">

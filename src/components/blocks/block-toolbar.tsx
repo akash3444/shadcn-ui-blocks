@@ -3,13 +3,12 @@
 import { FullscreenIcon, Moon, Paintbrush, Sun } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
 } from "@/components/ui/select";
 import {
   Tooltip,
@@ -42,12 +41,20 @@ const BlockToolbar = () => {
       <ColorThemePicker />
       <ThemeToggleButton />
       <Tooltip>
-        <TooltipTrigger>
-          <Button asChild size="icon-sm" variant="outline">
-            <Link href={iframeSrc} onClick={handleFullscreen} target="_blank">
-              <FullscreenIcon />
-            </Link>
-          </Button>
+        <TooltipTrigger
+          render={
+            <Link
+              className={buttonVariants({
+                size: "icon-sm",
+                variant: "outline",
+              })}
+              href={iframeSrc}
+              onClick={handleFullscreen}
+              target="_blank"
+            />
+          }
+        >
+          <FullscreenIcon />
         </TooltipTrigger>
         <TooltipContent>
           <p>Open preview in new tab</p>
@@ -57,15 +64,17 @@ const BlockToolbar = () => {
       <div className="hidden h-8 items-center gap-1 rounded-md border bg-background p-1 shadow-xs md:flex dark:bg-input/30">
         {blockScreens.map(({ name, icon: Icon }) => (
           <Tooltip key={name}>
-            <TooltipTrigger asChild>
-              <Button
-                className="h-6 w-6"
-                key={name}
-                onClick={() => handleScreenSize(name)}
-                variant={name === screenSize ? "secondary" : "ghost"}
-              >
-                <Icon />
-              </Button>
+            <TooltipTrigger
+              render={
+                <Button
+                  className="size-6"
+                  key={name}
+                  onClick={() => handleScreenSize(name)}
+                  variant={name === screenSize ? "secondary" : "ghost"}
+                />
+              }
+            >
+              <Icon />
             </TooltipTrigger>
             <TooltipContent>
               <p className="capitalize">{name}</p>
@@ -85,7 +94,11 @@ const ColorThemePicker = () => {
     setMounted(true);
   }, []);
 
-  const handleChange = (value: string) => {
+  const handleChange = (value: string | null) => {
+    if (value === null) {
+      return;
+    }
+
     setColorTheme(value);
     capture("block:preview_color_theme_changed", {
       block_id: block.name,
@@ -106,31 +119,37 @@ const ColorThemePicker = () => {
       : undefined;
 
   return (
-    <Select onValueChange={handleChange} value={colorTheme}>
+    <Select
+      items={BLOCK_THEMES.map((t) => ({ value: t.id, label: t.label }))}
+      onValueChange={handleChange}
+      value={colorTheme}
+    >
       <Tooltip>
-        <TooltipTrigger asChild>
-          <SelectTrigger
-            className="h-8 w-[130px] bg-background text-xs max-sm:hidden"
-            size="sm"
-          >
-            <span className="flex items-center gap-1.5">
-              {swatchColor ? (
-                <span
-                  className="size-3 shrink-0 rounded-full border border-black/10 dark:border-white/10"
-                  style={{ backgroundColor: swatchColor }}
-                />
-              ) : (
-                <Paintbrush className="size-3 shrink-0 text-muted-foreground" />
-              )}
-              <SelectValue placeholder="Theme" />
-            </span>
-          </SelectTrigger>
+        <TooltipTrigger
+          render={
+            <SelectTrigger
+              className="h-8 w-[130px] bg-background text-xs max-sm:hidden"
+              size="sm"
+            />
+          }
+        >
+          <span className="flex items-center gap-1.5">
+            {swatchColor ? (
+              <span
+                className="size-3 shrink-0 rounded-full border border-black/10 dark:border-white/10"
+                style={{ backgroundColor: swatchColor }}
+              />
+            ) : (
+              <Paintbrush className="size-3 shrink-0 text-muted-foreground" />
+            )}
+            {activeTheme?.label}
+          </span>
         </TooltipTrigger>
         <TooltipContent>
           <p>Preview theme</p>
         </TooltipContent>
       </Tooltip>
-      <SelectContent align="end">
+      <SelectContent align="start">
         {BLOCK_THEMES.map((t) => {
           const primaryColor = t.cssVars[theme]?.primary;
           return (
@@ -177,15 +196,17 @@ const ThemeToggleButton = () => {
 
   return (
     <Tooltip>
-      <TooltipTrigger asChild>
-        <Button
-          className="max-sm:hidden"
-          onClick={handleThemeToggle}
-          size="icon-sm"
-          variant="outline"
-        >
-          {theme === "light" ? <Moon /> : <Sun />}
-        </Button>
+      <TooltipTrigger
+        render={
+          <Button
+            className="max-sm:hidden"
+            onClick={handleThemeToggle}
+            size="icon-sm"
+            variant="outline"
+          />
+        }
+      >
+        {theme === "light" ? <Moon /> : <Sun />}
       </TooltipTrigger>
       <TooltipContent>
         <p>Toggle theme</p>

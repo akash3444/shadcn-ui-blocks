@@ -24,15 +24,12 @@ export const CopyButton = ({
   };
 
   return (
-    <Tooltip delayDuration={1000}>
-      <TooltipTrigger asChild>
-        <Button
-          onClick={handleClick}
-          size="icon"
-          variant="ghost"
-        >
-          {isCopied ? <Check /> : <Clipboard />}
-        </Button>
+    <Tooltip>
+      <TooltipTrigger
+        delay={1000}
+        render={<Button onClick={handleClick} size="icon" variant="ghost" />}
+      >
+        {isCopied ? <Check /> : <Clipboard />}
       </TooltipTrigger>
       <TooltipContent>Copy Code</TooltipContent>
     </Tooltip>

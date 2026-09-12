@@ -30,23 +30,26 @@ const ResetFiltersButton = () => {
   };
 
   return (
-    <Tooltip delayDuration={600}>
-      <TooltipTrigger asChild>
-        <Button
-          className="shrink-0"
-          onClick={handleReset}
-          size="icon"
-          variant="outline"
-        >
-          <RotateCcwIcon
-            className={cn(
-              "h-4 w-4",
-              spinning && "animate-[spin_0.4s_ease-in-out]"
-            )}
-            key={spinKey.current}
-            onAnimationEnd={() => setSpinning(false)}
+    <Tooltip>
+      <TooltipTrigger
+        delay={600}
+        render={
+          <Button
+            className="shrink-0"
+            onClick={handleReset}
+            size="icon"
+            variant="outline"
           />
-        </Button>
+        }
+      >
+        <RotateCcwIcon
+          className={cn(
+            "h-4 w-4",
+            spinning && "animate-[spin_0.4s_ease-in-out]"
+          )}
+          key={spinKey.current}
+          onAnimationEnd={() => setSpinning(false)}
+        />
       </TooltipTrigger>
       <TooltipContent>Reset filters</TooltipContent>
     </Tooltip>

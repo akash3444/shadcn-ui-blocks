@@ -2,7 +2,6 @@
 
 import { Menu } from "lucide-react";
 import Link from "next/link";
-import { VisuallyHidden } from "radix-ui";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -19,15 +18,11 @@ export function NavigationSheet() {
 
   return (
     <Sheet onOpenChange={setOpen} open={open}>
-      <SheetTrigger asChild>
-        <Button size="icon" variant="outline">
-          <Menu />
-        </Button>
+      <SheetTrigger render={<Button size="icon-sm" variant="outline" />}>
+        <Menu />
       </SheetTrigger>
-      <VisuallyHidden.Root>
-        <SheetTitle>Navigation Menu</SheetTitle>
-      </VisuallyHidden.Root>
       <SheetContent>
+        <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
         <SheetHeader className="pb-4">
           <Link className="flex items-center gap-2" href="/">
             <Logo className="font-bold" />

@@ -81,20 +81,23 @@ function TreeItem({ item }: { item: NodeItem<unknown> | TreeNode<unknown> }) {
     const isActive = activeFile === nodeItem.path;
 
     return (
-      <Tooltip delayDuration={1000}>
-        <TooltipTrigger asChild>
-          <SidebarMenuButton
-            className="relative font-medium text-base text-foreground/80 data-[state=active]:bg-accent"
-            isActive={isActive}
-            onClick={() => selectFile(item.path)}
-          >
-            {isLoadingCode && isActive ? (
-              <Loader2 className="animate-spin" />
-            ) : (
-              <File className="text-muted-foreground" />
-            )}
-            <span className="truncate">{nodeItem.file}</span>
-          </SidebarMenuButton>
+      <Tooltip>
+        <TooltipTrigger
+          delay={1000}
+          render={
+            <SidebarMenuButton
+              className="relative font-medium text-base text-foreground/80 data-active:bg-accent"
+              isActive={isActive}
+              onClick={() => selectFile(item.path)}
+            />
+          }
+        >
+          {isLoadingCode && isActive ? (
+            <Loader2 className="animate-spin" />
+          ) : (
+            <File className="text-muted-foreground" />
+          )}
+          <span className="truncate">{nodeItem.file}</span>
         </TooltipTrigger>
         <TooltipContent side="right">{nodeItem.file}</TooltipContent>
       </Tooltip>
@@ -105,17 +108,19 @@ function TreeItem({ item }: { item: NodeItem<unknown> | TreeNode<unknown> }) {
   return (
     <SidebarMenuItem>
       <Collapsible
-        className="group/collapsible [&[data-state=open]>button>svg:first-child]:rotate-90"
+        className="group/collapsible [&[data-open]>button>svg:first-child]:rotate-90"
         defaultOpen={`/${activeFile}`.startsWith(item.path)}
       >
-        <CollapsibleTrigger asChild>
-          <SidebarMenuButton className="font-medium text-base text-foreground/80">
-            <ChevronRight className="transition-transform" />
-            <Folder className="fill-muted-foreground stroke-muted-foreground" />
-            {item.name}
-          </SidebarMenuButton>
+        <CollapsibleTrigger
+          render={
+            <SidebarMenuButton className="font-medium text-base text-foreground/80" />
+          }
+        >
+          <ChevronRight className="transition-transform" />
+          <Folder className="fill-muted-foreground stroke-muted-foreground" />
+          {item.name}
         </CollapsibleTrigger>
-        <CollapsibleContent className="max-w-(--radix-collapsible-content-width) overflow-hidden">
+        <CollapsibleContent className="max-w-(--collapsible-panel-width) overflow-hidden">
           <SidebarMenuSub>
             <Tree tree={item} />
           </SidebarMenuSub>

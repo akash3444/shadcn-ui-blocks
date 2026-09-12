@@ -45,15 +45,17 @@ export function VersionSwitcher({
   if (variant === "compact") {
     return (
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button
-            className={cn("gap-1 font-medium text-xs", className)}
-            size="sm"
-            variant="outline"
-          >
-            {currentVersion.version}
-            <ChevronDown className="h-3 w-3" />
-          </Button>
+        <DropdownMenuTrigger
+          render={
+            <Button
+              className={cn("gap-1 font-medium text-xs", className)}
+              size="sm"
+              variant="outline"
+            />
+          }
+        >
+          {currentVersion.version}
+          <ChevronDown className="h-3 w-3" />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-64">
           {allVersions.map((version) => (
@@ -85,14 +87,16 @@ export function VersionSwitcher({
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          className={cn("gap-2 font-medium", className)}
-          variant="outline"
-        >
-          {currentVersion.label}
-          <ChevronDown className="h-4 w-4" />
-        </Button>
+      <DropdownMenuTrigger
+        render={
+          <Button
+            className={cn("gap-2 font-medium", className)}
+            variant="outline"
+          />
+        }
+      >
+        {currentVersion.label}
+        <ChevronDown className="h-4 w-4" />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-72">
         <div className="p-2">

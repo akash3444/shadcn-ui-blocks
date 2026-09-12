@@ -48,19 +48,21 @@ const CategoryFilter = () => {
 
   return (
     <Popover onOpenChange={setOpen} open={open}>
-      <PopoverTrigger asChild>
-        <Button
-          aria-expanded={open}
-          className="w-45 justify-between bg-background"
-          role="combobox"
-          variant="outline"
-        >
-          <span className="flex items-center gap-2">
-            <TagIcon className="h-4 w-4 shrink-0" />
-            <span className="capitalize">{selected.title}</span>
-          </span>
-          <ChevronsUpDownIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
-        </Button>
+      <PopoverTrigger
+        render={
+          <Button
+            aria-expanded={open}
+            className="w-45 justify-between bg-background"
+            role="combobox"
+            variant="outline"
+          />
+        }
+      >
+        <span className="flex items-center gap-2">
+          <TagIcon className="h-4 w-4 shrink-0" />
+          <span className="capitalize">{selected.title}</span>
+        </span>
+        <ChevronsUpDownIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
       </PopoverTrigger>
       <PopoverContent align="start" className="p-0">
         <Command>

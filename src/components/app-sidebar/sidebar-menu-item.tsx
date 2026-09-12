@@ -32,29 +32,27 @@ const AppSidebarMenuItem = async ({
   return (
     <SidebarMenuItem {...props}>
       <AppSidebarMenuButton
-        asChild
         className={cn("group/menu-button gap-x-3")}
+        render={<Link href={item.url} />}
         tooltip={item.title}
         url={item.url}
       >
-        <Link href={item.url}>
-          <item.icon />
-          <span className="font-medium">{item.title}</span>
-          {item.isNew ? (
-            <Badge className="ml-auto rounded-full px-1.5 py-0">New</Badge>
-          ) : (
-            !!fileCount && (
-              <Badge
-                className={cn(
-                  "ml-auto inline-flex min-w-[18px] justify-center rounded-full bg-foreground/5 px-1 py-0"
-                )}
-                variant="outline"
-              >
-                {fileCount}
-              </Badge>
-            )
-          )}
-        </Link>
+        <item.icon />
+        <span className="font-medium">{item.title}</span>
+        {item.isNew ? (
+          <Badge className="ml-auto rounded-full px-1.5 py-0">New</Badge>
+        ) : (
+          !!fileCount && (
+            <Badge
+              className={cn(
+                "ml-auto inline-flex min-w-[18px] justify-center rounded-full bg-foreground/5 px-1 py-0"
+              )}
+              variant="outline"
+            >
+              {fileCount}
+            </Badge>
+          )
+        )}
       </AppSidebarMenuButton>
     </SidebarMenuItem>
   );
