@@ -5,7 +5,7 @@ import { Navbar } from "@/components/layout/navbar";
 function OpengraphImagesLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Navbar className="max-w-7xl border-border border-x px-4" />
+      <Navbar />
       <main className="bg-muted/60">{children}</main>
       <Footer />
     </>

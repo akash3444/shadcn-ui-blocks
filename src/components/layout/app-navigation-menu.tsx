@@ -3,12 +3,12 @@
 import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
-import { buttonVariants } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
@@ -18,7 +18,7 @@ export function AppNavigationMenu() {
       <NavigationMenuList className="space-x-0">
         <NavigationMenuItem>
           <NavigationMenuLink
-            className={buttonVariants({ size: "sm", variant: "ghost" })}
+            className={navigationMenuTriggerStyle({ className: "h-7.5" })}
             render={<Link href="/blocks" />}
           >
             Blocks
@@ -26,7 +26,7 @@ export function AppNavigationMenu() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink
-            className={buttonVariants({ size: "sm", variant: "ghost" })}
+            className={navigationMenuTriggerStyle({ className: "h-7.5" })}
             render={<Link href="/components/accordion" />}
           >
             Components
@@ -34,7 +34,7 @@ export function AppNavigationMenu() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink
-            className={buttonVariants({ size: "sm", variant: "ghost" })}
+            className={navigationMenuTriggerStyle({ className: "h-7.5" })}
             render={<Link href="/templates" />}
           >
             Templates
@@ -42,7 +42,7 @@ export function AppNavigationMenu() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink
-            className={buttonVariants({ size: "sm", variant: "ghost" })}
+            className={navigationMenuTriggerStyle({ className: "h-7.5" })}
             render={<Link href="/opengraph-images" />}
           >
             OG Images

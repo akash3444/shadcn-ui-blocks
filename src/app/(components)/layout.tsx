@@ -9,7 +9,7 @@ export default function RootLayout({
 }>) {
   return (
     <div className="flex min-h-svh flex-col">
-      <Navbar className="w-full max-w-384 ps-4 pe-10" />
+      <Navbar />
       <div className="flex flex-1">
         <SidebarProvider
           style={

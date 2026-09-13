@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const BlocksPage = () => (
   <>
-    <Navbar className="w-full max-w-384 px-6" />
+    <Navbar />
 
     <div className="mx-auto mb-8 max-w-(--breakpoint-2xl) py-12 sm:py-16">
       <BlockCategoryGrid />

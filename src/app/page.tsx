@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <div className="mask-b-from-85% relative bg-primary/3">
-        <Navbar className="border-primary/11 shadow-primary/2 shadow-xl dark:shadow-primary/3" />
+        <Navbar />
         <div className="-mt-24">
           <Hero />
         </div>
