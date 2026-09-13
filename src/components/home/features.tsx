@@ -1,165 +1,91 @@
 import {
   ArrowRightIcon,
   Copy,
+  Eye,
   Gift,
   Moon,
-  PuzzleIcon,
+  Search,
   Shapes,
 } from "lucide-react";
 import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { FAQ } from "./faq";
 
-export const Features = () => {
-  return (
-    <>
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-(--breakpoint-lg)">
-          <h2 className="max-w-[35ch] text-balance font-heading font-semibold text-[2.5rem]/tight tracking-[-0.02em]">
-            Built for developers who ship
-          </h2>
-          <p className="mt-2 max-w-[48ch] text-pretty text-base text-foreground/65 sm:text-lg">
-            Every block and component is production-ready — just preview, copy,
-            and paste into your project.
-          </p>
-          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3">
-            {/* Featured wide card */}
-            <div className="relative overflow-hidden rounded-xl border border-border/70 bg-muted/40 p-6 sm:col-span-2">
-              <DashedTopFadeGrid />
-              <div className="isolate">
-                <Shapes className="size-6 text-primary" />
-                <h3 className="mt-4 font-heading font-semibold text-xl">
-                  200+ Production-Ready Blocks
-                </h3>
-                <p className="mt-2 max-w-[44ch] text-pretty text-foreground/65 text-sm">
-                  Hero sections, pricing tables, testimonials, feature grids,
-                  footers — every section type you need, designed and coded to
-                  production quality.
-                </p>
-                <Link
-                  className={cn(buttonVariants({ size: "sm" }), "mt-6")}
-                  href="/blocks"
-                >
-                  Browse Blocks <ArrowRightIcon />
-                </Link>
-              </div>
-            </div>
+const features = [
+  {
+    icon: Shapes,
+    title: "200+ page blocks",
+    description:
+      "Pick a ready-made section instead of starting with an empty file.",
+  },
+  {
+    icon: Search,
+    title: "Browse by section",
+    description:
+      "Find heroes, feature sections, pricing, and more in one collection.",
+  },
+  {
+    icon: Eye,
+    title: "Preview first",
+    description:
+      "See how a block looks before adding its code to your project.",
+  },
+  {
+    icon: Copy,
+    title: "One-click copy",
+    description: "Copy the code for a block and adapt it in your own project.",
+  },
+  {
+    icon: Moon,
+    title: "Light and dark",
+    description: "Use blocks with styles for both light and dark themes.",
+  },
+  {
+    icon: Gift,
+    title: "Free to use",
+    description: "Use the collection in personal and commercial projects.",
+  },
+];
 
-            {/* Dark mode card */}
-            <div className="relative overflow-hidden rounded-xl border border-border/70 bg-muted/40 p-6">
-              <DashedTopFadeGrid />
-              <div className="isolate">
-                <Moon className="size-6 text-primary" />
-                <h3 className="mt-4 font-heading font-semibold text-lg">
-                  Dark Mode Ready
-                </h3>
-                <p className="mt-2 text-pretty text-foreground/65 text-sm">
-                  Every block ships with light and dark mode built in. No extra
-                  work needed.
-                </p>
-              </div>
-            </div>
-
-            {/* Copy card */}
-            <div className="relative overflow-hidden rounded-xl border border-border/70 bg-muted/40 p-6">
-              <DashedTopFadeGrid />
-              <div className="isolate">
-                <Copy className="size-6 text-primary" />
-                <h3 className="mt-4 font-heading font-semibold text-lg">
-                  One-Click Copy
-                </h3>
-                <p className="mt-2 text-pretty text-foreground/65 text-sm">
-                  Clean code, ready to paste. No reformatting required.
-                </p>
-              </div>
-            </div>
-
-            {/* Components card */}
-            <div className="relative overflow-hidden rounded-xl border border-border/70 bg-muted/40 p-6">
-              <DashedTopFadeGrid />
-              <div className="isolate">
-                <PuzzleIcon className="size-6 text-primary" />
-                <h3 className="mt-4 font-heading font-semibold text-lg">
-                  25+ Component Variants
-                </h3>
-                <p className="mt-2 text-pretty text-foreground/65 text-sm">
-                  Extended shadcn/ui components with more styles and sizes than
-                  the defaults.
-                </p>
-              </div>
-            </div>
-
-            {/* Free card */}
-            <div className="relative overflow-hidden rounded-xl border border-border/70 bg-primary/5 p-6">
-              <div className="isolate">
-                <Gift className="size-6 text-primary" />
-                <h3 className="mt-4 font-heading font-semibold text-lg">
-                  Free Forever
-                </h3>
-                <p className="mt-2 text-pretty text-foreground/65 text-sm">
-                  No account, no paywall. Use anything here in personal and
-                  commercial projects.
-                </p>
-              </div>
-            </div>
+export const Features = () => (
+  <>
+    <section className="px-6 py-20 sm:py-28">
+      <div className="mx-auto max-w-(--breakpoint-lg) overflow-hidden rounded-3xl bg-foreground p-7 text-background sm:p-12">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="font-medium text-background/60 text-xs uppercase tracking-[0.2em]">
+              Features
+            </p>
+            <h2 className="mt-5 max-w-[18ch] text-balance font-heading font-semibold text-4xl tracking-tight sm:text-5xl">
+              The details that save you time.
+            </h2>
           </div>
+          <Link
+            className="inline-flex h-9 items-center justify-center gap-2 rounded-md bg-background px-4 font-medium text-foreground text-sm"
+            href="/blocks"
+          >
+            Browse blocks <ArrowRightIcon className="size-4" />
+          </Link>
         </div>
-      </section>
-
-      <section className="mx-auto max-w-(--breakpoint-lg) px-6 pb-20 lg:px-0">
-        <FAQ />
-      </section>
-    </>
-  );
-};
-
-const DashedTopFadeGrid = () => (
-  <div
-    className="absolute inset-0 -top-px -left-px z-0 dark:opacity-80"
-    style={{
-      backgroundImage: `
-        linear-gradient(to right, var(--border) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--border) 1px, transparent 1px)
-      `,
-      backgroundSize: "20px 20px",
-      backgroundPosition: "0 0, 0 0",
-      maskImage: `
-        repeating-linear-gradient(
-              to right,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            repeating-linear-gradient(
-              to bottom,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
-      `,
-      WebkitMaskImage: `
- repeating-linear-gradient(
-              to right,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            repeating-linear-gradient(
-              to bottom,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
-      `,
-      maskComposite: "intersect",
-      WebkitMaskComposite: "source-in",
-    }}
-  />
+        <div className="mt-12 grid gap-px overflow-hidden rounded-xl bg-background/20 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature) => {
+            const Icon = feature.icon;
+            return (
+              <article className="bg-foreground p-6" key={feature.title}>
+                <Icon aria-hidden="true" className="size-5" />
+                <h3 className="mt-8 font-heading font-semibold text-lg">
+                  {feature.title}
+                </h3>
+                <p className="mt-2 text-background/65 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+    <section className="mx-auto max-w-(--breakpoint-lg) px-6 pb-20 lg:px-0">
+      <FAQ />
+    </section>
+  </>
 );
