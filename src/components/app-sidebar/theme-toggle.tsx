@@ -1,8 +1,11 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+
+const blockPreviewPath = /^\/blocks\/[^/]+\/preview(?:\/|$)/;
 
 export const ThemeToggle = ({
   className,
@@ -10,6 +13,7 @@ export const ThemeToggle = ({
 }: React.ComponentProps<typeof Button>) => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
+  const pathname = usePathname();
 
   const toggleTheme = () => {
     setTheme(resolvedTheme === "dark" ? "light" : "dark");
@@ -18,6 +22,10 @@ export const ThemeToggle = ({
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  if (blockPreviewPath.test(pathname)) {
+    return null;
+  }
 
   // To avoid flickering
   if (!mounted) {
