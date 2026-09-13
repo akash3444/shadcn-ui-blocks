@@ -38,7 +38,7 @@ export default function AccordionIconDemo() {
       {items.map(({ title, content, icon: Icon }, index) => (
         <AccordionItem key={index} value={`item-${index}`}>
           <AccordionTrigger>
-            <div className="flex items-start gap-3">
+            <div className="flex items-start gap-3 font-medium">
               <Icon />
               {title}
             </div>

@@ -153,10 +153,10 @@ const FAQ = () => {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 sm:py-20">
-      <h2 className="text-balance text-center font-medium text-4xl tracking-tight sm:text-[2.75rem]">
+      <h2 className="text-balance text-center font-medium text-4xl tracking-tight sm:text-[2.6rem]">
         Frequently Asked Questions
       </h2>
-      <p className="mt-3 text-balance text-center text-lg text-muted-foreground md:text-2xl md:tracking-[-0.015em]">
+      <p className="mt-3 text-balance text-center text-lg text-muted-foreground md:text-2xl md:tracking-[-0.01em]">
         Find answers to common questions about our products and services
       </p>
 
@@ -211,8 +211,10 @@ function FAQList({ faqs }: { faqs: (typeof categorizedFaqs)[0]["faqs"] }) {
           key={index}
           value={faq.question}
         >
-          <AccordionTrigger className="font-medium text-lg">
-            <div className="flex items-center gap-2">{faq.question}</div>
+          <AccordionTrigger className="text-lg">
+            <div className="flex items-center gap-2 font-medium">
+              {faq.question}
+            </div>
           </AccordionTrigger>
           <AccordionContent className="text-base">
             {faq.answer}

@@ -37,15 +37,11 @@ const FAQ = () => {
   return (
     <div className="px-6 py-20">
       <div className="mx-auto w-full max-w-xl">
-        <h2 className="font-medium text-4xl leading-[1.15]! tracking-tight md:text-[2.75rem]">
+        <h2 className="font-medium text-4xl leading-[1.15]! tracking-tighter md:text-[2.5rem]">
           Questions & Answers
         </h2>
 
-        <Accordion
-          className="mt-6"
-          defaultValue={["question-0"]}
-          multiple
-        >
+        <Accordion className="mt-6" defaultValue={["question-0"]} multiple>
           {faq.map(({ question, answer }, index) => (
             <AccordionItem key={question} value={`question-${index}`}>
               <AccordionTrigger className="text-left text-lg">

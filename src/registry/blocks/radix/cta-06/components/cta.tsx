@@ -33,7 +33,7 @@ const CTA = () => {
         />
 
         <div className="relative isolate">
-          <h2 className="text-balance font-medium text-4xl text-foreground tracking-tight md:leading-tight lg:text-[2.75rem]">
+          <h2 className="text-balance font-medium text-4xl text-foreground tracking-tighter md:leading-tight lg:text-[2.75rem]">
             Experience the difference
           </h2>
           <p className="mt-4 text-balance text-muted-foreground text-xl/normal md:mt-2.5 lg:text-[1.4rem]/normal">

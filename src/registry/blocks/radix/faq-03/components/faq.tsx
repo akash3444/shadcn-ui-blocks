@@ -3,12 +3,12 @@
 import { PlusIcon } from "lucide-react";
 import { Accordion as AccordionPrimitive } from "radix-ui";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
 } from "@/registry/bases/radix/ui/accordion";
-import { cn } from "@/lib/utils";
 
 const faq = [
   {
@@ -69,7 +69,7 @@ const FAQ = () => {
   return (
     <div className="px-6 py-20">
       <div className="mx-auto w-full max-w-(--breakpoint-lg)">
-        <h2 className="font-medium text-4xl tracking-tight md:text-[2.75rem]">
+        <h2 className="font-medium text-4xl tracking-tight md:text-[2.6rem]">
           Frequently Asked Questions
         </h2>
 

@@ -38,14 +38,13 @@ export default function AccordionMediaContentDemo() {
       {items.map(({ title, content, icon: Icon }, index) => (
         <AccordionItem key={index} value={`item-${index}`}>
           <AccordionTrigger>
-            <div className="flex items-start gap-3">
+            <div className="flex items-start gap-3 font-medium">
               <Icon />
               {title}
             </div>
           </AccordionTrigger>
           <AccordionContent className="relative pl-9">
             <div className="absolute top-0 bottom-3 left-3 w-px border-l border-dashed" />
-
             {content}
             <div className="mt-4 aspect-18/9 w-full rounded-xl bg-muted" />
           </AccordionContent>

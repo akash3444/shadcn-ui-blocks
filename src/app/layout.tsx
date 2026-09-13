@@ -8,10 +8,11 @@ import type { WebSite, WithContext } from "schema-dts";
 import { ThemeToggle } from "@/components/app-sidebar/theme-toggle";
 import { CarbonAdTracker } from "@/components/carbon-ad-tracker";
 import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { TooltipProvider as BaseTooltipProvider } from "@/components/ui/tooltip";
 import { PackageManagerProvider } from "@/providers/package-manager-provider";
 import { CSPostHogProvider } from "@/providers/posthog-provider";
 import { PrimitiveProvider } from "@/providers/primitive-provider";
+import { TooltipProvider as RadixTooltipProvider } from "@/registry/bases/radix/ui/tooltip";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -146,15 +147,17 @@ export default function RootLayout({
         <CarbonAdTracker />
         <CSPostHogProvider>
           <ThemeProvider attribute="class">
-            <TooltipProvider>
-              <PackageManagerProvider>
-                <PrimitiveProvider>{children}</PrimitiveProvider>
-              </PackageManagerProvider>
-              <div className="fixed right-6 bottom-6">
-                <ThemeToggle />
-              </div>
-              <Toaster />
-            </TooltipProvider>
+            <BaseTooltipProvider>
+              <RadixTooltipProvider>
+                <PackageManagerProvider>
+                  <PrimitiveProvider>{children}</PrimitiveProvider>
+                </PackageManagerProvider>
+                <div className="fixed right-6 bottom-6">
+                  <ThemeToggle />
+                </div>
+                <Toaster />
+              </RadixTooltipProvider>
+            </BaseTooltipProvider>
           </ThemeProvider>
         </CSPostHogProvider>
       </body>

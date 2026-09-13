@@ -85,7 +85,9 @@ const FAQ = () => {
                   >
                     <faq.icon className="size-5 fill-foreground/7" />
                   </div>
-                  <span className="py-3.5 pl-2.5">{faq.question}</span>
+                  <span className="py-3.5 pl-2.5 font-medium">
+                    {faq.question}
+                  </span>
                 </div>
               </AccordionTrigger>
               <AccordionContent className="relative bg-background px-5 py-5 pl-18 text-base text-foreground/75">

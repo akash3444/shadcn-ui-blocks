@@ -12,8 +12,8 @@ const CTA = () => {
         />
 
         <div className="relative isolate bg-linear-to-r from-black to-black/50 px-10 py-14">
-          <h2 className="font-medium text-4xl text-white tracking-tight sm:text-[2.85rem]">
-            Step Into Something Better
+          <h2 className="font-medium text-4xl text-white tracking-tight sm:text-[2.6rem]">
+            Step into something better
           </h2>
           <p className="mt-4 max-w-md text-lg text-white/85 md:text-xl/normal">
             Get seamless access to everything you need, right from your phone.

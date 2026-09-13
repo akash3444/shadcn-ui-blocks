@@ -1,11 +1,11 @@
-import { PlusIcon } from "lucide-react";
 import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
+import { PlusIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
 } from "@/registry/bases/base/ui/accordion";
-import { cn } from "@/lib/utils";
 
 const faq = [
   {

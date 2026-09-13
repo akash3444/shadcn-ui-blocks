@@ -45,7 +45,7 @@ export default function AccordionItemDisabledDemo() {
             })}
             disabled={disabled}
           >
-            <div className="flex items-start gap-3">
+            <div className="flex items-start gap-3 font-medium">
               <Icon />
               {title}
             </div>

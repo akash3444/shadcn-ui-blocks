@@ -1,11 +1,11 @@
 import { PlusIcon } from "lucide-react";
 import { Accordion as AccordionPrimitive } from "radix-ui";
+import { cn } from "@/lib/utils";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
 } from "@/registry/bases/radix/ui/accordion";
-import { cn } from "@/lib/utils";
 
 const faq = [
   {

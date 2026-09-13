@@ -37,7 +37,7 @@ const FAQ = () => {
   return (
     <div className="px-6 py-20">
       <div className="flex flex-col items-start justify-center gap-x-12 gap-y-6 md:flex-row">
-        <h2 className="font-medium text-4xl/snug tracking-tight lg:text-[2.75rem]/snug">
+        <h2 className="font-medium text-4xl/snug tracking-tighter lg:text-[2.75rem]/snug">
           Frequently Asked <br /> Questions
         </h2>
 
