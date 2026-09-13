@@ -82,7 +82,7 @@ export default function FAQ() {
   return (
     <div>
       <div className="px-6 py-20 text-center">
-        <h2 className="text-balance text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
+        <h2 className="text-balance text-center font-medium text-4xl tracking-tight sm:text-[2.75rem]">
           Frequently Asked Questions
         </h2>
         <p className="mt-3 text-balance text-center text-lg text-muted-foreground md:text-2xl md:tracking-[-0.015em]">

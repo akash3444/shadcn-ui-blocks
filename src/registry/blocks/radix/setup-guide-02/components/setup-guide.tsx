@@ -24,8 +24,8 @@ export default function SetupGuide() {
     <div className="px-6 py-12">
       <Card className="mx-auto my-10 max-w-xl gap-1 overflow-hidden rounded-xl bg-card pb-0 sm:my-16">
         <CardHeader className="gap-1.5 px-8">
-          <CardTitle className="font-medium text-2xl tracking-[-0.03em]">
-            Get Started with Your Account
+          <CardTitle className="font-medium text-2xl tracking-tight">
+            Get started with your account
           </CardTitle>
           <CardDescription className="text-base text-muted-foreground">
             Follow these quick steps to set up your account and unlock features.

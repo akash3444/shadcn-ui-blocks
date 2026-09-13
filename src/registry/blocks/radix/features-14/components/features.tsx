@@ -34,7 +34,7 @@ export default function Features() {
       <strong className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
         Why Choose Us
       </strong>
-      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-medium text-4xl/tight tracking-[-0.04em] sm:text-[2.75rem]">
+      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-medium text-4xl/tight tracking-tight sm:text-[2.75rem]">
         We are Leading in Smart Assistants with Nearly 20 Years of Experience
       </h2>
       <p className="mt-5 text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">

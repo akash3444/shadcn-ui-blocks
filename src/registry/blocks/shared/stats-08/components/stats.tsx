@@ -2,7 +2,7 @@ const Stats = () => {
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="mx-auto max-w-(--breakpoint-xl) py-12 text-center">
-        <h2 className="font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
+        <h2 className="font-medium text-4xl tracking-tight md:text-[2.75rem]">
           Why Should You Choose Us?
         </h2>
         <p className="mt-3.5 text-muted-foreground text-xl md:text-2xl">

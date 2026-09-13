@@ -2,7 +2,7 @@ function Stats() {
   return (
     <div className="w-full px-6">
       <div className="relative mx-auto my-20 max-w-5xl overflow-hidden rounded-2xl bg-muted px-6 py-16">
-        <h2 className="text-balance text-center font-medium text-3xl tracking-[-0.04em] sm:text-4xl md:text-[2.75rem]">
+        <h2 className="text-balance text-center font-medium text-3xl tracking-tight sm:text-4xl md:text-[2.75rem]">
           Reliable by Design
         </h2>
         <p className="mt-4 text-center text-muted-foreground text-xl tracking-[-0.01em] sm:text-lg md:text-2xl">

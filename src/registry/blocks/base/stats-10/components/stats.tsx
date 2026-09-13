@@ -6,7 +6,7 @@ const Stats = () => {
   return (
     <div className="mx-auto flex max-w-5xl flex-col items-start gap-14 px-6 py-20 sm:gap-10 md:flex-row">
       <div className="max-w-md lg:max-w-lg">
-        <h2 className="font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
+        <h2 className="font-medium text-4xl tracking-tight md:text-[2.75rem]">
           Numbers that matter
         </h2>
         <p className="mt-3.5 text-muted-foreground text-xl tracking-[-0.01em] md:text-2xl/normal">

@@ -54,7 +54,7 @@ const faqs = [
 export default function FAQ() {
   return (
     <div className="mx-auto max-w-(--breakpoint-lg) px-6 py-14">
-      <h2 className="mt-5 max-w-4xl text-balance font-medium text-4xl leading-[1.1] tracking-[-0.04em]">
+      <h2 className="mt-5 max-w-4xl text-balance font-medium text-4xl leading-[1.1] tracking-tight">
         Frequently Asked Questions
       </h2>
       <p className="mt-2 text-lg text-muted-foreground sm:text-xl">

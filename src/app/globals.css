@@ -221,15 +221,11 @@
   body {
     @apply bg-background text-foreground font-normal;
     --font-weight-normal: 460;
-    letter-spacing: 0.01em;
-  }
-}
-
-@layer utilities {
-  .font-heading {
-    --tracking-tight: -0.01em;
     --font-weight-medium: 525;
     --font-weight-semibold: 535;
+    --tracking-tight: -0.02em;
+    --tracking-tighter: -0.03em;
+    letter-spacing: 0.01em;
   }
 }
 
