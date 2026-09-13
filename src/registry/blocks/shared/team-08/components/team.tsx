@@ -47,14 +47,14 @@ const teamMembers = [
 const Team = () => {
   return (
     <div className="mx-auto max-w-7xl px-6 py-20">
-      <h2 className="text-balance text-center font-medium text-3xl capitalize tracking-tight sm:text-4xl md:text-[2.75rem]">
+      <h2 className="text-balance text-center font-medium text-3xl tracking-tight sm:text-4xl md:text-[2.75rem]">
         Our core team
       </h2>
       <p className="mt-3 text-balance text-center text-lg text-muted-foreground tracking-[-0.01em] md:text-2xl">
         Passionate people building great products
       </p>
 
-      <div className="mt-12 grid grid-cols-1 gap-2 rounded-xl border border-border/75 bg-muted p-2 sm:mt-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:border-border/60">
+      <div className="mt-12 grid grid-cols-1 gap-1 rounded-xl border border-border/75 bg-muted p-1 sm:mt-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:border-border/60">
         {teamMembers.map((member, index) => (
           <div
             className="rounded-lg border border-border/85 bg-background py-8 dark:border-foreground/13"

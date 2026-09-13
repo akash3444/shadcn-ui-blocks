@@ -3,6 +3,7 @@
 import { Dribbble, Github, Twitter } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { cn } from "@/lib/utils";
 import {
   Carousel,
   type CarouselApi,
@@ -11,7 +12,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/registry/bases/base/ui/carousel";
-import { cn } from "@/lib/utils";
 
 const teamMembers = [
   {
@@ -76,7 +76,7 @@ const Team = () => {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-20">
-      <h2 className="text-balance text-center font-medium text-3xl capitalize tracking-tight sm:text-4xl md:text-[2.75rem]">
+      <h2 className="text-balance text-center font-medium text-3xl tracking-tight sm:text-4xl md:text-[2.75rem]">
         Our core team
       </h2>
       <p className="mt-3 text-balance text-center text-lg text-muted-foreground tracking-[-0.01em] md:text-2xl">
