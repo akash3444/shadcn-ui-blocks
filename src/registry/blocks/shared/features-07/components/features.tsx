@@ -11,56 +11,56 @@ import Link from "next/link";
 const features = [
   {
     icon: Goal,
-    title: "Identify Opportunities",
+    title: "Identify opportunities",
     description:
       "Easily uncover untapped areas to explore and expand your reach.",
     image: "https://www.fffuel.co/images/dddepth-preview/dddepth-051.jpg",
   },
   {
     icon: BookCheck,
-    title: "Build Authority",
+    title: "Build authority",
     description: "Create valuable content that resonates and inspires trust.",
     image: "https://www.fffuel.co/images/dddepth-preview/dddepth-248.jpg",
   },
   {
     icon: ChartPie,
-    title: "Instant Insights",
+    title: "Instant insights",
     description: "Gain immediate, actionable insights with a quick glance.",
     image: "https://www.fffuel.co/images/dddepth-preview/dddepth-177.jpg",
   },
   {
     icon: Users,
-    title: "Engage with Your Audience",
+    title: "Engage with your audience",
     description: "Boost audience engagement with interactive features.",
     image: "https://www.fffuel.co/images/dddepth-preview/dddepth-012.jpg",
   },
   {
     icon: FolderSync,
-    title: "Automate Your Workflow",
+    title: "Automate your workflow",
     description: "Streamline your processes by automating repetitive tasks.",
     image: "https://www.fffuel.co/images/dddepth-preview/dddepth-045.jpg",
   },
   {
     icon: Zap,
-    title: "Accelerate Growth",
+    title: "Accelerate growth",
     description: "Supercharge your growth by implementing strategies.",
     image: "https://www.fffuel.co/images/dddepth-preview/dddepth-028.jpg",
   },
   {
     icon: BookCheck,
-    title: "Build Authority",
+    title: "Build authority",
     description: "Create valuable content that resonates and inspires trust.",
     image: "https://www.fffuel.co/images/dddepth-preview/dddepth-031.jpg",
   },
   {
     icon: ChartPie,
-    title: "Instant Insights",
+    title: "Instant insights",
     description: "Gain immediate, actionable insights with a quick glance.",
     image: "https://www.fffuel.co/images/dddepth-preview/dddepth-034.jpg",
   },
   {
     icon: Goal,
-    title: "Identify Opportunities",
+    title: "Identify opportunities",
     description:
       "Easily uncover untapped areas to explore and expand your reach.",
     image: "https://www.fffuel.co/images/dddepth-preview/dddepth-059.jpg",
@@ -71,7 +71,7 @@ const Features = () => {
   return (
     <div className="px-6 py-20">
       <div className="mx-auto w-full max-w-(--breakpoint-xl)">
-        <h2 className="text-pretty font-medium text-4xl tracking-tight sm:mx-auto sm:max-w-xl sm:text-center md:text-[2.75rem] md:leading-[1.2]">
+        <h2 className="text-pretty font-medium text-4xl tracking-tight sm:mx-auto sm:max-w-xl sm:text-center md:text-[2.6rem] md:leading-[1.2]">
           Strengthen your strategy
         </h2>
         <p className="mt-3 text-pretty text-muted-foreground text-xl -tracking-[0.01em] sm:text-center md:text-2xl">

@@ -55,7 +55,7 @@ const features = [
 const Features = () => {
   return (
     <div className="mx-auto w-full max-w-(--breakpoint-lg) px-6 py-20">
-      <h2 className="max-w-lg text-pretty font-medium text-4xl tracking-tight md:text-[2.75rem] md:leading-14">
+      <h2 className="max-w-lg text-pretty font-medium text-4xl tracking-tight md:text-[2.6rem] md:leading-14">
         Build scalable interfaces with minimal effort
       </h2>
       <div className="mx-auto mt-8 grid w-full gap-12 md:mt-12 md:grid-cols-2">

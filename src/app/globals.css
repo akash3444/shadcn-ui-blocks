@@ -213,7 +213,10 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 font-normal;
+    @apply border-border outline-ring/50;
+  }
+  *:not(.font-medium *, .font-semibold *) {
+    @apply font-normal;
   }
   html {
     @apply scroll-smooth;

@@ -3,7 +3,7 @@ import type { SVGProps } from "react";
 const features = [
   {
     category: "Marketing and Sales",
-    title: "Collect and Enrich Leads Your Way",
+    title: "Collect and enrich leads your way",
     details:
       "Take control over how and when to follow up with your leads. Store and reference leads in multiple tables and automatically send them personalized emails.",
     tutorialLink: "#",
@@ -11,7 +11,7 @@ const features = [
   },
   {
     category: "Project Management",
-    title: "Streamline Your Workflows Easily",
+    title: "Streamline your workflows easily",
     details:
       "Organize tasks, deadlines, and team collaboration in one place. Use customizable boards to manage projects efficiently and automate routine updates.",
     tutorialLink: "#",
@@ -19,7 +19,7 @@ const features = [
   },
   {
     category: "Customer Support",
-    title: "Deliver Seamless Customer Experiences",
+    title: "Deliver seamless customer experiences",
     details:
       "Track customer queries faster with an integrated ticketing system. Set priorities, automate follow-ups, and enhance satisfaction with personalized responses.",
     tutorialLink: "#",
@@ -27,7 +27,7 @@ const features = [
   },
   {
     category: "Team Collaboration",
-    title: "Stay Connected with Your Team",
+    title: "Stay connected with your team",
     details:
       "Simplify communication with shared boards and real-time updates. Enable transparent goal tracking and instant feedback for better results.",
     tutorialLink: "#",
@@ -39,7 +39,7 @@ const Features = () => {
   return (
     <div className="px-6 py-20">
       <div className="mx-auto w-full max-w-(--breakpoint-lg)">
-        <h2 className="text-pretty text-center font-medium text-4xl tracking-tighter md:text-[2.75rem]">
+        <h2 className="text-pretty text-center font-medium text-4xl tracking-tighter md:text-[2.6rem]">
           Less setup, more building
         </h2>
         <p className="mt-3 text-pretty text-center text-lg text-muted-foreground tracking-[-0.01em] md:text-2xl">
@@ -107,7 +107,7 @@ const Features = () => {
                 )}
               </div>
               <div className="flex flex-1 basis-1/2 flex-col items-start">
-                <h4 className="mt-1 mb-2 font-medium text-2xl tracking-[-0.02em]">
+                <h4 className="mt-1 mb-2 font-medium text-2xl tracking-[-0.01em]">
                   {feature.title}
                 </h4>
                 <p className="mb-6 text-lg text-muted-foreground">

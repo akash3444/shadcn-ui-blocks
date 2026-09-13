@@ -49,7 +49,7 @@ const features = [
 const Features = () => {
   return (
     <div className="px-6 py-20">
-      <h2 className="mx-auto max-w-3xl text-center font-medium text-4xl tracking-tighter sm:text-[2.75rem]">
+      <h2 className="mx-auto max-w-3xl text-center font-medium text-4xl tracking-tighter sm:text-[2.6rem]">
         Ready out of the box
       </h2>
       <p className="mt-3 text-pretty text-center text-lg text-muted-foreground tracking-[-0.01em] sm:text-2xl">

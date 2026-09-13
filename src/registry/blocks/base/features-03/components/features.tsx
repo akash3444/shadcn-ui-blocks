@@ -6,7 +6,7 @@ const Features = () => {
     <div className="mx-auto w-full max-w-(--breakpoint-lg) px-6 py-20">
       <h2 className="font-medium text-3xl leading-10 tracking-tight sm:text-4xl md:text-[40px] md:leading-13">
         Design and engage: <br />
-        <span className="text-muted-foreground/80">
+        <span className="text-muted-foreground/85">
           Build smarter spaces and strategies
         </span>
       </h2>
