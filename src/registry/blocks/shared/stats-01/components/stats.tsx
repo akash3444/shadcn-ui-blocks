@@ -1,7 +1,7 @@
 const Stats = () => {
   return (
     <div className="mx-auto max-w-(--breakpoint-lg) px-6 py-20 text-center">
-      <h2 className="font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
+      <h2 className="font-medium text-4xl tracking-tight md:text-[2.75rem]">
         Why Should You Choose Us?
       </h2>
       <p className="mt-4 text-muted-foreground text-xl md:text-2xl">

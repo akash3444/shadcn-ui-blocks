@@ -18,7 +18,7 @@ export default function Hero() {
         >
           Just released v1.0.0 <ArrowUpRight className="ml-1 size-4" />
         </Badge>
-        <h1 className="mx-auto mt-6 max-w-xl font-medium text-4xl tracking-[-0.045em] sm:text-[2.75rem] md:text-6xl/[1.2]">
+        <h1 className="mx-auto mt-6 max-w-xl font-medium text-4xl tracking-tighter sm:text-[2.75rem] md:text-6xl/[1.2]">
           Ship{" "}
           <GradientText
             animationSpeed={2}

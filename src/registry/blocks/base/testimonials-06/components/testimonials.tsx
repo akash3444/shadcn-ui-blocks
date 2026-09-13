@@ -105,7 +105,7 @@ const Testimonials = () => {
 
   return (
     <div className="px-6 py-20">
-      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
+      <h2 className="text-center font-medium text-4xl tracking-tight md:text-[2.75rem]">
         People love using it
       </h2>
       <p className="mt-4 text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">

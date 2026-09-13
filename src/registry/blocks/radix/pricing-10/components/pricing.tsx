@@ -59,7 +59,7 @@ const pricingPlans: PricingPlan[] = [
 const Pricing = () => {
   return (
     <section className="mx-auto max-w-6xl px-6 py-20">
-      <h2 className="text-balance text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
+      <h2 className="text-balance text-center font-medium text-4xl tracking-tight sm:text-[2.75rem]">
         Plans & Pricing
       </h2>
       <p className="mt-2 text-balance text-center text-lg text-muted-foreground -tracking-[0.01em] sm:mt-4 sm:text-2xl">

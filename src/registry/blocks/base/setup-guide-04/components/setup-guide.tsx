@@ -6,14 +6,14 @@ import {
   LayoutDashboardIcon,
   Zap,
 } from "lucide-react";
-import { Badge } from "@/registry/bases/base/ui/badge";
 import { cn } from "@/lib/utils";
+import { Badge } from "@/registry/bases/base/ui/badge";
 
 export default function SetupGuide() {
   return (
     <div className="mx-auto max-w-(--breakpoint-md) px-6 py-10 sm:py-16">
-      <h2 className="font-medium text-2xl tracking-[-0.03em] sm:text-3xl">
-        Get Started with Your Account
+      <h2 className="font-medium text-2xl tracking-tight sm:text-3xl">
+        Get started with your account
       </h2>
       <p className="mt-2 text-muted-foreground sm:text-lg">
         Follow these quick steps to set up your account and unlock all the

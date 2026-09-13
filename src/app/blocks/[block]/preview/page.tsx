@@ -56,7 +56,7 @@ const BlockPreviewPage = async (props: {
   }
 
   const content = (
-    <div className="font-geist" style={{ fontFeatureSettings: '"ss03" on' }}>
+    <div>
       <BlockComponent />
     </div>
   );

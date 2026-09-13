@@ -50,7 +50,7 @@ const FAQ = () => {
   return (
     <div className="flex min-h-screen items-center justify-center px-6 py-20">
       <div className="max-w-(--breakpoint-lg)">
-        <h2 className="text-center font-medium text-4xl/snug tracking-[-0.05em] md:text-[2.75rem]">
+        <h2 className="text-center font-medium text-4xl/snug tracking-tighter md:text-[2.75rem]">
           Frequently Asked Questions
         </h2>
         <p className="mt-3 text-center text-muted-foreground text-xl md:text-2xl md:tracking-[-0.015em]">

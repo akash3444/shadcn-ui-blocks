@@ -58,7 +58,7 @@ const Team = () => {
         <b className="text-center font-medium text-muted-foreground text-sm uppercase">
           We&apos;re hiring!
         </b>
-        <h2 className="mt-4 font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
+        <h2 className="mt-4 font-medium text-4xl tracking-tight sm:text-[2.75rem]">
           Meet Our Team
         </h2>
         <p className="mt-4 text-base text-muted-foreground -tracking-[0.01em] sm:text-xl">

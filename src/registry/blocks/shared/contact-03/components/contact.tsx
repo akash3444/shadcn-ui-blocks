@@ -7,7 +7,7 @@ const Contact = () => (
       <b className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
         Contact Us
       </b>
-      <h2 className="mt-3 font-medium text-4xl tracking-[-0.04em]">
+      <h2 className="mt-3 font-medium text-4xl tracking-tight">
         We&apos;d love to hear from you
       </h2>
       <p className="mt-3 text-lg text-muted-foreground md:text-xl">

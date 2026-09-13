@@ -19,7 +19,7 @@ const Contact = () => (
       <b className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
         Contact Us
       </b>
-      <h2 className="mt-3 font-medium text-4xl tracking-[-0.035em]">
+      <h2 className="mt-3 font-medium text-4xl tracking-tight">
         Chat with our friendly team!
       </h2>
       <p className="mt-3 text-lg text-muted-foreground md:text-xl">
