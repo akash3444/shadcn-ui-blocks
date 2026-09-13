@@ -53,7 +53,7 @@ export const Features = () => (
       <div className="mx-auto max-w-(--breakpoint-lg) overflow-hidden rounded-3xl bg-muted p-7 sm:p-12">
         <div className="flex flex-col gap-6 px-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="font-medium text-muted-foreground text-xs uppercase tracking-[0.2em]">
+            <p className="font-medium text-muted-foreground text-xs uppercase tracking-[0.15em]">
               Features
             </p>
             <h2 className="mt-5 max-w-[18ch] text-balance font-heading font-semibold text-4xl tracking-tight sm:text-5xl">
