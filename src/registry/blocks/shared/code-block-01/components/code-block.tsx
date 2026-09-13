@@ -12,7 +12,7 @@ const code = `const user = {\n\tname: "John Doe",
 export default function ProfileCard() {
 \treturn (
 \t\t<div className="p-4 border rounded-lg">
-\t\t\t<h2 className="text-lg font-heading font-semibold">{user.name}</h2>
+\t\t\t<h2 className="text-lg font-semibold">{user.name}</h2>
 \t\t\t<p>{user.role}</p>
 \t\t\t<p className="text-sm text-muted-foreground">
 \t\t\t\tExperience: {user.experience}

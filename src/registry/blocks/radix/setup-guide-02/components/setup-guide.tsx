@@ -24,7 +24,7 @@ export default function SetupGuide() {
     <div className="px-6 py-12">
       <Card className="mx-auto my-10 max-w-xl gap-1 overflow-hidden rounded-xl bg-card pb-0 sm:my-16">
         <CardHeader className="gap-1.5 px-8">
-          <CardTitle className="font-heading font-medium text-2xl tracking-[-0.02em]">
+          <CardTitle className="font-medium text-2xl tracking-[-0.03em]">
             Get Started with Your Account
           </CardTitle>
           <CardDescription className="text-base text-muted-foreground">
@@ -76,7 +76,7 @@ export default function SetupGuide() {
 
               <div className="flex grow flex-col justify-between gap-3 sm:flex-row sm:items-center sm:gap-5">
                 <div className="flex-1">
-                  <h3 className="font-heading font-medium">{step.title}</h3>
+                  <h3 className="font-medium">{step.title}</h3>
                 </div>
 
                 <div className="leading-none">

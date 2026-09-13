@@ -73,7 +73,7 @@ export function StatsCard({
       {...props}
     >
       <CardHeader>
-        <CardTitle className="font-heading text-3xl">+2,350</CardTitle>
+        <CardTitle className="font-satoshi text-3xl">+2,350</CardTitle>
         <CardDescription>+180.1% from last month</CardDescription>
         <CardAction>
           <Button size="sm" variant="ghost">

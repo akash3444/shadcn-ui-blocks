@@ -16,7 +16,7 @@ export default function Members() {
       <div className="mx-auto max-w-3xl border">
         <div className="flex items-center justify-between border-b bg-muted/70 px-6 py-5">
           <div>
-            <h2 className="font-heading font-medium text-lg">Members</h2>
+            <h2 className="font-medium text-lg">Members</h2>
             <div className="mt-0.5 flex items-center text-muted-foreground text-sm">
               <span>Team Avengers</span> <Dot /> <span>10 Members</span>
             </div>

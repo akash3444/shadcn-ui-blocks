@@ -75,7 +75,7 @@ export default function Blog() {
       {/* Header */}
       <div className="flex items-end justify-between gap-4">
         <div>
-          <h2 className="text-balance font-heading font-medium text-2xl tracking-[-0.015em]">
+          <h2 className="text-balance font-medium text-2xl tracking-tight">
             Welcome to our blog!
           </h2>
           <p className="mt-0.5 text-pretty text-lg text-muted-foreground tracking-normal">
@@ -112,7 +112,7 @@ export default function Blog() {
                     </Badge>
                   ))}
                 </div>
-                <h3 className="mt-3 font-heading font-medium text-xl">{post.title}</h3>
+                <h3 className="mt-3 font-medium text-xl">{post.title}</h3>
                 <div className="mt-4 flex items-center justify-between gap-2">
                   <div className="flex items-center gap-1.5 text-muted-foreground text-sm">
                     <CalendarDays className="size-4" />{" "}

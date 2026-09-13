@@ -8,7 +8,7 @@ export default function NotFound() {
       <div className="flex size-12 items-center justify-center rounded-2xl border bg-muted">
         <OctagonXIcon className="size-6 text-muted-foreground" />
       </div>
-      <h1 className="font-heading font-medium text-4xl tracking-[-0.015em]">
+      <h1 className="font-medium text-4xl tracking-tight">
         This page doesn&apos;t exist
       </h1>
       <Button className="mt-4" render={<Link href="/" />} variant="secondary">

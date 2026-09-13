@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 export default function SetupGuide() {
   return (
     <div className="mx-auto max-w-(--breakpoint-md) px-6 py-10 sm:py-16">
-      <h2 className="font-heading font-medium text-2xl tracking-[-0.02em] sm:text-3xl">
+      <h2 className="font-medium text-2xl tracking-[-0.03em] sm:text-3xl">
         Get Started with Your Account
       </h2>
       <p className="mt-2 text-muted-foreground sm:text-lg">
@@ -48,7 +48,7 @@ export default function SetupGuide() {
 
             <div className="flex grow flex-col justify-between gap-3 sm:flex-row sm:items-center sm:gap-5">
               <div className="flex-1">
-                <h3 className="text-pretty font-heading font-medium sm:text-lg">
+                <h3 className="text-pretty font-medium sm:text-lg">
                   {step.title}
                 </h3>
                 <p className="mt-1 text-pretty text-muted-foreground text-sm sm:text-base">

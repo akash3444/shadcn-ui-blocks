@@ -7,7 +7,7 @@ const Contact = () => (
       <b className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
         Contact Us
       </b>
-      <h2 className="mt-3 font-heading font-medium text-4xl tracking-[-0.02em]">
+      <h2 className="mt-3 font-medium text-4xl tracking-[-0.04em]">
         We&apos;d love to hear from you
       </h2>
       <p className="mt-3 text-lg text-muted-foreground md:text-xl">
@@ -18,7 +18,7 @@ const Contact = () => (
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-foreground dark:bg-muted">
             <MailIcon />
           </div>
-          <h3 className="mt-8 font-heading font-medium text-xl">Email</h3>
+          <h3 className="mt-8 font-medium text-xl">Email</h3>
           <p className="mt-1.5 mb-4 text-muted-foreground">
             Our friendly team is here to help.
           </p>
@@ -33,7 +33,7 @@ const Contact = () => (
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-foreground dark:bg-muted">
             <MessageCircle />
           </div>
-          <h3 className="mt-8 font-heading font-medium text-xl">Live chat</h3>
+          <h3 className="mt-8 font-medium text-xl">Live chat</h3>
           <p className="mt-1.5 mb-4 text-muted-foreground">
             Our friendly team is here to help.
           </p>
@@ -45,7 +45,7 @@ const Contact = () => (
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-foreground dark:bg-muted">
             <MapPinIcon />
           </div>
-          <h3 className="mt-8 font-heading font-medium text-xl">Office</h3>
+          <h3 className="mt-8 font-medium text-xl">Office</h3>
           <p className="mt-1.5 mb-4 text-muted-foreground">
             Come say hello at our office HQ.
           </p>
@@ -61,7 +61,7 @@ const Contact = () => (
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-foreground dark:bg-muted">
             <PhoneIcon />
           </div>
-          <h3 className="mt-8 font-heading font-medium text-xl">Phone</h3>
+          <h3 className="mt-8 font-medium text-xl">Phone</h3>
           <p className="mt-1.5 mb-4 text-muted-foreground">
             Mon-Fri from 8am to 5pm.
           </p>

@@ -64,7 +64,7 @@ export default function Timeline() {
               {/* Content */}
               <div className="flex items-start">
                 <div className="mt-3 mr-5 flex w-[75px] shrink-0 flex-col gap-2 text-end sm:w-[90px]">
-                  <h6 className="font-heading font-semibold text-primary text-sm">
+                  <h6 className="font-semibold text-primary text-sm">
                     v{version}
                   </h6>
                   <span className="text-muted-foreground text-xs sm:text-sm">
@@ -75,7 +75,7 @@ export default function Timeline() {
                   {/* Timeline Dot */}
                   <div className="absolute top-4 -left-px h-3 w-3 -translate-x-1/2 rounded-full border-2 border-primary bg-background" />
 
-                  <h3 className="mt-2 font-heading font-medium text-lg tracking-[-0.01em]">
+                  <h3 className="mt-2 font-medium text-lg tracking-[-0.01em]">
                     {title}
                   </h3>
                   <p className="text-muted-foreground text-sm sm:text-base">

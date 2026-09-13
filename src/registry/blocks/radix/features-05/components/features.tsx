@@ -51,7 +51,7 @@ const Features = () => {
   return (
     <div className="px-6 py-20">
       <div className="mx-auto w-full max-w-(--breakpoint-lg)">
-        <h2 className="text-pretty text-center font-heading font-medium text-4xl tracking-[-0.02em] md:text-[2.75rem]">
+        <h2 className="text-pretty text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
           What makes it different
         </h2>
         <p className="mt-3 text-center text-lg text-muted-foreground tracking-[-0.01em] md:text-2xl">
@@ -65,7 +65,7 @@ const Features = () => {
             >
               <CardHeader>
                 <feature.icon />
-                <h4 className="mt-3! font-heading font-medium text-xl tracking-[-0.01em]">
+                <h4 className="mt-3! font-medium text-xl tracking-tight">
                   {feature.title}
                 </h4>
                 <p className="text-[17px] text-muted-foreground">

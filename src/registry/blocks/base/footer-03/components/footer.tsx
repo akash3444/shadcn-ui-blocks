@@ -103,7 +103,7 @@ const Footer = () => {
 
           {footerSections.map(({ title, links }) => (
             <div key={title}>
-              <h6 className="font-heading font-medium">{title}</h6>
+              <h6 className="font-medium">{title}</h6>
               <ul className="mt-6 space-y-4">
                 {links.map(({ title, href }) => (
                   <li key={title}>
@@ -121,7 +121,7 @@ const Footer = () => {
 
           {/* Subscribe Newsletter */}
           <div className="col-span-2">
-            <h6 className="font-heading font-medium">Stay up to date</h6>
+            <h6 className="font-medium">Stay up to date</h6>
             <form className="mt-6 flex items-center gap-2">
               <Input
                 className="max-w-64 grow"

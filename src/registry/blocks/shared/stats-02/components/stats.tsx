@@ -2,7 +2,7 @@ const Stats = () => {
   return (
     <div className="py-20">
       <div className="mx-auto w-full max-w-(--breakpoint-xl) px-6 py-12 xl:px-0">
-        <h2 className="font-heading font-medium text-4xl tracking-[-0.02em] md:text-[2.75rem]">
+        <h2 className="font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
           The impact we've made so far
         </h2>
         <p className="mt-4.5 max-w-2xl text-lg text-muted-foreground md:text-xl">
@@ -13,7 +13,7 @@ const Stats = () => {
 
         <div className="mt-16 grid justify-center gap-x-10 gap-y-16 sm:mt-24 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <div>
-            <span className="font-heading font-medium text-5xl tracking-[-0.015em] md:text-6xl">
+            <span className="font-medium text-5xl tracking-tight md:text-6xl">
               900+
             </span>
             <p className="mt-6 font-medium text-xl">
@@ -25,7 +25,7 @@ const Stats = () => {
             </p>
           </div>
           <div>
-            <span className="font-heading font-medium text-5xl text-muted-foreground tracking-[-0.015em] md:text-6xl">
+            <span className="font-medium text-5xl text-muted-foreground tracking-tight md:text-6xl">
               10,000+
             </span>
             <p className="mt-6 font-medium text-xl">Components and variants</p>
@@ -35,7 +35,7 @@ const Stats = () => {
             </p>
           </div>
           <div>
-            <span className="font-heading font-medium text-5xl tracking-[-0.015em] md:text-6xl">
+            <span className="font-medium text-5xl tracking-tight md:text-6xl">
               420+
             </span>
             <p className="mt-6 font-medium text-xl">Page design examples</p>
@@ -44,7 +44,7 @@ const Stats = () => {
             </p>
           </div>
           <div>
-            <span className="font-heading font-medium text-5xl text-muted-foreground tracking-[-0.015em] md:text-6xl">
+            <span className="font-medium text-5xl text-muted-foreground tracking-tight md:text-6xl">
               2,000+
             </span>
             <p className="mt-6 font-medium text-xl">Icons and logos</p>

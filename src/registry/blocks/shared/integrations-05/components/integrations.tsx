@@ -1,7 +1,7 @@
 export default function Integrations() {
   return (
     <div className="mx-auto flex max-w-7xl flex-col px-6 py-12 sm:py-14">
-      <h2 className="text-center font-heading font-medium text-4xl tracking-[-0.02em] sm:text-[2.75rem]">
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
         Plug into your stack
       </h2>
       <p className="mt-3 text-pretty text-center text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
@@ -32,7 +32,7 @@ export default function Integrations() {
                 </div>
               </div>
               <div>
-                <h3 className="py-2 font-heading font-medium text-xl">
+                <h3 className="py-2 font-medium text-xl">
                   {integration.title}
                 </h3>
                 <p className="mt-4 mb-2 text-pretty text-muted-foreground tracking-normal">

@@ -55,7 +55,7 @@ const Team = () => {
         <b className="font-medium text-muted-foreground text-sm uppercase">
           Our team
         </b>
-        <h2 className="mt-3 font-heading font-medium text-3xl tracking-[-0.02em] md:text-4xl">
+        <h2 className="mt-3 font-medium text-3xl tracking-[-0.04em] md:text-4xl">
           Leadership Team
         </h2>
         <p className="mt-4 text-base text-foreground/80 sm:text-lg">
@@ -81,7 +81,7 @@ const Team = () => {
               width={120}
             />
             <div>
-              <h3 className="font-heading font-medium text-lg">{member.name}</h3>
+              <h3 className="font-medium text-lg">{member.name}</h3>
               <p className="text-muted-foreground text-sm">{member.title}</p>
               <p className="mt-2 text-foreground/90">{member.bio}</p>
               <div className="mt-4 flex items-center gap-2.5">

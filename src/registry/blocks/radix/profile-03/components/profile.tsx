@@ -173,7 +173,7 @@ const Projects = () => {
           </div>
 
           <div className="mask-t-from-50% absolute inset-x-0 bottom-0 rounded-b-xl bg-background/80 p-6 pt-20">
-            <h3 className="font-heading font-medium text-xl tracking-[-0.005em]">
+            <h3 className="font-medium text-xl tracking-[-0.005em]">
               {project.name}
             </h3>
             <p className="mt-1.5 text-base text-foreground/90">

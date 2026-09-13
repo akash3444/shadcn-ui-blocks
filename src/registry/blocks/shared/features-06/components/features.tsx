@@ -39,7 +39,7 @@ const Features = () => {
   return (
     <div className="px-6 py-20">
       <div className="mx-auto w-full max-w-(--breakpoint-lg)">
-        <h2 className="text-pretty text-center font-heading font-medium text-4xl tracking-[-0.02em] md:text-[2.75rem]">
+        <h2 className="text-pretty text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
           Less setup, more building
         </h2>
         <p className="mt-3 text-pretty text-center text-lg text-muted-foreground tracking-[-0.01em] md:text-2xl">
@@ -107,7 +107,7 @@ const Features = () => {
                 )}
               </div>
               <div className="flex flex-1 basis-1/2 flex-col items-start">
-                <h4 className="mt-1 mb-2 font-heading font-medium text-2xl tracking-[-0.02em]">
+                <h4 className="mt-1 mb-2 font-medium text-2xl tracking-[-0.02em]">
                   {feature.title}
                 </h4>
                 <p className="mb-6 text-lg text-muted-foreground">

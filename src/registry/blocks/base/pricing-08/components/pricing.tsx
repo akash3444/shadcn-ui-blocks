@@ -61,7 +61,7 @@ const pricingPlans: PricingPlan[] = [
 const Pricing = () => {
   return (
     <section className="mx-auto max-w-5xl px-6 py-20">
-      <h2 className="text-center font-heading font-medium text-4xl tracking-[-0.02em] sm:text-[2.75rem]">
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
         Pricing that makes sense
       </h2>
       <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] md:text-2xl">
@@ -97,13 +97,13 @@ const PlanCard = ({ plan }: { plan: PricingPlan }) => {
       >
         <plan.icon className="mb-5 text-primary" />
         <div className="flex items-center gap-1">
-          <h3 className="font-heading font-medium text-2xl tracking-[-0.015em]">{plan.name}</h3>
+          <h3 className="font-medium text-2xl tracking-tight">{plan.name}</h3>
         </div>
         <p className="my-2 text-muted-foreground">{plan.description}</p>
       </div>
       <Separator />
       <div className="px-6 pt-5 pb-10">
-        <p className="mt-4 font-heading font-semibold text-4xl">
+        <p className="mt-4 font-satoshi font-semibold text-4xl">
           ${plan.price}
         </p>
         <p className="mt-1 text-muted-foreground text-sm tracking-normal">

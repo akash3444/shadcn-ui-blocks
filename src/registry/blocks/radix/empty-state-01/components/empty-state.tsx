@@ -21,7 +21,7 @@ export default function EmptyState() {
     <div className="px-6 py-10">
       <Card className="mx-auto max-w-sm pt-0">
         <CardHeader className="rounded-t-xl border-b bg-muted py-5!">
-          <CardTitle className="font-heading">Projects</CardTitle>
+          <CardTitle>Projects</CardTitle>
           <CardDescription>Your projects across all platforms.</CardDescription>
         </CardHeader>
         <CardContent>
@@ -30,7 +30,7 @@ export default function EmptyState() {
               <EmptyMedia variant="icon">
                 <Folders />
               </EmptyMedia>
-              <EmptyTitle className="font-heading">No Projects Yet</EmptyTitle>
+              <EmptyTitle>No Projects Yet</EmptyTitle>
               <EmptyDescription>
                 You haven&apos;t created any projects yet. Get started by
                 creating your first project.

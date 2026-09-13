@@ -39,7 +39,7 @@ const FAQ = () => {
   return (
     <div className="px-6 py-20">
       <div className="mx-auto w-full max-w-2xl">
-        <h2 className="font-heading font-medium text-4xl/snug tracking-[-0.02em]">
+        <h2 className="font-medium text-4xl/snug tracking-[-0.04em]">
           Frequently Asked Questions
         </h2>
         <p className="mt-2 text-muted-foreground text-xl">

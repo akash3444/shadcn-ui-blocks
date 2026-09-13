@@ -4,7 +4,7 @@ import { Button } from "@/registry/bases/base/ui/button";
 export default function NotFound() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
-      <h1 className="mt-4 font-heading font-medium text-[2.5rem]/none tracking-[-0.02em]">
+      <h1 className="mt-4 font-medium text-[2.5rem]/none tracking-[-0.02em]">
         Page not found
       </h1>
       <p className="mt-6 max-w-sm text-muted-foreground">

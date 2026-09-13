@@ -24,7 +24,7 @@ export default function EmptyState() {
                 </div>
               </Marquee>
             </div>
-            <EmptyTitle className="font-heading">No Projects Yet</EmptyTitle>
+            <EmptyTitle>No Projects Yet</EmptyTitle>
             <EmptyDescription>
               You haven&apos;t created any projects yet. Get started by creating
               your first project.

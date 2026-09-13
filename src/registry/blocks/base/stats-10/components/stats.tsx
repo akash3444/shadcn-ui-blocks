@@ -6,7 +6,7 @@ const Stats = () => {
   return (
     <div className="mx-auto flex max-w-5xl flex-col items-start gap-14 px-6 py-20 sm:gap-10 md:flex-row">
       <div className="max-w-md lg:max-w-lg">
-        <h2 className="font-heading font-medium text-4xl tracking-[-0.02em] md:text-[2.75rem]">
+        <h2 className="font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
           Numbers that matter
         </h2>
         <p className="mt-3.5 text-muted-foreground text-xl tracking-[-0.01em] md:text-2xl/normal">
@@ -25,19 +25,19 @@ const Stats = () => {
         )}
       >
         <div className="">
-          <div className="font-heading font-medium text-5xl">96%</div>
+          <div className="font-medium text-5xl">96%</div>
           <p className="text-foreground/80 text-lg">
             of customers say they have a better brand experience
           </p>
         </div>
         <div className="">
-          <div className="font-heading font-medium text-5xl">95%</div>
+          <div className="font-medium text-5xl">95%</div>
           <p className="text-foreground/80 text-lg">
             of customers say they gather more data, more easily
           </p>
         </div>
         <div className="">
-          <div className="font-heading font-medium text-5xl">87%</div>
+          <div className="font-medium text-5xl">87%</div>
           <p className="text-foreground/80 text-lg">
             of customers say they reveal deeper insights from data
           </p>

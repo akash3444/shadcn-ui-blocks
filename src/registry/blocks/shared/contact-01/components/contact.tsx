@@ -7,7 +7,7 @@ const Contact = () => (
       <b className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
         Contact Us
       </b>
-      <h2 className="mt-3 font-heading font-medium text-4xl tracking-[-0.015em]">Get In Touch</h2>
+      <h2 className="mt-3 font-medium text-4xl tracking-tight">Get In Touch</h2>
       <p className="mt-3 text-lg text-muted-foreground md:text-xl">
         Our friendly team is always here to chat
       </p>
@@ -16,7 +16,7 @@ const Contact = () => (
           <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border/30 bg-primary/5 text-primary shadow-xl/2 dark:bg-primary/10">
             <MailIcon />
           </div>
-          <h3 className="mt-6 font-heading font-medium text-xl">Email</h3>
+          <h3 className="mt-6 font-medium text-xl">Email</h3>
           <p className="mt-2 text-muted-foreground">
             Our friendly team is here to help.
           </p>
@@ -31,7 +31,7 @@ const Contact = () => (
           <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border/30 bg-primary/5 text-primary shadow-xl/2 dark:bg-primary/10">
             <MapPinIcon />
           </div>
-          <h3 className="mt-6 font-heading font-medium text-xl">Office</h3>
+          <h3 className="mt-6 font-medium text-xl">Office</h3>
           <p className="mt-2 text-muted-foreground">
             Come say hello at our office HQ.
           </p>
@@ -47,7 +47,7 @@ const Contact = () => (
           <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border/30 bg-primary/5 text-primary shadow-xl/2 dark:bg-primary/10">
             <PhoneIcon />
           </div>
-          <h3 className="mt-6 font-heading font-medium text-xl">Phone</h3>
+          <h3 className="mt-6 font-medium text-xl">Phone</h3>
           <p className="mt-2 text-muted-foreground">Mon-Fri from 8am to 5pm.</p>
           <Link
             className="mt-4 font-medium text-primary"

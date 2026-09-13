@@ -90,7 +90,7 @@ const Blog = () => {
   return (
     <div className="mx-auto max-w-(--breakpoint-xl) px-6 py-16 xl:px-0">
       <div className="flex items-end justify-between">
-        <h2 className="font-heading font-medium text-[1.5rem] tracking-[-0.01em]">
+        <h2 className="font-medium text-[1.5rem] tracking-tight">
           Recommended Posts
         </h2>
         <Select defaultValue="recommended">
@@ -132,7 +132,7 @@ const Blog = () => {
                 </span>
               </div>
 
-              <h3 className="mt-4 font-heading font-medium text-[1.4rem] text-xl tracking-[-0.02em]">
+              <h3 className="mt-4 font-medium text-[1.4rem] text-xl tracking-[-0.02em]">
                 {post.title}
               </h3>
               <p className="mt-2 text-muted-foreground">{post.description}</p>

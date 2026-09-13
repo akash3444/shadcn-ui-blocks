@@ -28,7 +28,7 @@ export default function CarouselDemo() {
         <div className="rounded-xl bg-card p-6 shadow-xl/3 ring ring-border/80">
           <div className="mb-5 flex items-end justify-between">
             <div>
-              <h2 className="font-heading font-medium text-3xl tracking-[-0.015em]">dddepth</h2>
+              <h2 className="font-medium text-3xl tracking-tight">dddepth</h2>
               <p className="mt-2 text-lg text-muted-foreground leading-snug">
                 A Curated Collection of AI-generated Abstract 3D Shapes
               </p>

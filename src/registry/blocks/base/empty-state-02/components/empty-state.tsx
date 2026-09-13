@@ -44,7 +44,7 @@ export default function EmptyState() {
                     <EmptyMedia variant="icon">
                       <Receipt />
                     </EmptyMedia>
-                    <EmptyTitle className="font-heading">No Invoices Yet</EmptyTitle>
+                    <EmptyTitle>No Invoices Yet</EmptyTitle>
                     <EmptyDescription>
                       You haven&apos;t created any invoices yet. Get started by
                       creating your first invoice.

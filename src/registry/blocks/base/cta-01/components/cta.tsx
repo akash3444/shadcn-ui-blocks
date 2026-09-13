@@ -6,7 +6,7 @@ const CTA = () => {
   return (
     <div className="px-0 py-20 sm:px-6">
       <div className="relative flex w-full flex-col items-center justify-center py-16">
-        <h2 className="font-heading font-medium text-5xl tracking-[-0.02em]">
+        <h2 className="font-medium text-5xl tracking-tighter">
           Ready to Build Faster?
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-center text-muted-foreground text-xl/normal">

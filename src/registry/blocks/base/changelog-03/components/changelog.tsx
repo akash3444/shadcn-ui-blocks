@@ -72,7 +72,7 @@ const formatDate = (date: Date) => {
 export default function Changelog() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-16">
-      <h2 className="text-balance font-heading font-medium text-4xl tracking-[-0.015em]">
+      <h2 className="text-balance font-medium text-4xl tracking-tight">
         Changelog
       </h2>
       <p className="mt-2 text-balance text-lg text-muted-foreground tracking-[-0.015em] sm:mt-3 sm:text-xl">
@@ -93,7 +93,7 @@ export default function Changelog() {
                 v{changelog.version} <Dot />{" "}
                 {formatDate(new Date(changelog.date))}
               </div>
-              <h3 className="mt-3 font-heading font-medium text-2xl tracking-[-0.02em]">
+              <h3 className="mt-3 font-medium text-2xl tracking-[-0.02em]">
                 {changelog.title}
               </h3>
               <span className="mt-2 block text-lg text-muted-foreground tracking-tight sm:hidden">
@@ -140,7 +140,7 @@ const ChangelogSection = ({
 }) => {
   return (
     <div>
-      <h4 className="mb-1 flex items-center gap-2 font-heading font-medium text-foreground text-lg">
+      <h4 className="mb-1 flex items-center gap-2 font-medium text-foreground text-lg">
         {title}
       </h4>
       <ul className="list-disc pl-5">

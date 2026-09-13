@@ -76,7 +76,7 @@ const Testimonials = () => {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 sm:py-20">
-      <h2 className="text-center font-heading font-medium text-4xl tracking-[-0.02em] md:text-[2.75rem]">
+      <h2 className="text-center font-medium text-4xl tracking-[-0.04em] md:text-[2.75rem]">
         What others think
       </h2>
       <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-[-0.015em] sm:mt-4 sm:text-2xl">
@@ -95,12 +95,12 @@ const Testimonials = () => {
               <CarouselItem key={index}>
                 <div className="relative flex gap-8 rounded-lg border bg-muted/70 p-8 pt-16 pr-8 md:pt-8">
                   {/* Quote */}
-                  <span className="absolute top-3 left-6.5 font-heading text-8xl md:hidden">
+                  <span className="absolute top-3 left-6.5 font-satoshi text-8xl md:hidden">
                     &ldquo;
                   </span>
 
                   <div className="flex flex-col gap-2">
-                    <p className="grow font-heading font-medium text-xl leading-relaxed tracking-[-0.015em] sm:text-2xl sm:leading-[1.45] lg:text-3xl">
+                    <p className="grow font-medium text-xl leading-relaxed tracking-tight sm:text-2xl sm:leading-[1.45] lg:text-3xl">
                       {testimonial}
                     </p>
                     <div className="mt-6 flex items-center gap-2 md:mt-0">

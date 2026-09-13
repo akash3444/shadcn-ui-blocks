@@ -135,7 +135,7 @@
     }
   }
   --font-general-sans: "General Sans", "Helvetica Neue", Arial, sans-serif;
-  --font-sans: var(--font-geist);
+  --font-sans: var(--font-general-sans);
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
@@ -213,19 +213,21 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 font-normal;
   }
   html {
     @apply scroll-smooth;
   }
   body {
-    @apply font-sans bg-background text-foreground;
+    @apply bg-background text-foreground font-normal;
+    --font-weight-normal: 460;
+    letter-spacing: 0.01em;
   }
 }
 
 @layer utilities {
   .font-heading {
-    --font-weight-normal: 500;
+    --tracking-tight: -0.01em;
     --font-weight-medium: 525;
     --font-weight-semibold: 535;
   }

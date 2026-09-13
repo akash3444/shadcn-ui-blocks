@@ -69,7 +69,7 @@ const Team = () => {
         <b className="text-center font-medium text-muted-foreground text-sm uppercase">
           We&apos;re hiring!
         </b>
-        <h2 className="mt-3 font-heading font-medium text-4xl tracking-[-0.02em] sm:text-[2.75rem]">
+        <h2 className="mt-3 font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
           A team of creators
         </h2>
         <p className="mt-4 text-pretty text-base text-muted-foreground sm:text-xl">
@@ -94,7 +94,7 @@ const Team = () => {
               src={member.imageUrl}
               width={600}
             />
-            <h3 className="mt-4 font-heading font-medium text-lg">{member.name}</h3>
+            <h3 className="mt-4 font-medium text-lg">{member.name}</h3>
             <p className="text-muted-foreground text-sm">{member.title}</p>
             <p className="mt-3">{member.bio}</p>
             <div className="mt-6 flex items-center gap-2.5">
