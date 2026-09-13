@@ -34,7 +34,7 @@ export function FAQ() {
           <p className="mb-4 text-muted-foreground text-sm">
             Want to see what you can build?
           </p>
-          <Button render={<Link href="/blocks" />}>
+          <Button nativeButton={false} render={<Link href="/blocks" />}>
             Explore the blocks
             <ArrowRight data-icon="inline-end" />
           </Button>

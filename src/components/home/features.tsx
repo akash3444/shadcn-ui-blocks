@@ -60,7 +60,11 @@ export const Features = () => (
               The details that save you time.
             </h2>
           </div>
-          <Button render={<Link href="/blocks" />} size="lg">
+          <Button
+            nativeButton={false}
+            render={<Link href="/blocks" />}
+            size="lg"
+          >
             Browse blocks <ArrowRightIcon />
           </Button>
         </div>
