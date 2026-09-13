@@ -3,7 +3,7 @@
 import { FullscreenIcon, Moon, Paintbrush, Sun } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -43,14 +43,16 @@ const BlockToolbar = () => {
       <Tooltip>
         <TooltipTrigger
           render={
-            <Link
-              className={buttonVariants({
-                size: "icon-sm",
-                variant: "outline",
-              })}
-              href={iframeSrc}
-              onClick={handleFullscreen}
-              target="_blank"
+            <Button
+              render={
+                <Link
+                  href={iframeSrc}
+                  onClick={handleFullscreen}
+                  target="_blank"
+                />
+              }
+              size="icon-sm"
+              variant="outline"
             />
           }
         >
@@ -61,7 +63,7 @@ const BlockToolbar = () => {
         </TooltipContent>
       </Tooltip>
       <V0Button url={absoluteUrl(`/r/${block.name}.json`)} />
-      <div className="hidden h-8 items-center gap-1 rounded-md border bg-background p-1 shadow-xs md:flex dark:bg-input/30">
+      <div className="hidden h-7 items-center gap-1 rounded-md border bg-background p-1 shadow-xs md:flex dark:bg-input/30">
         {blockScreens.map(({ name, icon: Icon }) => (
           <Tooltip key={name}>
             <TooltipTrigger
