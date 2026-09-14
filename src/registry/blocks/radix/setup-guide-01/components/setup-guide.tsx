@@ -13,13 +13,12 @@ import { Button } from "@/registry/bases/radix/ui/button";
 
 export default function SetupGuide() {
   return (
-    <div className="mx-auto max-w-(--breakpoint-md) px-6 py-10 sm:py-16">
+    <div className="mx-auto max-w-xl px-6 py-10 sm:py-16">
       <h2 className="font-medium text-2xl tracking-tight sm:text-3xl">
-        Get started with your account
+        Open your client portal
       </h2>
       <p className="mt-2 text-muted-foreground sm:text-lg">
-        Follow these quick steps to set up your account and unlock all the
-        essential features.
+        Complete these steps before you invite your first client.
       </p>
 
       <div className="mt-6 flex flex-col divide-y overflow-hidden rounded-xl border bg-card shadow-lg/[0.03]">
@@ -85,37 +84,36 @@ export default function SetupGuide() {
 
 const setupGuideSteps = [
   {
-    title: "Add your company logo",
-    description: "Pull your company logo and branding into the platform.",
+    title: "Add your company details",
+    description: "Add the name, logo, and contact details clients will see.",
     time: "2 minutes",
     icon: ImageIcon,
     status: "completed",
   },
   {
-    title: "Explore your personalized online client portal",
-    description: "Let clients approve quotes, review jobs, and pay all online.",
+    title: "Organize the client dashboard",
+    description: "Choose which projects, files, and invoices appear.",
     time: "5 minutes",
     icon: LayoutDashboardIcon,
     status: "pending",
   },
   {
-    title: "Get paid with fast invoicing",
-    description:
-      "Create and send invoices your clients can pay online instantly.",
-    time: "2 minutes",
+    title: "Connect a payment account",
+    description: "Accept card and bank payments on invoices.",
+    time: "3 minutes",
     icon: Zap,
     status: "pending",
   },
   {
-    title: "Create a winning quote",
-    description: "Boost your revenue with customized, professional quotes.",
-    time: "2 minutes",
+    title: "Upload your service agreement",
+    description: "Add the contract clients sign before work begins.",
+    time: "4 minutes",
     icon: FileTextIcon,
     status: "pending",
   },
   {
-    title: "Create a website for your business",
-    description: "Get your business online quickly with a free website setup.",
+    title: "Choose a portal address",
+    description: "Use a branded subdomain or connect your own domain.",
     time: "5 minutes",
     icon: GlobeIcon,
     status: "pending",

@@ -25,10 +25,10 @@ export default function SetupGuide() {
       <Card className="mx-auto my-10 max-w-xl gap-1 overflow-hidden rounded-xl bg-card pb-0 sm:my-16">
         <CardHeader className="gap-1.5 px-8">
           <CardTitle className="font-medium text-2xl tracking-tight">
-            Get started with your account
+            Get your store ready
           </CardTitle>
           <CardDescription className="text-base text-muted-foreground">
-            Follow these quick steps to set up your account and unlock features.
+            One last pass before your first order comes in.
           </CardDescription>
 
           <Progress className="mt-4" value={completionPercentage} />
@@ -76,7 +76,7 @@ export default function SetupGuide() {
 
               <div className="flex grow flex-col justify-between gap-3 sm:flex-row sm:items-center sm:gap-5">
                 <div className="flex-1">
-                  <h3 className="font-medium">{step.title}</h3>
+                  <h3 className="font-medium text-base">{step.title}</h3>
                 </div>
 
                 <div className="leading-none">
@@ -102,38 +102,37 @@ export default function SetupGuide() {
 
 const setupGuideSteps = [
   {
-    title: "Add your company logo",
-    description: "Pull your company logo and branding into the platform.",
+    title: "Add your store logo",
+    description: "Upload the mark shown in your header and order emails.",
     time: "2 minutes",
     icon: ImageIcon,
     status: "completed",
   },
   {
-    title: "Explore your personalized online client portal",
-    description: "Let clients approve quotes, review jobs, and pay all online.",
+    title: "Customize the storefront",
+    description: "Choose a theme and preview your product pages.",
     time: "5 minutes",
     icon: LayoutDashboardIcon,
     status: "pending",
   },
   {
-    title: "Get paid with fast invoicing",
-    description:
-      "Create and send invoices your clients can pay online instantly.",
-    time: "2 minutes",
+    title: "Configure checkout",
+    description: "Set your currency, payment methods, and tax rules.",
+    time: "5 minutes",
     icon: Zap,
     status: "pending",
   },
   {
-    title: "Create a winning quote",
-    description: "Boost your revenue with customized, professional quotes.",
-    time: "2 minutes",
+    title: "Write your shipping policy",
+    description: "Tell customers where you ship and when orders arrive.",
+    time: "4 minutes",
     icon: FileTextIcon,
     status: "pending",
   },
   {
-    title: "Create a website for your business",
-    description: "Get your business online quickly with a free website setup.",
-    time: "5 minutes",
+    title: "Connect your store domain",
+    description: "Point an existing domain to your new storefront.",
+    time: "3 minutes",
     icon: GlobeIcon,
     status: "pending",
   },

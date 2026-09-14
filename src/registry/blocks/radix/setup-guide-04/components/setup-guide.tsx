@@ -13,18 +13,17 @@ export default function SetupGuide() {
   return (
     <div className="mx-auto max-w-(--breakpoint-md) px-6 py-10 sm:py-16">
       <h2 className="font-medium text-2xl tracking-tight sm:text-3xl">
-        Get started with your account
+        Set up your support inbox
       </h2>
       <p className="mt-2 text-muted-foreground sm:text-lg">
-        Follow these quick steps to set up your account and unlock all the
-        essential features.
+        Route incoming requests and give agents the context they need.
       </p>
 
-      <div className="mt-6 flex flex-col divide-y overflow-hidden rounded border bg-card shadow-lg/[0.03]">
+      <div className="mt-6 flex flex-col divide-y overflow-hidden rounded-xl border bg-card shadow-lg/[0.03]">
         {setupGuideSteps.map((step) => (
           <div
             className={cn(
-              "relative isolate flex items-center gap-5 px-6 py-5 sm:px-8",
+              "relative isolate flex items-center gap-5 px-6 py-4 sm:px-8",
               {
                 "bg-primary/8": step.status === "completed",
                 "cursor-pointer transition-colors hover:bg-muted/50":
@@ -38,9 +37,9 @@ export default function SetupGuide() {
 
             <Badge
               className={cn(
-                "absolute top-0 right-0 rounded-none rounded-bl border-border border-e-0 border-t-0 border-dashed text-xs",
+                "absolute top-1.5 right-1.5 rounded-full border-border text-xs",
                 {
-                  "border-background/50": step.status === "completed",
+                  "border-primary": step.status === "completed",
                 }
               )}
               variant={step.status === "completed" ? "default" : "secondary"}
@@ -76,7 +75,7 @@ export default function SetupGuide() {
                 <h3 className="text-pretty font-medium sm:text-lg">
                   {step.title}
                 </h3>
-                <p className="mt-1 text-pretty text-muted-foreground text-sm">
+                <p className="text-pretty text-base text-muted-foreground">
                   {step.description}
                 </p>
               </div>
@@ -90,37 +89,36 @@ export default function SetupGuide() {
 
 const setupGuideSteps = [
   {
-    title: "Add your company logo",
-    description: "Pull your company logo and branding into the platform.",
-    time: "2 minutes",
+    title: "Add your support identity",
+    description: "Set the sender name and logo customers see in replies.",
+    time: "3 minutes",
     icon: ImageIcon,
     status: "completed",
   },
   {
-    title: "Explore your personalized online client portal",
-    description: "Let clients approve quotes, review jobs, and pay all online.",
-    time: "5 minutes",
+    title: "Arrange the agent workspace",
+    description: "Choose the customer details shown beside each ticket.",
+    time: "6 minutes",
     icon: LayoutDashboardIcon,
     status: "pending",
   },
   {
-    title: "Get paid with fast invoicing",
-    description:
-      "Create and send invoices your clients can pay online instantly.",
-    time: "2 minutes",
+    title: "Create an urgent-ticket rule",
+    description: "Flag payment failures and security reports for review.",
+    time: "4 minutes",
     icon: Zap,
     status: "pending",
   },
   {
-    title: "Create a winning quote",
-    description: "Boost your revenue with customized, professional quotes.",
-    time: "2 minutes",
+    title: "Publish saved replies",
+    description: "Give agents approved answers to common questions.",
+    time: "8 minutes",
     icon: FileTextIcon,
     status: "pending",
   },
   {
-    title: "Create a website for your business",
-    description: "Get your business online quickly with a free website setup.",
+    title: "Connect your help center",
+    description: "Suggest relevant articles while customers write in.",
     time: "5 minutes",
     icon: GlobeIcon,
     status: "pending",
