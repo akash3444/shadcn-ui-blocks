@@ -6,7 +6,6 @@ import {
   UserIcon,
 } from "lucide-react";
 import type { SVGProps } from "react";
-import { cn } from "@/lib/utils";
 import {
   Avatar,
   AvatarFallback,
@@ -93,14 +92,7 @@ export default function Profile() {
       <div className="mt-8 border-b">
         <Tabs className="mx-auto w-full max-w-3xl px-6" defaultValue="profile">
           <ScrollArea className="mask-r-from-95%">
-            <TabsList
-              className={cn(
-                "rounded-none bg-transparent p-0",
-                "*:rounded-none *:border-0 *:border-b-2 *:px-4 *:text-muted-foreground",
-                "*:data-[state=active]:border-foreground *:data-[state=active]:border-b-2 *:data-[state=active]:bg-transparent",
-                "*:data-[state=active]:text-foreground *:data-[state=active]:shadow-none!"
-              )}
-            >
+            <TabsList variant="line">
               <TabsTrigger value="profile">Profile</TabsTrigger>
               <TabsTrigger value="posts">Posts</TabsTrigger>
               <TabsTrigger value="followers">Followers</TabsTrigger>
