@@ -64,11 +64,11 @@ const testimonials = [
 const Testimonials = () => (
   <div className="px-6 py-20">
     <div>
-      <h2 className="text-center font-medium text-4xl tracking-tight md:text-[2.75rem]">
+      <h2 className="text-center font-medium text-4xl tracking-tight md:text-4xl">
         Trusted by many
       </h2>
-      <p className="mt-3.5 text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">
-        See how people are using it in their everyday work
+      <p className="mt-3.5 text-center text-muted-foreground text-xl md:text-2xl">
+        See how people are using it in their work
       </p>
       <div className="mx-auto mt-14 max-w-(--breakpoint-xl) columns-1 gap-8 md:columns-2 lg:mt-16 lg:columns-3">
         {testimonials.map((testimonial) => (

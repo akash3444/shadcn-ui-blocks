@@ -1,6 +1,6 @@
 import { StarIcon } from "lucide-react";
-import { Avatar, AvatarFallback } from "@/registry/bases/base/ui/avatar";
 import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback } from "@/registry/bases/base/ui/avatar";
 
 const testimonials = [
   {
@@ -62,11 +62,11 @@ const testimonials = [
 const Testimonials = () => (
   <div className="px-6 py-20">
     <div>
-      <h2 className="text-center font-medium text-4xl tracking-tight md:text-[2.75rem]">
+      <h2 className="text-center font-medium text-4xl tracking-tight md:text-4xl">
         Loved by developers
       </h2>
-      <p className="mt-4 text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">
-        See how developers and teams are achieving more with us
+      <p className="mt-4 text-center text-muted-foreground text-xl md:text-2xl">
+        See how teams are achieving more with us
       </p>
       <div className="mx-auto mt-8 w-full max-w-(--breakpoint-xl) sm:mt-14 lg:mt-16">
         <div className="grid grid-cols-1 overflow-hidden md:grid-cols-2 lg:grid-cols-3">

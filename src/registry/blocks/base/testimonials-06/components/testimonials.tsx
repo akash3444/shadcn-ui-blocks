@@ -3,6 +3,7 @@
 import { StarIcon } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback } from "@/registry/bases/base/ui/avatar";
 import {
   Carousel,
@@ -12,7 +13,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/registry/bases/base/ui/carousel";
-import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
@@ -105,11 +105,11 @@ const Testimonials = () => {
 
   return (
     <div className="px-6 py-20">
-      <h2 className="text-center font-medium text-4xl tracking-tight md:text-[2.75rem]">
+      <h2 className="text-center font-medium text-4xl tracking-tight md:text-4xl">
         People love using it
       </h2>
-      <p className="mt-4 text-center text-muted-foreground text-xl tracking-[-0.015em] md:text-2xl">
-        Real feedback from those who've made it part of their workflow
+      <p className="mt-4 text-center text-muted-foreground text-xl md:text-2xl">
+        Real feedback from those who using in their workflow
       </p>
       <div className="container mx-auto mt-14 w-full px-12 lg:mt-16 lg:max-w-(--breakpoint-lg) xl:max-w-(--breakpoint-xl)">
         <Carousel setApi={setApi}>

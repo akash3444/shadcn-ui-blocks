@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { cn } from "@/lib/utils";
 import {
   Carousel,
   type CarouselApi,
@@ -9,7 +10,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/registry/bases/radix/ui/carousel";
-import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
@@ -76,11 +76,11 @@ const Testimonials = () => {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 sm:py-20">
-      <h2 className="text-center font-medium text-4xl tracking-tight md:text-[2.75rem]">
+      <h2 className="text-center font-medium text-4xl tracking-tight md:text-4xl">
         What others think
       </h2>
-      <p className="mt-2 text-balance text-center text-lg text-muted-foreground tracking-[-0.015em] sm:mt-4 sm:text-2xl">
-        Real stories from real users who&apos;ve seen real results
+      <p className="mt-2 text-balance text-center text-lg text-muted-foreground sm:mt-4 sm:text-2xl">
+        Real stories from real users with real results
       </p>
 
       <div className="mx-auto mt-20 max-w-248 md:mt-16 md:px-12">

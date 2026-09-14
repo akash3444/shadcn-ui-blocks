@@ -48,10 +48,10 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 sm:py-20">
-      <h2 className="text-center font-medium text-4xl tracking-tight md:text-[2.75rem]">
+      <h2 className="text-center font-medium text-4xl tracking-tight md:text-4xl">
         Testimonials
       </h2>
-      <p className="mt-2.5 text-balance text-center text-lg text-muted-foreground tracking-normal sm:text-2xl">
+      <p className="mt-2.5 text-balance text-center text-lg text-muted-foreground sm:text-2xl">
         What our customers say about us
       </p>
 
