@@ -11,7 +11,7 @@ import { NavigationSheet } from "./navigation-sheet";
 export const Navbar = () => {
   return (
     <nav className="sticky top-0 z-30 border-b bg-background px-6 ps-4 pe-2 lg:px-0">
-      <div className="relative z-20 mx-auto flex h-14 w-full max-w-384 items-center justify-between border-primary/8 ps-4 pe-10 text-foreground shadow shadow-primary/1">
+      <div className="relative z-20 mx-auto flex h-14 w-full max-w-384 items-center justify-between border-primary/8 ps-4 pe-6 text-foreground shadow shadow-primary/1">
         <div className="flex items-center gap-2">
           <Link className="flex items-center gap-2" href="/">
             <Logo className="font-bold" />

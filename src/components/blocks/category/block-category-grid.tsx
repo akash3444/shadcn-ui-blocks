@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { blockCategories } from "@/blocks";
-import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
 // ─── Design system ────────────────────────────────────────────────────────────
@@ -663,14 +662,11 @@ const CategoryCard = ({
         <div className="absolute inset-0 bg-linear-to-t from-card/20 to-transparent" />
       </div>
 
-      <div className="flex items-center justify-between border-t px-4 py-3">
-        <span className="font-heading font-medium text-sm">{title}</span>
-        <Badge
-          className="shrink-0 text-muted-foreground text-xs tabular-nums"
-          variant="secondary"
-        >
+      <div className="flex items-center justify-between border-t px-4 py-2.5">
+        <span className="font-heading font-medium text-base">{title}</span>
+        <span className="text-muted-foreground text-sm">
           {totalBlocks} {totalBlocks === 1 ? "block" : "blocks"}
-        </Badge>
+        </span>
       </div>
     </Link>
   );
@@ -680,17 +676,6 @@ const CategoryCard = ({
 
 const BlockCategoryGrid = () => (
   <div className="px-6">
-    <div className="mb-6">
-      <h1 className="font-heading font-semibold text-2xl tracking-[-0.02em]">
-        Browse by Category
-      </h1>
-      <p className="mt-1 text-muted-foreground text-sm">
-        {blockCategories.length} categories &middot;{" "}
-        {blockCategories.reduce((sum, c) => sum + c.totalBlocks, 0)} blocks
-        total
-      </p>
-    </div>
-
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {blockCategories.map((category) => (
         <CategoryCard
