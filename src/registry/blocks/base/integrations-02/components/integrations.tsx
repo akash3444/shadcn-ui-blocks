@@ -11,8 +11,8 @@ export default function Integrations() {
             Our Integrations
           </h2>
           <p className="mt-1.5 text-pretty text-muted-foreground">
-            Connect your favorite tools and services to your account and start
-            using them in your app.
+            Connect your favorite tools and services and start using them in
+            your app.
           </p>
           <div className="mx-auto mt-8 flex w-full flex-col gap-3">
             {integrations.map((integration) => (

@@ -73,7 +73,7 @@ const Features = () => {
                     {title}
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-[17px] text-muted-foreground leading-relaxed">
+                <AccordionContent className="ps-10 text-[17px] text-muted-foreground leading-relaxed">
                   {description}
                   <div className="mt-6 mb-2 aspect-video w-full rounded-xl bg-muted md:hidden" />
                 </AccordionContent>
