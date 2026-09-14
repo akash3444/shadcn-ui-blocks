@@ -69,8 +69,8 @@ const FAQ = () => {
   return (
     <div className="px-6 py-20">
       <div className="mx-auto w-full max-w-(--breakpoint-lg)">
-        <h2 className="font-medium text-4xl tracking-tight md:text-[2.6rem]">
-          Frequently Asked Questions
+        <h2 className="font-medium text-[2.4rem] tracking-tight">
+          Everything you need to know
         </h2>
 
         <div className="mt-6 grid w-full gap-x-10 md:grid-cols-2">

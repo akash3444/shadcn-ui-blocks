@@ -37,8 +37,8 @@ const FAQ = () => {
   return (
     <div className="px-6 py-20">
       <div className="flex flex-col items-start justify-center gap-x-12 gap-y-6 md:flex-row">
-        <h2 className="font-medium text-4xl/snug tracking-tighter lg:text-[2.75rem]/snug">
-          Frequently Asked <br /> Questions
+        <h2 className="font-medium text-[2.4rem]/[1.15] tracking-tighter">
+          Common questions, <br /> answered
         </h2>
 
         <Accordion className="max-w-xl" defaultValue="question-0" type="single">

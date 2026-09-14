@@ -40,10 +40,10 @@ const faqs = [
 const FAQ = () => {
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 sm:py-20">
-      <h2 className="text-balance text-center font-medium text-4xl tracking-tight sm:text-[2.6rem]">
-        Frequently Asked Questions
+      <h2 className="text-balance text-center font-medium text-[2.2rem] tracking-tight">
+        What can we help with?
       </h2>
-      <p className="mt-3 text-balance text-center text-lg text-muted-foreground md:text-2xl md:tracking-[-0.01em]">
+      <p className="mt-2 text-balance text-center text-lg text-muted-foreground md:text-2xl md:tracking-[-0.01em]">
         Answers to common product and service questions
       </p>
 
@@ -56,7 +56,7 @@ const FAQ = () => {
               value={faq.question}
             >
               <AccordionTrigger className="text-lg">
-                <div className="flex items-center gap-2 font-medium">
+                <div className="flex items-center gap-2 font-medium tracking-[-0.01em]">
                   <span className="mr-2 hidden sm:inline-block">
                     {index + 1}.
                   </span>{" "}

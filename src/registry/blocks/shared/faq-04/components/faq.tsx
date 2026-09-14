@@ -50,10 +50,10 @@ const FAQ = () => {
   return (
     <div className="flex min-h-screen items-center justify-center px-6 py-20">
       <div className="max-w-(--breakpoint-lg)">
-        <h2 className="text-center font-medium text-4xl/snug tracking-tighter md:text-[2.75rem]">
-          Frequently Asked Questions
+        <h2 className="text-center font-medium text-[2.4rem]/snug tracking-tighter">
+          Looking for an answer?
         </h2>
-        <p className="mt-3 text-center text-muted-foreground text-xl md:text-2xl md:tracking-[-0.015em]">
+        <p className="mt-2 text-center text-muted-foreground text-xl md:text-2xl md:tracking-[-0.015em]">
           Quick answers to common product and service questions
         </p>
 
@@ -67,7 +67,7 @@ const FAQ = () => {
                 <div className="flex size-9 items-center justify-center rounded-full bg-foreground/5">
                   <Icon className="size-4.5" />
                 </div>
-                <span className="font-medium text-[1.175rem] tracking-tight">
+                <span className="font-medium text-[1.2rem] tracking-[-0.01em]">
                   {question}
                 </span>
               </div>

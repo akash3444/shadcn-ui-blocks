@@ -82,8 +82,8 @@ export default function FAQ() {
   return (
     <div>
       <div className="px-6 py-20 text-center">
-        <h2 className="text-balance text-center font-medium text-4xl tracking-tight sm:text-[2.75rem]">
-          Frequently Asked Questions
+        <h2 className="text-balance text-center font-medium text-4xl tracking-tight">
+          Help with your order
         </h2>
         <p className="mt-3 text-balance text-center text-lg text-muted-foreground md:text-2xl md:tracking-[-0.015em]">
           Find answers to common questions about our products and services
@@ -99,7 +99,7 @@ export default function FAQ() {
               key={index}
             >
               <div className="isolate">
-                <div className="flex items-center gap-2 font-medium text-lg tracking-tight">
+                <div className="flex items-center gap-2 font-medium text-lg tracking-[-0.01em]">
                   <faq.icon className="mr-2.5 size-5 shrink-0 text-primary" />
                   {faq.question}
                 </div>

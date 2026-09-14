@@ -39,9 +39,7 @@ const FAQ = () => {
   return (
     <div className="px-6 py-20">
       <div className="mx-auto w-full max-w-2xl">
-        <h2 className="font-medium text-4xl/snug tracking-tight">
-          Frequently Asked Questions
-        </h2>
+        <h2 className="font-medium text-3xl/snug tracking-tight">Need help?</h2>
         <p className="mt-2 text-muted-foreground text-xl">
           Quick answers to common questions about our products and services.
         </p>
@@ -60,7 +58,7 @@ const FAQ = () => {
                 <AccordionPrimitive.Header className="flex items-center">
                   <AccordionPrimitive.Trigger
                     className={cn(
-                      "flex flex-1 items-center justify-between pt-4 pb-3 font-medium tracking-tight transition-all hover:underline [&[aria-expanded=true]>svg]:rotate-45",
+                      "flex flex-1 items-center justify-between pt-4 pb-3 font-medium tracking-[-0.01em] transition-all hover:underline [&[aria-expanded=true]>svg]:rotate-45",
                       "text-start text-lg"
                     )}
                   >
