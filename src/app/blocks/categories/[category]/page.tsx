@@ -111,7 +111,7 @@ const BlockCategoryPage = async (props: {
         <BlockCategoryJsonLd category={category} />
       </div>
 
-      <Footer className="dark bg-background/90 text-foreground" />
+      <Footer />
 
       <CarbonAd className="fixed right-2 bottom-2" />
     </div>
