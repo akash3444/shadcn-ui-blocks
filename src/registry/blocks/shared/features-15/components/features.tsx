@@ -1,8 +1,7 @@
 const features = [
   {
     title: "Blazing Fast Performance",
-    description:
-      "Optimized for speed with minimal loading times and instant interactions.",
+    description: "Optimized for speed with minimal loading times.",
     image: "https://www.fffuel.co/images/dddepth-preview/dddepth-028.jpg",
   },
   {
@@ -36,7 +35,7 @@ const features = [
 const Features = () => {
   return (
     <div className="mx-auto flex max-w-7xl flex-col px-6 py-20">
-      <h2 className="text-pretty text-center font-medium text-4xl tracking-tight sm:text-[2.6rem]">
+      <h2 className="text-pretty text-center font-medium text-4xl tracking-tight">
         Built with intention
       </h2>
       <p className="mt-3 text-pretty text-center text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">

@@ -7,8 +7,8 @@ import {
   ShieldCheckIcon,
   ZapIcon,
 } from "lucide-react";
-import { Button } from "@/registry/bases/base/ui/button";
 import { cn } from "@/lib/utils";
+import { Button } from "@/registry/bases/base/ui/button";
 
 const plusPoints = [
   {
@@ -55,8 +55,8 @@ export default function Features() {
       <strong className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
         Why Choose Us
       </strong>
-      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-medium text-4xl leading-[1.3] tracking-tight sm:text-[2.6rem]">
-        Advanced Home Security Solutions Built for Modern Living
+      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-medium text-4xl leading-[1.3] tracking-tight">
+        Advanced home security solutions built for modern living
       </h2>
       <p className="mt-4 text-pretty text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
         We are constantly always keep pace with the time

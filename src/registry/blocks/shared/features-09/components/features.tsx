@@ -49,7 +49,7 @@ const features = [
 const Features = () => {
   return (
     <div className="mx-auto flex max-w-7xl flex-col px-6 py-20">
-      <h2 className="text-pretty text-center font-medium text-4xl tracking-tight sm:text-[2.6rem]">
+      <h2 className="text-center text-4xl font-medium tracking-tight text-pretty">
         Ship with confidence
       </h2>
       <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">

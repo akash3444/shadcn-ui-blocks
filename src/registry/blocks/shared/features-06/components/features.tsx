@@ -39,7 +39,7 @@ const Features = () => {
   return (
     <div className="px-6 py-20">
       <div className="mx-auto w-full max-w-(--breakpoint-lg)">
-        <h2 className="text-pretty text-center font-medium text-4xl tracking-tighter md:text-[2.6rem]">
+        <h2 className="text-center text-4xl font-medium tracking-tighter text-pretty">
           Less setup, more building
         </h2>
         <p className="mt-3 text-pretty text-center text-lg text-muted-foreground tracking-[-0.01em] md:text-2xl">

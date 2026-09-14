@@ -4,7 +4,7 @@ import { Button } from "@/registry/bases/radix/ui/button";
 const Features = () => {
   return (
     <div className="mx-auto w-full max-w-(--breakpoint-lg) px-6 py-20">
-      <h2 className="font-medium text-3xl leading-10 tracking-tight sm:text-4xl md:text-[40px] md:leading-13">
+      <h2 className="font-medium text-4xl/10 tracking-tight md:leading-12">
         Design and engage: <br />
         <span className="text-muted-foreground/85">
           Build smarter spaces and strategies
