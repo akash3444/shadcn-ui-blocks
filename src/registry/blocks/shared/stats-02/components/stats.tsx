@@ -2,7 +2,7 @@ const Stats = () => {
   return (
     <div className="py-20">
       <div className="mx-auto w-full max-w-(--breakpoint-xl) px-6 py-12 xl:px-0">
-        <h2 className="font-medium text-4xl tracking-tight md:text-[2.75rem]">
+        <h2 className="font-medium text-4xl tracking-tight md:text-4xl">
           The impact we've made so far
         </h2>
         <p className="mt-4.5 max-w-2xl text-lg text-muted-foreground md:text-xl">

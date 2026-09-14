@@ -1,7 +1,7 @@
 function Stats() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
-      <h2 className="text-balance text-center font-medium text-3xl tracking-tight sm:text-4xl md:text-[2.75rem]">
+      <h2 className="text-balance text-center font-medium text-3xl tracking-tight sm:text-4xl md:text-4xl">
         Our Impact
       </h2>
       <p className="mt-3.5 text-center text-muted-foreground text-xl tracking-[-0.015em] sm:text-lg md:text-2xl">
