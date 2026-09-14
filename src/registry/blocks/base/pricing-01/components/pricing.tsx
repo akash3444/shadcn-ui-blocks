@@ -52,7 +52,7 @@ const plans = [
 const Pricing = () => {
   return (
     <div className="px-6 py-20">
-      <h2 className="text-center font-medium text-4xl tracking-tight sm:text-[2.75rem]">
+      <h2 className="text-center font-medium text-4xl tracking-tight">
         Our Plans
       </h2>
       <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] md:text-2xl">

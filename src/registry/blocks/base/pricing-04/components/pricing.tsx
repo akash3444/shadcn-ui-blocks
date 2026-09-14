@@ -70,7 +70,7 @@ const Pricing = () => {
 
   return (
     <div className="px-6 py-20">
-      <h2 className="text-center font-medium text-4xl tracking-tight sm:text-[2.75rem]">
+      <h2 className="text-center font-medium text-4xl tracking-tight">
         Our Plans
       </h2>
       <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] md:text-2xl">
@@ -78,21 +78,13 @@ const Pricing = () => {
       </p>
 
       <Tabs
-        className="mx-auto mt-8 max-w-max"
+        className="mt-8"
         onValueChange={setSelectedBillingPeriod}
         value={selectedBillingPeriod}
       >
-        <TabsList className="h-11 rounded-full border bg-background">
-          <TabsTrigger
-            className="rounded-full px-4 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-            value="monthly"
-          >
-            Monthly
-          </TabsTrigger>
-          <TabsTrigger
-            className="rounded-full px-4 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-            value="yearly"
-          >
+        <TabsList className="mx-auto grid w-full max-w-2xs grid-cols-2">
+          <TabsTrigger value="monthly">Monthly</TabsTrigger>
+          <TabsTrigger value="yearly">
             Yearly (Save {YEARLY_DISCOUNT}%)
           </TabsTrigger>
         </TabsList>
