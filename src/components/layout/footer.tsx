@@ -50,12 +50,12 @@ const footerSections = [
     title: "Products",
     links: [
       {
-        title: "Shadcn UI Blocks Pro",
-        href: "https://pro.shadcnui-blocks.com/",
-      },
-      {
         title: "basecn",
         href: "https://basecn.dev/",
+      },
+      {
+        title: "FormCanvas",
+        href: "https://formcanvas.dev/",
       },
     ],
   },
@@ -93,6 +93,12 @@ const Footer = ({ className, ...props }: ComponentProps<"footer">) => {
                     <Link
                       className="text-muted-foreground hover:text-foreground"
                       href={href}
+                      rel={
+                        href.startsWith("http")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
+                      target={href.startsWith("http") ? "_blank" : undefined}
                     >
                       {title}
                     </Link>
