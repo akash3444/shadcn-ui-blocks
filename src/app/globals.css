@@ -230,6 +230,14 @@
     --tracking-tighter: -0.03em;
     letter-spacing: 0.01em;
   }
+  .font-mono {
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --tracking-tight: -0.025em;
+    --tracking-tighter: -0.05em;
+    letter-spacing: normal;
+  }
 }
 
 /* Components page sidebar carbon ad */

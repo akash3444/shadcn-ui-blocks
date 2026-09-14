@@ -4,7 +4,7 @@ export default function KeyboardShortcuts() {
   return (
     <div className="px-6 py-8 sm:py-12">
       <div className="mx-auto max-w-184">
-        <h2 className="px-2.5 font-medium text-2xl tracking-tight">
+        <h2 className="px-2.5 font-medium text-2xl tracking-[-0.01em]">
           Keyboard Shortcuts
         </h2>
         <p className="mt-1 px-2.5 text-muted-foreground">

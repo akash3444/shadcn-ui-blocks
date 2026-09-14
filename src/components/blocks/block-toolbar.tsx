@@ -44,6 +44,7 @@ const BlockToolbar = () => {
         <TooltipTrigger
           render={
             <Button
+              nativeButton={false}
               render={
                 <Link
                   href={iframeSrc}
