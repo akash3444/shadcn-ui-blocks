@@ -1,4 +1,4 @@
-import { Building2, Calendar } from "lucide-react";
+import { Bot, Bug, Building2, Calendar, Database } from "lucide-react";
 import { Badge } from "@/registry/bases/base/ui/badge";
 
 const experiences = [
@@ -9,6 +9,7 @@ const experiences = [
     description:
       "Led the development of enterprise-scale web applications, mentored junior developers, and implemented best practices for code quality and performance optimization.",
     technologies: ["React", "Node.js", "TypeScript", "AWS", "MongoDB"],
+    icon: Bot,
   },
   {
     title: "Full Stack Developer",
@@ -17,6 +18,7 @@ const experiences = [
     description:
       "Developed and maintained multiple client projects, implemented responsive designs, and integrated third-party APIs for enhanced functionality.",
     technologies: ["React", "Express.js", "PostgreSQL", "Docker", "Redis"],
+    icon: Database,
   },
   {
     title: "Frontend Developer",
@@ -25,6 +27,7 @@ const experiences = [
     description:
       "Created responsive and interactive user interfaces, collaborated with designers, and optimized application performance.",
     technologies: ["React", "JavaScript", "SASS", "Webpack", "Jest"],
+    icon: Bug,
   },
 ];
 
@@ -33,13 +36,18 @@ export default function Timeline() {
     <div className="mx-auto max-w-(--breakpoint-sm) px-6 py-12 md:py-20">
       <div className="relative ml-3">
         {/* Timeline line */}
-        <div className="absolute top-4 bottom-0 left-0 border-l-2" />
+        <div className="absolute inset-y-0 left-0 border-l-2" />
 
         {experiences.map(
-          ({ company, description, period, technologies, title }, index) => (
-            <div className="relative pb-12 pl-8 last:pb-0" key={index}>
-              {/* Timeline dot */}
-              <div className="absolute top-3 left-px h-3 w-3 -translate-x-1/2 rounded-full border-2 border-primary bg-background ring-8 ring-background" />
+          (
+            { company, description, period, technologies, title, icon: Icon },
+            index
+          ) => (
+            <div className="relative pb-12 pl-10 last:pb-0" key={index}>
+              {/* Timeline Icon */}
+              <div className="absolute left-px flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full bg-background">
+                <Icon className="h-5 w-5" />
+              </div>
 
               {/* Content */}
               <div className="space-y-3">

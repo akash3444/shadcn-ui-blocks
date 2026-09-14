@@ -39,7 +39,7 @@ export default function Timeline() {
           ({ company, description, period, technologies, title }, index) => (
             <div className="relative pb-12 pl-8 last:pb-0" key={index}>
               {/* Timeline dot */}
-              <div className="absolute top-3 left-px h-3 w-3 -translate-x-1/2 rounded-full border-2 border-primary bg-background" />
+              <div className="absolute top-3 left-px h-3 w-3 -translate-x-1/2 rounded-full border-2 border-primary bg-background ring-8 ring-background" />
 
               {/* Content */}
               <div className="space-y-3">

@@ -7014,7 +7014,7 @@
       "name": "timeline-01",
       "type": "registry:block",
       "title": "Timeline 01",
-      "description": "A simple timeline block",
+      "description": "A simple timeline block with vertically spaced dots",
       "dependencies": [
         "lucide-react"
       ],
@@ -7032,7 +7032,7 @@
       "name": "timeline-02",
       "type": "registry:block",
       "title": "Timeline 02",
-      "description": "A simple timeline block with vertically spaced dots",
+      "description": "A simple timeline block with icons",
       "dependencies": [
         "lucide-react"
       ],
@@ -7050,7 +7050,7 @@
       "name": "timeline-03",
       "type": "registry:block",
       "title": "Timeline 03",
-      "description": "A simple timeline block with icons",
+      "description": "A simple timeline with custom elements",
       "dependencies": [
         "lucide-react"
       ],
@@ -7068,16 +7068,10 @@
       "name": "timeline-04",
       "type": "registry:block",
       "title": "Timeline 04",
-      "description": "A simple timeline with custom elements",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge"
-      ],
+      "description": "A simple timeline block for process steps",
       "files": [
         {
-          "path": "src/registry/blocks/radix/timeline-04/components/timeline.tsx",
+          "path": "src/registry/blocks/shared/timeline-04/components/timeline.tsx",
           "type": "registry:component"
         }
       ]
@@ -7086,7 +7080,10 @@
       "name": "timeline-05",
       "type": "registry:block",
       "title": "Timeline 05",
-      "description": "A simple timeline block for process steps",
+      "description": "A simple timeline block for process steps with completion status",
+      "dependencies": [
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "src/registry/blocks/shared/timeline-05/components/timeline.tsx",
@@ -7098,25 +7095,10 @@
       "name": "timeline-06",
       "type": "registry:block",
       "title": "Timeline 06",
-      "description": "A simple timeline block for process steps with completion status",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/shared/timeline-06/components/timeline.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "timeline-07",
-      "type": "registry:block",
-      "title": "Timeline 07",
       "description": "A simple timeline block with changelog",
       "files": [
         {
-          "path": "src/registry/blocks/shared/timeline-07/components/timeline.tsx",
+          "path": "src/registry/blocks/shared/timeline-06/components/timeline.tsx",
           "type": "registry:component"
         }
       ]

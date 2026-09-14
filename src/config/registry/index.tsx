@@ -3056,22 +3056,11 @@ export const blocks: RegistryBlock[] = [
     name: "timeline-04",
     title: "Timeline 04",
     description: "A simple timeline block",
-    primitives: {
-      radix: {
-        component: React.lazy(
-          () =>
-            import("@/registry/blocks/radix/timeline-04/components/timeline")
-        ),
-        files: [{ path: "components/timeline.tsx" }],
-      },
-      base: {
-        component: React.lazy(
-          () => import("@/registry/blocks/base/timeline-04/components/timeline")
-        ),
-        files: [{ path: "components/timeline.tsx" }],
-      },
-    },
+    component: React.lazy(
+      () => import("@/registry/blocks/shared/timeline-04/components/timeline")
+    ),
     categories: [categories.timeline],
+    files: [{ path: "components/timeline.tsx" }],
   },
   {
     name: "timeline-05",
@@ -3089,16 +3078,6 @@ export const blocks: RegistryBlock[] = [
     description: "A simple timeline block",
     component: React.lazy(
       () => import("@/registry/blocks/shared/timeline-06/components/timeline")
-    ),
-    categories: [categories.timeline],
-    files: [{ path: "components/timeline.tsx" }],
-  },
-  {
-    name: "timeline-07",
-    title: "Timeline 07",
-    description: "A simple timeline block",
-    component: React.lazy(
-      () => import("@/registry/blocks/shared/timeline-07/components/timeline")
     ),
     categories: [categories.timeline],
     files: [{ path: "components/timeline.tsx" }],

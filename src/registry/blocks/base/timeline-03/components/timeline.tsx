@@ -1,4 +1,4 @@
-import { Bot, Bug, Building2, Calendar, Database } from "lucide-react";
+import { Building, Building2, Calendar, Store } from "lucide-react";
 import { Badge } from "@/registry/bases/base/ui/badge";
 
 const experiences = [
@@ -9,7 +9,7 @@ const experiences = [
     description:
       "Led the development of enterprise-scale web applications, mentored junior developers, and implemented best practices for code quality and performance optimization.",
     technologies: ["React", "Node.js", "TypeScript", "AWS", "MongoDB"],
-    icon: Bot,
+    icon: Building,
   },
   {
     title: "Full Stack Developer",
@@ -18,7 +18,7 @@ const experiences = [
     description:
       "Developed and maintained multiple client projects, implemented responsive designs, and integrated third-party APIs for enhanced functionality.",
     technologies: ["React", "Express.js", "PostgreSQL", "Docker", "Redis"],
-    icon: Database,
+    icon: Building2,
   },
   {
     title: "Frontend Developer",
@@ -27,14 +27,14 @@ const experiences = [
     description:
       "Created responsive and interactive user interfaces, collaborated with designers, and optimized application performance.",
     technologies: ["React", "JavaScript", "SASS", "Webpack", "Jest"],
-    icon: Bug,
+    icon: Store,
   },
 ];
 
 export default function Timeline() {
   return (
     <div className="mx-auto max-w-(--breakpoint-sm) px-6 py-12 md:py-20">
-      <div className="relative ml-3">
+      <div className="relative ml-4">
         {/* Timeline line */}
         <div className="absolute inset-y-0 left-0 border-l-2" />
 
@@ -45,18 +45,13 @@ export default function Timeline() {
           ) => (
             <div className="relative pb-12 pl-10 last:pb-0" key={index}>
               {/* Timeline Icon */}
-              <div className="absolute left-px flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full bg-background">
+              <div className="absolute left-px flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full bg-accent ring-8 ring-background">
                 <Icon className="h-5 w-5" />
               </div>
 
               {/* Content */}
-              <div className="space-y-3">
-                <div className="flex items-center gap-2.5">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent">
-                    <Building2 className="h-5 w-5 text-muted-foreground" />
-                  </div>
-                  <span className="font-medium text-base">{company}</span>
-                </div>
+              <div className="space-y-3 pt-2 sm:pt-1">
+                <p className="font-medium text-base">{company}</p>
                 <div>
                   <h3 className="font-medium text-xl tracking-[-0.01em]">
                     {title}

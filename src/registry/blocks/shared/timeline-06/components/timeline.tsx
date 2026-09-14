@@ -1,80 +1,90 @@
-import { Check } from "lucide-react";
-import { cn } from "@/lib/utils";
-
-const steps = [
+const changelog = [
   {
-    title: "Research",
+    title: "Initial Release",
     description:
-      "Gather information and analyze requirements to understand the problem and define objectives.",
-    completed: true,
+      "Launched the first version with core features and basic UI components.",
+    version: "1.0.0",
+    date: "2025-03-01",
   },
   {
-    title: "Planning",
+    title: "UI Enhancements",
     description:
-      "Create a roadmap, define the scope, and outline the necessary steps to achieve the goal.",
-    completed: true,
+      "Improved the user interface with better accessibility and design consistency.",
+    version: "1.1.0",
+    date: "2025-03-05",
   },
   {
-    title: "Design",
+    title: "Performance Optimization",
     description:
-      "Develop wireframes, mockups, and prototypes to visualize the structure and user experience.",
-    completed: true,
+      "Reduced load times and improved overall application performance.",
+    version: "1.2.0",
+    date: "2025-03-10",
   },
   {
-    title: "Development",
+    title: "New Feature: Dark Mode",
     description:
-      "Write code, integrate features, and build the core functionality of the application.",
+      "Added support for dark mode, allowing users to switch themes seamlessly.",
+    version: "1.3.0",
+    date: "2025-03-15",
   },
   {
-    title: "Testing",
+    title: "Bug Fixes & Security Patch",
     description:
-      "Perform quality assurance, fix bugs, and optimize performance before release.",
+      "Fixed various minor bugs and patched security vulnerabilities.",
+    version: "1.3.1",
+    date: "2025-03-18",
   },
   {
-    title: "Deployment",
+    title: "New Components Added",
     description:
-      "Launch the project in a live environment and ensure smooth deployment.",
+      "Introduced new UI components for better customization and flexibility.",
+    version: "1.4.0",
+    date: "2025-03-22",
   },
   {
-    title: "Maintenance",
+    title: "Major Update: API Integration",
     description:
-      "Monitor performance, update features, and provide ongoing support and improvements.",
+      "Integrated external APIs to enhance functionality and data synchronization.",
+    version: "2.0.0",
+    date: "2025-04-01",
   },
 ];
 
 export default function Timeline() {
   return (
-    <div className="mx-auto max-w-(--breakpoint-sm) px-6 py-12 md:py-20">
-      <div className="relative ml-6">
+    <div className="max-w-(--breakpoint-sm) px-6 py-12 md:mx-auto md:py-20">
+      <div className="relative">
         {/* Timeline line */}
-        <div className="absolute inset-y-0 left-0 border-l" />
+        {/* <div className="absolute left-0 top-3 bottom-0 border-l-2" /> */}
 
-        {steps.map(({ title, description, completed }, index) => (
-          <div className="relative pb-10 pl-10 last:pb-0" key={index}>
-            {/* Timeline Icon */}
-            <div
-              className={cn(
-                "absolute left-px flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full border border-muted-foreground/40 bg-accent ring-8 ring-background",
-                {
-                  "border-primary bg-primary text-primary-foreground":
-                    completed,
-                }
-              )}
-            >
-              <span className="font-medium text-lg">
-                {completed ? <Check className="h-5 w-5" /> : index + 1}
-              </span>
-            </div>
+        {changelog
+          .reverse()
+          .map(({ title, description, date, version }, index) => (
+            <div className="group relative" key={index}>
+              {/* Content */}
+              <div className="flex items-start">
+                <div className="mt-3 mr-5 flex w-[75px] shrink-0 flex-col gap-2 text-end sm:w-[90px]">
+                  <h6 className="font-semibold text-primary text-sm">
+                    v{version}
+                  </h6>
+                  <span className="text-muted-foreground text-xs sm:text-sm">
+                    {date}
+                  </span>
+                </div>
+                <div className="relative space-y-1 border-l pb-10 pl-6 group-last:pb-4 sm:pl-8">
+                  {/* Timeline Dot */}
+                  <div className="absolute top-4 -left-px h-3 w-3 -translate-x-1/2 rounded-full border-2 border-primary bg-background" />
 
-            {/* Content */}
-            <div className="space-y-1.5 pt-1">
-              <h3 className="font-medium text-xl tracking-[-0.01em]">
-                {title}
-              </h3>
-              <p className="text-lg text-muted-foreground">{description}</p>
+                  <h3 className="mt-2 font-medium text-lg tracking-[-0.01em]">
+                    {title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm sm:text-base">
+                    {description}
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   );
