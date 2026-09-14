@@ -6,58 +6,58 @@ import { Separator } from "@/registry/bases/base/ui/separator";
 
 const blogPosts = [
   {
-    title: "Understanding React Server Components",
+    title: "A quiet weekend spent on the northern coast",
     link: "#",
-    publishedDate: "2025-06-18",
-    author: "Jane Doe",
+    publishedDate: "2026-09-12",
+    author: "Jon Bell",
     image:
       "https://cdn.pixabay.com/photo/2021/08/27/18/50/water-6579313_1280.jpg",
-    tags: ["React", "Server Components", "Performance"],
+    tags: ["Travel", "Weekend guide", "Coast"],
   },
   {
-    title: "10 Useful Shadcn UI Components You Should Know",
+    title: "Why small seaside towns are opening new public spaces",
     link: "#",
-    publishedDate: "2025-05-30",
-    author: "Akash Moradiya",
+    publishedDate: "2026-09-10",
+    author: "Maya Chen",
     image:
       "https://cdn.pixabay.com/photo/2020/02/13/06/49/seascape-4844697_1280.jpg",
-    tags: ["Shadcn UI", "Components", "Design"],
+    tags: ["Culture", "Urban planning", "Community"],
   },
   {
-    title: "Building a Personal Blog with Next.js and Contentlayer",
+    title: "What marine researchers are learning from warmer oceans",
     link: "#",
-    publishedDate: "2025-05-15",
-    author: "Chris Moore",
+    publishedDate: "2026-09-08",
+    author: "Daniel Ortiz",
     image:
       "https://cdn.pixabay.com/photo/2021/08/13/12/51/sea-6543041_1280.jpg",
-    tags: ["Next.js", "Contentlayer", "Blog"],
+    tags: ["Science", "Climate", "Oceans"],
   },
   {
-    title: "The Complete Guide to TypeScript for Beginners",
+    title: "Seven small daily habits that make mornings less rushed",
     link: "#",
-    publishedDate: "2025-04-25",
-    author: "Emily Johnson",
+    publishedDate: "2026-09-05",
+    author: "Noah Williams",
     image:
       "https://cdn.pixabay.com/photo/2017/06/22/20/24/dewdrops-2432391_1280.jpg",
-    tags: ["TypeScript", "Guide"],
+    tags: ["Wellness", "Morning routine"],
   },
   {
-    title: "Optimizing Web Performance with Next.js",
+    title: "How to grow a thriving balcony garden that lasts all summer",
     link: "#",
-    publishedDate: "2025-04-10",
-    author: "Akash Moradiya",
+    publishedDate: "2026-09-03",
+    author: "Sophie Martin",
     image:
       "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg",
-    tags: ["Next.js", "Performance", "Optimization"],
+    tags: ["Home", "Gardening", "Small spaces"],
   },
   {
-    title: "Deploying Full-Stack Apps on Vercel with Supabase",
+    title: "The remote mountain villages bringing old trails back to life",
     link: "#",
-    publishedDate: "2025-03-28",
-    author: "John Smith",
+    publishedDate: "2026-09-01",
+    author: "Jon Bell",
     image:
       "https://cdn.pixabay.com/photo/2021/08/12/10/38/mountains-6540497_1280.jpg",
-    tags: ["Supabase", "Deployment", "Full-Stack"],
+    tags: ["Travel", "Hiking", "Conservation"],
   },
 ];
 
@@ -79,7 +79,7 @@ export default function Blog() {
             Welcome to our blog!
           </h2>
           <p className="mt-0.5 text-pretty text-lg text-muted-foreground tracking-normal">
-            Stay updated with the latest news and insights.
+            Thoughtful stories about travel, culture, science, and daily life.
           </p>
         </div>
         <Button
@@ -112,14 +112,16 @@ export default function Blog() {
                     </Badge>
                   ))}
                 </div>
-                <h3 className="mt-3 font-medium text-xl">{post.title}</h3>
+                <h3 className="mt-3 text-pretty font-medium text-[1.35rem] tracking-[-0.015em]">
+                  {post.title}
+                </h3>
                 <div className="mt-4 flex items-center justify-between gap-2">
                   <div className="flex items-center gap-1.5 text-muted-foreground text-sm">
                     <CalendarDays className="size-4" />{" "}
                     {formatDate(post.publishedDate)}
                   </div>
                   <Button className="-me-2" variant="ghost">
-                    Read Article <ArrowRight />
+                    Read article <ArrowRight />
                   </Button>
                 </div>
               </div>

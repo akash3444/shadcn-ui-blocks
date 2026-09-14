@@ -6,80 +6,87 @@ import { Card, CardContent, CardHeader } from "@/registry/bases/base/ui/card";
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue,
 } from "@/registry/bases/base/ui/select";
 
+const sortOptions = [
+  { value: "recommended", label: "Recommended" },
+  { value: "latest", label: "Latest" },
+  { value: "popular", label: "Popular" },
+];
+
 const blogPosts = [
   {
-    category: "Technology",
-    title: "A beginner's guide to blockchain for engineers",
+    category: "Travel",
+    title: "A quiet weekend spent on the northern coast",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+      "A three-day route through fishing villages, cliffside walks, and family-run guesthouses.",
     readTime: "5 min read",
     image:
       "https://cdn.pixabay.com/photo/2021/08/27/18/50/water-6579313_1280.jpg",
   },
   {
-    category: "Business",
-    title: "Understanding React Server Components",
+    category: "Culture",
+    title: "Why small seaside towns are opening new public spaces",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+      "Local councils are turning empty waterfront lots into parks, markets, and gathering places.",
     readTime: "8 min read",
     image:
       "https://cdn.pixabay.com/photo/2020/02/13/06/49/seascape-4844697_1280.jpg",
   },
   {
-    category: "Finance",
-    title: "10 Useful Shadcn UI Components You Should Know",
+    category: "Science",
+    title: "What marine researchers are learning from warmer oceans",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+      "New buoy data is helping researchers track how rising temperatures change coastal ecosystems.",
     readTime: "6 min read",
     image:
       "https://cdn.pixabay.com/photo/2021/08/13/12/51/sea-6543041_1280.jpg",
   },
   {
-    category: "Health",
-    title: "Building a Personal Blog with Next.js",
+    category: "Wellness",
+    title: "Seven small daily habits that make mornings less rushed",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+      "A calmer start comes from a few practical routines you can prepare the night before.",
     readTime: "10 min read",
     image:
       "https://cdn.pixabay.com/photo/2017/06/22/20/24/dewdrops-2432391_1280.jpg",
   },
   {
-    category: "Lifestyle",
-    title: "The Complete Guide to TypeScript for Beginners",
+    category: "Home",
+    title: "How to grow a thriving balcony garden that lasts all summer",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+      "The right pots, soil, and watering schedule can keep a small garden healthy in hot weather.",
     readTime: "12 min read",
     image:
       "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg",
   },
   {
-    category: "Politics",
-    title: "Optimizing Web Performance with Next.js",
+    category: "Travel",
+    title: "The remote mountain villages bringing old trails back to life",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+      "Residents are restoring footpaths that once connected farms, schools, and neighboring valleys.",
     readTime: "7 min read",
     image:
       "https://cdn.pixabay.com/photo/2021/08/12/10/38/mountains-6540497_1280.jpg",
   },
   {
-    category: "Science",
-    title: "Deploying Full-Stack Apps on Vercel",
+    category: "Technology",
+    title: "Inside the small university labs building cleaner batteries",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+      "University teams are testing cheaper materials that could make energy storage easier to scale.",
     readTime: "9 min read",
     image:
       "https://cdn.pixabay.com/photo/2016/03/27/18/54/technology-1283624_1280.jpg",
   },
   {
-    category: "Sports",
-    title: "Getting Started with Modern Web Development",
+    category: "Culture",
+    title: "The local photographers documenting everyday city life",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+      "A new generation of photographers is building an archive of ordinary streets and routines.",
     readTime: "11 min read",
     image:
       "https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_1280.jpg",
@@ -90,17 +97,21 @@ const Blog = () => {
   return (
     <div className="mx-auto max-w-(--breakpoint-xl) px-6 py-16 xl:px-0">
       <div className="flex items-end justify-between">
-        <h2 className="font-medium text-[1.5rem] tracking-tight">
-          Recommended Posts
+        <h2 className="font-semibold text-[1.5rem] tracking-tight">
+          Recommended posts
         </h2>
-        <Select defaultValue="recommended">
+        <Select defaultValue="recommended" items={sortOptions}>
           <SelectTrigger className="w-[180px]">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="recommended">Recommended</SelectItem>
-            <SelectItem value="latest">Latest</SelectItem>
-            <SelectItem value="popular">Popular</SelectItem>
+            <SelectGroup>
+              {sortOptions.map((option) => (
+                <SelectItem key={option.value} value={option.value}>
+                  {option.label}
+                </SelectItem>
+              ))}
+            </SelectGroup>
           </SelectContent>
         </Select>
       </div>

@@ -70,7 +70,7 @@ const Footer = ({ className, ...props }: ComponentProps<"footer">) => {
             {/* Logo */}
             <Link className="flex items-center gap-2.5" href="/">
               <Logo />
-              <span className="font-heading font-semibold text-lg">
+              <span className="font-heading font-semibold text-lg tracking-[-0.015em]">
                 Shadcn UI Blocks
               </span>
             </Link>

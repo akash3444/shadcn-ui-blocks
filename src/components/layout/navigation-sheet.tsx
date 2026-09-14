@@ -26,7 +26,9 @@ export function NavigationSheet() {
         <SheetHeader className="pb-4">
           <Link className="flex items-center gap-2" href="/">
             <Logo className="font-bold" />
-            <span className="font-bold">Shadcn UI Blocks</span>
+            <span className="font-bold tracking-[-0.015em]">
+              Shadcn UI Blocks
+            </span>
           </Link>
         </SheetHeader>
 

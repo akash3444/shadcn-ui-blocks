@@ -1,14 +1,12 @@
 import {
-  BadgeDollarSign,
   Bike,
   BookHeart,
-  BriefcaseBusiness,
   Calendar,
   ClockIcon,
   Cpu,
   FlaskRound,
   HeartPulse,
-  Scale,
+  House,
 } from "lucide-react";
 import Image from "next/image";
 import { Badge } from "@/registry/bases/radix/ui/badge";
@@ -16,82 +14,82 @@ import { Card, CardContent } from "@/registry/bases/radix/ui/card";
 
 const blogPosts = [
   {
-    category: "Technology",
-    title: "A beginner's guide to blockchain for engineers",
+    category: "Travel",
+    title: "A quiet weekend spent on the northern coast",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa consequatur minus dicta accusantium quos, ratione suscipit id adipisci voluptatibus. Nulla sint repudiandae fugiat tenetur dolores.",
+      "A three-day route through fishing villages, cliffside walks, and family-run guesthouses, with plenty of time left for a long lunch by the harbor.",
     readTime: "5 min read",
-    date: "Nov 20, 2024",
+    date: "Sep 12, 2026",
     image:
       "https://cdn.pixabay.com/photo/2021/08/27/18/50/water-6579313_1280.jpg",
   },
   {
-    category: "Business",
-    title: "Understanding React Server Components",
+    category: "Culture",
+    title: "Why small seaside towns are opening new public spaces",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa consequatur minus dicta accusantium quos, ratione suscipit id adipisci voluptatibus. Nulla sint repudiandae fugiat tenetur dolores.",
+      "Local councils are turning empty waterfront lots into parks, markets, and gathering places that residents can use throughout the year.",
     readTime: "8 min read",
-    date: "Nov 18, 2024",
+    date: "Sep 10, 2026",
     image:
       "https://cdn.pixabay.com/photo/2020/02/13/06/49/seascape-4844697_1280.jpg",
   },
   {
-    category: "Finance",
-    title: "10 Useful Shadcn UI Components You Should Know",
+    category: "Science",
+    title: "What marine researchers are learning from warmer oceans",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa consequatur minus dicta accusantium quos, ratione suscipit id adipisci voluptatibus. Nulla sint repudiandae fugiat tenetur dolores.",
+      "New buoy data is helping researchers track how rising temperatures change coastal ecosystems and the communities that depend on them.",
     readTime: "6 min read",
-    date: "Nov 15, 2024",
+    date: "Sep 8, 2026",
     image:
       "https://cdn.pixabay.com/photo/2021/08/13/12/51/sea-6543041_1280.jpg",
   },
   {
-    category: "Health",
-    title: "Building a Personal Blog with Next.js",
+    category: "Wellness",
+    title: "Seven small daily habits that make mornings less rushed",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa consequatur minus dicta accusantium quos, ratione suscipit id adipisci voluptatibus. Nulla sint repudiandae fugiat tenetur dolores.",
+      "A calmer start does not require a strict routine. These practical habits take only a few minutes to prepare the night before.",
     readTime: "10 min read",
-    date: "Nov 12, 2024",
+    date: "Sep 5, 2026",
     image:
       "https://cdn.pixabay.com/photo/2017/06/22/20/24/dewdrops-2432391_1280.jpg",
   },
   {
-    category: "Lifestyle",
-    title: "The Complete Guide to TypeScript for Beginners",
+    category: "Home",
+    title: "How to grow a thriving balcony garden that lasts all summer",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa consequatur minus dicta accusantium quos, ratione suscipit id adipisci voluptatibus. Nulla sint repudiandae fugiat tenetur dolores.",
+      "The right pots, soil, and watering schedule can keep herbs and flowers healthy through the hottest weeks of the year.",
     readTime: "12 min read",
-    date: "Nov 10, 2024",
+    date: "Sep 3, 2026",
     image:
       "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg",
   },
   {
-    category: "Politics",
-    title: "Optimizing Web Performance with Next.js",
+    category: "Travel",
+    title: "The remote mountain villages bringing old trails back to life",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa consequatur minus dicta accusantium quos, ratione suscipit id adipisci voluptatibus. Nulla sint repudiandae fugiat tenetur dolores.",
+      "Residents are restoring footpaths that once connected farms, schools, and neighboring valleys, creating new reasons for visitors to stay longer.",
     readTime: "7 min read",
-    date: "Nov 8, 2024",
+    date: "Sep 1, 2026",
     image:
       "https://cdn.pixabay.com/photo/2021/08/12/10/38/mountains-6540497_1280.jpg",
   },
   {
     category: "Science",
-    title: "Deploying Full-Stack Apps on Vercel",
+    title: "Inside the small university labs building cleaner batteries",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa consequatur minus dicta accusantium quos, ratione suscipit id adipisci voluptatibus. Nulla sint repudiandae fugiat tenetur dolores.",
+      "University teams are testing cheaper materials that could make energy storage easier to produce, repair, and recycle at scale.",
     readTime: "9 min read",
-    date: "Nov 5, 2024",
+    date: "Aug 30, 2026",
     image:
       "https://cdn.pixabay.com/photo/2016/03/27/18/54/technology-1283624_1280.jpg",
   },
   {
-    category: "Sports",
-    title: "Getting Started with Modern Web Development",
+    category: "Culture",
+    title: "The local photographers documenting everyday city life",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa consequatur minus dicta accusantium quos, ratione suscipit id adipisci voluptatibus. Nulla sint repudiandae fugiat tenetur dolores.",
+      "A new generation of photographers is building an archive of ordinary streets, familiar faces, and routines that rarely make the news.",
     readTime: "11 min read",
-    date: "Nov 2, 2024",
+    date: "Aug 28, 2026",
     image:
       "https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_1280.jpg",
   },
@@ -99,44 +97,34 @@ const blogPosts = [
 
 const categories = [
   {
-    name: "Technology",
-    totalPosts: 10,
-    icon: Cpu,
+    name: "Travel",
+    totalPosts: 18,
+    icon: Bike,
   },
   {
-    name: "Business",
-    totalPosts: 5,
-    icon: BriefcaseBusiness,
-  },
-  {
-    name: "Finance",
-    totalPosts: 8,
-    icon: BadgeDollarSign,
-  },
-  {
-    name: "Health",
+    name: "Culture",
     totalPosts: 12,
-    icon: HeartPulse,
-  },
-  {
-    name: "Lifestyle",
-    totalPosts: 15,
     icon: BookHeart,
   },
   {
-    name: "Politics",
-    totalPosts: 20,
-    icon: Scale,
-  },
-  {
     name: "Science",
-    totalPosts: 25,
+    totalPosts: 9,
     icon: FlaskRound,
   },
   {
-    name: "Sports",
-    totalPosts: 30,
-    icon: Bike,
+    name: "Wellness",
+    totalPosts: 14,
+    icon: HeartPulse,
+  },
+  {
+    name: "Home",
+    totalPosts: 11,
+    icon: House,
+  },
+  {
+    name: "Technology",
+    totalPosts: 16,
+    icon: Cpu,
   },
 ];
 
@@ -147,7 +135,7 @@ const Blog = () => {
         <div className="space-y-12">
           {blogPosts.map((post) => (
             <Card
-              className="flex flex-col overflow-hidden rounded-md border-none bg-background py-0 shadow-none sm:flex-row sm:items-center"
+              className="flex flex-col overflow-hidden rounded-xl border-none bg-muted/70 py-1 ps-1 shadow-none ring-border/50 sm:flex-row sm:items-center"
               key={post.title}
             >
               <div className="relative aspect-video shrink-0 grow overflow-hidden rounded-lg sm:aspect-square sm:w-56">
@@ -159,14 +147,14 @@ const Blog = () => {
                   src={post.image}
                 />
               </div>
-              <CardContent className="flex flex-col px-0 py-0 sm:px-6">
+              <CardContent className="flex flex-col px-0 py-0 sm:ps-4 sm:pe-6">
                 <div className="flex items-center gap-6">
                   <Badge className="bg-primary/5 text-primary shadow-none hover:bg-primary/5">
                     {post.category}
                   </Badge>
                 </div>
 
-                <h3 className="mt-4 font-medium text-[1.5rem] tracking-tight">
+                <h3 className="mt-4 text-pretty font-medium text-[1.5rem] tracking-tight">
                   {post.title}
                 </h3>
                 <p className="mt-2 line-clamp-3 text-ellipsis text-muted-foreground">

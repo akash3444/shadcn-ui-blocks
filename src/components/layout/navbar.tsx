@@ -15,7 +15,7 @@ export const Navbar = () => {
         <div className="flex items-center gap-2">
           <Link className="flex items-center gap-2" href="/">
             <Logo className="font-bold" />
-            <span className="hidden font-heading font-semibold text-lg lg:block">
+            <span className="hidden font-heading font-semibold text-lg tracking-[-0.015em] lg:block">
               Shadcn UI Blocks
             </span>
           </Link>

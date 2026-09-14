@@ -65,7 +65,7 @@ export default function NavigationMenuWithDropdown() {
                     href="/"
                   >
                     <Logo className="h-8 w-8" />
-                    <div className="mt-4 mb-2 font-medium text-lg">
+                    <div className="mt-4 mb-2 font-medium text-lg tracking-[-0.015em]">
                       Shadcn UI Blocks
                     </div>
                     <p className="text-muted-foreground text-sm leading-tight">

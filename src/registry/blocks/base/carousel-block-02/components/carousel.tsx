@@ -35,8 +35,8 @@ export default function CarouselDemo() {
             </div>
 
             <div className="hidden space-x-2 md:block">
-              <CarouselPrevious className="static translate-y-0" />
-              <CarouselNext className="static translate-y-0" />
+              <CarouselPrevious className="static translate-y-0 active:not-aria-[haspopup]:translate-y-0" />
+              <CarouselNext className="static translate-y-0 active:not-aria-[haspopup]:translate-y-0" />
             </div>
           </div>
 
