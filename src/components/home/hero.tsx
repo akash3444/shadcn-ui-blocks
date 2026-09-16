@@ -159,7 +159,7 @@ export function Hero() {
             Start with the right building blocks
           </p>
           <h1 className="max-w-[18ch] text-balance font-heading font-semibold text-5xl leading-[1.04] tracking-[-0.05em] sm:text-6xl lg:text-7xl">
-            A running start for whatever you're building.
+            A running start for whatever you're building
           </h1>
           <p className="max-w-[46ch] text-pretty text-base text-muted-foreground leading-relaxed sm:text-lg">
             Explore ready-to-use page blocks and components. Find a section you

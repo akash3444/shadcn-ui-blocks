@@ -39,7 +39,7 @@ export default function TemplatesPage() {
               Ready-to-use shadcn/ui templates
             </p>
             <h1 className="max-w-[18ch] text-balance font-heading font-semibold text-5xl leading-[1.04] tracking-[-0.05em] sm:text-6xl lg:text-7xl">
-              Build faster with polished shadcn/ui templates.
+              Build faster with polished shadcn/ui templates
             </h1>
             <p className="max-w-[55ch] text-pretty text-base text-muted-foreground leading-relaxed sm:text-lg">
               Browse complete websites built with shadcn/ui. Preview a template,

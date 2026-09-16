@@ -29,7 +29,7 @@ const BlocksPage = () => (
             Ready-to-use shadcn/ui blocks
           </p>
           <h1 className="max-w-[18ch] text-balance font-heading font-semibold text-5xl leading-[1.04] tracking-[-0.05em] sm:text-6xl lg:text-7xl">
-            {totalBlocks} blocks for whatever you're building.
+            {totalBlocks} blocks for whatever you're building
           </h1>
           <p className="max-w-[55ch] text-pretty text-base text-muted-foreground leading-relaxed sm:text-lg">
             Browse a growing collection of page sections built with shadcn/ui.
