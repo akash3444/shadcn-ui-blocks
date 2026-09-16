@@ -1,52 +1,51 @@
 import { Eye } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import type { Template } from "@/description/templates";
 import { GithubLogo } from "../ui/icons";
 import GithubStarsAndForks from "./github-stars-and-forks";
+import TemplatePreview from "./template-preview";
 
-const TemplateCard = ({ template }: { template: Template }) => {
+const TemplateCard = ({
+  eager,
+  template,
+}: {
+  eager: boolean;
+  template: Template;
+}) => {
   return (
-    <div
-      className="overflow-hidden rounded-lg border bg-accent/30"
-      key={template.slug}
-    >
-      <div className="relative aspect-square w-full">
-        <Image
-          alt={template.name}
-          className="object-cover object-top transition-all duration-1000 ease-in-out hover:object-bottom"
-          fill
-          src={template.image}
-        />
-      </div>
-      <div className="border-t p-4 pb-6">
-        <h3 className="font-heading font-semibold text-xl">{template.name}</h3>
-        <p className="mt-2 text-muted-foreground">{template.description}</p>
-        <div className="mt-4">
+    <article className="w-full rounded-2xl bg-muted p-1 pt-0">
+      <div className="flex flex-col flex-wrap justify-between gap-x-4 gap-y-2 py-2 ps-2.5 pe-1 md:flex-row md:items-center">
+        <h2 className="font-semibold text-lg">{template.name}</h2>
+        <div className="flex flex-wrap items-center gap-4 max-sm:justify-between">
           <GithubStarsAndForks repo={template.repo} />
-        </div>
-
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5">
             <Link
               className={buttonVariants()}
               href={template.url}
+              rel="noreferrer"
               target="_blank"
             >
-              Live Preview <Eye />
+              Live Preview <Eye data-icon="inline-end" />
             </Link>
-            <Link
-              className={buttonVariants()}
-              href={`https://github.com/${template.repo}`}
-              target="_blank"
+            <Button
+              nativeButton={false}
+              render={
+                <Link
+                  href={`https://github.com/${template.repo}`}
+                  rel="noreferrer"
+                  target="_blank"
+                />
+              }
+              variant="outline"
             >
-              Github <GithubLogo />
-            </Link>
+              GitHub <GithubLogo data-icon="inline-end" />
+            </Button>
           </div>
         </div>
       </div>
-    </div>
+      <TemplatePreview eager={eager} template={template} />
+    </article>
   );
 };
 

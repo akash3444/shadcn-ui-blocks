@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import TemplateCard from "@/components/templates/template-card";
-import { categories, categorizedTemplates } from "@/description/templates";
+import { templates } from "@/description/templates";
 import { constructMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/utils";
 
@@ -50,41 +50,17 @@ export default function TemplatesPage() {
       </div>
 
       <section
-        className="container mx-auto max-w-(--breakpoint-lg) px-6 py-12 sm:py-16"
+        className="container mx-auto max-w-(--breakpoint-2xl) px-6 py-12 sm:py-16"
         id="templates"
       >
-        <div className="space-y-14">
-          {categories.map((category) => {
-            const templates = categorizedTemplates[category.slug];
-
-            return (
-              <div key={category.slug}>
-                <h2 className="mb-5 font-heading font-semibold text-3xl tracking-[-0.02em] sm:text-4xl">
-                  {category.name} Templates
-                </h2>
-                {templates?.length ? (
-                  <div className="grid gap-8 md:grid-cols-2">
-                    {categorizedTemplates[category.slug].map((template) => (
-                      <TemplateCard key={template.slug} template={template} />
-                    ))}
-                  </div>
-                ) : (
-                  <div className="rounded-xl bg-accent p-6">
-                    <div className="flex flex-col gap-2">
-                      <p className="font-semibold text-lg">Coming Soon!</p>
-                    </div>
-                    <p className="mt-2">
-                      We&apos;re currently working on crafting high-quality
-                      templates for this category. Our team is dedicated to
-                      designing beautiful, functional, and modern templates to
-                      help you create stunning websites effortlessly. Stay tuned
-                      as we bring you fresh and innovative designs soon!
-                    </p>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+        <div className="grid grid-cols-1 gap-6">
+          {templates.map((template, index) => (
+            <TemplateCard
+              eager={index === 0}
+              key={template.slug}
+              template={template}
+            />
+          ))}
         </div>
       </section>
     </div>
