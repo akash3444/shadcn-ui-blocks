@@ -652,6 +652,27 @@ export const blocks: RegistryBlock[] = [
     },
     categories: [categories.features],
   },
+  {
+    name: "features-19",
+    title: "Features 19",
+    description: "A contained features block with a call to action",
+    primitives: {
+      radix: {
+        component: React.lazy(
+          () =>
+            import("@/registry/blocks/radix/features-19/components/features")
+        ),
+        files: [{ path: "components/features.tsx" }],
+      },
+      base: {
+        component: React.lazy(
+          () => import("@/registry/blocks/base/features-19/components/features")
+        ),
+        files: [{ path: "components/features.tsx" }],
+      },
+    },
+    categories: [categories.features],
+  },
   // Integrations Blocks
   {
     name: "integrations-01",

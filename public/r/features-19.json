@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "features-19",
+  "title": "Features 19",
+  "description": "A contained features block with a call to action",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/blocks/radix/features-19/components/features.tsx",
+      "content": "import {\n  ArrowRightIcon,\n  ChartPieIcon,\n  LayoutDashboardIcon,\n  LockIcon,\n  MessageCircleIcon,\n  RefreshCwIcon,\n  WorkflowIcon,\n} from \"lucide-react\";\nimport { Button } from \"@/registry/bases/radix/ui/button\";\n\nconst features = [\n  {\n    icon: LayoutDashboardIcon,\n    title: \"Shared workspace\",\n    description:\n      \"Keep projects, documents, and conversations together in one place.\",\n  },\n  {\n    icon: WorkflowIcon,\n    title: \"Flexible workflows\",\n    description:\n      \"Shape each process around the way your team already gets work done.\",\n  },\n  {\n    icon: MessageCircleIcon,\n    title: \"Real-time collaboration\",\n    description:\n      \"Review ideas, share feedback, and make decisions without losing context.\",\n  },\n  {\n    icon: RefreshCwIcon,\n    title: \"Automatic updates\",\n    description:\n      \"Keep everyone informed as plans, priorities, and responsibilities change.\",\n  },\n  {\n    icon: ChartPieIcon,\n    title: \"Progress insights\",\n    description:\n      \"See what is moving, what is blocked, and where your team needs support.\",\n  },\n  {\n    icon: LockIcon,\n    title: \"Secure by default\",\n    description:\n      \"Protect company work with role-based access and clear permissions.\",\n  },\n];\n\nconst Features = () => (\n  <section className=\"px-6 py-20 sm:py-28\">\n    <div className=\"mx-auto max-w-(--breakpoint-lg) overflow-hidden rounded-3xl bg-muted p-7 sm:p-12\">\n      <div className=\"flex flex-col gap-6 px-3 sm:flex-row sm:items-end sm:justify-between\">\n        <div>\n          <p className=\"font-medium text-muted-foreground text-xs uppercase tracking-[0.15em]\">\n            Platform\n          </p>\n          <h2 className=\"mt-5 max-w-[18ch] text-balance font-semibold text-4xl tracking-tight sm:text-5xl/[1.15]\">\n            One place to plan, build, and ship.\n          </h2>\n        </div>\n        <Button asChild size=\"lg\">\n          <a href=\"/features\">\n            Explore platform\n            <ArrowRightIcon data-icon=\"inline-end\" />\n          </a>\n        </Button>\n      </div>\n      <div className=\"-mx-4 mt-12 -mb-4 grid gap-px overflow-hidden rounded-xl bg-border/50 sm:grid-cols-2 lg:grid-cols-3\">\n        {features.map((feature) => {\n          const Icon = feature.icon;\n\n          return (\n            <article className=\"bg-background p-8\" key={feature.title}>\n              <Icon aria-hidden=\"true\" className=\"size-5\" />\n              <h3 className=\"mt-8 font-semibold text-lg\">{feature.title}</h3>\n              <p className=\"mt-2 text-sm leading-relaxed\">\n                {feature.description}\n              </p>\n            </article>\n          );\n        })}\n      </div>\n    </div>\n  </section>\n);\n\nexport default Features;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:block"
+}

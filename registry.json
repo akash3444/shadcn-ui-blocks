@@ -8040,6 +8040,24 @@
       ]
     },
     {
+      "name": "features-19",
+      "type": "registry:block",
+      "title": "Features 19",
+      "description": "A contained features block with a call to action",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/radix/features-19/components/features.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "faq-08",
       "type": "registry:block",
       "title": "FAQ 08",
