@@ -1,4 +1,5 @@
 import { ArrowRight, Blocks, Settings2 } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/registry/bases/radix/ui/button";
 
 const Features = () => {
@@ -14,7 +15,14 @@ const Features = () => {
         {/* Card 1 */}
         <div className="col-span-1 rounded-xl bg-muted p-6 md:col-span-2 lg:col-span-1">
           {/* Media 1 Mobile */}
-          <div className="mb-6 aspect-video w-full rounded-xl bg-background md:hidden" />
+          <Image
+            alt="Workspace planning dashboard"
+            className="mb-6 aspect-video w-full rounded-xl border border-border/60 object-cover md:hidden"
+            height={941}
+            loading="eager"
+            src="/images/plan-smarter-illustration.png"
+            width={1672}
+          />
 
           <span className="font-medium text-xl tracking-[-0.01em]">
             Plan Smarter
@@ -45,15 +53,34 @@ const Features = () => {
           </Button>
         </div>
         {/* Media 1 Desktop */}
-        <div className="col-span-1 hidden rounded-xl bg-muted md:col-span-3 md:block lg:col-span-2" />
+        <Image
+          alt="Workspace planning dashboard"
+          className="col-span-1 hidden h-full w-full rounded-xl border border-border/60 object-cover md:col-span-3 md:block lg:col-span-2"
+          height={941}
+          loading="eager"
+          src="/images/plan-smarter-illustration.png"
+          width={1672}
+        />
 
         {/* Media 2 Desktop */}
-        <div className="col-span-1 hidden rounded-xl bg-muted md:col-span-3 md:block lg:col-span-2" />
+        <Image
+          alt="Workspace planning dashboard"
+          className="col-span-1 hidden h-full w-full rounded-xl border border-border/60 object-cover md:col-span-3 md:block lg:col-span-2"
+          height={941}
+          src="/images/plan-smarter-illustration.png"
+          width={1672}
+        />
 
         {/* Card 2 */}
         <div className="col-span-1 rounded-xl bg-muted p-6 md:col-span-2 lg:col-span-1">
           {/* Media 2 Mobile */}
-          <div className="mb-6 aspect-video w-full rounded-xl bg-background md:hidden" />
+          <Image
+            alt="Workspace planning dashboard"
+            className="mb-6 aspect-video w-full rounded-xl border border-border/60 object-cover md:hidden"
+            height={941}
+            src="/images/plan-smarter-illustration.png"
+            width={1672}
+          />
 
           <span className="font-medium text-xl tracking-[-0.01em]">
             Plan Smarter

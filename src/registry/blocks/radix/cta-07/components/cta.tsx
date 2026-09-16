@@ -15,7 +15,9 @@ const CTA = () => {
           Join thousands of developers using our premium component library to
           ship beautiful UIs in minutes, not hours.
         </p>
-        <Button className="mt-8">Get Started</Button>
+        <Button className="dark mt-8" size="lg">
+          Get Started
+        </Button>
       </div>
     </div>
   );

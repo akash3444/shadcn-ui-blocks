@@ -6,6 +6,7 @@ import {
   Users,
   Zap,
 } from "lucide-react";
+import Image from "next/image";
 import {
   Accordion,
   AccordionContent,
@@ -64,7 +65,7 @@ const Features = () => {
             {features.map(({ title, description, icon: Icon }, index) => (
               <AccordionItem
                 className="group/accordion-item data-[state=open]:border-primary data-[state=open]:border-b-2"
-                key={index}
+                key={title}
                 value={`item-${index}`}
               >
                 <AccordionTrigger className="[&>svg]:hidden! text-lg group-first/accordion-item:pt-0">
@@ -75,7 +76,14 @@ const Features = () => {
                 </AccordionTrigger>
                 <AccordionContent className="ps-10 text-[17px] text-muted-foreground leading-relaxed">
                   {description}
-                  <div className="mt-6 mb-2 aspect-video w-full rounded-xl bg-muted md:hidden" />
+                  <Image
+                    alt="Scalable interface dashboard"
+                    className="mt-6 mb-2 aspect-video w-full rounded-xl object-cover md:hidden"
+                    height={1086}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    src="/images/scalable-interface-illustration.png"
+                    width={1448}
+                  />
                 </AccordionContent>
               </AccordionItem>
             ))}
@@ -83,7 +91,14 @@ const Features = () => {
         </div>
 
         {/* Media */}
-        <div className="hidden h-full w-full rounded-xl bg-muted md:block" />
+        <Image
+          alt="Scalable interface dashboard"
+          className="hidden h-full w-full rounded-xl object-cover md:block"
+          height={1086}
+          loading="eager"
+          src="/images/scalable-interface-illustration.png"
+          width={1448}
+        />
       </div>
     </div>
   );
