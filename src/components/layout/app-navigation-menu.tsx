@@ -40,14 +40,6 @@ export function AppNavigationMenu() {
             Templates
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            className={navigationMenuTriggerStyle({ className: "h-7.5" })}
-            render={<Link href="/opengraph-images" />}
-          >
-            OG Images
-          </NavigationMenuLink>
-        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );

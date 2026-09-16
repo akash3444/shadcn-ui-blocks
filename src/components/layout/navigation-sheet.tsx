@@ -58,13 +58,6 @@ export function NavigationSheet() {
             >
               Templates
             </Link>
-            <Link
-              className="block"
-              href="/opengraph-images"
-              onClick={() => setOpen(false)}
-            >
-              OG Images
-            </Link>
           </div>
         </ScrollArea>
       </SheetContent>
