@@ -28,6 +28,27 @@ export const categories = Object.values(categoriesMap);
 
 export const templates = [
   {
+    name: "Minimalist Landing Page",
+    description:
+      "A beautifully designed landing page template with a clean and modern look.",
+    image: "/images/templates/minimalist-landing-page.png",
+    repo: "akash3444/shadcn-ui-landing-page",
+    slug: "minimalist-landing-page",
+    category: categoriesMap.landingPage,
+    url: "https://shadcn-ui-landing-page.vercel.app/",
+    features: [
+      "Next 15",
+      "React 19",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "TypeScript",
+      "Dark Mode Support",
+      "Responsive Design",
+      "SEO Optimized",
+    ],
+    sections: ["Hero", "Features", "Pricing", "FAQ", "Footer"],
+  },
+  {
     name: "HomeGuardian",
     description:
       "A beautifully designed landing page template with a clean and modern look.",
@@ -54,27 +75,6 @@ export const templates = [
       "FAQ",
       "Footer",
     ],
-  },
-  {
-    name: "Minimalist Landing Page",
-    description:
-      "A beautifully designed landing page template with a clean and modern look.",
-    image: "/images/templates/minimalist-landing-page.png",
-    repo: "akash3444/shadcn-ui-landing-page",
-    slug: "minimalist-landing-page",
-    category: categoriesMap.landingPage,
-    url: "https://shadcn-ui-landing-page.vercel.app/",
-    features: [
-      "Next 15",
-      "React 19",
-      "Tailwind CSS",
-      "Shadcn UI",
-      "TypeScript",
-      "Dark Mode Support",
-      "Responsive Design",
-      "SEO Optimized",
-    ],
-    sections: ["Hero", "Features", "Pricing", "FAQ", "Footer"],
   },
   {
     name: "PureLanding",
