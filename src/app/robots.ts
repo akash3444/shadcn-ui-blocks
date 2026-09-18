@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
+import { absoluteUrl } from "@/lib/utils";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/blocks/*/preview",
     },
-    sitemap: "https://www.shadcnui-blocks.com/sitemap.xml",
+    sitemap: absoluteUrl("/sitemap.xml"),
   };
 }

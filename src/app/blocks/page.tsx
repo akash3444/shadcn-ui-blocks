@@ -6,7 +6,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { absoluteUrl } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Shadcn UI Blocks",
+  title: "Blocks",
   description:
     "Shadcn UI Blocks is a collection of ready-to-use code snippets for web developers to preview, customize, and copy.",
   alternates: {

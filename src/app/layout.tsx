@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
-import { cn } from "@/lib/utils";
+import { absoluteUrl, cn } from "@/lib/utils";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import type { WebSite, WithContext } from "schema-dts";
@@ -42,26 +42,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Customized Shadcn UI Blocks & Components | Preview & Copy",
+  metadataBase: new URL(absoluteUrl("/")),
+  title: {
+    default: "Shadcn UI Blocks & Components",
+    template: "%s | Shadcn UI Blocks",
+  },
   description:
-    "Explore a curated collection of customized Shadcn UI blocks and components. Preview, customize, and copy ready-to-use code snippets to streamline your web development workflow. Perfect for creating responsive, high-quality Shadcn UI designs with ease.",
-  keywords: [
-    "Shadcn UI blocks",
-    "Shadcn UI components",
-    "Shadcn UI previews",
-    "UI blocks for developers",
-    "Shadcn UI code snippets",
-    "Shadcn UI examples",
-    "Shadcn UI customization",
-    "Free Shadcn UI blocks",
-    "Preview Shadcn UI components",
-    "Shadcn UI examples for websites",
-    "Copy Shadcn UI code snippets",
-    "UI design components",
-    "UI design blocks",
-    "Customized Shadcn UI blocks",
-    "Custom Shadcn UI components",
-  ],
+    "Browse ready-to-use shadcn/ui blocks and components. Preview designs, copy code, and add them to your project.",
   icons: [
     {
       url: "/images/apple-touch-icon.png",
@@ -82,16 +69,16 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Customized Shadcn UI Blocks & Components | Preview & Copy",
+    title: "Shadcn UI Blocks & Components",
     description:
-      "Explore a curated collection of customized Shadcn UI blocks and components. Preview, customize, and copy ready-to-use code snippets to streamline your web development workflow. Perfect for creating responsive, high-quality Shadcn UI designs with ease.",
+      "Browse ready-to-use shadcn/ui blocks and components. Preview designs, copy code, and add them to your project.",
     type: "website",
     images: [
       {
         url: "/images/og-image.png",
         height: 630,
         width: 1200,
-        alt: "Effortless Shadcn UI Component Previews & Code Snippets",
+        alt: "Shadcn UI Blocks & Components",
       },
     ],
   },
@@ -106,7 +93,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Shadcn UI Blocks",
-    url: "https://${process.env.NEXT_PUBLIC_APP_URL}",
+    url: absoluteUrl("/"),
   };
 
   return (
