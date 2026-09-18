@@ -10,8 +10,8 @@ import {
 import type { pathToTree } from "to-path-tree";
 import { blocks } from "@/config/registry";
 import { useBlockTheme } from "@/hooks/use-block-theme";
-import { getFileContent } from "@/lib/file";
 import { getFileTree } from "@/lib/file-tree";
+import { getRegistrySource } from "@/lib/registry-source";
 import { codeToHtml } from "@/lib/shiki";
 import type { BlockScreenSize, BlockScreenSizeUnion } from "@/types/blocks";
 import type { Theme } from "@/types/theme";
@@ -34,24 +34,7 @@ const BlockContext = createContext<{
   iframeRef: React.RefObject<HTMLIFrameElement | null>;
   iframeSrc: string;
   handleIframeLoad: () => void;
-}>({
-  codeHtml: null,
-  code: null,
-  isLoadingCode: false,
-  fileTree: {} as ReturnType<typeof pathToTree>,
-  activeFile: "",
-  screenSize: "desktop",
-  selectFile: () => {},
-  setScreenSize: () => {},
-  block: {} as (typeof blocks)[number],
-  theme: "light",
-  setTheme: () => {},
-  colorTheme: "default",
-  setColorTheme: () => {},
-  iframeRef: { current: null },
-  iframeSrc: "",
-  handleIframeLoad: () => {},
-});
+} | null>(null);
 
 const transformCode = (code: string) => {
   let transformedCode = code;
@@ -120,7 +103,10 @@ export const BlockProvider = ({
   const { selectedPrimitive } = usePrimitive();
 
   const activeFiles = getBlockFiles(block, selectedPrimitive);
-  const fileTree = getFileTree(block as (typeof blocks)[number], selectedPrimitive);
+  const fileTree = getFileTree(
+    block as (typeof blocks)[number],
+    selectedPrimitive
+  );
 
   const [activeFile, setActiveFile] = useState(activeFiles[0]?.path);
   const [screenSize, setScreenSize] = useState<BlockScreenSizeUnion>("desktop");
@@ -139,33 +125,57 @@ export const BlockProvider = ({
 
   const iframeSrc = `/blocks/${block.name}/preview?primitive=${selectedPrimitive}`;
 
-  const updateCodeContent = async () => {
-    if (!activeFile) return;
-    setIsLoadingCode(true);
-
-    try {
-      const filePath = getBlockFilePath(block, selectedPrimitive, activeFile);
-      const rawCode = await getFileContent(filePath);
-      const transformedCode = transformCode(rawCode);
-      setCode(transformedCode);
-
-      const formattedCode = await codeToHtml(transformedCode ?? "");
-      setCodeHtml(formattedCode);
-    } finally {
-      setIsLoadingCode(false);
-    }
-  };
-
   // Reset active file when primitive changes
   useEffect(() => {
     const files = getBlockFiles(block, selectedPrimitive);
     setActiveFile(files[0]?.path);
-  }, [selectedPrimitive]);
+  }, [block, selectedPrimitive]);
 
   // Update the code content when the active file or primitive changes
   useEffect(() => {
+    const controller = new AbortController();
+    const updateCodeContent = async () => {
+      if (!activeFile) {
+        return;
+      }
+      setIsLoadingCode(true);
+
+      try {
+        const filePath = getBlockFilePath(block, selectedPrimitive, activeFile);
+        const rawCode = await getRegistrySource({
+          itemName: block.name,
+          filePath,
+          primitive: selectedPrimitive,
+          signal: controller.signal,
+        });
+        const transformedCode = transformCode(rawCode);
+        if (controller.signal.aborted) {
+          return;
+        }
+        setCode(transformedCode);
+
+        const formattedCode = await codeToHtml(transformedCode);
+        if (controller.signal.aborted) {
+          return;
+        }
+        setCodeHtml(formattedCode);
+      } catch (error) {
+        if (!controller.signal.aborted) {
+          console.error(error);
+          setCode(null);
+          setCodeHtml(null);
+        }
+      } finally {
+        if (!controller.signal.aborted) {
+          setIsLoadingCode(false);
+        }
+      }
+    };
+
     updateCodeContent();
-  }, [activeFile, selectedPrimitive]);
+
+    return () => controller.abort();
+  }, [activeFile, block, selectedPrimitive]);
 
   return (
     <BlockContext.Provider

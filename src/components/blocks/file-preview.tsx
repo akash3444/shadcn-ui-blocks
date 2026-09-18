@@ -1,23 +1,14 @@
 import { CheckIcon, CopyIcon, FileIcon } from "lucide-react";
-import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 import { removeBlockPrefixFromPath } from "@/lib/blocks";
-import { getFileContent } from "@/lib/file";
 import { useBlockContext } from "@/providers/block-provider";
 import { CodeBlock } from "../code-block";
 
 export function FilePreview() {
-  const [code, setCode] = useState<string>("");
-  const { activeFile, block } = useBlockContext();
+  const { activeFile, code } = useBlockContext();
   const { copyToClipboard, isCopied } = useCopyToClipboard();
-
-  useEffect(() => {
-    const filePath = activeFile.startsWith("src/")
-      ? activeFile
-      : `src/blocks/${block.name}/${activeFile}`;
-    getFileContent(filePath).then((code) => setCode(code));
-  }, [activeFile, block.name]);
+  const source = code ?? "";
 
   return (
     <div className="flex w-full flex-col overflow-x-auto">
@@ -27,7 +18,7 @@ export function FilePreview() {
           {removeBlockPrefixFromPath(activeFile)}
         </div>
         <Button
-          onClick={() => copyToClipboard(code)}
+          onClick={() => copyToClipboard(source)}
           size="icon"
           variant="ghost"
         >
@@ -35,7 +26,7 @@ export function FilePreview() {
         </Button>
       </div>
 
-      <CodeBlock code={code} />
+      <CodeBlock code={source} />
     </div>
   );
 }

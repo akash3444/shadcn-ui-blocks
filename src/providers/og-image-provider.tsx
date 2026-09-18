@@ -12,7 +12,7 @@ import {
 import { pathToTree } from "to-path-tree";
 import type { RegistryOgImage } from "@/config/registry/og-images";
 import { ogImages } from "@/config/registry/og-images";
-import { getFileContent } from "@/lib/file";
+import { getRegistrySource } from "@/lib/registry-source";
 import { codeToHtml } from "@/lib/shiki";
 
 const OGImageContext = createContext<{
@@ -63,23 +63,42 @@ export function OGImageContextProvider({
     registryItem.files.find((file) => file.path === activeFile)?.target ??
     activeFile;
 
-  const updateCodeContent = useCallback(async () => {
-    setIsLoadingCode(true);
-    try {
-      const fileCode = await getFileContent(
-        `src/registry/og-images/${name}/${activeFilePath}`
-      );
-      setCode(fileCode);
-      const formattedCode = await codeToHtml(fileCode);
-      setCodeHtml(formattedCode);
-    } finally {
-      setIsLoadingCode(false);
-    }
-  }, [activeFile]);
-
   useEffect(() => {
+    const controller = new AbortController();
+    const updateCodeContent = async () => {
+      setIsLoadingCode(true);
+      try {
+        const fileCode = await getRegistrySource({
+          itemName: name,
+          filePath: `src/registry/og-images/${name}/${activeFilePath}`,
+          signal: controller.signal,
+        });
+        if (controller.signal.aborted) {
+          return;
+        }
+        setCode(fileCode);
+        const formattedCode = await codeToHtml(fileCode);
+        if (controller.signal.aborted) {
+          return;
+        }
+        setCodeHtml(formattedCode);
+      } catch (error) {
+        if (!controller.signal.aborted) {
+          console.error(error);
+          setCode(null);
+          setCodeHtml(null);
+        }
+      } finally {
+        if (!controller.signal.aborted) {
+          setIsLoadingCode(false);
+        }
+      }
+    };
+
     updateCodeContent();
-  }, [updateCodeContent]);
+
+    return () => controller.abort();
+  }, [activeFilePath, name]);
 
   const toggleMode = useCallback(() => {
     setMode((mode) => (mode === "dark" ? "light" : "dark"));
