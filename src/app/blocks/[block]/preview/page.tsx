@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blocks } from "@/config/registry";
-import { getBlockByName } from "@/lib/catalog";
 import { constructMetadata } from "@/lib/metadata";
 import type { PrimitiveLibrary } from "@/providers/primitive-provider";
 
@@ -17,7 +16,7 @@ export const generateMetadata = async (props: {
   params: Promise<{ block: string }>;
 }): Promise<Metadata> => {
   const { block } = await props.params;
-  const blockDetails = getBlockByName(block);
+  const blockDetails = blocks.find((candidate) => candidate.name === block);
   if (!blockDetails) {
     notFound();
   }
@@ -44,7 +43,7 @@ const BlockPreviewPage = async (props: {
   const primitive: PrimitiveLibrary =
     searchParams.primitive === "base" ? "base" : "radix";
 
-  const blockDetails = getBlockByName(block);
+  const blockDetails = blocks.find((candidate) => candidate.name === block);
 
   if (!blockDetails) {
     notFound();

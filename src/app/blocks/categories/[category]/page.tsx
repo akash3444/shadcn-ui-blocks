@@ -8,7 +8,6 @@ import CarbonAd from "@/components/carbon-ads";
 import Footer from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { blocks } from "@/config/registry";
-import { getBlockCategoryByName } from "@/lib/catalog";
 import { constructMetadata } from "@/lib/metadata";
 import { generateOgImageUrl } from "@/lib/og";
 import { absoluteUrl } from "@/lib/utils";
@@ -36,7 +35,9 @@ export const generateMetadata = async (props: {
     });
   }
 
-  const categoryDetails = getBlockCategoryByName(category);
+  const categoryDetails = blockCategories.find(
+    (candidate) => candidate.name === category
+  );
   if (!categoryDetails) {
     notFound();
   }
@@ -77,7 +78,10 @@ const BlockCategoryPage = async (props: {
   const params = await props.params;
   const { category } = params;
 
-  if (category !== "all" && !getBlockCategoryByName(category)) {
+  if (
+    category !== "all" &&
+    !blockCategories.some((candidate) => candidate.name === category)
+  ) {
     notFound();
   }
 

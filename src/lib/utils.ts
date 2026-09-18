@@ -7,7 +7,6 @@ export function capitalize(str: string) {
 }
 
 export function absoluteUrl(path: string) {
-  return process.env.NODE_ENV === "development"
-    ? `http://localhost:3000${path}`
-    : `https://${config.appUrl}${path}`;
+  const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
+  return new URL(path, `${protocol}://${config.appUrl}`).toString();
 }
