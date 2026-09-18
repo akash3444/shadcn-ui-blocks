@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const previews = [
   {
     title: "Hero section",
-    block: "hero-01",
+    href: "/blocks/categories/hero",
     skeleton: (
       <div className="flex h-full flex-col items-center justify-center gap-3 bg-radial from-primary/10 to-transparent px-8">
         <div className="h-3 w-16 rounded-full bg-primary/20" />
@@ -28,7 +28,7 @@ const previews = [
   },
   {
     title: "Pricing section",
-    block: "pricing-01",
+    href: "/blocks/categories/pricing",
     skeleton: (
       <div className="flex h-full flex-col items-center justify-center gap-2 p-5">
         <div className="h-2.5 w-20 rounded bg-foreground/25" />
@@ -70,7 +70,7 @@ const previews = [
   },
   {
     title: "Login form",
-    block: "login-01",
+    href: "/blocks/categories/login",
     skeleton: (
       <div className="flex h-full items-center justify-center p-5">
         <div className="flex w-36 flex-col items-center gap-2 rounded-lg border bg-background p-4 shadow-xs">
@@ -134,7 +134,7 @@ function Preview({
     >
       <Link
         className="flex items-center justify-between gap-2 border-b px-4 py-3 text-xs after:absolute after:inset-0 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px]"
-        href={`/blocks/${item.block}`}
+        href={item.href}
       >
         <span className="font-medium">{item.title}</span>
         <ArrowRight aria-hidden="true" className="size-3.5" />

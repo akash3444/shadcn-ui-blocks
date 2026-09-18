@@ -11,7 +11,7 @@ import { constructMetadata } from "@/lib/metadata";
 import { absoluteUrl, cn } from "@/lib/utils";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Sponsors | Shadcn UI Blocks",
+  title: "Sponsors",
   description:
     "Thank you to our amazing sponsors who support Shadcn UI Blocks. Your generosity helps keep this project going.",
   alternates: {

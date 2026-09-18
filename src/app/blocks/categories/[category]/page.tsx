@@ -1,37 +1,19 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import { blockCategories, categorizedBlocks } from "@/blocks";
-import BlockCategoryJsonLd from "@/components/blocks/category/block-category-json-ld";
+import { blockCategories } from "@/blocks";
 import BlockPreviewList from "@/components/blocks/category/block-preview-list";
 import CategoryNavigation from "@/components/blocks/category/category-navigation";
 import CarbonAd from "@/components/carbon-ads";
 import Footer from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
+import { blocks } from "@/config/registry";
+import { getBlockCategoryByName } from "@/lib/catalog";
 import { constructMetadata } from "@/lib/metadata";
 import { generateOgImageUrl } from "@/lib/og";
-import { absoluteUrl, capitalize } from "@/lib/utils";
+import { absoluteUrl } from "@/lib/utils";
 
-const keywordsTemplate = [
-  "{{category}} Shadcn UI blocks",
-  "Shadcn UI {{category}} examples",
-  "{{category}} UI components",
-  "{{category}} section code snippets",
-  "{{category}} design templates",
-  "Responsive {{category}} UI blocks",
-  "Shadcn UI {{category}} code snippets",
-  "{{category}} block preview and copy",
-  "Ready-made {{category}} UI designs",
-  "{{category}} section UI blocks for websites",
-  "Customizable {{category}} Shadcn components",
-  "Shadcn UI {{category}} templates",
-  "Shadcn UI blocks for {{category}",
-  "Elegant {{category}} design examples",
-  "{{category}} integration with Shadcn",
-  "Minimalist {{category}} section blocks",
-  "{{category}} components for modern websites",
-  "Professional {{category}} UI designs",
-  "{{category}} section layout ideas",
-];
+export const dynamicParams = false;
 
 export const generateStaticParams = async () => {
   return [
@@ -48,21 +30,19 @@ export const generateMetadata = async (props: {
 
   if (category === "all") {
     return constructMetadata({
-      title: "All Shadcn UI Blocks",
-      description:
-        "Browse all beautifully designed blocks built with Shadcn UI. Preview, customize, and copy code snippets effortlessly.",
+      title: "All shadcn/ui blocks",
+      description: `Browse all ${blocks.length} ready-to-use blocks built with shadcn/ui. Preview each design and copy the code for your project.`,
       alternates: { canonical: absoluteUrl("/blocks/categories/all") },
     });
   }
 
-  const blocks = categorizedBlocks[category];
-  const title = `${blocks.length}+ ${capitalize(
-    category
-  )} section Shadcn UI blocks`;
-  const description = `Explore beautifully designed ${category} section blocks built with Shadcn UI. Preview, customize, and copy code snippets effortlessly to enhance your website's design and functionality.`;
-  const keywords = keywordsTemplate.map((keyword) =>
-    keyword.replaceAll("{{category}}", capitalize(category))
-  );
+  const categoryDetails = getBlockCategoryByName(category);
+  if (!categoryDetails) {
+    notFound();
+  }
+
+  const title = `${categoryDetails.totalBlocks} ${categoryDetails.title} shadcn/ui blocks`;
+  const description = `Browse ${categoryDetails.totalBlocks} ready-to-use ${categoryDetails.title} blocks built with shadcn/ui. Preview each design and copy the code for your project.`;
   const openGraph = {
     images: [
       {
@@ -72,7 +52,7 @@ export const generateMetadata = async (props: {
         }),
         width: 1200,
         height: 630,
-        alt: "Customized Shadcn UI Blocks",
+        alt: title,
       },
     ],
   };
@@ -80,7 +60,6 @@ export const generateMetadata = async (props: {
   return constructMetadata({
     title,
     description,
-    keywords,
     openGraph,
     twitter: {
       title,
@@ -94,10 +73,13 @@ export const generateMetadata = async (props: {
 
 const BlockCategoryPage = async (props: {
   params: Promise<{ category: string }>;
-  searchParams: Promise<{ columns: string; q: string }>;
 }) => {
   const params = await props.params;
   const { category } = params;
+
+  if (category !== "all" && !getBlockCategoryByName(category)) {
+    notFound();
+  }
 
   return (
     <div>
@@ -108,7 +90,6 @@ const BlockCategoryPage = async (props: {
         </Suspense>
 
         <CategoryNavigation category={category} />
-        <BlockCategoryJsonLd category={category} />
       </div>
 
       <Footer />

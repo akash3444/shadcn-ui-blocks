@@ -20,13 +20,18 @@ export const generateMetadata = async (props: {
 }) => {
   const params = await props.params;
   const details = componentsMap[params.component as keyof typeof componentsMap];
+
+  if (!details) {
+    notFound();
+  }
+
   const components =
     customizedComponents[
       params.component as keyof typeof customizedComponents
     ] || [];
 
-  const title = `${components.length}+ customized Shadcn UI ${details.title} components`;
-  const description = `Explore a curated collection of ${components.length}+ customized Shacn UI ${details.title} components. Preview, customize, and copy ready-to-use code snippets to streamline your web development workflow.`;
+  const title = `${components.length} customized ${details.title} shadcn/ui components`;
+  const description = `Browse ${components.length} customized ${details.title} components built with shadcn/ui. Preview each example and copy the code for your project.`;
 
   return constructMetadata({
     title,
@@ -40,7 +45,7 @@ export const generateMetadata = async (props: {
           }),
           width: 1200,
           height: 630,
-          alt: "Customized Shadcn UI Components",
+          alt: title,
         },
       ],
     },
