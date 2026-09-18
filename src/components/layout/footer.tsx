@@ -26,8 +26,8 @@ const footerSections = [
   },
   {
     title: "Blocks",
-    links: blockCategories.map(({ name }) => ({
-      title: `${capitalize(name)} section`,
+    links: blockCategories.map(({ name, title }) => ({
+      title: `${title} section`,
       href: `/blocks/categories/${name}`,
     })),
   },
