@@ -2,118 +2,85 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import registry from "../registry.json";
+import baseRegistry from "../registry-base.json";
+import radixRegistry from "../registry-radix.json";
 
-const ROOT = process.cwd();
-const PUBLIC_R_DIR = join(ROOT, "public/r");
+const root = process.cwd();
+const publishedRegistries = [
+  ["default", "public/r", registry],
+  ["base", "public/r/base", baseRegistry],
+  ["radix", "public/r/radix", radixRegistry],
+] as const;
 
 interface PublishedFile {
-	path: string;
-	content: string;
-	type: string;
+  path: string;
+  content: string;
+  type: string;
 }
 
 interface PublishedItem {
-	name: string;
-	type: string;
-	files: PublishedFile[];
-	dependencies?: string[];
-	registryDependencies?: string[];
+  name: string;
+  type: string;
+  files: PublishedFile[];
+  dependencies?: string[];
+  registryDependencies?: string[];
 }
 
-function readPublished(name: string): PublishedItem | null {
-	const jsonPath = join(PUBLIC_R_DIR, `${name}.json`);
-	if (!existsSync(jsonPath)) return null;
-	return JSON.parse(readFileSync(jsonPath, "utf-8")) as PublishedItem;
-}
+const readPublished = (
+  directory: string,
+  name: string
+): PublishedItem | null => {
+  const path = join(root, directory, `${name}.json`);
+  if (!existsSync(path)) {
+    return null;
+  }
+  return JSON.parse(readFileSync(path, "utf8")) as PublishedItem;
+};
 
-describe("Public JSON Parity", () => {
-	describe("json file existence", () => {
-		it.each(registry.items.map((item) => [item.name] as [string]))(
-			'public/r/%s.json exists',
-			(name) => {
-				const jsonPath = join(PUBLIC_R_DIR, `${name}.json`);
-				expect(
-					existsSync(jsonPath),
-					`Missing public/r/${name}.json — run "bun run registry:build" to rebuild`,
-				).toBe(true);
-			},
-		);
-	});
+describe("public registry parity", () => {
+  it.each(
+    publishedRegistries.flatMap(([variant, directory, sourceRegistry]) =>
+      sourceRegistry.items.map(
+        (item) => [variant, directory, item.name, item] as const
+      )
+    )
+  )("publishes current metadata for %s:%s", (_variant, directory, name, item) => {
+    const published = readPublished(directory, name);
+    expect(published).not.toBeNull();
+    if (!published) {
+      return;
+    }
 
-	describe("file list parity", () => {
-		it.each(registry.items.map((item) => [item.name, item] as [string, (typeof registry.items)[0]]))(
-			'public/r/%s.json lists the same files as registry.json',
-			(name, item) => {
-				const published = readPublished(name);
-				if (!published) return; // Caught by existence test
+    expect(published.files.map((file) => file.path).sort()).toEqual(
+      item.files.map((file) => file.path).sort()
+    );
+    expect([...(published.dependencies ?? [])].sort()).toEqual(
+      [...("dependencies" in item ? (item.dependencies ?? []) : [])].sort()
+    );
+    expect([...(published.registryDependencies ?? [])].sort()).toEqual(
+      [
+        ...("registryDependencies" in item
+          ? (item.registryDependencies ?? [])
+          : []),
+      ].sort()
+    );
+  });
 
-				const expected = item.files.map((f) => f.path).sort();
-				const actual = (published.files ?? []).map((f) => f.path).sort();
-
-				expect(
-					actual,
-					`File list mismatch in public/r/${name}.json — run "bun run registry:build"`,
-				).toEqual(expected);
-			},
-		);
-	});
-
-	describe("source content parity", () => {
-		it.each(
-			registry.items.flatMap((item) =>
-				item.files
-					.filter((f) => existsSync(join(ROOT, f.path)))
-					.map((file) => [item.name, file.path] as [string, string]),
-			),
-		)(
-			'source content of "%s" matches public/r/%s.json',
-			(itemName, filePath) => {
-				const published = readPublished(itemName);
-				if (!published) return; // Caught by existence test
-
-				const publishedFile = published.files?.find((f) => f.path === filePath);
-				if (!publishedFile) return; // Caught by file list parity test
-
-				const sourceContent = readFileSync(join(ROOT, filePath), "utf-8");
-				expect(
-					publishedFile.content,
-					`Stale content for "${filePath}" in public/r/${itemName}.json — run "bun run registry:build"`,
-				).toBe(sourceContent);
-			},
-		);
-	});
-
-	describe("dependency parity", () => {
-		it.each(registry.items.map((item) => [item.name, item] as [string, (typeof registry.items)[0]]))(
-			'npm dependencies in public/r/%s.json match registry.json',
-			(name, item) => {
-				const published = readPublished(name);
-				if (!published) return;
-
-				const expected = [...(item.dependencies ?? [])].sort();
-				const actual = [...(published.dependencies ?? [])].sort();
-
-				expect(
-					actual,
-					`npm dependency mismatch for "${name}" — run "bun run registry:build"`,
-				).toEqual(expected);
-			},
-		);
-
-		it.each(registry.items.map((item) => [item.name, item] as [string, (typeof registry.items)[0]]))(
-			'registry dependencies in public/r/%s.json match registry.json',
-			(name, item) => {
-				const published = readPublished(name);
-				if (!published) return;
-
-				const expected = [...(item.registryDependencies ?? [])].sort();
-				const actual = [...(published.registryDependencies ?? [])].sort();
-
-				expect(
-					actual,
-					`Registry dependency mismatch for "${name}" — run "bun run registry:build"`,
-				).toEqual(expected);
-			},
-		);
-	});
+  it.each(
+    publishedRegistries.flatMap(([variant, directory, sourceRegistry]) =>
+      sourceRegistry.items.flatMap((item) =>
+        item.files.map(
+          (file) => [variant, directory, item.name, file.path] as const
+        )
+      )
+    )
+  )("publishes current source for %s:%s:%s", (_variant, directory, itemName, filePath) => {
+    const published = readPublished(directory, itemName);
+    const publishedFile = published?.files.find(
+      (file) => file.path === filePath
+    );
+    expect(publishedFile?.content).toBe(
+      readFileSync(join(root, filePath), "utf8")
+    );
+  });
 });

@@ -2,6 +2,10 @@
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "extends": ["ultracite/biome/core", "ultracite/biome/next"],
   "files": {
-    "includes": ["!!public/r/**/*.json"]
+    "includes": [
+      "!!public/r/**/*.json",
+      "!!src/config/registry/index.tsx",
+      "!!src/description/customized-components.ts"
+    ]
   }
 }

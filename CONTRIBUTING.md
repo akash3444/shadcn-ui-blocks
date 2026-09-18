@@ -45,7 +45,30 @@ The website should now be accessible at `http://localhost:3000`.
 ### 4. Make Changes
 
 - Add or edit blocks in the respective component directories.
+- Update the matching entry in `src/registry/catalog` when registry metadata changes.
 - Test your changes locally to ensure they work as expected.
+
+### Registry catalog
+
+`src/registry/catalog` is the source of truth for registry items, block previews, categories, and component gallery metadata. Do not edit `registry.json`, `registry-base.json`, `registry-radix.json`, `src/config/registry/index.tsx`, or `src/description/customized-components.ts` by hand.
+
+Generate the derived files after editing the catalog:
+
+```bash
+bun run registry:generate
+```
+
+Check that generated files are current without changing them:
+
+```bash
+bun run registry:check
+```
+
+Build the public shadcn registry files with:
+
+```bash
+bun run registry:build
+```
 
 ### 5. Commit and Push
 
@@ -81,7 +104,7 @@ Once your changes are pushed to your fork, open a pull request (PR) to the main 
 To ensure a smooth contribution process, please follow these guidelines:
 
 - Write clean, readable, and well-documented code.
-- Use [Prettier](https://prettier.io/) for consistent formatting.
+- Use Biome for consistent formatting.
 - Follow the existing folder and component structure.
 - Test your changes before submitting a PR.
 
