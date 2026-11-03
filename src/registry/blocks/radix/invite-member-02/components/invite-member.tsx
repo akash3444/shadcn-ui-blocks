@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, UserPlusIcon } from "lucide-react";
+import { Copy, Search, UserPlusIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/registry/bases/radix/ui/avatar";
 import { Button } from "@/registry/bases/radix/ui/button";
 import {
@@ -13,6 +13,7 @@ import {
 import {
   InputGroup,
   InputGroupAddon,
+  InputGroupButton,
   InputGroupInput,
 } from "@/registry/bases/radix/ui/input-group";
 import {
@@ -33,7 +34,7 @@ import {
 export default function InviteMember() {
   return (
     <Dialog open>
-      <DialogContent className="max-w-sm!">
+      <DialogContent className="max-w-sm! pb-1.5">
         <DialogHeader>
           <DialogTitle className="font-medium">Invite Members</DialogTitle>
           <DialogDescription>Invite members to your team.</DialogDescription>
@@ -47,7 +48,7 @@ export default function InviteMember() {
             </InputGroupAddon>
           </InputGroup>
 
-          <ScrollArea className="mt-2 h-84">
+          <ScrollArea className="mt-2 h-72">
             {people.map((person) => (
               <Item className="px-0" key={person.username}>
                 <ItemMedia className="my-auto">
@@ -77,6 +78,21 @@ export default function InviteMember() {
               </Item>
             ))}
           </ScrollArea>
+        </div>
+
+        <div className="-mx-4.5 rounded-md bg-muted px-5 py-4">
+          <p className="font-medium text-sm">Copy link and share with others</p>
+          <InputGroup className="mt-2 bg-background">
+            <InputGroupInput
+              placeholder="https://calmui.dev/invite"
+              readOnly
+            />
+            <InputGroupAddon align="inline-end">
+              <InputGroupButton aria-label="Copy" size="icon-xs" title="Copy">
+                <Copy />
+              </InputGroupButton>
+            </InputGroupAddon>
+          </InputGroup>
         </div>
       </DialogContent>
     </Dialog>

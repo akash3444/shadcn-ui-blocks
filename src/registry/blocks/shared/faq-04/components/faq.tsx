@@ -51,27 +51,24 @@ const FAQ = () => {
     <div className="flex min-h-screen items-center justify-center px-6 py-20">
       <div className="max-w-(--breakpoint-lg)">
         <h2 className="text-center font-medium text-[2.4rem]/snug tracking-tighter">
-          Looking for an answer?
+          Your questions, answered
         </h2>
         <p className="mt-2 text-center text-muted-foreground text-xl md:text-2xl md:tracking-[-0.015em]">
           Quick answers to common product and service questions
         </p>
 
-        <div className="mt-12 grid gap-4 rounded-xl sm:mt-16 md:grid-cols-2">
+        <div className="mt-12 grid gap-px overflow-hidden rounded-xl border border-border/85 bg-border/85 shadow-xs/3 sm:mt-16 md:grid-cols-2">
           {faq.map(({ question, answer, icon: Icon }) => (
-            <div
-              className="rounded-xl border border-border/85 bg-card p-6 shadow-xs/3"
-              key={question}
-            >
-              <div className="flex items-center gap-3">
-                <div className="flex size-9 items-center justify-center rounded-full bg-foreground/5">
-                  <Icon className="size-4.5" />
-                </div>
-                <span className="font-medium text-[1.2rem] tracking-[-0.01em]">
-                  {question}
-                </span>
+            <div className="flex items-start gap-4 bg-card p-6" key={question}>
+              <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-foreground/5">
+                <Icon className="size-5" />
               </div>
-              <p className="mt-3 text-foreground/70">{answer}</p>
+              <div>
+                <div className="mt-1 mb-2 flex items-start gap-2 text-[1.2rem] tracking-[-0.01em]">
+                  <span className="font-medium">{question}</span>
+                </div>
+                <p className="text-foreground/70">{answer}</p>
+              </div>
             </div>
           ))}
         </div>

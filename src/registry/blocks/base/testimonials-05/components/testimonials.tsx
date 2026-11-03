@@ -1,112 +1,85 @@
-import { StarIcon } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback } from "@/registry/bases/base/ui/avatar";
+import { Separator } from "@/registry/bases/base/ui/separator";
 
 const testimonials = [
   {
-    id: 1,
-    name: "John Doe",
-    designation: "Software Engineer",
-    company: "TechCorp",
+    name: "Sarah Johnson",
+    role: "Product Designer at Canva",
+    avatar: "https://mockmind-api.uifaces.co/content/human/97.jpg",
     testimonial:
-      "This product has completely transformed the way we work. The efficiency and ease of use are unmatched!",
-    avatar: "https://randomuser.me/api/portraits/men/1.jpg",
+      "This product completely changed the way I work. The interface is intuitive and the performance is top-notch.",
   },
   {
-    id: 2,
-    name: "Sophia Lee",
-    designation: "Data Analyst",
-    company: "InsightTech",
+    name: "Raj Mehta",
+    role: "Frontend Developer at Zomato",
+    avatar: "https://mockmind-api.uifaces.co/content/human/80.jpg",
     testimonial:
-      "This tool has saved me hours of work! The analytics and reporting features are incredibly powerful.",
-    avatar: "https://randomuser.me/api/portraits/women/6.jpg",
+      "It’s rare to find a tool that blends design and usability so well. Highly recommend it to all developers!",
   },
   {
-    id: 3,
-    name: "Michael Johnson",
-    designation: "UX Designer",
-    company: "DesignPro",
+    name: "Emily Chen",
+    role: "Marketing Manager at HubSpot",
+    avatar: "https://mockmind-api.uifaces.co/content/human/113.jpg",
     testimonial:
-      "An amazing tool that simplifies complex tasks. Highly recommended for professionals in the industry.",
-    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+      "The experience has been seamless from day one. Great support, fast delivery, and amazing value.",
   },
   {
-    id: 4,
-    name: "Emily Davis",
-    designation: "Marketing Specialist",
-    company: "BrandBoost",
+    name: "Daniel Kim",
+    role: "CTO at NextLaunch",
+    avatar: "https://mockmind-api.uifaces.co/content/human/90.jpg",
     testimonial:
-      "I've seen a significant improvement in our team's productivity since we started using this service.",
-    avatar: "https://randomuser.me/api/portraits/women/4.jpg",
+      "We integrated this solution into our workflow and saw an instant boost in productivity and collaboration.",
   },
   {
-    id: 5,
-    name: "Daniel Martinez",
-    designation: "Full-Stack Developer",
-    company: "CodeCrafters",
+    name: "Aisha Patel",
+    role: "Software Engineer at Swiggy",
+    avatar: "https://mockmind-api.uifaces.co/content/human/116.jpg",
     testimonial:
-      "The best investment we've made! The support team is also super responsive and helpful.",
-    avatar: "https://randomuser.me/api/portraits/men/5.jpg",
+      "I've used several tools in this category, but nothing matches the polish and reliability of this one.",
   },
   {
-    id: 6,
-    name: "Jane Smith",
-    designation: "Product Manager",
-    company: "InnovateX",
+    name: "Liam Garcia",
+    role: "Startup Founder",
+    avatar: "https://mockmind-api.uifaces.co/content/human/112.jpg",
     testimonial:
-      "The user experience is top-notch! The interface is clean, intuitive, and easy to navigate.",
-    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+      "As a founder, I care about speed and simplicity. This product delivers on both fronts beautifully.",
   },
 ];
 
-const Testimonials = () => (
-  <div className="px-6 py-20">
-    <div>
+const Testimonials = () => {
+  return (
+    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-20">
       <h2 className="text-center font-medium text-4xl tracking-tight md:text-4xl">
-        Loved by developers
+        Testimonials
       </h2>
-      <p className="mt-4 text-center text-muted-foreground text-xl md:text-2xl">
-        See how teams are achieving more with us
+      <p className="mt-2.5 text-balance text-center text-lg text-muted-foreground sm:text-2xl">
+        What our customers say about us
       </p>
-      <div className="mx-auto mt-8 w-full max-w-(--breakpoint-xl) sm:mt-14 lg:mt-16">
-        <div className="grid grid-cols-1 overflow-hidden md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial) => (
-            <div
-              className={cn(
-                "relative flex flex-col px-6 py-10",
-                "before:absolute before:inset-0 before:-m-px before:border-border before:border-r before:border-b before:border-dashed before:content-['']"
-              )}
-              key={testimonial.id}
-            >
-              <div className="flex items-center justify-center gap-1">
-                <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
-                <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
-                <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
-                <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
-                <StarIcon className="h-6 w-6 fill-yellow-500 stroke-yellow-500" />
-              </div>
-              <p className="my-6 max-w-md text-pretty text-center text-[17px]">
-                {testimonial.testimonial}
-              </p>
-              <div className="mt-auto flex items-center justify-center gap-3">
-                <Avatar className="size-9">
-                  <AvatarFallback className="bg-primary font-medium text-primary-foreground text-xl">
-                    {testimonial.name.charAt(0)}
-                  </AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="font-medium">{testimonial.name}</p>
-                  <p className="text-muted-foreground text-sm">
-                    {testimonial.designation}
-                  </p>
-                </div>
+
+      <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {testimonials.map(({ name, avatar, role, testimonial }, index) => (
+          <div
+            className="relative flex flex-col rounded-lg border bg-muted/70 px-5 pt-10 pb-3"
+            key={index}
+          >
+            {/* Quote */}
+            <span className="absolute top-2 left-4 font-satoshi text-8xl text-foreground/30">
+              &ldquo;
+            </span>
+
+            <p className="grow py-6 font-medium text-lg">{testimonial}</p>
+            <Separator />
+            <div className="flex items-center gap-3 py-3.5">
+              <img alt="" className="h-10 w-10 rounded-full" src={avatar} />
+              <div className="flex flex-col">
+                <p className="font-medium">{name}</p>
+                <p className="text-muted-foreground text-sm">{role}</p>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Testimonials;

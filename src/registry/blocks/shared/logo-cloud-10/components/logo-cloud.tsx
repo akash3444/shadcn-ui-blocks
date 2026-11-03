@@ -5,52 +5,44 @@ import {
   Logo04,
   Logo05,
   Logo06,
+  Logo07,
+  Logo08,
 } from "@/components/logos";
-import { cn } from "@/lib/utils";
+import { Marquee } from "@/registry/blocks/shared/logo-cloud-10/components/magicui/marquee";
+
+const logos = [Logo01, Logo02, Logo03, Logo07, Logo05, Logo06, Logo04, Logo08];
 
 const LogoCloud = () => {
   return (
-    <div className="px-6 py-12 sm:px-12">
-      <p className="text-balance text-center font-medium text-foreground/80 text-lg">
+    <section className="mx-auto max-w-5xl px-12 py-12">
+      <p className="text-balance text-center font-medium text-muted-foreground text-sm uppercase">
         Trusted by teams and companies around the world
       </p>
-      <div className="relative mx-auto mt-10 max-w-4xl">
-        <div
-          className={cn(
-            "grid grid-cols-2 place-items-center border shadow-xs/1 sm:grid-cols-3",
-            "*:border-e *:border-b *:nth-last-[2]:border-b-0 *:last:border-b-0 *:odd:bg-muted/60 max-sm:*:nth-[2n]:border-e-0 sm:*:nth-[3n]:border-e-0 sm:*:nth-last-[3]:border-b-0"
-          )}
-        >
-          <div className="flex w-full items-center justify-center px-3 py-7">
-            <Logo01 className="h-7 sm:h-8" />
-          </div>
-          <div className="flex w-full items-center justify-center px-3 py-7">
-            <Logo02 className="h-7 sm:h-8" />
-          </div>
-          <div className="flex w-full items-center justify-center px-3 py-7">
-            <Logo03 className="h-7 sm:h-8" />
-          </div>
-          <div className="flex w-full items-center justify-center px-3 py-7">
-            <Logo04 className="h-7 sm:h-8" />
-          </div>
-          <div className="flex w-full items-center justify-center px-3 py-7">
-            <Logo05 className="h-7 sm:h-8" />
-          </div>
-          <div className="flex w-full items-center justify-center px-3 py-7">
-            <Logo06 className="h-7 sm:h-8" />
-          </div>
-        </div>
+      <div className="relative mt-14 flex flex-col grayscale-100">
+        <div className="absolute inset-x-0 top-0 w-[calc(100%+4rem)] -translate-x-8 border-t" />
+        <div className="absolute inset-x-0 bottom-0 w-[calc(100%+4rem)] -translate-x-8 border-b" />
+        <div className="absolute inset-y-0 left-0 h-[calc(100%+4rem)] -translate-y-8 border-s" />
+        <div className="absolute inset-y-0 right-0 h-[calc(100%+4rem)] -translate-y-8 border-e" />
 
-        <div className="mask-l-from-0 absolute top-0 left-0 w-6 -translate-x-full border-b border-dashed sm:w-12" />
-        <div className="mask-r-from-0 absolute top-0 right-0 w-6 translate-x-full border-b border-dashed sm:w-12" />
-        <div className="mask-l-from-0 absolute bottom-0 left-0 w-6 -translate-x-full border-b border-dashed sm:w-12" />
-        <div className="mask-r-from-0 absolute right-0 bottom-0 w-6 translate-x-full border-b border-dashed sm:w-12" />
-        <div className="mask-t-from-0 absolute top-0 left-0 h-6 -translate-y-full border-s border-dashed sm:h-12" />
-        <div className="mask-t-from-0 absolute top-0 right-0 h-6 -translate-y-full border-s border-dashed sm:h-12" />
-        <div className="mask-b-from-0 absolute bottom-0 left-0 h-6 translate-y-full border-s border-dashed sm:h-12" />
-        <div className="mask-b-from-0 absolute right-0 bottom-0 h-6 translate-y-full border-s border-dashed sm:h-12" />
+        <div className="absolute inset-x-0 -top-1 w-[calc(100%+3rem)] -translate-x-6 border-t" />
+        <div className="absolute inset-x-0 -bottom-1 w-[calc(100%+3rem)] -translate-x-6 border-b" />
+        <div className="absolute inset-y-0 -left-1 h-[calc(100%+3rem)] -translate-y-6 border-s" />
+        <div className="absolute inset-y-0 -right-1 h-[calc(100%+3rem)] -translate-y-6 border-e" />
+
+        <div className="flex flex-col">
+          <Marquee className="p-0 [--gap:0px]">
+            {logos.map((Logo, index) => (
+              <div
+                className="flex w-full items-center justify-center border-e px-10 py-6 even:bg-muted/60 dark:even:bg-muted/30"
+                key={index}
+              >
+                <Logo className="h-6 sm:h-8" />
+              </div>
+            ))}
+          </Marquee>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

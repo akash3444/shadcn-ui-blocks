@@ -1,8 +1,6 @@
 import { Box, CircleCheck, Gem, type LucideIcon, Users } from "lucide-react";
 import { Badge } from "@/registry/bases/base/ui/badge";
 import { Button } from "@/registry/bases/base/ui/button";
-import { Separator } from "@/registry/bases/base/ui/separator";
-import { cn } from "@/lib/utils";
 
 interface PricingPlan {
   name: string;
@@ -16,7 +14,7 @@ interface PricingPlan {
 const pricingPlans: PricingPlan[] = [
   {
     name: "Starter",
-    description: "Perfect for individuals just getting started.",
+    description: "Perfect for individuals who are just getting started.",
     price: 29,
     isRecommended: false,
     icon: Box,
@@ -60,15 +58,15 @@ const pricingPlans: PricingPlan[] = [
 
 const Pricing = () => {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-20">
-      <h2 className="text-center font-medium text-4xl tracking-tight">
-        Pricing that makes sense
+    <section className="mx-auto max-w-6xl px-6 py-20">
+      <h2 className="text-balance text-center font-medium text-4xl tracking-tight">
+        Plans & Pricing
       </h2>
-      <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] md:text-2xl">
-        Choose a plan that fits your needs with no hidden costs
+      <p className="mt-2 text-balance text-center text-lg text-muted-foreground -tracking-[0.01em] sm:mt-4 sm:text-2xl">
+        Flexible pricing designed to grow with you ready
       </p>
 
-      <div className="mt-12 grid grid-cols-1 gap-y-8 shadow-xs/2 sm:grid-cols-2 md:mt-16 md:grid-cols-3">
+      <div className="mt-12 grid grid-cols-1 gap-1 rounded-xl border bg-muted/40 p-1 sm:mt-16 sm:mt-16 sm:grid-cols-2 md:mt-15 md:grid-cols-3">
         {pricingPlans.map((plan) => (
           <PlanCard key={plan.name} plan={plan} />
         ))}
@@ -79,29 +77,17 @@ const Pricing = () => {
 
 const PlanCard = ({ plan }: { plan: PricingPlan }) => {
   return (
-    <div
-      className={cn("border bg-card", {
-        "relative border border-primary bg-card ring ring-primary ring-inset":
-          plan.isRecommended,
-      })}
-    >
+    <div className="shadow/5 relative rounded-lg border bg-background">
       {plan.isRecommended && (
-        <Badge className="absolute top-0 right-0 rounded-none">
-          Most Popular
-        </Badge>
+        <Badge className="absolute top-3 right-3">Most Popular</Badge>
       )}
-      <div
-        className={cn("p-6", {
-          "bg-linear-to-bl from-primary/15": plan.isRecommended,
-        })}
-      >
+      <div className="rounded-t-lg border-b border-dashed p-6">
         <plan.icon className="mb-5 text-primary" />
         <div className="flex items-center gap-1">
           <h3 className="font-medium text-2xl tracking-tight">{plan.name}</h3>
         </div>
         <p className="my-2 text-muted-foreground">{plan.description}</p>
       </div>
-      <Separator />
       <div className="px-6 pt-5 pb-10">
         <p className="mt-4 font-satoshi font-semibold text-4xl">
           ${plan.price}
@@ -109,7 +95,11 @@ const PlanCard = ({ plan }: { plan: PricingPlan }) => {
         <p className="mt-1 text-muted-foreground text-sm tracking-normal">
           one-time payment
         </p>
-        <Button className="my-6 w-full" size="lg">
+        <Button
+          className="my-6 w-full"
+          size="lg"
+          variant={plan.isRecommended ? "default" : "outline"}
+        >
           Get Started
         </Button>
         <ul className="mt-4 space-y-2">

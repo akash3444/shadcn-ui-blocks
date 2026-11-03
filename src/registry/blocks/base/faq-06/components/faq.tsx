@@ -39,40 +39,38 @@ const FAQ = () => {
   return (
     <div className="px-6 py-20">
       <div className="mx-auto w-full max-w-2xl">
-        <h2 className="font-medium text-3xl/snug tracking-tight">Need help?</h2>
+        <h2 className="font-medium text-4xl tracking-tight">Start here</h2>
         <p className="mt-2 text-muted-foreground text-xl">
           Quick answers to common questions about our products and services.
         </p>
 
-        <div className="mt-8 rounded-xl border border-border/65 bg-muted p-1 sm:mt-10">
-          <Accordion
-            className="space-y-px rounded-lg border border-border/65 bg-border/20"
-            defaultValue={["question-0"]}
-          >
-            {faq.map(({ question, answer }, index) => (
-              <AccordionItem
-                className="border-none bg-background px-4 first:rounded-t-lg last:rounded-b-lg"
-                key={question}
-                value={`question-${index}`}
-              >
-                <AccordionPrimitive.Header className="flex items-center">
-                  <AccordionPrimitive.Trigger
-                    className={cn(
-                      "flex flex-1 items-center justify-between pt-4 pb-3 font-medium tracking-[-0.01em] transition-all hover:underline [&[aria-expanded=true]>svg]:rotate-45",
-                      "text-start text-lg"
-                    )}
-                  >
-                    {question}
-                    <PlusIcon className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-base text-muted-foreground">
-                  {answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+        <Accordion
+          className="mt-8 space-y-4 sm:mt-10"
+          defaultValue={["question-0"]}
+        >
+          {faq.map(({ question, answer }, index) => (
+            <AccordionItem
+              className="rounded-xl border-none bg-muted px-4"
+              key={question}
+              value={`question-${index}`}
+            >
+              <AccordionPrimitive.Header className="flex items-center">
+                <AccordionPrimitive.Trigger
+                  className={cn(
+                    "flex flex-1 items-center justify-between py-4 font-medium tracking-[-0.01em] transition-all hover:underline aria-expanded:pb-3 [&[aria-expanded=true]>svg]:rotate-45",
+                    "text-start text-lg"
+                  )}
+                >
+                  {question}
+                  <PlusIcon className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
+                </AccordionPrimitive.Trigger>
+              </AccordionPrimitive.Header>
+              <AccordionContent className="text-base text-muted-foreground">
+                {answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </div>
   );

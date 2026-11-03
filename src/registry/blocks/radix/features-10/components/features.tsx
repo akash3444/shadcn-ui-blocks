@@ -1,12 +1,15 @@
 import {
+  ArrowUpRight,
   Cable,
   Code,
   Contrast,
   MonitorSmartphone,
+  Smile,
   SquareDashedMousePointer,
   Zap,
 } from "lucide-react";
-import { StatsCard } from "./stats-card";
+import Link from "next/link";
+import { Button } from "@/registry/bases/radix/ui/button";
 
 const features = [
   {
@@ -51,16 +54,20 @@ const Features = () => {
   return (
     <div className="mx-auto flex max-w-7xl flex-col px-6 py-20">
       <h2 className="text-center text-4xl font-medium tracking-tight text-pretty">
-        All the right tools
+        Designed to scale
       </h2>
       <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
-        Practical components designed for production
+        Spend less time configuring and more time creating
       </p>
 
-      <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-20 grid grid-cols-1 bg-card sm:grid-cols-2 lg:grid-cols-3">
+        <div className="-mr-px flex h-16 items-center border px-6 font-medium text-lg sm:col-span-2 md:col-span-1">
+          <Smile className="mr-4 text-primary" /> Features that make you happy
+        </div>
+        <div className="-mr-px hidden h-16 border bg-[repeating-linear-gradient(315deg,var(--muted)_0,var(--muted)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed md:block lg:col-span-2" />
         {features.map((feature, index) => (
           <div
-            className="rounded-xl border border-border/80 bg-card px-5 pt-7 pb-0 shadow-xs/3"
+            className="-mt-px -mr-px border border-border/75 px-5 pt-7 pb-5"
             key={index}
           >
             <div className="flex items-center gap-3">
@@ -71,12 +78,13 @@ const Features = () => {
                 {feature.title}
               </h3>
             </div>
-            <p className="mt-4 text-base text-foreground/80">
-              {feature.description}
-            </p>
-            <div className="mt-8 -mr-5">
-              <StatsCard className="rounded-br-lg" />
-            </div>
+            <p className="mt-4 text-foreground/80">{feature.description}</p>
+
+            <Button asChild className="mt-4 px-0!" variant="link">
+              <Link href="#" target="_blank">
+                Learn more <ArrowUpRight />
+              </Link>
+            </Button>
           </div>
         ))}
       </div>

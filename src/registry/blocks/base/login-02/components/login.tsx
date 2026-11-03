@@ -29,57 +29,19 @@ const Login = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-muted/70">
-      <div className="relative w-full max-w-sm overflow-hidden rounded-xl border bg-card px-8 py-8 shadow-lg/5 dark:shadow-xl">
-        <div
-          className="absolute inset-0 -top-px -left-px z-0"
-          style={{
-            backgroundImage: `
-        linear-gradient(to right, color-mix(in srgb, var(--card-foreground) 8%, transparent) 1px, transparent 1px),
-        linear-gradient(to bottom, color-mix(in srgb, var(--card-foreground) 8%, transparent) 1px, transparent 1px)
-      `,
-            backgroundSize: "20px 20px",
-            backgroundPosition: "0 0, 0 0",
-            maskImage: `
-        repeating-linear-gradient(
-              to right,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            repeating-linear-gradient(
-              to bottom,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            radial-gradient(ellipse 70% 50% at 50% 0%, #000 60%, transparent 100%)
-      `,
-            WebkitMaskImage: `
- repeating-linear-gradient(
-              to right,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            repeating-linear-gradient(
-              to bottom,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            radial-gradient(ellipse 70% 50% at 50% 0%, #000 60%, transparent 100%)
-      `,
-            maskComposite: "intersect",
-            WebkitMaskComposite: "source-in",
-          }}
-        />
+    <div className="flex h-screen items-center justify-center">
+      <div className="flex h-full w-full">
+        <div className="relative m-auto flex w-full max-w-sm flex-col items-center p-8 outline-0 outline-border/40 outline-offset-0.5 sm:outline-2 dark:outline-border/80">
+          <div className="absolute inset-x-0 top-0 w-[calc(100%+4rem)] -translate-x-8 border-t max-sm:hidden" />
+          <div className="absolute inset-x-0 bottom-0 w-[calc(100%+4rem)] -translate-x-8 border-b max-sm:hidden" />
+          <div className="absolute inset-y-0 left-0 h-[calc(100%+4rem)] -translate-y-8 border-s max-sm:hidden" />
+          <div className="absolute inset-y-0 right-0 h-[calc(100%+4rem)] -translate-y-8 border-e max-sm:hidden" />
 
-        <div className="relative isolate flex flex-col items-center">
+          <div className="absolute inset-x-0 -top-1 w-[calc(100%+3rem)] -translate-x-6 border-t max-sm:hidden" />
+          <div className="absolute inset-x-0 -bottom-1 w-[calc(100%+3rem)] -translate-x-6 border-b max-sm:hidden" />
+          <div className="absolute inset-y-0 -left-1 h-[calc(100%+3rem)] -translate-y-6 border-s max-sm:hidden" />
+          <div className="absolute inset-y-0 -right-1 h-[calc(100%+3rem)] -translate-y-6 border-e max-sm:hidden" />
+
           <Logo className="h-9 w-9" />
           <p className="mt-4 font-medium text-xl">Log in to Calm UI</p>
 
@@ -94,7 +56,7 @@ const Login = () => {
             <Separator />
           </div>
           <form
-            className="w-full space-y-6"
+            className="w-full space-y-4"
             onSubmit={form.handleSubmit(onSubmit)}
           >
             <Controller
@@ -131,7 +93,7 @@ const Login = () => {
                 </Field>
               )}
             />
-            <Button className="w-full" type="submit">
+            <Button className="mt-4 w-full" type="submit">
               Continue with Email
             </Button>
           </form>
@@ -150,6 +112,13 @@ const Login = () => {
               </Link>
             </p>
           </div>
+        </div>
+        <div className="relative hidden w-full max-w-2xl grow border-l bg-muted lg:block">
+          <img
+            alt="Login"
+            className="absolute inset-0 size-full object-cover"
+            src="/images/ascii-art.png"
+          />
         </div>
       </div>
     </div>

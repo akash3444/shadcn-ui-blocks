@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ComponentProps } from "react";
 import { Avatar, AvatarFallback } from "@/registry/bases/base/ui/avatar";
 import { Button } from "@/registry/bases/base/ui/button";
+import { Marquee } from "@/registry/bases/base/ui/marquee";
 
 const testimonials = [
   {
@@ -28,8 +29,7 @@ const testimonials = [
     designation: "UX Designer",
     company: "DesignPro",
     testimonial:
-      "An amazing tool that simplifies complex tasks. Highly recommended for professionals in the industry. " +
-      "The intuitive interface makes it easy to onboard new team members, and the automation features save us countless hours every week. ",
+      "An amazing tool that simplifies complex tasks. Highly recommended for professionals in the industry.",
     avatar: "https://randomuser.me/api/portraits/men/3.jpg",
   },
   {
@@ -63,48 +63,54 @@ const testimonials = [
 
 const Testimonials = () => (
   <div className="px-6 py-20">
-    <div>
-      <h2 className="text-center font-medium text-4xl tracking-tight md:text-4xl">
-        Trusted by many
-      </h2>
-      <p className="mt-3.5 text-center text-muted-foreground text-xl md:text-2xl">
-        See how people are using it in their work
-      </p>
-      <div className="mx-auto mt-14 max-w-(--breakpoint-xl) columns-1 gap-8 md:columns-2 lg:mt-16 lg:columns-3">
-        {testimonials.map((testimonial) => (
-          <div
-            className="mb-8 break-inside-avoid rounded-xl border border-border/85 bg-card p-6 shadow-xs/3 dark:shadow-foreground/50 dark:shadow-lg/7"
-            key={testimonial.id}
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <Avatar className="size-10">
-                  <AvatarFallback className="bg-primary font-medium text-primary-foreground text-xl">
-                    {testimonial.name.charAt(0)}
-                  </AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="font-medium">{testimonial.name}</p>
-                  <p className="text-muted-foreground text-sm">
-                    {testimonial.designation}
-                  </p>
-                </div>
-              </div>
-              <Button
-                render={<Link href="#" target="_blank" />}
-                size="icon"
-                variant="ghost"
-              >
-                <TwitterLogo className="h-4 w-4" />
-              </Button>
-            </div>
-            <p className="mt-5 text-[17px]">{testimonial.testimonial}</p>
-          </div>
-        ))}
-      </div>
+    <h2 className="text-center font-medium text-4xl tracking-tight md:text-4xl">
+      Success Stories
+    </h2>
+    <p className="mt-3.5 text-center text-muted-foreground text-xl md:text-2xl">
+      Real stories from people who use our product
+    </p>
+    <div className="mask-x-from-80% mt-14">
+      <Marquee className="[--duration:60s]" pauseOnHover>
+        <TestimonialList />
+      </Marquee>
+      <Marquee className="mt-0 [--duration:60s]" pauseOnHover reverse>
+        <TestimonialList />
+      </Marquee>
     </div>
   </div>
 );
+
+const TestimonialList = () =>
+  testimonials.map((testimonial) => (
+    <div
+      className="min-w-96 max-w-sm rounded-xl bg-accent p-6"
+      key={testimonial.id}
+    >
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <Avatar className="size-10">
+            <AvatarFallback className="bg-primary font-medium text-primary-foreground text-xl">
+              {testimonial.name.charAt(0)}
+            </AvatarFallback>
+          </Avatar>
+          <div>
+            <p className="font-medium">{testimonial.name}</p>
+            <p className="text-muted-foreground text-sm">
+              {testimonial.designation}
+            </p>
+          </div>
+        </div>
+        <Button
+          render={<Link href="#" target="_blank" />}
+          size="icon"
+          variant="ghost"
+        >
+          <TwitterLogo className="h-4 w-4" />
+        </Button>
+      </div>
+      <p className="mt-5 text-[17px]">{testimonial.testimonial}</p>
+    </div>
+  ));
 
 const TwitterLogo = (props: ComponentProps<"svg">) => (
   <svg

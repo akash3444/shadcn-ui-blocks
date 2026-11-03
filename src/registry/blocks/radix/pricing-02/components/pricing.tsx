@@ -1,57 +1,76 @@
-import { CircleCheck } from "lucide-react";
+"use client";
+
+import NumberFlow from "@number-flow/react";
+import { CircleCheck, CircleHelp } from "lucide-react";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 import { Badge } from "@/registry/bases/radix/ui/badge";
 import { Button } from "@/registry/bases/radix/ui/button";
 import { Separator } from "@/registry/bases/radix/ui/separator";
-import { cn } from "@/lib/utils";
+import { Tabs, TabsList, TabsTrigger } from "@/registry/bases/radix/ui/tabs";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/registry/bases/radix/ui/tooltip";
 
+const tooltipContent = {
+  styles: "Choose from a variety of styles to suit your preferences.",
+  filters: "Choose from a variety of filters to enhance your portraits.",
+  credits: "Use these credits to retouch your portraits.",
+};
+
+const YEARLY_DISCOUNT = 20;
 const plans = [
   {
     name: "Starter",
-    price: 19,
+    price: 20,
     description:
       "Get 20 AI-generated portraits with 2 unique styles and filters.",
     features: [
-      "5 hours turnaround time",
-      "20 AI portraits",
-      "Choice of 2 styles",
-      "Choice of 2 filters",
-      "2 retouch credits",
+      { title: "5 hours turnaround time" },
+      { title: "20 AI portraits" },
+      { title: "Choice of 2 styles", tooltip: tooltipContent.styles },
+      { title: "Choice of 2 filters", tooltip: tooltipContent.filters },
+      { title: "2 retouch credits", tooltip: tooltipContent.credits },
     ],
     buttonText: "Get 20 portraits in 5 hours",
   },
   {
     name: "Advanced",
-    price: 29,
+    price: 40,
     isRecommended: true,
     description:
       "Get 50 AI-generated portraits with 5 unique styles and filters.",
     features: [
-      "3 hours turnaround time",
-      "50 AI portraits",
-      "Choice of 5 styles",
-      "Choice of 5 filters",
-      "5 retouch credits",
+      { title: "3 hours turnaround time" },
+      { title: "50 AI portraits" },
+      { title: "Choice of 5 styles", tooltip: tooltipContent.styles },
+      { title: "Choice of 5 filters", tooltip: tooltipContent.filters },
+      { title: "5 retouch credits", tooltip: tooltipContent.credits },
     ],
     buttonText: "Get 50 portraits in 3 hours",
     isPopular: true,
   },
   {
     name: "Premium",
-    price: 49,
+    price: 80,
     description:
       "Get 100 AI-generated portraits with 10 unique styles and filters.",
     features: [
-      "1-hour turnaround time",
-      "100 AI portraits",
-      "Choice of 10 styles",
-      "Choice of 10 filters",
-      "10 retouch credits",
+      { title: "1-hour turnaround time" },
+      { title: "100 AI portraits" },
+      { title: "Choice of 10 styles", tooltip: tooltipContent.styles },
+      { title: "Choice of 10 filters", tooltip: tooltipContent.filters },
+      { title: "10 retouch credits", tooltip: tooltipContent.credits },
     ],
     buttonText: "Get 100 portraits in 1 hour",
   },
 ];
 
 const Pricing = () => {
+  const [selectedBillingPeriod, setSelectedBillingPeriod] = useState("monthly");
+
   return (
     <div className="px-6 py-20">
       <h2 className="text-center font-medium text-4xl tracking-tight">
@@ -61,15 +80,32 @@ const Pricing = () => {
         Choose the plan that fits your needs
       </p>
 
-      <div className="mx-auto mt-12 grid max-w-(--breakpoint-lg) grid-cols-1 items-center gap-8 sm:mt-16 lg:grid-cols-3">
+      <Tabs
+        className="mx-auto mt-8 max-w-max"
+        onValueChange={setSelectedBillingPeriod}
+        value={selectedBillingPeriod}
+      >
+        <TabsList className="h-11 rounded-full">
+          <TabsTrigger
+            className="rounded-full px-4 data-[state=active]:shadow-none"
+            value="monthly"
+          >
+            Monthly
+          </TabsTrigger>
+          <TabsTrigger
+            className="rounded-full px-4 data-[state=active]:shadow-none"
+            value="yearly"
+          >
+            Yearly (Save {YEARLY_DISCOUNT}%)
+          </TabsTrigger>
+        </TabsList>
+      </Tabs>
+      <div className="mx-auto mt-12 grid max-w-(--breakpoint-lg) grid-cols-1 items-center gap-8 lg:grid-cols-3">
         {plans.map((plan) => (
           <div
-            className={cn(
-              "relative rounded-lg border border-border/85 bg-card p-6 shadow-xs/3",
-              {
-                "border-2 border-primary py-10": plan.isPopular,
-              }
-            )}
+            className={cn("relative rounded-xl border p-6", {
+              "border-2 border-primary py-10": plan.isPopular,
+            })}
             key={plan.name}
           >
             {plan.isPopular && (
@@ -78,21 +114,24 @@ const Pricing = () => {
               </Badge>
             )}
             <h3 className="font-medium text-lg">{plan.name}</h3>
-            <p className="mt-2 font-satoshi font-semibold text-4xl">
-              ${plan.price}
+            <p className="mt-4 font-semibold text-4xl">
+              <NumberFlow
+                className="font-satoshi"
+                prefix="$"
+                value={
+                  selectedBillingPeriod === "monthly"
+                    ? plan.price
+                    : plan.price * ((100 - YEARLY_DISCOUNT) / 100)
+                }
+              />
+              <span className="ml-1.5 font-normal text-muted-foreground text-sm">
+                /month
+              </span>
             </p>
-            <p className="mt-4 font-medium text-muted-foreground">
+            <p className="mt-4 text-muted-foreground text-sm">
               {plan.description}
             </p>
-            <Separator className="my-4" />
-            <ul className="space-y-2">
-              {plan.features.map((feature) => (
-                <li className="flex items-start gap-2" key={feature}>
-                  <CircleCheck className="mt-1 h-4 w-4 text-green-600" />
-                  {feature}
-                </li>
-              ))}
-            </ul>
+
             <Button
               className="mt-6 w-full"
               size="lg"
@@ -100,6 +139,23 @@ const Pricing = () => {
             >
               {plan.buttonText}
             </Button>
+            <Separator className="my-8" />
+            <ul className="space-y-2">
+              {plan.features.map((feature) => (
+                <li className="flex items-start gap-1.5" key={feature.title}>
+                  <CircleCheck className="mt-1 h-4 w-4 text-green-600" />
+                  {feature.title}
+                  {feature.tooltip && (
+                    <Tooltip>
+                      <TooltipTrigger className="cursor-help">
+                        <CircleHelp className="mt-1 h-4 w-4 text-gray-500" />
+                      </TooltipTrigger>
+                      <TooltipContent>{feature.tooltip}</TooltipContent>
+                    </Tooltip>
+                  )}
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>

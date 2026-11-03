@@ -26,8 +26,8 @@ describe("findRegistrySource", () => {
     ],
     [
       "shared block",
-      "public/r/radix/testimonials-10.json",
-      "src/registry/blocks/shared/testimonials-10/components/testimonials.tsx",
+      "public/r/radix/testimonials-06.json",
+      "src/registry/blocks/shared/testimonials-06/components/testimonials.tsx",
     ],
     [
       "OG image",

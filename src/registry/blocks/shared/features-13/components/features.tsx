@@ -1,122 +1,66 @@
-import {
-  Cable,
-  Code,
-  Contrast,
-  MonitorSmartphone,
-  SquareDashedMousePointer,
-  Zap,
-} from "lucide-react";
-
 const features = [
   {
     title: "Blazing Fast Performance",
-    description:
-      "Optimized for speed with minimal loading times and instant interactions, ensuring a smooth experience across devices.",
-    icon: Zap,
+    description: "Optimized for speed with minimal loading times.",
+    image: "https://www.fffuel.co/images/dddepth-preview/dddepth-028.jpg",
   },
   {
     title: "Fully Customizable",
-    description:
-      "Tailor every component to match your brand or workflow — with built-in support for themes, layouts, and configurations.",
-    icon: SquareDashedMousePointer,
+    description: "Tailor every component to match your brand or workflow.",
+    image: "https://www.fffuel.co/images/dddepth-preview/dddepth-051.jpg",
   },
   {
     title: "Developer-Friendly",
-    description:
-      "Built with clean, modern code and best practices in mind, making it easy to integrate, extend, and scale.",
-    icon: Code,
+    description: "Built with clean, modern code and best practices in mind.",
+    image: "https://www.fffuel.co/images/dddepth-preview/dddepth-248.jpg",
   },
   {
     title: "Responsive by Default",
     description:
-      "Every component is designed to look great on all screen sizes — no extra work needed to make things mobile-friendly.",
-    icon: MonitorSmartphone,
+      "Every component is designed to look great on all screen sizes.",
+    image: "https://www.fffuel.co/images/dddepth-preview/dddepth-045.jpg",
   },
   {
     title: "Accessible for Everyone",
-    description:
-      "Built with accessibility best practices in mind to ensure an inclusive experience for all users, regardless of ability.",
-    icon: Contrast,
+    description: "Built with accessibility best practices in mind.",
+    image: "https://www.fffuel.co/images/dddepth-preview/dddepth-034.jpg",
   },
   {
     title: "Seamless Integration",
-    description:
-      "Easily connect with your favorite tools, APIs, and services — whether it's authentication, databases, or third-party libraries.",
-    icon: Cable,
+    description: "Easily connect with your favorite tools, APIs, and services.",
+    image: "https://www.fffuel.co/images/dddepth-preview/dddepth-012.jpg",
   },
 ];
 
 const Features = () => {
   return (
     <div className="mx-auto flex max-w-7xl flex-col px-6 py-20">
-      <h2 className="text-center text-4xl font-medium tracking-tight text-pretty">
-        Engineered for speed
+      <h2 className="text-pretty text-center font-medium text-4xl tracking-tight">
+        Built with intention
       </h2>
       <p className="mt-3 text-pretty text-center text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
-        Designed for speed, flexibility, and ease of use
+        Carefully structured blocks that feel right in projects
       </p>
 
-      <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-6 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
-          <div
-            className="relative overflow-hidden rounded-xl border bg-card p-6 dark:border-card-foreground/7"
-            key={index}
-          >
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/5 text-primary dark:bg-primary/10">
-              <feature.icon />
+          <div className="rounded-lg border border-border/80" key={index}>
+            <div className="mask-b-from-70% dark:mask-b-from-40% aspect-square w-full rounded-t-lg">
+              <img
+                alt=""
+                className="size-full rounded-t-lg object-cover"
+                src={feature.image}
+              />
             </div>
-            <h3 className="mt-5 font-medium text-lg tracking-[-0.005em]">
-              {feature.title}
-            </h3>
-            <p className="mt-2 text-foreground/80">{feature.description}</p>
 
-            <div
-              className="absolute inset-0 -top-px z-0"
-              style={{
-                backgroundImage: `
-        linear-gradient(to right, var(--border) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--border) 1px, transparent 1px)
-      `,
-                backgroundSize: "20px 20px",
-                backgroundPosition: "0 0, 0 0",
-                maskImage: `
-          repeating-linear-gradient(
-              to right,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            repeating-linear-gradient(
-              to bottom,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            radial-gradient(ellipse 100% 80% at 100% 0%, #000 50%, transparent 100%)
-      `,
-                WebkitMaskImage: `
-    repeating-linear-gradient(
-              to right,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            repeating-linear-gradient(
-              to bottom,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)
-      `,
-                maskComposite: "intersect",
-                WebkitMaskComposite: "source-in",
-              }}
-            />
+            <div className="-mt-3 p-6 pt-0">
+              <h3 className="font-medium text-xl tracking-[-0.005em]">
+                {feature.title}
+              </h3>
+              <p className="mt-2 text-foreground/80 text-lg">
+                {feature.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>

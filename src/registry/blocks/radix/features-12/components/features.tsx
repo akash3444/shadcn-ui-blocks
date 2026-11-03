@@ -1,95 +1,121 @@
 import {
-  ArrowUpRight,
-  Cable,
-  Code,
-  Contrast,
-  MonitorSmartphone,
-  Smile,
-  SquareDashedMousePointer,
-  Zap,
+  ArrowUpRightIcon,
+  BinocularsIcon,
+  CogIcon,
+  ShieldCheckIcon,
 } from "lucide-react";
-import Link from "next/link";
 import { Button } from "@/registry/bases/radix/ui/button";
 
-const features = [
+const plusPoints = [
   {
-    title: "Blazing Fast Performance",
+    icon: ShieldCheckIcon,
+    title: "Real-Time Protection",
     description:
-      "Optimized for speed with minimal loading times and instant interactions, ensuring a smooth experience across devices.",
-    icon: Zap,
+      "Stay alert with instant notifications and smart security monitoring.",
   },
   {
-    title: "Fully Customizable",
-    description:
-      "Tailor every component to match your brand or workflow — with built-in support for themes, layouts, and configurations.",
-    icon: SquareDashedMousePointer,
+    icon: CogIcon,
+    title: "Smart & Simple Setup",
+    description: "Install easily in minutes with no complex tools or wiring.",
   },
   {
-    title: "Developer-Friendly",
-    description:
-      "Built with clean, modern code and best practices in mind, making it easy to integrate, extend, and scale.",
-    icon: Code,
-  },
-  {
-    title: "Responsive by Default",
-    description:
-      "Every component is designed to look great on all screen sizes — no extra work needed to make things mobile-friendly.",
-    icon: MonitorSmartphone,
-  },
-  {
-    title: "Accessible for Everyone",
-    description:
-      "Built with accessibility best practices in mind to ensure an inclusive experience for all users, regardless of ability.",
-    icon: Contrast,
-  },
-  {
-    title: "Seamless Integration",
-    description:
-      "Easily connect with your favorite tools, APIs, and services — whether it's authentication, databases, or third-party libraries.",
-    icon: Cable,
+    icon: BinocularsIcon,
+    title: "Peace of Mind Anywhere",
+    description: "Monitor and control your home from anywhere, anytime.",
   },
 ];
 
-const Features = () => {
+export default function Features() {
   return (
-    <div className="mx-auto flex max-w-7xl flex-col px-6 py-20">
-      <h2 className="text-center text-4xl font-medium tracking-tight text-pretty">
-        Designed to scale
+    <div
+      className="mx-auto max-w-(--breakpoint-xl) px-6 py-24 text-center"
+      id="why-choose-us"
+    >
+      <strong className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
+        Why Choose Us
+      </strong>
+      <h2 className="mx-auto mt-5 max-w-[32ch] text-4xl/tight font-medium tracking-tight text-balance">
+        Pioneering smart assistants for two decades
       </h2>
-      <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
-        Spend less time configuring and more time creating
+      <p className="mt-5 text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
+        We are constantly always keep pace with the time.
       </p>
 
-      <div className="mt-20 grid grid-cols-1 bg-card sm:grid-cols-2 lg:grid-cols-3">
-        <div className="-mr-px flex h-16 items-center border px-6 font-medium text-lg sm:col-span-2 md:col-span-1">
-          <Smile className="mr-4 text-primary" /> Features that make you happy
-        </div>
-        <div className="-mr-px hidden h-16 border bg-[repeating-linear-gradient(315deg,var(--muted)_0,var(--muted)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed md:block lg:col-span-2" />
-        {features.map((feature, index) => (
+      <div className="mt-16 flex flex-wrap justify-center gap-4">
+        {plusPoints.map((plusPoint) => (
           <div
-            className="-mt-px -mr-px border border-border/75 px-5 pt-7 pb-5"
-            key={index}
+            className="relative w-full overflow-hidden rounded-lg border bg-linear-to-b from-foreground/3 px-6 py-10 sm:max-w-xs"
+            key={plusPoint.title}
           >
-            <div className="flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/7 text-primary dark:bg-primary/10">
-                <feature.icon className="h-5 w-5" />
-              </div>
-              <h3 className="font-medium text-lg tracking-[-0.005em]">
-                {feature.title}
-              </h3>
-            </div>
-            <p className="mt-4 text-foreground/80">{feature.description}</p>
+            <BackgroundPattern />
 
-            <Button asChild className="mt-4 px-0!" variant="link">
-              <Link href="#" target="_blank">
-                Learn more <ArrowUpRight />
-              </Link>
-            </Button>
+            <div className="isolate flex flex-col items-center gap-2">
+              <plusPoint.icon className="size-14 stroke-[1.5px] text-foreground" />
+              <h3 className="mt-8 font-medium text-xl tracking-[-0.005em]">
+                {plusPoint.title}
+              </h3>
+              <p className="text-balance text-base text-muted-foreground">
+                {plusPoint.description}
+              </p>
+              <Button className="mt-6">
+                Learn More <ArrowUpRightIcon />
+              </Button>
+            </div>
           </div>
         ))}
       </div>
     </div>
   );
-};
+}
 
-export default Features;
+function BackgroundPattern() {
+  return (
+    <div
+      className="absolute inset-0 -top-px -left-px"
+      style={{
+        backgroundImage: `
+        linear-gradient(to right, var(--border) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--border) 1px, transparent 1px)
+      `,
+        backgroundSize: "20px 20px",
+        backgroundPosition: "0 0, 0 0",
+        maskImage: `
+        repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
+      `,
+        WebkitMaskImage: `
+ repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
+      `,
+        maskComposite: "intersect",
+        WebkitMaskComposite: "source-in",
+      }}
+    />
+  );
+}

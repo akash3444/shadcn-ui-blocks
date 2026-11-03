@@ -121,6 +121,7 @@ export const blocks = [
     name: "faq-02",
     title: "FAQ 02",
     description: "A simple FAQ component",
+    dependencies: ["lucide-react", "radix-ui"],
     registryDependencies: ["accordion"],
     files: [
       {
@@ -136,8 +137,7 @@ export const blocks = [
     name: "faq-03",
     title: "FAQ 03",
     description: "A simple FAQ component",
-    dependencies: ["lucide-react", "radix-ui"],
-    registryDependencies: ["accordion"],
+    dependencies: ["lucide-react"],
     files: [
       {
         path: "components/faq.tsx",
@@ -145,7 +145,7 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "variants",
+    source: "shared",
     preview: "components/faq",
   },
   {
@@ -175,27 +175,12 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "shared",
+    source: "variants",
     preview: "components/faq",
   },
   {
     name: "faq-06",
     title: "FAQ 06",
-    description: "A simple FAQ component",
-    dependencies: ["lucide-react"],
-    files: [
-      {
-        path: "components/faq.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["faq"],
-    source: "variants",
-    preview: "components/faq",
-  },
-  {
-    name: "faq-07",
-    title: "FAQ 07",
     description: "A simple FAQ component",
     dependencies: ["lucide-react", "radix-ui"],
     registryDependencies: ["accordion"],
@@ -421,22 +406,6 @@ export const blocks = [
     name: "hero-02",
     title: "Hero 02",
     description: "A simple hero block",
-    dependencies: ["lucide-react"],
-    registryDependencies: ["badge", "button"],
-    files: [
-      {
-        path: "components/hero.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["hero"],
-    source: "variants",
-    preview: "components/hero",
-  },
-  {
-    name: "hero-03",
-    title: "Hero 03",
-    description: "A simple hero block",
     dependencies: ["lucide-react", "motion", "@radix-ui/react-visually-hidden"],
     registryDependencies: ["badge", "button", "navigation-menu", "sheet"],
     files: [
@@ -470,40 +439,24 @@ export const blocks = [
     preview: "components/hero",
   },
   {
+    name: "hero-03",
+    title: "Hero 03",
+    description: "A simple hero block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["badge", "button"],
+    files: [
+      {
+        path: "components/hero.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["hero"],
+    source: "variants",
+    preview: "components/hero",
+  },
+  {
     name: "hero-04",
     title: "Hero 04",
-    description: "A simple hero block",
-    dependencies: ["lucide-react"],
-    registryDependencies: ["badge", "button"],
-    files: [
-      {
-        path: "components/hero.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["hero"],
-    source: "variants",
-    preview: "components/hero",
-  },
-  {
-    name: "hero-05",
-    title: "Hero 05",
-    description: "A simple hero block",
-    dependencies: ["lucide-react"],
-    registryDependencies: ["badge", "button"],
-    files: [
-      {
-        path: "components/hero.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["hero"],
-    source: "variants",
-    preview: "components/hero",
-  },
-  {
-    name: "hero-06",
-    title: "Hero 06",
     description: "A simple hero block",
     dependencies: ["lucide-react", "next-themes"],
     registryDependencies: [
@@ -535,8 +488,8 @@ export const blocks = [
     preview: "components/hero",
   },
   {
-    name: "hero-07",
-    title: "Hero 07",
+    name: "hero-05",
+    title: "Hero 05",
     description: "A simple hero block",
     dependencies: ["lucide-react"],
     registryDependencies: [
@@ -583,71 +536,6 @@ export const blocks = [
     title: "Login 02",
     description: "A simple login block",
     dependencies: ["react-hook-form", "zod", "@hookform/resolvers"],
-    registryDependencies: ["button", "field", "input", "separator"],
-    files: [
-      {
-        path: "components/login.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/logo.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["login", "authentication"],
-    source: "variants",
-    preview: "components/login",
-  },
-  {
-    name: "login-03",
-    title: "Login 03",
-    description: "A simple login block",
-    dependencies: ["react-hook-form", "zod", "@hookform/resolvers"],
-    registryDependencies: ["button", "field", "input", "separator"],
-    files: [
-      {
-        path: "components/login.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/logo.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["login", "authentication"],
-    source: "variants",
-    preview: "components/login",
-  },
-  {
-    name: "login-04",
-    title: "Login 04",
-    description: "A simple login block",
-    dependencies: ["react-hook-form", "zod", "@hookform/resolvers"],
-    registryDependencies: ["button", "field", "input", "separator"],
-    files: [
-      {
-        path: "components/login.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/logo.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["login", "authentication"],
-    source: "variants",
-    preview: "components/login",
-  },
-  {
-    name: "login-05",
-    title: "Login 05",
-    description: "A simple login block",
-    dependencies: [
-      "@hookform/resolvers",
-      "lucide-react",
-      "react-hook-form",
-      "zod",
-    ],
     registryDependencies: ["button", "field", "input", "separator"],
     files: [
       {
@@ -739,24 +627,6 @@ export const blocks = [
     name: "logo-cloud-05",
     title: "Logo Cloud 05",
     description: "A simple logos block",
-    files: [
-      {
-        path: "components/logo-cloud.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/logos.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["logoCloud"],
-    source: "shared",
-    preview: "components/logo-cloud",
-  },
-  {
-    name: "logo-cloud-06",
-    title: "Logo Cloud 06",
-    description: "A simple logos block",
     registryDependencies: [registryUrl("marquee")],
     files: [
       {
@@ -777,8 +647,8 @@ export const blocks = [
     preview: "components/logo-cloud",
   },
   {
-    name: "logo-cloud-07",
-    title: "Logo Cloud 07",
+    name: "logo-cloud-06",
+    title: "Logo Cloud 06",
     description: "A simple logos block",
     registryDependencies: [registryUrl("marquee")],
     files: [
@@ -961,8 +831,8 @@ export const blocks = [
     name: "pricing-02",
     title: "Pricing 02",
     description: "A simple pricing block",
-    dependencies: ["lucide-react"],
-    registryDependencies: ["badge", "button", "separator"],
+    dependencies: ["lucide-react", "@number-flow/react"],
+    registryDependencies: ["badge", "button", "separator", "tabs", "tooltip"],
     files: [
       {
         path: "components/pricing.tsx",
@@ -992,38 +862,6 @@ export const blocks = [
   {
     name: "pricing-04",
     title: "Pricing 04",
-    description: "A simple pricing block",
-    dependencies: ["lucide-react", "@number-flow/react"],
-    registryDependencies: ["badge", "button", "separator", "tabs", "tooltip"],
-    files: [
-      {
-        path: "components/pricing.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["pricing"],
-    source: "variants",
-    preview: "components/pricing",
-  },
-  {
-    name: "pricing-05",
-    title: "Pricing 05",
-    description: "A simple pricing block",
-    dependencies: ["lucide-react"],
-    registryDependencies: ["badge", "button", "separator"],
-    files: [
-      {
-        path: "components/pricing.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["pricing"],
-    source: "variants",
-    preview: "components/pricing",
-  },
-  {
-    name: "pricing-06",
-    title: "Pricing 06",
     description: "A simple pricing block",
     dependencies: ["lucide-react"],
     registryDependencies: ["badge", "button", "separator"],
@@ -1062,71 +900,6 @@ export const blocks = [
     title: "Signup 02",
     description: "A simple signup block",
     dependencies: ["@hookform/resolvers", "react-hook-form", "zod"],
-    registryDependencies: ["button", "field", "input", "separator"],
-    files: [
-      {
-        path: "components/signup.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/logo.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["signup", "authentication"],
-    source: "variants",
-    preview: "components/signup",
-  },
-  {
-    name: "signup-03",
-    title: "Signup 03",
-    description: "A simple signup block",
-    dependencies: ["@hookform/resolvers", "react-hook-form", "zod"],
-    registryDependencies: ["button", "field", "input", "separator"],
-    files: [
-      {
-        path: "components/signup.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/logo.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["signup", "authentication"],
-    source: "variants",
-    preview: "components/signup",
-  },
-  {
-    name: "signup-04",
-    title: "Signup 04",
-    description: "A simple signup block",
-    dependencies: ["@hookform/resolvers", "react-hook-form", "zod"],
-    registryDependencies: ["button", "field", "input", "separator"],
-    files: [
-      {
-        path: "components/signup.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/logo.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["signup", "authentication"],
-    source: "variants",
-    preview: "components/signup",
-  },
-  {
-    name: "signup-05",
-    title: "Signup 05",
-    description: "A simple signup block",
-    dependencies: [
-      "@hookform/resolvers",
-      "lucide-react",
-      "react-hook-form",
-      "zod",
-    ],
     registryDependencies: ["button", "field", "input", "separator"],
     files: [
       {
@@ -1265,36 +1038,6 @@ export const blocks = [
     name: "testimonials-02",
     title: "Testimonials 02",
     description: "A simple testimonial block",
-    registryDependencies: ["avatar", "button"],
-    files: [
-      {
-        path: "components/testimonials.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["testimonials"],
-    source: "variants",
-    preview: "components/testimonials",
-  },
-  {
-    name: "testimonials-03",
-    title: "Testimonials 03",
-    description: "A simple testimonial block",
-    registryDependencies: ["avatar"],
-    files: [
-      {
-        path: "components/testimonials.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["testimonials"],
-    source: "variants",
-    preview: "components/testimonials",
-  },
-  {
-    name: "testimonials-04",
-    title: "Testimonials 04",
-    description: "A simple testimonial block",
     registryDependencies: ["avatar", "button", registryUrl("marquee")],
     files: [
       {
@@ -1311,8 +1054,8 @@ export const blocks = [
     preview: "components/testimonials",
   },
   {
-    name: "testimonials-05",
-    title: "Testimonials 05",
+    name: "testimonials-03",
+    title: "Testimonials 03",
     description: "A simple testimonial block",
     dependencies: ["lucide-react"],
     registryDependencies: ["avatar"],
@@ -1327,8 +1070,8 @@ export const blocks = [
     preview: "components/testimonials",
   },
   {
-    name: "testimonials-06",
-    title: "Testimonials 06",
+    name: "testimonials-04",
+    title: "Testimonials 04",
     description: "A simple testimonial block",
     dependencies: ["lucide-react"],
     registryDependencies: ["avatar", "carousel"],
@@ -1563,7 +1306,7 @@ export const blocks = [
     name: "cta-05",
     title: "CTA 05",
     description: "A simple CTA block",
-    dependencies: ["lucide-react"],
+    dependencies: ["lucide-react", "@paper-design/shaders-react"],
     registryDependencies: ["button"],
     files: [
       {
@@ -1578,22 +1321,6 @@ export const blocks = [
   {
     name: "cta-06",
     title: "CTA 06",
-    description: "A simple CTA block",
-    dependencies: ["lucide-react", "@paper-design/shaders-react"],
-    registryDependencies: ["button"],
-    files: [
-      {
-        path: "components/cta.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["cta"],
-    source: "variants",
-    preview: "components/cta",
-  },
-  {
-    name: "cta-07",
-    title: "CTA 07",
     description: "A simple CTA block",
     registryDependencies: ["button"],
     files: [
@@ -1825,29 +1552,6 @@ export const blocks = [
   {
     name: "invite-member-02",
     title: "Invite Member 02",
-    description: "A simple invite member block",
-    dependencies: ["lucide-react"],
-    registryDependencies: [
-      "avatar",
-      "button",
-      "dialog",
-      "scroll-area",
-      "tooltip",
-    ],
-    files: [
-      {
-        path: "components/invite-member.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["inviteMember"],
-    source: "variants",
-    preview: "components/invite-member",
-    layout: "full-height",
-  },
-  {
-    name: "invite-member-03",
-    title: "Invite Member 03",
     description: "A simple invite member block",
     dependencies: ["lucide-react"],
     registryDependencies: [
@@ -2128,20 +1832,6 @@ export const blocks = [
     preview: "components/setup-guide",
   },
   {
-    name: "setup-guide-04",
-    title: "Setup Guide 04",
-    description: "A simple setup guide block",
-    files: [
-      {
-        path: "components/setup-guide.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["setupGuide"],
-    source: "variants",
-    preview: "components/setup-guide",
-  },
-  {
     name: "verification-01",
     title: "Verification 01",
     description: "A simple verification block",
@@ -2156,8 +1846,8 @@ export const blocks = [
     preview: "components/verification",
   },
   {
-    name: "hero-08",
-    title: "Hero 08",
+    name: "hero-06",
+    title: "Hero 06",
     description: "A simple hero block",
     files: [
       {
@@ -2196,9 +1886,13 @@ export const blocks = [
         path: "components/features.tsx",
         type: "registry:component",
       },
+      {
+        path: "components/stats-card.tsx",
+        type: "registry:component",
+      },
     ],
     categories: ["features"],
-    source: "shared",
+    source: "variants",
     preview: "components/features",
   },
   {
@@ -2212,7 +1906,7 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "shared",
+    source: "variants",
     preview: "components/features",
   },
   {
@@ -2222,10 +1916,6 @@ export const blocks = [
     files: [
       {
         path: "components/features.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/stats-card.tsx",
         type: "registry:component",
       },
     ],
@@ -2244,7 +1934,7 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "variants",
+    source: "shared",
     preview: "components/features",
   },
   {
@@ -2279,6 +1969,8 @@ export const blocks = [
     name: "features-14",
     title: "Features 14",
     description: "A simple features block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
     files: [
       {
         path: "components/features.tsx",
@@ -2293,6 +1985,8 @@ export const blocks = [
     name: "features-15",
     title: "Features 15",
     description: "A simple features block",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
     files: [
       {
         path: "components/features.tsx",
@@ -2300,58 +1994,12 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "shared",
+    source: "variants",
     preview: "components/features",
   },
   {
     name: "features-16",
     title: "Features 16",
-    description: "A simple features block",
-    files: [
-      {
-        path: "components/features.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["features"],
-    source: "shared",
-    preview: "components/features",
-  },
-  {
-    name: "features-17",
-    title: "Features 17",
-    description: "A simple features block",
-    dependencies: ["lucide-react"],
-    registryDependencies: ["button"],
-    files: [
-      {
-        path: "components/features.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["features"],
-    source: "variants",
-    preview: "components/features",
-  },
-  {
-    name: "features-18",
-    title: "Features 18",
-    description: "A simple features block",
-    dependencies: ["lucide-react"],
-    registryDependencies: ["button"],
-    files: [
-      {
-        path: "components/features.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["features"],
-    source: "variants",
-    preview: "components/features",
-  },
-  {
-    name: "features-19",
-    title: "Features 19",
     description: "A contained features block with a call to action",
     dependencies: ["lucide-react"],
     registryDependencies: ["button"],
@@ -2364,6 +2012,20 @@ export const blocks = [
     categories: ["features"],
     source: "variants",
     preview: "components/features",
+  },
+  {
+    name: "faq-07",
+    title: "FAQ 07",
+    description: "A simple FAQ block",
+    files: [
+      {
+        path: "components/faq.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["faq"],
+    source: "variants",
+    preview: "components/faq",
   },
   {
     name: "faq-08",
@@ -2383,6 +2045,7 @@ export const blocks = [
     name: "faq-09",
     title: "FAQ 09",
     description: "A simple FAQ block",
+    dependencies: ["lucide-react"],
     files: [
       {
         path: "components/faq.tsx",
@@ -2390,7 +2053,7 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "variants",
+    source: "shared",
     preview: "components/faq",
   },
   {
@@ -2404,55 +2067,12 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "variants",
+    source: "shared",
     preview: "components/faq",
   },
   {
     name: "faq-11",
     title: "FAQ 11",
-    description: "A simple FAQ block",
-    files: [
-      {
-        path: "components/faq.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["faq"],
-    source: "variants",
-    preview: "components/faq",
-  },
-  {
-    name: "faq-12",
-    title: "FAQ 12",
-    description: "A simple FAQ block",
-    dependencies: ["lucide-react"],
-    files: [
-      {
-        path: "components/faq.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["faq"],
-    source: "shared",
-    preview: "components/faq",
-  },
-  {
-    name: "faq-13",
-    title: "FAQ 13",
-    description: "A simple FAQ block",
-    files: [
-      {
-        path: "components/faq.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["faq"],
-    source: "shared",
-    preview: "components/faq",
-  },
-  {
-    name: "faq-14",
-    title: "FAQ 14",
     description: "A simple FAQ block",
     dependencies: ["lucide-react"],
     registryDependencies: ["accordion"],
@@ -2482,56 +2102,8 @@ export const blocks = [
     layout: "footer",
   },
   {
-    name: "footer-07",
-    title: "Footer 07",
-    description: "A simple footer block",
-    files: [
-      {
-        path: "components/footer.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["footer"],
-    source: "shared",
-    preview: "components/footer",
-    layout: "footer",
-  },
-  {
-    name: "login-06",
-    title: "Login 06",
-    description: "A simple login block",
-    dependencies: [
-      "react-hook-form",
-      "@hookform/resolvers",
-      "zod",
-      "lucide-react",
-    ],
-    registryDependencies: ["button", "field", "input", "separator"],
-    files: [
-      {
-        path: "components/login.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/login-form.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/icons.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/logo.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["login", "authentication"],
-    source: "variants",
-    preview: "components/login",
-  },
-  {
-    name: "login-07",
-    title: "Login 07",
+    name: "login-03",
+    title: "Login 03",
     description: "A simple login block",
     dependencies: [
       "react-hook-form",
@@ -2567,8 +2139,8 @@ export const blocks = [
     preview: "components/login",
   },
   {
-    name: "login-08",
-    title: "Login 08",
+    name: "login-04",
+    title: "Login 04",
     description: "A simple login block",
     dependencies: [
       "react-hook-form",
@@ -2600,6 +2172,24 @@ export const blocks = [
     preview: "components/login",
   },
   {
+    name: "logo-cloud-07",
+    title: "Logo Cloud 07",
+    description: "A simple logo cloud block",
+    files: [
+      {
+        path: "components/logo-cloud.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/logos.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["logoCloud"],
+    source: "shared",
+    preview: "components/logo-cloud",
+  },
+  {
     name: "logo-cloud-08",
     title: "Logo Cloud 08",
     description: "A simple logo cloud block",
@@ -2610,6 +2200,10 @@ export const blocks = [
       },
       {
         path: "components/logos.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/magicui/marquee.tsx",
         type: "registry:component",
       },
     ],
@@ -2688,64 +2282,6 @@ export const blocks = [
         path: "components/logos.tsx",
         type: "registry:component",
       },
-    ],
-    categories: ["logoCloud"],
-    source: "shared",
-    preview: "components/logo-cloud",
-  },
-  {
-    name: "logo-cloud-13",
-    title: "Logo Cloud 13",
-    description: "A simple logo cloud block",
-    files: [
-      {
-        path: "components/logo-cloud.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/logos.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/magicui/marquee.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["logoCloud"],
-    source: "shared",
-    preview: "components/logo-cloud",
-  },
-  {
-    name: "logo-cloud-14",
-    title: "Logo Cloud 14",
-    description: "A simple logo cloud block",
-    files: [
-      {
-        path: "components/logo-cloud.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/logos.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["logoCloud"],
-    source: "shared",
-    preview: "components/logo-cloud",
-  },
-  {
-    name: "logo-cloud-15",
-    title: "Logo Cloud 15",
-    description: "A simple logo cloud block",
-    files: [
-      {
-        path: "components/logo-cloud.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/logos.tsx",
-        type: "registry:component",
-      },
       {
         path: "components/ui/marquee.tsx",
         type: "registry:component",
@@ -2760,8 +2296,8 @@ export const blocks = [
     preview: "components/logo-cloud",
   },
   {
-    name: "pricing-07",
-    title: "Pricing 07",
+    name: "pricing-05",
+    title: "Pricing 05",
     description: "A simple pricing block",
     dependencies: ["@number-flow/react"],
     files: [
@@ -2775,8 +2311,8 @@ export const blocks = [
     preview: "components/pricing",
   },
   {
-    name: "pricing-08",
-    title: "Pricing 08",
+    name: "pricing-06",
+    title: "Pricing 06",
     description: "A simple pricing block",
     files: [
       {
@@ -2789,8 +2325,8 @@ export const blocks = [
     preview: "components/pricing",
   },
   {
-    name: "pricing-09",
-    title: "Pricing 09",
+    name: "pricing-07",
+    title: "Pricing 07",
     description: "A simple pricing block",
     files: [
       {
@@ -2807,8 +2343,8 @@ export const blocks = [
     preview: "components/pricing",
   },
   {
-    name: "pricing-10",
-    title: "Pricing 10",
+    name: "pricing-08",
+    title: "Pricing 08",
     description: "A simple pricing block",
     dependencies: ["lucide-react"],
     registryDependencies: ["badge", "button"],
@@ -2823,41 +2359,8 @@ export const blocks = [
     preview: "components/pricing",
   },
   {
-    name: "signup-06",
-    title: "Signup 06",
-    description: "A simple signup block",
-    dependencies: [
-      "react-hook-form",
-      "@hookform/resolvers",
-      "zod",
-      "lucide-react",
-    ],
-    registryDependencies: ["button", "field", "input", "separator"],
-    files: [
-      {
-        path: "components/signup.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/signup-form.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/icons.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/logo.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["signup", "authentication"],
-    source: "variants",
-    preview: "components/signup",
-  },
-  {
-    name: "signup-07",
-    title: "Signup 07",
+    name: "signup-03",
+    title: "Signup 03",
     description: "A simple signup block",
     dependencies: [
       "react-hook-form",
@@ -2893,8 +2396,8 @@ export const blocks = [
     preview: "components/signup",
   },
   {
-    name: "signup-08",
-    title: "Signup 08",
+    name: "signup-04",
+    title: "Signup 04",
     description: "A simple signup block",
     dependencies: [
       "react-hook-form",
@@ -3020,26 +2523,12 @@ export const blocks = [
       },
     ],
     categories: ["stats"],
-    source: "shared",
+    source: "variants",
     preview: "components/stats",
   },
   {
     name: "stats-10",
     title: "Stats 10",
-    description: "A simple stats block",
-    files: [
-      {
-        path: "components/stats.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["stats"],
-    source: "variants",
-    preview: "components/stats",
-  },
-  {
-    name: "stats-11",
-    title: "Stats 11",
     description: "A simple stats block",
     files: [
       {
@@ -3164,6 +2653,34 @@ export const blocks = [
     preview: "components/team",
   },
   {
+    name: "testimonials-05",
+    title: "Testimonials 05",
+    description: "A simple testimonials block",
+    files: [
+      {
+        path: "components/testimonials.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    source: "variants",
+    preview: "components/testimonials",
+  },
+  {
+    name: "testimonials-06",
+    title: "Testimonials 06",
+    description: "A simple testimonials block",
+    files: [
+      {
+        path: "components/testimonials.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["testimonials"],
+    source: "shared",
+    preview: "components/testimonials",
+  },
+  {
     name: "testimonials-07",
     title: "Testimonials 07",
     description: "A simple testimonials block",
@@ -3188,68 +2705,12 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "variants",
+    source: "shared",
     preview: "components/testimonials",
   },
   {
     name: "testimonials-09",
     title: "Testimonials 09",
-    description: "A simple testimonials block",
-    files: [
-      {
-        path: "components/testimonials.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["testimonials"],
-    source: "shared",
-    preview: "components/testimonials",
-  },
-  {
-    name: "testimonials-10",
-    title: "Testimonials 10",
-    description: "A simple testimonials block",
-    files: [
-      {
-        path: "components/testimonials.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["testimonials"],
-    source: "shared",
-    preview: "components/testimonials",
-  },
-  {
-    name: "testimonials-11",
-    title: "Testimonials 11",
-    description: "A simple testimonials block",
-    files: [
-      {
-        path: "components/testimonials.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["testimonials"],
-    source: "variants",
-    preview: "components/testimonials",
-  },
-  {
-    name: "testimonials-12",
-    title: "Testimonials 12",
-    description: "A simple testimonials block",
-    files: [
-      {
-        path: "components/testimonials.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["testimonials"],
-    source: "shared",
-    preview: "components/testimonials",
-  },
-  {
-    name: "testimonials-13",
-    title: "Testimonials 13",
     description: "A simple testimonials block",
     files: [
       {
@@ -3282,20 +2743,6 @@ export const blocks = [
   {
     name: "blog-05",
     title: "Blog 05",
-    description: "A simple blog block",
-    files: [
-      {
-        path: "components/blog.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["blog"],
-    source: "variants",
-    preview: "components/blog",
-  },
-  {
-    name: "blog-06",
-    title: "Blog 06",
     description: "A simple blog block",
     files: [
       {

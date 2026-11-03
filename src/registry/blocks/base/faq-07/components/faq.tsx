@@ -1,72 +1,83 @@
-import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
-import { PlusIcon } from "lucide-react";
-import { cn } from "@/lib/utils";
+import {
+  CircleDollarSign,
+  Clock,
+  Package,
+  PackageX,
+  Plane,
+  Waypoints,
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
+  AccordionTrigger,
 } from "@/registry/bases/base/ui/accordion";
 
-const faq = [
+const faqs = [
   {
     question: "What is your return policy?",
     answer:
-      "You can return unused items in their original packaging within 30 days for a refund or exchange. Contact support for assistance.",
+      "We offer a 30-day return policy on all unused products. Please ensure the item is in original packaging when returning.",
+    icon: Package,
   },
   {
-    question: "How do I track my order?",
+    question: "How long does shipping take?",
     answer:
-      "Track your order using the link provided in your confirmation email, or log into your account to view tracking details.",
+      "Shipping typically takes 3-7 business days depending on your location.",
+    icon: Clock,
   },
   {
     question: "Do you ship internationally?",
     answer:
-      "Yes, we ship worldwide. Shipping fees and delivery times vary by location, and customs duties may apply for some countries.",
+      "Yes, we ship to most countries worldwide. Shipping fees and delivery times vary by destination.",
+    icon: Plane,
+  },
+  {
+    question: "How can I track my order?",
+    answer:
+      "After your order is shipped, you'll receive an email with a tracking link. You can also track your order in your account dashboard.",
+    icon: Waypoints,
   },
   {
     question: "What payment methods do you accept?",
-    answer:
-      "We accept Visa, MasterCard, American Express, PayPal, Apple Pay, and Google Pay, ensuring secure payment options for all customers.",
+    answer: "We accept all major credit cards, PayPal, UPI, and net banking.",
+    icon: CircleDollarSign,
   },
   {
-    question: "What if I receive a damaged item?",
+    question: "Can I cancel or change my order?",
     answer:
-      "Please contact our support team within 48 hours of delivery with photos of the damaged item. We’ll arrange a replacement or refund.",
+      "Yes, you can cancel or modify your order within 2 hours of placing it. After that, the order may already be processed for shipment.",
+    icon: PackageX,
   },
 ];
 
 const FAQ = () => {
   return (
-    <div className="px-6 py-20">
-      <div className="mx-auto w-full max-w-2xl">
-        <h2 className="font-medium text-4xl tracking-tight">Start here</h2>
-        <p className="mt-2 text-muted-foreground text-xl">
-          Quick answers to common questions about our products and services.
-        </p>
+    <div className="mx-auto max-w-7xl px-6 py-12 sm:py-20">
+      <h2 className="text-balance text-center font-medium text-4xl tracking-tight">
+        Good to know
+      </h2>
+      <p className="mt-3 text-balance text-center text-lg text-muted-foreground md:text-2xl md:tracking-[-0.01em]">
+        Find answers to common questions about our services
+      </p>
 
-        <Accordion
-          className="mt-8 space-y-4 sm:mt-10"
-          defaultValue={["question-0"]}
-        >
-          {faq.map(({ question, answer }, index) => (
+      <div className="mx-auto mt-12 max-w-2xl sm:mt-16">
+        <Accordion className="space-y-4">
+          {faqs.map((faq, index) => (
             <AccordionItem
-              className="rounded-xl border-none bg-muted px-4"
-              key={question}
-              value={`question-${index}`}
+              className="rounded-xl not-last:border-b-0 bg-muted px-5"
+              key={index}
+              value={faq.question}
             >
-              <AccordionPrimitive.Header className="flex items-center">
-                <AccordionPrimitive.Trigger
-                  className={cn(
-                    "flex flex-1 items-center justify-between py-4 font-medium tracking-[-0.01em] transition-all hover:underline aria-expanded:pb-3 [&[aria-expanded=true]>svg]:rotate-45",
-                    "text-start text-lg"
-                  )}
-                >
-                  {question}
-                  <PlusIcon className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
-                </AccordionPrimitive.Trigger>
-              </AccordionPrimitive.Header>
-              <AccordionContent className="text-base text-muted-foreground">
-                {answer}
+              <AccordionTrigger className="text-lg">
+                <div className="flex items-center gap-2 font-medium">
+                  <faq.icon className="mr-2.5 size-5" />
+                  {faq.question}
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="relative pl-10 text-base">
+                {faq.answer}
+                <div className="absolute inset-y-0 left-2.5 border-foreground/10 border-s border-dashed" />
               </AccordionContent>
             </AccordionItem>
           ))}

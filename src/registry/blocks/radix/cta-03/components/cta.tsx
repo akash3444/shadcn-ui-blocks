@@ -4,23 +4,39 @@ import { Button } from "@/registry/bases/radix/ui/button";
 const CTA = () => {
   return (
     <div className="px-0 py-16 sm:px-6">
-      <div className="relative mx-auto flex max-w-5xl flex-col justify-between gap-0 overflow-hidden bg-linear-to-r from-muted px-10 ring-2 ring-border/60 sm:rounded-xl sm:shadow-lg/4 md:flex-row md:gap-8">
-        <div className="pt-14 pb-0 md:pb-14">
-          <h2 className="font-medium text-4xl tracking-tight lg:text-[2.5rem]">
-            Step into something better
-          </h2>
-          <p className="mt-4 max-w-md text-muted-foreground text-xl/normal tracking-[-0.015em] lg:text-2xl/normal">
-            Get seamless access to everything you need, right from your phone.
-          </p>
-          <Button className="mt-10" size="lg">
-            Download Now <ArrowUpRight />
-          </Button>
+      <div className="mx-auto max-w-5xl border-y bg-muted/50 p-1 sm:rounded-xl sm:border-x">
+        <div className="sm:shadow/5 relative flex flex-col justify-between gap-0 overflow-hidden border bg-background px-10 sm:rounded-lg md:flex-row md:gap-8">
+          {/* Circuit Board - Light Pattern */}
+          <div
+            className="max-sm:mask-b-from-75% pointer-events-none absolute inset-0 -top-0.5 -left-1 z-0 not-dark:opacity-60"
+            style={{
+              backgroundImage: `
+        repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),
+        radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)
+      `,
+              backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
+            }}
+          />
+
+          <div className="relative isolate pt-12 pb-0 md:pb-12">
+            <h2 className="font-medium text-4xl tracking-[-0.04em] lg:text-5xl/[1.2]">
+              Build something you're proud of today
+            </h2>
+            <p className="mt-2 text-muted-foreground text-xl tracking-[-0.015em] sm:mt-4 lg:text-2xl">
+              Join thousands of developers using our tools.
+            </p>
+            <Button className="mt-5 sm:mt-10" size="lg">
+              Get Started Today <ArrowUpRight />
+            </Button>
+          </div>
+          <img
+            alt=""
+            className="mask-b-from-75% relative isolate mt-auto aspect-square w-full max-w-xs md:h-76 md:w-auto md:max-w-none"
+            src="/images/cta-mobile.png"
+          />
         </div>
-        <img
-          alt=""
-          className="mt-auto aspect-square w-full max-w-xs md:h-72 md:w-auto md:max-w-none"
-          src="/images/cta-mobile.png"
-        />
       </div>
     </div>
   );

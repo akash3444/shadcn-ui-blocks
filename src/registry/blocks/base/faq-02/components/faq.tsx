@@ -1,8 +1,13 @@
+"use client";
+
+import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
+import { PlusIcon } from "lucide-react";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
 } from "@/registry/bases/base/ui/accordion";
 
 const faq = [
@@ -31,28 +36,94 @@ const faq = [
     answer:
       "Please contact our support team within 48 hours of delivery with photos of the damaged item. We’ll arrange a replacement or refund.",
   },
+  {
+    question: "Can I cancel or change my order?",
+    answer:
+      "Yes, you can cancel or change your order within 24 hours of placing it. Contact customer support to make updates.",
+  },
+  {
+    question: "Do you offer discounts for bulk purchases?",
+    answer:
+      "Yes, we provide special discounts for bulk orders. Contact our sales team with your requirements for a customized quote.",
+  },
+  {
+    question: "How long does shipping take?",
+    answer:
+      "Shipping usually takes 3-7 business days domestically and 7-14 business days internationally, depending on your location and selected shipping method.",
+  },
+  {
+    question: "Are your products eco-friendly?",
+    answer:
+      "Many of our products are made with sustainable materials and eco-friendly practices to reduce environmental impact while maintaining quality.",
+  },
+  {
+    question: "How can I contact customer support?",
+    answer:
+      "Reach out via email at support@example.com or call us at 1-800-123-4567 for assistance with any inquiries.",
+  },
 ];
 
 const FAQ = () => {
+  const [value, setValue] = useState<string>();
+
   return (
     <div className="px-6 py-20">
-      <div className="flex flex-col items-start justify-center gap-x-12 gap-y-6 md:flex-row">
-        <h2 className="font-medium text-[2.4rem]/[1.15] tracking-tighter">
-          Common questions, <br /> answered
+      <div className="mx-auto w-full max-w-(--breakpoint-lg)">
+        <h2 className="font-medium text-[2.4rem] tracking-tight">
+          Everything you need to know
         </h2>
 
-        <Accordion className="max-w-xl" defaultValue={["question-0"]}>
-          {faq.map(({ question, answer }, index) => (
-            <AccordionItem key={question} value={`question-${index}`}>
-              <AccordionTrigger className="text-left text-lg">
-                {question}
-              </AccordionTrigger>
-              <AccordionContent className="text-base text-muted-foreground">
-                {answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <div className="mt-6 grid w-full gap-x-10 md:grid-cols-2">
+          <Accordion
+            className="w-full"
+            onValueChange={(val) => setValue(val[0])}
+            value={value ? [value] : []}
+          >
+            {faq.slice(0, 5).map(({ question, answer }, index) => (
+              <AccordionItem key={question} value={`question-${index}`}>
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger
+                    className={cn(
+                      "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[aria-expanded=true]>svg]:rotate-45",
+                      "text-start text-lg"
+                    )}
+                  >
+                    {question}
+                    <PlusIcon className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-pretty text-base text-muted-foreground">
+                  {answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+
+          <Accordion
+            className="w-full"
+            onValueChange={(val) => setValue(val[0])}
+            value={value ? [value] : []}
+          >
+            {faq.slice(5).map(({ question, answer }, index) => (
+              <AccordionItem key={question} value={`question-${index + 5}`}>
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger
+                    className={cn(
+                      "flex flex-1 items-center justify-between py-4 font-medium tracking-tight transition-all hover:underline [&[aria-expanded=true]>svg]:rotate-45",
+                      "text-start text-lg"
+                    )}
+                  >
+                    {question}
+                    <PlusIcon className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-pretty text-base text-muted-foreground">
+                  {answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </div>
   );
