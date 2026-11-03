@@ -45,7 +45,7 @@ const Login = () => {
           <Logo className="h-9 w-9" />
           <p className="mt-4 font-medium text-xl">Log in to Calm UI</p>
 
-          <Button className="mt-8 w-full gap-3">
+          <Button className="mt-8 w-full gap-3" variant="outline">
             <GoogleLogo />
             Continue with Google
           </Button>

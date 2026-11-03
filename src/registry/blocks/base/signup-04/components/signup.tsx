@@ -37,7 +37,7 @@ const SignUp = () => {
             Sign up for Calm UI
           </p>
 
-          <Button className="mt-8 w-full gap-3">
+          <Button className="mt-8 w-full gap-3" variant="outline">
             <GoogleLogo />
             Continue with Google
           </Button>
