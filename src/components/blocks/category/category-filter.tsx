@@ -52,15 +52,15 @@ const CategoryFilter = () => {
         render={
           <Button
             aria-expanded={open}
-            className="w-45 justify-between bg-background"
+            className="min-w-0 shrink justify-between bg-background sm:min-w-45 sm:shrink-0"
             role="combobox"
             variant="outline"
           />
         }
       >
-        <span className="flex items-center gap-2">
+        <span className="flex min-w-0 items-center gap-2">
           <TagIcon className="h-4 w-4 shrink-0" />
-          <span className="capitalize">{selected.title}</span>
+          <span className="truncate capitalize">{selected.title}</span>
         </span>
         <ChevronsUpDownIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
       </PopoverTrigger>

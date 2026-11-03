@@ -52,7 +52,7 @@ const PreviewListSearch = () => {
   }, [query]);
 
   return (
-    <InputGroup className="min-w-0 sm:w-64">
+    <InputGroup className="min-w-32 flex-1 sm:w-64 sm:flex-none">
       <InputGroupAddon>
         <SearchIcon />
       </InputGroupAddon>
