@@ -36,7 +36,7 @@ const BlocksPage = () => (
       </section>
     </div>
 
-    <div className="mx-auto mb-8 max-w-(--breakpoint-2xl) py-12 sm:py-16">
+    <div className="mb-8 py-12 sm:py-16">
       <BlockCategoryGrid />
     </div>
 

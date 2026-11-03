@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { blockCategories } from "@/blocks";
+import { BlockGroupFilter } from "@/components/blocks/category/block-group-filter";
 import {
   BannerPreview,
   BlogPreview,
@@ -102,21 +103,72 @@ const CategoryCard = ({
   );
 };
 
+// ─── Groups ───────────────────────────────────────────────────────────────────
+
+const BLOCK_GROUPS = [
+  { value: "marketing", label: "Marketing" },
+  { value: "content", label: "Content" },
+  { value: "authentication", label: "Authentication" },
+  { value: "application", label: "Application" },
+] as const;
+
+type BlockGroup = (typeof BLOCK_GROUPS)[number]["value"];
+
+// Categories not listed here fall under Marketing.
+const CATEGORY_GROUPS: Record<string, BlockGroup> = {
+  blog: "content",
+  changelog: "content",
+  timeline: "content",
+  authentication: "authentication",
+  login: "authentication",
+  signup: "authentication",
+  verification: "authentication",
+  codeBlock: "application",
+  emptyState: "application",
+  inviteMember: "application",
+  keyboardShortcuts: "application",
+  members: "application",
+  orderConfirmation: "application",
+  profile: "application",
+  setupGuide: "application",
+};
+
+const getGroup = (name: string): BlockGroup =>
+  CATEGORY_GROUPS[name] ?? "marketing";
+
+const countBlocks = (categories: typeof blockCategories) =>
+  categories.reduce((total, category) => total + category.totalBlocks, 0);
+
+const FILTERS = [
+  { value: "all", label: "All", count: countBlocks(blockCategories) },
+  ...BLOCK_GROUPS.map((group) => ({
+    ...group,
+    count: countBlocks(
+      blockCategories.filter(
+        (category) => getGroup(category.name) === group.value
+      )
+    ),
+  })),
+].filter((filter) => filter.count > 0);
+
 // ─── Grid ─────────────────────────────────────────────────────────────────────
 
 const BlockCategoryGrid = () => (
-  <div className="px-6">
-    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      {blockCategories.map((category) => (
+  <BlockGroupFilter
+    filters={FILTERS}
+    items={blockCategories.map((category) => ({
+      key: category.name,
+      title: category.title,
+      group: getGroup(category.name),
+      card: (
         <CategoryCard
-          key={category.name}
           name={category.name}
           title={category.title}
           totalBlocks={category.totalBlocks}
         />
-      ))}
-    </div>
-  </div>
+      ),
+    }))}
+  />
 );
 
 export default BlockCategoryGrid;
