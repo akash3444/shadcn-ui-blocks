@@ -23,11 +23,8 @@ const BlocksPage = () => (
   <>
     <Navbar />
     <div className="relative">
-      <section className="-mt-24 px-6 pt-36 pb-16 sm:px-10 sm:pb-10">
+      <section className="-mt-24 px-6 pt-40 pb-16 sm:px-10 sm:pt-44 sm:pb-12">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center">
-          <p className="font-mono text-muted-foreground text-xs uppercase tracking-[0.1em]">
-            Ready-to-use shadcn/ui blocks
-          </p>
           <h1 className="max-w-[20ch] text-balance font-heading font-medium text-4xl leading-[1.1] tracking-tighter sm:text-5xl">
             {totalBlocks} blocks for whatever you're building
           </h1>

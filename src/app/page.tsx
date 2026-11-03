@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <div className="mask-b-from-85% relative bg-foreground/3">
+      <div className="relative">
         <Navbar />
         <div className="-mt-24">
           <Hero />

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 export const MainHeading = ({ className, ...props }: ComponentProps<"h1">) => (
   <h1
     className={cn(
-      "font-heading font-medium text-3xl tracking-tight",
+      "text-balance font-heading font-medium text-3xl leading-[1.15] tracking-tighter sm:text-4xl",
       className
     )}
     {...props}
@@ -23,7 +23,10 @@ export const DescriptionText = ({
   ...props
 }: ComponentProps<"p">) => (
   <p
-    className={cn("text-[17px] text-muted-foreground", className)}
+    className={cn(
+      "max-w-2xl text-pretty text-base text-muted-foreground leading-relaxed",
+      className
+    )}
     {...props}
   />
 );

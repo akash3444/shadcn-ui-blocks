@@ -53,10 +53,7 @@ export const Features = () => (
       <div className="mx-auto max-w-(--breakpoint-lg) overflow-hidden rounded-3xl bg-muted p-7 sm:p-12">
         <div className="flex flex-col gap-6 px-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="font-medium text-muted-foreground text-xs uppercase tracking-[0.15em]">
-              Features
-            </p>
-            <h2 className="mt-5 max-w-[18ch] text-balance font-heading font-medium text-4xl tracking-tight sm:text-5xl">
+            <h2 className="max-w-[18ch] text-balance font-heading font-medium text-3xl leading-[1.15] tracking-tighter sm:text-4xl">
               The details that save you time.
             </h2>
           </div>
@@ -68,14 +65,14 @@ export const Features = () => (
             Browse blocks <ArrowRightIcon />
           </Button>
         </div>
-        <div className="-mx-4 mt-12 -mb-4 grid gap-px overflow-hidden rounded-xl bg-border/50 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="-mx-4 mt-8 -mb-4 grid gap-px overflow-hidden rounded-xl border border-border/50 bg-border/50 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
               <article className="bg-background p-8" key={feature.title}>
                 <Icon aria-hidden="true" className="size-5" />
-                <h3 className="mt-8 font-medium text-lg">{feature.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed">
+                <h3 className="mt-6 font-medium text-base">{feature.title}</h3>
+                <p className="mt-1.5 text-pretty text-muted-foreground text-sm leading-6">
                   {feature.description}
                 </p>
               </article>
