@@ -16,7 +16,7 @@ const TemplateCard = ({
   return (
     <article className="w-full rounded-2xl bg-muted p-1 pt-0">
       <div className="flex flex-col flex-wrap justify-between gap-x-4 gap-y-2 py-2 ps-2.5 pe-1 md:flex-row md:items-center">
-        <h2 className="font-semibold text-lg">{template.name}</h2>
+        <h2 className="font-medium text-lg">{template.name}</h2>
         <div className="flex flex-wrap items-center gap-4 max-sm:justify-between">
           <GithubStarsAndForks repo={template.repo} />
           <div className="flex items-center gap-1.5">

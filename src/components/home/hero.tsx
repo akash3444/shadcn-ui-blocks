@@ -158,7 +158,7 @@ export function Hero() {
           <p className="font-mono text-muted-foreground text-xs uppercase tracking-[0.1em]">
             Start with the right building blocks
           </p>
-          <h1 className="max-w-[18ch] text-balance font-heading font-semibold text-5xl leading-[1.04] tracking-[-0.05em] sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-[18ch] text-balance font-heading font-medium text-5xl leading-[1.05] tracking-tighter sm:text-6xl lg:text-7xl">
             A running start for whatever you're building
           </h1>
           <p className="max-w-[46ch] text-pretty text-base text-muted-foreground leading-relaxed sm:text-lg">

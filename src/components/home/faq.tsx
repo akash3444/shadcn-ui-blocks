@@ -23,7 +23,7 @@ export function FAQ() {
           <p className="font-medium text-muted-foreground text-xs uppercase tracking-[0.1em]">
             Frequently asked questions
           </p>
-          <h2 className="max-w-[22ch] text-balance font-heading font-semibold text-3xl tracking-tight sm:text-4xl">
+          <h2 className="max-w-[22ch] text-balance font-heading font-medium text-3xl tracking-tight sm:text-4xl">
             Good questions. Useful answers.
           </h2>
           <p className="max-w-lg text-pretty text-muted-foreground leading-relaxed">

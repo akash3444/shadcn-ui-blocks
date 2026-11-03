@@ -1,3 +1,4 @@
+import { registryUrl } from "../../config/site";
 import type { BlockCatalogEntry } from "./schema";
 
 export const blocks = [
@@ -508,8 +509,8 @@ export const blocks = [
     registryDependencies: [
       "badge",
       "button",
-      "https://www.shadcnui-blocks.com/r/dot-pattern.json",
-      "https://www.shadcnui-blocks.com/r/particles.json",
+      registryUrl("dot-pattern"),
+      registryUrl("particles"),
     ],
     files: [
       {
@@ -541,7 +542,7 @@ export const blocks = [
     registryDependencies: [
       "badge",
       "button",
-      "https://www.shadcnui-blocks.com/r/animated-grid-pattern.json",
+      registryUrl("animated-grid-pattern"),
     ],
     files: [
       {
@@ -756,7 +757,7 @@ export const blocks = [
     name: "logo-cloud-06",
     title: "Logo Cloud 06",
     description: "A simple logos block",
-    registryDependencies: ["https://www.shadcnui-blocks.com/r/marquee.json"],
+    registryDependencies: [registryUrl("marquee")],
     files: [
       {
         path: "components/logo-cloud.tsx",
@@ -779,7 +780,7 @@ export const blocks = [
     name: "logo-cloud-07",
     title: "Logo Cloud 07",
     description: "A simple logos block",
-    registryDependencies: ["https://www.shadcnui-blocks.com/r/marquee.json"],
+    registryDependencies: [registryUrl("marquee")],
     files: [
       {
         path: "components/logo-cloud.tsx",
@@ -1294,11 +1295,7 @@ export const blocks = [
     name: "testimonials-04",
     title: "Testimonials 04",
     description: "A simple testimonial block",
-    registryDependencies: [
-      "avatar",
-      "button",
-      "https://www.shadcnui-blocks.com/r/marquee.json",
-    ],
+    registryDependencies: ["avatar", "button", registryUrl("marquee")],
     files: [
       {
         path: "components/testimonials.tsx",

@@ -64,7 +64,7 @@ export function OgImagesList({ ogImages }: OgImagesListProps) {
                   <span className="mt-0.5 font-mono text-muted-foreground text-sm">
                     {(index + 1).toString().padStart(2, "0")}.
                   </span>{" "}
-                  <span className="font-heading font-semibold tracking-[0.02em]">
+                  <span className="font-heading font-medium">
                     {ogImage.description}
                   </span>
                 </h2>

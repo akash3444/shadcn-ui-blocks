@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 export const MainHeading = ({ className, ...props }: ComponentProps<"h1">) => (
   <h1
     className={cn(
-      "font-heading font-semibold text-3xl tracking-[-0.02em]",
+      "font-heading font-medium text-3xl tracking-tight",
       className
     )}
     {...props}
@@ -13,7 +13,7 @@ export const MainHeading = ({ className, ...props }: ComponentProps<"h1">) => (
 
 export const SubHeading = ({ className, ...props }: ComponentProps<"h2">) => (
   <h2
-    className={cn("font-bold text-2xl tracking-tight", className)}
+    className={cn("font-medium text-2xl tracking-tight", className)}
     {...props}
   />
 );

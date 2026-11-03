@@ -56,7 +56,7 @@ export const Features = () => (
             <p className="font-medium text-muted-foreground text-xs uppercase tracking-[0.15em]">
               Features
             </p>
-            <h2 className="mt-5 max-w-[18ch] text-balance font-heading font-semibold text-4xl tracking-tight sm:text-5xl">
+            <h2 className="mt-5 max-w-[18ch] text-balance font-heading font-medium text-4xl tracking-tight sm:text-5xl">
               The details that save you time.
             </h2>
           </div>
@@ -74,7 +74,7 @@ export const Features = () => (
             return (
               <article className="bg-background p-8" key={feature.title}>
                 <Icon aria-hidden="true" className="size-5" />
-                <h3 className="mt-8 font-semibold text-lg">{feature.title}</h3>
+                <h3 className="mt-8 font-medium text-lg">{feature.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed">
                   {feature.description}
                 </p>

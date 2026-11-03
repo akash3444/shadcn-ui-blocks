@@ -7,6 +7,7 @@ import {
 } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { siteConfig } from "../src/config/site";
 import { blocks } from "../src/registry/catalog/blocks";
 import { categories } from "../src/registry/catalog/categories";
 import { components } from "../src/registry/catalog/components";
@@ -332,8 +333,8 @@ const buildRegistry = (primitive: Primitive) => {
 
   return {
     $schema: "https://ui.shadcn.com/schema/registry.json",
-    name: "Shadcn UI Blocks",
-    homepage: "https://www.shadcnui-blocks.com",
+    name: siteConfig.name,
+    homepage: siteConfig.url,
     items,
   };
 };

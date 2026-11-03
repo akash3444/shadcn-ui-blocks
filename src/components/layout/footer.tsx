@@ -73,14 +73,14 @@ const Footer = ({ className, ...props }: ComponentProps<"footer">) => {
             <div className="col-span-full lg:col-span-2">
               {/* Logo */}
               <Link className="flex items-center gap-2.5" href="/">
-                <Logo />
-                <span className="font-heading font-semibold text-lg tracking-[-0.015em]">
-                  Shadcn UI Blocks
+                <Logo className="size-7" />
+                <span className="font-medium text-lg tracking-tight">
+                  Calm UI
                 </span>
               </Link>
 
               <p className="mt-4 text-muted-foreground">
-                A collection of customized Shadcn UI blocks and components,
+                A collection of customized shadcn/ui blocks and components,
                 ready for preview and copy.
               </p>
               <FooterLicense />
@@ -88,9 +88,7 @@ const Footer = ({ className, ...props }: ComponentProps<"footer">) => {
 
             {footerSections.map(({ title, links, className }, index) => (
               <div className={className} key={index}>
-                <h6 className="font-heading font-semibold tracking-[0.005em]">
-                  {title}
-                </h6>
+                <h6 className="font-medium">{title}</h6>
                 <ul className="mt-6 space-y-4">
                   {links.map(({ title, href }) => (
                     <li key={title}>
@@ -118,7 +116,7 @@ const Footer = ({ className, ...props }: ComponentProps<"footer">) => {
             <span className="text-muted-foreground">
               &copy; {new Date().getFullYear()}{" "}
               <Link href="/" target="_blank">
-                Shadcn UI Blocks
+                Calm UI
               </Link>
               . All rights reserved.
             </span>
