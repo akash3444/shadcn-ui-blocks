@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 // Image metadata
-export const alt = "Shadcn UI Blocks";
+export const alt = "Calm UI";
 export const size = {
   width: 1200,
   height: 630,

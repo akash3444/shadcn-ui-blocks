@@ -43,7 +43,7 @@ const Login = () => {
           <div className="absolute inset-y-0 -right-1 h-[calc(100%+3rem)] -translate-y-6 border-e max-sm:hidden" />
 
           <Logo className="h-9 w-9" />
-          <p className="mt-4 font-medium text-xl">Log in to Shadcn UI Blocks</p>
+          <p className="mt-4 font-medium text-xl">Log in to Calm UI</p>
 
           <Button className="mt-8 w-full gap-3">
             <GoogleLogo />

@@ -44,7 +44,7 @@ const SignUp = () => {
 
           <Logo className="h-9 w-9" />
           <p className="mt-4 font-medium text-xl">
-            Sign up for Shadcn UI Blocks
+            Sign up for Calm UI
           </p>
 
           <Button className="mt-8 w-full gap-3">

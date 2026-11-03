@@ -21,7 +21,7 @@ export async function GET(req: Request) {
       }}
       tw="h-full w-full flex items-center justify-center text-8xl text-center leading-[1.2] tracking-tighter p-20"
     >
-      Beautifully Designed Shadcn UI Blocks
+      Beautifully Designed shadcn/ui Blocks
     </div>,
     {
       width: 1200,

@@ -6,7 +6,7 @@ const changelogs = [
     date: "2025-06-01",
     title: "Initial Launch",
     description:
-      "We're live! The very first release of our Shadcn UI blocks is here. This version includes the core blocks, dark mode support, and a complete landing page setup to get you started. Thanks for being here from day one!",
+      "We're live! The very first release of Calm UI is here. This version includes the core blocks, dark mode support, and a complete landing page setup to get you started. Thanks for being here from day one!",
     features: [
       "Released 10+ customized Shadcn UI blocks",
       "Dark mode support",

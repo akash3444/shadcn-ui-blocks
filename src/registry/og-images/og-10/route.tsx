@@ -62,10 +62,10 @@ export async function GET(req: Request) {
             mode === "dark" ? "text-neutral-400" : "text-neutral-500"
           )}
         >
-          www.shadcnui-blocks.com
+          calmui.dev
         </p>
         <h1 tw="mt-0 text-6xl leading-[1.2] tracking-tighter max-w-2xl">
-          Beautifully Designed Shadcn UI Blocks
+          Beautifully Designed shadcn/ui Blocks
         </h1>
         <p
           tw={cn(
@@ -73,7 +73,7 @@ export async function GET(req: Request) {
             mode === "dark" ? "text-neutral-400" : "text-neutral-500"
           )}
         >
-          Shadcn UI Blocks is a collection of beautifully designed block and
+          Calm UI is a collection of beautifully designed block and
           components for your next project.
         </p>
 
@@ -112,7 +112,7 @@ export async function GET(req: Request) {
                 <path d="m16.62 12-5.74 9.94" />
               </svg>
             </div>
-            <span tw="ml-4 text-xl font-medium">Shadcn UI Blocks</span>
+            <span tw="ml-4 text-xl font-medium">Calm UI</span>
           </div>
           <div
             tw={cn(

@@ -9,7 +9,7 @@ const items = [
   {
     title: "Is this an alternative to Shadcn UI?",
     content:
-      "No, Shadcn UI Blocks is not an alternative to Shadcn UI. It actually complements Shadcn UI.",
+      "No, Calm UI is not an alternative to Shadcn UI. It actually complements Shadcn UI.",
   },
   {
     title: "How can I use the customized components in my project?",

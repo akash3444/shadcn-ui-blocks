@@ -426,7 +426,7 @@ const Reddit = (props: SVGProps<SVGSVGElement>) => (
 
 const projects = [
   {
-    name: "Shadcn UI Blocks",
+    name: "Calm UI",
     description: "A collection of shadcn/ui blocks.",
     image: "https://fffuel.co/images/dddepth-preview/dddepth-028.jpg",
   },

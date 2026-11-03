@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 // Image metadata
-export const alt = "Shadcn UI Blocks";
+export const alt = "Calm UI";
 export const size = {
   width: 1200,
   height: 630,
@@ -49,11 +49,11 @@ export default async function Image() {
             <path d="m16.62 12-5.74 9.94" />
           </svg>
         </div>
-        <span tw="ml-4 text-xl font-medium">Shadcn UI Blocks</span>
+        <span tw="ml-4 text-xl font-medium">Calm UI</span>
       </div>
 
       <h1 tw="mt-8 text-6xl text-center leading-[1.2] tracking-tighter max-w-2xl mx-auto">
-        Beautifully Designed Shadcn UI Blocks
+        Beautifully Designed shadcn/ui Blocks
       </h1>
     </div>,
     // ImageResponse options

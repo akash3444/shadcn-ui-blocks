@@ -81,7 +81,7 @@ const Login = () => {
 
         <div className="relative isolate flex flex-col items-center">
           <Logo className="h-9 w-9" />
-          <p className="mt-4 font-medium text-xl">Log in to Shadcn UI Blocks</p>
+          <p className="mt-4 font-medium text-xl">Log in to Calm UI</p>
 
           <Button className="mt-8 w-full gap-3">
             <GoogleLogo />

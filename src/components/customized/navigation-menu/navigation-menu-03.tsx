@@ -64,12 +64,12 @@ export default function NavigationMenuWithDropdown() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-linear-to-b from-muted/50 to-muted p-4 no-underline outline-hidden focus:shadow-md"
                     href="/"
                   >
-                    <Logo className="h-8 w-8" />
+                    <Logo className="size-8" />
                     <div className="mt-4 mb-2 font-medium text-lg tracking-[-0.015em]">
-                      Shadcn UI Blocks
+                      Calm UI
                     </div>
                     <p className="text-muted-foreground text-sm leading-tight">
-                      Collection of customized Shadcn UI blocks and components
+                      Collection of customized shadcn/ui blocks and components
                     </p>
                   </Link>
                 </NavigationMenuLink>

@@ -18,7 +18,7 @@ export default function Verification() {
             "bg-[repeating-linear-gradient(315deg,color-mix(in_oklch,var(--border)_35%,transparent)_0,color-mix(in_oklch,var(--border)_35%,transparent)_1px,transparent_0,transparent_50%)] bg-[size:10px_10px] bg-fixed"
           )}
         >
-          <ApertureIcon className="size-7" /> Shadcn UI Blocks
+          <ApertureIcon className="size-7" /> Calm UI
         </div>
         <div className="mx-auto flex max-w-[21rem] flex-col items-center px-6 py-10 text-center">
           <b className="font-medium text-[1.4rem] tracking-[-0.01em]">

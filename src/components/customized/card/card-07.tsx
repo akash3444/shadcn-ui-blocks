@@ -9,7 +9,7 @@ const ProductCard = () => {
         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
           <Shapes className="h-5 w-5" />
         </div>
-        Shadcn UI Blocks
+        Calm UI
       </CardHeader>
 
       <CardContent className="mt-1 px-5 text-[15px] text-muted-foreground">

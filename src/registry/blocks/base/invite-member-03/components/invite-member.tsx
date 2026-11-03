@@ -87,7 +87,7 @@ export default function InviteMember() {
           <p className="font-medium text-sm">Copy link and share with others</p>
           <InputGroup className="mt-2 bg-background">
             <InputGroupInput
-              placeholder="https://pro.shadcnui-blocks.com/invite"
+              placeholder="https://calmui.dev/invite"
               readOnly
             />
             <InputGroupAddon align="inline-end">
