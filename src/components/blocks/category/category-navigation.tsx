@@ -20,7 +20,7 @@ const CategoryNavigation = ({ category }: { category: string }) => {
     categories[name as keyof typeof categories]?.title ?? name;
 
   return (
-    <nav aria-label="Category navigation" className="mt-12 px-6">
+    <nav aria-label="Category navigation" className="mx-auto mt-12 max-w-(--breakpoint-2xl) px-6">
       <div className="flex overflow-hidden rounded-xl border border-border/70 bg-muted/40 shadow-xs/1">
         {prevCategory ? (
           <Link

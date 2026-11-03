@@ -4,7 +4,11 @@ import { SearchIcon } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type React from "react";
 import { useEffect, useState } from "react";
-import { Input } from "@/components/ui/input";
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupInput,
+} from "@/components/ui/input-group";
 import { useDebounce } from "@/hooks/use-debounce";
 import { capture } from "@/lib/analytics";
 
@@ -48,15 +52,18 @@ const PreviewListSearch = () => {
   }, [query]);
 
   return (
-    <div className="relative w-full max-w-80">
-      <Input
-        className="w-full rounded-lg bg-background ps-9"
+    <InputGroup className="min-w-0 sm:w-64">
+      <InputGroupAddon>
+        <SearchIcon />
+      </InputGroupAddon>
+      <InputGroupInput
+        aria-label="Search blocks"
         onChange={handleChange}
-        placeholder="Search"
+        placeholder="Search blocks"
+        type="search"
         value={value}
       />
-      <SearchIcon className="absolute inset-s-2 inset-y-0 my-auto h-5 w-5 text-muted-foreground" />
-    </div>
+    </InputGroup>
   );
 };
 
