@@ -38,7 +38,7 @@ export default function TemplatesPage() {
             <p className="font-mono text-muted-foreground text-xs uppercase tracking-[0.1em]">
               Ready-to-use shadcn/ui templates
             </p>
-            <h1 className="max-w-[18ch] text-balance font-heading font-medium text-5xl leading-[1.05] tracking-tighter sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-[20ch] text-balance font-heading font-medium text-4xl leading-[1.1] tracking-tighter sm:text-5xl">
               Build faster with polished shadcn/ui templates
             </h1>
             <p className="max-w-[55ch] text-pretty text-base text-muted-foreground leading-relaxed sm:text-lg">

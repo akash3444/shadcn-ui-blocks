@@ -8,7 +8,7 @@ import { absoluteUrl } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Blocks",
   description:
-    "Shadcn UI Blocks is a collection of ready-to-use code snippets for web developers to preview, customize, and copy.",
+    "Calm UI is a collection of ready-to-use code snippets for web developers to preview, customize, and copy.",
   alternates: {
     canonical: absoluteUrl("/blocks"),
   },
@@ -28,7 +28,7 @@ const BlocksPage = () => (
           <p className="font-mono text-muted-foreground text-xs uppercase tracking-[0.1em]">
             Ready-to-use shadcn/ui blocks
           </p>
-          <h1 className="max-w-[18ch] text-balance font-heading font-semibold text-5xl leading-[1.04] tracking-[-0.05em] sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-[20ch] text-balance font-heading font-medium text-4xl leading-[1.1] tracking-tighter sm:text-5xl">
             {totalBlocks} blocks for whatever you're building
           </h1>
           <p className="max-w-[55ch] text-pretty text-base text-muted-foreground leading-relaxed sm:text-lg">

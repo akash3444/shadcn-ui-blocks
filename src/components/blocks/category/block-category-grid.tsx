@@ -19,7 +19,7 @@ const Head = ({ className }: { className?: string }) => (
 
 /** Primary CTA button shape */
 const Btn = ({ className }: { className?: string }) => (
-  <div className={cn("h-6 rounded-md bg-primary/28", className)} />
+  <div className={cn("h-6 rounded-md bg-foreground/28", className)} />
 );
 
 /** Ghost / secondary button shape */
@@ -41,7 +41,7 @@ const Img = ({ className }: { className?: string }) => (
 
 /** Small icon square */
 const Icon = ({ className }: { className?: string }) => (
-  <div className={cn("shrink-0 rounded-md bg-primary/22", className)} />
+  <div className={cn("shrink-0 rounded-md bg-foreground/22", className)} />
 );
 
 /** Bordered card wrapper */
@@ -58,7 +58,7 @@ const Card = ({
     className={cn(
       "rounded-lg border p-2.5",
       accent
-        ? "border-primary/30 bg-primary/5"
+        ? "border-foreground/30 bg-foreground/5"
         : "border-muted-foreground/12 bg-muted-foreground/3",
       className
     )}
@@ -71,7 +71,7 @@ const Card = ({
 
 const HeroSkeleton = () => (
   <div className="flex h-full flex-col items-center justify-center gap-2 p-4">
-    <div className="h-4 w-16 rounded-full bg-primary/25" />
+    <div className="h-4 w-16 rounded-full bg-foreground/25" />
     <Head className="mt-2 w-3/4" />
     <Head className="w-1/2" />
     <Line className="mt-0.5 w-2/3" />
@@ -216,7 +216,7 @@ const TestimonialsSkeleton = () => (
     {/* Stars */}
     <div className="mb-2 flex gap-1">
       {["a", "b", "c", "d", "e"].map((k) => (
-        <div className="size-2.5 rounded-sm bg-primary/28" key={k} />
+        <div className="size-2.5 rounded-sm bg-foreground/28" key={k} />
       ))}
     </div>
     <div className="flex w-full flex-col items-center justify-center gap-1">
@@ -241,7 +241,7 @@ const StatsSkeleton = () => (
     <div className="grid w-full grid-cols-3 gap-2">
       {["a", "b", "c"].map((k) => (
         <Card className="flex flex-col items-center gap-1.5" key={k}>
-          <div className="h-4 w-3/4 rounded-md bg-primary/25" />
+          <div className="h-4 w-3/4 rounded-md bg-foreground/25" />
           <Line className="w-2/3" />
         </Card>
       ))}
@@ -326,7 +326,7 @@ const CarouselSkeleton = () => (
   <div className="flex h-full flex-col items-center justify-center gap-2 p-4">
     <div className="relative mx-auto flex max-h-2/3 w-4/5 flex-1 items-center justify-center overflow-hidden rounded-lg bg-muted-foreground/10" />
     <div className="flex justify-center gap-1.5">
-      <div className="h-1.5 w-4 rounded-full bg-primary/35" />
+      <div className="h-1.5 w-4 rounded-full bg-foreground/35" />
       {["a", "b", "c"].map((k) => (
         <div className="size-1.5 rounded-full bg-muted-foreground/22" key={k} />
       ))}
@@ -392,7 +392,7 @@ const InviteMemberSkeleton = () => (
 
 const OrderConfirmationSkeleton = () => (
   <div className="mx-auto flex h-full max-w-3/5 flex-col items-center justify-center gap-2 p-4">
-    <div className="size-8 rounded-full bg-primary/28" />
+    <div className="size-8 rounded-full bg-foreground/28" />
     <Head className="w-2/5" />
     <Card className="mt-3 w-full">
       {["a", "b", "c"].map((k) => (
@@ -403,7 +403,7 @@ const OrderConfirmationSkeleton = () => (
       ))}
       <div className="mt-1 flex items-center justify-between border-muted-foreground/10 border-t pt-1.5">
         <Head className="w-1/4" />
-        <div className="h-2.5 w-1/5 rounded-full bg-primary/25" />
+        <div className="h-2.5 w-1/5 rounded-full bg-foreground/25" />
       </div>
     </Card>
   </div>
@@ -416,7 +416,7 @@ const SetupGuideSkeleton = () => (
 
     {["a", "b", "c"].map((k) => (
       <div className="flex items-start gap-2.5" key={k}>
-        <div className="mt-0.5 size-4 shrink-0 rounded-full bg-primary/25" />
+        <div className="mt-0.5 size-4 shrink-0 rounded-full bg-foreground/25" />
         <div className="flex flex-col gap-1">
           <Head className="w-20" />
           <Line className="w-36" />
@@ -446,7 +446,7 @@ const IntegrationsSkeleton = () => (
 const BannerSkeleton = () => (
   <div className="flex h-full flex-col gap-3 p-4">
     {/* Banner bar */}
-    <div className="flex items-center justify-center gap-3 rounded-lg bg-primary/5 px-4 py-2.5">
+    <div className="flex items-center justify-center gap-3 rounded-lg bg-foreground/5 px-4 py-2.5">
       <Line className="grow" />
       <Btn className="w-16" />
     </div>
@@ -576,7 +576,7 @@ const VerificationSkeleton = () => (
 const NotFoundSkeleton = () => (
   <div className="flex h-full flex-col items-center justify-center gap-2 p-4">
     {/* Large 404 number */}
-    <div className="h-9 w-24 rounded-lg bg-primary/22" />
+    <div className="h-9 w-24 rounded-lg bg-foreground/22" />
     {/* Title */}
     <Head className="mt-1 w-2/5" />
     {/* Description */}
@@ -652,7 +652,7 @@ const CategoryCard = ({
 
   return (
     <Link
-      className="group flex flex-col overflow-hidden rounded-xl border bg-card transition-all duration-200 hover:border-primary/40 hover:shadow-md"
+      className="group flex flex-col overflow-hidden rounded-xl border bg-card transition-all duration-200 hover:border-foreground/20 hover:shadow-md"
       href={`/blocks/categories/${name}`}
     >
       <div className="relative aspect-video w-full overflow-hidden bg-muted/30">
