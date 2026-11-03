@@ -1,4 +1,4 @@
-# Contributing to Shadcn UI Blocks
+# Contributing to Calm UI
 
 First off, thank you for taking the time to contribute! 🎉 Your contributions are what make this project great.
 
