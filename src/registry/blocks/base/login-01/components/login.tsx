@@ -29,7 +29,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center">
+    <div className="flex min-h-screen items-center justify-center bg-background">
       <div className="relative w-full max-w-sm overflow-hidden rounded-xl border bg-gradient-to-b from-muted/50 to-card px-8 py-8 shadow-lg/5 dark:from-transparent dark:shadow-xl">
         <div
           className="absolute inset-0 -top-px -left-px z-0"
