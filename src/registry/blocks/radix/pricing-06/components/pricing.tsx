@@ -109,13 +109,17 @@ const PlanCard = ({ plan }: { plan: PricingPlan }) => {
         <p className="mt-1 text-muted-foreground text-sm tracking-normal">
           one-time payment
         </p>
-        <Button className="my-6 w-full" size="lg">
+        <Button
+          className="my-6 w-full"
+          size="lg"
+          variant={plan.isRecommended ? "default" : "outline"}
+        >
           Get Started
         </Button>
         <ul className="mt-4 space-y-2">
           {plan.features.map((feature) => (
             <li className="flex items-center gap-2" key={feature}>
-              <CircleCheck className="size-4 shrink-0 text-primary" />
+              <CircleCheck className="size-4 shrink-0 text-muted-foreground" />
               {feature}
             </li>
           ))}

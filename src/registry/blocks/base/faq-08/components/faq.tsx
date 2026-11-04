@@ -185,7 +185,7 @@ const FAQ = () => {
                 })}
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                variant={activeCategory === category ? "default" : "ghost"}
+                variant={activeCategory === category ? "secondary" : "ghost"}
               >
                 <Icon className="mr-2.5 size-5" />
                 {category}

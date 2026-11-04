@@ -67,7 +67,7 @@ const Features = () => {
           >
             <div className="flex h-full flex-col rounded-lg border border-border/75 bg-card px-6 py-7 shadow-xs/1 dark:border-foreground/13">
               <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/7 text-primary dark:bg-primary/10">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-foreground">
                   <feature.icon className="h-5 w-5" />
                 </div>
                 <h3 className="font-medium text-lg tracking-[-0.005em]">

@@ -136,7 +136,7 @@ const PlanCard = ({ plan }: { plan: PricingPlan }) => {
         <ul className="mt-4 space-y-2">
           {plan.features.map((feature) => (
             <li className="flex items-center gap-2" key={feature}>
-              <CircleCheck className="size-4 shrink-0 fill-primary/10 text-primary dark:fill-primary/15" />
+              <CircleCheck className="size-4 shrink-0 text-muted-foreground" />
               {feature}
             </li>
           ))}

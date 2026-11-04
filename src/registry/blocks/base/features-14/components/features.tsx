@@ -60,7 +60,7 @@ const Features = () => {
       <div className="mt-16 grid grid-cols-1 gap-1.5 border bg-muted p-1.5 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
           <div className="relative -m-px border bg-card px-5 py-7" key={index}>
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/5 text-primary dark:bg-primary/10">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted text-foreground">
               <feature.icon />
             </div>
             <h3 className="mt-5 font-medium text-lg tracking-[-0.005em]">

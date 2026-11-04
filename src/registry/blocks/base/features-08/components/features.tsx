@@ -64,7 +64,7 @@ const Features = () => {
             key={index}
           >
             <div className="flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/7 text-primary dark:bg-primary/10">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-foreground">
                 <feature.icon className="h-5 w-5" />
               </div>
               <h3 className="font-medium text-lg tracking-[-0.005em]">

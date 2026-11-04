@@ -124,7 +124,7 @@ const Blog = () => {
             </CardHeader>
             <CardContent className="p-4">
               <div className="flex items-center gap-3">
-                <Badge className="bg-primary/5 text-primary shadow-none hover:bg-primary/5">
+                <Badge className="shadow-none" variant="secondary">
                   {post.category}
                 </Badge>
                 <span className="font-medium text-muted-foreground text-xs">
@@ -137,7 +137,7 @@ const Blog = () => {
               </h3>
               <p className="mt-2 text-muted-foreground">{post.description}</p>
 
-              <Button className="mt-6 shadow-none">
+              <Button className="mt-6 shadow-none" variant="outline">
                 Read more <ChevronRight />
               </Button>
             </CardContent>

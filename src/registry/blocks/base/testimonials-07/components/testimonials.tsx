@@ -135,7 +135,7 @@ const Testimonials = () => {
             <div
               className={cn(
                 "h-2 w-2 rounded-full",
-                current === index + 1 ? "bg-primary" : "bg-primary/20"
+                current === index + 1 ? "bg-foreground" : "bg-foreground/20"
               )}
               key={index}
             />

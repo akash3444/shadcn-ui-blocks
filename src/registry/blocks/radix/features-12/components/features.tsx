@@ -57,7 +57,7 @@ export default function Features() {
               <p className="text-balance text-base text-muted-foreground">
                 {plusPoint.description}
               </p>
-              <Button className="mt-6">
+              <Button className="mt-6" variant="outline">
                 Learn More <ArrowUpRightIcon />
               </Button>
             </div>

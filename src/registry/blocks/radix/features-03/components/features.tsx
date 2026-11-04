@@ -48,7 +48,7 @@ const Features = () => {
             </li>
           </ul>
 
-          <Button className="mt-8 w-full">
+          <Button className="mt-8 w-full" variant="outline">
             Build your strategy <ArrowRight />
           </Button>
         </div>
@@ -106,7 +106,7 @@ const Features = () => {
             </li>
           </ul>
 
-          <Button className="mt-8 w-full">
+          <Button className="mt-8 w-full" variant="outline">
             Build your strategy <ArrowRight />
           </Button>
         </div>

@@ -90,7 +90,7 @@ const Testimonials = () => (
               </p>
               <div className="mt-auto flex items-center justify-center gap-3">
                 <Avatar className="size-9">
-                  <AvatarFallback className="bg-primary font-medium text-primary-foreground text-xl">
+                  <AvatarFallback className="bg-muted font-medium text-foreground text-xl">
                     {testimonial.name.charAt(0)}
                   </AvatarFallback>
                 </Avatar>

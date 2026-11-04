@@ -108,13 +108,13 @@ const Team = () => {
                   </p>
                   <div className="mt-5 flex items-center justify-center gap-4">
                     <Link href="#" target="_blank">
-                      <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary" />
+                      <Twitter className="h-5 w-5 text-muted-foreground hover:text-foreground" />
                     </Link>
                     <Link href="#" target="_blank">
-                      <Github className="h-5 w-5 text-muted-foreground hover:text-primary" />
+                      <Github className="h-5 w-5 text-muted-foreground hover:text-foreground" />
                     </Link>
                     <Link href="#" target="_blank">
-                      <Dribbble className="h-5 w-5 text-muted-foreground hover:text-primary" />
+                      <Dribbble className="h-5 w-5 text-muted-foreground hover:text-foreground" />
                     </Link>
                   </div>
                 </div>
@@ -129,7 +129,7 @@ const Team = () => {
               <div
                 className={cn(
                   "h-2 w-2 rounded-full",
-                  current === index + 1 ? "bg-primary" : "bg-primary/20"
+                  current === index + 1 ? "bg-foreground" : "bg-foreground/20"
                 )}
                 key={index}
               />

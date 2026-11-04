@@ -62,7 +62,7 @@ const Features = () => {
 
       <div className="mt-20 grid grid-cols-1 bg-card sm:grid-cols-2 lg:grid-cols-3">
         <div className="-mr-px flex h-16 items-center border px-6 font-medium text-lg sm:col-span-2 md:col-span-1">
-          <Smile className="mr-4 text-primary" /> Features that make you happy
+          <Smile className="mr-4" /> Features that make you happy
         </div>
         <div className="-mr-px hidden h-16 border bg-[repeating-linear-gradient(315deg,var(--muted)_0,var(--muted)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed md:block lg:col-span-2" />
         {features.map((feature, index) => (
@@ -71,7 +71,7 @@ const Features = () => {
             key={index}
           >
             <div className="flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/7 text-primary dark:bg-primary/10">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-foreground">
                 <feature.icon className="h-5 w-5" />
               </div>
               <h3 className="font-medium text-lg tracking-[-0.005em]">

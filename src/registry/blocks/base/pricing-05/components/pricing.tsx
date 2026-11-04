@@ -134,13 +134,17 @@ const PlanCard = ({
           /month
         </span>
       </p>
-      <Button className="mt-6 mb-8 h-10 w-full" size="lg">
+      <Button
+        className="mt-6 mb-8 h-10 w-full"
+        size="lg"
+        variant={plan.isRecommended ? "default" : "outline"}
+      >
         Get Started
       </Button>
       <ul className="space-y-2">
         {plan.features.map((feature) => (
           <li className="flex items-center gap-2" key={feature}>
-            <CircleCheck className="size-4 shrink-0 text-primary" />
+            <CircleCheck className="size-4 shrink-0 text-muted-foreground" />
             {feature}
           </li>
         ))}

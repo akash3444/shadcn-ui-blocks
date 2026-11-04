@@ -120,7 +120,7 @@ const TestimonialList = ({ className, ...props }: ComponentProps<"div">) =>
                   className="object-cover"
                   src={testimonial.avatar}
                 />
-                <AvatarFallback className="bg-primary font-medium text-primary-foreground text-xl">
+                <AvatarFallback className="bg-muted font-medium text-foreground text-xl">
                   {testimonial.name.charAt(0)}
                 </AvatarFallback>
               </Avatar>

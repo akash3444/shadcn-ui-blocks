@@ -127,7 +127,7 @@ const Testimonials = () => {
           {Array.from({ length: count }).map((_, index) => (
             <button
               className={cn("h-3.5 w-3.5 rounded-full border-2", {
-                "border-primary bg-primary": current === index + 1,
+                "border-foreground bg-foreground": current === index + 1,
               })}
               key={index}
               onClick={() => api?.scrollTo(index)}
@@ -157,7 +157,7 @@ const TestimonialCard = ({
             src={testimonial.portraitImage}
           />
         </div>
-        <div className="absolute top-10 right-0 z-10 flex h-12 w-12 translate-x-1/2 items-center justify-center rounded-full bg-primary">
+        <div className="absolute top-10 right-0 z-10 flex h-12 w-12 translate-x-1/2 items-center justify-center rounded-full bg-foreground">
           <svg
             className="h-6 w-6"
             fill="none"
@@ -169,7 +169,7 @@ const TestimonialCard = ({
           >
             <title>Quote</title>
             <path
-              className="fill-primary-foreground"
+              className="fill-background"
               d="M26.0063 19.8917C30.0826 19.8625 33.7081 20.9066 36.8826 23.024C40.057 25.1414 42.5746 28.0279 44.4353 31.6835C46.2959 35.339 47.2423 39.4088 47.2744 43.8927C47.327 51.2301 44.9837 58.4318 40.2444 65.4978C35.4039 72.6664 28.5671 78.5755 19.734 83.2249L2.54766 74.1759C8.33598 71.2808 13.2548 67.9334 17.3041 64.1335C21.2515 60.3344 23.9203 55.8821 25.3105 50.7765C20.5179 50.4031 16.6348 48.9532 13.6612 46.4267C10.5864 44.0028 9.03329 40.5999 9.00188 36.2178C8.97047 31.8358 10.5227 28.0029 13.6584 24.7192C16.693 21.5381 20.809 19.9289 26.0063 19.8917ZM77.0623 19.5257C81.1387 19.4965 84.7641 20.5406 87.9386 22.6581C91.1131 24.7755 93.6306 27.662 95.4913 31.3175C97.3519 34.9731 98.2983 39.0428 98.3304 43.5268C98.383 50.8642 96.0397 58.0659 91.3004 65.1319C86.4599 72.3005 79.6231 78.2095 70.79 82.859L53.6037 73.8099C59.392 70.9149 64.3108 67.5674 68.3601 63.7676C72.3075 59.9685 74.9763 55.5161 76.3665 50.4105C71.5739 50.0372 67.6908 48.5873 64.7172 46.0608C61.6424 43.6369 60.0893 40.2339 60.0579 35.8519C60.0265 31.4698 61.5787 27.6369 64.7145 24.3532C67.7491 21.1722 71.865 19.563 77.0623 19.5257Z"
             />
           </svg>
@@ -179,7 +179,7 @@ const TestimonialCard = ({
         <div className="flex items-center justify-between gap-1">
           <div className="hidden items-center gap-4 sm:flex md:hidden">
             <Avatar className="h-8 w-8 md:h-10 md:w-10">
-              <AvatarFallback className="bg-primary font-medium text-primary-foreground text-xl">
+              <AvatarFallback className="bg-muted font-medium text-foreground text-xl">
                 {testimonial.name.charAt(0)}
               </AvatarFallback>
             </Avatar>
@@ -203,7 +203,7 @@ const TestimonialCard = ({
         </p>
         <div className="mt-10 flex items-center gap-4 sm:hidden md:flex">
           <Avatar className="size-10">
-            <AvatarFallback className="bg-primary font-medium text-primary-foreground text-xl">
+            <AvatarFallback className="bg-muted font-medium text-foreground text-xl">
               {testimonial.name.charAt(0)}
             </AvatarFallback>
           </Avatar>

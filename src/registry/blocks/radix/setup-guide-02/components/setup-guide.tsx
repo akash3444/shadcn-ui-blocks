@@ -40,7 +40,7 @@ export default function SetupGuide() {
               className={cn(
                 "relative isolate flex items-center gap-5 border-t px-6 py-4 sm:px-8",
                 {
-                  "bg-primary/8": step.status === "completed",
+                  "bg-muted/50": step.status === "completed",
                   "cursor-pointer transition-colors hover:bg-muted/50":
                     step.status === "pending",
                 }
@@ -48,15 +48,7 @@ export default function SetupGuide() {
               key={step.title}
             >
               {/* Decorative line */}
-              <div
-                className={cn(
-                  "absolute inset-y-0 -z-1 translate-x-4 border-r border-dashed",
-                  {
-                    "border-primary/20 dark:border-primary/25":
-                      step.status === "completed",
-                  }
-                )}
-              />
+              <div className="absolute inset-y-0 -z-1 translate-x-4 border-r border-dashed" />
 
               <div
                 className={cn(
@@ -80,7 +72,9 @@ export default function SetupGuide() {
                 </div>
 
                 <div className="leading-none">
-                  {step.status === "completed" && <Badge>Completed</Badge>}
+                  {step.status === "completed" && (
+                    <Badge variant="secondary">Completed</Badge>
+                  )}
                   {step.status === "pending" && (
                     <Button
                       className="h-6 sm:ml-0"
