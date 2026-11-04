@@ -14,7 +14,6 @@ export const blocks = [
       },
     ],
     categories: ["blog"],
-    source: "base",
     preview: "components/blog",
   },
   {
@@ -30,7 +29,6 @@ export const blocks = [
       },
     ],
     categories: ["blog"],
-    source: "base",
     preview: "components/blog",
   },
   {
@@ -46,7 +44,6 @@ export const blocks = [
       },
     ],
     categories: ["blog"],
-    source: "base",
     preview: "components/blog",
   },
   {
@@ -61,7 +58,6 @@ export const blocks = [
       },
     ],
     categories: ["contact"],
-    source: "shared",
     preview: "components/contact",
   },
   {
@@ -84,7 +80,6 @@ export const blocks = [
       },
     ],
     categories: ["contact"],
-    source: "base",
     preview: "components/contact",
   },
   {
@@ -99,7 +94,6 @@ export const blocks = [
       },
     ],
     categories: ["contact"],
-    source: "shared",
     preview: "components/contact",
   },
   {
@@ -114,7 +108,6 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "base",
     preview: "components/faq",
   },
   {
@@ -130,7 +123,6 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "base",
     preview: "components/faq",
   },
   {
@@ -145,7 +137,6 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "shared",
     preview: "components/faq",
   },
   {
@@ -160,7 +151,6 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "shared",
     preview: "components/faq",
   },
   {
@@ -175,7 +165,6 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "base",
     preview: "components/faq",
   },
   {
@@ -191,7 +180,6 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "base",
     preview: "components/faq",
   },
   {
@@ -206,7 +194,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "shared",
     preview: "components/features",
   },
   {
@@ -220,7 +207,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "shared",
     preview: "components/features",
   },
   {
@@ -236,7 +222,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "base",
     preview: "components/features",
   },
   {
@@ -252,7 +237,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "base",
     preview: "components/features",
   },
   {
@@ -268,7 +252,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "base",
     preview: "components/features",
   },
   {
@@ -284,7 +267,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "shared",
     preview: "components/features",
   },
   {
@@ -299,7 +281,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "shared",
     preview: "components/features",
   },
   {
@@ -314,7 +295,6 @@ export const blocks = [
       },
     ],
     categories: ["footer"],
-    source: "base",
     preview: "components/footer",
     layout: "footer",
   },
@@ -331,7 +311,6 @@ export const blocks = [
       },
     ],
     categories: ["footer"],
-    source: "base",
     preview: "components/footer",
     layout: "footer",
   },
@@ -348,7 +327,6 @@ export const blocks = [
       },
     ],
     categories: ["footer"],
-    source: "base",
     preview: "components/footer",
     layout: "footer",
   },
@@ -365,7 +343,6 @@ export const blocks = [
       },
     ],
     categories: ["footer"],
-    source: "base",
     preview: "components/footer",
     layout: "footer",
   },
@@ -382,7 +359,6 @@ export const blocks = [
       },
     ],
     categories: ["footer"],
-    source: "base",
     preview: "components/footer",
     layout: "footer",
   },
@@ -399,7 +375,6 @@ export const blocks = [
       },
     ],
     categories: ["hero"],
-    source: "base",
     preview: "components/hero",
   },
   {
@@ -435,7 +410,6 @@ export const blocks = [
       },
     ],
     categories: ["hero"],
-    source: "base",
     preview: "components/hero",
   },
   {
@@ -451,7 +425,6 @@ export const blocks = [
       },
     ],
     categories: ["hero"],
-    source: "base",
     preview: "components/hero",
   },
   {
@@ -484,7 +457,6 @@ export const blocks = [
       },
     ],
     categories: ["hero"],
-    source: "base",
     preview: "components/hero",
   },
   {
@@ -508,7 +480,6 @@ export const blocks = [
       },
     ],
     categories: ["hero"],
-    source: "base",
     preview: "components/hero",
   },
   {
@@ -528,7 +499,6 @@ export const blocks = [
       },
     ],
     categories: ["login", "authentication"],
-    source: "base",
     preview: "components/login",
   },
   {
@@ -548,7 +518,6 @@ export const blocks = [
       },
     ],
     categories: ["login", "authentication"],
-    source: "base",
     preview: "components/login",
   },
   {
@@ -566,7 +535,6 @@ export const blocks = [
       },
     ],
     categories: ["logoCloud"],
-    source: "shared",
     preview: "components/logo-cloud",
   },
   {
@@ -584,7 +552,6 @@ export const blocks = [
       },
     ],
     categories: ["logoCloud"],
-    source: "shared",
     preview: "components/logo-cloud",
   },
   {
@@ -602,7 +569,6 @@ export const blocks = [
       },
     ],
     categories: ["logoCloud"],
-    source: "shared",
     preview: "components/logo-cloud",
   },
   {
@@ -620,7 +586,6 @@ export const blocks = [
       },
     ],
     categories: ["logoCloud"],
-    source: "shared",
     preview: "components/logo-cloud",
   },
   {
@@ -643,7 +608,6 @@ export const blocks = [
       },
     ],
     categories: ["logoCloud"],
-    source: "base",
     preview: "components/logo-cloud",
   },
   {
@@ -666,7 +630,6 @@ export const blocks = [
       },
     ],
     categories: ["logoCloud"],
-    source: "base",
     preview: "components/logo-cloud",
   },
   {
@@ -694,7 +657,6 @@ export const blocks = [
       },
     ],
     categories: ["navbar"],
-    source: "base",
     preview: "components/navbar",
     layout: "navbar",
   },
@@ -723,7 +685,6 @@ export const blocks = [
       },
     ],
     categories: ["navbar"],
-    source: "base",
     preview: "components/navbar",
     layout: "navbar",
   },
@@ -757,7 +718,6 @@ export const blocks = [
       },
     ],
     categories: ["navbar"],
-    source: "base",
     preview: "components/navbar",
     layout: "navbar",
   },
@@ -786,7 +746,6 @@ export const blocks = [
       },
     ],
     categories: ["navbar"],
-    source: "base",
     preview: "components/navbar",
     layout: "navbar",
   },
@@ -807,7 +766,6 @@ export const blocks = [
       },
     ],
     categories: ["navbar"],
-    source: "base",
     preview: "components/navbar",
     layout: "navbar",
   },
@@ -824,7 +782,6 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "base",
     preview: "components/pricing",
   },
   {
@@ -840,7 +797,6 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "base",
     preview: "components/pricing",
   },
   {
@@ -856,7 +812,6 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "base",
     preview: "components/pricing",
   },
   {
@@ -872,7 +827,6 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "base",
     preview: "components/pricing",
   },
   {
@@ -892,7 +846,6 @@ export const blocks = [
       },
     ],
     categories: ["signup", "authentication"],
-    source: "base",
     preview: "components/signup",
   },
   {
@@ -912,7 +865,6 @@ export const blocks = [
       },
     ],
     categories: ["signup", "authentication"],
-    source: "base",
     preview: "components/signup",
   },
   {
@@ -926,7 +878,6 @@ export const blocks = [
       },
     ],
     categories: ["stats"],
-    source: "shared",
     preview: "components/stats",
   },
   {
@@ -940,7 +891,6 @@ export const blocks = [
       },
     ],
     categories: ["stats"],
-    source: "shared",
     preview: "components/stats",
   },
   {
@@ -954,7 +904,6 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "shared",
     preview: "components/team",
   },
   {
@@ -968,7 +917,6 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "shared",
     preview: "components/team",
   },
   {
@@ -984,7 +932,6 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "base",
     preview: "components/team",
   },
   {
@@ -1000,7 +947,6 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "base",
     preview: "components/team",
   },
   {
@@ -1016,7 +962,6 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "base",
     preview: "components/team",
   },
   {
@@ -1031,7 +976,6 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "base",
     preview: "components/testimonials",
   },
   {
@@ -1050,7 +994,6 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "base",
     preview: "components/testimonials",
   },
   {
@@ -1066,7 +1009,6 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "base",
     preview: "components/testimonials",
   },
   {
@@ -1082,7 +1024,6 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "base",
     preview: "components/testimonials",
   },
   {
@@ -1098,7 +1039,6 @@ export const blocks = [
       },
     ],
     categories: ["timeline"],
-    source: "base",
     preview: "components/timeline",
   },
   {
@@ -1114,7 +1054,6 @@ export const blocks = [
       },
     ],
     categories: ["timeline"],
-    source: "base",
     preview: "components/timeline",
   },
   {
@@ -1130,7 +1069,6 @@ export const blocks = [
       },
     ],
     categories: ["timeline"],
-    source: "base",
     preview: "components/timeline",
   },
   {
@@ -1144,7 +1082,6 @@ export const blocks = [
       },
     ],
     categories: ["timeline"],
-    source: "shared",
     preview: "components/timeline",
   },
   {
@@ -1160,7 +1097,6 @@ export const blocks = [
       },
     ],
     categories: ["timeline"],
-    source: "shared",
     preview: "components/timeline",
   },
   {
@@ -1174,7 +1110,6 @@ export const blocks = [
       },
     ],
     categories: ["timeline"],
-    source: "shared",
     preview: "components/timeline",
   },
   {
@@ -1188,7 +1123,6 @@ export const blocks = [
       },
     ],
     categories: ["banner"],
-    source: "shared",
     preview: "components/banner",
   },
   {
@@ -1204,7 +1138,6 @@ export const blocks = [
       },
     ],
     categories: ["banner"],
-    source: "base",
     preview: "components/banner",
   },
   {
@@ -1220,7 +1153,6 @@ export const blocks = [
       },
     ],
     categories: ["banner"],
-    source: "base",
     preview: "components/banner",
   },
   {
@@ -1236,7 +1168,6 @@ export const blocks = [
       },
     ],
     categories: ["banner"],
-    source: "base",
     preview: "components/banner",
   },
   {
@@ -1251,7 +1182,6 @@ export const blocks = [
       },
     ],
     categories: ["cta"],
-    source: "base",
     preview: "components/cta",
   },
   {
@@ -1267,7 +1197,6 @@ export const blocks = [
       },
     ],
     categories: ["cta"],
-    source: "base",
     preview: "components/cta",
   },
   {
@@ -1283,7 +1212,6 @@ export const blocks = [
       },
     ],
     categories: ["cta"],
-    source: "base",
     preview: "components/cta",
   },
   {
@@ -1299,7 +1227,6 @@ export const blocks = [
       },
     ],
     categories: ["cta"],
-    source: "base",
     preview: "components/cta",
   },
   {
@@ -1315,7 +1242,6 @@ export const blocks = [
       },
     ],
     categories: ["cta"],
-    source: "base",
     preview: "components/cta",
   },
   {
@@ -1330,7 +1256,6 @@ export const blocks = [
       },
     ],
     categories: ["cta"],
-    source: "base",
     preview: "components/cta",
   },
   {
@@ -1345,7 +1270,6 @@ export const blocks = [
       },
     ],
     categories: ["carousel"],
-    source: "base",
     preview: "components/carousel",
   },
   {
@@ -1360,7 +1284,6 @@ export const blocks = [
       },
     ],
     categories: ["carousel"],
-    source: "base",
     preview: "components/carousel",
   },
   {
@@ -1374,7 +1297,6 @@ export const blocks = [
       },
     ],
     categories: ["changelog"],
-    source: "base",
     preview: "components/changelog",
   },
   {
@@ -1388,7 +1310,6 @@ export const blocks = [
       },
     ],
     categories: ["changelog"],
-    source: "base",
     preview: "components/changelog",
   },
   {
@@ -1402,7 +1323,6 @@ export const blocks = [
       },
     ],
     categories: ["changelog"],
-    source: "base",
     preview: "components/changelog",
   },
   {
@@ -1417,7 +1337,6 @@ export const blocks = [
       },
     ],
     categories: ["codeBlock"],
-    source: "shared",
     preview: "components/code-block",
   },
   {
@@ -1440,7 +1359,6 @@ export const blocks = [
       },
     ],
     categories: ["codeBlock"],
-    source: "base",
     preview: "components/code-block",
   },
   {
@@ -1456,7 +1374,6 @@ export const blocks = [
       },
     ],
     categories: ["codeBlock"],
-    source: "base",
     preview: "components/code-block",
   },
   {
@@ -1472,7 +1389,6 @@ export const blocks = [
       },
     ],
     categories: ["emptyState"],
-    source: "base",
     preview: "components/empty-state",
   },
   {
@@ -1488,7 +1404,6 @@ export const blocks = [
       },
     ],
     categories: ["emptyState"],
-    source: "base",
     preview: "components/empty-state",
   },
   {
@@ -1504,7 +1419,6 @@ export const blocks = [
       },
     ],
     categories: ["emptyState"],
-    source: "base",
     preview: "components/empty-state",
   },
   {
@@ -1524,7 +1438,6 @@ export const blocks = [
       },
     ],
     categories: ["emptyState"],
-    source: "base",
     preview: "components/empty-state",
   },
   {
@@ -1545,7 +1458,6 @@ export const blocks = [
       },
     ],
     categories: ["inviteMember"],
-    source: "base",
     preview: "components/invite-member",
     layout: "full-height",
   },
@@ -1568,7 +1480,6 @@ export const blocks = [
       },
     ],
     categories: ["inviteMember"],
-    source: "base",
     preview: "components/invite-member",
     layout: "full-height",
   },
@@ -1584,7 +1495,6 @@ export const blocks = [
       },
     ],
     categories: ["keyboardShortcuts"],
-    source: "base",
     preview: "components/keyboard-shortcuts",
   },
   {
@@ -1600,7 +1510,6 @@ export const blocks = [
       },
     ],
     categories: ["keyboardShortcuts"],
-    source: "base",
     preview: "components/keyboard-shortcuts",
   },
   {
@@ -1615,7 +1524,6 @@ export const blocks = [
       },
     ],
     categories: ["keyboardShortcuts"],
-    source: "base",
     preview: "components/keyboard-shortcuts",
   },
   {
@@ -1630,7 +1538,6 @@ export const blocks = [
       },
     ],
     categories: ["keyboardShortcuts"],
-    source: "base",
     preview: "components/keyboard-shortcuts",
   },
   {
@@ -1646,7 +1553,6 @@ export const blocks = [
       },
     ],
     categories: ["members"],
-    source: "base",
     preview: "components/members",
   },
   {
@@ -1662,7 +1568,6 @@ export const blocks = [
       },
     ],
     categories: ["members"],
-    source: "base",
     preview: "components/members",
   },
   {
@@ -1678,7 +1583,6 @@ export const blocks = [
       },
     ],
     categories: ["members"],
-    source: "base",
     preview: "components/members",
   },
   {
@@ -1694,7 +1598,6 @@ export const blocks = [
       },
     ],
     categories: ["orderConfirmation"],
-    source: "base",
     preview: "components/order-confirmation",
   },
   {
@@ -1710,7 +1613,6 @@ export const blocks = [
       },
     ],
     categories: ["orderConfirmation"],
-    source: "base",
     preview: "components/order-confirmation",
   },
   {
@@ -1726,7 +1628,6 @@ export const blocks = [
       },
     ],
     categories: ["profile"],
-    source: "base",
     preview: "components/profile",
   },
   {
@@ -1742,7 +1643,6 @@ export const blocks = [
       },
     ],
     categories: ["profile"],
-    source: "base",
     preview: "components/profile",
   },
   {
@@ -1764,7 +1664,6 @@ export const blocks = [
       },
     ],
     categories: ["profile"],
-    source: "base",
     preview: "components/profile",
   },
   {
@@ -1786,7 +1685,6 @@ export const blocks = [
       },
     ],
     categories: ["profile"],
-    source: "base",
     preview: "components/profile",
   },
   {
@@ -1800,7 +1698,6 @@ export const blocks = [
       },
     ],
     categories: ["setupGuide"],
-    source: "base",
     preview: "components/setup-guide",
   },
   {
@@ -1814,7 +1711,6 @@ export const blocks = [
       },
     ],
     categories: ["setupGuide"],
-    source: "base",
     preview: "components/setup-guide",
   },
   {
@@ -1828,7 +1724,6 @@ export const blocks = [
       },
     ],
     categories: ["setupGuide"],
-    source: "base",
     preview: "components/setup-guide",
   },
   {
@@ -1842,7 +1737,6 @@ export const blocks = [
       },
     ],
     categories: ["verification"],
-    source: "base",
     preview: "components/verification",
   },
   {
@@ -1868,7 +1762,6 @@ export const blocks = [
       },
     ],
     categories: ["hero"],
-    source: "base",
     preview: "components/hero",
     previewFiles: [
       "components/hero.tsx",
@@ -1892,7 +1785,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "base",
     preview: "components/features",
   },
   {
@@ -1906,7 +1798,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "base",
     preview: "components/features",
   },
   {
@@ -1920,7 +1811,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "base",
     preview: "components/features",
   },
   {
@@ -1934,7 +1824,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "shared",
     preview: "components/features",
   },
   {
@@ -1948,7 +1837,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "base",
     preview: "components/features",
   },
   {
@@ -1962,7 +1850,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "shared",
     preview: "components/features",
   },
   {
@@ -1978,7 +1865,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "base",
     preview: "components/features",
   },
   {
@@ -1994,7 +1880,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "base",
     preview: "components/features",
   },
   {
@@ -2010,7 +1895,6 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "base",
     preview: "components/features",
   },
   {
@@ -2024,7 +1908,6 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "base",
     preview: "components/faq",
   },
   {
@@ -2038,7 +1921,6 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "base",
     preview: "components/faq",
   },
   {
@@ -2053,7 +1935,6 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "shared",
     preview: "components/faq",
   },
   {
@@ -2067,7 +1948,6 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "shared",
     preview: "components/faq",
   },
   {
@@ -2083,7 +1963,6 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "base",
     preview: "components/faq",
   },
   {
@@ -2097,7 +1976,6 @@ export const blocks = [
       },
     ],
     categories: ["footer"],
-    source: "shared",
     preview: "components/footer",
     layout: "footer",
   },
@@ -2135,7 +2013,6 @@ export const blocks = [
       },
     ],
     categories: ["login", "authentication"],
-    source: "base",
     preview: "components/login",
   },
   {
@@ -2168,7 +2045,6 @@ export const blocks = [
       },
     ],
     categories: ["login", "authentication"],
-    source: "base",
     preview: "components/login",
   },
   {
@@ -2186,7 +2062,6 @@ export const blocks = [
       },
     ],
     categories: ["logoCloud"],
-    source: "shared",
     preview: "components/logo-cloud",
   },
   {
@@ -2208,7 +2083,6 @@ export const blocks = [
       },
     ],
     categories: ["logoCloud"],
-    source: "shared",
     preview: "components/logo-cloud",
   },
   {
@@ -2226,7 +2100,6 @@ export const blocks = [
       },
     ],
     categories: ["logoCloud"],
-    source: "shared",
     preview: "components/logo-cloud",
   },
   {
@@ -2248,7 +2121,6 @@ export const blocks = [
       },
     ],
     categories: ["logoCloud"],
-    source: "shared",
     preview: "components/logo-cloud",
   },
   {
@@ -2266,7 +2138,6 @@ export const blocks = [
       },
     ],
     categories: ["logoCloud"],
-    source: "shared",
     preview: "components/logo-cloud",
   },
   {
@@ -2292,7 +2163,6 @@ export const blocks = [
       },
     ],
     categories: ["logoCloud"],
-    source: "base",
     preview: "components/logo-cloud",
   },
   {
@@ -2307,7 +2177,6 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "base",
     preview: "components/pricing",
   },
   {
@@ -2321,7 +2190,6 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "base",
     preview: "components/pricing",
   },
   {
@@ -2339,7 +2207,6 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "base",
     preview: "components/pricing",
   },
   {
@@ -2355,7 +2222,6 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "base",
     preview: "components/pricing",
   },
   {
@@ -2392,7 +2258,6 @@ export const blocks = [
       },
     ],
     categories: ["signup", "authentication"],
-    source: "base",
     preview: "components/signup",
   },
   {
@@ -2425,7 +2290,6 @@ export const blocks = [
       },
     ],
     categories: ["signup", "authentication"],
-    source: "base",
     preview: "components/signup",
   },
   {
@@ -2439,7 +2303,6 @@ export const blocks = [
       },
     ],
     categories: ["stats"],
-    source: "shared",
     preview: "components/stats",
   },
   {
@@ -2453,7 +2316,6 @@ export const blocks = [
       },
     ],
     categories: ["stats"],
-    source: "shared",
     preview: "components/stats",
   },
   {
@@ -2467,7 +2329,6 @@ export const blocks = [
       },
     ],
     categories: ["stats"],
-    source: "shared",
     preview: "components/stats",
   },
   {
@@ -2481,7 +2342,6 @@ export const blocks = [
       },
     ],
     categories: ["stats"],
-    source: "shared",
     preview: "components/stats",
   },
   {
@@ -2495,7 +2355,6 @@ export const blocks = [
       },
     ],
     categories: ["stats"],
-    source: "shared",
     preview: "components/stats",
   },
   {
@@ -2509,7 +2368,6 @@ export const blocks = [
       },
     ],
     categories: ["stats"],
-    source: "shared",
     preview: "components/stats",
   },
   {
@@ -2523,7 +2381,6 @@ export const blocks = [
       },
     ],
     categories: ["stats"],
-    source: "base",
     preview: "components/stats",
   },
   {
@@ -2537,7 +2394,6 @@ export const blocks = [
       },
     ],
     categories: ["stats"],
-    source: "shared",
     preview: "components/stats",
   },
   {
@@ -2551,7 +2407,6 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "shared",
     preview: "components/team",
   },
   {
@@ -2565,7 +2420,6 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "shared",
     preview: "components/team",
   },
   {
@@ -2579,7 +2433,6 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "shared",
     preview: "components/team",
   },
   {
@@ -2593,7 +2446,6 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "shared",
     preview: "components/team",
   },
   {
@@ -2607,7 +2459,6 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "base",
     preview: "components/team",
   },
   {
@@ -2621,7 +2472,6 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "shared",
     preview: "components/team",
   },
   {
@@ -2635,7 +2485,6 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "shared",
     preview: "components/team",
   },
   {
@@ -2649,7 +2498,6 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "shared",
     preview: "components/team",
   },
   {
@@ -2663,7 +2511,6 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "base",
     preview: "components/testimonials",
   },
   {
@@ -2677,7 +2524,6 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "shared",
     preview: "components/testimonials",
   },
   {
@@ -2691,7 +2537,6 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "base",
     preview: "components/testimonials",
   },
   {
@@ -2705,7 +2550,6 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "shared",
     preview: "components/testimonials",
   },
   {
@@ -2723,7 +2567,6 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "base",
     preview: "components/testimonials",
   },
   {
@@ -2737,7 +2580,6 @@ export const blocks = [
       },
     ],
     categories: ["blog"],
-    source: "base",
     preview: "components/blog",
   },
   {
@@ -2751,7 +2593,6 @@ export const blocks = [
       },
     ],
     categories: ["blog"],
-    source: "base",
     preview: "components/blog",
   },
   {
@@ -2766,7 +2607,6 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2783,7 +2623,6 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2799,7 +2638,6 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2815,7 +2653,6 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2831,7 +2668,6 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2847,7 +2683,6 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2941,7 +2776,6 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2956,7 +2790,6 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2970,7 +2803,6 @@ export const blocks = [
       },
     ],
     categories: ["integrations"],
-    source: "base",
     preview: "components/integrations",
   },
   {
@@ -2984,7 +2816,6 @@ export const blocks = [
       },
     ],
     categories: ["integrations"],
-    source: "base",
     preview: "components/integrations",
   },
   {
@@ -2998,7 +2829,6 @@ export const blocks = [
       },
     ],
     categories: ["integrations"],
-    source: "base",
     preview: "components/integrations",
   },
   {
@@ -3012,7 +2842,6 @@ export const blocks = [
       },
     ],
     categories: ["integrations"],
-    source: "shared",
     preview: "components/integrations",
   },
   {
@@ -3026,7 +2855,6 @@ export const blocks = [
       },
     ],
     categories: ["integrations"],
-    source: "shared",
     preview: "components/integrations",
   },
 ] as const satisfies readonly BlockCatalogEntry[];

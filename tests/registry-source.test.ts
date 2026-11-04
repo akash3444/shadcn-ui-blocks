@@ -20,9 +20,9 @@ describe("findRegistrySource", () => {
       "src/registry/blocks/base/hero-01/components/hero.tsx",
     ],
     [
-      "shared block",
+      "block with no UI dependencies",
       "public/r/testimonials-06.json",
-      "src/registry/blocks/shared/testimonials-06/components/testimonials.tsx",
+      "src/registry/blocks/base/testimonials-06/components/testimonials.tsx",
     ],
     [
       "OG image",
@@ -47,7 +47,7 @@ describe("findRegistrySource", () => {
   });
 
   it.each([
-    "src/registry/blocks/shared/hero-01/components/hero.tsx",
+    "src/registry/blocks/base/hero-02/components/hero.tsx",
     "src/registry/blocks/base/hero-01/components/unknown.tsx",
     "../../.env",
     "/etc/passwd",

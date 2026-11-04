@@ -8,7 +8,7 @@ import {
   Logo07,
   Logo08,
 } from "@/components/logos";
-import { Marquee } from "@/registry/blocks/shared/logo-cloud-10/components/magicui/marquee";
+import { Marquee } from "@/registry/blocks/base/logo-cloud-10/components/magicui/marquee";
 
 const logos = [Logo01, Logo02, Logo03, Logo07, Logo05, Logo06, Logo04, Logo08];
 

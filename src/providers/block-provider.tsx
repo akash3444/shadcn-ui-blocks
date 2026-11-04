@@ -112,7 +112,7 @@ export const BlockProvider = ({
       setIsLoadingCode(true);
 
       try {
-        const filePath = `src/registry/blocks/${block.source}/${block.name}/${activeFile}`;
+        const filePath = `src/registry/blocks/base/${block.name}/${activeFile}`;
         const rawCode = await getRegistrySource({
           itemName: block.name,
           filePath,

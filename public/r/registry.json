@@ -5582,7 +5582,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/contact-01/components/contact.tsx",
+          "path": "src/registry/blocks/base/contact-01/components/contact.tsx",
           "type": "registry:component"
         }
       ]
@@ -5620,7 +5620,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/contact-03/components/contact.tsx",
+          "path": "src/registry/blocks/base/contact-03/components/contact.tsx",
           "type": "registry:component"
         }
       ]
@@ -5669,7 +5669,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/faq-03/components/faq.tsx",
+          "path": "src/registry/blocks/base/faq-03/components/faq.tsx",
           "type": "registry:component"
         }
       ]
@@ -5684,7 +5684,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/faq-04/components/faq.tsx",
+          "path": "src/registry/blocks/base/faq-04/components/faq.tsx",
           "type": "registry:component"
         }
       ]
@@ -5734,7 +5734,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/features-01/components/features.tsx",
+          "path": "src/registry/blocks/base/features-01/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -5746,7 +5746,7 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/features-02/components/features.tsx",
+          "path": "src/registry/blocks/base/features-02/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -5818,7 +5818,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/features-06/components/features.tsx",
+          "path": "src/registry/blocks/base/features-06/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -5833,7 +5833,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/features-07/components/features.tsx",
+          "path": "src/registry/blocks/base/features-07/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -6128,11 +6128,11 @@
       "description": "A simple logos block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/logo-cloud-01/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-01/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-01/components/logos.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-01/components/logos.tsx",
           "type": "registry:component"
         }
       ]
@@ -6144,11 +6144,11 @@
       "description": "A simple logos block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/logo-cloud-02/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-02/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-02/components/logos.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-02/components/logos.tsx",
           "type": "registry:component"
         }
       ]
@@ -6160,11 +6160,11 @@
       "description": "A simple logos block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/logo-cloud-03/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-03/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-03/components/logos.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-03/components/logos.tsx",
           "type": "registry:component"
         }
       ]
@@ -6176,11 +6176,11 @@
       "description": "A simple logos block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/logo-cloud-04/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-04/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-04/components/logos.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-04/components/logos.tsx",
           "type": "registry:component"
         }
       ]
@@ -6533,7 +6533,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/stats-01/components/stats.tsx",
+          "path": "src/registry/blocks/base/stats-01/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -6545,7 +6545,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/stats-02/components/stats.tsx",
+          "path": "src/registry/blocks/base/stats-02/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -6557,7 +6557,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/team-01/components/team.tsx",
+          "path": "src/registry/blocks/base/team-01/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -6569,7 +6569,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/team-02/components/team.tsx",
+          "path": "src/registry/blocks/base/team-02/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -6763,7 +6763,7 @@
       "description": "A simple timeline block for process steps",
       "files": [
         {
-          "path": "src/registry/blocks/shared/timeline-04/components/timeline.tsx",
+          "path": "src/registry/blocks/base/timeline-04/components/timeline.tsx",
           "type": "registry:component"
         }
       ]
@@ -6778,7 +6778,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/timeline-05/components/timeline.tsx",
+          "path": "src/registry/blocks/base/timeline-05/components/timeline.tsx",
           "type": "registry:component"
         }
       ]
@@ -6790,7 +6790,7 @@
       "description": "A simple timeline block with changelog",
       "files": [
         {
-          "path": "src/registry/blocks/shared/timeline-06/components/timeline.tsx",
+          "path": "src/registry/blocks/base/timeline-06/components/timeline.tsx",
           "type": "registry:component"
         }
       ]
@@ -6802,7 +6802,7 @@
       "description": "A simple banner block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/banner-01/components/banner.tsx",
+          "path": "src/registry/blocks/base/banner-01/components/banner.tsx",
           "type": "registry:component"
         }
       ]
@@ -7041,7 +7041,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/code-block-01/components/code-block.tsx",
+          "path": "src/registry/blocks/base/code-block-01/components/code-block.tsx",
           "type": "registry:component"
         }
       ]
@@ -7578,7 +7578,7 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/features-11/components/features.tsx",
+          "path": "src/registry/blocks/base/features-11/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -7602,7 +7602,7 @@
       "description": "A simple features block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/features-13/components/features.tsx",
+          "path": "src/registry/blocks/base/features-13/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -7695,7 +7695,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/shared/faq-09/components/faq.tsx",
+          "path": "src/registry/blocks/base/faq-09/components/faq.tsx",
           "type": "registry:component"
         }
       ]
@@ -7707,7 +7707,7 @@
       "description": "A simple FAQ block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/faq-10/components/faq.tsx",
+          "path": "src/registry/blocks/base/faq-10/components/faq.tsx",
           "type": "registry:component"
         }
       ]
@@ -7737,7 +7737,7 @@
       "description": "A simple footer block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/footer-06/components/footer.tsx",
+          "path": "src/registry/blocks/base/footer-06/components/footer.tsx",
           "type": "registry:component"
         }
       ]
@@ -7825,11 +7825,11 @@
       "description": "A simple logo cloud block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/logo-cloud-07/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-07/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-07/components/logos.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-07/components/logos.tsx",
           "type": "registry:component"
         }
       ]
@@ -7841,15 +7841,15 @@
       "description": "A simple logo cloud block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/logo-cloud-08/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-08/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-08/components/logos.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-08/components/logos.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-08/components/magicui/marquee.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-08/components/magicui/marquee.tsx",
           "type": "registry:component"
         }
       ]
@@ -7861,11 +7861,11 @@
       "description": "A simple logo cloud block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/logo-cloud-09/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-09/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-09/components/logos.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-09/components/logos.tsx",
           "type": "registry:component"
         }
       ]
@@ -7877,15 +7877,15 @@
       "description": "A simple logo cloud block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/logo-cloud-10/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-10/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-10/components/logos.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-10/components/logos.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-10/components/magicui/marquee.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-10/components/magicui/marquee.tsx",
           "type": "registry:component"
         }
       ]
@@ -7897,11 +7897,11 @@
       "description": "A simple logo cloud block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/logo-cloud-11/components/logo-cloud.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-11/components/logo-cloud.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/shared/logo-cloud-11/components/logos.tsx",
+          "path": "src/registry/blocks/base/logo-cloud-11/components/logos.tsx",
           "type": "registry:component"
         }
       ]
@@ -8075,7 +8075,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/stats-03/components/stats.tsx",
+          "path": "src/registry/blocks/base/stats-03/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8087,7 +8087,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/stats-04/components/stats.tsx",
+          "path": "src/registry/blocks/base/stats-04/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8099,7 +8099,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/stats-05/components/stats.tsx",
+          "path": "src/registry/blocks/base/stats-05/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8111,7 +8111,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/stats-06/components/stats.tsx",
+          "path": "src/registry/blocks/base/stats-06/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8123,7 +8123,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/stats-07/components/stats.tsx",
+          "path": "src/registry/blocks/base/stats-07/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8135,7 +8135,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/stats-08/components/stats.tsx",
+          "path": "src/registry/blocks/base/stats-08/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8159,7 +8159,7 @@
       "description": "A simple stats block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/stats-10/components/stats.tsx",
+          "path": "src/registry/blocks/base/stats-10/components/stats.tsx",
           "type": "registry:component"
         }
       ]
@@ -8171,7 +8171,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/team-06/components/team.tsx",
+          "path": "src/registry/blocks/base/team-06/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8183,7 +8183,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/team-07/components/team.tsx",
+          "path": "src/registry/blocks/base/team-07/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8195,7 +8195,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/team-08/components/team.tsx",
+          "path": "src/registry/blocks/base/team-08/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8207,7 +8207,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/team-09/components/team.tsx",
+          "path": "src/registry/blocks/base/team-09/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8231,7 +8231,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/team-11/components/team.tsx",
+          "path": "src/registry/blocks/base/team-11/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8243,7 +8243,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/team-12/components/team.tsx",
+          "path": "src/registry/blocks/base/team-12/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8255,7 +8255,7 @@
       "description": "A simple team block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/team-13/components/team.tsx",
+          "path": "src/registry/blocks/base/team-13/components/team.tsx",
           "type": "registry:component"
         }
       ]
@@ -8279,7 +8279,7 @@
       "description": "A simple testimonials block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/testimonials-06/components/testimonials.tsx",
+          "path": "src/registry/blocks/base/testimonials-06/components/testimonials.tsx",
           "type": "registry:component"
         }
       ]
@@ -8303,7 +8303,7 @@
       "description": "A simple testimonials block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/testimonials-08/components/testimonials.tsx",
+          "path": "src/registry/blocks/base/testimonials-08/components/testimonials.tsx",
           "type": "registry:component"
         }
       ]
@@ -8604,7 +8604,7 @@
       "description": "A simple integrations block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/integrations-04/components/integrations.tsx",
+          "path": "src/registry/blocks/base/integrations-04/components/integrations.tsx",
           "type": "registry:component"
         }
       ]
@@ -8616,7 +8616,7 @@
       "description": "A simple integrations block",
       "files": [
         {
-          "path": "src/registry/blocks/shared/integrations-05/components/integrations.tsx",
+          "path": "src/registry/blocks/base/integrations-05/components/integrations.tsx",
           "type": "registry:component"
         }
       ]

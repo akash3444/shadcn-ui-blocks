@@ -5,7 +5,7 @@ import registry from "../registry.json";
 import { blocks as blockCatalog } from "../src/registry/catalog/blocks";
 
 const root = process.cwd();
-const blocksDirectory = join(root, "src/registry/blocks");
+const blocksDirectory = join(root, "src/registry/blocks/base");
 
 const getSourceFiles = (directory: string): string[] => {
   const results: string[] = [];
@@ -27,25 +27,13 @@ describe("registry integrity", () => {
   });
 
   it("registers every block source directory", () => {
-    const expected = {
-      shared: new Set(
-        blockCatalog
-          .filter((block) => block.source === "shared")
-          .map((block) => block.name)
-      ),
-      base: new Set(
-        blockCatalog
-          .filter((block) => block.source === "base")
-          .map((block) => block.name)
-      ),
-    };
+    const actual = readdirSync(blocksDirectory).filter((name) =>
+      statSync(join(blocksDirectory, name)).isDirectory()
+    );
 
-    for (const source of ["shared", "base"] as const) {
-      const actual = readdirSync(join(blocksDirectory, source)).filter((name) =>
-        statSync(join(blocksDirectory, source, name)).isDirectory()
-      );
-      expect(new Set(actual)).toEqual(expected[source]);
-    }
+    expect(new Set(actual)).toEqual(
+      new Set(blockCatalog.map((block) => block.name))
+    );
   });
 
   it.each(
@@ -60,8 +48,7 @@ describe("registry integrity", () => {
     registry.items
       .filter((item) => item.type === "registry:block")
       .flatMap((block) => {
-        const source = block.files[0]?.path.split("/")[3];
-        const directory = join(blocksDirectory, source, block.name);
+        const directory = join(blocksDirectory, block.name);
         const registeredPaths = new Set(
           block.files.map((file) => join(root, file.path))
         );

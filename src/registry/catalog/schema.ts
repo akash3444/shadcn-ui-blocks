@@ -36,7 +36,6 @@ export const blockCatalogItemSchema = z
     registryDependencies: z.array(z.string().min(1)).optional(),
     files: z.array(registryFileSchema).min(1),
     categories: z.array(z.string().min(1)).min(1),
-    source: z.enum(["shared", "base"]),
     preview: z.string().min(1),
     previewFiles: z.array(z.string().min(1)).optional(),
     layout: z.enum(["navbar", "footer", "full-height"]).optional(),
@@ -95,7 +94,6 @@ export interface BlockCatalogEntry {
   registryDependencies?: readonly string[];
   files: readonly RegistryFileCatalogEntry[];
   categories: readonly string[];
-  source: "shared" | "base";
   preview: string;
   previewFiles?: readonly string[];
   layout?: "navbar" | "footer" | "full-height";
