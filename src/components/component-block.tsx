@@ -1,13 +1,13 @@
 import { Copy, Info } from "lucide-react";
 import dynamic from "next/dynamic";
 import type { FC, ReactNode } from "react";
+import { Frame, FramePanel } from "@/components/ui/frame";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { getFileContent } from "@/lib/file";
-import { cn } from "@/lib/utils";
 import { TooltipProvider as RegistryTooltipProvider } from "@/registry/ui/tooltip";
 import { CopyToClipboardButton } from "./copy-to-clipboard-button";
 import { CodeDialog } from "./customized/code-dialog";
@@ -47,13 +47,8 @@ const ComponentBlock: FC<BlockProps> = async ({
   );
 
   return (
-    <div
-      className={cn(
-        "dark:shadow/30 flex flex-col rounded-lg border bg-background shadow-xs/2",
-        className
-      )}
-    >
-      <div className="flex h-10 items-center justify-between border-border/50 border-b pr-3 pl-4 dark:border-border/80">
+    <Frame className={className}>
+      <div className="mb-1 flex h-8 items-center justify-between pr-0.5 pl-2.5">
         <div className="flex items-center gap-2">
           <span className="font-mono text-muted-foreground text-sm">
             {(index + 1).toString().padStart(2, "0")}.
@@ -99,12 +94,12 @@ const ComponentBlock: FC<BlockProps> = async ({
           />
         </div>
       </div>
-      <div className="flex min-h-32 w-full flex-1 items-center justify-center rounded px-4 py-5">
+      <FramePanel className="flex min-h-32 w-full flex-1 items-center justify-center px-4 py-5">
         <RegistryTooltipProvider>
           <DynamicComponent />
         </RegistryTooltipProvider>
-      </div>
-    </div>
+      </FramePanel>
+    </Frame>
   );
 };
 
