@@ -23,7 +23,7 @@ const BlocksPage = () => (
   <>
     <Navbar />
     <div className="relative">
-      <section className="-mt-24 px-6 pt-40 pb-16 sm:px-10 sm:pt-44 sm:pb-12">
+      <section className="-mt-24 px-6 pt-40 pb-16 sm:px-10 sm:pt-44 sm:pb-20">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center">
           <h1 className="max-w-[20ch] text-balance font-heading font-medium text-4xl leading-[1.1] tracking-tighter sm:text-5xl">
             {totalBlocks} blocks for whatever you're building
@@ -36,7 +36,7 @@ const BlocksPage = () => (
       </section>
     </div>
 
-    <div className="mb-8 py-12 sm:py-16">
+    <div className="mb-8 pb-12 sm:pb-16">
       <BlockCategoryGrid />
     </div>
 

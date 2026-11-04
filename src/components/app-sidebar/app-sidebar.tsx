@@ -21,8 +21,11 @@ export async function AppSidebar() {
   );
 
   return (
-    <Sidebar collapsible="icon">
-      <SidebarContent className="gap-0">
+    <Sidebar
+      className="sticky top-[calc(var(--sidebar-top)+var(--sidebar-gap))] bottom-auto h-[calc(100svh-var(--sidebar-top)-var(--sidebar-gap)*2)] overflow-hidden rounded-xl border"
+      collapsible="icon"
+    >
+      <SidebarContent className="gap-0 overflow-hidden">
         <SidebarSearchableContent countMap={countMap} />
       </SidebarContent>
     </Sidebar>

@@ -10,18 +10,20 @@ export default function RootLayout({
   return (
     <div className="flex min-h-svh flex-col">
       <Navbar />
-      <div className="flex flex-1">
-        <SidebarProvider
-          style={
-            { "--sidebar-top": "calc(3.5rem + 1px)" } as React.CSSProperties
-          }
-        >
-          <AppSidebar />
-          <main className="w-full">
-            <div className="w-full px-10 pt-6 pb-10">{children}</div>
-          </main>
-        </SidebarProvider>
-      </div>
+      <SidebarProvider
+        className="mx-auto min-h-0 max-w-(--breakpoint-2xl) flex-1 gap-6 px-6"
+        style={
+          {
+            "--sidebar-top": "calc(3.5rem + 1px)",
+            "--sidebar-gap": "1.5rem",
+            // Leaves room for the card border around the collapsed icon rail.
+            "--sidebar-width-icon": "calc(3rem + 2px)",
+          } as React.CSSProperties
+        }
+      >
+        <AppSidebar />
+        <main className="min-w-0 flex-1 py-6">{children}</main>
+      </SidebarProvider>
     </div>
   );
 }

@@ -71,8 +71,10 @@ const CustomizedComponentPage = async (props: {
 
   return (
     <div>
-      <MainHeading>{details.title}</MainHeading>
-      <DescriptionText className="mt-3">{details.description}</DescriptionText>
+      <MainHeading className="mt-2">{details.title}</MainHeading>
+      <DescriptionText className="mt-1.5">
+        {details.description}
+      </DescriptionText>
 
       <div
         className={cn(

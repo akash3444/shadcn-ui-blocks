@@ -20,7 +20,6 @@ import {
 import { groups } from "@/description/app-sidebar";
 import AppSidebarMenuButton from "./sidebar-menu-button";
 
-const MAC_PLATFORM_RE = /mac/i;
 const RESULT_SELECTOR = "[data-sidebar-result]";
 
 interface SidebarSearchableContentProps {
@@ -35,8 +34,9 @@ export function SidebarSearchableContent({
   const listRef = useRef<HTMLDivElement>(null);
   const query = search.trim().toLowerCase();
 
-  useHotkeys("mod+k", () => inputRef.current?.focus(), {
+  useHotkeys("/", () => inputRef.current?.focus(), {
     preventDefault: true,
+    useKey: true,
   });
   useHotkeys(
     "escape",
@@ -89,13 +89,9 @@ export function SidebarSearchableContent({
         .filter((g) => g.items.length > 0)
     : groups;
 
-  const isMac =
-    typeof navigator !== "undefined" &&
-    MAC_PLATFORM_RE.test(navigator.platform);
-
   return (
     <>
-      <div className="sticky top-0 z-10 bg-sidebar px-2 py-3 group-data-[collapsible=icon]:hidden">
+      <div className="shrink-0 px-2 pt-2 group-data-[collapsible=icon]:hidden">
         <InputGroup className="h-8 bg-background">
           <InputGroupAddon align="inline-start">
             <SearchIcon />
@@ -112,20 +108,24 @@ export function SidebarSearchableContent({
               align="inline-end"
               className="transition-opacity group-focus-within/input-group:opacity-0"
             >
-              <kbd className="flex items-center gap-0.5 border bg-muted px-1 font-mono text-[10px] text-muted-foreground/70">
-                <span>{isMac ? "⌘" : "Ctrl"}</span>
-                <span>K</span>
+              <kbd className="border bg-muted px-1 font-mono text-[10px] text-muted-foreground/70">
+                /
               </kbd>
             </InputGroupAddon>
           )}
         </InputGroup>
       </div>
 
-      <div ref={listRef}>
+      {/* Remounts per query: the scroll fade sticks if a scrolled list shrinks. */}
+      <div
+        className="no-scrollbar scroll-fade-y min-h-0 flex-1 overflow-y-auto overflow-x-hidden"
+        key={query}
+        ref={listRef}
+      >
         {filteredGroups.map(({ label, items }) => (
           <SidebarGroup key={label}>
             <SidebarGroupContent>
-              <SidebarMenu>
+              <SidebarMenu className="gap-0.5">
                 {items.map((item) => {
                   const fileCount = item.blockName
                     ? (countMap[item.blockName] ?? null)
