@@ -14,7 +14,6 @@ import { getFileTree } from "@/lib/file-tree";
 import { getRegistrySource } from "@/lib/registry-source";
 import { codeToHtml } from "@/lib/shiki";
 import type { BlockScreenSize, BlockScreenSizeUnion } from "@/types/blocks";
-import type { Theme } from "@/types/theme";
 
 const BlockContext = createContext<{
   codeHtml: string | null;
@@ -26,10 +25,6 @@ const BlockContext = createContext<{
   selectFile: (file: string) => void;
   setScreenSize: (screenSize: BlockScreenSize) => void;
   block: (typeof blocks)[number];
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
-  colorTheme: string;
-  setColorTheme: (id: string) => void;
   iframeRef: React.RefObject<HTMLIFrameElement | null>;
   iframeSrc: string;
   handleIframeLoad: () => void;
@@ -86,14 +81,7 @@ export const BlockProvider = ({
   const [codeHtml, setCodeHtml] = useState<string | null>(null);
   const [isLoadingCode, setIsLoadingCode] = useState(false);
 
-  const {
-    theme,
-    setTheme,
-    colorTheme,
-    setColorTheme,
-    iframeRef,
-    handleIframeLoad,
-  } = useBlockTheme();
+  const { iframeRef, handleIframeLoad } = useBlockTheme();
 
   const iframeSrc = `/blocks/${block.name}/preview`;
 
@@ -159,10 +147,6 @@ export const BlockProvider = ({
         setScreenSize,
         selectFile: setActiveFile,
         block,
-        theme,
-        setTheme,
-        colorTheme,
-        setColorTheme,
         iframeRef,
         iframeSrc,
         handleIframeLoad,
