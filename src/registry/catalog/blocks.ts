@@ -14,7 +14,7 @@ export const blocks = [
       },
     ],
     categories: ["blog"],
-    source: "variants",
+    source: "base",
     preview: "components/blog",
   },
   {
@@ -30,7 +30,7 @@ export const blocks = [
       },
     ],
     categories: ["blog"],
-    source: "variants",
+    source: "base",
     preview: "components/blog",
   },
   {
@@ -46,7 +46,7 @@ export const blocks = [
       },
     ],
     categories: ["blog"],
-    source: "variants",
+    source: "base",
     preview: "components/blog",
   },
   {
@@ -84,7 +84,7 @@ export const blocks = [
       },
     ],
     categories: ["contact"],
-    source: "variants",
+    source: "base",
     preview: "components/contact",
   },
   {
@@ -114,14 +114,14 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "variants",
+    source: "base",
     preview: "components/faq",
   },
   {
     name: "faq-02",
     title: "FAQ 02",
     description: "A simple FAQ component",
-    dependencies: ["lucide-react", "radix-ui"],
+    dependencies: ["lucide-react", "@base-ui/react"],
     registryDependencies: ["accordion"],
     files: [
       {
@@ -130,7 +130,7 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "variants",
+    source: "base",
     preview: "components/faq",
   },
   {
@@ -167,7 +167,7 @@ export const blocks = [
     name: "faq-05",
     title: "FAQ 05",
     description: "A simple FAQ component",
-    dependencies: ["lucide-react"],
+    dependencies: ["lucide-react", "@base-ui/react"],
     files: [
       {
         path: "components/faq.tsx",
@@ -175,14 +175,14 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "variants",
+    source: "base",
     preview: "components/faq",
   },
   {
     name: "faq-06",
     title: "FAQ 06",
     description: "A simple FAQ component",
-    dependencies: ["lucide-react", "radix-ui"],
+    dependencies: ["lucide-react", "@base-ui/react"],
     registryDependencies: ["accordion"],
     files: [
       {
@@ -191,7 +191,7 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "variants",
+    source: "base",
     preview: "components/faq",
   },
   {
@@ -236,7 +236,7 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "variants",
+    source: "base",
     preview: "components/features",
   },
   {
@@ -252,7 +252,7 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "variants",
+    source: "base",
     preview: "components/features",
   },
   {
@@ -268,7 +268,7 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "variants",
+    source: "base",
     preview: "components/features",
   },
   {
@@ -314,7 +314,7 @@ export const blocks = [
       },
     ],
     categories: ["footer"],
-    source: "variants",
+    source: "base",
     preview: "components/footer",
     layout: "footer",
   },
@@ -331,7 +331,7 @@ export const blocks = [
       },
     ],
     categories: ["footer"],
-    source: "variants",
+    source: "base",
     preview: "components/footer",
     layout: "footer",
   },
@@ -348,7 +348,7 @@ export const blocks = [
       },
     ],
     categories: ["footer"],
-    source: "variants",
+    source: "base",
     preview: "components/footer",
     layout: "footer",
   },
@@ -365,7 +365,7 @@ export const blocks = [
       },
     ],
     categories: ["footer"],
-    source: "variants",
+    source: "base",
     preview: "components/footer",
     layout: "footer",
   },
@@ -382,7 +382,7 @@ export const blocks = [
       },
     ],
     categories: ["footer"],
-    source: "variants",
+    source: "base",
     preview: "components/footer",
     layout: "footer",
   },
@@ -399,14 +399,14 @@ export const blocks = [
       },
     ],
     categories: ["hero"],
-    source: "variants",
+    source: "base",
     preview: "components/hero",
   },
   {
     name: "hero-02",
     title: "Hero 02",
     description: "A simple hero block",
-    dependencies: ["lucide-react", "motion", "@radix-ui/react-visually-hidden"],
+    dependencies: ["lucide-react", "motion"],
     registryDependencies: ["badge", "button", "navigation-menu", "sheet"],
     files: [
       {
@@ -435,7 +435,7 @@ export const blocks = [
       },
     ],
     categories: ["hero"],
-    source: "variants",
+    source: "base",
     preview: "components/hero",
   },
   {
@@ -451,7 +451,7 @@ export const blocks = [
       },
     ],
     categories: ["hero"],
-    source: "variants",
+    source: "base",
     preview: "components/hero",
   },
   {
@@ -484,7 +484,7 @@ export const blocks = [
       },
     ],
     categories: ["hero"],
-    source: "variants",
+    source: "base",
     preview: "components/hero",
   },
   {
@@ -508,7 +508,7 @@ export const blocks = [
       },
     ],
     categories: ["hero"],
-    source: "variants",
+    source: "base",
     preview: "components/hero",
   },
   {
@@ -528,7 +528,7 @@ export const blocks = [
       },
     ],
     categories: ["login", "authentication"],
-    source: "variants",
+    source: "base",
     preview: "components/login",
   },
   {
@@ -548,7 +548,7 @@ export const blocks = [
       },
     ],
     categories: ["login", "authentication"],
-    source: "variants",
+    source: "base",
     preview: "components/login",
   },
   {
@@ -643,7 +643,7 @@ export const blocks = [
       },
     ],
     categories: ["logoCloud"],
-    source: "variants",
+    source: "base",
     preview: "components/logo-cloud",
   },
   {
@@ -666,14 +666,14 @@ export const blocks = [
       },
     ],
     categories: ["logoCloud"],
-    source: "variants",
+    source: "base",
     preview: "components/logo-cloud",
   },
   {
     name: "navbar-01",
     title: "Navbar 01",
     description: "A simple navbar block",
-    dependencies: ["lucide-react", "@radix-ui/react-visually-hidden"],
+    dependencies: ["lucide-react"],
     registryDependencies: ["button", "navigation-menu", "sheet"],
     files: [
       {
@@ -694,7 +694,7 @@ export const blocks = [
       },
     ],
     categories: ["navbar"],
-    source: "variants",
+    source: "base",
     preview: "components/navbar",
     layout: "navbar",
   },
@@ -702,7 +702,7 @@ export const blocks = [
     name: "navbar-02",
     title: "Navbar 02",
     description: "A simple navbar block",
-    dependencies: ["lucide-react", "@radix-ui/react-visually-hidden"],
+    dependencies: ["lucide-react"],
     registryDependencies: ["button", "navigation-menu", "sheet"],
     files: [
       {
@@ -723,7 +723,7 @@ export const blocks = [
       },
     ],
     categories: ["navbar"],
-    source: "variants",
+    source: "base",
     preview: "components/navbar",
     layout: "navbar",
   },
@@ -731,7 +731,7 @@ export const blocks = [
     name: "navbar-03",
     title: "Navbar 03",
     description: "A simple navbar block",
-    dependencies: ["lucide-react", "@radix-ui/react-visually-hidden"],
+    dependencies: ["lucide-react"],
     registryDependencies: ["button", "navigation-menu", "sheet"],
     files: [
       {
@@ -757,7 +757,7 @@ export const blocks = [
       },
     ],
     categories: ["navbar"],
-    source: "variants",
+    source: "base",
     preview: "components/navbar",
     layout: "navbar",
   },
@@ -765,7 +765,7 @@ export const blocks = [
     name: "navbar-04",
     title: "Navbar 04",
     description: "A simple navbar block",
-    dependencies: ["lucide-react", "@radix-ui/react-visually-hidden"],
+    dependencies: ["lucide-react"],
     registryDependencies: ["button", "navigation-menu", "sheet"],
     files: [
       {
@@ -786,7 +786,7 @@ export const blocks = [
       },
     ],
     categories: ["navbar"],
-    source: "variants",
+    source: "base",
     preview: "components/navbar",
     layout: "navbar",
   },
@@ -807,7 +807,7 @@ export const blocks = [
       },
     ],
     categories: ["navbar"],
-    source: "variants",
+    source: "base",
     preview: "components/navbar",
     layout: "navbar",
   },
@@ -824,7 +824,7 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "variants",
+    source: "base",
     preview: "components/pricing",
   },
   {
@@ -840,7 +840,7 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "variants",
+    source: "base",
     preview: "components/pricing",
   },
   {
@@ -856,7 +856,7 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "variants",
+    source: "base",
     preview: "components/pricing",
   },
   {
@@ -872,7 +872,7 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "variants",
+    source: "base",
     preview: "components/pricing",
   },
   {
@@ -892,7 +892,7 @@ export const blocks = [
       },
     ],
     categories: ["signup", "authentication"],
-    source: "variants",
+    source: "base",
     preview: "components/signup",
   },
   {
@@ -912,7 +912,7 @@ export const blocks = [
       },
     ],
     categories: ["signup", "authentication"],
-    source: "variants",
+    source: "base",
     preview: "components/signup",
   },
   {
@@ -984,7 +984,7 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "variants",
+    source: "base",
     preview: "components/team",
   },
   {
@@ -1000,7 +1000,7 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "variants",
+    source: "base",
     preview: "components/team",
   },
   {
@@ -1016,7 +1016,7 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "variants",
+    source: "base",
     preview: "components/team",
   },
   {
@@ -1031,7 +1031,7 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "variants",
+    source: "base",
     preview: "components/testimonials",
   },
   {
@@ -1050,7 +1050,7 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "variants",
+    source: "base",
     preview: "components/testimonials",
   },
   {
@@ -1066,7 +1066,7 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "variants",
+    source: "base",
     preview: "components/testimonials",
   },
   {
@@ -1082,7 +1082,7 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "variants",
+    source: "base",
     preview: "components/testimonials",
   },
   {
@@ -1098,7 +1098,7 @@ export const blocks = [
       },
     ],
     categories: ["timeline"],
-    source: "variants",
+    source: "base",
     preview: "components/timeline",
   },
   {
@@ -1114,7 +1114,7 @@ export const blocks = [
       },
     ],
     categories: ["timeline"],
-    source: "variants",
+    source: "base",
     preview: "components/timeline",
   },
   {
@@ -1130,7 +1130,7 @@ export const blocks = [
       },
     ],
     categories: ["timeline"],
-    source: "variants",
+    source: "base",
     preview: "components/timeline",
   },
   {
@@ -1204,7 +1204,7 @@ export const blocks = [
       },
     ],
     categories: ["banner"],
-    source: "variants",
+    source: "base",
     preview: "components/banner",
   },
   {
@@ -1220,7 +1220,7 @@ export const blocks = [
       },
     ],
     categories: ["banner"],
-    source: "variants",
+    source: "base",
     preview: "components/banner",
   },
   {
@@ -1236,7 +1236,7 @@ export const blocks = [
       },
     ],
     categories: ["banner"],
-    source: "variants",
+    source: "base",
     preview: "components/banner",
   },
   {
@@ -1251,7 +1251,7 @@ export const blocks = [
       },
     ],
     categories: ["cta"],
-    source: "variants",
+    source: "base",
     preview: "components/cta",
   },
   {
@@ -1267,7 +1267,7 @@ export const blocks = [
       },
     ],
     categories: ["cta"],
-    source: "variants",
+    source: "base",
     preview: "components/cta",
   },
   {
@@ -1283,7 +1283,7 @@ export const blocks = [
       },
     ],
     categories: ["cta"],
-    source: "variants",
+    source: "base",
     preview: "components/cta",
   },
   {
@@ -1299,7 +1299,7 @@ export const blocks = [
       },
     ],
     categories: ["cta"],
-    source: "variants",
+    source: "base",
     preview: "components/cta",
   },
   {
@@ -1315,7 +1315,7 @@ export const blocks = [
       },
     ],
     categories: ["cta"],
-    source: "variants",
+    source: "base",
     preview: "components/cta",
   },
   {
@@ -1330,7 +1330,7 @@ export const blocks = [
       },
     ],
     categories: ["cta"],
-    source: "variants",
+    source: "base",
     preview: "components/cta",
   },
   {
@@ -1345,7 +1345,7 @@ export const blocks = [
       },
     ],
     categories: ["carousel"],
-    source: "variants",
+    source: "base",
     preview: "components/carousel",
   },
   {
@@ -1360,7 +1360,7 @@ export const blocks = [
       },
     ],
     categories: ["carousel"],
-    source: "variants",
+    source: "base",
     preview: "components/carousel",
   },
   {
@@ -1374,7 +1374,7 @@ export const blocks = [
       },
     ],
     categories: ["changelog"],
-    source: "variants",
+    source: "base",
     preview: "components/changelog",
   },
   {
@@ -1388,7 +1388,7 @@ export const blocks = [
       },
     ],
     categories: ["changelog"],
-    source: "variants",
+    source: "base",
     preview: "components/changelog",
   },
   {
@@ -1402,7 +1402,7 @@ export const blocks = [
       },
     ],
     categories: ["changelog"],
-    source: "variants",
+    source: "base",
     preview: "components/changelog",
   },
   {
@@ -1440,7 +1440,7 @@ export const blocks = [
       },
     ],
     categories: ["codeBlock"],
-    source: "variants",
+    source: "base",
     preview: "components/code-block",
   },
   {
@@ -1456,7 +1456,7 @@ export const blocks = [
       },
     ],
     categories: ["codeBlock"],
-    source: "variants",
+    source: "base",
     preview: "components/code-block",
   },
   {
@@ -1472,7 +1472,7 @@ export const blocks = [
       },
     ],
     categories: ["emptyState"],
-    source: "variants",
+    source: "base",
     preview: "components/empty-state",
   },
   {
@@ -1488,7 +1488,7 @@ export const blocks = [
       },
     ],
     categories: ["emptyState"],
-    source: "variants",
+    source: "base",
     preview: "components/empty-state",
   },
   {
@@ -1504,7 +1504,7 @@ export const blocks = [
       },
     ],
     categories: ["emptyState"],
-    source: "variants",
+    source: "base",
     preview: "components/empty-state",
   },
   {
@@ -1524,7 +1524,7 @@ export const blocks = [
       },
     ],
     categories: ["emptyState"],
-    source: "variants",
+    source: "base",
     preview: "components/empty-state",
   },
   {
@@ -1545,7 +1545,7 @@ export const blocks = [
       },
     ],
     categories: ["inviteMember"],
-    source: "variants",
+    source: "base",
     preview: "components/invite-member",
     layout: "full-height",
   },
@@ -1568,7 +1568,7 @@ export const blocks = [
       },
     ],
     categories: ["inviteMember"],
-    source: "variants",
+    source: "base",
     preview: "components/invite-member",
     layout: "full-height",
   },
@@ -1584,7 +1584,7 @@ export const blocks = [
       },
     ],
     categories: ["keyboardShortcuts"],
-    source: "variants",
+    source: "base",
     preview: "components/keyboard-shortcuts",
   },
   {
@@ -1600,7 +1600,7 @@ export const blocks = [
       },
     ],
     categories: ["keyboardShortcuts"],
-    source: "variants",
+    source: "base",
     preview: "components/keyboard-shortcuts",
   },
   {
@@ -1615,7 +1615,7 @@ export const blocks = [
       },
     ],
     categories: ["keyboardShortcuts"],
-    source: "variants",
+    source: "base",
     preview: "components/keyboard-shortcuts",
   },
   {
@@ -1630,7 +1630,7 @@ export const blocks = [
       },
     ],
     categories: ["keyboardShortcuts"],
-    source: "variants",
+    source: "base",
     preview: "components/keyboard-shortcuts",
   },
   {
@@ -1646,7 +1646,7 @@ export const blocks = [
       },
     ],
     categories: ["members"],
-    source: "variants",
+    source: "base",
     preview: "components/members",
   },
   {
@@ -1662,7 +1662,7 @@ export const blocks = [
       },
     ],
     categories: ["members"],
-    source: "variants",
+    source: "base",
     preview: "components/members",
   },
   {
@@ -1678,7 +1678,7 @@ export const blocks = [
       },
     ],
     categories: ["members"],
-    source: "variants",
+    source: "base",
     preview: "components/members",
   },
   {
@@ -1694,7 +1694,7 @@ export const blocks = [
       },
     ],
     categories: ["orderConfirmation"],
-    source: "variants",
+    source: "base",
     preview: "components/order-confirmation",
   },
   {
@@ -1710,7 +1710,7 @@ export const blocks = [
       },
     ],
     categories: ["orderConfirmation"],
-    source: "variants",
+    source: "base",
     preview: "components/order-confirmation",
   },
   {
@@ -1726,7 +1726,7 @@ export const blocks = [
       },
     ],
     categories: ["profile"],
-    source: "variants",
+    source: "base",
     preview: "components/profile",
   },
   {
@@ -1742,7 +1742,7 @@ export const blocks = [
       },
     ],
     categories: ["profile"],
-    source: "variants",
+    source: "base",
     preview: "components/profile",
   },
   {
@@ -1764,7 +1764,7 @@ export const blocks = [
       },
     ],
     categories: ["profile"],
-    source: "variants",
+    source: "base",
     preview: "components/profile",
   },
   {
@@ -1786,7 +1786,7 @@ export const blocks = [
       },
     ],
     categories: ["profile"],
-    source: "variants",
+    source: "base",
     preview: "components/profile",
   },
   {
@@ -1800,7 +1800,7 @@ export const blocks = [
       },
     ],
     categories: ["setupGuide"],
-    source: "variants",
+    source: "base",
     preview: "components/setup-guide",
   },
   {
@@ -1814,7 +1814,7 @@ export const blocks = [
       },
     ],
     categories: ["setupGuide"],
-    source: "variants",
+    source: "base",
     preview: "components/setup-guide",
   },
   {
@@ -1828,7 +1828,7 @@ export const blocks = [
       },
     ],
     categories: ["setupGuide"],
-    source: "variants",
+    source: "base",
     preview: "components/setup-guide",
   },
   {
@@ -1842,7 +1842,7 @@ export const blocks = [
       },
     ],
     categories: ["verification"],
-    source: "variants",
+    source: "base",
     preview: "components/verification",
   },
   {
@@ -1868,7 +1868,7 @@ export const blocks = [
       },
     ],
     categories: ["hero"],
-    source: "variants",
+    source: "base",
     preview: "components/hero",
     previewFiles: [
       "components/hero.tsx",
@@ -1892,7 +1892,7 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "variants",
+    source: "base",
     preview: "components/features",
   },
   {
@@ -1906,7 +1906,7 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "variants",
+    source: "base",
     preview: "components/features",
   },
   {
@@ -1920,7 +1920,7 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "variants",
+    source: "base",
     preview: "components/features",
   },
   {
@@ -1948,7 +1948,7 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "variants",
+    source: "base",
     preview: "components/features",
   },
   {
@@ -1978,7 +1978,7 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "variants",
+    source: "base",
     preview: "components/features",
   },
   {
@@ -1994,7 +1994,7 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "variants",
+    source: "base",
     preview: "components/features",
   },
   {
@@ -2010,7 +2010,7 @@ export const blocks = [
       },
     ],
     categories: ["features"],
-    source: "variants",
+    source: "base",
     preview: "components/features",
   },
   {
@@ -2024,7 +2024,7 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "variants",
+    source: "base",
     preview: "components/faq",
   },
   {
@@ -2038,7 +2038,7 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "variants",
+    source: "base",
     preview: "components/faq",
   },
   {
@@ -2083,7 +2083,7 @@ export const blocks = [
       },
     ],
     categories: ["faq"],
-    source: "variants",
+    source: "base",
     preview: "components/faq",
   },
   {
@@ -2135,7 +2135,7 @@ export const blocks = [
       },
     ],
     categories: ["login", "authentication"],
-    source: "variants",
+    source: "base",
     preview: "components/login",
   },
   {
@@ -2168,7 +2168,7 @@ export const blocks = [
       },
     ],
     categories: ["login", "authentication"],
-    source: "variants",
+    source: "base",
     preview: "components/login",
   },
   {
@@ -2292,7 +2292,7 @@ export const blocks = [
       },
     ],
     categories: ["logoCloud"],
-    source: "variants",
+    source: "base",
     preview: "components/logo-cloud",
   },
   {
@@ -2307,7 +2307,7 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "variants",
+    source: "base",
     preview: "components/pricing",
   },
   {
@@ -2321,7 +2321,7 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "variants",
+    source: "base",
     preview: "components/pricing",
   },
   {
@@ -2339,7 +2339,7 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "variants",
+    source: "base",
     preview: "components/pricing",
   },
   {
@@ -2355,7 +2355,7 @@ export const blocks = [
       },
     ],
     categories: ["pricing"],
-    source: "variants",
+    source: "base",
     preview: "components/pricing",
   },
   {
@@ -2392,7 +2392,7 @@ export const blocks = [
       },
     ],
     categories: ["signup", "authentication"],
-    source: "variants",
+    source: "base",
     preview: "components/signup",
   },
   {
@@ -2425,7 +2425,7 @@ export const blocks = [
       },
     ],
     categories: ["signup", "authentication"],
-    source: "variants",
+    source: "base",
     preview: "components/signup",
   },
   {
@@ -2523,7 +2523,7 @@ export const blocks = [
       },
     ],
     categories: ["stats"],
-    source: "variants",
+    source: "base",
     preview: "components/stats",
   },
   {
@@ -2607,7 +2607,7 @@ export const blocks = [
       },
     ],
     categories: ["team"],
-    source: "variants",
+    source: "base",
     preview: "components/team",
   },
   {
@@ -2663,7 +2663,7 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "variants",
+    source: "base",
     preview: "components/testimonials",
   },
   {
@@ -2691,7 +2691,7 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "variants",
+    source: "base",
     preview: "components/testimonials",
   },
   {
@@ -2723,7 +2723,7 @@ export const blocks = [
       },
     ],
     categories: ["testimonials"],
-    source: "variants",
+    source: "base",
     preview: "components/testimonials",
   },
   {
@@ -2737,7 +2737,7 @@ export const blocks = [
       },
     ],
     categories: ["blog"],
-    source: "variants",
+    source: "base",
     preview: "components/blog",
   },
   {
@@ -2751,7 +2751,7 @@ export const blocks = [
       },
     ],
     categories: ["blog"],
-    source: "variants",
+    source: "base",
     preview: "components/blog",
   },
   {
@@ -2766,7 +2766,7 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "variants",
+    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2783,7 +2783,7 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "variants",
+    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2799,7 +2799,7 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "variants",
+    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2815,7 +2815,7 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "variants",
+    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2831,7 +2831,7 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "variants",
+    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2847,7 +2847,7 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "variants",
+    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2941,7 +2941,7 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "variants",
+    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2956,7 +2956,7 @@ export const blocks = [
       },
     ],
     categories: ["notFound"],
-    source: "variants",
+    source: "base",
     preview: "components/not-found",
   },
   {
@@ -2970,7 +2970,7 @@ export const blocks = [
       },
     ],
     categories: ["integrations"],
-    source: "variants",
+    source: "base",
     preview: "components/integrations",
   },
   {
@@ -2984,7 +2984,7 @@ export const blocks = [
       },
     ],
     categories: ["integrations"],
-    source: "variants",
+    source: "base",
     preview: "components/integrations",
   },
   {
@@ -2998,7 +2998,7 @@ export const blocks = [
       },
     ],
     categories: ["integrations"],
-    source: "variants",
+    source: "base",
     preview: "components/integrations",
   },
   {

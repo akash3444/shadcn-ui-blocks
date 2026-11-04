@@ -2,16 +2,8 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import registry from "../registry.json";
-import baseRegistry from "../registry-base.json";
-import radixRegistry from "../registry-radix.json";
 
 const root = process.cwd();
-const publishedRegistries = [
-  ["default", "public/r", registry],
-  ["base", "public/r/base", baseRegistry],
-  ["radix", "public/r/radix", radixRegistry],
-] as const;
-
 interface PublishedFile {
   path: string;
   content: string;
@@ -26,11 +18,8 @@ interface PublishedItem {
   registryDependencies?: string[];
 }
 
-const readPublished = (
-  directory: string,
-  name: string
-): PublishedItem | null => {
-  const path = join(root, directory, `${name}.json`);
+const readPublished = (name: string): PublishedItem | null => {
+  const path = join(root, "public/r", `${name}.json`);
   if (!existsSync(path)) {
     return null;
   }
@@ -39,13 +28,9 @@ const readPublished = (
 
 describe("public registry parity", () => {
   it.each(
-    publishedRegistries.flatMap(([variant, directory, sourceRegistry]) =>
-      sourceRegistry.items.map(
-        (item) => [variant, directory, item.name, item] as const
-      )
-    )
-  )("publishes current metadata for %s:%s", (_variant, directory, name, item) => {
-    const published = readPublished(directory, name);
+    registry.items.map((item) => [item.name, item] as const)
+  )("publishes current metadata for %s", (name, item) => {
+    const published = readPublished(name);
     expect(published).not.toBeNull();
     if (!published) {
       return;
@@ -67,15 +52,11 @@ describe("public registry parity", () => {
   });
 
   it.each(
-    publishedRegistries.flatMap(([variant, directory, sourceRegistry]) =>
-      sourceRegistry.items.flatMap((item) =>
-        item.files.map(
-          (file) => [variant, directory, item.name, file.path] as const
-        )
-      )
+    registry.items.flatMap((item) =>
+      item.files.map((file) => [item.name, file.path] as const)
     )
-  )("publishes current source for %s:%s:%s", (_variant, directory, itemName, filePath) => {
-    const published = readPublished(directory, itemName);
+  )("publishes current source for %s:%s", (itemName, filePath) => {
+    const published = readPublished(itemName);
     const publishedFile = published?.files.find(
       (file) => file.path === filePath
     );

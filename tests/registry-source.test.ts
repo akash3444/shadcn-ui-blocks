@@ -6,7 +6,7 @@ import { findRegistrySource } from "../src/lib/registry-source";
 const registryItem = {
   files: [
     {
-      path: "src/registry/blocks/radix/hero-01/components/hero.tsx",
+      path: "src/registry/blocks/base/hero-01/components/hero.tsx",
       content: "export default function Hero() {}",
     },
   ],
@@ -16,17 +16,12 @@ describe("findRegistrySource", () => {
   it.each([
     [
       "Base block",
-      "public/r/base/hero-01.json",
+      "public/r/hero-01.json",
       "src/registry/blocks/base/hero-01/components/hero.tsx",
     ],
     [
-      "Radix block",
-      "public/r/radix/hero-01.json",
-      "src/registry/blocks/radix/hero-01/components/hero.tsx",
-    ],
-    [
       "shared block",
-      "public/r/radix/testimonials-06.json",
+      "public/r/testimonials-06.json",
       "src/registry/blocks/shared/testimonials-06/components/testimonials.tsx",
     ],
     [
@@ -46,14 +41,14 @@ describe("findRegistrySource", () => {
     expect(
       findRegistrySource(
         registryItem,
-        "src/registry/blocks/radix/hero-01/components/hero.tsx"
+        "src/registry/blocks/base/hero-01/components/hero.tsx"
       )
     ).toBe("export default function Hero() {}");
   });
 
   it.each([
-    "src/registry/blocks/base/hero-01/components/hero.tsx",
-    "src/registry/blocks/radix/hero-01/components/unknown.tsx",
+    "src/registry/blocks/shared/hero-01/components/hero.tsx",
+    "src/registry/blocks/base/hero-01/components/unknown.tsx",
     "../../.env",
     "/etc/passwd",
   ])("rejects unregistered path %s", (filePath) => {

@@ -13,6 +13,13 @@ const nextConfig = {
         ],
         permanent: true,
       },
+      // Blocks ship as a single Base UI registry at /r/*. Keep previously
+      // published install URLs resolving.
+      {
+        source: "/r/:primitive(base|radix)/:path*",
+        destination: "/r/:path*",
+        permanent: true,
+      },
     ];
   },
   images: {

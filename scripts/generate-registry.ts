@@ -33,7 +33,7 @@ const catalogCategories: readonly CategoryCatalogEntry[] = categories;
 const catalogComponents: readonly ComponentCatalogEntry[] = components;
 const catalogOtherItems: readonly RegistryItemCatalogEntry[] = otherItems;
 
-type Primitive = "base" | "radix";
+type BlockSource = BlockCatalogEntry["source"];
 
 const fail = (message: string): never => {
   throw new Error(message);
@@ -138,31 +138,27 @@ const validateBlockMetadata = (
 
 const validateBlockSourceFiles = (
   block: BlockCatalogEntry,
-  expectedDirectories: Record<"shared" | Primitive, Set<string>>
+  expectedDirectories: Record<BlockSource, Set<string>>
 ) => {
-  const sources: readonly ("shared" | Primitive)[] =
-    block.source === "shared" ? ["shared"] : ["base", "radix"];
-  for (const source of sources) {
-    expectedDirectories[source].add(block.name);
-    const blockDirectory = join(
-      root,
-      "src/registry/blocks",
-      source,
-      block.name
-    );
-    const registeredFiles = new Set(
-      block.files.map((file) => join(blockDirectory, file.path))
-    );
-    for (const file of block.files) {
-      const path = join(blockDirectory, file.path);
-      if (!existsSync(path)) {
-        fail(`Missing source file: ${path.replace(`${root}/`, "")}`);
-      }
+  expectedDirectories[block.source].add(block.name);
+  const blockDirectory = join(
+    root,
+    "src/registry/blocks",
+    block.source,
+    block.name
+  );
+  const registeredFiles = new Set(
+    block.files.map((file) => join(blockDirectory, file.path))
+  );
+  for (const file of block.files) {
+    const path = join(blockDirectory, file.path);
+    if (!existsSync(path)) {
+      fail(`Missing source file: ${path.replace(`${root}/`, "")}`);
     }
-    for (const path of listSourceFiles(blockDirectory)) {
-      if (!registeredFiles.has(path)) {
-        fail(`Unregistered block source file: ${path.replace(`${root}/`, "")}`);
-      }
+  }
+  for (const path of listSourceFiles(blockDirectory)) {
+    if (!registeredFiles.has(path)) {
+      fail(`Unregistered block source file: ${path.replace(`${root}/`, "")}`);
     }
   }
 };
@@ -174,7 +170,6 @@ const validateBlockSources = () => {
   const expectedDirectories = {
     shared: new Set<string>(),
     base: new Set<string>(),
-    radix: new Set<string>(),
   };
   for (const block of catalogBlocks) {
     validateBlockMetadata(block, categoryNames);
@@ -184,9 +179,9 @@ const validateBlockSources = () => {
 };
 
 const validateBlockDirectories = (
-  expectedBlockDirectories: Record<"shared" | Primitive, Set<string>>
+  expectedBlockDirectories: Record<BlockSource, Set<string>>
 ) => {
-  for (const source of ["shared", "base", "radix"] as const) {
+  for (const source of ["shared", "base"] as const) {
     const directory = join(root, "src/registry/blocks", source);
     const actual = new Set(listDirectories(directory));
     const expected = expectedBlockDirectories[source];
@@ -269,17 +264,14 @@ const validateCatalog = () => {
 };
 
 const buildBlockFiles = (
-  block: BlockCatalogEntry,
-  primitive: Primitive
-): RegistryFileCatalogEntry[] => {
-  const source = block.source === "shared" ? "shared" : primitive;
-  return block.files.map((file) => ({
+  block: BlockCatalogEntry
+): RegistryFileCatalogEntry[] =>
+  block.files.map((file) => ({
     ...file,
-    path: `src/registry/blocks/${source}/${block.name}/${file.path}`,
+    path: `src/registry/blocks/${block.source}/${block.name}/${file.path}`,
   }));
-};
 
-const buildBlockItem = (block: BlockCatalogEntry, primitive: Primitive) => {
+const buildBlockItem = (block: BlockCatalogEntry) => {
   const {
     name,
     title,
@@ -304,7 +296,7 @@ const buildBlockItem = (block: BlockCatalogEntry, primitive: Primitive) => {
     ...(registryDependencies
       ? { registryDependencies: [...registryDependencies] }
       : {}),
-    files: buildBlockFiles(block, primitive),
+    files: buildBlockFiles(block),
     ...extra,
   };
 };
@@ -314,7 +306,7 @@ const buildComponentItem = (item: ComponentCatalogEntry) => {
   return registryItem;
 };
 
-const buildRegistry = (primitive: Primitive) => {
+const buildRegistry = () => {
   const uiItems = catalogOtherItems.filter(
     (item) => item.type === "registry:ui"
   );
@@ -325,7 +317,7 @@ const buildRegistry = (primitive: Primitive) => {
     ...uiItems,
     ...catalogComponents.map(buildComponentItem),
     ...remainingItems,
-    ...catalogBlocks.map((block) => buildBlockItem(block, primitive)),
+    ...catalogBlocks.map(buildBlockItem),
   ];
   for (const item of items) {
     registryItemSchema.parse(item);
@@ -370,29 +362,12 @@ const renderPreviewBlock = (block: BlockCatalogEntry) => {
     `    name: ${JSON.stringify(block.name)},`,
     `    title: ${JSON.stringify(block.title)},`,
     `    description: ${JSON.stringify(block.description)},`,
+    `    source: ${JSON.stringify(block.source)},`,
+    `    component: React.lazy(() => import(${JSON.stringify(`@/registry/blocks/${block.source}/${block.name}/${block.preview}`)})),`,
+    `    files: ${renderFiles(previewFiles)},`,
+    `    categories: [${categoryReferences}],`,
   ];
 
-  if (block.source === "shared") {
-    lines.push(
-      `    component: React.lazy(() => import(${JSON.stringify(`@/registry/blocks/shared/${block.name}/${block.preview}`)})),`,
-      `    files: ${renderFiles(previewFiles)},`
-    );
-  } else {
-    lines.push(
-      "    primitives: {",
-      "      radix: {",
-      `        component: React.lazy(() => import(${JSON.stringify(`@/registry/blocks/radix/${block.name}/${block.preview}`)})),`,
-      `        files: ${renderFiles(previewFiles)},`,
-      "      },",
-      "      base: {",
-      `        component: React.lazy(() => import(${JSON.stringify(`@/registry/blocks/base/${block.name}/${block.preview}`)})),`,
-      `        files: ${renderFiles(previewFiles)},`,
-      "      },",
-      "    },"
-    );
-  }
-
-  lines.push(`    categories: [${categoryReferences}],`);
   if (layout) {
     lines.push(`    layout: ${layout},`);
   }
@@ -428,19 +403,14 @@ export interface BlockCategory {
   title: string;
 }
 
-export interface BlockPrimitiveVariant {
-  component: React.LazyExoticComponent<() => JSX.Element | Promise<JSX.Element>>;
-  files: { path: string }[];
-}
-
 export interface RegistryBlock {
   name: string;
   title: string;
   description: string;
   categories: BlockCategory[];
-  component?: React.LazyExoticComponent<() => JSX.Element | Promise<JSX.Element>>;
-  files?: { path: string }[];
-  primitives?: { radix: BlockPrimitiveVariant; base: BlockPrimitiveVariant };
+  source: "shared" | "base";
+  component: React.LazyExoticComponent<() => JSX.Element | Promise<JSX.Element>>;
+  files: { path: string }[];
   layout?: React.FC<{ children: React.ReactNode }>;
 }
 
@@ -482,12 +452,7 @@ const renderCustomizedComponents = () => {
 };
 
 const outputs = new Map<string, string>([
-  ["registry.json", `${JSON.stringify(buildRegistry("radix"), null, 2)}\n`],
-  [
-    "registry-radix.json",
-    `${JSON.stringify(buildRegistry("radix"), null, 2)}\n`,
-  ],
-  ["registry-base.json", `${JSON.stringify(buildRegistry("base"), null, 2)}\n`],
+  ["registry.json", `${JSON.stringify(buildRegistry(), null, 2)}\n`],
   ["src/config/registry/index.tsx", renderPreviewRegistry()],
   ["src/description/customized-components.ts", renderCustomizedComponents()],
 ]);

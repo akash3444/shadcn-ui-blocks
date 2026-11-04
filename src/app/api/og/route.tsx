@@ -12,7 +12,7 @@ const interRegular = fetch(
   new URL("../../../assets/fonts/Inter-Regular.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-const highlights = ["Free & open source", "Radix & Base UI", "Tailwind v4"];
+const highlights = ["Free & open source", "Base UI", "Tailwind v4"];
 
 export async function GET() {
   const [fontMedium, fontRegular] = await Promise.all([

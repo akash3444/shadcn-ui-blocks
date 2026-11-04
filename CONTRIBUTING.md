@@ -50,7 +50,7 @@ The website should now be accessible at `http://localhost:3000`.
 
 ### Registry catalog
 
-`src/registry/catalog` is the source of truth for registry items, block previews, categories, and component gallery metadata. Do not edit `registry.json`, `registry-base.json`, `registry-radix.json`, `src/config/registry/index.tsx`, or `src/description/customized-components.ts` by hand.
+`src/registry/catalog` is the source of truth for registry items, block previews, categories, and component gallery metadata. Do not edit `registry.json`, `src/config/registry/index.tsx`, or `src/description/customized-components.ts` by hand.
 
 Generate the derived files after editing the catalog:
 
