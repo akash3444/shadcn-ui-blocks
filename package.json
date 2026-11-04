@@ -4,6 +4,9 @@
   "private": true,
   "type": "module",
   "packageManager": "bun@1.4.2",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -63,7 +66,7 @@
     "@biomejs/biome": "2.3.11",
     "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.15",
-    "@types/node": "^20",
+    "@types/node": "^24",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
     "eslint": "^8",
