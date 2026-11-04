@@ -13,7 +13,7 @@ const Contact = () => (
       </p>
       <div className="mx-auto grid max-w-(--breakpoint-xl) gap-16 px-6 py-24 md:grid-cols-2 md:gap-10 md:px-0 lg:grid-cols-3">
         <div className="flex flex-col items-center text-center">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border/30 bg-primary/5 text-primary shadow-xl/2 dark:bg-primary/10">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border/30 bg-muted text-foreground shadow-xl/2">
             <MailIcon />
           </div>
           <h3 className="mt-6 font-medium text-xl">Email</h3>
@@ -28,7 +28,7 @@ const Contact = () => (
           </Link>
         </div>
         <div className="flex flex-col items-center text-center">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border/30 bg-primary/5 text-primary shadow-xl/2 dark:bg-primary/10">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border/30 bg-muted text-foreground shadow-xl/2">
             <MapPinIcon />
           </div>
           <h3 className="mt-6 font-medium text-xl">Office</h3>
@@ -44,7 +44,7 @@ const Contact = () => (
           </Link>
         </div>
         <div className="flex flex-col items-center text-center">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border/30 bg-primary/5 text-primary shadow-xl/2 dark:bg-primary/10">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border/30 bg-muted text-foreground shadow-xl/2">
             <PhoneIcon />
           </div>
           <h3 className="mt-6 font-medium text-xl">Phone</h3>
