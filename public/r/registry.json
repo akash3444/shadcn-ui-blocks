@@ -6504,21 +6504,31 @@
       "name": "signup-01",
       "type": "registry:block",
       "title": "Signup 01",
-      "description": "A simple signup block",
+      "description": "A centered signup card with email, password, and social sign-up",
       "dependencies": [
-        "@hookform/resolvers",
         "react-hook-form",
-        "zod"
+        "@hookform/resolvers",
+        "zod",
+        "lucide-react"
       ],
       "registryDependencies": [
         "button",
+        "card",
         "field",
         "input",
-        "separator"
+        "input-group"
       ],
       "files": [
         {
           "path": "src/registry/blocks/base/signup-01/components/signup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/signup-01/components/signup-form.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/signup-01/components/icons.tsx",
           "type": "registry:component"
         },
         {
@@ -6531,21 +6541,39 @@
       "name": "signup-02",
       "type": "registry:block",
       "title": "Signup 02",
-      "description": "A simple signup block",
+      "description": "A split signup page with a people orbit and testimonial panel",
       "dependencies": [
-        "@hookform/resolvers",
         "react-hook-form",
-        "zod"
+        "@hookform/resolvers",
+        "zod",
+        "lucide-react"
       ],
       "registryDependencies": [
+        "avatar",
         "button",
         "field",
         "input",
-        "separator"
+        "input-group"
       ],
       "files": [
         {
           "path": "src/registry/blocks/base/signup-02/components/signup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/signup-02/components/signup-form.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/signup-02/components/brand-panel.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/signup-02/components/orbit.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/signup-02/components/icons.tsx",
           "type": "registry:component"
         },
         {
@@ -8049,18 +8077,19 @@
       "name": "signup-03",
       "type": "registry:block",
       "title": "Signup 03",
-      "description": "A simple signup block",
+      "description": "A passwordless signup flow with an emailed 6-digit code",
       "dependencies": [
         "react-hook-form",
         "@hookform/resolvers",
         "zod",
-        "lucide-react"
+        "lucide-react",
+        "input-otp"
       ],
       "registryDependencies": [
         "button",
         "field",
         "input",
-        "separator"
+        "input-otp"
       ],
       "files": [
         {
@@ -8068,15 +8097,11 @@
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/base/signup-03/components/signup-form.tsx",
+          "path": "src/registry/blocks/base/signup-03/components/details-form.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/base/signup-03/components/icons.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/base/signup-03/components/testimonials.tsx",
+          "path": "src/registry/blocks/base/signup-03/components/code-form.tsx",
           "type": "registry:component"
         },
         {
@@ -8089,26 +8114,16 @@
       "name": "signup-04",
       "type": "registry:block",
       "title": "Signup 04",
-      "description": "A simple signup block",
+      "description": "A signup page with a list of sign-up providers",
       "dependencies": [
-        "react-hook-form",
-        "@hookform/resolvers",
-        "zod",
         "lucide-react"
       ],
       "registryDependencies": [
-        "button",
-        "field",
-        "input",
-        "separator"
+        "button"
       ],
       "files": [
         {
           "path": "src/registry/blocks/base/signup-04/components/signup.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/base/signup-04/components/signup-form.tsx",
           "type": "registry:component"
         },
         {
@@ -8117,6 +8132,43 @@
         },
         {
           "path": "src/registry/blocks/base/signup-04/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "signup-05",
+      "type": "registry:block",
+      "title": "Signup 05",
+      "description": "A signup dialog that opens over the current page",
+      "dependencies": [
+        "react-hook-form",
+        "@hookform/resolvers",
+        "zod",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "dialog",
+        "field",
+        "input",
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/base/signup-05/components/signup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/signup-05/components/signup-form.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/signup-05/components/icons.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/signup-05/components/logo.tsx",
           "type": "registry:component"
         }
       ]

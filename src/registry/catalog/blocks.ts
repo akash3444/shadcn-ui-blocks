@@ -867,12 +867,26 @@ export const blocks = [
   {
     name: "signup-01",
     title: "Signup 01",
-    description: "A simple signup block",
-    dependencies: ["@hookform/resolvers", "react-hook-form", "zod"],
-    registryDependencies: ["button", "field", "input", "separator"],
+    description:
+      "A centered signup card with email, password, and social sign-up",
+    dependencies: [
+      "react-hook-form",
+      "@hookform/resolvers",
+      "zod",
+      "lucide-react",
+    ],
+    registryDependencies: ["button", "card", "field", "input", "input-group"],
     files: [
       {
         path: "components/signup.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/signup-form.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/icons.tsx",
         type: "registry:component",
       },
       {
@@ -886,12 +900,34 @@ export const blocks = [
   {
     name: "signup-02",
     title: "Signup 02",
-    description: "A simple signup block",
-    dependencies: ["@hookform/resolvers", "react-hook-form", "zod"],
-    registryDependencies: ["button", "field", "input", "separator"],
+    description:
+      "A split signup page with a people orbit and testimonial panel",
+    dependencies: [
+      "react-hook-form",
+      "@hookform/resolvers",
+      "zod",
+      "lucide-react",
+    ],
+    registryDependencies: ["avatar", "button", "field", "input", "input-group"],
     files: [
       {
         path: "components/signup.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/signup-form.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/brand-panel.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/orbit.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/icons.tsx",
         type: "registry:component",
       },
       {
@@ -2282,29 +2318,26 @@ export const blocks = [
   {
     name: "signup-03",
     title: "Signup 03",
-    description: "A simple signup block",
+    description: "A passwordless signup flow with an emailed 6-digit code",
     dependencies: [
       "react-hook-form",
       "@hookform/resolvers",
       "zod",
       "lucide-react",
+      "input-otp",
     ],
-    registryDependencies: ["button", "field", "input", "separator"],
+    registryDependencies: ["button", "field", "input", "input-otp"],
     files: [
       {
         path: "components/signup.tsx",
         type: "registry:component",
       },
       {
-        path: "components/signup-form.tsx",
+        path: "components/details-form.tsx",
         type: "registry:component",
       },
       {
-        path: "components/icons.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/testimonials.tsx",
+        path: "components/code-form.tsx",
         type: "registry:component",
       },
       {
@@ -2318,14 +2351,37 @@ export const blocks = [
   {
     name: "signup-04",
     title: "Signup 04",
-    description: "A simple signup block",
+    description: "A signup page with a list of sign-up providers",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "components/signup.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/icons.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/logo.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["signup", "authentication"],
+    preview: "components/signup",
+  },
+  {
+    name: "signup-05",
+    title: "Signup 05",
+    description: "A signup dialog that opens over the current page",
     dependencies: [
       "react-hook-form",
       "@hookform/resolvers",
       "zod",
       "lucide-react",
     ],
-    registryDependencies: ["button", "field", "input", "separator"],
+    registryDependencies: ["button", "dialog", "field", "input", "input-group"],
     files: [
       {
         path: "components/signup.tsx",
