@@ -6071,21 +6071,31 @@
       "name": "login-01",
       "type": "registry:block",
       "title": "Login 01",
-      "description": "A simple login block",
+      "description": "A centered login card with email, password, and social sign-in",
       "dependencies": [
         "react-hook-form",
+        "@hookform/resolvers",
         "zod",
-        "@hookform/resolvers"
+        "lucide-react"
       ],
       "registryDependencies": [
         "button",
+        "card",
         "field",
         "input",
-        "separator"
+        "input-group"
       ],
       "files": [
         {
           "path": "src/registry/blocks/base/login-01/components/login.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/login-01/components/login-form.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/login-01/components/icons.tsx",
           "type": "registry:component"
         },
         {
@@ -6098,21 +6108,39 @@
       "name": "login-02",
       "type": "registry:block",
       "title": "Login 02",
-      "description": "A simple login block",
+      "description": "A split login page with a people orbit and testimonial panel",
       "dependencies": [
         "react-hook-form",
+        "@hookform/resolvers",
         "zod",
-        "@hookform/resolvers"
+        "lucide-react"
       ],
       "registryDependencies": [
+        "avatar",
         "button",
         "field",
         "input",
-        "separator"
+        "input-group"
       ],
       "files": [
         {
           "path": "src/registry/blocks/base/login-02/components/login.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/login-02/components/login-form.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/login-02/components/brand-panel.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/login-02/components/orbit.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/login-02/components/icons.tsx",
           "type": "registry:component"
         },
         {
@@ -7746,18 +7774,19 @@
       "name": "login-03",
       "type": "registry:block",
       "title": "Login 03",
-      "description": "A simple login block",
+      "description": "A passwordless login flow with an emailed 6-digit code",
       "dependencies": [
         "react-hook-form",
         "@hookform/resolvers",
         "zod",
-        "lucide-react"
+        "lucide-react",
+        "input-otp"
       ],
       "registryDependencies": [
         "button",
         "field",
         "input",
-        "separator"
+        "input-otp"
       ],
       "files": [
         {
@@ -7765,15 +7794,11 @@
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/base/login-03/components/login-form.tsx",
+          "path": "src/registry/blocks/base/login-03/components/email-form.tsx",
           "type": "registry:component"
         },
         {
-          "path": "src/registry/blocks/base/login-03/components/icons.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/base/login-03/components/testimonials.tsx",
+          "path": "src/registry/blocks/base/login-03/components/code-form.tsx",
           "type": "registry:component"
         },
         {
@@ -7786,26 +7811,17 @@
       "name": "login-04",
       "type": "registry:block",
       "title": "Login 04",
-      "description": "A simple login block",
+      "description": "A login page with a list of sign-in providers",
       "dependencies": [
-        "react-hook-form",
-        "@hookform/resolvers",
-        "zod",
         "lucide-react"
       ],
       "registryDependencies": [
-        "button",
-        "field",
-        "input",
-        "separator"
+        "badge",
+        "button"
       ],
       "files": [
         {
           "path": "src/registry/blocks/base/login-04/components/login.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/base/login-04/components/login-form.tsx",
           "type": "registry:component"
         },
         {
@@ -7814,6 +7830,43 @@
         },
         {
           "path": "src/registry/blocks/base/login-04/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "login-05",
+      "type": "registry:block",
+      "title": "Login 05",
+      "description": "A login dialog that opens over the current page",
+      "dependencies": [
+        "react-hook-form",
+        "@hookform/resolvers",
+        "zod",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "dialog",
+        "field",
+        "input",
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "src/registry/blocks/base/login-05/components/login.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/login-05/components/login-form.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/login-05/components/icons.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/login-05/components/logo.tsx",
           "type": "registry:component"
         }
       ]

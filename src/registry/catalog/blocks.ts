@@ -485,12 +485,26 @@ export const blocks = [
   {
     name: "login-01",
     title: "Login 01",
-    description: "A simple login block",
-    dependencies: ["react-hook-form", "zod", "@hookform/resolvers"],
-    registryDependencies: ["button", "field", "input", "separator"],
+    description:
+      "A centered login card with email, password, and social sign-in",
+    dependencies: [
+      "react-hook-form",
+      "@hookform/resolvers",
+      "zod",
+      "lucide-react",
+    ],
+    registryDependencies: ["button", "card", "field", "input", "input-group"],
     files: [
       {
         path: "components/login.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/login-form.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/icons.tsx",
         type: "registry:component",
       },
       {
@@ -504,12 +518,33 @@ export const blocks = [
   {
     name: "login-02",
     title: "Login 02",
-    description: "A simple login block",
-    dependencies: ["react-hook-form", "zod", "@hookform/resolvers"],
-    registryDependencies: ["button", "field", "input", "separator"],
+    description: "A split login page with a people orbit and testimonial panel",
+    dependencies: [
+      "react-hook-form",
+      "@hookform/resolvers",
+      "zod",
+      "lucide-react",
+    ],
+    registryDependencies: ["avatar", "button", "field", "input", "input-group"],
     files: [
       {
         path: "components/login.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/login-form.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/brand-panel.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/orbit.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/icons.tsx",
         type: "registry:component",
       },
       {
@@ -1982,29 +2017,26 @@ export const blocks = [
   {
     name: "login-03",
     title: "Login 03",
-    description: "A simple login block",
+    description: "A passwordless login flow with an emailed 6-digit code",
     dependencies: [
       "react-hook-form",
       "@hookform/resolvers",
       "zod",
       "lucide-react",
+      "input-otp",
     ],
-    registryDependencies: ["button", "field", "input", "separator"],
+    registryDependencies: ["button", "field", "input", "input-otp"],
     files: [
       {
         path: "components/login.tsx",
         type: "registry:component",
       },
       {
-        path: "components/login-form.tsx",
+        path: "components/email-form.tsx",
         type: "registry:component",
       },
       {
-        path: "components/icons.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "components/testimonials.tsx",
+        path: "components/code-form.tsx",
         type: "registry:component",
       },
       {
@@ -2018,14 +2050,37 @@ export const blocks = [
   {
     name: "login-04",
     title: "Login 04",
-    description: "A simple login block",
+    description: "A login page with a list of sign-in providers",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["badge", "button"],
+    files: [
+      {
+        path: "components/login.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/icons.tsx",
+        type: "registry:component",
+      },
+      {
+        path: "components/logo.tsx",
+        type: "registry:component",
+      },
+    ],
+    categories: ["login", "authentication"],
+    preview: "components/login",
+  },
+  {
+    name: "login-05",
+    title: "Login 05",
+    description: "A login dialog that opens over the current page",
     dependencies: [
       "react-hook-form",
       "@hookform/resolvers",
       "zod",
       "lucide-react",
     ],
-    registryDependencies: ["button", "field", "input", "separator"],
+    registryDependencies: ["button", "dialog", "field", "input", "input-group"],
     files: [
       {
         path: "components/login.tsx",

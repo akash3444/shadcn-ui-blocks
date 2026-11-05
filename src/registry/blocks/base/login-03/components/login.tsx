@@ -1,106 +1,68 @@
+"use client";
+
+import { ArrowLeftIcon } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 import { Button } from "@/registry/bases/base/ui/button";
-import { Separator } from "@/registry/bases/base/ui/separator";
-import { GoogleLogo } from "@/registry/blocks/base/login-03/components/icons";
-import { LoginForm } from "@/registry/blocks/base/login-03/components/login-form";
+import { CodeForm } from "@/registry/blocks/base/login-03/components/code-form";
+import { EmailForm } from "@/registry/blocks/base/login-03/components/email-form";
 import { Logo } from "@/registry/blocks/base/login-03/components/logo";
-import { Testimonials } from "./testimonials";
 
-const Login = () => (
-  <div className="grid grid-cols-1 lg:grid-cols-2 lg:divide-x">
-    <div className="flex h-screen items-center justify-center">
-      <div className="mx-auto w-full max-w-md px-10 py-14 sm:rounded-2xl sm:border sm:bg-card sm:shadow-2xl/5">
-        <Logo className="mx-auto size-9" />
-        <h1 className="mt-3 text-center font-medium text-2xl tracking-[-0.015em]">
-          Log in to Calm UI
-        </h1>
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [codeSent, setCodeSent] = useState(false);
 
-        <div className="mt-10">
-          <Button className="w-full" size="lg" type="button">
-            <GoogleLogo className="mr-2 size-4" />
-            Continue with Google
+  const handleEmailSubmit = (submittedEmail: string) => {
+    setEmail(submittedEmail);
+    setCodeSent(true);
+  };
+
+  return (
+    <div className="grid min-h-svh grid-rows-[1fr_auto_1fr] gap-8 bg-background p-4 sm:p-8">
+      <div>
+        {codeSent && (
+          <Button onClick={() => setCodeSent(false)} variant="ghost">
+            <ArrowLeftIcon data-icon="inline-start" />
+            Use a different email
           </Button>
-
-          <div className="my-6 flex items-center justify-center gap-2 overflow-hidden">
-            <Separator />
-            <span className="text-muted-foreground text-sm">OR</span>
-            <Separator />
-          </div>
-
-          <LoginForm />
-        </div>
-
-        <Link
-          className="mt-6 block text-center text-muted-foreground text-sm"
-          href="#"
-        >
-          Forgot your password?
-        </Link>
-
-        <p className="mt-6 text-center text-sm">
-          New to Bloxxee?{" "}
-          <Link className="text-muted-foreground" href="#">
-            Create an account
-          </Link>
-        </p>
+        )}
       </div>
+      <div className="mx-auto flex w-full max-w-80 flex-col gap-8">
+        <div className="flex flex-col items-center gap-2 text-center">
+          <Logo className="mb-2 size-10" />
+          <h1 className="font-medium text-2xl tracking-tight">
+            {codeSent ? "Check your email" : "Log in to Calm UI"}
+          </h1>
+          {codeSent ? (
+            <p className="wrap-anywhere text-muted-foreground text-sm">
+              We sent a 6-digit code to{" "}
+              <span className="text-foreground">{email}</span>
+            </p>
+          ) : (
+            <p className="text-muted-foreground text-sm">
+              No password. We’ll email you a 6-digit code.
+            </p>
+          )}
+        </div>
+        {codeSent ? (
+          <CodeForm />
+        ) : (
+          <EmailForm defaultEmail={email} onSubmit={handleEmailSubmit} />
+        )}
+      </div>
+      <p className="self-end text-balance text-center text-muted-foreground text-sm">
+        By continuing you agree to the{" "}
+        <Link className="underline hover:text-foreground" href="#">
+          Terms
+        </Link>{" "}
+        and{" "}
+        <Link className="underline hover:text-foreground" href="#">
+          Privacy Policy
+        </Link>
+        .
+      </p>
     </div>
-    <div className="relative flex h-full w-full flex-col overflow-hidden bg-muted/50 dark:bg-muted/30">
-      <img
-        alt="Login"
-        className="absolute inset-0 size-full object-cover"
-        src="/images/ascii-art.png"
-      />
-
-      <Testimonials />
-
-      {/* <div
-        className="absolute inset-0 -top-px -left-px -z-1 dark:opacity-70"
-        style={{
-          backgroundImage: `
-        linear-gradient(to right, color-mix(in srgb,var(--foreground) 20%, transparent) 1px, transparent 1px),
-        linear-gradient(to bottom, color-mix(in srgb,var(--foreground) 20%, transparent) 1px, transparent 1px)
-      `,
-          backgroundSize: "20px 20px",
-          backgroundPosition: "0 0, 0 0",
-          maskImage: `
-        repeating-linear-gradient(
-          to right,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        ),
-        repeating-linear-gradient(
-          to bottom,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        )
-      `,
-          WebkitMaskImage: `
-        repeating-linear-gradient(
-          to right,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        ),
-        repeating-linear-gradient(
-          to bottom,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        )
-      `,
-          maskComposite: "intersect",
-          WebkitMaskComposite: "source-in",
-        }}
-      /> */}
-    </div>
-  </div>
-);
+  );
+};
 
 export default Login;
