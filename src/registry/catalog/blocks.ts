@@ -1245,6 +1245,7 @@ export const blocks = [
     name: "cta-01",
     title: "CTA 01",
     description: "A simple CTA block",
+    dependencies: ["lucide-react"],
     registryDependencies: ["button"],
     files: [
       {
@@ -1274,7 +1275,7 @@ export const blocks = [
     name: "cta-03",
     title: "CTA 03",
     description: "A simple CTA block",
-    dependencies: ["lucide-react"],
+    dependencies: ["lucide-react", "@paper-design/shaders-react"],
     registryDependencies: ["button"],
     files: [
       {
@@ -1288,36 +1289,6 @@ export const blocks = [
   {
     name: "cta-04",
     title: "CTA 04",
-    description: "A simple CTA block",
-    dependencies: ["lucide-react"],
-    registryDependencies: ["button"],
-    files: [
-      {
-        path: "components/cta.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["cta"],
-    preview: "components/cta",
-  },
-  {
-    name: "cta-05",
-    title: "CTA 05",
-    description: "A simple CTA block",
-    dependencies: ["lucide-react", "@paper-design/shaders-react"],
-    registryDependencies: ["button"],
-    files: [
-      {
-        path: "components/cta.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["cta"],
-    preview: "components/cta",
-  },
-  {
-    name: "cta-06",
-    title: "CTA 06",
     description: "A simple CTA block",
     registryDependencies: ["button"],
     files: [

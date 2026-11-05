@@ -6922,6 +6922,9 @@
       "type": "registry:block",
       "title": "CTA 01",
       "description": "A simple CTA block",
+      "dependencies": [
+        "lucide-react"
+      ],
       "registryDependencies": [
         "button"
       ],
@@ -6956,7 +6959,8 @@
       "title": "CTA 03",
       "description": "A simple CTA block",
       "dependencies": [
-        "lucide-react"
+        "lucide-react",
+        "@paper-design/shaders-react"
       ],
       "registryDependencies": [
         "button"
@@ -6973,49 +6977,12 @@
       "type": "registry:block",
       "title": "CTA 04",
       "description": "A simple CTA block",
-      "dependencies": [
-        "lucide-react"
-      ],
       "registryDependencies": [
         "button"
       ],
       "files": [
         {
           "path": "src/registry/blocks/base/cta-04/components/cta.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "cta-05",
-      "type": "registry:block",
-      "title": "CTA 05",
-      "description": "A simple CTA block",
-      "dependencies": [
-        "lucide-react",
-        "@paper-design/shaders-react"
-      ],
-      "registryDependencies": [
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/base/cta-05/components/cta.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "cta-06",
-      "type": "registry:block",
-      "title": "CTA 06",
-      "description": "A simple CTA block",
-      "registryDependencies": [
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/base/cta-06/components/cta.tsx",
           "type": "registry:component"
         }
       ]

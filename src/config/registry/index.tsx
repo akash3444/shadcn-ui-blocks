@@ -574,22 +574,6 @@ export const blocks: RegistryBlock[] = [
     categories: [categories.cta],
   },
   {
-    name: "cta-05",
-    title: "CTA 05",
-    description: "A simple CTA block",
-    component: React.lazy(() => import("@/registry/blocks/base/cta-05/components/cta")),
-    files: [{ path: "components/cta.tsx" }],
-    categories: [categories.cta],
-  },
-  {
-    name: "cta-06",
-    title: "CTA 06",
-    description: "A simple CTA block",
-    component: React.lazy(() => import("@/registry/blocks/base/cta-06/components/cta")),
-    files: [{ path: "components/cta.tsx" }],
-    categories: [categories.cta],
-  },
-  {
     name: "faq-01",
     title: "FAQ 01",
     description: "A simple FAQ component",
