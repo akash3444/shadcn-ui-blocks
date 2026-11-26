@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import type { WebSite, WithContext } from "schema-dts";
 import { ThemeToggle } from "@/components/app-sidebar/theme-toggle";
 import { CarbonAdTracker } from "@/components/carbon-ad-tracker";
+import { RenameAnnouncementDialog } from "@/components/rename-announcement-dialog";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { siteConfig } from "@/config/site";
@@ -108,6 +109,7 @@ export default function RootLayout({
                 <ThemeToggle />
               </div>
               <Toaster />
+              <RenameAnnouncementDialog />
             </TooltipProvider>
           </ThemeProvider>
         </CSPostHogProvider>
