@@ -49,7 +49,6 @@ const nextConfig = {
       ".next/cache/webpack",
       ".git/**/*",
       "public/images/blocks/**/*",
-      "public/images/templates/**/*",
       "public/r/**/*",
       "node_modules/@shikijs/langs/**/*",
       "node_modules/@shikijs/themes/**/*",

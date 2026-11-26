@@ -51,13 +51,6 @@ export function NavigationSheet() {
             >
               Components
             </Link>
-            <Link
-              className="block"
-              href="/templates"
-              onClick={() => setOpen(false)}
-            >
-              Templates
-            </Link>
           </div>
         </ScrollArea>
       </SheetContent>
