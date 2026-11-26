@@ -4,11 +4,11 @@ const nextConfig = {
     return [
       {
         source: "/:path*",
-        destination: "https://www.shadcnui-blocks.com/:path*",
+        destination: "https://calmui.dev/:path*",
         has: [
           {
             type: "host",
-            value: "shadcn-ui-blocks.akashmoradiya.com",
+            value: "(www\\.)?shadcnui-blocks\\.com",
           },
         ],
         permanent: true,
