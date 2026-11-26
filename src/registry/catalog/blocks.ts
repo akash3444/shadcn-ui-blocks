@@ -835,36 +835,6 @@ export const blocks = [
     preview: "components/pricing",
   },
   {
-    name: "pricing-03",
-    title: "Pricing 03",
-    description: "A simple pricing block",
-    dependencies: ["lucide-react", "@number-flow/react"],
-    registryDependencies: ["badge", "button", "separator", "tabs", "tooltip"],
-    files: [
-      {
-        path: "components/pricing.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["pricing"],
-    preview: "components/pricing",
-  },
-  {
-    name: "pricing-04",
-    title: "Pricing 04",
-    description: "A simple pricing block",
-    dependencies: ["lucide-react"],
-    registryDependencies: ["badge", "button", "separator"],
-    files: [
-      {
-        path: "components/pricing.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["pricing"],
-    preview: "components/pricing",
-  },
-  {
     name: "signup-01",
     title: "Signup 01",
     description:
@@ -1912,21 +1882,6 @@ export const blocks = [
   {
     name: "features-15",
     title: "Features 15",
-    description: "A simple features block",
-    dependencies: ["lucide-react"],
-    registryDependencies: ["button"],
-    files: [
-      {
-        path: "components/features.tsx",
-        type: "registry:component",
-      },
-    ],
-    categories: ["features"],
-    preview: "components/features",
-  },
-  {
-    name: "features-16",
-    title: "Features 16",
     description: "A contained features block with a call to action",
     dependencies: ["lucide-react"],
     registryDependencies: ["button"],
@@ -2228,8 +2183,8 @@ export const blocks = [
     preview: "components/logo-cloud",
   },
   {
-    name: "pricing-05",
-    title: "Pricing 05",
+    name: "pricing-03",
+    title: "Pricing 03",
     description: "A simple pricing block",
     dependencies: ["@number-flow/react"],
     files: [
@@ -2242,8 +2197,8 @@ export const blocks = [
     preview: "components/pricing",
   },
   {
-    name: "pricing-06",
-    title: "Pricing 06",
+    name: "pricing-04",
+    title: "Pricing 04",
     description: "A simple pricing block",
     files: [
       {
@@ -2255,8 +2210,8 @@ export const blocks = [
     preview: "components/pricing",
   },
   {
-    name: "pricing-07",
-    title: "Pricing 07",
+    name: "pricing-05",
+    title: "Pricing 05",
     description: "A simple pricing block",
     files: [
       {
@@ -2272,8 +2227,8 @@ export const blocks = [
     preview: "components/pricing",
   },
   {
-    name: "pricing-08",
-    title: "Pricing 08",
+    name: "pricing-06",
+    title: "Pricing 06",
     description: "A simple pricing block",
     dependencies: ["lucide-react"],
     registryDependencies: ["badge", "button"],

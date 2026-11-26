@@ -1,95 +1,84 @@
 import {
-  ArrowUpRightIcon,
-  BinocularsIcon,
-  GlobeIcon,
-  HouseIcon,
+  ArrowRightIcon,
+  ChartPieIcon,
+  LayoutDashboardIcon,
   LockIcon,
-  ShieldCheckIcon,
-  ZapIcon,
+  MessageCircleIcon,
+  RefreshCwIcon,
+  WorkflowIcon,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Button } from "@/registry/bases/base/ui/button";
+import { buttonVariants } from "@/registry/bases/base/ui/button";
 
-const plusPoints = [
+const features = [
   {
-    icon: ShieldCheckIcon,
-    title: "Real-Time Protection",
+    icon: LayoutDashboardIcon,
+    title: "Shared workspace",
     description:
-      "Stay alert with instant notifications and smart security monitoring.",
+      "Keep projects, documents, and conversations together in one place.",
   },
   {
-    icon: ZapIcon,
-    title: "Smart & Simple Setup",
-    description: "Install easily in minutes with no complex tools or wiring.",
-  },
-  {
-    icon: BinocularsIcon,
-    title: "Peace of Mind Anywhere",
-    description: "Monitor and control your home from anywhere, anytime.",
-  },
-  {
-    icon: HouseIcon,
-    title: "Smart Home Integration",
+    icon: WorkflowIcon,
+    title: "Flexible workflows",
     description:
-      "Easily connect with your favorite smart home devices and services.",
+      "Shape each process around the way your team already gets work done.",
   },
   {
-    icon: GlobeIcon,
-    title: "Global Coverage",
-    description: "Monitor and control your home from anywhere, anytime.",
+    icon: MessageCircleIcon,
+    title: "Real-time collaboration",
+    description:
+      "Review ideas, share feedback, and make decisions without losing context.",
+  },
+  {
+    icon: RefreshCwIcon,
+    title: "Automatic updates",
+    description:
+      "Keep everyone informed as plans, priorities, and responsibilities change.",
+  },
+  {
+    icon: ChartPieIcon,
+    title: "Progress insights",
+    description:
+      "See what is moving, what is blocked, and where your team needs support.",
   },
   {
     icon: LockIcon,
-    title: "Secure & Reliable",
+    title: "Secure by default",
     description:
-      "Built with the latest security technologies to protect your home.",
+      "Protect company work with role-based access and clear permissions.",
   },
 ];
 
-export default function Features() {
-  return (
-    <div
-      className="mx-auto max-w-(--breakpoint-xl) overflow-clip px-8 py-24 text-center"
-      id="why-choose-us"
-    >
-      <strong className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
-        Why Choose Us
-      </strong>
-      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-medium text-4xl leading-[1.3] tracking-tight">
-        Advanced home security solutions built for modern living
-      </h2>
-      <p className="mt-4 text-pretty text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
-        We are constantly always keep pace with the time
-      </p>
+const Features = () => (
+  <section className="px-6 py-20 sm:py-28">
+    <div className="mx-auto max-w-(--breakpoint-lg) overflow-hidden rounded-3xl bg-muted p-7 sm:p-12">
+      <div className="flex flex-col gap-6 px-3 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 className="max-w-[18ch] text-balance font-medium text-4xl/[1.2] tracking-tight sm:text-5xl/[1.2]">
+            One place to plan, build, and ship.
+          </h2>
+        </div>
+        <a className={buttonVariants({ size: "lg" })} href="/features">
+          Explore platform
+          <ArrowRightIcon data-icon="inline-end" />
+        </a>
+      </div>
+      <div className="-mx-4 mt-12 -mb-4 grid gap-px overflow-hidden rounded-xl bg-border/50 sm:grid-cols-2 lg:grid-cols-3">
+        {features.map((feature) => {
+          const Icon = feature.icon;
 
-      <div className="relative mx-auto mt-16 grid max-w-5xl grid-cols-1 border nth-3:border sm:grid-cols-2 lg:grid-cols-3">
-        <div className="mask-y-from-95% absolute -inset-y-14 left-0 -translate-x-px border-s border-dashed" />
-        <div className="mask-y-from-95% absolute -inset-y-14 right-0 translate-x-px border-s border-dashed" />
-        <div className="mask-x-from-95% absolute -inset-x-14 top-0 -translate-y-px border-t border-dashed" />
-        <div className="mask-x-from-95% absolute -inset-x-14 bottom-0 translate-y-px border-b border-dashed" />
-
-        {plusPoints.map((plusPoint, index) => (
-          <div
-            className={cn(
-              "relative -mt-px flex w-full flex-col items-center gap-2 border-t p-6 pt-9 odd:bg-muted/40",
-              "lg:not-[&:nth-child(3n+1)]:border-e",
-              "max-sm:odd:border-e-0 max-lg:odd:border-e"
-            )}
-            key={index}
-          >
-            <plusPoint.icon className="size-12 fill-foreground/10 stroke-[1.5px] text-foreground" />
-            <h3 className="mt-6 font-medium text-lg tracking-[-0.005em]">
-              {plusPoint.title}
-            </h3>
-            <p className="mb-6 text-balance text-muted-foreground">
-              {plusPoint.description}
-            </p>
-            <Button className="mt-auto font-medium" variant="link">
-              Learn More <ArrowUpRightIcon />
-            </Button>
-          </div>
-        ))}
+          return (
+            <article className="bg-background p-8" key={feature.title}>
+              <Icon aria-hidden="true" className="size-5" />
+              <h3 className="mt-8 font-semibold text-lg">{feature.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed">
+                {feature.description}
+              </p>
+            </article>
+          );
+        })}
       </div>
     </div>
-  );
-}
+  </section>
+);
+
+export default Features;

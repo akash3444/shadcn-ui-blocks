@@ -6458,49 +6458,6 @@
       ]
     },
     {
-      "name": "pricing-03",
-      "type": "registry:block",
-      "title": "Pricing 03",
-      "description": "A simple pricing block",
-      "dependencies": [
-        "lucide-react",
-        "@number-flow/react"
-      ],
-      "registryDependencies": [
-        "badge",
-        "button",
-        "separator",
-        "tabs",
-        "tooltip"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/base/pricing-03/components/pricing.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "pricing-04",
-      "type": "registry:block",
-      "title": "Pricing 04",
-      "description": "A simple pricing block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "badge",
-        "button",
-        "separator"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/base/pricing-04/components/pricing.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
       "name": "signup-01",
       "type": "registry:block",
       "title": "Signup 01",
@@ -7652,24 +7609,6 @@
       "name": "features-15",
       "type": "registry:block",
       "title": "Features 15",
-      "description": "A simple features block",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button"
-      ],
-      "files": [
-        {
-          "path": "src/registry/blocks/base/features-15/components/features.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "features-16",
-      "type": "registry:block",
-      "title": "Features 16",
       "description": "A contained features block with a call to action",
       "dependencies": [
         "lucide-react"
@@ -7679,7 +7618,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/base/features-16/components/features.tsx",
+          "path": "src/registry/blocks/base/features-15/components/features.tsx",
           "type": "registry:component"
         }
       ]
@@ -7979,16 +7918,44 @@
       ]
     },
     {
-      "name": "pricing-05",
+      "name": "pricing-03",
       "type": "registry:block",
-      "title": "Pricing 05",
+      "title": "Pricing 03",
       "description": "A simple pricing block",
       "dependencies": [
         "@number-flow/react"
       ],
       "files": [
         {
+          "path": "src/registry/blocks/base/pricing-03/components/pricing.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "pricing-04",
+      "type": "registry:block",
+      "title": "Pricing 04",
+      "description": "A simple pricing block",
+      "files": [
+        {
+          "path": "src/registry/blocks/base/pricing-04/components/pricing.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "pricing-05",
+      "type": "registry:block",
+      "title": "Pricing 05",
+      "description": "A simple pricing block",
+      "files": [
+        {
           "path": "src/registry/blocks/base/pricing-05/components/pricing.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/registry/blocks/base/pricing-05/components/magicui/border-beam.tsx",
           "type": "registry:component"
         }
       ]
@@ -7997,34 +7964,6 @@
       "name": "pricing-06",
       "type": "registry:block",
       "title": "Pricing 06",
-      "description": "A simple pricing block",
-      "files": [
-        {
-          "path": "src/registry/blocks/base/pricing-06/components/pricing.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "pricing-07",
-      "type": "registry:block",
-      "title": "Pricing 07",
-      "description": "A simple pricing block",
-      "files": [
-        {
-          "path": "src/registry/blocks/base/pricing-07/components/pricing.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "src/registry/blocks/base/pricing-07/components/magicui/border-beam.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "pricing-08",
-      "type": "registry:block",
-      "title": "Pricing 08",
       "description": "A simple pricing block",
       "dependencies": [
         "lucide-react"
@@ -8035,7 +7974,7 @@
       ],
       "files": [
         {
-          "path": "src/registry/blocks/base/pricing-08/components/pricing.tsx",
+          "path": "src/registry/blocks/base/pricing-06/components/pricing.tsx",
           "type": "registry:component"
         }
       ]

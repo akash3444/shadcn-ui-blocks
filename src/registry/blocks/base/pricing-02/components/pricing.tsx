@@ -1,7 +1,7 @@
 "use client";
 
 import NumberFlow from "@number-flow/react";
-import { CircleCheck, CircleHelp } from "lucide-react";
+import { ArrowUpRight, CircleCheck, CircleHelp } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/registry/bases/base/ui/badge";
@@ -34,7 +34,6 @@ const plans = [
       { title: "Choice of 2 filters", tooltip: tooltipContent.filters },
       { title: "2 retouch credits", tooltip: tooltipContent.credits },
     ],
-    buttonText: "Get 20 portraits in 5 hours",
   },
   {
     name: "Advanced",
@@ -49,7 +48,6 @@ const plans = [
       { title: "Choice of 5 filters", tooltip: tooltipContent.filters },
       { title: "5 retouch credits", tooltip: tooltipContent.credits },
     ],
-    buttonText: "Get 50 portraits in 3 hours",
     isPopular: true,
   },
   {
@@ -64,7 +62,6 @@ const plans = [
       { title: "Choice of 10 filters", tooltip: tooltipContent.filters },
       { title: "10 retouch credits", tooltip: tooltipContent.credits },
     ],
-    buttonText: "Get 100 portraits in 1 hour",
   },
 ];
 
@@ -81,35 +78,28 @@ const Pricing = () => {
       </p>
 
       <Tabs
-        className="mx-auto mt-8 max-w-max"
+        className="mt-8"
         onValueChange={setSelectedBillingPeriod}
         value={selectedBillingPeriod}
       >
-        <TabsList className="h-11 rounded-full">
-          <TabsTrigger
-            className="rounded-full px-4 data-[state=active]:shadow-none"
-            value="monthly"
-          >
-            Monthly
-          </TabsTrigger>
-          <TabsTrigger
-            className="rounded-full px-4 data-[state=active]:shadow-none"
-            value="yearly"
-          >
+        <TabsList className="mx-auto grid w-full max-w-2xs grid-cols-2">
+          <TabsTrigger value="monthly">Monthly</TabsTrigger>
+          <TabsTrigger value="yearly">
             Yearly (Save {YEARLY_DISCOUNT}%)
           </TabsTrigger>
         </TabsList>
       </Tabs>
-      <div className="mx-auto mt-12 grid max-w-(--breakpoint-lg) grid-cols-1 items-center gap-8 lg:grid-cols-3">
+      <div className="mx-auto mt-12 grid max-w-(--breakpoint-lg) grid-cols-1 items-center gap-8 sm:mt-16 lg:grid-cols-3 lg:gap-0">
         {plans.map((plan) => (
           <div
-            className={cn("relative rounded-xl border p-6", {
-              "border-2 border-primary py-10": plan.isPopular,
+            className={cn("relative rounded-lg border bg-card/50 p-6 px-8", {
+              "z-1 overflow-hidden bg-card px-10 py-14 shadow-[0px_1px_6px_0px_rgba(0,0,0,0.07)] lg:-mx-2":
+                plan.isPopular,
             })}
             key={plan.name}
           >
             {plan.isPopular && (
-              <Badge className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2">
+              <Badge className="absolute top-2 right-2 px-2.5 py-1 uppercase">
                 Most Popular
               </Badge>
             )}
@@ -133,14 +123,14 @@ const Pricing = () => {
             </p>
 
             <Button
-              className="mt-6 w-full"
+              className="mt-6 w-full rounded-full text-base"
               size="lg"
               variant={plan.isPopular ? "default" : "outline"}
             >
-              {plan.buttonText}
+              Get Started <ArrowUpRight className="h-4 w-4" />
             </Button>
             <Separator className="my-8" />
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {plan.features.map((feature) => (
                 <li className="flex items-start gap-1.5" key={feature.title}>
                   <CircleCheck className="mt-1 h-4 w-4 text-green-600" />

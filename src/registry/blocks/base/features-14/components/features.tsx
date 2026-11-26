@@ -1,83 +1,95 @@
 import {
-  Cable,
-  Code,
-  Contrast,
-  MonitorSmartphone,
-  SquareDashedMousePointer,
-  Zap,
+  ArrowUpRightIcon,
+  BinocularsIcon,
+  GlobeIcon,
+  HouseIcon,
+  LockIcon,
+  ShieldCheckIcon,
+  ZapIcon,
 } from "lucide-react";
-import { Badge } from "@/registry/bases/base/ui/badge";
+import { cn } from "@/lib/utils";
+import { Button } from "@/registry/bases/base/ui/button";
 
-const features = [
+const plusPoints = [
   {
-    title: "Blazing Fast Performance",
+    icon: ShieldCheckIcon,
+    title: "Real-Time Protection",
     description:
-      "Optimized for speed with minimal loading times and instant interactions, ensuring a smooth experience across devices.",
-    icon: Zap,
+      "Stay alert with instant notifications and smart security monitoring.",
   },
   {
-    title: "Fully Customizable",
-    description:
-      "Tailor every component to match your brand or workflow — with built-in support for themes, layouts, and configurations.",
-    icon: SquareDashedMousePointer,
+    icon: ZapIcon,
+    title: "Smart & Simple Setup",
+    description: "Install easily in minutes with no complex tools or wiring.",
   },
   {
-    title: "Developer-Friendly",
-    description:
-      "Built with clean, modern code and best practices in mind, making it easy to integrate, extend, and scale.",
-    icon: Code,
+    icon: BinocularsIcon,
+    title: "Peace of Mind Anywhere",
+    description: "Monitor and control your home from anywhere, anytime.",
   },
   {
-    title: "Responsive by Default",
+    icon: HouseIcon,
+    title: "Smart Home Integration",
     description:
-      "Every component is designed to look great on all screen sizes — no extra work needed to make things mobile-friendly.",
-    icon: MonitorSmartphone,
+      "Easily connect with your favorite smart home devices and services.",
   },
   {
-    title: "Accessible for Everyone",
-    description:
-      "Built with accessibility best practices in mind to ensure an inclusive experience for all users, regardless of ability.",
-    icon: Contrast,
+    icon: GlobeIcon,
+    title: "Global Coverage",
+    description: "Monitor and control your home from anywhere, anytime.",
   },
   {
-    title: "Seamless Integration",
+    icon: LockIcon,
+    title: "Secure & Reliable",
     description:
-      "Easily connect with your favorite tools, APIs, and services — whether it's authentication, databases, or third-party libraries.",
-    icon: Cable,
+      "Built with the latest security technologies to protect your home.",
   },
 ];
 
-const Features = () => {
+export default function Features() {
   return (
-    <div className="mx-auto flex max-w-7xl flex-col px-6 py-20">
-      <h2 className="text-pretty text-center font-medium text-4xl tracking-tight">
-        Simplify your stack
+    <div
+      className="mx-auto max-w-(--breakpoint-xl) overflow-clip px-8 py-24 text-center"
+      id="why-choose-us"
+    >
+      <strong className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
+        Why Choose Us
+      </strong>
+      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-medium text-4xl leading-[1.3] tracking-tight">
+        Advanced home security solutions built for modern living
       </h2>
-      <p className="-tracking[0.01em] mt-3 text-pretty text-center text-muted-foreground text-xl sm:text-2xl">
-        Reduce dependencies and keep things easy
+      <p className="mt-4 text-pretty text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
+        We are constantly always keep pace with the time
       </p>
 
-      <div className="mt-16 grid grid-cols-1 gap-1.5 border bg-muted p-1.5 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3">
-        {features.map((feature, index) => (
-          <div className="relative -m-px border bg-card px-5 py-7" key={index}>
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted text-foreground">
-              <feature.icon />
-            </div>
-            <h3 className="mt-5 font-medium text-lg tracking-[-0.005em]">
-              {feature.title}
+      <div className="relative mx-auto mt-16 grid max-w-5xl grid-cols-1 border nth-3:border sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mask-y-from-95% absolute -inset-y-14 left-0 -translate-x-px border-s border-dashed" />
+        <div className="mask-y-from-95% absolute -inset-y-14 right-0 translate-x-px border-s border-dashed" />
+        <div className="mask-x-from-95% absolute -inset-x-14 top-0 -translate-y-px border-t border-dashed" />
+        <div className="mask-x-from-95% absolute -inset-x-14 bottom-0 translate-y-px border-b border-dashed" />
+
+        {plusPoints.map((plusPoint, index) => (
+          <div
+            className={cn(
+              "relative -mt-px flex w-full flex-col items-center gap-2 border-t p-6 pt-9 odd:bg-muted/40",
+              "lg:not-[&:nth-child(3n+1)]:border-e",
+              "max-sm:odd:border-e-0 max-lg:odd:border-e"
+            )}
+            key={index}
+          >
+            <plusPoint.icon className="size-12 fill-foreground/10 stroke-[1.5px] text-foreground" />
+            <h3 className="mt-6 font-medium text-lg tracking-[-0.005em]">
+              {plusPoint.title}
             </h3>
-            <p className="mt-2 text-foreground/80">{feature.description}</p>
-            <Badge
-              className="absolute top-0 right-0 rounded-none border-t-0 border-r-0 bg-muted/30 font-mono dark:border-foreground/15 dark:bg-background"
-              variant="outline"
-            >
-              {(index + 1).toString().padStart(2, "0")}
-            </Badge>
+            <p className="mb-6 text-balance text-muted-foreground">
+              {plusPoint.description}
+            </p>
+            <Button className="mt-auto font-medium" variant="link">
+              Learn More <ArrowUpRightIcon />
+            </Button>
           </div>
         ))}
       </div>
     </div>
   );
-};
-
-export default Features;
+}
