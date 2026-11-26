@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "Calm UI",
-  "homepage": "https://www.shadcnui-blocks.com",
+  "homepage": "https://calmui.dev",
   "items": [
     {
       "name": "dot-pattern",
@@ -6021,8 +6021,8 @@
       "registryDependencies": [
         "badge",
         "button",
-        "https://www.shadcnui-blocks.com/r/dot-pattern.json",
-        "https://www.shadcnui-blocks.com/r/particles.json"
+        "https://calmui.dev/r/dot-pattern.json",
+        "https://calmui.dev/r/particles.json"
       ],
       "files": [
         {
@@ -6054,7 +6054,7 @@
       "registryDependencies": [
         "badge",
         "button",
-        "https://www.shadcnui-blocks.com/r/animated-grid-pattern.json"
+        "https://calmui.dev/r/animated-grid-pattern.json"
       ],
       "files": [
         {
@@ -6219,7 +6219,7 @@
       "title": "Logo Cloud 05",
       "description": "A simple logos block",
       "registryDependencies": [
-        "https://www.shadcnui-blocks.com/r/marquee.json"
+        "https://calmui.dev/r/marquee.json"
       ],
       "files": [
         {
@@ -6242,7 +6242,7 @@
       "title": "Logo Cloud 06",
       "description": "A simple logos block",
       "registryDependencies": [
-        "https://www.shadcnui-blocks.com/r/marquee.json"
+        "https://calmui.dev/r/marquee.json"
       ],
       "files": [
         {
@@ -6665,7 +6665,7 @@
       "registryDependencies": [
         "avatar",
         "button",
-        "https://www.shadcnui-blocks.com/r/marquee.json"
+        "https://calmui.dev/r/marquee.json"
       ],
       "files": [
         {

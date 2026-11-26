@@ -9,7 +9,7 @@
   "registryDependencies": [
     "badge",
     "button",
-    "https://www.shadcnui-blocks.com/r/animated-grid-pattern.json"
+    "https://calmui.dev/r/animated-grid-pattern.json"
   ],
   "files": [
     {

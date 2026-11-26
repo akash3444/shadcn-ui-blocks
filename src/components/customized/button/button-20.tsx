@@ -6,7 +6,7 @@ import { Button } from "@/registry/ui/button";
 
 const CopyButton = () => {
   const { isCopied, copyToClipboard } = useCopyToClipboard();
-  const link = "https://www.shadcnui-blocks.com";
+  const link = "https://calmui.dev";
 
   return (
     <div className="flex items-center overflow-hidden rounded-xl border bg-muted/70 p-0.75 ps-0">

@@ -2,7 +2,7 @@
 
 > Formerly **Shadcn UI Blocks**.
 
-Website - [shadcnui-blocks.com](https://www.shadcnui-blocks.com)
+Website - [calmui.dev](https://calmui.dev)
 
 Calm UI is a curated collection of blocks and examples for shadcn/ui components. This platform is designed to help developers preview and copy ready-made code snippets for various components, saving time and enhancing productivity in their projects.
 
@@ -27,7 +27,7 @@ Component-Specific Pages: Dedicated pages for individual components, featuring m
 
 ## 📖 Usage
 
-1. Visit the [Calm UI website](https://www.shadcnui-blocks.com).
+1. Visit the [Calm UI website](https://calmui.dev).
 2. Browse through the available blocks and examples.
 3. Preview components and blocks to see how they look in action.
 4. Copy the code snippet directly from the page and paste it into your project.

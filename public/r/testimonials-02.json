@@ -6,7 +6,7 @@
   "registryDependencies": [
     "avatar",
     "button",
-    "https://www.shadcnui-blocks.com/r/marquee.json"
+    "https://calmui.dev/r/marquee.json"
   ],
   "files": [
     {

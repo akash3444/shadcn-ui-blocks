@@ -10,8 +10,8 @@
   "registryDependencies": [
     "badge",
     "button",
-    "https://www.shadcnui-blocks.com/r/dot-pattern.json",
-    "https://www.shadcnui-blocks.com/r/particles.json"
+    "https://calmui.dev/r/dot-pattern.json",
+    "https://calmui.dev/r/particles.json"
   ],
   "files": [
     {

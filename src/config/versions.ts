@@ -10,7 +10,7 @@ export const versions: VersionConfig[] = [
   {
     version: "v4",
     label: "v4",
-    url: "https://www.shadcnui-blocks.com",
+    url: "https://calmui.dev",
     description:
       "Latest version built with Tailwind CSS v4 and enhanced components",
     isCurrentVersion: false,

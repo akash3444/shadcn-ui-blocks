@@ -4,7 +4,7 @@
   "title": "Logo Cloud 05",
   "description": "A simple logos block",
   "registryDependencies": [
-    "https://www.shadcnui-blocks.com/r/marquee.json"
+    "https://calmui.dev/r/marquee.json"
   ],
   "files": [
     {
