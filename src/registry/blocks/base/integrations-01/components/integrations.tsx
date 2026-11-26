@@ -28,7 +28,7 @@ export default function Integrations() {
               </p>
             </div>
 
-            <Button className="mt-6">
+            <Button className="mt-6" variant="outline">
               Connect <ArrowUpRight />
             </Button>
           </div>

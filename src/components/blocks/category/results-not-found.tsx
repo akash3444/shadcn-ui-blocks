@@ -19,7 +19,7 @@ export const ResultsNotFound = () => {
   return (
     <div className="mt-16 flex justify-center text-center">
       <div>
-        <span className="font-bold text-7xl">404</span>
+        <span className="font-medium text-7xl">404</span>
         <p className="mt-6 max-w-md text-lg">
           Could not find any result for query &quot;{query}&quot;. <br />
           Please try searching for something else.

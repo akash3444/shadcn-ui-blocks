@@ -1,105 +1,146 @@
-import { CircleCheck } from "lucide-react";
+import { Box, CircleCheck, Gem, type LucideIcon, Users } from "lucide-react";
 import { Badge } from "@/registry/bases/base/ui/badge";
 import { Button } from "@/registry/bases/base/ui/button";
-import { Separator } from "@/registry/bases/base/ui/separator";
 import { cn } from "@/lib/utils";
+import { BorderBeam } from "./magicui/border-beam";
 
-const plans = [
+interface PricingPlan {
+  name: string;
+  description: string;
+  price: number;
+  isRecommended: boolean;
+  icon: LucideIcon;
+  features: string[];
+}
+
+const pricingPlans: PricingPlan[] = [
   {
     name: "Starter",
-    price: 19,
-    description:
-      "Get 20 AI-generated portraits with 2 unique styles and filters.",
-    features: [
-      "5 hours turnaround time",
-      "20 AI portraits",
-      "Choice of 2 styles",
-      "Choice of 2 filters",
-      "2 retouch credits",
-    ],
-    buttonText: "Get 20 portraits in 5 hours",
-  },
-  {
-    name: "Advanced",
+    description: "Perfect for individuals.",
     price: 29,
-    isRecommended: true,
-    description:
-      "Get 50 AI-generated portraits with 5 unique styles and filters.",
+    isRecommended: false,
+    icon: Box,
     features: [
-      "3 hours turnaround time",
-      "50 AI portraits",
-      "Choice of 5 styles",
-      "Choice of 5 filters",
-      "5 retouch credits",
+      "1 Project",
+      "Basic Components",
+      "Email Support",
+      "Access to Updates for 6 Months",
+      "Community Access",
     ],
-    buttonText: "Get 50 portraits in 3 hours",
-    isPopular: true,
   },
   {
-    name: "Premium",
-    price: 49,
-    description:
-      "Get 100 AI-generated portraits with 10 unique styles and filters.",
+    name: "Pro",
+    description: "Ideal for professionals.",
+    price: 79,
+    isRecommended: true,
+    icon: Gem,
     features: [
-      "1-hour turnaround time",
-      "100 AI portraits",
-      "Choice of 10 styles",
-      "Choice of 10 filters",
-      "10 retouch credits",
+      "Unlimited Projects",
+      "Premium Components",
+      "Priority Support",
+      "Access to Updates for 1 Year",
+      "Code Snippets & Templates",
     ],
-    buttonText: "Get 100 portraits in 1 hour",
+  },
+  {
+    name: "Team",
+    description: "Best for growing teams.",
+    price: 199,
+    isRecommended: false,
+    icon: Users,
+    features: [
+      "Everything in Pro",
+      "Team License (up to 5 users)",
+      "Collaboration Features",
+      "Extended Support",
+      "Lifetime Updates",
+    ],
   },
 ];
 
 const Pricing = () => {
   return (
-    <div className="px-6 py-20">
-      <h2 className="text-center font-medium text-4xl tracking-tight">
-        Our Plans
+    <section className="mx-auto max-w-6xl px-6 py-20">
+      <h2 className="text-balance text-center font-medium text-4xl tracking-tight">
+        Pick your plan
       </h2>
-      <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] md:text-2xl">
-        Choose the plan that fits your needs
+      <p className="mt-2 text-balance text-center text-lg text-muted-foreground -tracking-[0.01em] sm:mt-4 sm:text-2xl">
+        Flexible pricing designed to grow with you ready
       </p>
 
-      <div className="mx-auto mt-12 grid max-w-(--breakpoint-lg) grid-cols-1 items-center gap-10 sm:mt-16 lg:grid-cols-3 lg:gap-0">
-        {plans.map((plan) => (
-          <div
-            className={cn(
-              "relative rounded-lg border bg-card p-7 lg:rounded-none lg:last:rounded-r-xl lg:first:rounded-l-xl",
-              {
-                "border-primary ring-1 ring-primary ring-inset": plan.isPopular,
-              }
-            )}
-            key={plan.name}
-          >
-            {plan.isPopular && (
-              <Badge className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2">
-                Most Popular
-              </Badge>
-            )}
-            <h3 className="font-medium text-lg">{plan.name}</h3>
-            <p className="mt-4 font-satoshi font-semibold text-4xl">
-              ${plan.price}
-            </p>
-            <p className="mt-4 text-muted-foreground">{plan.description}</p>
-            <Separator className="my-6" />
-            <ul className="space-y-2">
-              {plan.features.map((feature) => (
-                <li className="flex items-start gap-2" key={feature}>
-                  <CircleCheck className="mt-1 h-4 w-4 text-green-600" />
-                  {feature}
-                </li>
-              ))}
-            </ul>
-            <Button
-              className="mt-6 w-full"
-              size="lg"
-              variant={plan.isPopular ? "default" : "outline"}
-            >
-              {plan.buttonText}
-            </Button>
-          </div>
+      <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-8 overflow-clip sm:mt-16 sm:grid-cols-2 md:grid-cols-3">
+        {pricingPlans.map((plan) => (
+          <PlanCard key={plan.name} plan={plan} />
         ))}
+      </div>
+    </section>
+  );
+};
+
+const PlanCard = ({ plan }: { plan: PricingPlan }) => {
+  return (
+    <div
+      className={cn(
+        "relative flex flex-col rounded-xl border bg-muted/50 p-1 dark:bg-muted/75",
+        {
+          "shadow/5": plan.isRecommended,
+        }
+      )}
+    >
+      {plan.isRecommended && <BorderBeam duration={8} size={150} />}
+
+      <div className="shadow/5 dark:shadow/45 relative overflow-hidden rounded-lg border bg-background px-6 pt-5 pb-4">
+        {plan.isRecommended && (
+          <Badge className="absolute top-3 right-3 bg-primary/20 text-primary dark:bg-primary/30">
+            Most Popular
+          </Badge>
+        )}
+        {plan.isRecommended && (
+          <>
+            {/* Circuit Board - Light Pattern */}
+            <div
+              className="pointer-events-none absolute inset-0 -top-px -left-2 z-0 not-dark:opacity-50"
+              style={{
+                backgroundImage: `
+        repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),
+        radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)
+      `,
+                backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
+              }}
+            />
+          </>
+        )}
+        <plan.icon className="mb-5 text-primary" />
+        <div className="flex items-center gap-1">
+          <h3 className="font-medium text-2xl tracking-tight">{plan.name}</h3>
+        </div>
+        <p className="mt-1 mb-2 text-muted-foreground">{plan.description}</p>
+      </div>
+
+      <div className="shadow/5 dark:shadow/45 mt-1 grow rounded-lg border bg-background px-6 pt-5 pb-10">
+        <p className="mt-4 font-satoshi font-semibold text-4xl">
+          ${plan.price}
+        </p>
+        <p className="mt-1 text-muted-foreground text-sm tracking-normal">
+          one-time payment
+        </p>
+        <Button
+          className="my-6 w-full"
+          size="lg"
+          variant={plan.isRecommended ? "default" : "outline"}
+        >
+          Get Started
+        </Button>
+        <ul className="mt-4 space-y-2">
+          {plan.features.map((feature) => (
+            <li className="flex items-center gap-2" key={feature}>
+              <CircleCheck className="size-4 shrink-0 text-muted-foreground" />
+              {feature}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

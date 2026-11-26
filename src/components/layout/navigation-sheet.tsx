@@ -25,9 +25,9 @@ export function NavigationSheet() {
         <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
         <SheetHeader className="pb-4">
           <Link className="flex items-center gap-2" href="/">
-            <Logo className="font-bold" />
-            <span className="font-bold tracking-[-0.015em]">
-              Shadcn UI Blocks
+            <Logo />
+            <span className="font-medium text-base tracking-tight">
+              Calm UI
             </span>
           </Link>
         </SheetHeader>
@@ -50,13 +50,6 @@ export function NavigationSheet() {
               onClick={() => setOpen(false)}
             >
               Components
-            </Link>
-            <Link
-              className="block"
-              href="/templates"
-              onClick={() => setOpen(false)}
-            >
-              Templates
             </Link>
           </div>
         </ScrollArea>

@@ -32,14 +32,6 @@ export function AppNavigationMenu() {
             Components
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            className={navigationMenuTriggerStyle({ className: "h-7.5" })}
-            render={<Link href="/templates" />}
-          >
-            Templates
-          </NavigationMenuLink>
-        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );

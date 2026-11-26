@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Inter } from "next/font/google";
 import localFont from "next/font/local";
 import { absoluteUrl, cn } from "@/lib/utils";
 import "./globals.css";
@@ -7,16 +7,16 @@ import { ThemeProvider } from "next-themes";
 import type { WebSite, WithContext } from "schema-dts";
 import { ThemeToggle } from "@/components/app-sidebar/theme-toggle";
 import { CarbonAdTracker } from "@/components/carbon-ad-tracker";
+import { RenameAnnouncementDialog } from "@/components/rename-announcement-dialog";
 import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider as BaseTooltipProvider } from "@/components/ui/tooltip";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { siteConfig } from "@/config/site";
 import { PackageManagerProvider } from "@/providers/package-manager-provider";
 import { CSPostHogProvider } from "@/providers/posthog-provider";
-import { PrimitiveProvider } from "@/providers/primitive-provider";
-import { TooltipProvider as RadixTooltipProvider } from "@/registry/bases/radix/ui/tooltip";
 
-const geist = Geist({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-geist",
+  variable: "--font-inter",
 });
 
 const satoshi = localFont({
@@ -36,7 +36,6 @@ const satoshi = localFont({
 });
 
 const geistMono = Geist_Mono({
-  weight: ["400"],
   subsets: ["latin"],
   variable: "--font-geist-mono",
 });
@@ -44,41 +43,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(absoluteUrl("/")),
   title: {
-    default: "Shadcn UI Blocks & Components",
-    template: "%s | Shadcn UI Blocks",
+    default: siteConfig.title,
+    template: `%s · ${siteConfig.name}`,
   },
-  description:
-    "Browse ready-to-use shadcn/ui blocks and components. Preview designs, copy code, and add them to your project.",
-  icons: [
-    {
-      url: "/images/apple-touch-icon.png",
-      type: "image/png",
-      rel: "apple-touch-icon",
-    },
-    {
-      sizes: "16x16",
-      url: "/images/favicon-16x16.png",
-      type: "image/png",
-      rel: "icon",
-    },
-    {
-      sizes: "32x32",
-      url: "/images/favicon-32x32.png",
-      type: "image/png",
-      rel: "icon",
-    },
-  ],
+  description: siteConfig.description,
   openGraph: {
-    title: "Shadcn UI Blocks & Components",
-    description:
-      "Browse ready-to-use shadcn/ui blocks and components. Preview designs, copy code, and add them to your project.",
+    title: siteConfig.title,
+    description: siteConfig.description,
     type: "website",
     images: [
       {
         url: "/images/og-image.png",
         height: 630,
         width: 1200,
-        alt: "Shadcn UI Blocks & Components",
+        alt: siteConfig.title,
       },
     ],
   },
@@ -92,22 +70,13 @@ export default function RootLayout({
   const jsonLd: WithContext<WebSite> = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Shadcn UI Blocks",
+    name: siteConfig.name,
     url: absoluteUrl("/"),
   };
 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link
-          crossOrigin="anonymous"
-          href="https://cdn.fontshare.com"
-          rel="preconnect"
-        />
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=general-sans@1&display=swap"
-          rel="stylesheet"
-        />
         <script
           data-domain="www.shadcnui-blocks.com"
           data-website-id="67bf0ef528e2eaab259e0c50"
@@ -118,10 +87,10 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          geist.variable,
+          inter.variable,
           geistMono.variable,
           satoshi.variable,
-          "font-normal font-sans antialiased"
+          "font-sans antialiased"
         )}
       >
         <script
@@ -134,17 +103,14 @@ export default function RootLayout({
         <CarbonAdTracker />
         <CSPostHogProvider>
           <ThemeProvider attribute="class">
-            <BaseTooltipProvider>
-              <RadixTooltipProvider>
-                <PackageManagerProvider>
-                  <PrimitiveProvider>{children}</PrimitiveProvider>
-                </PackageManagerProvider>
-                <div className="fixed right-6 bottom-6">
-                  <ThemeToggle />
-                </div>
-                <Toaster />
-              </RadixTooltipProvider>
-            </BaseTooltipProvider>
+            <TooltipProvider>
+              <PackageManagerProvider>{children}</PackageManagerProvider>
+              <div className="fixed right-6 bottom-6">
+                <ThemeToggle />
+              </div>
+              <Toaster />
+              <RenameAnnouncementDialog />
+            </TooltipProvider>
           </ThemeProvider>
         </CSPostHogProvider>
       </body>

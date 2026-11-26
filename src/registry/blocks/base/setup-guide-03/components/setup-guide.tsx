@@ -19,7 +19,7 @@ export default function SetupGuide() {
             className={cn(
               "relative isolate flex items-center gap-5 px-6 py-4 sm:px-8",
               {
-                "bg-primary/8": step.status === "completed",
+                "bg-muted/50": step.status === "completed",
                 "cursor-pointer transition-colors hover:bg-muted/50":
                   step.status === "pending",
               }
@@ -56,7 +56,9 @@ export default function SetupGuide() {
               </div>
 
               <div className="leading-none">
-                {step.status === "completed" && <Badge>Completed</Badge>}
+                {step.status === "completed" && (
+                  <Badge variant="secondary">Completed</Badge>
+                )}
                 {step.status === "pending" && (
                   <Button className="-ml-2.5 sm:ml-0" size="sm" variant="ghost">
                     Start <ChevronRightIcon />

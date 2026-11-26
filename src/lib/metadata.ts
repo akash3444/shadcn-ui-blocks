@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { siteConfig } from "@/config/site";
 
 export const constructMetadata = (metadata: Metadata): Metadata => {
   return {
@@ -7,14 +8,14 @@ export const constructMetadata = (metadata: Metadata): Metadata => {
     openGraph: {
       title: metadata.title!,
       description: metadata.description!,
-      siteName: "Shadcn UI Blocks",
+      siteName: siteConfig.name,
       type: "website",
       images: [
         {
           url: "/images/og-image.png",
           height: 630,
           width: 1200,
-          alt: "Customized Shadcn UI Blocks & Components",
+          alt: siteConfig.title,
         },
       ],
       locale: "en_US",
@@ -26,7 +27,6 @@ export const constructMetadata = (metadata: Metadata): Metadata => {
         url: "https://twitter.com/akash_3444",
       },
     ],
-    manifest: "/site.webmanifest",
     ...metadata,
   };
 };

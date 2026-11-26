@@ -4,16 +4,18 @@ import ResetFiltersButton from "./reset-filters-button";
 
 const PreviewListFilter = ({ numberOfBlocks }: { numberOfBlocks: number }) => {
   return (
-    <div className="flex justify-between gap-2 max-sm:flex-col">
-      <div className="flex items-center gap-1 rounded-xl border border-border/70 bg-muted/50 p-1">
-        <CategoryFilter />
-        <PreviewListSearch />
-        <ResetFiltersButton />
-      </div>
+    <div className="sticky top-14 z-20 border-y border-dashed bg-background">
+      <div className="mx-auto flex max-w-(--breakpoint-2xl) items-center justify-between gap-4 px-6 py-4">
+        <div className="flex min-w-0 grow items-center gap-2 sm:grow-0">
+          <CategoryFilter />
+          <PreviewListSearch />
+          <ResetFiltersButton />
+        </div>
 
-      <div className="flex grow items-center gap-2 rounded-xl border border-border/70 bg-muted/50 px-4 max-sm:hidden">
-        <p className="ms-auto text-muted-foreground text-sm">
-          <span className="font-medium text-foreground">{numberOfBlocks}</span>{" "}
+        <p className="shrink-0 text-muted-foreground text-sm max-sm:hidden">
+          <span className="font-medium text-foreground tabular-nums">
+            {numberOfBlocks}
+          </span>{" "}
           {numberOfBlocks === 1 ? "block" : "blocks"} found
         </p>
       </div>

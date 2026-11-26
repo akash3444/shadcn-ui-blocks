@@ -1,5 +1,4 @@
 import {
-  ArrowUpRight,
   Cable,
   Code,
   Contrast,
@@ -7,8 +6,6 @@ import {
   SquareDashedMousePointer,
   Zap,
 } from "lucide-react";
-import Link from "next/link";
-import { Button } from "@/registry/bases/base/ui/button";
 
 const features = [
   {
@@ -53,38 +50,73 @@ const Features = () => {
   return (
     <div className="mx-auto flex max-w-7xl flex-col px-6 py-20">
       <h2 className="text-center text-4xl font-medium tracking-tight text-pretty">
-        Built to just work
+        Engineered for speed
       </h2>
       <p className="mt-3 text-pretty text-center text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
         Designed for speed, flexibility, and ease of use
       </p>
 
-      <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
           <div
-            className="rounded-xl border border-border/45 bg-muted/75 p-1 shadow-xs/3 dark:border-border/65"
+            className="relative overflow-hidden rounded-xl border bg-card p-6 dark:border-card-foreground/7"
             key={index}
           >
-            <div className="flex h-full flex-col rounded-lg border border-border/75 bg-card px-6 py-7 shadow-xs/1 dark:border-foreground/13">
-              <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/7 text-primary dark:bg-primary/10">
-                  <feature.icon className="h-5 w-5" />
-                </div>
-                <h3 className="font-medium text-lg tracking-[-0.005em]">
-                  {feature.title}
-                </h3>
-              </div>
-              <p className="my-4 text-foreground/80">{feature.description}</p>
-
-              <Button
-                className="me-auto mt-2"
-                render={<Link href="#" target="_blank" />}
-                size="sm"
-                variant="secondary"
-              >
-                Learn more <ArrowUpRight />
-              </Button>
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/5 text-primary dark:bg-primary/10">
+              <feature.icon />
             </div>
+            <h3 className="mt-5 font-medium text-lg tracking-[-0.005em]">
+              {feature.title}
+            </h3>
+            <p className="mt-2 text-foreground/80">{feature.description}</p>
+
+            <div
+              className="absolute inset-0 -top-px z-0"
+              style={{
+                backgroundImage: `
+        linear-gradient(to right, var(--border) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--border) 1px, transparent 1px)
+      `,
+                backgroundSize: "20px 20px",
+                backgroundPosition: "0 0, 0 0",
+                maskImage: `
+          repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 100% 80% at 100% 0%, #000 50%, transparent 100%)
+      `,
+                WebkitMaskImage: `
+    repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)
+      `,
+                maskComposite: "intersect",
+                WebkitMaskComposite: "source-in",
+              }}
+            />
           </div>
         ))}
       </div>

@@ -81,7 +81,7 @@ export async function GET(req: Request) {
         />
 
         <img
-          alt="Shadcn UI Blocks"
+          alt="Calm UI"
           src={`${origin}/images/og/03.png`}
           style={{ objectFit: "cover" }}
           tw="mt-auto h-full w-full"

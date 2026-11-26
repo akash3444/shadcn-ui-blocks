@@ -149,7 +149,7 @@ const Blog = () => {
               </div>
               <CardContent className="flex flex-col px-0 py-0 sm:ps-4 sm:pe-6">
                 <div className="flex items-center gap-6">
-                  <Badge className="bg-primary/5 text-primary shadow-none hover:bg-primary/5">
+                  <Badge className="shadow-none" variant="secondary">
                     {post.category}
                   </Badge>
                 </div>

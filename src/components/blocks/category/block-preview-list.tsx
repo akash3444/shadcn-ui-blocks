@@ -86,10 +86,10 @@ const BlockPreviewList = () => {
   const numberOfBlocks = filteredBlocks.length;
 
   return (
-    <div className="px-6">
+    <div>
       <PreviewListFilter numberOfBlocks={numberOfBlocks} />
 
-      <div className="mt-3">
+      <div className="mx-auto -mt-6 max-w-(--breakpoint-2xl) px-6">
         {filteredBlocks.length ? (
           <div className="grid grid-cols-1 gap-6">
             {visibleBlocks.map((block) => (

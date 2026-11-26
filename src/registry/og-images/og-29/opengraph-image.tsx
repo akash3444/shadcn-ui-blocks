@@ -41,7 +41,7 @@ export default async function Image() {
 
       <div tw="mt-4 flex w-full grow rounded-t-xl border border-gray-200 border-b-0">
         <img
-          alt="Shadcn UI Blocks"
+          alt="Calm UI"
           src="http://localhost:3000/images/og/03.png"
           style={{ objectFit: "cover" }}
           tw="mt-auto h-full w-full rounded-t-xl"

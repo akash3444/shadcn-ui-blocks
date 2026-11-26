@@ -1,153 +1,129 @@
-"use client";
-
-import NumberFlow from "@number-flow/react";
-import { ArrowUpRight, CircleCheck, CircleHelp } from "lucide-react";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
+import { Box, CircleCheck, Gem, type LucideIcon, Users } from "lucide-react";
 import { Badge } from "@/registry/bases/base/ui/badge";
 import { Button } from "@/registry/bases/base/ui/button";
 import { Separator } from "@/registry/bases/base/ui/separator";
-import { Tabs, TabsList, TabsTrigger } from "@/registry/bases/base/ui/tabs";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/bases/base/ui/tooltip";
+import { cn } from "@/lib/utils";
 
-const tooltipContent = {
-  styles: "Choose from a variety of styles to suit your preferences.",
-  filters: "Choose from a variety of filters to enhance your portraits.",
-  credits: "Use these credits to retouch your portraits.",
-};
+interface PricingPlan {
+  name: string;
+  description: string;
+  price: number;
+  isRecommended: boolean;
+  icon: LucideIcon;
+  features: string[];
+}
 
-const YEARLY_DISCOUNT = 20;
-const plans = [
+const pricingPlans: PricingPlan[] = [
   {
     name: "Starter",
-    price: 20,
-    description:
-      "Get 20 AI-generated portraits with 2 unique styles and filters.",
+    description: "Perfect for individuals just getting started.",
+    price: 29,
+    isRecommended: false,
+    icon: Box,
     features: [
-      { title: "5 hours turnaround time" },
-      { title: "20 AI portraits" },
-      { title: "Choice of 2 styles", tooltip: tooltipContent.styles },
-      { title: "Choice of 2 filters", tooltip: tooltipContent.filters },
-      { title: "2 retouch credits", tooltip: tooltipContent.credits },
+      "1 Project",
+      "Basic Components",
+      "Email Support",
+      "Access to Updates for 6 Months",
+      "Community Access",
     ],
   },
   {
-    name: "Advanced",
-    price: 40,
+    name: "Pro",
+    description: "Ideal for professionals who need more power.",
+    price: 79,
     isRecommended: true,
-    description:
-      "Get 50 AI-generated portraits with 5 unique styles and filters.",
+    icon: Gem,
     features: [
-      { title: "3 hours turnaround time" },
-      { title: "50 AI portraits" },
-      { title: "Choice of 5 styles", tooltip: tooltipContent.styles },
-      { title: "Choice of 5 filters", tooltip: tooltipContent.filters },
-      { title: "5 retouch credits", tooltip: tooltipContent.credits },
+      "Unlimited Projects",
+      "Premium Components",
+      "Priority Support",
+      "Access to Updates for 1 Year",
+      "Code Snippets & Templates",
     ],
-    isPopular: true,
   },
   {
-    name: "Premium",
-    price: 80,
-    description:
-      "Get 100 AI-generated portraits with 10 unique styles and filters.",
+    name: "Team",
+    description: "Best for growing teams and small businesses.",
+    price: 199,
+    isRecommended: false,
+    icon: Users,
     features: [
-      { title: "1-hour turnaround time" },
-      { title: "100 AI portraits" },
-      { title: "Choice of 10 styles", tooltip: tooltipContent.styles },
-      { title: "Choice of 10 filters", tooltip: tooltipContent.filters },
-      { title: "10 retouch credits", tooltip: tooltipContent.credits },
+      "Everything in Pro",
+      "Team License (up to 5 users)",
+      "Collaboration Features",
+      "Extended Support",
+      "Lifetime Updates",
     ],
   },
 ];
 
 const Pricing = () => {
-  const [selectedBillingPeriod, setSelectedBillingPeriod] = useState("monthly");
-
   return (
-    <div className="px-6 py-20">
+    <section className="mx-auto max-w-5xl px-6 py-20">
       <h2 className="text-center font-medium text-4xl tracking-tight">
-        Our Plans
+        Pricing that makes sense
       </h2>
       <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] md:text-2xl">
-        Choose the plan that fits your needs
+        Choose a plan that fits your needs with no hidden costs
       </p>
 
-      <Tabs
-        className="mt-8"
-        onValueChange={setSelectedBillingPeriod}
-        value={selectedBillingPeriod}
-      >
-        <TabsList className="mx-auto grid w-full max-w-2xs grid-cols-2">
-          <TabsTrigger value="monthly">Monthly</TabsTrigger>
-          <TabsTrigger value="yearly">
-            Yearly (Save {YEARLY_DISCOUNT}%)
-          </TabsTrigger>
-        </TabsList>
-      </Tabs>
-      <div className="mx-auto mt-12 grid max-w-(--breakpoint-lg) grid-cols-1 items-center gap-8 sm:mt-16 lg:grid-cols-3 lg:gap-0">
-        {plans.map((plan) => (
-          <div
-            className={cn("relative rounded-lg border bg-card/50 p-6 px-8", {
-              "z-1 overflow-hidden bg-card px-10 py-14 shadow-[0px_1px_6px_0px_rgba(0,0,0,0.07)] lg:-mx-2":
-                plan.isPopular,
-            })}
-            key={plan.name}
-          >
-            {plan.isPopular && (
-              <Badge className="absolute top-2 right-2 px-2.5 py-1 uppercase">
-                Most Popular
-              </Badge>
-            )}
-            <h3 className="font-medium text-lg">{plan.name}</h3>
-            <p className="mt-4 font-semibold text-4xl">
-              <NumberFlow
-                className="font-satoshi"
-                prefix="$"
-                value={
-                  selectedBillingPeriod === "monthly"
-                    ? plan.price
-                    : plan.price * ((100 - YEARLY_DISCOUNT) / 100)
-                }
-              />
-              <span className="ml-1.5 font-normal text-muted-foreground text-sm">
-                /month
-              </span>
-            </p>
-            <p className="mt-4 text-muted-foreground text-sm">
-              {plan.description}
-            </p>
-
-            <Button
-              className="mt-6 w-full rounded-full text-base"
-              size="lg"
-              variant={plan.isPopular ? "default" : "outline"}
-            >
-              Get Started <ArrowUpRight className="h-4 w-4" />
-            </Button>
-            <Separator className="my-8" />
-            <ul className="space-y-3">
-              {plan.features.map((feature) => (
-                <li className="flex items-start gap-1.5" key={feature.title}>
-                  <CircleCheck className="mt-1 h-4 w-4 text-green-600" />
-                  {feature.title}
-                  {feature.tooltip && (
-                    <Tooltip>
-                      <TooltipTrigger className="cursor-help">
-                        <CircleHelp className="mt-1 h-4 w-4 text-gray-500" />
-                      </TooltipTrigger>
-                      <TooltipContent>{feature.tooltip}</TooltipContent>
-                    </Tooltip>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
+      <div className="mt-12 grid grid-cols-1 gap-y-8 shadow-xs/2 sm:grid-cols-2 md:mt-16 md:grid-cols-3">
+        {pricingPlans.map((plan) => (
+          <PlanCard key={plan.name} plan={plan} />
         ))}
+      </div>
+    </section>
+  );
+};
+
+const PlanCard = ({ plan }: { plan: PricingPlan }) => {
+  return (
+    <div
+      className={cn("border bg-card", {
+        "relative border border-primary bg-card ring ring-primary ring-inset":
+          plan.isRecommended,
+      })}
+    >
+      {plan.isRecommended && (
+        <Badge className="absolute top-0 right-0 rounded-none">
+          Most Popular
+        </Badge>
+      )}
+      <div
+        className={cn("p-6", {
+          "bg-linear-to-bl from-primary/15": plan.isRecommended,
+        })}
+      >
+        <plan.icon className="mb-5 text-primary" />
+        <div className="flex items-center gap-1">
+          <h3 className="font-medium text-2xl tracking-tight">{plan.name}</h3>
+        </div>
+        <p className="my-2 text-muted-foreground">{plan.description}</p>
+      </div>
+      <Separator />
+      <div className="px-6 pt-5 pb-10">
+        <p className="mt-4 font-satoshi font-semibold text-4xl">
+          ${plan.price}
+        </p>
+        <p className="mt-1 text-muted-foreground text-sm tracking-normal">
+          one-time payment
+        </p>
+        <Button
+          className="my-6 w-full"
+          size="lg"
+          variant={plan.isRecommended ? "default" : "outline"}
+        >
+          Get Started
+        </Button>
+        <ul className="mt-4 space-y-2">
+          {plan.features.map((feature) => (
+            <li className="flex items-center gap-2" key={feature}>
+              <CircleCheck className="size-4 shrink-0 text-muted-foreground" />
+              {feature}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

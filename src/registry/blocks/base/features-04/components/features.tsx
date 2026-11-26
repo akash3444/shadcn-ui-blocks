@@ -64,7 +64,7 @@ const Features = () => {
           <Accordion className="w-full" defaultValue={["item-0"]}>
             {features.map(({ title, description, icon: Icon }, index) => (
               <AccordionItem
-                className="group/accordion-item data-[state=open]:border-primary data-[state=open]:border-b-2"
+                className="group/accordion-item data-[state=open]:border-foreground data-[state=open]:border-b-2"
                 key={title}
                 value={`item-${index}`}
               >

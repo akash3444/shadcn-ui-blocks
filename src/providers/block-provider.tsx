@@ -14,8 +14,6 @@ import { getFileTree } from "@/lib/file-tree";
 import { getRegistrySource } from "@/lib/registry-source";
 import { codeToHtml } from "@/lib/shiki";
 import type { BlockScreenSize, BlockScreenSizeUnion } from "@/types/blocks";
-import type { Theme } from "@/types/theme";
-import { usePrimitive } from "./primitive-provider";
 
 const BlockContext = createContext<{
   codeHtml: string | null;
@@ -27,10 +25,6 @@ const BlockContext = createContext<{
   selectFile: (file: string) => void;
   setScreenSize: (screenSize: BlockScreenSize) => void;
   block: (typeof blocks)[number];
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
-  colorTheme: string;
-  setColorTheme: (id: string) => void;
   iframeRef: React.RefObject<HTMLIFrameElement | null>;
   iframeSrc: string;
   handleIframeLoad: () => void;
@@ -57,34 +51,13 @@ const transformCode = (code: string) => {
     "@/config"
   );
 
-  // Replace `@/registry/.../ui` (e.g. `@/registry/bases/radix/ui`) with `@/components/ui`
+  // Replace `@/registry/.../ui` (e.g. `@/registry/bases/base/ui`) with `@/components/ui`
   transformedCode = transformedCode.replace(
     /@\/registry\/(.+)\/ui/g,
     "@/components/ui"
   );
 
   return transformedCode;
-};
-
-const getBlockFiles = (
-  block: (typeof blocks)[number],
-  primitive: "radix" | "base"
-) => {
-  if (block.primitives) {
-    return block.primitives[primitive].files;
-  }
-  return block.files ?? [];
-};
-
-const getBlockFilePath = (
-  block: (typeof blocks)[number],
-  primitive: "radix" | "base",
-  activeFile: string
-) => {
-  if (block.primitives) {
-    return `src/registry/blocks/${primitive}/${block.name}/${activeFile}`;
-  }
-  return `src/registry/blocks/shared/${block.name}/${activeFile}`;
 };
 
 export const BlockProvider = ({
@@ -100,38 +73,24 @@ export const BlockProvider = ({
     throw new Error("Block not found");
   }
 
-  const { selectedPrimitive } = usePrimitive();
+  const fileTree = getFileTree(block);
 
-  const activeFiles = getBlockFiles(block, selectedPrimitive);
-  const fileTree = getFileTree(
-    block as (typeof blocks)[number],
-    selectedPrimitive
-  );
-
-  const [activeFile, setActiveFile] = useState(activeFiles[0]?.path);
+  const [activeFile, setActiveFile] = useState(block.files[0]?.path);
   const [screenSize, setScreenSize] = useState<BlockScreenSizeUnion>("desktop");
   const [code, setCode] = useState<string | null>(null);
   const [codeHtml, setCodeHtml] = useState<string | null>(null);
   const [isLoadingCode, setIsLoadingCode] = useState(false);
 
-  const {
-    theme,
-    setTheme,
-    colorTheme,
-    setColorTheme,
-    iframeRef,
-    handleIframeLoad,
-  } = useBlockTheme();
+  const { iframeRef, handleIframeLoad } = useBlockTheme();
 
-  const iframeSrc = `/blocks/${block.name}/preview?primitive=${selectedPrimitive}`;
+  const iframeSrc = `/blocks/${block.name}/preview`;
 
-  // Reset active file when primitive changes
+  // Reset active file when the block changes
   useEffect(() => {
-    const files = getBlockFiles(block, selectedPrimitive);
-    setActiveFile(files[0]?.path);
-  }, [block, selectedPrimitive]);
+    setActiveFile(block.files[0]?.path);
+  }, [block]);
 
-  // Update the code content when the active file or primitive changes
+  // Update the code content when the active file changes
   useEffect(() => {
     const controller = new AbortController();
     const updateCodeContent = async () => {
@@ -141,11 +100,10 @@ export const BlockProvider = ({
       setIsLoadingCode(true);
 
       try {
-        const filePath = getBlockFilePath(block, selectedPrimitive, activeFile);
+        const filePath = `src/registry/blocks/base/${block.name}/${activeFile}`;
         const rawCode = await getRegistrySource({
           itemName: block.name,
           filePath,
-          primitive: selectedPrimitive,
           signal: controller.signal,
         });
         const transformedCode = transformCode(rawCode);
@@ -175,7 +133,7 @@ export const BlockProvider = ({
     updateCodeContent();
 
     return () => controller.abort();
-  }, [activeFile, block, selectedPrimitive]);
+  }, [activeFile, block]);
 
   return (
     <BlockContext.Provider
@@ -189,10 +147,6 @@ export const BlockProvider = ({
         setScreenSize,
         selectFile: setActiveFile,
         block,
-        theme,
-        setTheme,
-        colorTheme,
-        setColorTheme,
         iframeRef,
         iframeSrc,
         handleIframeLoad,

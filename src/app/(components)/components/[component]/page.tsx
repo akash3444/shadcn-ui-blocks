@@ -71,12 +71,14 @@ const CustomizedComponentPage = async (props: {
 
   return (
     <div>
-      <MainHeading>{details.title}</MainHeading>
-      <DescriptionText className="mt-2">{details.description}</DescriptionText>
+      <MainHeading className="mt-2">{details.title}</MainHeading>
+      <DescriptionText className="mt-1.5">
+        {details.description}
+      </DescriptionText>
 
       <div
         className={cn(
-          "mt-8 grid gap-1 rounded-xl border border-border/80 bg-muted/50 p-1",
+          "mt-8 grid gap-4",
           {
             "lg:grid-cols-2": details.columns === 2,
             "sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3":

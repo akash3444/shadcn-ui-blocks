@@ -10,7 +10,6 @@ interface RegistrySourceItem {
 interface GetRegistrySourceOptions {
   itemName: string;
   filePath: string;
-  primitive?: "base" | "radix";
   signal?: AbortSignal;
 }
 
@@ -22,14 +21,11 @@ export const findRegistrySource = (
 export const getRegistrySource = async ({
   itemName,
   filePath,
-  primitive,
   signal,
 }: GetRegistrySourceOptions) => {
-  const itemPath = `${encodeURIComponent(itemName)}.json`;
-  const registryUrl = primitive
-    ? `/r/${primitive}/${itemPath}`
-    : `/r/${itemPath}`;
-  const response = await fetch(registryUrl, { signal });
+  const response = await fetch(`/r/${encodeURIComponent(itemName)}.json`, {
+    signal,
+  });
 
   if (!response.ok) {
     throw new Error(`Could not load registry item: ${itemName}`);

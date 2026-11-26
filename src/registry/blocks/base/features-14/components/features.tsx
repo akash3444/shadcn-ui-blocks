@@ -1,9 +1,13 @@
 import {
   ArrowUpRightIcon,
   BinocularsIcon,
-  CogIcon,
+  GlobeIcon,
+  HouseIcon,
+  LockIcon,
   ShieldCheckIcon,
+  ZapIcon,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { Button } from "@/registry/bases/base/ui/button";
 
 const plusPoints = [
@@ -14,7 +18,7 @@ const plusPoints = [
       "Stay alert with instant notifications and smart security monitoring.",
   },
   {
-    icon: CogIcon,
+    icon: ZapIcon,
     title: "Smart & Simple Setup",
     description: "Install easily in minutes with no complex tools or wiring.",
   },
@@ -23,99 +27,69 @@ const plusPoints = [
     title: "Peace of Mind Anywhere",
     description: "Monitor and control your home from anywhere, anytime.",
   },
+  {
+    icon: HouseIcon,
+    title: "Smart Home Integration",
+    description:
+      "Easily connect with your favorite smart home devices and services.",
+  },
+  {
+    icon: GlobeIcon,
+    title: "Global Coverage",
+    description: "Monitor and control your home from anywhere, anytime.",
+  },
+  {
+    icon: LockIcon,
+    title: "Secure & Reliable",
+    description:
+      "Built with the latest security technologies to protect your home.",
+  },
 ];
 
 export default function Features() {
   return (
     <div
-      className="mx-auto max-w-(--breakpoint-xl) px-6 py-24 text-center"
+      className="mx-auto max-w-(--breakpoint-xl) overflow-clip px-8 py-24 text-center"
       id="why-choose-us"
     >
       <strong className="font-medium text-muted-foreground text-sm uppercase tracking-wide">
         Why Choose Us
       </strong>
-      <h2 className="mx-auto mt-5 max-w-[32ch] text-4xl/tight font-medium tracking-tight text-balance">
-        Pioneering smart assistants for two decades
+      <h2 className="mx-auto mt-5 max-w-4xl text-balance font-medium text-4xl leading-[1.3] tracking-tight">
+        Advanced home security solutions built for modern living
       </h2>
-      <p className="mt-5 text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
-        We are constantly always keep pace with the time.
+      <p className="mt-4 text-pretty text-muted-foreground text-xl -tracking-[0.01em] sm:text-2xl">
+        We are constantly always keep pace with the time
       </p>
 
-      <div className="mt-16 flex flex-wrap justify-center gap-4">
-        {plusPoints.map((plusPoint) => (
-          <div
-            className="relative w-full overflow-hidden rounded-lg border bg-linear-to-b from-foreground/3 px-6 py-10 sm:max-w-xs"
-            key={plusPoint.title}
-          >
-            <BackgroundPattern />
+      <div className="relative mx-auto mt-16 grid max-w-5xl grid-cols-1 border nth-3:border sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mask-y-from-95% absolute -inset-y-14 left-0 -translate-x-px border-s border-dashed" />
+        <div className="mask-y-from-95% absolute -inset-y-14 right-0 translate-x-px border-s border-dashed" />
+        <div className="mask-x-from-95% absolute -inset-x-14 top-0 -translate-y-px border-t border-dashed" />
+        <div className="mask-x-from-95% absolute -inset-x-14 bottom-0 translate-y-px border-b border-dashed" />
 
-            <div className="isolate flex flex-col items-center gap-2">
-              <plusPoint.icon className="size-14 stroke-[1.5px] text-foreground" />
-              <h3 className="mt-8 font-medium text-xl tracking-[-0.005em]">
-                {plusPoint.title}
-              </h3>
-              <p className="text-balance text-base text-muted-foreground">
-                {plusPoint.description}
-              </p>
-              <Button className="mt-6">
-                Learn More <ArrowUpRightIcon />
-              </Button>
-            </div>
+        {plusPoints.map((plusPoint, index) => (
+          <div
+            className={cn(
+              "relative -mt-px flex w-full flex-col items-center gap-2 border-t p-6 pt-9 odd:bg-muted/40",
+              "lg:not-[&:nth-child(3n+1)]:border-e",
+              "max-sm:odd:border-e-0 max-lg:odd:border-e"
+            )}
+            key={index}
+          >
+            <plusPoint.icon className="size-12 fill-foreground/10 stroke-[1.5px] text-foreground" />
+            <h3 className="mt-6 font-medium text-lg tracking-[-0.005em]">
+              {plusPoint.title}
+            </h3>
+            <p className="mb-6 text-balance text-muted-foreground">
+              {plusPoint.description}
+            </p>
+            <Button className="mt-auto font-medium" variant="link">
+              Learn More <ArrowUpRightIcon />
+            </Button>
           </div>
         ))}
       </div>
     </div>
-  );
-}
-
-function BackgroundPattern() {
-  return (
-    <div
-      className="absolute inset-0 -top-px -left-px"
-      style={{
-        backgroundImage: `
-        linear-gradient(to right, var(--border) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--border) 1px, transparent 1px)
-      `,
-        backgroundSize: "20px 20px",
-        backgroundPosition: "0 0, 0 0",
-        maskImage: `
-        repeating-linear-gradient(
-              to right,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            repeating-linear-gradient(
-              to bottom,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
-      `,
-        WebkitMaskImage: `
- repeating-linear-gradient(
-              to right,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            repeating-linear-gradient(
-              to bottom,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
-      `,
-        maskComposite: "intersect",
-        WebkitMaskComposite: "source-in",
-      }}
-    />
   );
 }

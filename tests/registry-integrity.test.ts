@@ -1,16 +1,11 @@
 import { existsSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import baseRegistry from "../registry-base.json";
-import radixRegistry from "../registry-radix.json";
+import registry from "../registry.json";
 import { blocks as blockCatalog } from "../src/registry/catalog/blocks";
 
 const root = process.cwd();
-const blocksDirectory = join(root, "src/registry/blocks");
-const registries = [
-  ["base", baseRegistry],
-  ["radix", radixRegistry],
-] as const;
+const blocksDirectory = join(root, "src/registry/blocks/base");
 
 const getSourceFiles = (directory: string): string[] => {
   const results: string[] = [];
@@ -26,79 +21,47 @@ const getSourceFiles = (directory: string): string[] => {
 };
 
 describe("registry integrity", () => {
-  it.each(registries)("has unique names in the %s registry", (_, registry) => {
+  it("has unique registry item names", () => {
     const names = registry.items.map((item) => item.name);
     expect(new Set(names).size).toBe(names.length);
   });
 
   it("registers every block source directory", () => {
-    const expected = {
-      shared: new Set(
-        blockCatalog
-          .filter((block) => block.source === "shared")
-          .map((block) => block.name)
-      ),
-      base: new Set(
-        blockCatalog
-          .filter((block) => block.source === "variants")
-          .map((block) => block.name)
-      ),
-      radix: new Set(
-        blockCatalog
-          .filter((block) => block.source === "variants")
-          .map((block) => block.name)
-      ),
-    };
+    const actual = readdirSync(blocksDirectory).filter((name) =>
+      statSync(join(blocksDirectory, name)).isDirectory()
+    );
 
-    for (const source of ["shared", "base", "radix"] as const) {
-      const actual = readdirSync(join(blocksDirectory, source)).filter((name) =>
-        statSync(join(blocksDirectory, source, name)).isDirectory()
-      );
-      expect(new Set(actual)).toEqual(expected[source]);
-    }
+    expect(new Set(actual)).toEqual(
+      new Set(blockCatalog.map((block) => block.name))
+    );
   });
 
   it.each(
-    registries.flatMap(([primitive, registry]) =>
-      registry.items.flatMap((item) =>
-        item.files.map(
-          (file) =>
-            [primitive, item.name, file.path] as [string, string, string]
-        )
-      )
+    registry.items.flatMap((item) =>
+      item.files.map((file) => [item.name, file.path] as [string, string])
     )
-  )("the %s registry file %s:%s exists", (_, _itemName, filePath) => {
+  )("registry file %s:%s exists", (_itemName, filePath) => {
     expect(existsSync(join(root, filePath))).toBe(true);
   });
 
   it.each(
-    registries.flatMap(([primitive, registry]) =>
-      registry.items
-        .filter((item) => item.type === "registry:block")
-        .flatMap((block) => {
-          const source = block.files[0]?.path.split("/")[3];
-          const directory = join(blocksDirectory, source, block.name);
-          const registeredPaths = new Set(
-            block.files.map((file) => join(root, file.path))
-          );
-          return getSourceFiles(directory).map(
-            (file) =>
-              [primitive, block.name, file, registeredPaths] as [
-                string,
-                string,
-                string,
-                Set<string>,
-              ]
-          );
-        })
-    )
-  )("the %s registry lists source file %s:%s", (_primitive, _blockName, file, registeredPaths) => {
+    registry.items
+      .filter((item) => item.type === "registry:block")
+      .flatMap((block) => {
+        const directory = join(blocksDirectory, block.name);
+        const registeredPaths = new Set(
+          block.files.map((file) => join(root, file.path))
+        );
+        return getSourceFiles(directory).map(
+          (file) =>
+            [block.name, file, registeredPaths] as [string, string, Set<string>]
+        );
+      })
+  )("the registry lists source file %s:%s", (_blockName, file, registeredPaths) => {
     expect(registeredPaths.has(file)).toBe(true);
   });
 
-  it.each(
-    registries
-  )("uses valid file types in the %s registry", (_, registry) => {
+  it("uses valid file types", () => {
     const validTypes = new Set([
       "registry:component",
       "registry:ui",

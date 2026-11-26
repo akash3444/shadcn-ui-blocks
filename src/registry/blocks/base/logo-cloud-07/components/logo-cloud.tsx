@@ -8,44 +8,37 @@ import {
   Logo07,
   Logo08,
 } from "@/components/logos";
-import { Marquee } from "@/registry/bases/base/ui/marquee";
 
 const LogoCloud = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center px-6">
-      <div className="overflow-hidden">
-        <p className="text-center font-medium text-foreground/80 text-xl">
-          More than 2.2 million companies worldwide already trust us
-        </p>
-
-        <div className="mt-14 max-w-(--breakpoint-lg) space-y-8">
-          <Marquee
-            className="mask-x-from-75% [--duration:40s] *:h-10 [&_svg]:mr-10"
-            pauseOnHover
-          >
-            <Logo01 />
-            <Logo02 />
-            <Logo03 />
-            <Logo04 />
-            <Logo05 />
-            <Logo06 />
-            <Logo07 />
-            <Logo08 />
-          </Marquee>
-          <Marquee
-            className="mask-x-from-75% [--duration:40s] *:h-10 [&_svg]:mr-10"
-            pauseOnHover
-            reverse
-          >
-            <Logo08 />
-            <Logo07 />
-            <Logo06 />
-            <Logo05 />
-            <Logo04 />
-            <Logo03 />
-            <Logo02 />
-            <Logo01 />
-          </Marquee>
+    <div className="px-6 py-12">
+      <p className="text-balance text-center font-medium text-foreground/80 text-lg">
+        Trusted by teams and companies around the world
+      </p>
+      <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 place-items-center gap-x-4 gap-y-4 grayscale-100 sm:grid-cols-3 md:grid-cols-4">
+        <div className="flex w-full items-center justify-center rounded-xl bg-muted px-3 py-7">
+          <Logo01 className="h-7 sm:h-8" />
+        </div>
+        <div className="flex w-full items-center justify-center rounded-xl bg-muted px-3 py-7">
+          <Logo02 className="h-7 sm:h-8" />
+        </div>
+        <div className="flex w-full items-center justify-center rounded-xl bg-muted px-3 py-7">
+          <Logo03 className="h-7 sm:h-8" />
+        </div>
+        <div className="flex w-full items-center justify-center rounded-xl bg-muted px-3 py-7">
+          <Logo04 className="h-7 sm:h-8" />
+        </div>
+        <div className="flex w-full items-center justify-center rounded-xl bg-muted px-3 py-7">
+          <Logo05 className="h-7 sm:h-8" />
+        </div>
+        <div className="flex w-full items-center justify-center rounded-xl bg-muted px-3 py-7">
+          <Logo06 className="h-7 sm:h-8" />
+        </div>
+        <div className="flex w-full items-center justify-center rounded-xl bg-muted px-3 py-7">
+          <Logo07 className="h-7 sm:h-8" />
+        </div>
+        <div className="flex w-full items-center justify-center rounded-xl bg-muted px-3 py-7">
+          <Logo08 className="h-7 sm:h-8" />
         </div>
       </div>
     </div>
