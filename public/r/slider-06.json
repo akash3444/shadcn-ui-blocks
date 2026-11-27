@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-06",
+  "title": "Slider with Steps",
+  "description": "A slider that snaps to fixed steps with value markers",
+  "registryDependencies": [
+    "slider"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/slider/slider-06.tsx",
+      "content": "import { Slider } from \"@/registry/ui/slider\";\n\nconst STEP = 25;\nconst MAX = 100;\nconst steps = Array.from({ length: MAX / STEP + 1 }, (_, index) => index * STEP);\n\nexport default function SliderStepsDemo() {\n  return (\n    <div className=\"w-full max-w-sm\">\n      <span className=\"sr-only\" id=\"slider-steps-label\">\n        Zoom\n      </span>\n      <Slider\n        aria-labelledby=\"slider-steps-label\"\n        defaultValue={[50]}\n        max={MAX}\n        step={STEP}\n      />\n      <div\n        aria-hidden=\"true\"\n        className=\"relative mt-3 h-4 text-muted-foreground text-xs tabular-nums\"\n      >\n        {steps.map((value) => {\n          if (value === 0) {\n            return (\n              <span className=\"absolute left-0\" key={value}>\n                {value}\n              </span>\n            );\n          }\n          if (value === MAX) {\n            return (\n              <span className=\"absolute right-0\" key={value}>\n                {value}\n              </span>\n            );\n          }\n          return (\n            <span\n              className=\"absolute -translate-x-1/2\"\n              key={value}\n              style={{\n                left: `calc(0.375rem + ${value / MAX} * (100% - 0.75rem))`,\n              }}\n            >\n              {value}\n            </span>\n          );\n        })}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

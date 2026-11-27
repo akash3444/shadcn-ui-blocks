@@ -32,6 +32,10 @@ Any change that affects what the shadcn registry serves must be followed by a re
 - The build never deletes old output. When an item is removed or renamed, delete its stale `public/r/<name>.json` by hand.
 - Commit the regenerated `registry.json` and `public/r` files together with the source change.
 
+## No comments in pattern code
+
+Pattern files in `src/components/customized/` are copied straight into users' projects, so they must not contain any comments (`//`, `/* */` or `{/* */}`). Keep them self-explanatory through naming instead.
+
 ---
 
 # Ultracite Code Standards

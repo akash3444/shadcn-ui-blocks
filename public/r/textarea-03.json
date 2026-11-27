@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "src/components/customized/textarea/textarea-03.tsx",
-      "content": "import { Textarea } from \"@/registry/ui/textarea\";\n\nexport default function TextareaDisabledDemo() {\n  return <Textarea disabled placeholder=\"Type your message here.\" />;\n}\n",
+      "content": "import { Textarea } from \"@/registry/ui/textarea\";\n\nexport default function TextareaDisabledDemo() {\n  return <Textarea className=\"max-w-sm\" disabled placeholder=\"Type your message here.\" />;\n}\n",
       "type": "registry:component"
     }
   ],
