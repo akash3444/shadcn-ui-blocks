@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-04",
+  "title": "Card with Form",
+  "description": "A sign-in card with email and password fields and a submit button in the footer",
+  "registryDependencies": [
+    "button",
+    "card",
+    "field",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/card/card-04.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\";\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/ui/card\";\nimport { Field, FieldGroup, FieldLabel } from \"@/registry/ui/field\";\nimport { Input } from \"@/registry/ui/input\";\n\nexport default function CardFormDemo() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Sign in to your account</CardTitle>\n        <CardDescription>\n          Enter your email and password to continue.\n        </CardDescription>\n      </CardHeader>\n      <CardContent>\n        <form id=\"card-login-form\">\n          <FieldGroup>\n            <Field>\n              <FieldLabel htmlFor=\"card-login-email\">Email</FieldLabel>\n              <Input\n                autoComplete=\"email\"\n                id=\"card-login-email\"\n                placeholder=\"you@example.com\"\n                required\n                type=\"email\"\n              />\n            </Field>\n            <Field>\n              <FieldLabel htmlFor=\"card-login-password\">Password</FieldLabel>\n              <Input\n                autoComplete=\"current-password\"\n                id=\"card-login-password\"\n                required\n                type=\"password\"\n              />\n            </Field>\n          </FieldGroup>\n        </form>\n      </CardContent>\n      <CardFooter>\n        <Button className=\"w-full\" form=\"card-login-form\" type=\"submit\">\n          Sign in\n        </Button>\n      </CardFooter>\n    </Card>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

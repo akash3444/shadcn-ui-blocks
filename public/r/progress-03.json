@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-03",
+  "title": "File Upload Progress",
+  "description": "A file row with name, size and upload progress",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "progress"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/progress/progress-03.tsx",
+      "content": "import { FileIcon } from \"lucide-react\";\n\nimport { Progress, ProgressLabel, ProgressValue } from \"@/registry/ui/progress\";\n\nexport default function ProgressFileUploadDemo() {\n  return (\n    <div className=\"w-full max-w-sm rounded-lg border p-3\">\n      <Progress className=\"items-center\" value={68}>\n        <div className=\"flex size-9 shrink-0 items-center justify-center rounded-md bg-muted\">\n          <FileIcon className=\"size-4 text-muted-foreground\" />\n        </div>\n        <div className=\"flex min-w-0 flex-1 flex-col gap-0.5\">\n          <ProgressLabel className=\"truncate\">\n            quarterly-report-2026.pdf\n          </ProgressLabel>\n          <span className=\"text-muted-foreground text-xs\">\n            3.2 MB of 4.7 MB\n          </span>\n        </div>\n        <ProgressValue />\n      </Progress>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

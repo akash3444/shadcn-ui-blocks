@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-02",
+  "title": "Compact Pagination",
+  "description": "Previous and next controls with a page count label",
+  "registryDependencies": [
+    "pagination"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/pagination/pagination-02.tsx",
+      "content": "import {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/registry/ui/pagination\";\n\nconst currentPage = 3;\nconst totalPages = 10;\n\nexport default function PaginationCompactDemo() {\n  return (\n    <Pagination>\n      <PaginationContent className=\"gap-3\">\n        <PaginationItem>\n          <PaginationPrevious href=\"#\" />\n        </PaginationItem>\n        <PaginationItem className=\"text-muted-foreground text-sm tabular-nums\">\n          Page{\" \"}\n          <span className=\"font-medium text-foreground\">{currentPage}</span> of{\" \"}\n          <span className=\"font-medium text-foreground\">{totalPages}</span>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationNext href=\"#\" />\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

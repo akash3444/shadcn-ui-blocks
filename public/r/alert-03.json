@@ -13,7 +13,7 @@
   "files": [
     {
       "path": "src/components/customized/alert/alert-03.tsx",
-      "content": "import { CircleFadingArrowUpIcon } from \"lucide-react\";\nimport {\n  Alert,\n  AlertAction,\n  AlertDescription,\n  AlertTitle,\n} from \"@/registry/ui/alert\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport default function AlertWithActionDemo() {\n  return (\n    <Alert>\n      <CircleFadingArrowUpIcon />\n      <AlertTitle>Update available</AlertTitle>\n      <AlertDescription>\n        A new version of the app is now available.\n      </AlertDescription>\n      <AlertAction>\n        <Button size=\"xs\">Update</Button>\n      </AlertAction>\n    </Alert>\n  );\n}\n",
+      "content": "import { CircleFadingArrowUpIcon } from \"lucide-react\";\nimport {\n  Alert,\n  AlertAction,\n  AlertDescription,\n  AlertTitle,\n} from \"@/registry/ui/alert\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport default function AlertWithActionDemo() {\n  return (\n    <Alert className=\"max-w-sm\">\n      <CircleFadingArrowUpIcon />\n      <AlertTitle>Update available</AlertTitle>\n      <AlertDescription>\n        A new version of the app is now available.\n      </AlertDescription>\n      <AlertAction>\n        <Button size=\"xs\">Update</Button>\n      </AlertAction>\n    </Alert>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

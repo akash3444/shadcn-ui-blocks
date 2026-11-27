@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-08",
+  "title": "Input with Button",
+  "description": "An email input with a trailing subscribe button",
+  "registryDependencies": [
+    "field",
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/input/input-08.tsx",
+      "content": "import { Field, FieldLabel } from \"@/registry/ui/field\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n} from \"@/registry/ui/input-group\";\n\nexport default function InputWithButtonDemo() {\n  return (\n    <Field className=\"max-w-xs\">\n      <FieldLabel htmlFor=\"input-subscribe\">Newsletter</FieldLabel>\n      <InputGroup>\n        <InputGroupInput\n          id=\"input-subscribe\"\n          placeholder=\"you@example.com\"\n          type=\"email\"\n        />\n        <InputGroupAddon align=\"inline-end\">\n          <InputGroupButton variant=\"secondary\">Subscribe</InputGroupButton>\n        </InputGroupAddon>\n      </InputGroup>\n    </Field>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

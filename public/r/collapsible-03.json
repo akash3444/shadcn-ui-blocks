@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-03",
+  "title": "Collapsible File Tree",
+  "description": "Nested collapsible folders and files with chevron icons",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "collapsible"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/collapsible/collapsible-03.tsx",
+      "content": "import { ChevronRight, File, Folder } from \"lucide-react\";\n\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@/registry/ui/collapsible\";\n\ntype FileNode = {\n  name: string;\n  children?: FileNode[];\n};\n\nconst fileTree: FileNode[] = [\n  {\n    name: \"app\",\n    children: [\n      { name: \"layout.tsx\" },\n      { name: \"page.tsx\" },\n      {\n        name: \"dashboard\",\n        children: [{ name: \"page.tsx\" }, { name: \"loading.tsx\" }],\n      },\n    ],\n  },\n  {\n    name: \"components\",\n    children: [\n      {\n        name: \"ui\",\n        children: [{ name: \"button.tsx\" }, { name: \"card.tsx\" }],\n      },\n      { name: \"header.tsx\" },\n    ],\n  },\n  { name: \"package.json\" },\n  { name: \"README.md\" },\n];\n\nfunction FileTreeItem({ node }: { node: FileNode }) {\n  if (!node.children) {\n    return (\n      <li>\n        <Button className=\"w-full justify-start\" size=\"sm\" variant=\"ghost\">\n          <span aria-hidden=\"true\" className=\"size-3.5\" />\n          <File className=\"text-muted-foreground\" />\n          {node.name}\n        </Button>\n      </li>\n    );\n  }\n\n  return (\n    <li>\n      <Collapsible defaultOpen={node.name === \"app\"}>\n        <CollapsibleTrigger\n          render={\n            <Button\n              className=\"w-full justify-start\"\n              size=\"sm\"\n              variant=\"ghost\"\n            />\n          }\n        >\n          <ChevronRight className=\"text-muted-foreground transition-transform group-data-panel-open/button:rotate-90\" />\n          <Folder className=\"text-muted-foreground\" />\n          {node.name}\n        </CollapsibleTrigger>\n        <CollapsibleContent>\n          <ul className=\"ml-4 border-l pl-1\">\n            {node.children.map((child) => (\n              <FileTreeItem key={child.name} node={child} />\n            ))}\n          </ul>\n        </CollapsibleContent>\n      </Collapsible>\n    </li>\n  );\n}\n\nexport default function CollapsibleFileTreeDemo() {\n  return (\n    <ul className=\"w-full max-w-xs\">\n      {fileTree.map((node) => (\n        <FileTreeItem key={node.name} node={node} />\n      ))}\n    </ul>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

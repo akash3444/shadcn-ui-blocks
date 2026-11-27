@@ -3,7 +3,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/registry/ui/alert";
 
 export default function AlertDemo() {
   return (
-    <Alert>
+    <Alert className="max-w-sm">
       <CircleFadingArrowUpIcon className="size-4" />
       <AlertTitle>Update Available</AlertTitle>
       <AlertDescription>

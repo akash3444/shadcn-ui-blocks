@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-03",
+  "title": "Tooltip on Icon Button",
+  "description": "A tooltip that labels an icon-only button",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/tooltip/tooltip-03.tsx",
+      "content": "import { PlusIcon } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/registry/ui/tooltip\";\n\nexport default function TooltipIconButtonDemo() {\n  return (\n    <TooltipProvider>\n      <Tooltip>\n        <TooltipTrigger\n          render={\n            <Button aria-label=\"Add to library\" size=\"icon\" variant=\"outline\" />\n          }\n        >\n          <PlusIcon />\n        </TooltipTrigger>\n        <TooltipContent>\n          <p>Add to library</p>\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

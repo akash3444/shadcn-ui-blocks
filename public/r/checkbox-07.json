@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-07",
+  "title": "Checkbox Choice Card",
+  "description": "Checkboxes presented as selectable cards with a title and description",
+  "registryDependencies": [
+    "checkbox",
+    "field"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/checkbox/checkbox-07.tsx",
+      "content": "import { Checkbox } from \"@/registry/ui/checkbox\";\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n  FieldTitle,\n} from \"@/registry/ui/field\";\n\nconst addons = [\n  {\n    id: \"backups\",\n    title: \"Daily backups\",\n    description: \"Automatic snapshots kept for 30 days.\",\n    checked: true,\n  },\n  {\n    id: \"analytics\",\n    title: \"Advanced analytics\",\n    description: \"Detailed reports on traffic and usage.\",\n    checked: false,\n  },\n  {\n    id: \"support\",\n    title: \"Priority support\",\n    description: \"Get answers from our team within an hour.\",\n    checked: false,\n  },\n];\n\nexport default function CheckboxChoiceCardDemo() {\n  return (\n    <FieldGroup className=\"max-w-sm gap-3\">\n      {addons.map((addon) => (\n        <FieldLabel htmlFor={`checkbox-addon-${addon.id}`} key={addon.id}>\n          <Field orientation=\"horizontal\">\n            <Checkbox\n              defaultChecked={addon.checked}\n              id={`checkbox-addon-${addon.id}`}\n            />\n            <FieldContent>\n              <FieldTitle>{addon.title}</FieldTitle>\n              <FieldDescription>{addon.description}</FieldDescription>\n            </FieldContent>\n          </Field>\n        </FieldLabel>\n      ))}\n    </FieldGroup>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

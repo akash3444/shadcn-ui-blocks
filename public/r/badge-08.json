@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-08",
+  "title": "Badge with Status Dot",
+  "description": "Badges with a coloured status dot for online, away and offline",
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/badge/badge-08.tsx",
+      "content": "import { Badge } from \"@/registry/ui/badge\";\n\nconst statuses = [\n  { label: \"Online\", dotClassName: \"bg-emerald-500\" },\n  { label: \"Away\", dotClassName: \"bg-amber-500\" },\n  { label: \"Offline\", dotClassName: \"bg-muted-foreground\" },\n];\n\nconst StatusDotBadgeDemo = () => (\n  <div className=\"flex flex-wrap items-center gap-2\">\n    {statuses.map((status) => (\n      <Badge key={status.label} variant=\"outline\">\n        <span\n          aria-hidden=\"true\"\n          className={`size-2 rounded-full ${status.dotClassName}`}\n          data-icon=\"inline-start\"\n        />\n        {status.label}\n      </Badge>\n    ))}\n  </div>\n);\n\nexport default StatusDotBadgeDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

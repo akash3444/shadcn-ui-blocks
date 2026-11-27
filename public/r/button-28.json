@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-28",
+  "title": "Button with Icon",
+  "description": "Buttons with leading and trailing icons",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/button/button-28.tsx",
+      "content": "import { ArrowRightIcon, DownloadIcon, MailIcon } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nconst ButtonWithIconDemo = () => (\n  <div className=\"flex flex-wrap items-center gap-2\">\n    <Button>\n      <MailIcon data-icon=\"inline-start\" /> Login with Email\n    </Button>\n    <Button variant=\"outline\">\n      <DownloadIcon data-icon=\"inline-start\" /> Download\n    </Button>\n    <Button variant=\"secondary\">\n      Continue <ArrowRightIcon data-icon=\"inline-end\" />\n    </Button>\n  </div>\n);\n\nexport default ButtonWithIconDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

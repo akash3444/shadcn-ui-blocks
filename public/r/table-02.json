@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-02",
+  "title": "Table with Footer",
+  "description": "A table with footer rows showing subtotal, tax and total",
+  "registryDependencies": [
+    "table"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/table/table-02.tsx",
+      "content": "import {\n  Table,\n  TableBody,\n  TableCell,\n  TableFooter,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@/registry/ui/table\";\n\nconst lineItems = [\n  { id: \"design\", description: \"Design system audit\", hours: 12, rate: 120 },\n  { id: \"build\", description: \"Component development\", hours: 32, rate: 110 },\n  { id: \"docs\", description: \"Documentation\", hours: 8, rate: 90 },\n  { id: \"review\", description: \"Accessibility review\", hours: 6, rate: 130 },\n];\n\nconst TAX_RATE = 0.1;\n\nconst currency = new Intl.NumberFormat(\"en-US\", {\n  style: \"currency\",\n  currency: \"USD\",\n});\n\nconst subtotal = lineItems.reduce(\n  (total, item) => total + item.hours * item.rate,\n  0\n);\nconst tax = subtotal * TAX_RATE;\n\nexport default function TableWithFooterDemo() {\n  return (\n    <Table>\n      <TableHeader>\n        <TableRow>\n          <TableHead>Description</TableHead>\n          <TableHead className=\"text-right\">Hours</TableHead>\n          <TableHead className=\"text-right\">Rate</TableHead>\n          <TableHead className=\"text-right\">Amount</TableHead>\n        </TableRow>\n      </TableHeader>\n      <TableBody>\n        {lineItems.map((item) => (\n          <TableRow key={item.id}>\n            <TableCell className=\"font-medium\">{item.description}</TableCell>\n            <TableCell className=\"text-right\">{item.hours}</TableCell>\n            <TableCell className=\"text-right\">\n              {currency.format(item.rate)}\n            </TableCell>\n            <TableCell className=\"text-right\">\n              {currency.format(item.hours * item.rate)}\n            </TableCell>\n          </TableRow>\n        ))}\n      </TableBody>\n      <TableFooter>\n        <TableRow>\n          <TableCell colSpan={3}>Subtotal</TableCell>\n          <TableCell className=\"text-right\">\n            {currency.format(subtotal)}\n          </TableCell>\n        </TableRow>\n        <TableRow>\n          <TableCell colSpan={3}>Tax (10%)</TableCell>\n          <TableCell className=\"text-right\">{currency.format(tax)}</TableCell>\n        </TableRow>\n        <TableRow>\n          <TableCell colSpan={3}>Total</TableCell>\n          <TableCell className=\"text-right\">\n            {currency.format(subtotal + tax)}\n          </TableCell>\n        </TableRow>\n      </TableFooter>\n    </Table>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

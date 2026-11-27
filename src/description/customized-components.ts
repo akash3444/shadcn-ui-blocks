@@ -16,6 +16,16 @@ export const customizedComponents = {
       "title": "Disabled",
       "type": "accordion",
       "name": "accordion-03"
+    },
+    {
+      "title": "With icons",
+      "type": "accordion",
+      "name": "accordion-04"
+    },
+    {
+      "title": "Bordered",
+      "type": "accordion",
+      "name": "accordion-05"
     }
   ],
   "alert": [
@@ -33,6 +43,16 @@ export const customizedComponents = {
       "title": "With action",
       "type": "alert",
       "name": "alert-03"
+    },
+    {
+      "title": "Title only",
+      "type": "alert",
+      "name": "alert-04"
+    },
+    {
+      "title": "With list",
+      "type": "alert",
+      "name": "alert-05"
     }
   ],
   "alert-dialog": [
@@ -50,6 +70,16 @@ export const customizedComponents = {
       "title": "With media",
       "type": "alert-dialog",
       "name": "alert-dialog-03"
+    },
+    {
+      "title": "Destructive",
+      "type": "alert-dialog",
+      "name": "alert-dialog-04"
+    },
+    {
+      "title": "Confirm with input",
+      "type": "alert-dialog",
+      "name": "alert-dialog-05"
     }
   ],
   "avatar": [
@@ -129,6 +159,16 @@ export const customizedComponents = {
       "title": "With icon",
       "type": "badge",
       "name": "badge-07"
+    },
+    {
+      "title": "Status dot",
+      "type": "badge",
+      "name": "badge-08"
+    },
+    {
+      "title": "Count",
+      "type": "badge",
+      "name": "badge-09"
     }
   ],
   "button": [
@@ -186,6 +226,21 @@ export const customizedComponents = {
       "title": "As link",
       "type": "button",
       "name": "button-27"
+    },
+    {
+      "title": "With icon",
+      "type": "button",
+      "name": "button-28"
+    },
+    {
+      "title": "Button group",
+      "type": "button",
+      "name": "button-29"
+    },
+    {
+      "title": "Split button",
+      "type": "button",
+      "name": "button-30"
     }
   ],
   "card": [
@@ -203,6 +258,21 @@ export const customizedComponents = {
       "title": "With image",
       "type": "card",
       "name": "card-03"
+    },
+    {
+      "title": "Form",
+      "type": "card",
+      "name": "card-04"
+    },
+    {
+      "title": "With header action",
+      "type": "card",
+      "name": "card-05"
+    },
+    {
+      "title": "Stat card",
+      "type": "card",
+      "name": "card-06"
     }
   ],
   "checkbox": [
@@ -235,6 +305,11 @@ export const customizedComponents = {
       "title": "Horizontal",
       "type": "checkbox",
       "name": "checkbox-06"
+    },
+    {
+      "title": "Choice card",
+      "type": "checkbox",
+      "name": "checkbox-07"
     }
   ],
   "dropdown-menu": [
@@ -262,6 +337,11 @@ export const customizedComponents = {
       "title": "Shortcuts & destructive",
       "type": "dropdown-menu",
       "name": "dropdown-menu-05"
+    },
+    {
+      "title": "Account menu",
+      "type": "dropdown-menu",
+      "name": "dropdown-menu-06"
     }
   ],
   "input": [
@@ -294,6 +374,26 @@ export const customizedComponents = {
       "title": "Character count",
       "type": "input",
       "name": "input-06"
+    },
+    {
+      "title": "With icon",
+      "type": "input",
+      "name": "input-07"
+    },
+    {
+      "title": "With button",
+      "type": "input",
+      "name": "input-08"
+    },
+    {
+      "title": "Password toggle",
+      "type": "input",
+      "name": "input-09"
+    },
+    {
+      "title": "Prefix and suffix",
+      "type": "input",
+      "name": "input-10"
     }
   ],
   "breadcrumb": [
@@ -311,6 +411,16 @@ export const customizedComponents = {
       "title": "Custom separator",
       "type": "breadcrumb",
       "name": "breadcrumb-03"
+    },
+    {
+      "title": "With dropdown",
+      "type": "breadcrumb",
+      "name": "breadcrumb-04"
+    },
+    {
+      "title": "Responsive",
+      "type": "breadcrumb",
+      "name": "breadcrumb-05"
     }
   ],
   "carousel": [
@@ -328,6 +438,16 @@ export const customizedComponents = {
       "title": "Vertical",
       "type": "carousel",
       "name": "carousel-03"
+    },
+    {
+      "title": "Dot indicators",
+      "type": "carousel",
+      "name": "carousel-04"
+    },
+    {
+      "title": "Thumbnails",
+      "type": "carousel",
+      "name": "carousel-05"
     }
   ],
   "collapsible": [
@@ -335,6 +455,16 @@ export const customizedComponents = {
       "title": "Default",
       "type": "collapsible",
       "name": "collapsible-01"
+    },
+    {
+      "title": "Show more",
+      "type": "collapsible",
+      "name": "collapsible-02"
+    },
+    {
+      "title": "File tree",
+      "type": "collapsible",
+      "name": "collapsible-03"
     }
   ],
   "input-otp": [
@@ -352,6 +482,16 @@ export const customizedComponents = {
       "title": "Disabled",
       "type": "input-otp",
       "name": "input-otp-03"
+    },
+    {
+      "title": "With separator",
+      "type": "input-otp",
+      "name": "input-otp-04"
+    },
+    {
+      "title": "Invalid",
+      "type": "input-otp",
+      "name": "input-otp-05"
     }
   ],
   "navigation-menu": [
@@ -359,6 +499,11 @@ export const customizedComponents = {
       "title": "Default",
       "type": "navigation-menu",
       "name": "navigation-menu-01"
+    },
+    {
+      "title": "With descriptions",
+      "type": "navigation-menu",
+      "name": "navigation-menu-02"
     }
   ],
   "pagination": [
@@ -366,6 +511,16 @@ export const customizedComponents = {
       "title": "Default",
       "type": "pagination",
       "name": "pagination-01"
+    },
+    {
+      "title": "Compact",
+      "type": "pagination",
+      "name": "pagination-02"
+    },
+    {
+      "title": "Rows per page",
+      "type": "pagination",
+      "name": "pagination-03"
     }
   ],
   "progress": [
@@ -378,6 +533,16 @@ export const customizedComponents = {
       "title": "With label",
       "type": "progress",
       "name": "progress-02"
+    },
+    {
+      "title": "File upload",
+      "type": "progress",
+      "name": "progress-03"
+    },
+    {
+      "title": "Steps",
+      "type": "progress",
+      "name": "progress-04"
     }
   ],
   "radio-group": [
@@ -395,6 +560,16 @@ export const customizedComponents = {
       "title": "Horizontal",
       "type": "radio-group",
       "name": "radio-group-03"
+    },
+    {
+      "title": "With description",
+      "type": "radio-group",
+      "name": "radio-group-04"
+    },
+    {
+      "title": "Choice card",
+      "type": "radio-group",
+      "name": "radio-group-05"
     }
   ],
   "select": [
@@ -422,6 +597,21 @@ export const customizedComponents = {
       "title": "Disabled item",
       "type": "select",
       "name": "select-05"
+    },
+    {
+      "title": "With icons",
+      "type": "select",
+      "name": "select-06"
+    },
+    {
+      "title": "Invalid",
+      "type": "select",
+      "name": "select-07"
+    },
+    {
+      "title": "With label and description",
+      "type": "select",
+      "name": "select-08"
     }
   ],
   "separator": [
@@ -429,6 +619,16 @@ export const customizedComponents = {
       "title": "Default",
       "type": "separator",
       "name": "separator-01"
+    },
+    {
+      "title": "Vertical",
+      "type": "separator",
+      "name": "separator-02"
+    },
+    {
+      "title": "With label",
+      "type": "separator",
+      "name": "separator-03"
     }
   ],
   "slider": [
@@ -515,6 +715,11 @@ export const customizedComponents = {
       "title": "Disabled",
       "type": "switch",
       "name": "switch-05"
+    },
+    {
+      "title": "Settings list",
+      "type": "switch",
+      "name": "switch-06"
     }
   ],
   "table": [
@@ -522,6 +727,26 @@ export const customizedComponents = {
       "title": "Default",
       "type": "table",
       "name": "table-01"
+    },
+    {
+      "title": "With footer",
+      "type": "table",
+      "name": "table-02"
+    },
+    {
+      "title": "With actions",
+      "type": "table",
+      "name": "table-03"
+    },
+    {
+      "title": "Row selection",
+      "type": "table",
+      "name": "table-04"
+    },
+    {
+      "title": "With status badges",
+      "type": "table",
+      "name": "table-05"
     }
   ],
   "tabs": [
@@ -544,6 +769,16 @@ export const customizedComponents = {
       "title": "Disabled",
       "type": "tabs",
       "name": "tabs-04"
+    },
+    {
+      "title": "With icons",
+      "type": "tabs",
+      "name": "tabs-05"
+    },
+    {
+      "title": "With badges",
+      "type": "tabs",
+      "name": "tabs-06"
     }
   ],
   "textarea": [
@@ -571,6 +806,11 @@ export const customizedComponents = {
       "title": "Character count",
       "type": "textarea",
       "name": "textarea-05"
+    },
+    {
+      "title": "With button",
+      "type": "textarea",
+      "name": "textarea-06"
     }
   ],
   "tooltip": [
@@ -583,6 +823,16 @@ export const customizedComponents = {
       "title": "Sides",
       "type": "tooltip",
       "name": "tooltip-02"
+    },
+    {
+      "title": "Icon button",
+      "type": "tooltip",
+      "name": "tooltip-03"
+    },
+    {
+      "title": "With shortcut",
+      "type": "tooltip",
+      "name": "tooltip-04"
     }
   ]
 } as const;

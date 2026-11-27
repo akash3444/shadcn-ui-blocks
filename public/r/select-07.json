@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-07",
+  "title": "Invalid Select",
+  "description": "A select in an invalid state with an error message",
+  "registryDependencies": [
+    "field",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/select/select-07.tsx",
+      "content": "import { Field, FieldError, FieldLabel } from \"@/registry/ui/field\";\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/ui/select\";\n\nconst countries = [\n  { label: \"Canada\", value: \"ca\" },\n  { label: \"Germany\", value: \"de\" },\n  { label: \"India\", value: \"in\" },\n  { label: \"United States\", value: \"us\" },\n];\n\nexport default function SelectInvalidDemo() {\n  return (\n    <Field className=\"max-w-xs\" data-invalid>\n      <FieldLabel htmlFor=\"select-invalid\">Country</FieldLabel>\n      <Select items={countries}>\n        <SelectTrigger aria-invalid className=\"w-full\" id=\"select-invalid\">\n          <SelectValue placeholder=\"Select a country\" />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectGroup>\n            {countries.map((country) => (\n              <SelectItem key={country.value} value={country.value}>\n                {country.label}\n              </SelectItem>\n            ))}\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n      <FieldError>Select a country to continue.</FieldError>\n    </Field>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

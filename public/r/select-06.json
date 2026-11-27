@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-06",
+  "title": "Select with Icons",
+  "description": "A select whose items and selected value show leading icons",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/select/select-06.tsx",
+      "content": "\"use client\";\n\nimport {\n  CircleCheckIcon,\n  CircleDashedIcon,\n  CircleDotIcon,\n  CircleXIcon,\n} from \"lucide-react\";\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/ui/select\";\n\nconst statuses = [\n  { label: \"Backlog\", value: \"backlog\", icon: CircleDashedIcon },\n  { label: \"In progress\", value: \"in-progress\", icon: CircleDotIcon },\n  { label: \"Done\", value: \"done\", icon: CircleCheckIcon },\n  { label: \"Canceled\", value: \"canceled\", icon: CircleXIcon },\n];\n\nexport default function SelectWithIconsDemo() {\n  return (\n    <Select defaultValue=\"in-progress\" items={statuses}>\n      <SelectTrigger aria-label=\"Status\" className=\"w-[180px]\">\n        <SelectValue>\n          {(value: string) => {\n            const status = statuses.find((item) => item.value === value);\n            if (!status) {\n              return \"Select a status\";\n            }\n            const StatusIcon = status.icon;\n            return (\n              <>\n                <StatusIcon className=\"text-muted-foreground\" />\n                {status.label}\n              </>\n            );\n          }}\n        </SelectValue>\n      </SelectTrigger>\n      <SelectContent>\n        <SelectGroup>\n          {statuses.map((status) => (\n            <SelectItem key={status.value} value={status.value}>\n              <status.icon className=\"text-muted-foreground\" />\n              {status.label}\n            </SelectItem>\n          ))}\n        </SelectGroup>\n      </SelectContent>\n    </Select>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

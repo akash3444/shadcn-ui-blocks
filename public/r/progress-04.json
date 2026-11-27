@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-04",
+  "title": "Step Progress",
+  "description": "A progress bar showing the current step out of the total",
+  "registryDependencies": [
+    "progress"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/progress/progress-04.tsx",
+      "content": "\"use client\";\n\nimport { Progress, ProgressLabel, ProgressValue } from \"@/registry/ui/progress\";\n\nconst currentStep = 3;\nconst totalSteps = 5;\n\nexport default function ProgressStepsDemo() {\n  return (\n    <Progress className=\"w-full max-w-sm\" max={totalSteps} value={currentStep}>\n      <ProgressLabel>Set up your workspace</ProgressLabel>\n      <ProgressValue>\n        {() => `Step ${currentStep} of ${totalSteps}`}\n      </ProgressValue>\n    </Progress>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

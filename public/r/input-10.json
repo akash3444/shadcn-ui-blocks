@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-10",
+  "title": "Input with Prefix and Suffix",
+  "description": "A website input with a text prefix and suffix",
+  "registryDependencies": [
+    "field",
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/input/input-10.tsx",
+      "content": "import { Field, FieldLabel } from \"@/registry/ui/field\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@/registry/ui/input-group\";\n\nexport default function InputPrefixSuffixDemo() {\n  return (\n    <Field className=\"max-w-xs\">\n      <FieldLabel htmlFor=\"input-website\">Website</FieldLabel>\n      <InputGroup>\n        <InputGroupAddon>\n          <InputGroupText>https://</InputGroupText>\n        </InputGroupAddon>\n        <InputGroupInput id=\"input-website\" placeholder=\"example\" />\n        <InputGroupAddon align=\"inline-end\">\n          <InputGroupText>.com</InputGroupText>\n        </InputGroupAddon>\n      </InputGroup>\n    </Field>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

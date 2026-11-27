@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-05",
+  "title": "Table with Status Badges",
+  "description": "A table with a status column using badge variants",
+  "registryDependencies": [
+    "badge",
+    "table"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/table/table-05.tsx",
+      "content": "import { Badge } from \"@/registry/ui/badge\";\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@/registry/ui/table\";\n\ntype DeploymentStatus = \"Ready\" | \"Building\" | \"Queued\" | \"Failed\";\n\nconst statusVariants: Record<\n  DeploymentStatus,\n  \"default\" | \"secondary\" | \"outline\" | \"destructive\"\n> = {\n  Ready: \"default\",\n  Building: \"secondary\",\n  Queued: \"outline\",\n  Failed: \"destructive\",\n};\n\nconst deployments: {\n  id: string;\n  branch: string;\n  status: DeploymentStatus;\n  duration: string;\n}[] = [\n  { id: \"dpl_8f2a\", branch: \"main\", status: \"Ready\", duration: \"1m 12s\" },\n  {\n    id: \"dpl_3c9d\",\n    branch: \"feat/billing\",\n    status: \"Building\",\n    duration: \"48s\",\n  },\n  { id: \"dpl_7b1e\", branch: \"fix/nav-focus\", status: \"Queued\", duration: \"—\" },\n  {\n    id: \"dpl_2e4f\",\n    branch: \"chore/deps\",\n    status: \"Failed\",\n    duration: \"2m 03s\",\n  },\n  { id: \"dpl_9a6c\", branch: \"main\", status: \"Ready\", duration: \"1m 08s\" },\n];\n\nexport default function TableStatusBadgesDemo() {\n  return (\n    <Table>\n      <TableHeader>\n        <TableRow>\n          <TableHead>Deployment</TableHead>\n          <TableHead>Branch</TableHead>\n          <TableHead>Status</TableHead>\n          <TableHead className=\"text-right\">Duration</TableHead>\n        </TableRow>\n      </TableHeader>\n      <TableBody>\n        {deployments.map((deployment) => (\n          <TableRow key={deployment.id}>\n            <TableCell className=\"font-medium font-mono\">\n              {deployment.id}\n            </TableCell>\n            <TableCell>{deployment.branch}</TableCell>\n            <TableCell>\n              <Badge variant={statusVariants[deployment.status]}>\n                {deployment.status}\n              </Badge>\n            </TableCell>\n            <TableCell className=\"text-right\">{deployment.duration}</TableCell>\n          </TableRow>\n        ))}\n      </TableBody>\n    </Table>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

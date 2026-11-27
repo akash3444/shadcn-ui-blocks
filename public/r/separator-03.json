@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-03",
+  "title": "Separator with Label",
+  "description": "A horizontal separator with a centred label",
+  "registryDependencies": [
+    "separator"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/separator/separator-03.tsx",
+      "content": "import { Separator } from \"@/registry/ui/separator\";\n\nexport default function SeparatorWithLabelDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm items-center gap-3\">\n      <Separator className=\"flex-1\" />\n      <span className=\"text-muted-foreground text-xs uppercase\">\n        Or continue with\n      </span>\n      <Separator className=\"flex-1\" />\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

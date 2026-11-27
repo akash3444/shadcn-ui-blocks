@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-03",
+  "title": "Pagination with Rows per Page",
+  "description": "A rows per page select alongside pagination controls",
+  "registryDependencies": [
+    "field",
+    "pagination",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/pagination/pagination-03.tsx",
+      "content": "import { Field, FieldLabel } from \"@/registry/ui/field\";\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/registry/ui/pagination\";\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/ui/select\";\n\nconst rowsPerPageOptions = [\n  { label: \"10\", value: \"10\" },\n  { label: \"20\", value: \"20\" },\n  { label: \"50\", value: \"50\" },\n  { label: \"100\", value: \"100\" },\n];\n\nexport default function PaginationRowsPerPageDemo() {\n  return (\n    <div className=\"flex w-full max-w-xl flex-wrap items-center justify-between gap-4\">\n      <Field className=\"w-fit\" orientation=\"horizontal\">\n        <FieldLabel htmlFor=\"pagination-rows-per-page\">\n          Rows per page\n        </FieldLabel>\n        <Select defaultValue=\"10\" items={rowsPerPageOptions}>\n          <SelectTrigger className=\"w-20\" id=\"pagination-rows-per-page\">\n            <SelectValue />\n          </SelectTrigger>\n          <SelectContent>\n            <SelectGroup>\n              {rowsPerPageOptions.map((option) => (\n                <SelectItem key={option.value} value={option.value}>\n                  {option.label}\n                </SelectItem>\n              ))}\n            </SelectGroup>\n          </SelectContent>\n        </Select>\n      </Field>\n      <Pagination className=\"mx-0 w-auto\">\n        <PaginationContent>\n          <PaginationItem>\n            <PaginationPrevious href=\"#\" />\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationLink href=\"#\" isActive>\n              1\n            </PaginationLink>\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationLink href=\"#\">2</PaginationLink>\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationLink href=\"#\">3</PaginationLink>\n          </PaginationItem>\n          <PaginationItem>\n            <PaginationNext href=\"#\" />\n          </PaginationItem>\n        </PaginationContent>\n      </Pagination>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

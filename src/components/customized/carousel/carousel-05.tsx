@@ -1,0 +1,69 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import {
+  Carousel,
+  type CarouselApi,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/registry/ui/carousel";
+
+const slides = [1, 2, 3, 4, 5];
+
+export default function CarouselThumbnailsDemo() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    const updateSelectedIndex = () => {
+      setSelectedIndex(api.selectedScrollSnap());
+    };
+
+    updateSelectedIndex();
+    api.on("select", updateSelectedIndex);
+    api.on("reInit", updateSelectedIndex);
+
+    return () => {
+      api.off("select", updateSelectedIndex);
+      api.off("reInit", updateSelectedIndex);
+    };
+  }, [api]);
+
+  return (
+    <div className="w-full max-w-xs">
+      <Carousel setApi={setApi}>
+        <CarouselContent>
+          {slides.map((slide) => (
+            <CarouselItem key={slide}>
+              <div className="flex aspect-14/9 items-center justify-center rounded-xl border font-semibold text-4xl">
+                {slide}
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+      <div className="mt-3 grid grid-cols-5 gap-2">
+        {slides.map((slide, index) => (
+          <button
+            aria-current={index === selectedIndex ? "true" : undefined}
+            aria-label={`Go to slide ${slide}`}
+            className="flex aspect-square items-center justify-center rounded-md border font-medium text-sm opacity-50 transition-opacity hover:opacity-100 aria-[current=true]:border-primary aria-[current=true]:opacity-100"
+            key={slide}
+            onClick={() => api?.scrollTo(index)}
+            type="button"
+          >
+            {slide}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-06",
+  "title": "Account Dropdown Menu",
+  "description": "An avatar-triggered account menu with user details, links and log out",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "avatar",
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/dropdown-menu/dropdown-menu-06.tsx",
+      "content": "import {\n  CreditCardIcon,\n  LogOutIcon,\n  SettingsIcon,\n  UserIcon,\n} from \"lucide-react\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/registry/ui/avatar\";\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/registry/ui/dropdown-menu\";\n\nexport default function DropdownMenuAccountDemo() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger\n        render={\n          <Button\n            aria-label=\"Open account menu\"\n            className=\"rounded-full\"\n            size=\"icon\"\n            variant=\"ghost\"\n          />\n        }\n      >\n        <Avatar>\n          <AvatarImage alt=\"@shadcn\" src=\"https://github.com/shadcn.png\" />\n          <AvatarFallback>CN</AvatarFallback>\n        </Avatar>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent align=\"end\" className=\"w-56\">\n        <DropdownMenuGroup>\n          <DropdownMenuLabel className=\"flex flex-col\">\n            <span className=\"text-foreground text-sm\">shadcn</span>\n            <span className=\"font-normal\">m@example.com</span>\n          </DropdownMenuLabel>\n        </DropdownMenuGroup>\n        <DropdownMenuSeparator />\n        <DropdownMenuGroup>\n          <DropdownMenuItem>\n            <UserIcon /> Profile\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <CreditCardIcon /> Billing\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <SettingsIcon /> Settings\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n        <DropdownMenuSeparator />\n        <DropdownMenuGroup>\n          <DropdownMenuItem>\n            <LogOutIcon /> Log out\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}
