@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-05",
+  "title": "Spinner Loading State",
+  "description": "A spinner in an empty state while content is processing",
+  "registryDependencies": [
+    "button",
+    "empty",
+    "spinner"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/spinner/spinner-05.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\";\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@/registry/ui/empty\";\nimport { Spinner } from \"@/registry/ui/spinner\";\n\nconst SpinnerLoadingStateDemo = () => (\n  <Empty className=\"w-full\">\n    <EmptyHeader>\n      <EmptyMedia variant=\"icon\">\n        <Spinner />\n      </EmptyMedia>\n      <EmptyTitle>Processing your request</EmptyTitle>\n      <EmptyDescription>\n        This can take a few seconds. Please don&apos;t refresh the page.\n      </EmptyDescription>\n    </EmptyHeader>\n    <EmptyContent>\n      <Button size=\"sm\" variant=\"outline\">\n        Cancel\n      </Button>\n    </EmptyContent>\n  </Empty>\n);\n\nexport default SpinnerLoadingStateDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

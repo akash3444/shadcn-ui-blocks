@@ -423,6 +423,26 @@ export const customizedComponents = {
       "title": "Default",
       "type": "spinner",
       "name": "spinner-01"
+    },
+    {
+      "title": "Sizes",
+      "type": "spinner",
+      "name": "spinner-02"
+    },
+    {
+      "title": "Colors",
+      "type": "spinner",
+      "name": "spinner-03"
+    },
+    {
+      "title": "Input group",
+      "type": "spinner",
+      "name": "spinner-04"
+    },
+    {
+      "title": "Loading state",
+      "type": "spinner",
+      "name": "spinner-05"
     }
   ],
   "switch": [
