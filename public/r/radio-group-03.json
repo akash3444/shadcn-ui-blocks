@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-03",
+  "title": "Horizontal Radio Group",
+  "description": "Radio group options laid out in a row",
+  "registryDependencies": [
+    "label",
+    "radio-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/radio-group/radio-group-03.tsx",
+      "content": "import { Label } from \"@/registry/ui/label\";\nimport { RadioGroup, RadioGroupItem } from \"@/registry/ui/radio-group\";\n\nconst sizes = [\n  { value: \"small\", label: \"Small\" },\n  { value: \"medium\", label: \"Medium\" },\n  { value: \"large\", label: \"Large\" },\n];\n\nexport default function RadioGroupHorizontalDemo() {\n  return (\n    <RadioGroup\n      aria-label=\"Size\"\n      className=\"flex w-fit flex-wrap gap-6\"\n      defaultValue=\"medium\"\n    >\n      {sizes.map((size) => (\n        <div className=\"flex items-center gap-2\" key={size.value}>\n          <RadioGroupItem id={`size-${size.value}`} value={size.value} />\n          <Label htmlFor={`size-${size.value}`}>{size.label}</Label>\n        </div>\n      ))}\n    </RadioGroup>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-06",
+  "title": "Input with Character Count",
+  "description": "An input with a live character count and limit",
+  "registryDependencies": [
+    "field",
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/input/input-06.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { Field, FieldLabel } from \"@/registry/ui/field\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n} from \"@/registry/ui/input-group\";\n\nconst MAX_LENGTH = 20;\n\nexport default function InputCharacterCountDemo() {\n  const [value, setValue] = useState(\"\");\n\n  return (\n    <Field className=\"max-w-xs\">\n      <FieldLabel htmlFor=\"input-username-count\">Username</FieldLabel>\n      <InputGroup>\n        <InputGroupInput\n          id=\"input-username-count\"\n          maxLength={MAX_LENGTH}\n          onChange={(event) => setValue(event.target.value)}\n          placeholder=\"shadcn\"\n          value={value}\n        />\n        <InputGroupAddon align=\"inline-end\">\n          <InputGroupText className=\"tabular-nums\">\n            {value.length}/{MAX_LENGTH}\n          </InputGroupText>\n        </InputGroupAddon>\n      </InputGroup>\n    </Field>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}
