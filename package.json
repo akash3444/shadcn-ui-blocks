@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
+    "@databuddy/sdk": "^3.5.6",
     "@hookform/resolvers": "^3.9.1",
     "@number-flow/react": "^0.6.0",
     "@paper-design/shaders-react": "^0.0.71",

@@ -1,3 +1,4 @@
+import { track } from "@databuddy/sdk";
 import posthog from "posthog-js";
 
 interface AnalyticsEvents {
@@ -41,9 +42,31 @@ interface AnalyticsEvents {
   "marketing:hero_cta_click": { cta: string };
 }
 
+const databuddyEvents: {
+  [K in keyof AnalyticsEvents]?: (properties?: AnalyticsEvents[K]) => void;
+} = {
+  "block:install_command_copied": (p) =>
+    track("block_install_command_copied", {
+      package_manager: p?.package_manager,
+    }),
+  "block:code_copied": () => track("block_code_copied"),
+  "component:install_command_copied": (p) =>
+    track("component_install_command_copied", {
+      component_type: p?.component_type,
+      package_manager: p?.package_manager,
+    }),
+  "component:code_copied": (p) =>
+    track("component_code_copied", {
+      component_type: p?.component_type,
+      source: p?.source,
+    }),
+  "marketing:hero_cta_click": (p) => track("hero_cta_clicked", { cta: p?.cta }),
+};
+
 export function capture<T extends keyof AnalyticsEvents>(
   event: T,
   properties?: AnalyticsEvents[T]
 ): void {
   posthog.capture(event, properties);
+  databuddyEvents[event]?.(properties);
 }

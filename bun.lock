@@ -6,6 +6,7 @@
       "name": "shadcn-ui-blocks",
       "dependencies": {
         "@base-ui/react": "^1.4.1",
+        "@databuddy/sdk": "^3.5.6",
         "@hookform/resolvers": "^3.9.1",
         "@number-flow/react": "^0.6.0",
         "@paper-design/shaders-react": "^0.0.71",
@@ -159,6 +160,8 @@
     "@clack/prompts": ["@clack/prompts@0.11.0", "", { "dependencies": { "@clack/core": "0.5.0", "picocolors": "1.1.1", "sisteransi": "1.0.5" } }, "sha512-pMN5FcrEw9hUkZA4f+zLlzivQSeQf5dRGJjSUbvVYDLvpKCdQx5OaknvKzgbtXOizhP+SJJJjqEbOe55uKKfAw=="],
 
     "@cspotcode/source-map-support": ["@cspotcode/source-map-support@0.8.1", "", { "dependencies": { "@jridgewell/trace-mapping": "0.3.9" } }, "sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw=="],
+
+    "@databuddy/sdk": ["@databuddy/sdk@3.5.6", "", { "peerDependencies": { "react": ">=18", "vue": ">=3.5" }, "optionalPeers": ["react", "vue"] }, "sha512-aIjlG5T82L1+TqAeN31tezvw0DTOW4Ib+esfQA+SWpqavkapz21VAcyuIBpBygMLq9IcgDdlXDcaOBS82pR65Q=="],
 
     "@date-fns/tz": ["@date-fns/tz@1.4.1", "", {}, "sha512-P5LUNhtbj6YfI3iJjw5EL9eUAG6OitD0W3fWQcpQjDRc/QIsL0tRNuO1PcDvPccWL1fSTXXdE1ds+l95DV/OFA=="],
 

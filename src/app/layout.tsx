@@ -1,3 +1,4 @@
+import { DatabuddyProvider } from "@databuddy/sdk/react";
 import type { Metadata } from "next";
 import { Geist_Mono, Inter } from "next/font/google";
 import localFont from "next/font/local";
@@ -113,6 +114,12 @@ export default function RootLayout({
             </TooltipProvider>
           </ThemeProvider>
         </CSPostHogProvider>
+        <DatabuddyProvider
+          autocapture={{ interactions: false, outgoingLinks: true }}
+          clientId={process.env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID}
+          replay
+          skipPaths={["/blocks/*/preview"]}
+        />
       </body>
     </html>
   );
