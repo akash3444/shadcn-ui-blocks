@@ -26,6 +26,16 @@ export const customizedComponents = {
       "title": "Bordered",
       "type": "accordion",
       "name": "accordion-05"
+    },
+    {
+      "title": "Contained",
+      "type": "accordion",
+      "name": "accordion-06"
+    },
+    {
+      "title": "Nested",
+      "type": "accordion",
+      "name": "accordion-07"
     }
   ],
   "alert": [
@@ -40,19 +50,29 @@ export const customizedComponents = {
       "name": "alert-02"
     },
     {
-      "title": "With action",
+      "title": "Success",
       "type": "alert",
       "name": "alert-03"
     },
     {
-      "title": "Title only",
+      "title": "Warning",
       "type": "alert",
       "name": "alert-04"
     },
     {
-      "title": "With list",
+      "title": "With action",
       "type": "alert",
       "name": "alert-05"
+    },
+    {
+      "title": "Title only",
+      "type": "alert",
+      "name": "alert-06"
+    },
+    {
+      "title": "With list",
+      "type": "alert",
+      "name": "alert-07"
     }
   ],
   "alert-dialog": [
@@ -521,6 +541,11 @@ export const customizedComponents = {
       "title": "Rows per page",
       "type": "pagination",
       "name": "pagination-03"
+    },
+    {
+      "title": "Previous and next cards",
+      "type": "pagination",
+      "name": "pagination-04"
     }
   ],
   "progress": [
@@ -661,6 +686,16 @@ export const customizedComponents = {
       "title": "Steps",
       "type": "slider",
       "name": "slider-06"
+    },
+    {
+      "title": "Steps with marks",
+      "type": "slider",
+      "name": "slider-07"
+    },
+    {
+      "title": "Audio player",
+      "type": "slider",
+      "name": "slider-08"
     }
   ],
   "spinner": [

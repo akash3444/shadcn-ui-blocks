@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-06",
+  "title": "Contained Accordion",
+  "description": "An accordion wrapped in a single bordered container",
+  "registryDependencies": [
+    "accordion"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/accordion/accordion-06.tsx",
+      "content": "import {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@/registry/ui/accordion\";\n\nconst items = [\n  {\n    value: \"shipping\",\n    title: \"How long does shipping usually take?\",\n    content:\n      \"Domestic shipping typically takes 3-5 business days, while international orders may take up to 2-3 weeks.\",\n  },\n  {\n    value: \"returns\",\n    title: \"What is your return policy?\",\n    content:\n      \"We offer a 30-day return policy for most products. Items must be unused and in their original packaging.\",\n  },\n  {\n    value: \"support\",\n    title: \"How can I contact support?\",\n    content:\n      \"You can reach our support team by email or live chat, Monday to Friday, 9am to 6pm.\",\n  },\n];\n\nexport default function AccordionContainedDemo() {\n  return (\n    <Accordion className=\"my-4 w-full max-w-lg rounded-lg border\">\n      {items.map(({ value, title, content }) => (\n        <AccordionItem className=\"px-4\" key={value} value={value}>\n          <AccordionTrigger>{title}</AccordionTrigger>\n          <AccordionContent>{content}</AccordionContent>\n        </AccordionItem>\n      ))}\n    </Accordion>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

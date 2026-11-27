@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-07",
+  "title": "Slider with Marks",
+  "description": "A stepped slider with tick marks and labels for every step",
+  "registryDependencies": [
+    "field",
+    "slider"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/slider/slider-07.tsx",
+      "content": "import { Field, FieldLabel } from \"@/registry/ui/field\";\nimport { Slider } from \"@/registry/ui/slider\";\n\nconst MAX = 10;\nconst marks = Array.from({ length: MAX + 1 }, (_, index) => index);\n\nexport default function SliderWithMarksDemo() {\n  return (\n    <Field className=\"w-full max-w-sm\">\n      <FieldLabel id=\"slider-marks-label\">\n        How likely are you to recommend us?\n      </FieldLabel>\n      <div>\n        <Slider\n          aria-labelledby=\"slider-marks-label\"\n          defaultValue={[7]}\n          max={MAX}\n          step={1}\n        />\n        <div\n          aria-hidden=\"true\"\n          className=\"relative mt-2 h-8 text-muted-foreground text-xs tabular-nums\"\n        >\n          {marks.map((value) => (\n            <div\n              className=\"absolute flex -translate-x-1/2 flex-col items-center gap-1\"\n              key={value}\n              style={{\n                left: `calc(0.375rem + ${value / MAX} * (100% - 0.75rem))`,\n              }}\n            >\n              <span className=\"h-1.5 w-px bg-muted-foreground/50\" />\n              <span>{value}</span>\n            </div>\n          ))}\n        </div>\n      </div>\n    </Field>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

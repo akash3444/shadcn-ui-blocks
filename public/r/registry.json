@@ -160,6 +160,39 @@
       ]
     },
     {
+      "name": "accordion-06",
+      "type": "registry:component",
+      "title": "Contained Accordion",
+      "description": "An accordion wrapped in a single bordered container",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/accordion/accordion-06.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "accordion-07",
+      "type": "registry:component",
+      "title": "Nested Accordion",
+      "description": "An accordion with accordions nested inside its items",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/accordion/accordion-07.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "alert-01",
       "type": "registry:component",
       "title": "Primary Alert",
@@ -198,14 +231,13 @@
     {
       "name": "alert-03",
       "type": "registry:component",
-      "title": "Alert with Action",
-      "description": "An alert with an action button",
+      "title": "Success Alert",
+      "description": "An alert for confirming a successful action",
       "dependencies": [
         "lucide-react"
       ],
       "registryDependencies": [
-        "alert",
-        "button"
+        "alert"
       ],
       "files": [
         {
@@ -217,8 +249,8 @@
     {
       "name": "alert-04",
       "type": "registry:component",
-      "title": "Alert Title Only",
-      "description": "An alert with an icon and title and no description",
+      "title": "Warning Alert",
+      "description": "An alert for warning about a potential problem",
       "dependencies": [
         "lucide-react"
       ],
@@ -235,6 +267,43 @@
     {
       "name": "alert-05",
       "type": "registry:component",
+      "title": "Alert with Action",
+      "description": "An alert with an action button",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/alert/alert-05.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "alert-06",
+      "type": "registry:component",
+      "title": "Alert Title Only",
+      "description": "An alert with an icon and title and no description",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/alert/alert-06.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "alert-07",
+      "type": "registry:component",
       "title": "Alert with List",
       "description": "A destructive alert listing multiple errors",
       "dependencies": [
@@ -245,7 +314,7 @@
       ],
       "files": [
         {
-          "path": "src/components/customized/alert/alert-05.tsx",
+          "path": "src/components/customized/alert/alert-07.tsx",
           "type": "registry:component"
         }
       ]
@@ -1696,6 +1765,24 @@
       ]
     },
     {
+      "name": "pagination-04",
+      "type": "registry:component",
+      "title": "Previous and Next Pagination Cards",
+      "description": "Previous and next page links shown as cards with titles",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "item"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/pagination/pagination-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "progress-01",
       "type": "registry:component",
       "title": "Default Progress",
@@ -2095,6 +2182,41 @@
       "files": [
         {
           "path": "src/components/customized/slider/slider-06.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "slider-07",
+      "type": "registry:component",
+      "title": "Slider with Marks",
+      "description": "A stepped slider with tick marks and labels for every step",
+      "registryDependencies": [
+        "field",
+        "slider"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/slider/slider-07.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "slider-08",
+      "type": "registry:component",
+      "title": "Audio Player Slider",
+      "description": "A seek slider for an audio player with play button and timestamps",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "slider"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/slider/slider-08.tsx",
           "type": "registry:component"
         }
       ]

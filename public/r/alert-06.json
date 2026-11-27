@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-06",
+  "title": "Alert Title Only",
+  "description": "An alert with an icon and title and no description",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/alert/alert-06.tsx",
+      "content": "import { CircleCheckIcon } from \"lucide-react\";\nimport { Alert, AlertTitle } from \"@/registry/ui/alert\";\n\nexport default function AlertTitleOnlyDemo() {\n  return (\n    <Alert className=\"max-w-sm\">\n      <CircleCheckIcon />\n      <AlertTitle>Your changes have been saved.</AlertTitle>\n    </Alert>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

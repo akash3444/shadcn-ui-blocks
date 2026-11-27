@@ -1,25 +1,23 @@
-import { CircleAlertIcon } from "lucide-react";
-import { Alert, AlertDescription, AlertTitle } from "@/registry/ui/alert";
+import { CircleFadingArrowUpIcon } from "lucide-react";
+import {
+  Alert,
+  AlertAction,
+  AlertDescription,
+  AlertTitle,
+} from "@/registry/ui/alert";
+import { Button } from "@/registry/ui/button";
 
-const errors = [
-  "Password must be at least 8 characters.",
-  "Password must include a number.",
-  "Email address is already in use.",
-];
-
-export default function AlertWithListDemo() {
+export default function AlertWithActionDemo() {
   return (
-    <Alert className="max-w-sm" variant="destructive">
-      <CircleAlertIcon />
-      <AlertTitle>Unable to create your account</AlertTitle>
-      <AlertDescription className="mt-1">
-        Please fix the following issues:
-        <ul className="mt-1 list-disc pl-5">
-          {errors.map((error) => (
-            <li key={error}>{error}</li>
-          ))}
-        </ul>
+    <Alert className="max-w-sm">
+      <CircleFadingArrowUpIcon />
+      <AlertTitle>Update available</AlertTitle>
+      <AlertDescription>
+        A new version of the app is now available.
       </AlertDescription>
+      <AlertAction>
+        <Button size="xs">Update</Button>
+      </AlertAction>
     </Alert>
   );
 }

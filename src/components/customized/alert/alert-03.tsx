@@ -1,23 +1,14 @@
-import { CircleFadingArrowUpIcon } from "lucide-react";
-import {
-  Alert,
-  AlertAction,
-  AlertDescription,
-  AlertTitle,
-} from "@/registry/ui/alert";
-import { Button } from "@/registry/ui/button";
+import { CircleCheckIcon } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "@/registry/ui/alert";
 
-export default function AlertWithActionDemo() {
+export default function AlertSuccessDemo() {
   return (
-    <Alert className="max-w-sm">
-      <CircleFadingArrowUpIcon />
-      <AlertTitle>Update available</AlertTitle>
+    <Alert className="max-w-sm text-emerald-600 *:data-[slot=alert-description]:text-emerald-600/90 dark:text-emerald-500 dark:*:data-[slot=alert-description]:text-emerald-500/90">
+      <CircleCheckIcon />
+      <AlertTitle>Payment received</AlertTitle>
       <AlertDescription>
-        A new version of the app is now available.
+        Your subscription is active. A receipt has been sent to your email.
       </AlertDescription>
-      <AlertAction>
-        <Button size="xs">Update</Button>
-      </AlertAction>
     </Alert>
   );
 }

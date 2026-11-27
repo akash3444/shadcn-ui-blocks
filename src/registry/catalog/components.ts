@@ -82,6 +82,41 @@ export const components = [
     site: { group: "accordion", title: "Bordered" },
   },
   {
+    name: "accordion-06",
+    type: "registry:component",
+    title: "Contained Accordion",
+    description: "An accordion wrapped in a single bordered container",
+    registryDependencies: ["accordion"],
+    files: [
+      {
+        path: "src/components/customized/accordion/accordion-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "accordion",
+      title: "Contained",
+    },
+  },
+  {
+    name: "accordion-07",
+    type: "registry:component",
+    title: "Nested Accordion",
+    description: "An accordion with accordions nested inside its items",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["accordion"],
+    files: [
+      {
+        path: "src/components/customized/accordion/accordion-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "accordion",
+      title: "Nested",
+    },
+  },
+  {
     name: "alert-01",
     type: "registry:component",
     title: "Primary Alert",
@@ -120,13 +155,49 @@ export const components = [
   {
     name: "alert-03",
     type: "registry:component",
+    title: "Success Alert",
+    description: "An alert for confirming a successful action",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["alert"],
+    files: [
+      {
+        path: "src/components/customized/alert/alert-03.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "alert",
+      title: "Success",
+    },
+  },
+  {
+    name: "alert-04",
+    type: "registry:component",
+    title: "Warning Alert",
+    description: "An alert for warning about a potential problem",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["alert"],
+    files: [
+      {
+        path: "src/components/customized/alert/alert-04.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "alert",
+      title: "Warning",
+    },
+  },
+  {
+    name: "alert-05",
+    type: "registry:component",
     title: "Alert with Action",
     description: "An alert with an action button",
     dependencies: ["lucide-react"],
     registryDependencies: ["alert", "button"],
     files: [
       {
-        path: "src/components/customized/alert/alert-03.tsx",
+        path: "src/components/customized/alert/alert-05.tsx",
         type: "registry:component",
       },
     ],
@@ -136,7 +207,7 @@ export const components = [
     },
   },
   {
-    name: "alert-04",
+    name: "alert-06",
     type: "registry:component",
     title: "Alert Title Only",
     description: "An alert with an icon and title and no description",
@@ -144,14 +215,14 @@ export const components = [
     registryDependencies: ["alert"],
     files: [
       {
-        path: "src/components/customized/alert/alert-04.tsx",
+        path: "src/components/customized/alert/alert-06.tsx",
         type: "registry:component",
       },
     ],
     site: { group: "alert", title: "Title only" },
   },
   {
-    name: "alert-05",
+    name: "alert-07",
     type: "registry:component",
     title: "Alert with List",
     description: "A destructive alert listing multiple errors",
@@ -159,7 +230,7 @@ export const components = [
     registryDependencies: ["alert"],
     files: [
       {
-        path: "src/components/customized/alert/alert-05.tsx",
+        path: "src/components/customized/alert/alert-07.tsx",
         type: "registry:component",
       },
     ],
@@ -1620,6 +1691,24 @@ export const components = [
     site: { group: "pagination", title: "Rows per page" },
   },
   {
+    name: "pagination-04",
+    type: "registry:component",
+    title: "Previous and Next Pagination Cards",
+    description: "Previous and next page links shown as cards with titles",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["item"],
+    files: [
+      {
+        path: "src/components/customized/pagination/pagination-04.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "pagination",
+      title: "Previous and next cards",
+    },
+  },
+  {
     name: "progress-01",
     type: "registry:component",
     title: "Default Progress",
@@ -2034,6 +2123,42 @@ export const components = [
     site: {
       group: "slider",
       title: "Steps",
+    },
+  },
+  {
+    name: "slider-07",
+    type: "registry:component",
+    title: "Slider with Marks",
+    description: "A stepped slider with tick marks and labels for every step",
+    registryDependencies: ["field", "slider"],
+    files: [
+      {
+        path: "src/components/customized/slider/slider-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "slider",
+      title: "Steps with marks",
+    },
+  },
+  {
+    name: "slider-08",
+    type: "registry:component",
+    title: "Audio Player Slider",
+    description:
+      "A seek slider for an audio player with play button and timestamps",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button", "slider"],
+    files: [
+      {
+        path: "src/components/customized/slider/slider-08.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "slider",
+      title: "Audio player",
     },
   },
   {

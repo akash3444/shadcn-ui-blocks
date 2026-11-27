@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import { Checkbox } from "@/registry/ui/checkbox";
 import {
@@ -30,10 +30,21 @@ export default function TableRowSelectionDemo() {
     setSelectedIds(checked ? tasks.map((task) => task.id) : []);
   };
 
-  const toggleTask = (id: string, checked: boolean) => {
-    setSelectedIds((current) =>
-      checked ? [...current, id] : current.filter((value) => value !== id)
-    );
+  const lastToggledIndex = useRef<number | null>(null);
+  const isShiftPressed = useRef(false);
+
+  const toggleTask = (index: number, checked: boolean) => {
+    const anchorIndex = lastToggledIndex.current;
+    const isRange = isShiftPressed.current && anchorIndex !== null;
+    const start = isRange ? Math.min(anchorIndex, index) : index;
+    const end = isRange ? Math.max(anchorIndex, index) : index;
+    const rangeIds = tasks.slice(start, end + 1).map((task) => task.id);
+
+    setSelectedIds((current) => {
+      const withoutRange = current.filter((id) => !rangeIds.includes(id));
+      return checked ? [...withoutRange, ...rangeIds] : withoutRange;
+    });
+    lastToggledIndex.current = index;
   };
 
   return (
@@ -55,7 +66,7 @@ export default function TableRowSelectionDemo() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {tasks.map((task) => {
+          {tasks.map((task, index) => {
             const isSelected = selectedIds.includes(task.id);
 
             return (
@@ -67,7 +78,16 @@ export default function TableRowSelectionDemo() {
                   <Checkbox
                     aria-label={`Select ${task.id}`}
                     checked={isSelected}
-                    onCheckedChange={(checked) => toggleTask(task.id, checked)}
+                    onCheckedChange={(checked) => toggleTask(index, checked)}
+                    onKeyDown={(event) => {
+                      isShiftPressed.current = event.shiftKey;
+                    }}
+                    onPointerDown={(event) => {
+                      isShiftPressed.current = event.shiftKey;
+                      if (event.shiftKey) {
+                        event.preventDefault();
+                      }
+                    }}
                   />
                 </TableCell>
                 <TableCell className="font-medium">{task.id}</TableCell>

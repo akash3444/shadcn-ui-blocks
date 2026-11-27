@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-04",
+  "title": "Previous and Next Pagination Cards",
+  "description": "Previous and next page links shown as cards with titles",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "item"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/pagination/pagination-04.tsx",
+      "content": "import { ArrowLeftIcon, ArrowRightIcon } from \"lucide-react\";\n\nimport {\n  Item,\n  ItemContent,\n  ItemDescription,\n  ItemMedia,\n  ItemTitle,\n} from \"@/registry/ui/item\";\n\nexport default function PaginationPreviousNextCardsDemo() {\n  return (\n    <nav\n      aria-label=\"Pagination\"\n      className=\"grid w-full max-w-lg grid-cols-2 gap-3\"\n    >\n      <Item render={<a href=\"#installation\" />} variant=\"muted\">\n        <ItemMedia variant=\"icon\">\n          <ArrowLeftIcon className=\"text-muted-foreground\" />\n        </ItemMedia>\n        <ItemContent className=\"items-end text-right\">\n          <ItemTitle>Installation</ItemTitle>\n          <ItemDescription>Previous</ItemDescription>\n        </ItemContent>\n      </Item>\n      <Item render={<a href=\"#theming\" />} variant=\"muted\">\n        <ItemContent>\n          <ItemTitle>Theming</ItemTitle>\n          <ItemDescription>Next</ItemDescription>\n        </ItemContent>\n        <ItemMedia variant=\"icon\">\n          <ArrowRightIcon className=\"text-muted-foreground\" />\n        </ItemMedia>\n      </Item>\n    </nav>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

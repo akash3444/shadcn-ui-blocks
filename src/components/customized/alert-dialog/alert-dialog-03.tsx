@@ -22,7 +22,7 @@ export default function AlertDialogMediaDemo() {
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogMedia>
-            <Trash2Icon />
+            <Trash2Icon className="size-5" />
           </AlertDialogMedia>
           <AlertDialogTitle>Delete this project?</AlertDialogTitle>
           <AlertDialogDescription>
