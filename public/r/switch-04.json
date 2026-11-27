@@ -1,15 +1,16 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "switch-04",
-  "title": "Disabled Switch",
-  "description": "Disabled switches",
+  "title": "Switch with Label and Description",
+  "description": "A switch with a label and description in a bordered container",
   "registryDependencies": [
-    "switch"
+    "switch",
+    "field"
   ],
   "files": [
     {
       "path": "src/components/customized/switch/switch-04.tsx",
-      "content": "import { Switch } from \"@/registry/ui/switch\";\n\nconst SwitchDisabledDemo = () => (\n  <div className=\"flex items-center gap-3\">\n    <Switch aria-label=\"Disabled\" disabled />\n    <Switch aria-label=\"Disabled checked\" defaultChecked disabled />\n  </div>\n);\n\nexport default SwitchDisabledDemo;\n",
+      "content": "import {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n  FieldTitle,\n} from \"@/registry/ui/field\";\nimport { Switch } from \"@/registry/ui/switch\";\n\nexport default function SwitchWithDescriptionDemo() {\n  return (\n    <FieldLabel className=\"max-w-sm\" htmlFor=\"switch-marketing\">\n      <Field orientation=\"horizontal\">\n        <FieldContent>\n          <FieldTitle>Marketing emails</FieldTitle>\n          <FieldDescription>\n            Receive emails about new products and features.\n          </FieldDescription>\n        </FieldContent>\n        <Switch defaultChecked id=\"switch-marketing\" />\n      </Field>\n    </FieldLabel>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

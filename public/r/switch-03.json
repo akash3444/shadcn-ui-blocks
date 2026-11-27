@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "switch-03",
   "title": "Switch with Label",
-  "description": "A switch with a label and description",
+  "description": "A switch with a label",
   "registryDependencies": [
     "switch",
     "field"
@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/switch/switch-03.tsx",
-      "content": "import {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n  FieldTitle,\n} from \"@/registry/ui/field\";\nimport { Switch } from \"@/registry/ui/switch\";\n\nexport default function SwitchWithLabelDemo() {\n  return (\n    <FieldLabel className=\"max-w-sm\" htmlFor=\"switch-marketing\">\n      <Field orientation=\"horizontal\">\n        <FieldContent>\n          <FieldTitle>Marketing emails</FieldTitle>\n          <FieldDescription>\n            Receive emails about new products and features.\n          </FieldDescription>\n        </FieldContent>\n        <Switch defaultChecked id=\"switch-marketing\" />\n      </Field>\n    </FieldLabel>\n  );\n}\n",
+      "content": "import { Field, FieldLabel } from \"@/registry/ui/field\";\nimport { Switch } from \"@/registry/ui/switch\";\n\nexport default function SwitchWithLabelDemo() {\n  return (\n    <Field className=\"w-fit\" orientation=\"horizontal\">\n      <Switch id=\"switch-airplane-mode\" />\n      <FieldLabel htmlFor=\"switch-airplane-mode\">Airplane mode</FieldLabel>\n    </Field>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

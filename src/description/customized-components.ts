@@ -462,9 +462,14 @@ export const customizedComponents = {
       "name": "switch-03"
     },
     {
-      "title": "Disabled",
+      "title": "With label and description",
       "type": "switch",
       "name": "switch-04"
+    },
+    {
+      "title": "Disabled",
+      "type": "switch",
+      "name": "switch-05"
     }
   ],
   "table": [
