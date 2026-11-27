@@ -12,24 +12,24 @@ const items = [
       "No, Calm UI is not an alternative to Shadcn UI. It actually complements Shadcn UI.",
   },
   {
-    title: "How can I use the customized components in my project?",
+    title: "How can I use these patterns in my project?",
     content:
-      "You can use the customized components by previewing them on our platform, copying the provided code, and pasting it directly into your project. This allows for quick implementation without extensive coding.",
+      "Preview a pattern, copy its code or install it with the shadcn CLI, and paste it into your project. Each pattern is built on a shadcn/ui component, so it fits right into your existing setup.",
   },
   {
-    title: "What types of customized components are available?",
+    title: "What is a pattern?",
     content:
-      "Our collection includes various customized Shadcn UI components designed for flexibility and style, such as buttons, inputs, accordions, tabs, cards, etc., allowing you to create a unique look for your application.",
+      "A pattern is a ready-made way of using a shadcn/ui component, such as an accordion that allows multiple open items or a disabled button. Each component page lists its patterns, from basic usage to more complete compositions.",
   },
   {
-    title: "Does the customized component support dark mode?",
+    title: "Do the patterns support dark mode?",
     content:
-      "Yes, all customized components are designed to look good in both light and dark modes.",
+      "Yes, every pattern is designed to look good in both light and dark modes.",
   },
   {
-    title: "Can I modify the Shadcn UI components after copying them?",
+    title: "Can I modify a pattern after copying it?",
     content:
-      "Absolutely! Once you copy the code for any Shadcn UI component or block, you have full freedom to modify it according to your project's requirements.",
+      "Absolutely! Once you copy a pattern or block, the code is yours to change however your project needs.",
   },
 ];
 

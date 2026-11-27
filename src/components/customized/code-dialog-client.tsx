@@ -84,7 +84,7 @@ export const CodeDialogClient = ({
         className="w-full gap-0 overflow-hidden border bg-card p-0 data-[side=right]:sm:max-w-xl"
         side="right"
       >
-        <SheetTitle className="sr-only">View component code</SheetTitle>
+        <SheetTitle className="sr-only">View pattern code</SheetTitle>
         {registryItem && (
           <div className="border-b bg-muted/30 py-5 ps-6 pe-4">
             <h2 className="mb-3 font-semibold text-base">
@@ -101,7 +101,7 @@ export const CodeDialogClient = ({
         <div className="flex min-h-0 flex-1 flex-col">
           <div className="flex items-center justify-between gap-4 border-b bg-muted/20 py-1.5 ps-6 pe-4">
             <span className="font-medium text-muted-foreground text-sm">
-              Component Code
+              Pattern Code
             </span>
             <CopyButton content={code} onCopy={handleCodeCopy} />
           </div>

@@ -29,7 +29,7 @@ export function AppNavigationMenu() {
             className={navigationMenuTriggerStyle({ className: "h-7.5" })}
             render={<Link href="/components/accordion" />}
           >
-            Components
+            Patterns
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
