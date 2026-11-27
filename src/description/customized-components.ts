@@ -74,9 +74,24 @@ export const customizedComponents = {
       "name": "avatar-04"
     },
     {
-      "title": "Group",
+      "title": "With ring",
       "type": "avatar",
       "name": "avatar-05"
+    },
+    {
+      "title": "With number badge",
+      "type": "avatar",
+      "name": "avatar-06"
+    },
+    {
+      "title": "Shapes",
+      "type": "avatar",
+      "name": "avatar-07"
+    },
+    {
+      "title": "Group",
+      "type": "avatar",
+      "name": "avatar-08"
     }
   ],
   "badge": [

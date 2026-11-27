@@ -1,30 +1,20 @@
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarGroup,
-  AvatarGroupCount,
-  AvatarImage,
-} from "@/registry/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/avatar";
 
-const users = [
-  { name: "shadcn", initials: "CN" },
-  { name: "maxleiter", initials: "ML" },
-  { name: "evilrabbit", initials: "ER" },
-];
+const sizes = ["sm", "default", "lg"] as const;
 
-export default function AvatarGroupDemo() {
+export default function AvatarRingDemo() {
   return (
-    <AvatarGroup>
-      {users.map((user) => (
-        <Avatar key={user.name}>
-          <AvatarImage
-            alt={`@${user.name}`}
-            src={`https://github.com/${user.name}.png`}
-          />
-          <AvatarFallback>{user.initials}</AvatarFallback>
+    <div className="flex items-center gap-4">
+      {sizes.map((size) => (
+        <Avatar
+          className="ring-2 ring-primary ring-offset-3 ring-offset-background"
+          key={size}
+          size={size}
+        >
+          <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
+          <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       ))}
-      <AvatarGroupCount>+3</AvatarGroupCount>
-    </AvatarGroup>
+    </div>
   );
 }

@@ -196,7 +196,8 @@ export const components = [
     name: "avatar-03",
     type: "registry:component",
     title: "Avatar Fallback",
-    description: "An avatar showing its fallback initials",
+    description: "Avatars showing initials and icon fallbacks",
+    dependencies: ["lucide-react"],
     registryDependencies: ["avatar"],
     files: [
       {
@@ -229,12 +230,63 @@ export const components = [
   {
     name: "avatar-05",
     type: "registry:component",
+    title: "Avatar with Ring",
+    description: "Avatars with a ring around them",
+    registryDependencies: ["avatar"],
+    files: [
+      {
+        path: "src/components/customized/avatar/avatar-05.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "avatar",
+      title: "With ring",
+    },
+  },
+  {
+    name: "avatar-06",
+    type: "registry:component",
+    title: "Avatar with Number Badge",
+    description: "Avatars with a number badge in the corner",
+    registryDependencies: ["avatar", "badge"],
+    files: [
+      {
+        path: "src/components/customized/avatar/avatar-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "avatar",
+      title: "With number badge",
+    },
+  },
+  {
+    name: "avatar-07",
+    type: "registry:component",
+    title: "Avatar Shapes",
+    description: "Circle, rounded and square avatars",
+    registryDependencies: ["avatar"],
+    files: [
+      {
+        path: "src/components/customized/avatar/avatar-07.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "avatar",
+      title: "Shapes",
+    },
+  },
+  {
+    name: "avatar-08",
+    type: "registry:component",
     title: "Avatar Group",
     description: "A stacked group of avatars with a count",
     registryDependencies: ["avatar"],
     files: [
       {
-        path: "src/components/customized/avatar/avatar-05.tsx",
+        path: "src/components/customized/avatar/avatar-08.tsx",
         type: "registry:component",
       },
     ],
