@@ -3,13 +3,13 @@
   "name": "spinner-01",
   "title": "Default Spinner",
   "description": "A default spinner component",
-  "dependencies": [
-    "lucide-react"
+  "registryDependencies": [
+    "spinner"
   ],
   "files": [
     {
       "path": "src/components/customized/spinner/spinner-01.tsx",
-      "content": "import { LoaderIcon } from \"lucide-react\";\n\nexport default function SpinnerDemo() {\n  return <LoaderIcon className=\"animate-spin\" />;\n}\n",
+      "content": "import { Spinner } from \"@/registry/ui/spinner\";\n\nexport default function SpinnerDemo() {\n  return <Spinner />;\n}\n",
       "type": "registry:component"
     }
   ],

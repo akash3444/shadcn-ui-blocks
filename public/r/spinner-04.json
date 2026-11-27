@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-04",
+  "title": "Spinner in Input Group",
+  "description": "Spinners inside input groups to show pending work",
+  "registryDependencies": [
+    "input-group",
+    "spinner"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/spinner/spinner-04.tsx",
+      "content": "import {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@/registry/ui/input-group\";\nimport { Spinner } from \"@/registry/ui/spinner\";\n\nconst SpinnerInputGroupDemo = () => (\n  <div className=\"flex w-full max-w-xs flex-col gap-4\">\n    <InputGroup>\n      <InputGroupInput aria-label=\"Search\" placeholder=\"Searching...\" />\n      <InputGroupAddon align=\"inline-end\">\n        <Spinner />\n      </InputGroupAddon>\n    </InputGroup>\n    <InputGroup>\n      <InputGroupInput aria-label=\"Username\" defaultValue=\"calm-ui\" />\n      <InputGroupAddon align=\"inline-end\">\n        <Spinner />\n        Checking\n      </InputGroupAddon>\n    </InputGroup>\n  </div>\n);\n\nexport default SpinnerInputGroupDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

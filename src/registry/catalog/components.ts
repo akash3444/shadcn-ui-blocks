@@ -1295,7 +1295,7 @@ export const components = [
     type: "registry:component",
     title: "Default Spinner",
     description: "A default spinner component",
-    dependencies: ["lucide-react"],
+    registryDependencies: ["spinner"],
     files: [
       {
         path: "src/components/customized/spinner/spinner-01.tsx",
@@ -1305,6 +1305,74 @@ export const components = [
     site: {
       group: "spinner",
       title: "Default",
+    },
+  },
+  {
+    name: "spinner-02",
+    type: "registry:component",
+    title: "Spinner Sizes",
+    description: "Spinners in different sizes",
+    registryDependencies: ["spinner"],
+    files: [
+      {
+        path: "src/components/customized/spinner/spinner-02.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "spinner",
+      title: "Sizes",
+    },
+  },
+  {
+    name: "spinner-03",
+    type: "registry:component",
+    title: "Spinner Colors",
+    description: "Spinners in different colors",
+    registryDependencies: ["spinner"],
+    files: [
+      {
+        path: "src/components/customized/spinner/spinner-03.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "spinner",
+      title: "Colors",
+    },
+  },
+  {
+    name: "spinner-04",
+    type: "registry:component",
+    title: "Spinner in Input Group",
+    description: "Spinners inside input groups to show pending work",
+    registryDependencies: ["input-group", "spinner"],
+    files: [
+      {
+        path: "src/components/customized/spinner/spinner-04.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "spinner",
+      title: "Input group",
+    },
+  },
+  {
+    name: "spinner-05",
+    type: "registry:component",
+    title: "Spinner Loading State",
+    description: "A spinner in an empty state while content is processing",
+    registryDependencies: ["button", "empty", "spinner"],
+    files: [
+      {
+        path: "src/components/customized/spinner/spinner-05.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "spinner",
+      title: "Loading state",
     },
   },
   {

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner-03",
+  "title": "Spinner Colors",
+  "description": "Spinners in different colors",
+  "registryDependencies": [
+    "spinner"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/spinner/spinner-03.tsx",
+      "content": "import { Spinner } from \"@/registry/ui/spinner\";\n\nconst SpinnerColorsDemo = () => (\n  <div className=\"flex items-center gap-6\">\n    <Spinner className=\"size-6 text-red-500\" />\n    <Spinner className=\"size-6 text-green-500\" />\n    <Spinner className=\"size-6 text-blue-500\" />\n    <Spinner className=\"size-6 text-yellow-500\" />\n    <Spinner className=\"size-6 text-purple-500\" />\n  </div>\n);\n\nexport default SpinnerColorsDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}
