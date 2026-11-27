@@ -1,10 +1,24 @@
+import {
+  Field,
+  FieldContent,
+  FieldDescription,
+  FieldLabel,
+  FieldTitle,
+} from "@/registry/ui/field";
 import { Switch } from "@/registry/ui/switch";
 
-const SwitchDisabledDemo = () => (
-  <div className="flex items-center gap-3">
-    <Switch aria-label="Disabled" disabled />
-    <Switch aria-label="Disabled checked" defaultChecked disabled />
-  </div>
-);
-
-export default SwitchDisabledDemo;
+export default function SwitchWithDescriptionDemo() {
+  return (
+    <FieldLabel className="max-w-sm" htmlFor="switch-marketing">
+      <Field orientation="horizontal">
+        <FieldContent>
+          <FieldTitle>Marketing emails</FieldTitle>
+          <FieldDescription>
+            Receive emails about new products and features.
+          </FieldDescription>
+        </FieldContent>
+        <Switch defaultChecked id="switch-marketing" />
+      </Field>
+    </FieldLabel>
+  );
+}

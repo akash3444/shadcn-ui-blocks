@@ -21,6 +21,7 @@ Every change must be verified in the browser before you report it as done. Type 
 - Start the dev server with the `dev` configuration in `.claude/launch.json` (`bun run dev`, port 3000).
 - Open each page the change affects and confirm the change renders as intended, with no console errors.
 - If the change can't be verified in the browser, say so explicitly instead of reporting it as done.
+- Leave the dev server running after verifying. Don't stop it when the work is done.
 
 ## Rebuild the registry after registry changes
 

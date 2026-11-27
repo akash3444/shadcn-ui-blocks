@@ -1413,7 +1413,7 @@ export const components = [
     name: "switch-03",
     type: "registry:component",
     title: "Switch with Label",
-    description: "A switch with a label and description",
+    description: "A switch with a label",
     registryDependencies: ["switch", "field"],
     files: [
       {
@@ -1429,12 +1429,30 @@ export const components = [
   {
     name: "switch-04",
     type: "registry:component",
+    title: "Switch with Label and Description",
+    description:
+      "A switch with a label and description in a bordered container",
+    registryDependencies: ["switch", "field"],
+    files: [
+      {
+        path: "src/components/customized/switch/switch-04.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "switch",
+      title: "With label and description",
+    },
+  },
+  {
+    name: "switch-05",
+    type: "registry:component",
     title: "Disabled Switch",
     description: "Disabled switches",
     registryDependencies: ["switch"],
     files: [
       {
-        path: "src/components/customized/switch/switch-04.tsx",
+        path: "src/components/customized/switch/switch-05.tsx",
         type: "registry:component",
       },
     ],
