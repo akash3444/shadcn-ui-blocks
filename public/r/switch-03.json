@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/switch/switch-03.tsx",
-      "content": "import {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n} from \"@/registry/ui/field\";\nimport { Switch } from \"@/registry/ui/switch\";\n\nexport default function SwitchWithLabelDemo() {\n  return (\n    <Field className=\"max-w-sm\" orientation=\"horizontal\">\n      <FieldContent>\n        <FieldLabel htmlFor=\"switch-marketing\">Marketing emails</FieldLabel>\n        <FieldDescription>\n          Receive emails about new products and features.\n        </FieldDescription>\n      </FieldContent>\n      <Switch defaultChecked id=\"switch-marketing\" />\n    </Field>\n  );\n}\n",
+      "content": "import {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n  FieldTitle,\n} from \"@/registry/ui/field\";\nimport { Switch } from \"@/registry/ui/switch\";\n\nexport default function SwitchWithLabelDemo() {\n  return (\n    <FieldLabel className=\"max-w-sm\" htmlFor=\"switch-marketing\">\n      <Field orientation=\"horizontal\">\n        <FieldContent>\n          <FieldTitle>Marketing emails</FieldTitle>\n          <FieldDescription>\n            Receive emails about new products and features.\n          </FieldDescription>\n        </FieldContent>\n        <Switch defaultChecked id=\"switch-marketing\" />\n      </Field>\n    </FieldLabel>\n  );\n}\n",
       "type": "registry:component"
     }
   ],
