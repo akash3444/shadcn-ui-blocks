@@ -1,11 +1,10 @@
+import { ArrowUpRightIcon } from "lucide-react";
 import { Badge } from "@/registry/ui/badge";
 
-const BadgeGradientDemo = () => {
-  return (
-    <Badge className="rounded-full border-none bg-linear-to-r from-sky-500 to-indigo-600 text-white">
-      Gradient
-    </Badge>
-  );
-};
+const LinkBadgeDemo = () => (
+  <Badge render={<a href="#link" />} variant="link">
+    Open link <ArrowUpRightIcon data-icon="inline-end" />
+  </Badge>
+);
 
-export default BadgeGradientDemo;
+export default LinkBadgeDemo;

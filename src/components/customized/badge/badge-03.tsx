@@ -1,7 +1,5 @@
 import { Badge } from "@/registry/ui/badge";
 
-const BadgeOutlineDemo = () => {
-  return <Badge variant="outline">Outline</Badge>;
-};
+const DestructiveBadgeDemo = () => <Badge variant="destructive">Destructive</Badge>;
 
-export default BadgeOutlineDemo;
+export default DestructiveBadgeDemo;

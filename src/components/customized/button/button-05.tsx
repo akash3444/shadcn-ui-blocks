@@ -1,20 +1,18 @@
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRightIcon, StarIcon } from "lucide-react";
 import { Button } from "@/registry/ui/button";
 
-const IconButtonDemo = () => {
-  return (
-    <div className="flex items-center gap-2">
-      <Button size="icon">
-        <Star />
-      </Button>
-      <Button>
-        <Star /> Star
-      </Button>
-      <Button>
-        Read More <ArrowRight />
-      </Button>
-    </div>
-  );
-};
+const IconButtonDemo = () => (
+  <div className="flex flex-wrap items-center gap-2">
+    <Button aria-label="Star" size="icon">
+      <StarIcon />
+    </Button>
+    <Button>
+      <StarIcon data-icon="inline-start" /> Star
+    </Button>
+    <Button variant="outline">
+      Read more <ArrowRightIcon data-icon="inline-end" />
+    </Button>
+  </div>
+);
 
 export default IconButtonDemo;

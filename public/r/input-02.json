@@ -1,15 +1,16 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-02",
-  "title": "Ring Input",
-  "description": "A ring input component",
+  "title": "Input with Label",
+  "description": "An input with a label and description",
   "registryDependencies": [
-    "input"
+    "input",
+    "field"
   ],
   "files": [
     {
       "path": "src/components/customized/input/input-02.tsx",
-      "content": "import { Input } from \"@/registry/ui/input\";\n\nexport default function InputRingDemo() {\n  return (\n    <Input\n      className=\"max-w-xs focus-visible:border-blue-500 focus-visible:ring-[3px] focus-visible:ring-blue-500/20\"\n      placeholder=\"Email\"\n      type=\"email\"\n    />\n  );\n}\n",
+      "content": "import { Field, FieldDescription, FieldLabel } from \"@/registry/ui/field\";\nimport { Input } from \"@/registry/ui/input\";\n\nexport default function InputWithLabelDemo() {\n  return (\n    <Field className=\"max-w-xs\">\n      <FieldLabel htmlFor=\"input-username\">Username</FieldLabel>\n      <Input id=\"input-username\" placeholder=\"shadcn\" />\n      <FieldDescription>This is your public display name.</FieldDescription>\n    </Field>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

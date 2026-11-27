@@ -1,15 +1,18 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-otp-02",
-  "title": "OTP Input Without Separator",
-  "description": "An OTP input without separators between fields",
+  "title": "Digits Only Input OTP",
+  "description": "An OTP input that only accepts digits",
+  "dependencies": [
+    "input-otp"
+  ],
   "registryDependencies": [
     "input-otp"
   ],
   "files": [
     {
       "path": "src/components/customized/input-otp/input-otp-02.tsx",
-      "content": "import { InputOTP, InputOTPGroup, InputOTPSlot } from \"@/registry/ui/input-otp\";\n\nexport default function InputOTPDemo() {\n  return (\n    <InputOTP maxLength={6}>\n      <InputOTPGroup>\n        <InputOTPSlot index={0} />\n        <InputOTPSlot index={1} />\n        <InputOTPSlot index={2} />\n        <InputOTPSlot index={3} />\n      </InputOTPGroup>\n    </InputOTP>\n  );\n}\n",
+      "content": "\"use client\";\n\nimport { REGEXP_ONLY_DIGITS } from \"input-otp\";\nimport {\n  InputOTP,\n  InputOTPGroup,\n  InputOTPSlot,\n} from \"@/registry/ui/input-otp\";\n\nexport default function InputOTPDigitsDemo() {\n  return (\n    <InputOTP maxLength={4} pattern={REGEXP_ONLY_DIGITS}>\n      <InputOTPGroup>\n        <InputOTPSlot index={0} />\n        <InputOTPSlot index={1} />\n        <InputOTPSlot index={2} />\n        <InputOTPSlot index={3} />\n      </InputOTPGroup>\n    </InputOTP>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

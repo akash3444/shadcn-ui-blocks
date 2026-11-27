@@ -1,15 +1,19 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-07",
-  "title": "Gradient Outline Badge",
-  "description": "A gradient outline badge component",
+  "title": "Badge with Icon",
+  "description": "Badges with leading and trailing icons",
+  "dependencies": [
+    "lucide-react"
+  ],
   "registryDependencies": [
-    "badge"
+    "badge",
+    "spinner"
   ],
   "files": [
     {
       "path": "src/components/customized/badge/badge-07.tsx",
-      "content": "import { Badge } from \"@/registry/ui/badge\";\n\nconst BadgeGradientOutlineDemo = () => {\n  return (\n    <div className=\"flex items-center justify-center rounded-full bg-linear-to-r from-sky-400 to-indigo-600 p-0.5\">\n      <Badge className=\"rounded-full border-none bg-background text-foreground\">\n        Gradient Outline\n      </Badge>\n    </div>\n  );\n};\n\nexport default BadgeGradientOutlineDemo;\n",
+      "content": "import { BadgeCheckIcon, ArrowRightIcon } from \"lucide-react\";\nimport { Badge } from \"@/registry/ui/badge\";\nimport { Spinner } from \"@/registry/ui/spinner\";\n\nconst BadgeWithIconDemo = () => (\n  <div className=\"flex flex-wrap items-center gap-2\">\n    <Badge variant=\"secondary\">\n      <BadgeCheckIcon data-icon=\"inline-start\" /> Verified\n    </Badge>\n    <Badge variant=\"outline\">\n      <Spinner data-icon=\"inline-start\" /> Syncing\n    </Badge>\n    <Badge>\n      Next <ArrowRightIcon data-icon=\"inline-end\" />\n    </Badge>\n  </div>\n);\n\nexport default BadgeWithIconDemo;\n",
       "type": "registry:component"
     }
   ],

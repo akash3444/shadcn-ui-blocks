@@ -1,8 +1,15 @@
-import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/registry/ui/input-otp";
+"use client";
 
-export default function InputOTPDemo() {
+import { REGEXP_ONLY_DIGITS } from "input-otp";
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSlot,
+} from "@/registry/ui/input-otp";
+
+export default function InputOTPDigitsDemo() {
   return (
-    <InputOTP maxLength={6}>
+    <InputOTP maxLength={4} pattern={REGEXP_ONLY_DIGITS}>
       <InputOTPGroup>
         <InputOTPSlot index={0} />
         <InputOTPSlot index={1} />

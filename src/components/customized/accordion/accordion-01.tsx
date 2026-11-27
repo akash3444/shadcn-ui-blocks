@@ -25,7 +25,7 @@ const items = [
 
 export default function AccordionDemo() {
   return (
-    <Accordion className="my-4 w-full max-w-lg" collapsible type="single">
+    <Accordion className="my-4 w-full max-w-lg">
       {items.map(({ title, content }, index) => (
         <AccordionItem key={index} value={`item-${index}`}>
           <AccordionTrigger>{title}</AccordionTrigger>

@@ -1,11 +1,12 @@
+import { Field, FieldDescription, FieldLabel } from "@/registry/ui/field";
 import { Input } from "@/registry/ui/input";
 
-export default function InputRingDemo() {
+export default function InputWithLabelDemo() {
   return (
-    <Input
-      className="max-w-xs focus-visible:border-blue-500 focus-visible:ring-[3px] focus-visible:ring-blue-500/20"
-      placeholder="Email"
-      type="email"
-    />
+    <Field className="max-w-xs">
+      <FieldLabel htmlFor="input-username">Username</FieldLabel>
+      <Input id="input-username" placeholder="shadcn" />
+      <FieldDescription>This is your public display name.</FieldDescription>
+    </Field>
   );
 }

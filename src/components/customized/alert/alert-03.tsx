@@ -1,14 +1,23 @@
-import { CircleCheckBigIcon } from "lucide-react";
-import { Alert, AlertDescription, AlertTitle } from "@/registry/ui/alert";
+import { CircleFadingArrowUpIcon } from "lucide-react";
+import {
+  Alert,
+  AlertAction,
+  AlertDescription,
+  AlertTitle,
+} from "@/registry/ui/alert";
+import { Button } from "@/registry/ui/button";
 
-export default function AlertSuccessDemo() {
+export default function AlertWithActionDemo() {
   return (
-    <Alert className="border-emerald-600/50 text-emerald-600 dark:border-emerald-600 [&>svg]:text-emerald-600">
-      <CircleCheckBigIcon className="size-4" />
-      <AlertTitle>Operation Successful</AlertTitle>
-      <AlertDescription className="text-emerald-600">
-        Your action has been completed successfully
+    <Alert>
+      <CircleFadingArrowUpIcon />
+      <AlertTitle>Update available</AlertTitle>
+      <AlertDescription>
+        A new version of the app is now available.
       </AlertDescription>
+      <AlertAction>
+        <Button size="xs">Update</Button>
+      </AlertAction>
     </Alert>
   );
 }

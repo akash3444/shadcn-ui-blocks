@@ -1,7 +1,7 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { useOGImageContext } from "@/providers/og-image-provider";
-import { Button } from "@/registry/bases/base/ui/button";
 
 export function ThemeToggleButton() {
   const { toggleMode } = useOGImageContext();

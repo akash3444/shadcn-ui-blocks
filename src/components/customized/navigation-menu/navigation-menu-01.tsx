@@ -20,10 +20,10 @@ export default function NavigationMenuDemo() {
         {navigationMenuItems.map((item) => (
           <NavigationMenuItem key={item.title}>
             <NavigationMenuLink
-              asChild
               className={navigationMenuTriggerStyle()}
+              render={<Link href={item.href} />}
             >
-              <Link href={item.href}>{item.title}</Link>
+              {item.title}
             </NavigationMenuLink>
           </NavigationMenuItem>
         ))}

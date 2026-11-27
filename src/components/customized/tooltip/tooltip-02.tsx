@@ -1,4 +1,3 @@
-import { Tooltip as TooltipPrimitive } from "radix-ui";
 import { Button } from "@/registry/ui/button";
 import {
   Tooltip,
@@ -7,18 +6,25 @@ import {
   TooltipTrigger,
 } from "@/registry/ui/tooltip";
 
-export default function WithArrowTooltipDemo() {
+const sides = ["top", "left", "bottom", "right"] as const;
+
+export default function TooltipSidesDemo() {
   return (
     <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <Button variant="outline">Hover</Button>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>Tooltip with arrow</p>
-          <TooltipPrimitive.Arrow className="fill-foreground" />
-        </TooltipContent>
-      </Tooltip>
+      <div className="flex flex-wrap items-center gap-2">
+        {sides.map((side) => (
+          <Tooltip key={side}>
+            <TooltipTrigger
+              render={<Button className="capitalize" variant="outline" />}
+            >
+              {side}
+            </TooltipTrigger>
+            <TooltipContent side={side}>
+              <p>Tooltip on {side}</p>
+            </TooltipContent>
+          </Tooltip>
+        ))}
+      </div>
     </TooltipProvider>
   );
 }

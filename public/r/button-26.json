@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-26",
+  "title": "Disabled Button",
+  "description": "Disabled buttons",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/button/button-26.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\";\n\nconst DisabledButtonDemo = () => (\n  <div className=\"flex flex-wrap items-center gap-2\">\n    <Button disabled>Primary</Button>\n    <Button disabled variant=\"secondary\">\n      Secondary\n    </Button>\n    <Button disabled variant=\"outline\">\n      Outline\n    </Button>\n  </div>\n);\n\nexport default DisabledButtonDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

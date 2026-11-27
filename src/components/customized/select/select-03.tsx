@@ -4,25 +4,50 @@ import {
   SelectGroup,
   SelectItem,
   SelectLabel,
+  SelectSeparator,
   SelectTrigger,
   SelectValue,
 } from "@/registry/ui/select";
 
-export default function SelectGhostDemo() {
+const groups = [
+  {
+    label: "Fruits",
+    items: [
+      { label: "Apple", value: "apple" },
+      { label: "Banana", value: "banana" },
+      { label: "Blueberry", value: "blueberry" },
+    ],
+  },
+  {
+    label: "Vegetables",
+    items: [
+      { label: "Carrot", value: "carrot" },
+      { label: "Broccoli", value: "broccoli" },
+      { label: "Spinach", value: "spinach" },
+    ],
+  },
+];
+
+const items = groups.flatMap((group) => group.items);
+
+export default function SelectGroupsDemo() {
   return (
-    <Select defaultValue="apple">
-      <SelectTrigger className="w-44 border-none shadow-none hover:bg-accent">
-        <SelectValue placeholder="Select a fruit" />
+    <Select items={items}>
+      <SelectTrigger className="w-[180px]">
+        <SelectValue placeholder="Select food" />
       </SelectTrigger>
       <SelectContent>
-        <SelectGroup>
-          <SelectLabel>Fruits</SelectLabel>
-          <SelectItem value="apple">Apple</SelectItem>
-          <SelectItem value="banana">Banana</SelectItem>
-          <SelectItem value="blueberry">Blueberry</SelectItem>
-          <SelectItem value="grapes">Grapes</SelectItem>
-          <SelectItem value="pineapple">Pineapple</SelectItem>
-        </SelectGroup>
+        {groups.map((group, index) => (
+          <SelectGroup key={group.label}>
+            {index > 0 && <SelectSeparator />}
+            <SelectLabel>{group.label}</SelectLabel>
+            {group.items.map((item) => (
+              <SelectItem key={item.value} value={item.value}>
+                {item.label}
+              </SelectItem>
+            ))}
+          </SelectGroup>
+        ))}
       </SelectContent>
     </Select>
   );

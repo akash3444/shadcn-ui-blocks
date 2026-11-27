@@ -2,17 +2,15 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-06",
   "title": "Loading Button",
-  "description": "A loading button component",
-  "dependencies": [
-    "lucide-react"
-  ],
+  "description": "A button with a loading spinner",
   "registryDependencies": [
-    "button"
+    "button",
+    "spinner"
   ],
   "files": [
     {
       "path": "src/components/customized/button/button-06.tsx",
-      "content": "import { Button } from \"@/registry/ui/button\";\nimport { Spinner } from \"@/registry/ui/spinner\";\n\nconst LoadingButtonDemo = () => {\n  return (\n    <div className=\"flex items-center gap-2\">\n      <Button size=\"icon\">\n        <Spinner />\n      </Button>\n      <Button>\n        <Spinner /> Loading\n      </Button>\n    </div>\n  );\n};\n\nexport default LoadingButtonDemo;\n",
+      "content": "import { Button } from \"@/registry/ui/button\";\nimport { Spinner } from \"@/registry/ui/spinner\";\n\nconst LoadingButtonDemo = () => (\n  <div className=\"flex flex-wrap items-center gap-2\">\n    <Button aria-label=\"Loading\" disabled size=\"icon\">\n      <Spinner />\n    </Button>\n    <Button disabled>\n      <Spinner data-icon=\"inline-start\" /> Loading\n    </Button>\n    <Button disabled variant=\"outline\">\n      <Spinner data-icon=\"inline-start\" /> Please wait\n    </Button>\n  </div>\n);\n\nexport default LoadingButtonDemo;\n",
       "type": "registry:component"
     }
   ],

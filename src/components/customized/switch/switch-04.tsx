@@ -1,14 +1,10 @@
 import { Switch } from "@/registry/ui/switch";
 
-const SwitchColorsDemo = () => {
-  return (
-    <div className="flex items-center gap-3">
-      <Switch defaultChecked />
-      <Switch className="data-[state=checked]:bg-green-500" defaultChecked />
-      <Switch className="data-[state=checked]:bg-indigo-500" defaultChecked />
-      <Switch className="data-[state=checked]:bg-rose-500" defaultChecked />
-    </div>
-  );
-};
+const SwitchDisabledDemo = () => (
+  <div className="flex items-center gap-3">
+    <Switch aria-label="Disabled" disabled />
+    <Switch aria-label="Disabled checked" defaultChecked disabled />
+  </div>
+);
 
-export default SwitchColorsDemo;
+export default SwitchDisabledDemo;

@@ -1,4 +1,3 @@
-import { OctagonAlert } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -12,28 +11,22 @@ import {
 } from "@/registry/ui/alert-dialog";
 import { Button } from "@/registry/ui/button";
 
-export default function AlertDialogWithIcon() {
+export default function AlertDialogSmallDemo() {
   return (
     <AlertDialog>
-      <AlertDialogTrigger asChild>
-        <Button variant="outline">Show Dialog</Button>
+      <AlertDialogTrigger render={<Button variant="outline" />}>
+        Show Dialog
       </AlertDialogTrigger>
-      <AlertDialogContent>
+      <AlertDialogContent size="sm">
         <AlertDialogHeader>
-          <AlertDialogTitle>
-            <div className="mx-auto mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-destructive/10 sm:mx-0">
-              <OctagonAlert className="h-5 w-5 text-destructive" />
-            </div>
-            Are you absolutely sure?
-          </AlertDialogTitle>
-          <AlertDialogDescription className="text-[15px]">
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
+          <AlertDialogTitle>Discard changes?</AlertDialogTitle>
+          <AlertDialogDescription>
+            You have unsaved changes that will be lost.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction>Continue</AlertDialogAction>
+          <AlertDialogAction>Discard</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

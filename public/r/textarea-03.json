@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "textarea-03",
   "title": "Disabled Textarea",
-  "description": "A disabled textarea component",
+  "description": "A disabled textarea",
   "registryDependencies": [
     "textarea"
   ],

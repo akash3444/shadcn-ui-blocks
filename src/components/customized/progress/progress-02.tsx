@@ -1,21 +1,14 @@
-"use client";
+import {
+  Progress,
+  ProgressLabel,
+  ProgressValue,
+} from "@/registry/ui/progress";
 
-import * as React from "react";
-
-import { Progress } from "@/registry/ui/progress";
-
-export default function LinearProgressWithLabelDemo() {
-  const [progress, setProgress] = React.useState(13);
-
-  React.useEffect(() => {
-    const timer = setTimeout(() => setProgress(66), 500);
-    return () => clearTimeout(timer);
-  }, []);
-
+export default function ProgressLabelDemo() {
   return (
-    <div className="flex w-full items-center justify-center gap-3">
-      <Progress className="w-[60%]" value={progress} />
-      <span className="text-sm">{progress}%</span>
-    </div>
+    <Progress className="w-full max-w-sm" value={56}>
+      <ProgressLabel>Uploading files</ProgressLabel>
+      <ProgressValue />
+    </Progress>
   );
 }

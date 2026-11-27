@@ -1,15 +1,18 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-06",
-  "title": "Gradient Badge",
-  "description": "A gradient badge component",
+  "title": "Link Badge",
+  "description": "A badge rendered as a link",
+  "dependencies": [
+    "lucide-react"
+  ],
   "registryDependencies": [
     "badge"
   ],
   "files": [
     {
       "path": "src/components/customized/badge/badge-06.tsx",
-      "content": "import { Badge } from \"@/registry/ui/badge\";\n\nconst BadgeGradientDemo = () => {\n  return (\n    <Badge className=\"rounded-full border-none bg-linear-to-r from-sky-500 to-indigo-600 text-white\">\n      Gradient\n    </Badge>\n  );\n};\n\nexport default BadgeGradientDemo;\n",
+      "content": "import { ArrowUpRightIcon } from \"lucide-react\";\nimport { Badge } from \"@/registry/ui/badge\";\n\nconst LinkBadgeDemo = () => (\n  <Badge render={<a href=\"#link\" />} variant=\"link\">\n    Open link <ArrowUpRightIcon data-icon=\"inline-end\" />\n  </Badge>\n);\n\nexport default LinkBadgeDemo;\n",
       "type": "registry:component"
     }
   ],

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-25",
+  "title": "Button Sizes",
+  "description": "Buttons in every available size",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/button/button-25.tsx",
+      "content": "import { StarIcon } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nconst ButtonSizesDemo = () => (\n  <div className=\"flex flex-col items-center gap-4\">\n    <div className=\"flex flex-wrap items-center gap-2\">\n      <Button size=\"xs\">Extra small</Button>\n      <Button size=\"sm\">Small</Button>\n      <Button>Default</Button>\n      <Button size=\"lg\">Large</Button>\n    </div>\n    <div className=\"flex flex-wrap items-center gap-2\">\n      <Button aria-label=\"Star\" size=\"icon-xs\" variant=\"outline\">\n        <StarIcon />\n      </Button>\n      <Button aria-label=\"Star\" size=\"icon-sm\" variant=\"outline\">\n        <StarIcon />\n      </Button>\n      <Button aria-label=\"Star\" size=\"icon\" variant=\"outline\">\n        <StarIcon />\n      </Button>\n      <Button aria-label=\"Star\" size=\"icon-lg\" variant=\"outline\">\n        <StarIcon />\n      </Button>\n    </div>\n  </div>\n);\n\nexport default ButtonSizesDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

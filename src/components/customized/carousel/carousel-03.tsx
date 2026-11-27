@@ -6,32 +6,20 @@ import {
   CarouselPrevious,
 } from "@/registry/ui/carousel";
 
-const images = [
-  "https://www.fffuel.co/images/dddepth-preview/dddepth-248.jpg",
-  "https://www.fffuel.co/images/dddepth-preview/dddepth-051.jpg",
-  "https://www.fffuel.co/images/dddepth-preview/dddepth-029.jpg",
-  "https://www.fffuel.co/images/dddepth-preview/dddepth-038.jpg",
-  "https://www.fffuel.co/images/dddepth-preview/dddepth-012.jpg",
-];
+const slides = [1, 2, 3, 4, 5];
 
-export default function CarouselVertical() {
+export default function CarouselVerticalDemo() {
   return (
     <Carousel
-      className="my-14 w-full max-w-xs"
-      opts={{
-        align: "start",
-      }}
+      className="my-12 w-full max-w-xs"
+      opts={{ align: "start" }}
       orientation="vertical"
     >
-      <CarouselContent className="-mt-1 h-[250px]">
-        {images.map((image) => (
-          <CarouselItem className="pt-1 md:basis-1/2" key={image}>
-            <div className="aspect-video p-1">
-              <img
-                alt="dddepth-248"
-                className="size-full rounded-xl object-cover"
-                src={image}
-              />
+      <CarouselContent className="h-[200px]">
+        {slides.map((slide) => (
+          <CarouselItem className="basis-1/2" key={slide}>
+            <div className="flex h-full items-center justify-center rounded-lg border font-semibold text-2xl">
+              {slide}
             </div>
           </CarouselItem>
         ))}

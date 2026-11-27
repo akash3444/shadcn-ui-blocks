@@ -1,13 +1,21 @@
-import { Label } from "@/registry/ui/label";
+import {
+  Field,
+  FieldContent,
+  FieldDescription,
+  FieldLabel,
+} from "@/registry/ui/field";
 import { Switch } from "@/registry/ui/switch";
 
-const DisabledSwitchDemo = () => {
+export default function SwitchWithLabelDemo() {
   return (
-    <div className="flex items-center gap-3">
-      <Switch disabled id="enable-feature-disabled" />
-      <Label htmlFor="enable-feature-disabled">Enable Feature</Label>
-    </div>
+    <Field className="max-w-sm" orientation="horizontal">
+      <FieldContent>
+        <FieldLabel htmlFor="switch-marketing">Marketing emails</FieldLabel>
+        <FieldDescription>
+          Receive emails about new products and features.
+        </FieldDescription>
+      </FieldContent>
+      <Switch defaultChecked id="switch-marketing" />
+    </Field>
   );
-};
-
-export default DisabledSwitchDemo;
+}

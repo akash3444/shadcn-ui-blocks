@@ -7,35 +7,34 @@ import {
 
 const items = [
   {
-    title: "Can I change or cancel my order after placing it?",
-    content:
-      "Yes, you can change or cancel your order within 1 hour of placement by visiting your account page or contacting our support team. After that, orders may already be processed for shipping.",
-  },
-  {
+    value: "shipping",
     title: "How long does shipping usually take?",
     content:
-      "Domestic shipping typically takes 3-5 business days, while international orders may take up to 2-3 weeks depending on your location and customs processing times.",
+      "Domestic shipping typically takes 3-5 business days, while international orders may take up to 2-3 weeks.",
   },
   {
+    value: "returns",
     title: "What is your return policy?",
     content:
-      "We offer a 30-day return policy for most products. Items must be unused and in their original packaging. To initiate a return, simply contact our support with your order details.",
+      "We offer a 30-day return policy for most products. Items must be unused and in their original packaging.",
+  },
+  {
+    value: "support",
+    title: "How can I contact support?",
+    content:
+      "You can reach our support team by email or live chat, Monday to Friday, 9am to 6pm.",
   },
 ];
 
-export default function AccordionOutlineDemo() {
+export default function AccordionMultipleDemo() {
   return (
     <Accordion
-      className="my-4 w-full max-w-lg space-y-2"
-      collapsible
-      type="single"
+      className="my-4 w-full max-w-lg"
+      defaultValue={["shipping", "returns"]}
+      multiple
     >
-      {items.map(({ title, content }, index) => (
-        <AccordionItem
-          className="rounded-md border px-4 last:border-b"
-          key={index}
-          value={`item-${index}`}
-        >
+      {items.map(({ value, title, content }) => (
+        <AccordionItem key={value} value={value}>
           <AccordionTrigger>{title}</AccordionTrigger>
           <AccordionContent>{content}</AccordionContent>
         </AccordionItem>

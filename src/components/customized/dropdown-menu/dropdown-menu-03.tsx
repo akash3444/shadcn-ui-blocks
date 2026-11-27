@@ -4,48 +4,31 @@ import { useState } from "react";
 import { Button } from "@/registry/ui/button";
 import {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/registry/ui/dropdown-menu";
 
-const tags = ["Sport", "Music", "Food", "Travel", "Tech", "Science", "Art"];
-
-export default function DropdownMenuWithCheckboxes() {
-  const [selectedTags, setSelectedTags] = useState<string[]>([
-    tags[0],
-    tags[4],
-  ]);
-
-  const handleTagChange = (tag: string, checked: boolean) => {
-    if (checked) {
-      setSelectedTags([...selectedTags, tag]);
-    } else {
-      setSelectedTags(selectedTags.filter((t) => t !== tag));
-    }
-  };
+export default function DropdownMenuRadioGroupDemo() {
+  const [position, setPosition] = useState("bottom");
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline">Select Tags</Button>
+      <DropdownMenuTrigger render={<Button variant="outline" />}>
+        Panel Position
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-44">
-        <DropdownMenuLabel>Select Tags</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        {tags.map((tag) => (
-          <DropdownMenuCheckboxItem
-            checked={selectedTags.includes(tag)}
-            key={tag}
-            onCheckedChange={(checked) => handleTagChange(tag, checked)}
-            // Prevent the dropdown menu from closing when the checkbox is clicked
-            onSelect={(e) => e.preventDefault()}
-          >
-            {tag}
-          </DropdownMenuCheckboxItem>
-        ))}
+      <DropdownMenuContent className="w-48">
+        <DropdownMenuGroup>
+          <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
+          <DropdownMenuRadioGroup onValueChange={setPosition} value={position}>
+            <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>
+            <DropdownMenuRadioItem value="bottom">Bottom</DropdownMenuRadioItem>
+            <DropdownMenuRadioItem value="right">Right</DropdownMenuRadioItem>
+          </DropdownMenuRadioGroup>
+        </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   );

@@ -1,16 +1,16 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "textarea-04",
-  "title": "Textarea with Label",
-  "description": "A textarea component with a label",
+  "title": "Invalid Textarea",
+  "description": "A textarea with an error message",
   "registryDependencies": [
     "textarea",
-    "label"
+    "field"
   ],
   "files": [
     {
       "path": "src/components/customized/textarea/textarea-04.tsx",
-      "content": "import { Label } from \"@/registry/ui/label\";\nimport { Textarea } from \"@/registry/ui/textarea\";\n\nexport default function TextareaWithLabelDemo() {\n  return (\n    <div className=\"flex w-full flex-col gap-2\">\n      <Label htmlFor=\"message\">Message</Label>\n      <Textarea id=\"message\" placeholder=\"Type your message here.\" />\n    </div>\n  );\n}\n",
+      "content": "import { Field, FieldError, FieldLabel } from \"@/registry/ui/field\";\nimport { Textarea } from \"@/registry/ui/textarea\";\n\nexport default function TextareaInvalidDemo() {\n  return (\n    <Field className=\"max-w-sm\" data-invalid>\n      <FieldLabel htmlFor=\"textarea-invalid\">Bio</FieldLabel>\n      <Textarea aria-invalid id=\"textarea-invalid\" placeholder=\"Tell us about yourself\" />\n      <FieldError>Bio must be at least 20 characters.</FieldError>\n    </Field>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

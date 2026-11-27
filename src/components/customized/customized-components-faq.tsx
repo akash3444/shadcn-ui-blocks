@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/ui/accordion";
+} from "@/components/ui/accordion";
 
 const items = [
   {
@@ -39,7 +39,7 @@ export function CustomizedComponentsFAQ() {
       <p className="mb-3 font-semibold text-foreground/80 uppercase tracking-tight">
         Frequently Asked Questions
       </p>
-      <Accordion className="w-full border-t" type="multiple">
+      <Accordion className="w-full border-t" multiple>
         {items.map(({ title, content }, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
             <AccordionTrigger className="gap-3 py-3 text-left font-semibold text-[17px]">

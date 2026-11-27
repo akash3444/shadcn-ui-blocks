@@ -1,16 +1,16 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-05",
-  "title": "Input with Label",
-  "description": "An input with label component",
+  "title": "File Input",
+  "description": "A file input",
   "registryDependencies": [
     "input",
-    "label"
+    "field"
   ],
   "files": [
     {
       "path": "src/components/customized/input/input-05.tsx",
-      "content": "import { Input } from \"@/registry/ui/input\";\nimport { Label } from \"@/registry/ui/label\";\n\nexport default function InputWithLabelDemo() {\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Label htmlFor=\"email\">Email</Label>\n      <Input className=\"mt-2\" id=\"email\" placeholder=\"Email\" type=\"email\" />\n    </div>\n  );\n}\n",
+      "content": "import { Field, FieldLabel } from \"@/registry/ui/field\";\nimport { Input } from \"@/registry/ui/input\";\n\nexport default function InputFileDemo() {\n  return (\n    <Field className=\"max-w-xs\">\n      <FieldLabel htmlFor=\"input-file\">Picture</FieldLabel>\n      <Input id=\"input-file\" type=\"file\" />\n    </Field>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

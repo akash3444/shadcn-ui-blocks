@@ -1,23 +1,9 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/avatar";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/registry/ui/tooltip";
+import { Avatar, AvatarFallback } from "@/registry/ui/avatar";
 
-export default function AvatarWithTooltipDemo() {
+export default function AvatarFallbackDemo() {
   return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <Avatar>
-            <AvatarImage alt="@shadcn" src="https://github.com/shadcn.png" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-        </TooltipTrigger>
-        <TooltipContent className="font-semibold">shadcn</TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+    <Avatar>
+      <AvatarFallback>CN</AvatarFallback>
+    </Avatar>
   );
 }

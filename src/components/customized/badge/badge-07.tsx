@@ -1,13 +1,19 @@
+import { BadgeCheckIcon, ArrowRightIcon } from "lucide-react";
 import { Badge } from "@/registry/ui/badge";
+import { Spinner } from "@/registry/ui/spinner";
 
-const BadgeGradientOutlineDemo = () => {
-  return (
-    <div className="flex items-center justify-center rounded-full bg-linear-to-r from-sky-400 to-indigo-600 p-0.5">
-      <Badge className="rounded-full border-none bg-background text-foreground">
-        Gradient Outline
-      </Badge>
-    </div>
-  );
-};
+const BadgeWithIconDemo = () => (
+  <div className="flex flex-wrap items-center gap-2">
+    <Badge variant="secondary">
+      <BadgeCheckIcon data-icon="inline-start" /> Verified
+    </Badge>
+    <Badge variant="outline">
+      <Spinner data-icon="inline-start" /> Syncing
+    </Badge>
+    <Badge>
+      Next <ArrowRightIcon data-icon="inline-end" />
+    </Badge>
+  </div>
+);
 
-export default BadgeGradientOutlineDemo;
+export default BadgeWithIconDemo;
