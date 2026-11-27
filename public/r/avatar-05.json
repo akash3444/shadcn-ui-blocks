@@ -1,15 +1,15 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-05",
-  "title": "Avatar Group",
-  "description": "A stacked group of avatars with a count",
+  "title": "Avatar with Ring",
+  "description": "Avatars with a ring around them",
   "registryDependencies": [
     "avatar"
   ],
   "files": [
     {
       "path": "src/components/customized/avatar/avatar-05.tsx",
-      "content": "import {\n  Avatar,\n  AvatarFallback,\n  AvatarGroup,\n  AvatarGroupCount,\n  AvatarImage,\n} from \"@/registry/ui/avatar\";\n\nconst users = [\n  { name: \"shadcn\", initials: \"CN\" },\n  { name: \"maxleiter\", initials: \"ML\" },\n  { name: \"evilrabbit\", initials: \"ER\" },\n];\n\nexport default function AvatarGroupDemo() {\n  return (\n    <AvatarGroup>\n      {users.map((user) => (\n        <Avatar key={user.name}>\n          <AvatarImage\n            alt={`@${user.name}`}\n            src={`https://github.com/${user.name}.png`}\n          />\n          <AvatarFallback>{user.initials}</AvatarFallback>\n        </Avatar>\n      ))}\n      <AvatarGroupCount>+3</AvatarGroupCount>\n    </AvatarGroup>\n  );\n}\n",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/registry/ui/avatar\";\n\nconst sizes = [\"sm\", \"default\", \"lg\"] as const;\n\nexport default function AvatarRingDemo() {\n  return (\n    <div className=\"flex items-center gap-4\">\n      {sizes.map((size) => (\n        <Avatar\n          className=\"ring-2 ring-primary ring-offset-3 ring-offset-background\"\n          key={size}\n          size={size}\n        >\n          <AvatarImage alt=\"@shadcn\" src=\"https://github.com/shadcn.png\" />\n          <AvatarFallback>CN</AvatarFallback>\n        </Avatar>\n      ))}\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

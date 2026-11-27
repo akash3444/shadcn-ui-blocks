@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-07",
+  "title": "Avatar Shapes",
+  "description": "Circle, rounded and square avatars",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/avatar/avatar-07.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/registry/ui/avatar\";\n\nconst shapes = [\n  { name: \"circle\", className: \"rounded-full after:rounded-full\" },\n  { name: \"rounded\", className: \"rounded-lg after:rounded-lg\" },\n  { name: \"square\", className: \"rounded-none after:rounded-none\" },\n];\n\nexport default function AvatarShapesDemo() {\n  return (\n    <div className=\"flex items-center gap-4\">\n      {shapes.map((shape) => (\n        <Avatar className={shape.className} key={shape.name} size=\"lg\">\n          <AvatarImage\n            alt=\"@shadcn\"\n            className={shape.className}\n            src=\"https://github.com/shadcn.png\"\n          />\n          <AvatarFallback className={shape.className}>CN</AvatarFallback>\n        </Avatar>\n      ))}\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

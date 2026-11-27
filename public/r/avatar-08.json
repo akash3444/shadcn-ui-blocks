@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-08",
+  "title": "Avatar Group",
+  "description": "A stacked group of avatars with a count",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/avatar/avatar-08.tsx",
+      "content": "import {\n  Avatar,\n  AvatarFallback,\n  AvatarGroup,\n  AvatarGroupCount,\n  AvatarImage,\n} from \"@/registry/ui/avatar\";\n\nconst users = [\n  { name: \"shadcn\", initials: \"CN\" },\n  { name: \"maxleiter\", initials: \"ML\" },\n  { name: \"evilrabbit\", initials: \"ER\" },\n];\n\nexport default function AvatarGroupDemo() {\n  return (\n    <AvatarGroup>\n      {users.map((user) => (\n        <Avatar key={user.name}>\n          <AvatarImage\n            alt={`@${user.name}`}\n            src={`https://github.com/${user.name}.png`}\n          />\n          <AvatarFallback>{user.initials}</AvatarFallback>\n        </Avatar>\n      ))}\n      <AvatarGroupCount>+3</AvatarGroupCount>\n    </AvatarGroup>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

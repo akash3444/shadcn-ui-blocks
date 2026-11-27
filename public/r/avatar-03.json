@@ -2,14 +2,17 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-03",
   "title": "Avatar Fallback",
-  "description": "An avatar showing its fallback initials",
+  "description": "Avatars showing initials and icon fallbacks",
+  "dependencies": [
+    "lucide-react"
+  ],
   "registryDependencies": [
     "avatar"
   ],
   "files": [
     {
       "path": "src/components/customized/avatar/avatar-03.tsx",
-      "content": "import { Avatar, AvatarFallback } from \"@/registry/ui/avatar\";\n\nexport default function AvatarFallbackDemo() {\n  return (\n    <Avatar>\n      <AvatarFallback>CN</AvatarFallback>\n    </Avatar>\n  );\n}\n",
+      "content": "import { UserIcon } from \"lucide-react\";\nimport { Avatar, AvatarFallback } from \"@/registry/ui/avatar\";\n\nexport default function AvatarFallbackDemo() {\n  return (\n    <div className=\"flex items-center gap-4\">\n      <Avatar>\n        <AvatarFallback>CN</AvatarFallback>\n      </Avatar>\n      <Avatar>\n        <AvatarFallback>\n          <UserIcon className=\"size-4\" />\n        </AvatarFallback>\n      </Avatar>\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
   ],
