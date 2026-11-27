@@ -14,6 +14,25 @@ Single-context repo — one `CONTEXT.md` and `docs/adr/` at the root. See `docs/
 
 ---
 
+## Verify every change in the browser
+
+Every change must be verified in the browser before you report it as done. Type checks and lint are not enough.
+
+- Start the dev server with the `dev` configuration in `.claude/launch.json` (`bun run dev`, port 3000).
+- Open each page the change affects and confirm the change renders as intended, with no console errors.
+- If the change can't be verified in the browser, say so explicitly instead of reporting it as done.
+
+## Rebuild the registry after registry changes
+
+Any change that affects what the shadcn registry serves must be followed by a registry rebuild in the same change. That covers adding, removing or editing patterns, blocks, `src/registry/**`, the catalog in `src/registry/catalog/`, or registry dependencies.
+
+- Run `bun run registry:build`. It regenerates `registry.json` and rebuilds `public/r/*.json`.
+- Run `bun run registry:check` and confirm it passes.
+- The build never deletes old output. When an item is removed or renamed, delete its stale `public/r/<name>.json` by hand.
+- Commit the regenerated `registry.json` and `public/r` files together with the source change.
+
+---
+
 # Ultracite Code Standards
 
 This project uses **Ultracite**, a zero-config preset that enforces strict code quality standards through automated formatting and linting.

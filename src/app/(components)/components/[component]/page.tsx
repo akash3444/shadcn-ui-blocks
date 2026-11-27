@@ -9,6 +9,9 @@ import { absoluteUrl, cn } from "@/lib/utils";
 
 export const dynamicParams = false;
 
+const formatPatternCount = (count: number) =>
+  `${count} ${count === 1 ? "pattern" : "patterns"}`;
+
 export const generateStaticParams = async () => {
   return Object.keys(componentsMap).map((component) => ({
     component,
@@ -25,13 +28,14 @@ export const generateMetadata = async (props: {
     notFound();
   }
 
-  const components =
+  const patterns =
     customizedComponents[
       params.component as keyof typeof customizedComponents
     ] || [];
+  const patternCount = formatPatternCount(patterns.length);
 
-  const title = `${components.length} customized ${details.title} shadcn/ui components`;
-  const description = `Browse ${components.length} customized ${details.title} components built with shadcn/ui. Preview each example and copy the code for your project.`;
+  const title = `${patternCount} for the shadcn/ui ${details.title} component`;
+  const description = `Browse ${patternCount} built on the shadcn/ui ${details.title} component. Preview each pattern and copy the code into your project.`;
 
   return constructMetadata({
     title,
@@ -62,7 +66,7 @@ const CustomizedComponentPage = async (props: {
   const { component } = params;
 
   const details = componentsMap[component as keyof typeof componentsMap];
-  const components =
+  const patterns =
     customizedComponents[component as keyof typeof customizedComponents] || [];
 
   if (!details) {
@@ -87,11 +91,11 @@ const CustomizedComponentPage = async (props: {
           details.className
         )}
       >
-        {components.map((component, index) => (
+        {patterns.map((pattern, index) => (
           <ComponentBlock
             index={index}
-            key={`${component.title}-${index}`}
-            {...component}
+            key={`${pattern.title}-${index}`}
+            {...pattern}
           />
         ))}
       </div>

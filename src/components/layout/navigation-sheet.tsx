@@ -49,7 +49,7 @@ export function NavigationSheet() {
               href="/components/accordion"
               onClick={() => setOpen(false)}
             >
-              Components
+              Patterns
             </Link>
           </div>
         </ScrollArea>

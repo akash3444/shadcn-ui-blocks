@@ -103,6 +103,6 @@ const ComponentBlock: FC<BlockProps> = async ({
   );
 };
 
-const BlockNotFound = () => <p>Block not found</p>;
+const BlockNotFound = () => <p>Pattern not found</p>;
 
 export default ComponentBlock;
