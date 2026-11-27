@@ -1,8 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "tooltip-02",
-  "title": "Tooltip with Arrow",
-  "description": "A tooltip component with an arrow",
+  "title": "Tooltip Sides",
+  "description": "Tooltips on every side",
   "registryDependencies": [
     "tooltip",
     "button"
@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/customized/tooltip/tooltip-02.tsx",
-      "content": "import { Tooltip as TooltipPrimitive } from \"radix-ui\";\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/registry/ui/tooltip\";\n\nexport default function WithArrowTooltipDemo() {\n  return (\n    <TooltipProvider>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button variant=\"outline\">Hover</Button>\n        </TooltipTrigger>\n        <TooltipContent>\n          <p>Tooltip with arrow</p>\n          <TooltipPrimitive.Arrow className=\"fill-foreground\" />\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  );\n}\n",
+      "content": "import { Button } from \"@/registry/ui/button\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/registry/ui/tooltip\";\n\nconst sides = [\"top\", \"left\", \"bottom\", \"right\"] as const;\n\nexport default function TooltipSidesDemo() {\n  return (\n    <TooltipProvider>\n      <div className=\"flex flex-wrap items-center gap-2\">\n        {sides.map((side) => (\n          <Tooltip key={side}>\n            <TooltipTrigger\n              render={<Button className=\"capitalize\" variant=\"outline\" />}\n            >\n              {side}\n            </TooltipTrigger>\n            <TooltipContent side={side}>\n              <p>Tooltip on {side}</p>\n            </TooltipContent>\n          </Tooltip>\n        ))}\n      </div>\n    </TooltipProvider>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

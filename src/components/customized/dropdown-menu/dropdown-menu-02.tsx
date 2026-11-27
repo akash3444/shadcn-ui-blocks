@@ -1,34 +1,48 @@
-import { LogOut, Settings, User } from "lucide-react";
-import { Avatar, AvatarImage } from "@/registry/ui/avatar";
+"use client";
+
+import { useState } from "react";
+import { Button } from "@/registry/ui/button";
 import {
   DropdownMenu,
+  DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuItem,
+  DropdownMenuGroup,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/registry/ui/dropdown-menu";
 
-export default function DropdownMenuWithIcon() {
+export default function DropdownMenuCheckboxesDemo() {
+  const [showStatusBar, setShowStatusBar] = useState(true);
+  const [showActivityBar, setShowActivityBar] = useState(false);
+  const [showPanel, setShowPanel] = useState(false);
+
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="rounded-full focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2">
-        <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" />
-        </Avatar>
+      <DropdownMenuTrigger render={<Button variant="outline" />}>
+        View
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <User className="h-4 w-4" /> Profile
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Settings className="h-4 w-4" /> Settings
-        </DropdownMenuItem>
-        <DropdownMenuItem variant="destructive">
-          <LogOut className="h-4 w-4" /> Logout
-        </DropdownMenuItem>
+      <DropdownMenuContent className="w-48">
+        <DropdownMenuGroup>
+          <DropdownMenuLabel>Appearance</DropdownMenuLabel>
+          <DropdownMenuCheckboxItem
+            checked={showStatusBar}
+            onCheckedChange={setShowStatusBar}
+          >
+            Status Bar
+          </DropdownMenuCheckboxItem>
+          <DropdownMenuCheckboxItem
+            checked={showActivityBar}
+            onCheckedChange={setShowActivityBar}
+          >
+            Activity Bar
+          </DropdownMenuCheckboxItem>
+          <DropdownMenuCheckboxItem
+            checked={showPanel}
+            onCheckedChange={setShowPanel}
+          >
+            Panel
+          </DropdownMenuCheckboxItem>
+        </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   );

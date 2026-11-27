@@ -1,16 +1,15 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-03",
-  "title": "Avatar with Tooltip",
-  "description": "An avatar with tooltip component",
+  "title": "Avatar Fallback",
+  "description": "An avatar showing its fallback initials",
   "registryDependencies": [
-    "avatar",
-    "tooltip"
+    "avatar"
   ],
   "files": [
     {
       "path": "src/components/customized/avatar/avatar-03.tsx",
-      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/registry/ui/avatar\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/registry/ui/tooltip\";\n\nexport default function AvatarWithTooltipDemo() {\n  return (\n    <TooltipProvider>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Avatar>\n            <AvatarImage alt=\"@shadcn\" src=\"https://github.com/shadcn.png\" />\n            <AvatarFallback>CN</AvatarFallback>\n          </Avatar>\n        </TooltipTrigger>\n        <TooltipContent className=\"font-semibold\">shadcn</TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  );\n}\n",
+      "content": "import { Avatar, AvatarFallback } from \"@/registry/ui/avatar\";\n\nexport default function AvatarFallbackDemo() {\n  return (\n    <Avatar>\n      <AvatarFallback>CN</AvatarFallback>\n    </Avatar>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

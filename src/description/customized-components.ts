@@ -8,59 +8,14 @@ export const customizedComponents = {
       "name": "accordion-01"
     },
     {
-      "title": "Outline",
+      "title": "Multiple",
       "type": "accordion",
       "name": "accordion-02"
     },
     {
-      "title": "Box",
+      "title": "Disabled",
       "type": "accordion",
       "name": "accordion-03"
-    },
-    {
-      "title": "Contained",
-      "type": "accordion",
-      "name": "accordion-04"
-    },
-    {
-      "title": "Box Contained",
-      "type": "accordion",
-      "name": "accordion-05"
-    },
-    {
-      "title": "Tabs",
-      "type": "accordion",
-      "name": "accordion-06"
-    },
-    {
-      "title": "Highlight Active Item",
-      "type": "accordion",
-      "name": "accordion-07"
-    },
-    {
-      "title": "Multiple expanded at a time",
-      "type": "accordion",
-      "name": "accordion-08"
-    },
-    {
-      "title": "Expand Icon",
-      "type": "accordion",
-      "name": "accordion-09"
-    },
-    {
-      "title": "Icon",
-      "type": "accordion",
-      "name": "accordion-10"
-    },
-    {
-      "title": "Media Content",
-      "type": "accordion",
-      "name": "accordion-11"
-    },
-    {
-      "title": "Disabled Item",
-      "type": "accordion",
-      "name": "accordion-12"
     }
   ],
   "alert": [
@@ -75,44 +30,9 @@ export const customizedComponents = {
       "name": "alert-02"
     },
     {
-      "title": "Success",
+      "title": "With action",
       "type": "alert",
       "name": "alert-03"
-    },
-    {
-      "title": "Warning",
-      "type": "alert",
-      "name": "alert-04"
-    },
-    {
-      "title": "Info",
-      "type": "alert",
-      "name": "alert-05"
-    },
-    {
-      "title": "With background",
-      "type": "alert",
-      "name": "alert-06"
-    },
-    {
-      "title": "Soft",
-      "type": "alert",
-      "name": "alert-07"
-    },
-    {
-      "title": "Bootstrap",
-      "type": "alert",
-      "name": "alert-08"
-    },
-    {
-      "title": "Callout",
-      "type": "alert",
-      "name": "alert-09"
-    },
-    {
-      "title": "With actions",
-      "type": "alert",
-      "name": "alert-10"
     }
   ],
   "alert-dialog": [
@@ -122,29 +42,14 @@ export const customizedComponents = {
       "name": "alert-dialog-01"
     },
     {
-      "title": "With Icon",
+      "title": "Small",
       "type": "alert-dialog",
       "name": "alert-dialog-02"
     },
     {
-      "title": "Destructive",
+      "title": "With media",
       "type": "alert-dialog",
       "name": "alert-dialog-03"
-    },
-    {
-      "title": "Info",
-      "type": "alert-dialog",
-      "name": "alert-dialog-04"
-    },
-    {
-      "title": "Customized Header",
-      "type": "alert-dialog",
-      "name": "alert-dialog-05"
-    },
-    {
-      "title": "Customized Footer",
-      "type": "alert-dialog",
-      "name": "alert-dialog-06"
     }
   ],
   "avatar": [
@@ -154,79 +59,24 @@ export const customizedComponents = {
       "name": "avatar-01"
     },
     {
-      "title": "Clickable",
+      "title": "Sizes",
       "type": "avatar",
       "name": "avatar-02"
     },
     {
-      "title": "Tooltip",
+      "title": "Fallback",
       "type": "avatar",
       "name": "avatar-03"
     },
     {
-      "title": "With Text",
+      "title": "With badge",
       "type": "avatar",
       "name": "avatar-04"
     },
     {
-      "title": "Hover Card",
-      "type": "avatar",
-      "name": "avatar-05"
-    },
-    {
-      "title": "Size",
-      "type": "avatar",
-      "name": "avatar-06"
-    },
-    {
-      "title": "Color",
-      "type": "avatar",
-      "name": "avatar-07"
-    },
-    {
-      "title": "Shape",
-      "type": "avatar",
-      "name": "avatar-08"
-    },
-    {
-      "title": "Fallback",
-      "type": "avatar",
-      "name": "avatar-09"
-    },
-    {
-      "title": "With Ring",
-      "type": "avatar",
-      "name": "avatar-10"
-    },
-    {
-      "title": "Status",
-      "type": "avatar",
-      "name": "avatar-11"
-    },
-    {
       "title": "Group",
       "type": "avatar",
-      "name": "avatar-12"
-    },
-    {
-      "title": "Group max avatar",
-      "type": "avatar",
-      "name": "avatar-13"
-    },
-    {
-      "title": "Badge",
-      "type": "avatar",
-      "name": "avatar-14"
-    },
-    {
-      "title": "Chat",
-      "type": "avatar",
-      "name": "avatar-15"
-    },
-    {
-      "title": "Dropdown Menu",
-      "type": "avatar",
-      "name": "avatar-16"
+      "name": "avatar-05"
     }
   ],
   "badge": [
@@ -241,79 +91,29 @@ export const customizedComponents = {
       "name": "badge-02"
     },
     {
-      "title": "Outline",
+      "title": "Destructive",
       "type": "badge",
       "name": "badge-03"
     },
     {
-      "title": "Destructive",
+      "title": "Outline",
       "type": "badge",
       "name": "badge-04"
     },
     {
-      "title": "Shapes",
+      "title": "Ghost",
       "type": "badge",
       "name": "badge-05"
     },
     {
-      "title": "Gradient",
+      "title": "Link",
       "type": "badge",
       "name": "badge-06"
     },
     {
-      "title": "Gradient Outline",
-      "type": "badge",
-      "name": "badge-07"
-    },
-    {
-      "title": "Soft",
-      "type": "badge",
-      "name": "badge-08"
-    },
-    {
-      "title": "Status",
-      "type": "badge",
-      "name": "badge-09"
-    },
-    {
-      "title": "With image",
-      "type": "badge",
-      "name": "badge-10"
-    },
-    {
       "title": "With icon",
       "type": "badge",
-      "name": "badge-11"
-    },
-    {
-      "title": "Clickable",
-      "type": "badge",
-      "name": "badge-12"
-    },
-    {
-      "title": "Clickable link",
-      "type": "badge",
-      "name": "badge-13"
-    },
-    {
-      "title": "With number",
-      "type": "badge",
-      "name": "badge-14"
-    },
-    {
-      "title": "Plan features with badge",
-      "type": "badge",
-      "name": "badge-15"
-    },
-    {
-      "title": "Tabs with badge",
-      "type": "badge",
-      "name": "badge-16"
-    },
-    {
-      "title": "Icon button",
-      "type": "badge",
-      "name": "badge-17"
+      "name": "badge-07"
     }
   ],
   "button": [
@@ -343,69 +143,14 @@ export const customizedComponents = {
       "name": "button-08"
     },
     {
-      "title": "Full Width",
+      "title": "Link",
       "type": "button",
-      "name": "button-17"
+      "name": "button-24"
     },
     {
-      "title": "Group",
+      "title": "Sizes",
       "type": "button",
-      "name": "button-18"
-    },
-    {
-      "title": "Group 2",
-      "type": "button",
-      "name": "button-19"
-    },
-    {
-      "title": "With tooltip",
-      "type": "button",
-      "name": "button-22"
-    },
-    {
-      "title": "Theme Toggle",
-      "type": "button",
-      "name": "button-16"
-    },
-    {
-      "title": "Copy Button",
-      "type": "button",
-      "name": "button-20"
-    },
-    {
-      "title": "Rounded",
-      "type": "button",
-      "name": "button-14"
-    },
-    {
-      "title": "Toggle",
-      "type": "button",
-      "name": "button-15"
-    },
-    {
-      "title": "Social",
-      "type": "button",
-      "name": "button-11"
-    },
-    {
-      "title": "Social Login",
-      "type": "button",
-      "name": "button-12"
-    },
-    {
-      "title": "Split Button",
-      "type": "button",
-      "name": "button-07"
-    },
-    {
-      "title": "Loading",
-      "type": "button",
-      "name": "button-06"
-    },
-    {
-      "title": "Gradient",
-      "type": "button",
-      "name": "button-09"
+      "name": "button-25"
     },
     {
       "title": "Icon",
@@ -413,24 +158,19 @@ export const customizedComponents = {
       "name": "button-05"
     },
     {
-      "title": "Neon",
+      "title": "Loading",
       "type": "button",
-      "name": "button-13"
+      "name": "button-06"
     },
     {
-      "title": "With tap animation",
+      "title": "Disabled",
       "type": "button",
-      "name": "button-23"
+      "name": "button-26"
     },
     {
-      "title": "Link",
+      "title": "As link",
       "type": "button",
-      "name": "button-10"
-    },
-    {
-      "title": "With badge",
-      "type": "button",
-      "name": "button-21"
+      "name": "button-27"
     }
   ],
   "card": [
@@ -440,122 +180,36 @@ export const customizedComponents = {
       "name": "card-01"
     },
     {
-      "title": "With background",
+      "title": "Small",
       "type": "card",
       "name": "card-02"
     },
     {
-      "title": "Sign Up",
+      "title": "With image",
       "type": "card",
       "name": "card-03"
-    },
-    {
-      "title": "Product",
-      "type": "card",
-      "name": "card-07"
-    },
-    {
-      "title": "Banner",
-      "type": "card",
-      "name": "card-04",
-      "className": "col-span-2"
-    },
-    {
-      "title": "Pricing",
-      "type": "card",
-      "name": "card-05"
-    },
-    {
-      "title": "Testimonial",
-      "type": "card",
-      "name": "card-08"
-    },
-    {
-      "title": "Post",
-      "type": "card",
-      "name": "card-06"
     }
   ],
   "checkbox": [
-    {
-      "title": "Disabled",
-      "type": "checkbox",
-      "name": "checkbox-02"
-    },
     {
       "title": "With Text",
       "type": "checkbox",
       "name": "checkbox-01"
     },
     {
-      "title": "Controlled",
+      "title": "With description",
       "type": "checkbox",
-      "name": "checkbox-06"
+      "name": "checkbox-02"
     },
     {
-      "title": "Indeterminate",
+      "title": "Disabled",
       "type": "checkbox",
       "name": "checkbox-03"
     },
     {
-      "title": "Colors",
-      "type": "checkbox",
-      "name": "checkbox-07"
-    },
-    {
-      "title": "Sizes",
-      "type": "checkbox",
-      "name": "checkbox-08"
-    },
-    {
-      "title": "Horizontal Group",
+      "title": "Invalid",
       "type": "checkbox",
       "name": "checkbox-04"
-    },
-    {
-      "title": "Icon",
-      "type": "checkbox",
-      "name": "checkbox-09"
-    },
-    {
-      "title": "Card",
-      "type": "checkbox",
-      "name": "checkbox-11"
-    },
-    {
-      "title": "Multi Color Picker",
-      "type": "checkbox",
-      "name": "checkbox-10"
-    },
-    {
-      "title": "Vertical Group",
-      "type": "checkbox",
-      "name": "checkbox-05"
-    },
-    {
-      "title": "With form",
-      "type": "checkbox",
-      "name": "checkbox-12"
-    },
-    {
-      "title": "Roles",
-      "type": "checkbox",
-      "name": "checkbox-13"
-    },
-    {
-      "title": "Countries",
-      "type": "checkbox",
-      "name": "checkbox-14"
-    },
-    {
-      "title": "Days",
-      "type": "checkbox",
-      "name": "checkbox-15"
-    },
-    {
-      "title": "Filters",
-      "type": "checkbox",
-      "name": "checkbox-16"
     }
   ],
   "dropdown-menu": [
@@ -567,37 +221,22 @@ export const customizedComponents = {
     {
       "title": "Checkboxes",
       "type": "dropdown-menu",
-      "name": "dropdown-menu-03"
-    },
-    {
-      "title": "With Icon",
-      "type": "dropdown-menu",
       "name": "dropdown-menu-02"
     },
     {
-      "title": "Radio Group",
+      "title": "Radio group",
+      "type": "dropdown-menu",
+      "name": "dropdown-menu-03"
+    },
+    {
+      "title": "Submenu",
       "type": "dropdown-menu",
       "name": "dropdown-menu-04"
     },
     {
-      "title": "With Sub Menu",
+      "title": "Shortcuts & destructive",
       "type": "dropdown-menu",
       "name": "dropdown-menu-05"
-    },
-    {
-      "title": "Complex Menu",
-      "type": "dropdown-menu",
-      "name": "dropdown-menu-07"
-    },
-    {
-      "title": "With Shortcuts",
-      "type": "dropdown-menu",
-      "name": "dropdown-menu-06"
-    },
-    {
-      "title": "Workspace Switcher",
-      "type": "dropdown-menu",
-      "name": "dropdown-menu-08"
     }
   ],
   "input": [
@@ -607,57 +246,22 @@ export const customizedComponents = {
       "name": "input-01"
     },
     {
-      "title": "Filled",
-      "type": "input",
-      "name": "input-03"
-    },
-    {
-      "title": "Disabled",
-      "type": "input",
-      "name": "input-04"
-    },
-    {
-      "title": "With helper text",
-      "type": "input",
-      "name": "input-08"
-    },
-    {
-      "title": "With error message",
-      "type": "input",
-      "name": "input-09"
-    },
-    {
-      "title": "File input",
-      "type": "input",
-      "name": "input-11"
-    },
-    {
-      "title": "Dropzone",
-      "type": "input",
-      "name": "input-12"
-    },
-    {
-      "title": "With ring",
+      "title": "With label",
       "type": "input",
       "name": "input-02"
     },
     {
-      "title": "With form",
+      "title": "Disabled",
       "type": "input",
-      "name": "input-10"
+      "name": "input-03"
     },
     {
-      "title": "With button",
+      "title": "Invalid",
       "type": "input",
-      "name": "input-06"
+      "name": "input-04"
     },
     {
-      "title": "With adornments",
-      "type": "input",
-      "name": "input-07"
-    },
-    {
-      "title": "With label",
+      "title": "File",
       "type": "input",
       "name": "input-05"
     }
@@ -669,74 +273,14 @@ export const customizedComponents = {
       "name": "breadcrumb-01"
     },
     {
-      "title": "With Icon",
-      "type": "breadcrumb",
-      "name": "breadcrumb-05"
-    },
-    {
-      "title": "With Icon 2",
-      "type": "breadcrumb",
-      "name": "breadcrumb-06"
-    },
-    {
-      "title": "With Icon and Label",
-      "type": "breadcrumb",
-      "name": "breadcrumb-07"
-    },
-    {
-      "title": "With Icon and Label 2",
-      "type": "breadcrumb",
-      "name": "breadcrumb-08"
-    },
-    {
-      "title": "With Dropdown",
-      "type": "breadcrumb",
-      "name": "breadcrumb-13"
-    },
-    {
-      "title": "Tab Active",
-      "type": "breadcrumb",
-      "name": "breadcrumb-10"
-    },
-    {
-      "title": "Collapsed",
-      "type": "breadcrumb",
-      "name": "breadcrumb-14"
-    },
-    {
-      "title": "With Background",
-      "type": "breadcrumb",
-      "name": "breadcrumb-09"
-    },
-    {
-      "title": "Tabs",
-      "type": "breadcrumb",
-      "name": "breadcrumb-11"
-    },
-    {
-      "title": "Tabs Outline",
-      "type": "breadcrumb",
-      "name": "breadcrumb-12"
-    },
-    {
-      "title": "Steps",
-      "type": "breadcrumb",
-      "name": "breadcrumb-15"
-    },
-    {
-      "title": "Chevrons Separator",
-      "type": "breadcrumb",
-      "name": "breadcrumb-03"
-    },
-    {
-      "title": "Dot Separator",
-      "type": "breadcrumb",
-      "name": "breadcrumb-04"
-    },
-    {
-      "title": "Slash Separator",
+      "title": "With ellipsis",
       "type": "breadcrumb",
       "name": "breadcrumb-02"
+    },
+    {
+      "title": "Custom separator",
+      "type": "breadcrumb",
+      "name": "breadcrumb-03"
     }
   ],
   "carousel": [
@@ -746,7 +290,7 @@ export const customizedComponents = {
       "name": "carousel-01"
     },
     {
-      "title": "Multiple slides",
+      "title": "Multiple items",
       "type": "carousel",
       "name": "carousel-02"
     },
@@ -754,46 +298,6 @@ export const customizedComponents = {
       "title": "Vertical",
       "type": "carousel",
       "name": "carousel-03"
-    },
-    {
-      "title": "Slide Status",
-      "type": "carousel",
-      "name": "carousel-04"
-    },
-    {
-      "title": "Slide Status 2",
-      "type": "carousel",
-      "name": "carousel-05"
-    },
-    {
-      "title": "Pagination",
-      "type": "carousel",
-      "name": "carousel-06"
-    },
-    {
-      "title": "Footer",
-      "type": "carousel",
-      "name": "carousel-07"
-    },
-    {
-      "title": "Progress",
-      "type": "carousel",
-      "name": "carousel-08"
-    },
-    {
-      "title": "Thumbs",
-      "type": "carousel",
-      "name": "carousel-09"
-    },
-    {
-      "title": "Opacity",
-      "type": "carousel",
-      "name": "carousel-10"
-    },
-    {
-      "title": "Scale",
-      "type": "carousel",
-      "name": "carousel-11"
     }
   ],
   "collapsible": [
@@ -801,21 +305,6 @@ export const customizedComponents = {
       "title": "Default",
       "type": "collapsible",
       "name": "collapsible-01"
-    },
-    {
-      "title": "Show More",
-      "type": "collapsible",
-      "name": "collapsible-02"
-    },
-    {
-      "title": "File Tree",
-      "type": "collapsible",
-      "name": "collapsible-03"
-    },
-    {
-      "title": "Filters",
-      "type": "collapsible",
-      "name": "collapsible-04"
     }
   ],
   "input-otp": [
@@ -825,34 +314,14 @@ export const customizedComponents = {
       "name": "input-otp-01"
     },
     {
-      "title": "Separated",
-      "type": "input-otp",
-      "name": "input-otp-03"
-    },
-    {
-      "title": "Separated 2",
-      "type": "input-otp",
-      "name": "input-otp-04"
-    },
-    {
-      "title": "Secondary",
-      "type": "input-otp",
-      "name": "input-otp-05"
-    },
-    {
-      "title": "Without Separator",
+      "title": "Digits only",
       "type": "input-otp",
       "name": "input-otp-02"
     },
     {
-      "title": "Custom Separator",
+      "title": "Disabled",
       "type": "input-otp",
-      "name": "input-otp-06"
-    },
-    {
-      "title": "Inner Shadow",
-      "type": "input-otp",
-      "name": "input-otp-07"
+      "name": "input-otp-03"
     }
   ],
   "navigation-menu": [
@@ -860,43 +329,6 @@ export const customizedComponents = {
       "title": "Default",
       "type": "navigation-menu",
       "name": "navigation-menu-01"
-    },
-    {
-      "title": "Icon",
-      "type": "navigation-menu",
-      "name": "navigation-menu-07"
-    },
-    {
-      "title": "Active Item",
-      "type": "navigation-menu",
-      "name": "navigation-menu-04"
-    },
-    {
-      "title": "Underlined",
-      "type": "navigation-menu",
-      "name": "navigation-menu-05"
-    },
-    {
-      "title": "Mobile Navigation",
-      "type": "navigation-menu",
-      "name": "navigation-menu-08"
-    },
-    {
-      "title": "With Icon",
-      "type": "navigation-menu",
-      "name": "navigation-menu-02"
-    },
-    {
-      "title": "Rich Navigation Menu",
-      "type": "navigation-menu",
-      "name": "navigation-menu-06",
-      "className": "col-span-full"
-    },
-    {
-      "title": "Dropdown",
-      "type": "navigation-menu",
-      "name": "navigation-menu-03",
-      "className": "col-span-full"
     }
   ],
   "pagination": [
@@ -904,76 +336,6 @@ export const customizedComponents = {
       "title": "Default",
       "type": "pagination",
       "name": "pagination-01"
-    },
-    {
-      "title": "With Icon and Label",
-      "type": "pagination",
-      "name": "pagination-10"
-    },
-    {
-      "title": "With Icon",
-      "type": "pagination",
-      "name": "pagination-05"
-    },
-    {
-      "title": "Bordered",
-      "type": "pagination",
-      "name": "pagination-07"
-    },
-    {
-      "title": "Rounded Button",
-      "type": "pagination",
-      "name": "pagination-04"
-    },
-    {
-      "title": "Tabs",
-      "type": "pagination",
-      "name": "pagination-08"
-    },
-    {
-      "title": "First and Last Page Buttons",
-      "type": "pagination",
-      "name": "pagination-06"
-    },
-    {
-      "title": "Tabs Secondary",
-      "type": "pagination",
-      "name": "pagination-09"
-    },
-    {
-      "title": "Numberless Pagination",
-      "type": "pagination",
-      "name": "pagination-11"
-    },
-    {
-      "title": "Numberless with Text",
-      "type": "pagination",
-      "name": "pagination-12"
-    },
-    {
-      "title": "With ellipsis",
-      "type": "pagination",
-      "name": "pagination-13"
-    },
-    {
-      "title": "Table Pagination",
-      "type": "pagination",
-      "name": "pagination-14"
-    },
-    {
-      "title": "Pagination with text",
-      "type": "pagination",
-      "name": "pagination-15"
-    },
-    {
-      "title": "Primary Button",
-      "type": "pagination",
-      "name": "pagination-02"
-    },
-    {
-      "title": "Secondary Button",
-      "type": "pagination",
-      "name": "pagination-03"
     }
   ],
   "progress": [
@@ -983,59 +345,9 @@ export const customizedComponents = {
       "name": "progress-01"
     },
     {
-      "title": "Linear with label",
+      "title": "With label",
       "type": "progress",
       "name": "progress-02"
-    },
-    {
-      "title": "Rounded progress indicator",
-      "type": "progress",
-      "name": "progress-04"
-    },
-    {
-      "title": "Linear color",
-      "type": "progress",
-      "name": "progress-03"
-    },
-    {
-      "title": "Circular",
-      "type": "progress",
-      "name": "progress-07"
-    },
-    {
-      "title": "Circular color",
-      "type": "progress",
-      "name": "progress-10"
-    },
-    {
-      "title": "Circular with label",
-      "type": "progress",
-      "name": "progress-08"
-    },
-    {
-      "title": "Circular with custom label",
-      "type": "progress",
-      "name": "progress-09"
-    },
-    {
-      "title": "Circular progress shape",
-      "type": "progress",
-      "name": "progress-11"
-    },
-    {
-      "title": "Circular stroke width",
-      "type": "progress",
-      "name": "progress-12"
-    },
-    {
-      "title": "Gradient",
-      "type": "progress",
-      "name": "progress-05"
-    },
-    {
-      "title": "Animation",
-      "type": "progress",
-      "name": "progress-06"
     }
   ],
   "radio-group": [
@@ -1047,42 +359,7 @@ export const customizedComponents = {
     {
       "title": "Disabled",
       "type": "radio-group",
-      "name": "radio-group-03"
-    },
-    {
-      "title": "Size",
-      "type": "radio-group",
-      "name": "radio-group-05"
-    },
-    {
-      "title": "Cards 1",
-      "type": "radio-group",
-      "name": "radio-group-07"
-    },
-    {
-      "title": "Cards 2",
-      "type": "radio-group",
-      "name": "radio-group-08"
-    },
-    {
-      "title": "Cards 3",
-      "type": "radio-group",
-      "name": "radio-group-09"
-    },
-    {
-      "title": "Horizontal",
-      "type": "radio-group",
       "name": "radio-group-02"
-    },
-    {
-      "title": "Color",
-      "type": "radio-group",
-      "name": "radio-group-04"
-    },
-    {
-      "title": "Variant",
-      "type": "radio-group",
-      "name": "radio-group-06"
     }
   ],
   "select": [
@@ -1092,54 +369,24 @@ export const customizedComponents = {
       "name": "select-01"
     },
     {
-      "title": "With an icon",
-      "type": "select",
-      "name": "select-06"
-    },
-    {
-      "title": "Controlled",
-      "type": "select",
-      "name": "select-11"
-    },
-    {
-      "title": "Scrollable",
-      "type": "select",
-      "name": "select-10"
-    },
-    {
-      "title": "Select menu position",
-      "type": "select",
-      "name": "select-09"
-    },
-    {
-      "title": "Custom dropdown icon",
-      "type": "select",
-      "name": "select-04"
-    },
-    {
-      "title": "Ghost",
-      "type": "select",
-      "name": "select-03"
-    },
-    {
-      "title": "Shape",
-      "type": "select",
-      "name": "select-05"
-    },
-    {
-      "title": "Theme Selector",
-      "type": "select",
-      "name": "select-08"
-    },
-    {
-      "title": "Background Color",
+      "title": "Small",
       "type": "select",
       "name": "select-02"
     },
     {
-      "title": "With form",
+      "title": "Groups",
       "type": "select",
-      "name": "select-07"
+      "name": "select-03"
+    },
+    {
+      "title": "Disabled",
+      "type": "select",
+      "name": "select-04"
+    },
+    {
+      "title": "Disabled item",
+      "type": "select",
+      "name": "select-05"
     }
   ],
   "separator": [
@@ -1147,31 +394,6 @@ export const customizedComponents = {
       "title": "Default",
       "type": "separator",
       "name": "separator-01"
-    },
-    {
-      "title": "Dashed",
-      "type": "separator",
-      "name": "separator-04"
-    },
-    {
-      "title": "Vertical",
-      "type": "separator",
-      "name": "separator-05"
-    },
-    {
-      "title": "Horizontal separator with chip",
-      "type": "separator",
-      "name": "separator-03"
-    },
-    {
-      "title": "Vertical with chip",
-      "type": "separator",
-      "name": "separator-06"
-    },
-    {
-      "title": "Horizontal separator with label",
-      "type": "separator",
-      "name": "separator-02"
     }
   ],
   "slider": [
@@ -1181,74 +403,19 @@ export const customizedComponents = {
       "name": "slider-01"
     },
     {
-      "title": "Disabled",
+      "title": "Range",
       "type": "slider",
       "name": "slider-02"
     },
     {
-      "title": "Size",
+      "title": "Vertical",
       "type": "slider",
       "name": "slider-03"
     },
     {
-      "title": "Color",
+      "title": "Disabled",
       "type": "slider",
       "name": "slider-04"
-    },
-    {
-      "title": "Shape",
-      "type": "slider",
-      "name": "slider-05"
-    },
-    {
-      "title": "With label",
-      "type": "slider",
-      "name": "slider-06"
-    },
-    {
-      "title": "Vertical",
-      "type": "slider",
-      "name": "slider-13"
-    },
-    {
-      "title": "Thumb Icon",
-      "type": "slider",
-      "name": "slider-07"
-    },
-    {
-      "title": "Audio Slider",
-      "type": "slider",
-      "name": "slider-08"
-    },
-    {
-      "title": "Marks",
-      "type": "slider",
-      "name": "slider-09"
-    },
-    {
-      "title": "Sticky label",
-      "type": "slider",
-      "name": "slider-10"
-    },
-    {
-      "title": "Sticky Label on Hover",
-      "type": "slider",
-      "name": "slider-11"
-    },
-    {
-      "title": "Sticky Label with Arrow",
-      "type": "slider",
-      "name": "slider-12"
-    },
-    {
-      "title": "Range",
-      "type": "slider",
-      "name": "slider-14"
-    },
-    {
-      "title": "Multiple Thumbs",
-      "type": "slider",
-      "name": "slider-15"
     }
   ],
   "spinner": [
@@ -1256,60 +423,6 @@ export const customizedComponents = {
       "title": "Default",
       "type": "spinner",
       "name": "spinner-01"
-    },
-    {
-      "title": "Circle",
-      "type": "spinner",
-      "name": "spinner-02"
-    },
-    {
-      "title": "Pinwheel",
-      "type": "spinner",
-      "name": "spinner-03"
-    },
-    {
-      "title": "Colors",
-      "type": "spinner",
-      "name": "spinner-04"
-    },
-    {
-      "title": "Sizes",
-      "type": "spinner",
-      "name": "spinner-05"
-    },
-    {
-      "title": "Swirling Effect",
-      "type": "spinner",
-      "name": "spinner-06",
-      "credit": {
-        "label": "fffuel",
-        "link": "https://www.fffuel.co/svg-spinner/"
-      }
-    },
-    {
-      "title": "Spinner Circle 1",
-      "type": "spinner",
-      "name": "spinner-07"
-    },
-    {
-      "title": "Spinner Circle 2",
-      "type": "spinner",
-      "name": "spinner-08"
-    },
-    {
-      "title": "Spinner Circle 3",
-      "type": "spinner",
-      "name": "spinner-09"
-    },
-    {
-      "title": "Spinner Circle 4",
-      "type": "spinner",
-      "name": "spinner-10"
-    },
-    {
-      "title": "Spinner Circle 5",
-      "type": "spinner",
-      "name": "spinner-11"
     }
   ],
   "switch": [
@@ -1319,34 +432,19 @@ export const customizedComponents = {
       "name": "switch-01"
     },
     {
-      "title": "With label",
+      "title": "Small",
       "type": "switch",
       "name": "switch-02"
     },
     {
-      "title": "Disabled",
+      "title": "With label",
       "type": "switch",
       "name": "switch-03"
     },
     {
-      "title": "Colors",
+      "title": "Disabled",
       "type": "switch",
       "name": "switch-04"
-    },
-    {
-      "title": "Sizes",
-      "type": "switch",
-      "name": "switch-05"
-    },
-    {
-      "title": "Controlled",
-      "type": "switch",
-      "name": "switch-06"
-    },
-    {
-      "title": "Customization",
-      "type": "switch",
-      "name": "switch-07"
     }
   ],
   "table": [
@@ -1354,56 +452,6 @@ export const customizedComponents = {
       "title": "Default",
       "type": "table",
       "name": "table-01"
-    },
-    {
-      "title": "Bordered",
-      "type": "table",
-      "name": "table-02"
-    },
-    {
-      "title": "Striped rows",
-      "type": "table",
-      "name": "table-03"
-    },
-    {
-      "title": "Rounded corners",
-      "type": "table",
-      "name": "table-04"
-    },
-    {
-      "title": "With pagination",
-      "type": "table",
-      "name": "table-05"
-    },
-    {
-      "title": "Sticky header",
-      "type": "table",
-      "name": "table-06"
-    },
-    {
-      "title": "Sticky columns",
-      "type": "table",
-      "name": "table-07"
-    },
-    {
-      "title": "Overflow scroll",
-      "type": "table",
-      "name": "table-08"
-    },
-    {
-      "title": "Data Table",
-      "type": "table",
-      "name": "table-09"
-    },
-    {
-      "title": "Data Table Density",
-      "type": "table",
-      "name": "table-10"
-    },
-    {
-      "title": "Columns Visibility",
-      "type": "table",
-      "name": "table-11"
     }
   ],
   "tabs": [
@@ -1413,89 +461,19 @@ export const customizedComponents = {
       "name": "tabs-01"
     },
     {
-      "title": "Underlined",
+      "title": "Line",
       "type": "tabs",
       "name": "tabs-02"
     },
     {
-      "title": "Separated",
+      "title": "Vertical",
       "type": "tabs",
       "name": "tabs-03"
     },
     {
-      "title": "Bordered",
+      "title": "Disabled",
       "type": "tabs",
       "name": "tabs-04"
-    },
-    {
-      "title": "Box",
-      "type": "tabs",
-      "name": "tabs-05"
-    },
-    {
-      "title": "Bootstrap",
-      "type": "tabs",
-      "name": "tabs-06"
-    },
-    {
-      "title": "Icon",
-      "type": "tabs",
-      "name": "tabs-07"
-    },
-    {
-      "title": "Mobile Navigation",
-      "type": "tabs",
-      "name": "tabs-08"
-    },
-    {
-      "title": "With badge",
-      "type": "tabs",
-      "name": "tabs-09"
-    },
-    {
-      "title": "Sharp",
-      "type": "tabs",
-      "name": "tabs-10"
-    },
-    {
-      "title": "Shadow",
-      "type": "tabs",
-      "name": "tabs-11"
-    },
-    {
-      "title": "Skewed",
-      "type": "tabs",
-      "name": "tabs-12"
-    },
-    {
-      "title": "Vertical",
-      "type": "tabs",
-      "name": "tabs-13"
-    },
-    {
-      "title": "Vertical Left Bordered",
-      "type": "tabs",
-      "name": "tabs-14"
-    },
-    {
-      "title": "Vertical Separated",
-      "type": "tabs",
-      "name": "tabs-15"
-    },
-    {
-      "title": "Vertical Sharp",
-      "type": "tabs",
-      "name": "tabs-16"
-    },
-    {
-      "title": "Vertical Bordered",
-      "type": "tabs",
-      "name": "tabs-17"
-    },
-    {
-      "title": "Animated Content",
-      "type": "tabs",
-      "name": "tabs-18"
     }
   ],
   "textarea": [
@@ -1505,7 +483,7 @@ export const customizedComponents = {
       "name": "textarea-01"
     },
     {
-      "title": "With background",
+      "title": "With label",
       "type": "textarea",
       "name": "textarea-02"
     },
@@ -1515,24 +493,9 @@ export const customizedComponents = {
       "name": "textarea-03"
     },
     {
-      "title": "With label",
+      "title": "Invalid",
       "type": "textarea",
       "name": "textarea-04"
-    },
-    {
-      "title": "Rows",
-      "type": "textarea",
-      "name": "textarea-05"
-    },
-    {
-      "title": "With helper text",
-      "type": "textarea",
-      "name": "textarea-06"
-    },
-    {
-      "title": "Controlled",
-      "type": "textarea",
-      "name": "textarea-07"
     }
   ],
   "tooltip": [
@@ -1542,37 +505,9 @@ export const customizedComponents = {
       "name": "tooltip-01"
     },
     {
-      "title": "With arrow",
+      "title": "Sides",
       "type": "tooltip",
       "name": "tooltip-02"
-    },
-    {
-      "title": "Portal",
-      "type": "tooltip",
-      "name": "tooltip-07",
-      "description": "When used, portals the content part into the body."
-    },
-    {
-      "title": "Directions",
-      "type": "tooltip",
-      "name": "tooltip-03"
-    },
-    {
-      "title": "With delay",
-      "type": "tooltip",
-      "name": "tooltip-05"
-    },
-    {
-      "title": "With skip delay",
-      "type": "tooltip",
-      "name": "tooltip-06",
-      "description": "How much time a user has to enter another trigger without incurring a delay again."
-    },
-    {
-      "title": "Disable Hoverable Content",
-      "type": "tooltip",
-      "name": "tooltip-04",
-      "description": "Prevents TooltipContent from remaining open when hovering. Disabling this has accessibility consequences."
     }
   ]
 } as const;

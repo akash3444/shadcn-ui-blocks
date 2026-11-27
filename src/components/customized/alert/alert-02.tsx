@@ -1,13 +1,13 @@
-import { OctagonAlertIcon } from "lucide-react";
+import { CircleAlertIcon } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/registry/ui/alert";
 
-export default function DestructiveAlertDemo() {
+export default function AlertDestructiveDemo() {
   return (
     <Alert variant="destructive">
-      <OctagonAlertIcon className="size-4" />
-      <AlertTitle>Something Went Wrong</AlertTitle>
+      <CircleAlertIcon />
+      <AlertTitle>Payment failed</AlertTitle>
       <AlertDescription>
-        An error occurred while processing your request.
+        Your card was declined. Please update your billing details.
       </AlertDescription>
     </Alert>
   );

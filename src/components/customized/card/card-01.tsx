@@ -18,6 +18,12 @@ import {
   SelectValue,
 } from "@/registry/ui/select";
 
+const priorities = [
+  { label: "Low", value: "low" },
+  { label: "Medium", value: "medium" },
+  { label: "High", value: "high" },
+];
+
 export default function CardDemo() {
   return (
     <Card className="w-[350px]">
@@ -36,15 +42,17 @@ export default function CardDemo() {
             </div>
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="framework">Priority</Label>
-              <Select>
+              <Select items={priorities}>
                 <SelectTrigger className="w-full" id="framework">
                   <SelectValue placeholder="Select" />
                 </SelectTrigger>
-                <SelectContent position="popper">
+                <SelectContent alignItemWithTrigger={false}>
                   <SelectGroup>
-                    <SelectItem value="low">Low</SelectItem>
-                    <SelectItem value="medium">Medium</SelectItem>
-                    <SelectItem value="high">High</SelectItem>
+                    {priorities.map((priority) => (
+                      <SelectItem key={priority.value} value={priority.value}>
+                        {priority.label}
+                      </SelectItem>
+                    ))}
                   </SelectGroup>
                 </SelectContent>
               </Select>

@@ -1,11 +1,12 @@
-import { Label } from "@/registry/ui/label";
+import { Field, FieldError, FieldLabel } from "@/registry/ui/field";
 import { Textarea } from "@/registry/ui/textarea";
 
-export default function TextareaWithLabelDemo() {
+export default function TextareaInvalidDemo() {
   return (
-    <div className="flex w-full flex-col gap-2">
-      <Label htmlFor="message">Message</Label>
-      <Textarea id="message" placeholder="Type your message here." />
-    </div>
+    <Field className="max-w-sm" data-invalid>
+      <FieldLabel htmlFor="textarea-invalid">Bio</FieldLabel>
+      <Textarea aria-invalid id="textarea-invalid" placeholder="Tell us about yourself" />
+      <FieldError>Bio must be at least 20 characters.</FieldError>
+    </Field>
   );
 }

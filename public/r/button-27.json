@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-27",
+  "title": "Link as Button",
+  "description": "An anchor rendered with button styles",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/button/button-27.tsx",
+      "content": "import { ArrowUpRightIcon } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nconst LinkAsButtonDemo = () => (\n  <Button\n    nativeButton={false}\n    render={<a href=\"https://base-ui.com\" rel=\"noreferrer\" target=\"_blank\" />}\n  >\n    Visit Base UI <ArrowUpRightIcon data-icon=\"inline-end\" />\n  </Button>\n);\n\nexport default LinkAsButtonDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

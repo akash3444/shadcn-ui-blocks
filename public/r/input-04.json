@@ -1,15 +1,16 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-04",
-  "title": "Disabled Input",
-  "description": "A disabled input component",
+  "title": "Invalid Input",
+  "description": "An input with an error message",
   "registryDependencies": [
-    "input"
+    "input",
+    "field"
   ],
   "files": [
     {
       "path": "src/components/customized/input/input-04.tsx",
-      "content": "import { Input } from \"@/registry/ui/input\";\n\nexport default function DisabledInputDemo() {\n  return (\n    <Input className=\"max-w-xs\" disabled placeholder=\"Email\" type=\"email\" />\n  );\n}\n",
+      "content": "import { Field, FieldError, FieldLabel } from \"@/registry/ui/field\";\nimport { Input } from \"@/registry/ui/input\";\n\nexport default function InputInvalidDemo() {\n  return (\n    <Field className=\"max-w-xs\" data-invalid>\n      <FieldLabel htmlFor=\"input-invalid\">Email</FieldLabel>\n      <Input\n        aria-invalid\n        defaultValue=\"shadcn@\"\n        id=\"input-invalid\"\n        type=\"email\"\n      />\n      <FieldError>Enter a valid email address.</FieldError>\n    </Field>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

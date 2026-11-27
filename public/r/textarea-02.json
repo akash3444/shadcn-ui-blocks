@@ -1,15 +1,16 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "textarea-02",
-  "title": "Textarea with Background Color",
-  "description": "A textarea component with background color",
+  "title": "Textarea with Label",
+  "description": "A textarea with a label and description",
   "registryDependencies": [
-    "textarea"
+    "textarea",
+    "field"
   ],
   "files": [
     {
       "path": "src/components/customized/textarea/textarea-02.tsx",
-      "content": "import { Textarea } from \"@/registry/ui/textarea\";\n\nexport default function TextareaWithBackgroundColorDemo() {\n  return (\n    <Textarea\n      className=\"bg-muted shadow-none\"\n      placeholder=\"Type your message here.\"\n    />\n  );\n}\n",
+      "content": "import { Field, FieldDescription, FieldLabel } from \"@/registry/ui/field\";\nimport { Textarea } from \"@/registry/ui/textarea\";\n\nexport default function TextareaWithLabelDemo() {\n  return (\n    <Field className=\"max-w-sm\">\n      <FieldLabel htmlFor=\"textarea-message\">Your message</FieldLabel>\n      <Textarea id=\"textarea-message\" placeholder=\"Type your message here.\" />\n      <FieldDescription>Your message will be sent to support.</FieldDescription>\n    </Field>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

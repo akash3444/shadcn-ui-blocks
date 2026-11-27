@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-05",
   "title": "Icon Button",
-  "description": "An icon button component",
+  "description": "Buttons with icons",
   "dependencies": [
     "lucide-react"
   ],
@@ -12,7 +12,7 @@
   "files": [
     {
       "path": "src/components/customized/button/button-05.tsx",
-      "content": "import { ArrowRight, Star } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nconst IconButtonDemo = () => {\n  return (\n    <div className=\"flex items-center gap-2\">\n      <Button size=\"icon\">\n        <Star />\n      </Button>\n      <Button>\n        <Star /> Star\n      </Button>\n      <Button>\n        Read More <ArrowRight />\n      </Button>\n    </div>\n  );\n};\n\nexport default IconButtonDemo;\n",
+      "content": "import { ArrowRightIcon, StarIcon } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nconst IconButtonDemo = () => (\n  <div className=\"flex flex-wrap items-center gap-2\">\n    <Button aria-label=\"Star\" size=\"icon\">\n      <StarIcon />\n    </Button>\n    <Button>\n      <StarIcon data-icon=\"inline-start\" /> Star\n    </Button>\n    <Button variant=\"outline\">\n      Read more <ArrowRightIcon data-icon=\"inline-end\" />\n    </Button>\n  </div>\n);\n\nexport default IconButtonDemo;\n",
       "type": "registry:component"
     }
   ],

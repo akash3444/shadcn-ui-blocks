@@ -1,61 +1,41 @@
-import {
-  Copy,
-  Ellipsis,
-  ExternalLink,
-  Eye,
-  MessageCircle,
-  Search,
-  User,
-} from "lucide-react";
+import { CopyIcon, PencilIcon, ShareIcon, Trash2Icon } from "lucide-react";
 import { Button } from "@/registry/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuSeparator,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
+  DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/registry/ui/dropdown-menu";
 
-export default function DropdownMenuWithSubMenu() {
+export default function DropdownMenuShortcutsDemo() {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button size="icon" variant="outline">
-          <Ellipsis />
-        </Button>
+      <DropdownMenuTrigger render={<Button variant="outline" />}>
+        Actions
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="mt-2 w-full">
-        <DropdownMenuItem>
-          <Eye /> Open conversation details
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <User /> View full profile
-        </DropdownMenuItem>
+      <DropdownMenuContent className="w-48">
+        <DropdownMenuGroup>
+          <DropdownMenuItem>
+            <PencilIcon /> Edit <DropdownMenuShortcut>⌘E</DropdownMenuShortcut>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <CopyIcon /> Duplicate
+            <DropdownMenuShortcut>⌘D</DropdownMenuShortcut>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <ShareIcon /> Share <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+          </DropdownMenuItem>
+        </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <MessageCircle /> Start conversation
-        </DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuSub>
-          <DropdownMenuSubTrigger>
-            <Copy className="size-4 text-muted-foreground" />
-            Copy
-          </DropdownMenuSubTrigger>
-          <DropdownMenuSubContent>
-            <DropdownMenuItem>Copy name</DropdownMenuItem>
-            <DropdownMenuItem>Copy email</DropdownMenuItem>
-            <DropdownMenuItem>Copy link</DropdownMenuItem>
-          </DropdownMenuSubContent>
-        </DropdownMenuSub>
-        <DropdownMenuItem>
-          <Search /> Search in conversation
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <ExternalLink /> Open in new window
-        </DropdownMenuItem>
+        <DropdownMenuGroup>
+          <DropdownMenuItem variant="destructive">
+            <Trash2Icon /> Delete
+            <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
+          </DropdownMenuItem>
+        </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   );

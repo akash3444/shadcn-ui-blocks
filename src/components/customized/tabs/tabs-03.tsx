@@ -1,53 +1,40 @@
-import { Copy } from "lucide-react";
-import { Button } from "@/registry/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs";
 
 const tabs = [
   {
-    name: "pnpm",
-    value: "pnpm",
-    content: "pnpm dlx shadcn@latest add tabs",
+    value: "overview",
+    label: "Overview",
+    content: "A summary of your account activity this month.",
   },
   {
-    name: "npm",
-    value: "npm",
-    content: "npx shadcn@latest add tabs",
+    value: "analytics",
+    label: "Analytics",
+    content: "Traffic, conversions and engagement over time.",
   },
   {
-    name: "yarn",
-    value: "yarn",
-    content: "npx shadcn@latest add tabs",
-  },
-  {
-    name: "bun",
-    value: "bun",
-    content: "bunx --bun shadcn@latest add tabs",
+    value: "reports",
+    label: "Reports",
+    content: "Download and schedule reports for your team.",
   },
 ];
 
-export default function TabsSeparatedDemo() {
+export default function TabsVerticalDemo() {
   return (
-    <Tabs className="w-full max-w-xs" defaultValue={tabs[0].value}>
-      <TabsList className="gap-1 bg-background p-0 group-data-horizontal/tabs:h-7">
+    <Tabs className="w-full max-w-sm" defaultValue="overview" orientation="vertical">
+      <TabsList>
         {tabs.map((tab) => (
-          <TabsTrigger
-            className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-            key={tab.value}
-            value={tab.value}
-          >
-            <code className="text-[13px]">{tab.name}</code>
+          <TabsTrigger key={tab.value} value={tab.value}>
+            {tab.label}
           </TabsTrigger>
         ))}
       </TabsList>
-
       {tabs.map((tab) => (
-        <TabsContent key={tab.value} value={tab.value}>
-          <div className="flex h-10 items-center justify-between gap-2 rounded-md border pr-1.5 pl-3">
-            <code className="text-[13px]">{tab.content}</code>
-            <Button className="h-7 w-7" size="icon" variant="secondary">
-              <Copy className="h-3.5! w-3.5!" />
-            </Button>
-          </div>
+        <TabsContent
+          className="text-muted-foreground text-sm"
+          key={tab.value}
+          value={tab.value}
+        >
+          {tab.content}
         </TabsContent>
       ))}
     </Tabs>

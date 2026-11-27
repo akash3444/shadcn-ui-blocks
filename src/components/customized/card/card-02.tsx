@@ -1,58 +1,28 @@
 import { Button } from "@/registry/ui/button";
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/registry/ui/card";
-import { Input } from "@/registry/ui/input";
-import { Label } from "@/registry/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/registry/ui/select";
 
-export default function CardWithBackground() {
+export default function CardSmallDemo() {
   return (
-    <Card className="w-[350px] bg-secondary/50 shadow-none">
+    <Card className="w-[320px]" size="sm">
       <CardHeader>
-        <CardTitle>Create Task</CardTitle>
-        <CardDescription>
-          Quickly add a new task to stay organized.
-        </CardDescription>
+        <CardTitle>Storage</CardTitle>
+        <CardDescription>You have used 7.2 GB of 10 GB.</CardDescription>
+        <CardAction>
+          <Button size="xs" variant="outline">
+            Upgrade
+          </Button>
+        </CardAction>
       </CardHeader>
       <CardContent>
-        <form>
-          <div className="grid w-full items-center gap-4">
-            <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Name of your project" />
-            </div>
-            <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="framework">Priority</Label>
-              <Select>
-                <SelectTrigger className="w-full" id="framework">
-                  <SelectValue placeholder="Select" />
-                </SelectTrigger>
-                <SelectContent position="popper">
-                  <SelectItem value="low">Low</SelectItem>
-                  <SelectItem value="medium">Medium</SelectItem>
-                  <SelectItem value="high">High</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
-        </form>
+        Upgrade your plan to get more storage and priority support.
       </CardContent>
-      <CardFooter className="flex justify-between">
-        <Button variant="outline">Cancel</Button>
-        <Button>Create</Button>
-      </CardFooter>
     </Card>
   );
 }

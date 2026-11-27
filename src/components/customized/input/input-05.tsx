@@ -1,11 +1,11 @@
+import { Field, FieldLabel } from "@/registry/ui/field";
 import { Input } from "@/registry/ui/input";
-import { Label } from "@/registry/ui/label";
 
-export default function InputWithLabelDemo() {
+export default function InputFileDemo() {
   return (
-    <div className="w-full max-w-xs">
-      <Label htmlFor="email">Email</Label>
-      <Input className="mt-2" id="email" placeholder="Email" type="email" />
-    </div>
+    <Field className="max-w-xs">
+      <FieldLabel htmlFor="input-file">Picture</FieldLabel>
+      <Input id="input-file" type="file" />
+    </Field>
   );
 }

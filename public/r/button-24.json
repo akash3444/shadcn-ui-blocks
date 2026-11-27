@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-24",
+  "title": "Link Button",
+  "description": "A button styled as a link",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/button/button-24.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\";\n\nconst LinkButtonDemo = () => <Button variant=\"link\">Link</Button>;\n\nexport default LinkButtonDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

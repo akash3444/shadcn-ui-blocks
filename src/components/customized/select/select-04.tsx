@@ -1,37 +1,32 @@
-import { ChevronDown } from "lucide-react";
-import { Select as SelectPrimitive } from "radix-ui";
-import { cn } from "@/lib/utils";
 import {
   Select,
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
+  SelectTrigger,
   SelectValue,
 } from "@/registry/ui/select";
 
-export default function SelectWithCustomDropdownIconDemo() {
+const fruits = [
+  { label: "Apple", value: "apple" },
+  { label: "Banana", value: "banana" },
+  { label: "Blueberry", value: "blueberry" },
+  { label: "Grapes", value: "grapes" },
+];
+
+export default function SelectDisabledDemo() {
   return (
-    <Select>
-      <SelectPrimitive.Trigger
-        className={cn(
-          "flex h-8 w-full items-center justify-between whitespace-nowrap rounded-lg border border-input bg-transparent px-3 py-2 text-sm shadow-xs ring-offset-background placeholder:text-muted-foreground focus:outline-hidden focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
-          "w-44"
-        )}
-      >
+    <Select disabled items={fruits}>
+      <SelectTrigger className="w-[180px]">
         <SelectValue placeholder="Select a fruit" />
-        <SelectPrimitive.Icon asChild>
-          <ChevronDown className="h-4 w-4 opacity-50" />
-        </SelectPrimitive.Icon>
-      </SelectPrimitive.Trigger>
+      </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>Fruits</SelectLabel>
-          <SelectItem value="apple">Apple</SelectItem>
-          <SelectItem value="banana">Banana</SelectItem>
-          <SelectItem value="blueberry">Blueberry</SelectItem>
-          <SelectItem value="grapes">Grapes</SelectItem>
-          <SelectItem value="pineapple">Pineapple</SelectItem>
+          {fruits.map((fruit) => (
+            <SelectItem key={fruit.value} value={fruit.value}>
+              {fruit.label}
+            </SelectItem>
+          ))}
         </SelectGroup>
       </SelectContent>
     </Select>

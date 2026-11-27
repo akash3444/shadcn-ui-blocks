@@ -1,13 +1,23 @@
-import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/registry/ui/input-otp";
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSeparator,
+  InputOTPSlot,
+} from "@/registry/ui/input-otp";
 
-export default function InputOTPDemo() {
+export default function InputOTPDisabledDemo() {
   return (
-    <InputOTP maxLength={6}>
-      <InputOTPGroup className="space-x-2">
-        <InputOTPSlot className="rounded-md border-l" index={0} />
-        <InputOTPSlot className="rounded-md border-l" index={1} />
-        <InputOTPSlot className="rounded-md border-l" index={2} />
-        <InputOTPSlot className="rounded-md border-l" index={3} />
+    <InputOTP disabled maxLength={6} value="123456">
+      <InputOTPGroup>
+        <InputOTPSlot index={0} />
+        <InputOTPSlot index={1} />
+        <InputOTPSlot index={2} />
+      </InputOTPGroup>
+      <InputOTPSeparator />
+      <InputOTPGroup>
+        <InputOTPSlot index={3} />
+        <InputOTPSlot index={4} />
+        <InputOTPSlot index={5} />
       </InputOTPGroup>
     </InputOTP>
   );

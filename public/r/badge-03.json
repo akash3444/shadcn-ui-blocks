@@ -1,15 +1,15 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-03",
-  "title": "Outline Badge",
-  "description": "An outline badge component",
+  "title": "Destructive Badge",
+  "description": "A destructive badge component",
   "registryDependencies": [
     "badge"
   ],
   "files": [
     {
       "path": "src/components/customized/badge/badge-03.tsx",
-      "content": "import { Badge } from \"@/registry/ui/badge\";\n\nconst BadgeOutlineDemo = () => {\n  return <Badge variant=\"outline\">Outline</Badge>;\n};\n\nexport default BadgeOutlineDemo;\n",
+      "content": "import { Badge } from \"@/registry/ui/badge\";\n\nconst DestructiveBadgeDemo = () => <Badge variant=\"destructive\">Destructive</Badge>;\n\nexport default DestructiveBadgeDemo;\n",
       "type": "registry:component"
     }
   ],

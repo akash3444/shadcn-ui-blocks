@@ -20,7 +20,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@base-ui/react": "^1.4.1",
+    "@base-ui/react": "^1.9.0",
     "@databuddy/sdk": "^3.5.6",
     "@hookform/resolvers": "^3.9.1",
     "@number-flow/react": "^0.6.0",
@@ -31,7 +31,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
-    "cn": "^0.3.0",
+    "cn": "^0.5.2",
     "date-fns": "^4.1.0",
     "dotenv": "^16.4.5",
     "embla-carousel-react": "^8.5.2",

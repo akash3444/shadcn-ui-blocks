@@ -5,7 +5,9 @@
     "includes": [
       "!!public/r/**/*.json",
       "!!src/config/registry/index.tsx",
-      "!!src/description/customized-components.ts"
+      "!!src/components/customized",
+      "!!src/description/customized-components.ts",
+      "!!src/registry/ui"
     ]
   }
 }
