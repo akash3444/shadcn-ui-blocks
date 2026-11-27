@@ -78,12 +78,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script
-          data-domain="www.shadcnui-blocks.com"
-          data-website-id="67bf0ef528e2eaab259e0c50"
-          defer
-          src="https://datafa.st/js/script.js"
-        />
         <meta content="ca-pub-4493596981598123" name="google-adsense-account" />
       </head>
       <body
