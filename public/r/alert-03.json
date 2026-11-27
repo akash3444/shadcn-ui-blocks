@@ -1,19 +1,18 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-03",
-  "title": "Alert with Action",
-  "description": "An alert with an action button",
+  "title": "Success Alert",
+  "description": "An alert for confirming a successful action",
   "dependencies": [
     "lucide-react"
   ],
   "registryDependencies": [
-    "alert",
-    "button"
+    "alert"
   ],
   "files": [
     {
       "path": "src/components/customized/alert/alert-03.tsx",
-      "content": "import { CircleFadingArrowUpIcon } from \"lucide-react\";\nimport {\n  Alert,\n  AlertAction,\n  AlertDescription,\n  AlertTitle,\n} from \"@/registry/ui/alert\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport default function AlertWithActionDemo() {\n  return (\n    <Alert className=\"max-w-sm\">\n      <CircleFadingArrowUpIcon />\n      <AlertTitle>Update available</AlertTitle>\n      <AlertDescription>\n        A new version of the app is now available.\n      </AlertDescription>\n      <AlertAction>\n        <Button size=\"xs\">Update</Button>\n      </AlertAction>\n    </Alert>\n  );\n}\n",
+      "content": "import { CircleCheckIcon } from \"lucide-react\";\nimport { Alert, AlertDescription, AlertTitle } from \"@/registry/ui/alert\";\n\nexport default function AlertSuccessDemo() {\n  return (\n    <Alert className=\"max-w-sm text-emerald-600 *:data-[slot=alert-description]:text-emerald-600/90 dark:text-emerald-500 dark:*:data-[slot=alert-description]:text-emerald-500/90\">\n      <CircleCheckIcon />\n      <AlertTitle>Payment received</AlertTitle>\n      <AlertDescription>\n        Your subscription is active. A receipt has been sent to your email.\n      </AlertDescription>\n    </Alert>\n  );\n}\n",
       "type": "registry:component"
     }
   ],

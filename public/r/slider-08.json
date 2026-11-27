@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-08",
+  "title": "Audio Player Slider",
+  "description": "A seek slider for an audio player with play button and timestamps",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "slider"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/slider/slider-08.tsx",
+      "content": "\"use client\";\n\nimport { PauseIcon, PlayIcon } from \"lucide-react\";\nimport { useEffect, useState } from \"react\";\nimport { Button } from \"@/registry/ui/button\";\nimport { Slider } from \"@/registry/ui/slider\";\n\nconst DURATION = 214;\nconst TICK_MS = 1000;\n\nconst formatTime = (seconds: number) => {\n  const minutes = Math.floor(seconds / 60);\n  const remainder = Math.floor(seconds % 60);\n  return `${minutes}:${remainder.toString().padStart(2, \"0\")}`;\n};\n\nexport default function SliderAudioPlayerDemo() {\n  const [position, setPosition] = useState(72);\n  const [isPlaying, setIsPlaying] = useState(false);\n\n  useEffect(() => {\n    if (!isPlaying) {\n      return;\n    }\n    const interval = setInterval(() => {\n      setPosition((current) => {\n        if (current >= DURATION) {\n          setIsPlaying(false);\n          return DURATION;\n        }\n        return current + 1;\n      });\n    }, TICK_MS);\n    return () => clearInterval(interval);\n  }, [isPlaying]);\n\n  return (\n    <div className=\"flex w-full max-w-sm items-center gap-3\">\n      <span className=\"sr-only\" id=\"slider-audio-seek-label\">\n        Seek\n      </span>\n      <Button\n        aria-label={isPlaying ? \"Pause\" : \"Play\"}\n        onClick={() => setIsPlaying((playing) => !playing)}\n        size=\"icon\"\n        variant=\"outline\"\n      >\n        {isPlaying ? <PauseIcon /> : <PlayIcon />}\n      </Button>\n      <span className=\"w-9 text-muted-foreground text-xs tabular-nums\">\n        {formatTime(position)}\n      </span>\n      <Slider\n        aria-labelledby=\"slider-audio-seek-label\"\n        className=\"flex-1\"\n        max={DURATION}\n        onValueChange={(value) =>\n          setPosition(Array.isArray(value) ? value[0] : value)\n        }\n        step={1}\n        value={[position]}\n      />\n      <span className=\"w-9 text-right text-muted-foreground text-xs tabular-nums\">\n        {formatTime(DURATION)}\n      </span>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

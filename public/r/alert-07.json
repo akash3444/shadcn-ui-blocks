@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-07",
+  "title": "Alert with List",
+  "description": "A destructive alert listing multiple errors",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "alert"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/alert/alert-07.tsx",
+      "content": "import { CircleAlertIcon } from \"lucide-react\";\nimport { Alert, AlertDescription, AlertTitle } from \"@/registry/ui/alert\";\n\nconst errors = [\n  \"Password must be at least 8 characters.\",\n  \"Password must include a number.\",\n  \"Email address is already in use.\",\n];\n\nexport default function AlertWithListDemo() {\n  return (\n    <Alert className=\"max-w-sm\" variant=\"destructive\">\n      <CircleAlertIcon />\n      <AlertTitle>Unable to create your account</AlertTitle>\n      <AlertDescription className=\"mt-1\">\n        Please fix the following issues:\n        <ul className=\"mt-1 list-disc pl-5\">\n          {errors.map((error) => (\n            <li key={error}>{error}</li>\n          ))}\n        </ul>\n      </AlertDescription>\n    </Alert>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

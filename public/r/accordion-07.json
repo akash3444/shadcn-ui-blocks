@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion-07",
+  "title": "Nested Accordion",
+  "description": "An accordion with accordions nested inside its items",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "accordion"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/accordion/accordion-07.tsx",
+      "content": "import { CreditCardIcon, PackageIcon, UserIcon } from \"lucide-react\";\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@/registry/ui/accordion\";\n\nconst sections = [\n  {\n    value: \"orders\",\n    icon: PackageIcon,\n    title: \"Orders\",\n    questions: [\n      {\n        value: \"track-order\",\n        title: \"How do I track my order?\",\n        content:\n          \"Open your account, go to Orders and select the order to see its live tracking status.\",\n      },\n      {\n        value: \"change-order\",\n        title: \"Can I change my order after placing it?\",\n        content:\n          \"You can edit or cancel an order within one hour of placing it, as long as it hasn't shipped.\",\n      },\n    ],\n  },\n  {\n    value: \"billing\",\n    icon: CreditCardIcon,\n    title: \"Billing\",\n    questions: [\n      {\n        value: \"payment-methods\",\n        title: \"Which payment methods do you accept?\",\n        content:\n          \"We accept all major credit cards, PayPal and Apple Pay. Invoices are available for business accounts.\",\n      },\n      {\n        value: \"refunds\",\n        title: \"When will I get my refund?\",\n        content:\n          \"Refunds are issued to your original payment method within 5-7 business days of approval.\",\n      },\n    ],\n  },\n  {\n    value: \"account\",\n    icon: UserIcon,\n    title: \"Account\",\n    questions: [\n      {\n        value: \"reset-password\",\n        title: \"How do I reset my password?\",\n        content:\n          \"Select Forgot password on the sign-in page and follow the link we email you.\",\n      },\n      {\n        value: \"delete-account\",\n        title: \"How do I delete my account?\",\n        content:\n          \"Go to Settings, then Account, and select Delete account. This can't be undone.\",\n      },\n    ],\n  },\n];\n\nexport default function AccordionNestedDemo() {\n  return (\n    <Accordion\n      className=\"my-4 w-full max-w-lg rounded-lg border\"\n      defaultValue={[\"orders\"]}\n    >\n      {sections.map((section) => (\n        <AccordionItem\n          className=\"px-4\"\n          key={section.value}\n          value={section.value}\n        >\n          <AccordionTrigger>\n            <span className=\"flex items-center gap-2\">\n              <section.icon className=\"size-4 shrink-0 text-muted-foreground\" />\n              {section.title}\n            </span>\n          </AccordionTrigger>\n          <AccordionContent>\n            <Accordion className=\"rounded-md bg-muted/50 px-4\">\n              {section.questions.map((question) => (\n                <AccordionItem key={question.value} value={question.value}>\n                  <AccordionTrigger>{question.title}</AccordionTrigger>\n                  <AccordionContent>{question.content}</AccordionContent>\n                </AccordionItem>\n              ))}\n            </Accordion>\n          </AccordionContent>\n        </AccordionItem>\n      ))}\n    </Accordion>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}
