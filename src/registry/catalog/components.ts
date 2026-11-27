@@ -1291,6 +1291,40 @@ export const components = [
     },
   },
   {
+    name: "slider-05",
+    type: "registry:component",
+    title: "Slider with Label",
+    description: "A slider with a label and its current value",
+    registryDependencies: ["field", "slider"],
+    files: [
+      {
+        path: "src/components/customized/slider/slider-05.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "slider",
+      title: "With label",
+    },
+  },
+  {
+    name: "slider-06",
+    type: "registry:component",
+    title: "Slider with Steps",
+    description: "A slider that snaps to fixed steps with value markers",
+    registryDependencies: ["slider"],
+    files: [
+      {
+        path: "src/components/customized/slider/slider-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "slider",
+      title: "Steps",
+    },
+  },
+  {
     name: "spinner-01",
     type: "registry:component",
     title: "Default Spinner",

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-05",
+  "title": "Slider with Label",
+  "description": "A slider with a label and its current value",
+  "registryDependencies": [
+    "field",
+    "slider"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/slider/slider-05.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { Field, FieldLabel } from \"@/registry/ui/field\";\nimport { Slider } from \"@/registry/ui/slider\";\n\nexport default function SliderWithLabelDemo() {\n  const [volume, setVolume] = useState(50);\n\n  return (\n    <Field className=\"max-w-sm\">\n      <div className=\"flex items-center justify-between gap-2\">\n        <FieldLabel id=\"slider-volume-label\">Volume</FieldLabel>\n        <span className=\"text-muted-foreground text-sm tabular-nums\">\n          {volume}%\n        </span>\n      </div>\n      <Slider\n        aria-labelledby=\"slider-volume-label\"\n        max={100}\n        onValueChange={(value) =>\n          setVolume(Array.isArray(value) ? value[0] : value)\n        }\n        step={1}\n        value={[volume]}\n      />\n    </Field>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

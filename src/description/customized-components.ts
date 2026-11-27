@@ -416,6 +416,16 @@ export const customizedComponents = {
       "title": "Disabled",
       "type": "slider",
       "name": "slider-04"
+    },
+    {
+      "title": "With label",
+      "type": "slider",
+      "name": "slider-05"
+    },
+    {
+      "title": "Steps",
+      "type": "slider",
+      "name": "slider-06"
     }
   ],
   "spinner": [
