@@ -13,11 +13,17 @@ export default function RadioGroupDisabledDemo() {
       {options.map((option) => (
         <div className="flex items-center gap-2" key={option.value}>
           <RadioGroupItem
+            className="data-disabled:cursor-not-allowed data-disabled:opacity-50"
             disabled={option.disabled}
             id={`plan-${option.value}`}
             value={option.value}
           />
-          <Label htmlFor={`plan-${option.value}`}>{option.label}</Label>
+          <Label
+            className="peer-data-disabled:cursor-not-allowed peer-data-disabled:opacity-50"
+            htmlFor={`plan-${option.value}`}
+          >
+            {option.label}
+          </Label>
         </div>
       ))}
     </RadioGroup>

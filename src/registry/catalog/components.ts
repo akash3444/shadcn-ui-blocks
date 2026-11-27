@@ -1616,6 +1616,23 @@ export const components = [
     },
   },
   {
+    name: "textarea-05",
+    type: "registry:component",
+    title: "Textarea with Character Count",
+    description: "A textarea with a live character count and limit",
+    registryDependencies: ["field", "input-group"],
+    files: [
+      {
+        path: "src/components/customized/textarea/textarea-05.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "textarea",
+      title: "Character count",
+    },
+  },
+  {
     name: "tooltip-01",
     type: "registry:component",
     title: "Default Tooltip",

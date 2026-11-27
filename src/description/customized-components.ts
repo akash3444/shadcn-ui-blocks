@@ -521,6 +521,11 @@ export const customizedComponents = {
       "title": "Invalid",
       "type": "textarea",
       "name": "textarea-04"
+    },
+    {
+      "title": "Character count",
+      "type": "textarea",
+      "name": "textarea-05"
     }
   ],
   "tooltip": [
