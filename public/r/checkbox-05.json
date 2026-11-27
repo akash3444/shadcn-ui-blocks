@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-05",
+  "title": "Indeterminate Checkbox",
+  "description": "A parent checkbox that reflects the state of nested checkboxes",
+  "registryDependencies": [
+    "checkbox",
+    "field"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/checkbox/checkbox-05.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { Checkbox } from \"@/registry/ui/checkbox\";\nimport { Field, FieldLabel } from \"@/registry/ui/field\";\n\nconst channels = [\n  { id: \"email\", label: \"Email\" },\n  { id: \"sms\", label: \"SMS\" },\n  { id: \"push\", label: \"Push notifications\" },\n];\n\nexport default function CheckboxIndeterminateDemo() {\n  const [selected, setSelected] = useState<string[]>([\"email\"]);\n\n  const allSelected = selected.length === channels.length;\n  const someSelected = selected.length > 0 && !allSelected;\n\n  const toggleAll = (checked: boolean) => {\n    setSelected(checked ? channels.map((channel) => channel.id) : []);\n  };\n\n  const toggleChannel = (id: string, checked: boolean) => {\n    setSelected((current) =>\n      checked ? [...current, id] : current.filter((value) => value !== id)\n    );\n  };\n\n  return (\n    <div className=\"flex flex-col gap-3\">\n      <Field orientation=\"horizontal\">\n        <Checkbox\n          checked={allSelected}\n          id=\"checkbox-channels\"\n          indeterminate={someSelected}\n          onCheckedChange={toggleAll}\n        />\n        <FieldLabel htmlFor=\"checkbox-channels\">All channels</FieldLabel>\n      </Field>\n      <div className=\"flex flex-col gap-3 pl-6\">\n        {channels.map((channel) => (\n          <Field key={channel.id} orientation=\"horizontal\">\n            <Checkbox\n              checked={selected.includes(channel.id)}\n              id={`checkbox-channel-${channel.id}`}\n              onCheckedChange={(checked) => toggleChannel(channel.id, checked)}\n            />\n            <FieldLabel htmlFor={`checkbox-channel-${channel.id}`}>\n              {channel.label}\n            </FieldLabel>\n          </Field>\n        ))}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

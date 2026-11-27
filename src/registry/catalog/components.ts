@@ -674,6 +674,40 @@ export const components = [
     },
   },
   {
+    name: "checkbox-05",
+    type: "registry:component",
+    title: "Indeterminate Checkbox",
+    description: "A parent checkbox that reflects the state of nested checkboxes",
+    registryDependencies: ["checkbox", "field"],
+    files: [
+      {
+        path: "src/components/customized/checkbox/checkbox-05.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "checkbox",
+      title: "Indeterminate",
+    },
+  },
+  {
+    name: "checkbox-06",
+    type: "registry:component",
+    title: "Horizontal Checkbox Group",
+    description: "A group of checkboxes laid out in a row",
+    registryDependencies: ["checkbox", "field"],
+    files: [
+      {
+        path: "src/components/customized/checkbox/checkbox-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "checkbox",
+      title: "Horizontal",
+    },
+  },
+  {
     name: "dropdown-menu-01",
     type: "registry:component",
     title: "Default Dropdown Menu",
@@ -843,6 +877,23 @@ export const components = [
     site: {
       group: "input",
       title: "File",
+    },
+  },
+  {
+    name: "input-06",
+    type: "registry:component",
+    title: "Input with Character Count",
+    description: "An input with a live character count and limit",
+    registryDependencies: ["field", "input-group"],
+    files: [
+      {
+        path: "src/components/customized/input/input-06.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "input",
+      title: "Character count",
     },
   },
   {
@@ -1118,6 +1169,23 @@ export const components = [
     site: {
       group: "radio-group",
       title: "Disabled",
+    },
+  },
+  {
+    name: "radio-group-03",
+    type: "registry:component",
+    title: "Horizontal Radio Group",
+    description: "Radio group options laid out in a row",
+    registryDependencies: ["label", "radio-group"],
+    files: [
+      {
+        path: "src/components/customized/radio-group/radio-group-03.tsx",
+        type: "registry:component",
+      },
+    ],
+    site: {
+      group: "radio-group",
+      title: "Horizontal",
     },
   },
   {

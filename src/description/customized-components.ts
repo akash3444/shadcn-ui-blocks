@@ -210,6 +210,16 @@ export const customizedComponents = {
       "title": "Invalid",
       "type": "checkbox",
       "name": "checkbox-04"
+    },
+    {
+      "title": "Indeterminate",
+      "type": "checkbox",
+      "name": "checkbox-05"
+    },
+    {
+      "title": "Horizontal",
+      "type": "checkbox",
+      "name": "checkbox-06"
     }
   ],
   "dropdown-menu": [
@@ -264,6 +274,11 @@ export const customizedComponents = {
       "title": "File",
       "type": "input",
       "name": "input-05"
+    },
+    {
+      "title": "Character count",
+      "type": "input",
+      "name": "input-06"
     }
   ],
   "breadcrumb": [
@@ -360,6 +375,11 @@ export const customizedComponents = {
       "title": "Disabled",
       "type": "radio-group",
       "name": "radio-group-02"
+    },
+    {
+      "title": "Horizontal",
+      "type": "radio-group",
+      "name": "radio-group-03"
     }
   ],
   "select": [

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-06",
+  "title": "Horizontal Checkbox Group",
+  "description": "A group of checkboxes laid out in a row",
+  "registryDependencies": [
+    "checkbox",
+    "field"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/checkbox/checkbox-06.tsx",
+      "content": "import { Checkbox } from \"@/registry/ui/checkbox\";\nimport { Field, FieldLabel, FieldLegend, FieldSet } from \"@/registry/ui/field\";\n\nconst toppings = [\n  { id: \"cheese\", label: \"Cheese\", checked: true },\n  { id: \"mushrooms\", label: \"Mushrooms\", checked: true },\n  { id: \"olives\", label: \"Olives\", checked: false },\n  { id: \"peppers\", label: \"Peppers\", checked: false },\n];\n\nexport default function CheckboxHorizontalDemo() {\n  return (\n    <FieldSet className=\"w-fit\">\n      <FieldLegend variant=\"label\">Toppings</FieldLegend>\n      <div className=\"flex flex-wrap gap-x-6 gap-y-3\">\n        {toppings.map((topping) => (\n          <Field className=\"w-fit\" key={topping.id} orientation=\"horizontal\">\n            <Checkbox\n              defaultChecked={topping.checked}\n              id={`checkbox-topping-${topping.id}`}\n            />\n            <FieldLabel htmlFor={`checkbox-topping-${topping.id}`}>\n              {topping.label}\n            </FieldLabel>\n          </Field>\n        ))}\n      </div>\n    </FieldSet>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}
