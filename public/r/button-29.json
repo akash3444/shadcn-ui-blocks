@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-29",
+  "title": "Button Group",
+  "description": "A group of related buttons joined together",
+  "registryDependencies": [
+    "button",
+    "button-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/button/button-29.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\";\nimport { ButtonGroup } from \"@/registry/ui/button-group\";\n\nconst ButtonGroupDemo = () => (\n  <ButtonGroup aria-label=\"Message actions\">\n    <Button variant=\"outline\">Archive</Button>\n    <Button variant=\"outline\">Report</Button>\n    <Button variant=\"outline\">Snooze</Button>\n  </ButtonGroup>\n);\n\nexport default ButtonGroupDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

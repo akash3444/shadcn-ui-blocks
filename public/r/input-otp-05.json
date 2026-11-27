@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp-05",
+  "title": "Invalid Input OTP",
+  "description": "An OTP input in an invalid state with an error message",
+  "registryDependencies": [
+    "field",
+    "input-otp"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/input-otp/input-otp-05.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport { Field, FieldError, FieldLabel } from \"@/registry/ui/field\";\nimport { InputOTP, InputOTPGroup, InputOTPSlot } from \"@/registry/ui/input-otp\";\n\nconst SLOT_INDEXES = [0, 1, 2, 3, 4, 5];\n\nexport default function InputOTPInvalidDemo() {\n  const [value, setValue] = useState(\"482913\");\n\n  return (\n    <Field className=\"w-fit\" data-invalid>\n      <FieldLabel htmlFor=\"input-otp-invalid\">Verification code</FieldLabel>\n      <InputOTP\n        aria-invalid\n        id=\"input-otp-invalid\"\n        maxLength={6}\n        onChange={setValue}\n        value={value}\n      >\n        <InputOTPGroup>\n          {SLOT_INDEXES.map((index) => (\n            <InputOTPSlot aria-invalid index={index} key={index} />\n          ))}\n        </InputOTPGroup>\n      </InputOTP>\n      <FieldError>The code is incorrect. Try again.</FieldError>\n    </Field>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

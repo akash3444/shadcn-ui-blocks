@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-05",
+  "title": "Card with Header Action",
+  "description": "A card with a dropdown menu icon button in the header action slot",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "card",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/card/card-05.tsx",
+      "content": "import { EllipsisIcon } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/ui/card\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/registry/ui/dropdown-menu\";\n\nexport default function CardHeaderActionDemo() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Website redesign</CardTitle>\n        <CardDescription>Updated 2 hours ago</CardDescription>\n        <CardAction>\n          <DropdownMenu>\n            <DropdownMenuTrigger\n              render={\n                <Button\n                  aria-label=\"Project options\"\n                  size=\"icon-sm\"\n                  variant=\"ghost\"\n                />\n              }\n            >\n              <EllipsisIcon />\n            </DropdownMenuTrigger>\n            <DropdownMenuContent align=\"end\">\n              <DropdownMenuGroup>\n                <DropdownMenuItem>Edit</DropdownMenuItem>\n                <DropdownMenuItem>Duplicate</DropdownMenuItem>\n                <DropdownMenuItem>Share</DropdownMenuItem>\n              </DropdownMenuGroup>\n              <DropdownMenuSeparator />\n              <DropdownMenuGroup>\n                <DropdownMenuItem variant=\"destructive\">\n                  Delete\n                </DropdownMenuItem>\n              </DropdownMenuGroup>\n            </DropdownMenuContent>\n          </DropdownMenu>\n        </CardAction>\n      </CardHeader>\n      <CardContent>\n        Refresh the marketing site with the new brand guidelines and a faster\n        checkout flow.\n      </CardContent>\n    </Card>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

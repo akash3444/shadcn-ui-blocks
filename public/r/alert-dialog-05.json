@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-05",
+  "title": "Alert Dialog with Input Confirmation",
+  "description": "A delete confirmation that requires typing the project name to enable the action",
+  "registryDependencies": [
+    "alert-dialog",
+    "button",
+    "field",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/alert-dialog/alert-dialog-05.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@/registry/ui/alert-dialog\";\nimport { Button } from \"@/registry/ui/button\";\nimport { Field, FieldLabel } from \"@/registry/ui/field\";\nimport { Input } from \"@/registry/ui/input\";\n\nconst PROJECT_NAME = \"acme-web\";\n\nexport default function AlertDialogConfirmWithInputDemo() {\n  const [confirmation, setConfirmation] = useState(\"\");\n  const isConfirmed = confirmation === PROJECT_NAME;\n\n  return (\n    <AlertDialog onOpenChange={() => setConfirmation(\"\")}>\n      <AlertDialogTrigger render={<Button variant=\"outline\" />}>\n        Delete Project\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogTitle>Delete project?</AlertDialogTitle>\n          <AlertDialogDescription>\n            This permanently deletes the {PROJECT_NAME} project and all of its\n            deployments. This action cannot be undone.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <Field>\n          <FieldLabel htmlFor=\"confirm-project-name\">\n            Type {PROJECT_NAME} to confirm\n          </FieldLabel>\n          <Input\n            autoComplete=\"off\"\n            id=\"confirm-project-name\"\n            onChange={(event) => setConfirmation(event.target.value)}\n            placeholder={PROJECT_NAME}\n            value={confirmation}\n          />\n        </Field>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction disabled={!isConfirmed} variant=\"destructive\">\n            Delete project\n          </AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb-05",
+  "title": "Responsive Breadcrumb",
+  "description": "A breadcrumb that collapses middle items into an ellipsis dropdown on small screens",
+  "registryDependencies": [
+    "breadcrumb",
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/breadcrumb/breadcrumb-05.tsx",
+      "content": "import { Fragment } from \"react\";\nimport {\n  Breadcrumb,\n  BreadcrumbEllipsis,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n} from \"@/registry/ui/breadcrumb\";\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger,\n} from \"@/registry/ui/dropdown-menu\";\n\nconst middlePages = [\n  { label: \"Documentation\", href: \"#/docs\" },\n  { label: \"Components\", href: \"#/docs/components\" },\n];\n\nconst BreadcrumbResponsiveDemo = () => (\n  <Breadcrumb>\n    <BreadcrumbList>\n      <BreadcrumbItem>\n        <BreadcrumbLink href=\"#\">Home</BreadcrumbLink>\n      </BreadcrumbItem>\n      <BreadcrumbSeparator />\n      <BreadcrumbItem className=\"md:hidden\">\n        <DropdownMenu>\n          <DropdownMenuTrigger\n            render={<Button aria-label=\"Show path\" size=\"icon-sm\" variant=\"ghost\" />}\n          >\n            <BreadcrumbEllipsis />\n          </DropdownMenuTrigger>\n          <DropdownMenuContent className=\"w-40\">\n            {middlePages.map((page) => (\n              <DropdownMenuItem key={page.href} render={<a href={page.href} />}>\n                {page.label}\n              </DropdownMenuItem>\n            ))}\n          </DropdownMenuContent>\n        </DropdownMenu>\n      </BreadcrumbItem>\n      <BreadcrumbSeparator className=\"md:hidden\" />\n      {middlePages.map((page) => (\n        <Fragment key={page.href}>\n          <BreadcrumbItem className=\"hidden md:inline-flex\">\n            <BreadcrumbLink href={page.href}>{page.label}</BreadcrumbLink>\n          </BreadcrumbItem>\n          <BreadcrumbSeparator className=\"hidden md:inline-flex\" />\n        </Fragment>\n      ))}\n      <BreadcrumbItem>\n        <BreadcrumbPage>Breadcrumb</BreadcrumbPage>\n      </BreadcrumbItem>\n    </BreadcrumbList>\n  </Breadcrumb>\n);\n\nexport default BreadcrumbResponsiveDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

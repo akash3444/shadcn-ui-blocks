@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel-05",
+  "title": "Carousel with Thumbnails",
+  "description": "A carousel with a row of thumbnails to jump between slides",
+  "registryDependencies": [
+    "carousel"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/carousel/carousel-05.tsx",
+      "content": "\"use client\";\n\nimport { useEffect, useState } from \"react\";\nimport {\n  Carousel,\n  type CarouselApi,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n} from \"@/registry/ui/carousel\";\n\nconst slides = [1, 2, 3, 4, 5];\n\nexport default function CarouselThumbnailsDemo() {\n  const [api, setApi] = useState<CarouselApi>();\n  const [selectedIndex, setSelectedIndex] = useState(0);\n\n  useEffect(() => {\n    if (!api) {\n      return;\n    }\n\n    const updateSelectedIndex = () => {\n      setSelectedIndex(api.selectedScrollSnap());\n    };\n\n    updateSelectedIndex();\n    api.on(\"select\", updateSelectedIndex);\n    api.on(\"reInit\", updateSelectedIndex);\n\n    return () => {\n      api.off(\"select\", updateSelectedIndex);\n      api.off(\"reInit\", updateSelectedIndex);\n    };\n  }, [api]);\n\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Carousel setApi={setApi}>\n        <CarouselContent>\n          {slides.map((slide) => (\n            <CarouselItem key={slide}>\n              <div className=\"flex aspect-14/9 items-center justify-center rounded-xl border font-semibold text-4xl\">\n                {slide}\n              </div>\n            </CarouselItem>\n          ))}\n        </CarouselContent>\n        <CarouselPrevious />\n        <CarouselNext />\n      </Carousel>\n      <div className=\"mt-3 grid grid-cols-5 gap-2\">\n        {slides.map((slide, index) => (\n          <button\n            aria-current={index === selectedIndex ? \"true\" : undefined}\n            aria-label={`Go to slide ${slide}`}\n            className=\"flex aspect-square items-center justify-center rounded-md border font-medium text-sm opacity-50 transition-opacity hover:opacity-100 aria-[current=true]:border-primary aria-[current=true]:opacity-100\"\n            key={slide}\n            onClick={() => api?.scrollTo(index)}\n            type=\"button\"\n          >\n            {slide}\n          </button>\n        ))}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-02",
+  "title": "Collapsible Show More",
+  "description": "A list that reveals its remaining items with a show more toggle",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "collapsible"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/collapsible/collapsible-02.tsx",
+      "content": "\"use client\";\n\nimport { ChevronDown } from \"lucide-react\";\nimport { useState } from \"react\";\n\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@/registry/ui/collapsible\";\n\nconst VISIBLE_COUNT = 3;\n\nconst integrations = [\n  { name: \"GitHub\", description: \"Sync issues and pull requests\" },\n  { name: \"Slack\", description: \"Send updates to channels\" },\n  { name: \"Linear\", description: \"Link projects and cycles\" },\n  { name: \"Figma\", description: \"Embed designs in documents\" },\n  { name: \"Notion\", description: \"Import pages and databases\" },\n  { name: \"Vercel\", description: \"Track deployments and previews\" },\n];\n\nexport default function CollapsibleShowMoreDemo() {\n  const [isOpen, setIsOpen] = useState(false);\n\n  const visibleItems = integrations.slice(0, VISIBLE_COUNT);\n  const hiddenItems = integrations.slice(VISIBLE_COUNT);\n\n  return (\n    <Collapsible\n      className=\"flex w-full max-w-sm flex-col gap-2\"\n      onOpenChange={setIsOpen}\n      open={isOpen}\n    >\n      <ul className=\"flex flex-col gap-2\">\n        {visibleItems.map((item) => (\n          <li className=\"rounded-lg border px-4 py-2.5\" key={item.name}>\n            <p className=\"font-medium text-sm\">{item.name}</p>\n            <p className=\"text-muted-foreground text-sm\">{item.description}</p>\n          </li>\n        ))}\n      </ul>\n      <CollapsibleContent>\n        <ul className=\"flex flex-col gap-2\">\n          {hiddenItems.map((item) => (\n            <li className=\"rounded-lg border px-4 py-2.5\" key={item.name}>\n              <p className=\"font-medium text-sm\">{item.name}</p>\n              <p className=\"text-muted-foreground text-sm\">\n                {item.description}\n              </p>\n            </li>\n          ))}\n        </ul>\n      </CollapsibleContent>\n      <CollapsibleTrigger\n        render={<Button className=\"self-center\" size=\"sm\" variant=\"ghost\" />}\n      >\n        {isOpen ? \"Show less\" : `Show ${hiddenItems.length} more`}\n        <ChevronDown\n          className={isOpen ? \"rotate-180\" : undefined}\n          data-icon=\"inline-end\"\n        />\n      </CollapsibleTrigger>\n    </Collapsible>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

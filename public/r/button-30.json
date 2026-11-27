@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-30",
+  "title": "Split Button",
+  "description": "A button group with a main action and a dropdown of related actions",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "button-group",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/button/button-30.tsx",
+      "content": "import { ChevronDownIcon } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\nimport { ButtonGroup } from \"@/registry/ui/button-group\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger,\n} from \"@/registry/ui/dropdown-menu\";\n\nconst SplitButtonDemo = () => (\n  <ButtonGroup>\n    <Button variant=\"outline\">Save</Button>\n    <DropdownMenu>\n      <DropdownMenuTrigger\n        render={\n          <Button aria-label=\"More save options\" size=\"icon\" variant=\"outline\" />\n        }\n      >\n        <ChevronDownIcon />\n      </DropdownMenuTrigger>\n      <DropdownMenuContent align=\"end\" className=\"w-44\">\n        <DropdownMenuItem>Save as draft</DropdownMenuItem>\n        <DropdownMenuItem>Save as template</DropdownMenuItem>\n        <DropdownMenuItem>Save and publish</DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  </ButtonGroup>\n);\n\nexport default SplitButtonDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

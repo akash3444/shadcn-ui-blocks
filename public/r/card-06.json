@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-06",
+  "title": "Stat Card",
+  "description": "A stat card with a label, large value, trend badge and footnote",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/card/card-06.tsx",
+      "content": "import { TrendingUpIcon } from \"lucide-react\";\nimport { Badge } from \"@/registry/ui/badge\";\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/ui/card\";\n\nexport default function CardStatDemo() {\n  return (\n    <Card className=\"w-full max-w-xs\">\n      <CardHeader>\n        <CardDescription>Total revenue</CardDescription>\n        <CardTitle className=\"text-2xl tabular-nums\">$45,231.89</CardTitle>\n        <CardAction>\n          <Badge variant=\"outline\">\n            <TrendingUpIcon data-icon=\"inline-start\" />\n            +12.5%\n          </Badge>\n        </CardAction>\n      </CardHeader>\n      <CardContent className=\"text-muted-foreground\">\n        Compared to last month\n      </CardContent>\n    </Card>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

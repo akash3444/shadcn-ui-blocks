@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-09",
+  "title": "Password Input with Toggle",
+  "description": "A password input with a show and hide toggle button",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "field",
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/input/input-09.tsx",
+      "content": "\"use client\";\n\nimport { EyeIcon, EyeOffIcon } from \"lucide-react\";\nimport { useState } from \"react\";\nimport { Field, FieldLabel } from \"@/registry/ui/field\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n} from \"@/registry/ui/input-group\";\n\nexport default function InputPasswordToggleDemo() {\n  const [isVisible, setIsVisible] = useState(false);\n\n  return (\n    <Field className=\"max-w-xs\">\n      <FieldLabel htmlFor=\"input-password-toggle\">Password</FieldLabel>\n      <InputGroup>\n        <InputGroupInput\n          autoComplete=\"current-password\"\n          id=\"input-password-toggle\"\n          type={isVisible ? \"text\" : \"password\"}\n        />\n        <InputGroupAddon align=\"inline-end\">\n          <InputGroupButton\n            aria-label={isVisible ? \"Hide password\" : \"Show password\"}\n            onClick={() => setIsVisible((visible) => !visible)}\n            size=\"icon-xs\"\n          >\n            {isVisible ? <EyeOffIcon /> : <EyeIcon />}\n          </InputGroupButton>\n        </InputGroupAddon>\n      </InputGroup>\n    </Field>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "navigation-menu-02",
+  "title": "Navigation Menu with Descriptions",
+  "description": "A navigation menu with dropdown links showing an icon, title and description",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "navigation-menu"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/navigation-menu/navigation-menu-02.tsx",
+      "content": "import {\n  BarChart3,\n  BookOpen,\n  type LucideIcon,\n  MessagesSquare,\n  Newspaper,\n  ShieldCheck,\n  Workflow,\n} from \"lucide-react\";\nimport Link from \"next/link\";\n\nimport {\n  NavigationMenu,\n  NavigationMenuContent,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList,\n  NavigationMenuTrigger,\n  navigationMenuTriggerStyle,\n} from \"@/registry/ui/navigation-menu\";\n\ntype MenuLink = {\n  title: string;\n  description: string;\n  href: string;\n  icon: LucideIcon;\n};\n\nconst productLinks: MenuLink[] = [\n  {\n    title: \"Analytics\",\n    description: \"Track usage and growth with real-time dashboards.\",\n    href: \"#analytics\",\n    icon: BarChart3,\n  },\n  {\n    title: \"Automations\",\n    description: \"Connect your tools and run workflows on a schedule.\",\n    href: \"#automations\",\n    icon: Workflow,\n  },\n  {\n    title: \"Security\",\n    description: \"Single sign-on, audit logs and granular permissions.\",\n    href: \"#security\",\n    icon: ShieldCheck,\n  },\n];\n\nconst resourceLinks: MenuLink[] = [\n  {\n    title: \"Documentation\",\n    description: \"Guides and API references to get you started.\",\n    href: \"#docs\",\n    icon: BookOpen,\n  },\n  {\n    title: \"Blog\",\n    description: \"Product updates, tutorials and announcements.\",\n    href: \"#blog\",\n    icon: Newspaper,\n  },\n  {\n    title: \"Community\",\n    description: \"Ask questions and share what you have built.\",\n    href: \"#community\",\n    icon: MessagesSquare,\n  },\n];\n\nfunction MenuLinkList({ links }: { links: MenuLink[] }) {\n  return (\n    <ul className=\"grid w-80 gap-1\">\n      {links.map((link) => (\n        <li key={link.title}>\n          <NavigationMenuLink\n            className=\"items-start\"\n            render={<Link href={link.href} />}\n          >\n            <div className=\"flex size-9 shrink-0 items-center justify-center rounded-md border bg-background\">\n              <link.icon className=\"text-muted-foreground\" />\n            </div>\n            <div className=\"flex flex-col gap-1\">\n              <span className=\"font-medium leading-none\">{link.title}</span>\n              <span className=\"line-clamp-2 text-muted-foreground\">\n                {link.description}\n              </span>\n            </div>\n          </NavigationMenuLink>\n        </li>\n      ))}\n    </ul>\n  );\n}\n\nexport default function NavigationMenuDescriptionsDemo() {\n  return (\n    <NavigationMenu>\n      <NavigationMenuList>\n        <NavigationMenuItem>\n          <NavigationMenuTrigger>Products</NavigationMenuTrigger>\n          <NavigationMenuContent>\n            <MenuLinkList links={productLinks} />\n          </NavigationMenuContent>\n        </NavigationMenuItem>\n        <NavigationMenuItem>\n          <NavigationMenuTrigger>Resources</NavigationMenuTrigger>\n          <NavigationMenuContent>\n            <MenuLinkList links={resourceLinks} />\n          </NavigationMenuContent>\n        </NavigationMenuItem>\n        <NavigationMenuItem>\n          <NavigationMenuLink\n            className={navigationMenuTriggerStyle()}\n            render={<Link href=\"#pricing\" />}\n          >\n            Pricing\n          </NavigationMenuLink>\n        </NavigationMenuItem>\n      </NavigationMenuList>\n    </NavigationMenu>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

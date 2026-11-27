@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-06",
+  "title": "Tabs with Badges",
+  "description": "Tabs with a count badge in each trigger",
+  "registryDependencies": [
+    "badge",
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/tabs/tabs-06.tsx",
+      "content": "import { Badge } from \"@/registry/ui/badge\";\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/registry/ui/tabs\";\n\nconst tabs = [\n  {\n    value: \"inbox\",\n    label: \"Inbox\",\n    count: 12,\n    content: \"You have 12 unread messages in your inbox.\",\n  },\n  {\n    value: \"drafts\",\n    label: \"Drafts\",\n    count: 3,\n    content: \"Pick up where you left off on 3 unsent drafts.\",\n  },\n  {\n    value: \"archived\",\n    label: \"Archived\",\n    count: 48,\n    content: \"Messages you archived are kept here for 90 days.\",\n  },\n];\n\nexport default function TabsWithBadgesDemo() {\n  return (\n    <Tabs className=\"w-full max-w-sm\" defaultValue=\"inbox\">\n      <TabsList>\n        {tabs.map((tab) => (\n          <TabsTrigger key={tab.value} value={tab.value}>\n            {tab.label}\n            <Badge className=\"tabular-nums\" variant=\"secondary\">\n              {tab.count}\n            </Badge>\n          </TabsTrigger>\n        ))}\n      </TabsList>\n      {tabs.map((tab) => (\n        <TabsContent\n          className=\"text-muted-foreground text-sm\"\n          key={tab.value}\n          value={tab.value}\n        >\n          {tab.content}\n        </TabsContent>\n      ))}\n    </Tabs>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

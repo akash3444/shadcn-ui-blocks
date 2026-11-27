@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-07",
+  "title": "Input with Icon",
+  "description": "A search input with a leading icon",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/input/input-07.tsx",
+      "content": "import { SearchIcon } from \"lucide-react\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@/registry/ui/input-group\";\n\nexport default function InputWithIconDemo() {\n  return (\n    <InputGroup className=\"max-w-xs\">\n      <InputGroupInput\n        aria-label=\"Search\"\n        placeholder=\"Search...\"\n        type=\"search\"\n      />\n      <InputGroupAddon>\n        <SearchIcon />\n      </InputGroupAddon>\n    </InputGroup>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-04",
+  "title": "Radio Group with Description",
+  "description": "A radio group where each option has a label and description",
+  "registryDependencies": [
+    "field",
+    "radio-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/radio-group/radio-group-04.tsx",
+      "content": "import {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n} from \"@/registry/ui/field\";\nimport { RadioGroup, RadioGroupItem } from \"@/registry/ui/radio-group\";\n\nconst shippingOptions = [\n  {\n    value: \"standard\",\n    label: \"Standard\",\n    description: \"Delivered in 4-6 business days.\",\n  },\n  {\n    value: \"express\",\n    label: \"Express\",\n    description: \"Delivered in 2-3 business days.\",\n  },\n  {\n    value: \"overnight\",\n    label: \"Overnight\",\n    description: \"Delivered the next business day.\",\n  },\n];\n\nexport default function RadioGroupWithDescriptionDemo() {\n  return (\n    <RadioGroup\n      aria-label=\"Shipping method\"\n      className=\"max-w-sm\"\n      defaultValue=\"standard\"\n    >\n      {shippingOptions.map((option) => (\n        <Field key={option.value} orientation=\"horizontal\">\n          <RadioGroupItem\n            id={`shipping-${option.value}`}\n            value={option.value}\n          />\n          <FieldContent>\n            <FieldLabel htmlFor={`shipping-${option.value}`}>\n              {option.label}\n            </FieldLabel>\n            <FieldDescription>{option.description}</FieldDescription>\n          </FieldContent>\n        </Field>\n      ))}\n    </RadioGroup>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

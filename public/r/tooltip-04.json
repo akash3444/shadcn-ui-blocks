@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-04",
+  "title": "Tooltip with Keyboard Shortcut",
+  "description": "A tooltip showing a label and its keyboard shortcut",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "kbd",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/tooltip/tooltip-04.tsx",
+      "content": "import { SaveIcon } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\nimport { Kbd, KbdGroup } from \"@/registry/ui/kbd\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/registry/ui/tooltip\";\n\nexport default function TooltipWithShortcutDemo() {\n  return (\n    <TooltipProvider>\n      <Tooltip>\n        <TooltipTrigger render={<Button variant=\"outline\" />}>\n          <SaveIcon />\n          Save\n        </TooltipTrigger>\n        <TooltipContent>\n          Save changes\n          <KbdGroup>\n            <Kbd>⌘</Kbd>\n            <Kbd>S</Kbd>\n          </KbdGroup>\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

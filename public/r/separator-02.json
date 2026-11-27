@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator-02",
+  "title": "Vertical Separator",
+  "description": "Vertical separators between inline navigation links",
+  "registryDependencies": [
+    "separator"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/separator/separator-02.tsx",
+      "content": "import { Separator } from \"@/registry/ui/separator\";\n\nconst links = [\n  { label: \"Blog\", href: \"#blog\" },\n  { label: \"Docs\", href: \"#docs\" },\n  { label: \"Changelog\", href: \"#changelog\" },\n  { label: \"Source\", href: \"#source\" },\n];\n\nexport default function SeparatorVerticalDemo() {\n  return (\n    <nav aria-label=\"Resources\" className=\"flex h-5 items-center gap-4 text-sm\">\n      {links.map((link, index) => (\n        <div className=\"flex h-full items-center gap-4\" key={link.label}>\n          {index > 0 && <Separator orientation=\"vertical\" />}\n          <a\n            className=\"text-muted-foreground hover:text-foreground\"\n            href={link.href}\n          >\n            {link.label}\n          </a>\n        </div>\n      ))}\n    </nav>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

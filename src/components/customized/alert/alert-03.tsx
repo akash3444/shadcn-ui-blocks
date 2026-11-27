@@ -9,7 +9,7 @@ import { Button } from "@/registry/ui/button";
 
 export default function AlertWithActionDemo() {
   return (
-    <Alert>
+    <Alert className="max-w-sm">
       <CircleFadingArrowUpIcon />
       <AlertTitle>Update available</AlertTitle>
       <AlertDescription>

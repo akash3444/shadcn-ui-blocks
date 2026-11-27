@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-03",
+  "title": "Table with Actions",
+  "description": "A table with a row actions dropdown menu column",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "dropdown-menu",
+    "table"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/table/table-03.tsx",
+      "content": "import { MoreHorizontal } from \"lucide-react\";\n\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/registry/ui/dropdown-menu\";\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@/registry/ui/table\";\n\nconst members = [\n  {\n    id: \"1\",\n    name: \"Olivia Martin\",\n    email: \"olivia@example.com\",\n    role: \"Owner\",\n  },\n  { id: \"2\", name: \"Jackson Lee\", email: \"jackson@example.com\", role: \"Admin\" },\n  {\n    id: \"3\",\n    name: \"Isabella Nguyen\",\n    email: \"isabella@example.com\",\n    role: \"Member\",\n  },\n  { id: \"4\", name: \"William Kim\", email: \"will@example.com\", role: \"Member\" },\n];\n\nexport default function TableWithActionsDemo() {\n  return (\n    <Table>\n      <TableHeader>\n        <TableRow>\n          <TableHead>Name</TableHead>\n          <TableHead>Email</TableHead>\n          <TableHead>Role</TableHead>\n          <TableHead className=\"w-12\">\n            <span className=\"sr-only\">Actions</span>\n          </TableHead>\n        </TableRow>\n      </TableHeader>\n      <TableBody>\n        {members.map((member) => (\n          <TableRow key={member.id}>\n            <TableCell className=\"font-medium\">{member.name}</TableCell>\n            <TableCell className=\"text-muted-foreground\">\n              {member.email}\n            </TableCell>\n            <TableCell>{member.role}</TableCell>\n            <TableCell className=\"text-right\">\n              <DropdownMenu>\n                <DropdownMenuTrigger\n                  render={\n                    <Button\n                      aria-label={`Actions for ${member.name}`}\n                      size=\"icon-sm\"\n                      variant=\"ghost\"\n                    />\n                  }\n                >\n                  <MoreHorizontal />\n                </DropdownMenuTrigger>\n                <DropdownMenuContent align=\"end\" className=\"w-40\">\n                  <DropdownMenuGroup>\n                    <DropdownMenuItem>View profile</DropdownMenuItem>\n                    <DropdownMenuItem>Change role</DropdownMenuItem>\n                  </DropdownMenuGroup>\n                  <DropdownMenuSeparator />\n                  <DropdownMenuItem variant=\"destructive\">\n                    Remove member\n                  </DropdownMenuItem>\n                </DropdownMenuContent>\n              </DropdownMenu>\n            </TableCell>\n          </TableRow>\n        ))}\n      </TableBody>\n    </Table>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-05",
+  "title": "Tabs with Icons",
+  "description": "Tabs with a leading icon in each trigger",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "tabs"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/tabs/tabs-05.tsx",
+      "content": "import { BellIcon, LockIcon, UserIcon } from \"lucide-react\";\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/registry/ui/tabs\";\n\nconst tabs = [\n  {\n    value: \"account\",\n    label: \"Account\",\n    icon: UserIcon,\n    content: \"Update your name, email and profile photo.\",\n  },\n  {\n    value: \"security\",\n    label: \"Security\",\n    icon: LockIcon,\n    content: \"Change your password and manage two-factor authentication.\",\n  },\n  {\n    value: \"notifications\",\n    label: \"Notifications\",\n    icon: BellIcon,\n    content: \"Choose which updates you receive and where.\",\n  },\n];\n\nexport default function TabsWithIconsDemo() {\n  return (\n    <Tabs className=\"w-full max-w-sm\" defaultValue=\"account\">\n      <TabsList>\n        {tabs.map(({ value, label, icon: Icon }) => (\n          <TabsTrigger key={value} value={value}>\n            <Icon data-icon=\"inline-start\" />\n            {label}\n          </TabsTrigger>\n        ))}\n      </TabsList>\n      {tabs.map((tab) => (\n        <TabsContent\n          className=\"text-muted-foreground text-sm\"\n          key={tab.value}\n          value={tab.value}\n        >\n          {tab.content}\n        </TabsContent>\n      ))}\n    </Tabs>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -3,7 +3,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/registry/ui/alert";
 
 export default function AlertDestructiveDemo() {
   return (
-    <Alert variant="destructive">
+    <Alert className="max-w-sm" variant="destructive">
       <CircleAlertIcon />
       <AlertTitle>Payment failed</AlertTitle>
       <AlertDescription>

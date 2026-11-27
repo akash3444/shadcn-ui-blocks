@@ -127,6 +127,39 @@
       ]
     },
     {
+      "name": "accordion-04",
+      "type": "registry:component",
+      "title": "Accordion with Icons",
+      "description": "An accordion with a leading icon in each trigger",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/accordion/accordion-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "accordion-05",
+      "type": "registry:component",
+      "title": "Bordered Accordion",
+      "description": "An accordion with each item in its own bordered container",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/accordion/accordion-05.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "alert-01",
       "type": "registry:component",
       "title": "Primary Alert",
@@ -182,6 +215,42 @@
       ]
     },
     {
+      "name": "alert-04",
+      "type": "registry:component",
+      "title": "Alert Title Only",
+      "description": "An alert with an icon and title and no description",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/alert/alert-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "alert-05",
+      "type": "registry:component",
+      "title": "Alert with List",
+      "description": "A destructive alert listing multiple errors",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "alert"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/alert/alert-05.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "alert-dialog-01",
       "type": "registry:component",
       "title": "Default Alert Dialog",
@@ -228,6 +297,40 @@
       "files": [
         {
           "path": "src/components/customized/alert-dialog/alert-dialog-03.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog-04",
+      "type": "registry:component",
+      "title": "Destructive Alert Dialog",
+      "description": "A delete account confirmation with a destructive action",
+      "registryDependencies": [
+        "alert-dialog",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/alert-dialog/alert-dialog-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog-05",
+      "type": "registry:component",
+      "title": "Alert Dialog with Input Confirmation",
+      "description": "A delete confirmation that requires typing the project name to enable the action",
+      "registryDependencies": [
+        "alert-dialog",
+        "button",
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/alert-dialog/alert-dialog-05.tsx",
           "type": "registry:component"
         }
       ]
@@ -469,6 +572,40 @@
       ]
     },
     {
+      "name": "badge-08",
+      "type": "registry:component",
+      "title": "Badge with Status Dot",
+      "description": "Badges with a coloured status dot for online, away and offline",
+      "registryDependencies": [
+        "badge"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/badge/badge-08.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "badge-09",
+      "type": "registry:component",
+      "title": "Count Badge",
+      "description": "A count badge positioned on an icon button",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/badge/badge-09.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "button-01",
       "type": "registry:component",
       "title": "Primary Button",
@@ -644,6 +781,60 @@
       ]
     },
     {
+      "name": "button-28",
+      "type": "registry:component",
+      "title": "Button with Icon",
+      "description": "Buttons with leading and trailing icons",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/button/button-28.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "button-29",
+      "type": "registry:component",
+      "title": "Button Group",
+      "description": "A group of related buttons joined together",
+      "registryDependencies": [
+        "button",
+        "button-group"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/button/button-29.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "button-30",
+      "type": "registry:component",
+      "title": "Split Button",
+      "description": "A button group with a main action and a dropdown of related actions",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "button-group",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/button/button-30.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "card-01",
       "type": "registry:component",
       "title": "Default Card",
@@ -690,6 +881,63 @@
       "files": [
         {
           "path": "src/components/customized/card/card-03.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "card-04",
+      "type": "registry:component",
+      "title": "Card with Form",
+      "description": "A sign-in card with email and password fields and a submit button in the footer",
+      "registryDependencies": [
+        "button",
+        "card",
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/card/card-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "card-05",
+      "type": "registry:component",
+      "title": "Card with Header Action",
+      "description": "A card with a dropdown menu icon button in the header action slot",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "card",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/card/card-05.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "card-06",
+      "type": "registry:component",
+      "title": "Stat Card",
+      "description": "A stat card with a label, large value, trend badge and footnote",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/card/card-06.tsx",
           "type": "registry:component"
         }
       ]
@@ -790,6 +1038,22 @@
       ]
     },
     {
+      "name": "checkbox-07",
+      "type": "registry:component",
+      "title": "Checkbox Choice Card",
+      "description": "Checkboxes presented as selectable cards with a title and description",
+      "registryDependencies": [
+        "checkbox",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/checkbox/checkbox-07.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "dropdown-menu-01",
       "type": "registry:component",
       "title": "Default Dropdown Menu",
@@ -868,6 +1132,26 @@
       "files": [
         {
           "path": "src/components/customized/dropdown-menu/dropdown-menu-05.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-06",
+      "type": "registry:component",
+      "title": "Account Dropdown Menu",
+      "description": "An avatar-triggered account menu with user details, links and log out",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/dropdown-menu/dropdown-menu-06.tsx",
           "type": "registry:component"
         }
       ]
@@ -967,6 +1251,75 @@
       ]
     },
     {
+      "name": "input-07",
+      "type": "registry:component",
+      "title": "Input with Icon",
+      "description": "A search input with a leading icon",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/input/input-07.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-08",
+      "type": "registry:component",
+      "title": "Input with Button",
+      "description": "An email input with a trailing subscribe button",
+      "registryDependencies": [
+        "field",
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/input/input-08.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-09",
+      "type": "registry:component",
+      "title": "Password Input with Toggle",
+      "description": "A password input with a show and hide toggle button",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "field",
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/input/input-09.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-10",
+      "type": "registry:component",
+      "title": "Input with Prefix and Suffix",
+      "description": "A website input with a text prefix and suffix",
+      "registryDependencies": [
+        "field",
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/input/input-10.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "breadcrumb-01",
       "type": "registry:component",
       "title": "Default Breadcrumb",
@@ -1010,6 +1363,42 @@
       "files": [
         {
           "path": "src/components/customized/breadcrumb/breadcrumb-03.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb-04",
+      "type": "registry:component",
+      "title": "Breadcrumb with Dropdown",
+      "description": "A breadcrumb with a middle item that opens a dropdown of sibling pages",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "breadcrumb",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/breadcrumb/breadcrumb-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb-05",
+      "type": "registry:component",
+      "title": "Responsive Breadcrumb",
+      "description": "A breadcrumb that collapses middle items into an ellipsis dropdown on small screens",
+      "registryDependencies": [
+        "breadcrumb",
+        "button",
+        "dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/breadcrumb/breadcrumb-05.tsx",
           "type": "registry:component"
         }
       ]
@@ -1061,6 +1450,36 @@
       ]
     },
     {
+      "name": "carousel-04",
+      "type": "registry:component",
+      "title": "Carousel with Dot Indicators",
+      "description": "A carousel with dot buttons that show and set the current slide",
+      "registryDependencies": [
+        "carousel"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/carousel/carousel-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "carousel-05",
+      "type": "registry:component",
+      "title": "Carousel with Thumbnails",
+      "description": "A carousel with a row of thumbnails to jump between slides",
+      "registryDependencies": [
+        "carousel"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/carousel/carousel-05.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "collapsible-01",
       "type": "registry:component",
       "title": "Default Collapsible",
@@ -1075,6 +1494,44 @@
       "files": [
         {
           "path": "src/components/customized/collapsible/collapsible-01.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "collapsible-02",
+      "type": "registry:component",
+      "title": "Collapsible Show More",
+      "description": "A list that reveals its remaining items with a show more toggle",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "collapsible"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/collapsible/collapsible-02.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "collapsible-03",
+      "type": "registry:component",
+      "title": "Collapsible File Tree",
+      "description": "Nested collapsible folders and files with chevron icons",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "collapsible"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/collapsible/collapsible-03.tsx",
           "type": "registry:component"
         }
       ]
@@ -1128,6 +1585,37 @@
       ]
     },
     {
+      "name": "input-otp-04",
+      "type": "registry:component",
+      "title": "Input OTP with Separators",
+      "description": "A six-digit OTP input split into three groups of two with separators",
+      "registryDependencies": [
+        "input-otp"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/input-otp/input-otp-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-05",
+      "type": "registry:component",
+      "title": "Invalid Input OTP",
+      "description": "An OTP input in an invalid state with an error message",
+      "registryDependencies": [
+        "field",
+        "input-otp"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/input-otp/input-otp-05.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "navigation-menu-01",
       "type": "registry:component",
       "title": "Default Navigation Menu",
@@ -1143,6 +1631,24 @@
       ]
     },
     {
+      "name": "navigation-menu-02",
+      "type": "registry:component",
+      "title": "Navigation Menu with Descriptions",
+      "description": "A navigation menu with dropdown links showing an icon, title and description",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "navigation-menu"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/navigation-menu/navigation-menu-02.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "pagination-01",
       "type": "registry:component",
       "title": "Default Pagination",
@@ -1153,6 +1659,38 @@
       "files": [
         {
           "path": "src/components/customized/pagination/pagination-01.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "pagination-02",
+      "type": "registry:component",
+      "title": "Compact Pagination",
+      "description": "Previous and next controls with a page count label",
+      "registryDependencies": [
+        "pagination"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/pagination/pagination-02.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "pagination-03",
+      "type": "registry:component",
+      "title": "Pagination with Rows per Page",
+      "description": "A rows per page select alongside pagination controls",
+      "registryDependencies": [
+        "field",
+        "pagination",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/pagination/pagination-03.tsx",
           "type": "registry:component"
         }
       ]
@@ -1183,6 +1721,39 @@
       "files": [
         {
           "path": "src/components/customized/progress/progress-02.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "progress-03",
+      "type": "registry:component",
+      "title": "File Upload Progress",
+      "description": "A file row with name, size and upload progress",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "progress"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/progress/progress-03.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "progress-04",
+      "type": "registry:component",
+      "title": "Step Progress",
+      "description": "A progress bar showing the current step out of the total",
+      "registryDependencies": [
+        "progress"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/progress/progress-04.tsx",
           "type": "registry:component"
         }
       ]
@@ -1231,6 +1802,38 @@
       "files": [
         {
           "path": "src/components/customized/radio-group/radio-group-03.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "radio-group-04",
+      "type": "registry:component",
+      "title": "Radio Group with Description",
+      "description": "A radio group where each option has a label and description",
+      "registryDependencies": [
+        "field",
+        "radio-group"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/radio-group/radio-group-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "radio-group-05",
+      "type": "registry:component",
+      "title": "Radio Group Choice Card",
+      "description": "A radio group of selectable cards for choosing a plan",
+      "registryDependencies": [
+        "field",
+        "radio-group"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/radio-group/radio-group-05.tsx",
           "type": "registry:component"
         }
       ]
@@ -1311,6 +1914,56 @@
       ]
     },
     {
+      "name": "select-06",
+      "type": "registry:component",
+      "title": "Select with Icons",
+      "description": "A select whose items and selected value show leading icons",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "select"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/select/select-06.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "select-07",
+      "type": "registry:component",
+      "title": "Invalid Select",
+      "description": "A select in an invalid state with an error message",
+      "registryDependencies": [
+        "field",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/select/select-07.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "select-08",
+      "type": "registry:component",
+      "title": "Select with Label and Description",
+      "description": "A select with a label and helper description",
+      "registryDependencies": [
+        "field",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/select/select-08.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "separator-01",
       "type": "registry:component",
       "title": "Default Separator",
@@ -1321,6 +1974,36 @@
       "files": [
         {
           "path": "src/components/customized/separator/separator-01.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "separator-02",
+      "type": "registry:component",
+      "title": "Vertical Separator",
+      "description": "Vertical separators between inline navigation links",
+      "registryDependencies": [
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/separator/separator-02.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "separator-03",
+      "type": "registry:component",
+      "title": "Separator with Label",
+      "description": "A horizontal separator with a centred label",
+      "registryDependencies": [
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/separator/separator-03.tsx",
           "type": "registry:component"
         }
       ]
@@ -1572,6 +2255,22 @@
       ]
     },
     {
+      "name": "switch-06",
+      "type": "registry:component",
+      "title": "Switch Settings List",
+      "description": "A list of notification settings with labelled switches and descriptions",
+      "registryDependencies": [
+        "field",
+        "switch"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/switch/switch-06.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "table-01",
       "type": "registry:component",
       "title": "Default Table",
@@ -1582,6 +2281,73 @@
       "files": [
         {
           "path": "src/components/customized/table/table-01.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "table-02",
+      "type": "registry:component",
+      "title": "Table with Footer",
+      "description": "A table with footer rows showing subtotal, tax and total",
+      "registryDependencies": [
+        "table"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/table/table-02.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "table-03",
+      "type": "registry:component",
+      "title": "Table with Actions",
+      "description": "A table with a row actions dropdown menu column",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "dropdown-menu",
+        "table"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/table/table-03.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "table-04",
+      "type": "registry:component",
+      "title": "Table with Row Selection",
+      "description": "A table with row checkboxes and an indeterminate select-all header",
+      "registryDependencies": [
+        "checkbox",
+        "table"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/table/table-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "table-05",
+      "type": "registry:component",
+      "title": "Table with Status Badges",
+      "description": "A table with a status column using badge variants",
+      "registryDependencies": [
+        "badge",
+        "table"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/table/table-05.tsx",
           "type": "registry:component"
         }
       ]
@@ -1646,6 +2412,40 @@
       "files": [
         {
           "path": "src/components/customized/tabs/tabs-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "tabs-05",
+      "type": "registry:component",
+      "title": "Tabs with Icons",
+      "description": "Tabs with a leading icon in each trigger",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "tabs"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/tabs/tabs-05.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "tabs-06",
+      "type": "registry:component",
+      "title": "Tabs with Badges",
+      "description": "Tabs with a count badge in each trigger",
+      "registryDependencies": [
+        "badge",
+        "tabs"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/tabs/tabs-06.tsx",
           "type": "registry:component"
         }
       ]
@@ -1729,6 +2529,25 @@
       ]
     },
     {
+      "name": "textarea-06",
+      "type": "registry:component",
+      "title": "Textarea with Button",
+      "description": "A comment box with a submit button inside the textarea",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "field",
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/textarea/textarea-06.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "tooltip-01",
       "type": "registry:component",
       "title": "Default Tooltip",
@@ -1756,6 +2575,45 @@
       "files": [
         {
           "path": "src/components/customized/tooltip/tooltip-02.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "tooltip-03",
+      "type": "registry:component",
+      "title": "Tooltip on Icon Button",
+      "description": "A tooltip that labels an icon-only button",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "tooltip"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/tooltip/tooltip-03.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "tooltip-04",
+      "type": "registry:component",
+      "title": "Tooltip with Keyboard Shortcut",
+      "description": "A tooltip showing a label and its keyboard shortcut",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "kbd",
+        "tooltip"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/tooltip/tooltip-04.tsx",
           "type": "registry:component"
         }
       ]

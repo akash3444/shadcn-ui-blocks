@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-09",
+  "title": "Count Badge",
+  "description": "A count badge positioned on an icon button",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/badge/badge-09.tsx",
+      "content": "import { BellIcon, MailIcon } from \"lucide-react\";\nimport { Badge } from \"@/registry/ui/badge\";\nimport { Button } from \"@/registry/ui/button\";\n\nconst notifications = [\n  { label: \"Notifications\", icon: BellIcon, count: 3 },\n  { label: \"Messages\", icon: MailIcon, count: 12 },\n];\n\nconst CountBadgeDemo = () => (\n  <div className=\"flex items-center gap-6\">\n    {notifications.map(({ label, icon: Icon, count }) => (\n      <Button\n        aria-label={`${label}, ${count} unread`}\n        className=\"relative\"\n        key={label}\n        size=\"icon\"\n        variant=\"outline\"\n      >\n        <Icon />\n        <Badge className=\"absolute -top-1 -right-1 h-4 min-w-4 px-1 text-[10px] tabular-nums ring-2 ring-background\">\n          {count}\n        </Badge>\n      </Button>\n    ))}\n  </div>\n);\n\nexport default CountBadgeDemo;\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

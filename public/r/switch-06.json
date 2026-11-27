@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch-06",
+  "title": "Switch Settings List",
+  "description": "A list of notification settings with labelled switches and descriptions",
+  "registryDependencies": [
+    "field",
+    "switch"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/switch/switch-06.tsx",
+      "content": "import { Fragment } from \"react\";\nimport {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n  FieldSeparator,\n} from \"@/registry/ui/field\";\nimport { Switch } from \"@/registry/ui/switch\";\n\nconst notificationSettings = [\n  {\n    id: \"comments\",\n    label: \"Comments\",\n    description: \"When someone comments on your posts.\",\n    checked: true,\n  },\n  {\n    id: \"mentions\",\n    label: \"Mentions\",\n    description: \"When someone mentions you in a thread.\",\n    checked: true,\n  },\n  {\n    id: \"product-updates\",\n    label: \"Product updates\",\n    description: \"News about new features and releases.\",\n    checked: false,\n  },\n];\n\nexport default function SwitchSettingsListDemo() {\n  return (\n    <FieldGroup className=\"max-w-sm py-4\">\n      {notificationSettings.map((setting, index) => (\n        <Fragment key={setting.id}>\n          {index > 0 && <FieldSeparator />}\n          <Field orientation=\"horizontal\">\n            <FieldContent>\n              <FieldLabel htmlFor={`switch-${setting.id}`}>\n                {setting.label}\n              </FieldLabel>\n              <FieldDescription>{setting.description}</FieldDescription>\n            </FieldContent>\n            <Switch\n              defaultChecked={setting.checked}\n              id={`switch-${setting.id}`}\n            />\n          </Field>\n        </Fragment>\n      ))}\n    </FieldGroup>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

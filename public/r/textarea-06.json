@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-06",
+  "title": "Textarea with Button",
+  "description": "A comment box with a submit button inside the textarea",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "field",
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/textarea/textarea-06.tsx",
+      "content": "import { ArrowUpIcon } from \"lucide-react\";\nimport { Field, FieldLabel } from \"@/registry/ui/field\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupTextarea,\n} from \"@/registry/ui/input-group\";\n\nexport default function TextareaWithButtonDemo() {\n  return (\n    <Field className=\"max-w-sm\">\n      <FieldLabel htmlFor=\"textarea-comment\">Comment</FieldLabel>\n      <InputGroup>\n        <InputGroupTextarea\n          id=\"textarea-comment\"\n          placeholder=\"Add a comment...\"\n        />\n        <InputGroupAddon align=\"block-end\">\n          <InputGroupButton className=\"ml-auto\" size=\"sm\" variant=\"default\">\n            Post\n            <ArrowUpIcon />\n          </InputGroupButton>\n        </InputGroupAddon>\n      </InputGroup>\n    </Field>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

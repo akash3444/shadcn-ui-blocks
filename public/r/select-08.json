@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-08",
+  "title": "Select with Label and Description",
+  "description": "A select with a label and helper description",
+  "registryDependencies": [
+    "field",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/select/select-08.tsx",
+      "content": "import { Field, FieldDescription, FieldLabel } from \"@/registry/ui/field\";\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/ui/select\";\n\nconst timezones = [\n  { label: \"Pacific Time (PT)\", value: \"pt\" },\n  { label: \"Eastern Time (ET)\", value: \"et\" },\n  { label: \"Greenwich Mean Time (GMT)\", value: \"gmt\" },\n  { label: \"Central European Time (CET)\", value: \"cet\" },\n  { label: \"India Standard Time (IST)\", value: \"ist\" },\n];\n\nexport default function SelectWithLabelDemo() {\n  return (\n    <Field className=\"max-w-xs\">\n      <FieldLabel htmlFor=\"select-timezone\">Timezone</FieldLabel>\n      <Select items={timezones}>\n        <SelectTrigger className=\"w-full\" id=\"select-timezone\">\n          <SelectValue placeholder=\"Select a timezone\" />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectGroup>\n            {timezones.map((timezone) => (\n              <SelectItem key={timezone.value} value={timezone.value}>\n                {timezone.label}\n              </SelectItem>\n            ))}\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n      <FieldDescription>Used for reminders and due dates.</FieldDescription>\n    </Field>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

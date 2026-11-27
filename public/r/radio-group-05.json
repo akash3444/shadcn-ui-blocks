@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-05",
+  "title": "Radio Group Choice Card",
+  "description": "A radio group of selectable cards for choosing a plan",
+  "registryDependencies": [
+    "field",
+    "radio-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/radio-group/radio-group-05.tsx",
+      "content": "import {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldLabel,\n  FieldTitle,\n} from \"@/registry/ui/field\";\nimport { RadioGroup, RadioGroupItem } from \"@/registry/ui/radio-group\";\n\nconst plans = [\n  {\n    value: \"starter\",\n    title: \"Starter\",\n    description: \"For individuals getting started. Up to 3 projects.\",\n  },\n  {\n    value: \"pro\",\n    title: \"Pro\",\n    description: \"For growing teams. Unlimited projects and analytics.\",\n  },\n  {\n    value: \"enterprise\",\n    title: \"Enterprise\",\n    description: \"For large organizations. SSO and dedicated support.\",\n  },\n];\n\nexport default function RadioGroupChoiceCardDemo() {\n  return (\n    <RadioGroup aria-label=\"Plan\" className=\"max-w-sm\" defaultValue=\"pro\">\n      {plans.map((plan) => (\n        <FieldLabel htmlFor={`plan-card-${plan.value}`} key={plan.value}>\n          <Field orientation=\"horizontal\">\n            <FieldContent>\n              <FieldTitle>{plan.title}</FieldTitle>\n              <FieldDescription>{plan.description}</FieldDescription>\n            </FieldContent>\n            <RadioGroupItem id={`plan-card-${plan.value}`} value={plan.value} />\n          </Field>\n        </FieldLabel>\n      ))}\n    </RadioGroup>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}
