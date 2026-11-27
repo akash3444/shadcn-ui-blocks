@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-05",
+  "title": "Textarea with Character Count",
+  "description": "A textarea with a live character count and limit",
+  "registryDependencies": [
+    "field",
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/textarea/textarea-05.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { Field, FieldLabel } from \"@/registry/ui/field\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupText,\n  InputGroupTextarea,\n} from \"@/registry/ui/input-group\";\n\nconst MAX_LENGTH = 200;\n\nexport default function TextareaCharacterCountDemo() {\n  const [value, setValue] = useState(\"\");\n\n  return (\n    <Field className=\"max-w-sm\">\n      <FieldLabel htmlFor=\"textarea-bio\">Bio</FieldLabel>\n      <InputGroup>\n        <InputGroupTextarea\n          id=\"textarea-bio\"\n          maxLength={MAX_LENGTH}\n          onChange={(event) => setValue(event.target.value)}\n          placeholder=\"Tell us a little about yourself\"\n          value={value}\n        />\n        <InputGroupAddon align=\"block-end\">\n          <InputGroupText className=\"ml-auto tabular-nums\">\n            {value.length}/{MAX_LENGTH}\n          </InputGroupText>\n        </InputGroupAddon>\n      </InputGroup>\n    </Field>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

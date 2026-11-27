@@ -31,7 +31,9 @@ export default function AccordionDisabledDemo() {
     <Accordion className="my-4 w-full max-w-lg">
       {items.map(({ value, title, content }) => (
         <AccordionItem disabled={value === "returns"} key={value} value={value}>
-          <AccordionTrigger>{title}</AccordionTrigger>
+          <AccordionTrigger className="data-disabled:pointer-events-none data-disabled:opacity-50">
+            {title}
+          </AccordionTrigger>
           <AccordionContent>{content}</AccordionContent>
         </AccordionItem>
       ))}
