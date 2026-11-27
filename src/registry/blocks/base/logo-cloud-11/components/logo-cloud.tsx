@@ -9,7 +9,7 @@ import {
   Logo07,
   Logo08,
 } from "@/components/logos";
-import { Button } from "@/registry/ui/button";
+import { Button } from "@/registry/bases/base/ui/button";
 
 const logos = [
   Logo01,

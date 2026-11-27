@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Logo01, Logo02, Logo03, Logo04, Logo05 } from "@/components/logos";
-import { Button } from "@/registry/ui/button";
+import { Button } from "@/registry/bases/base/ui/button";
 
 const LogoCloud = () => {
   return (
