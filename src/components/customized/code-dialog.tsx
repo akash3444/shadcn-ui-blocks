@@ -7,11 +7,13 @@ function rewriteImports(code: string): string {
 
 export const CodeDialog = async ({
   code,
+  title,
   registryItem,
   componentName,
   componentType,
 }: {
   code: string;
+  title?: string;
   registryItem?: string;
   componentName?: string;
   componentType?: string;
@@ -25,6 +27,7 @@ export const CodeDialog = async ({
       componentName={componentName}
       componentType={componentType}
       registryItem={registryItem}
+      title={title}
     />
   );
 };

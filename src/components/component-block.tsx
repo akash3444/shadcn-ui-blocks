@@ -91,6 +91,7 @@ const ComponentBlock: FC<BlockProps> = async ({
             componentName={name}
             componentType={type}
             registryItem={registryItem}
+            title={title}
           />
         </div>
       </div>

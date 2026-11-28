@@ -265,4 +265,14 @@
     font-weight: var(--shiki-dark-font-weight) !important;
     text-decoration: var(--shiki-dark-text-decoration) !important;
   }
+
+  /* Code dialog: let the code sit on the dialog surface in both themes */
+  html .code-dialog-code .shiki,
+  html .code-dialog-code .shiki span {
+    background-color: transparent !important;
+  }
+
+  html .code-dialog-code .shiki.with-line-numbers code .line::before {
+    background-color: var(--background) !important;
+  }
 }

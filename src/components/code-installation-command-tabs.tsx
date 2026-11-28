@@ -42,49 +42,53 @@ export const CodeInstallationCommandTabs = ({
 }) => {
   const { copyToClipboard, isCopied } = useCopyToClipboard();
 
+  const handleCopy = (packageManager: string) => {
+    copyToClipboard(getInstallationCommand(packageManager, registryItem));
+    if (componentName && componentType) {
+      capture("component:install_command_copied", {
+        component_name: componentName,
+        component_type: componentType,
+        package_manager: packageManager,
+      });
+    }
+  };
+
   return (
-    <Tabs defaultValue={tabs[0].value}>
-      <TabsList>
-        {tabs.map((tab) => (
-          <TabsTrigger key={tab.value} value={tab.value}>
-            <code className="flex items-center gap-2 text-[13px]">
-              <tab.icon className="h-4 w-4" /> {tab.name}
-            </code>
-          </TabsTrigger>
-        ))}
-      </TabsList>
+    <Tabs className="gap-2" defaultValue={tabs[0].value}>
+      <div className="flex items-center justify-between gap-4">
+        <span className="font-medium text-sm">Install</span>
+        <TabsList className="h-7! p-0.5">
+          {tabs.map((tab) => (
+            <TabsTrigger
+              className="gap-1.5 px-2 font-mono font-normal text-xs"
+              key={tab.value}
+              value={tab.value}
+            >
+              <tab.icon className="size-3.5" />
+              {tab.name}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+      </div>
 
       {tabs.map((tab) => (
-        <TabsContent
-          className="mt-0! rounded-lg border"
-          key={tab.value}
-          value={tab.value}
-        >
-          <div className="flex h-10 items-center justify-between gap-2 rounded-md pr-1 pl-3">
-            <code className="line-clamp-1 grow text-[13px]">
+        <TabsContent key={tab.value} value={tab.value}>
+          <div className="flex h-10 items-center gap-2 rounded-lg border pr-1 pl-3">
+            <code className="min-w-0 grow truncate font-mono text-[13px]">
+              <span className="select-none text-muted-foreground">$ </span>
               {getInstallationCommand(tab.value, registryItem)}
             </code>
             <Button
-              className="size-8 shrink-0 rounded-md"
-              onClick={() => {
-                copyToClipboard(
-                  getInstallationCommand(tab.value, registryItem)
-                );
-                if (componentName && componentType) {
-                  capture("component:install_command_copied", {
-                    component_name: componentName,
-                    component_type: componentType,
-                    package_manager: tab.value,
-                  });
-                }
-              }}
+              aria-label="Copy install command"
+              className="text-muted-foreground hover:text-foreground"
+              onClick={() => handleCopy(tab.value)}
               size="icon"
-              variant="secondary"
+              variant="ghost"
             >
               {isCopied ? (
-                <Check className="h-3.5! w-3.5! text-green-600" />
+                <Check className="size-3.5 text-green-600" />
               ) : (
-                <Copy className="h-3.5! w-3.5!" />
+                <Copy className="size-3.5" />
               )}
             </Button>
           </div>
