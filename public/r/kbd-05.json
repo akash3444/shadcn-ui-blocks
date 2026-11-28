@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kbd-05",
+  "title": "Keyboard Shortcuts List",
+  "description": "A list of actions with their keyboard shortcuts",
+  "registryDependencies": [
+    "kbd"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/kbd/kbd-05.tsx",
+      "content": "import { Kbd, KbdGroup } from \"@/registry/ui/kbd\";\n\nconst shortcuts = [\n  { action: \"Search\", keys: [\"⌘\", \"K\"] },\n  { action: \"New file\", keys: [\"⌘\", \"N\"] },\n  { action: \"Toggle sidebar\", keys: [\"⌘\", \"B\"] },\n  { action: \"Save\", keys: [\"⌘\", \"S\"] },\n  { action: \"Save as\", keys: [\"⌘\", \"⇧\", \"S\"] },\n  { action: \"Close tab\", keys: [\"⌘\", \"W\"] },\n];\n\nexport default function KbdShortcutsListDemo() {\n  return (\n    <ul className=\"flex w-full max-w-64 flex-col gap-3 text-sm\">\n      {shortcuts.map(({ action, keys }) => (\n        <li className=\"flex items-center justify-between gap-4\" key={action}>\n          <span>{action}</span>\n          <KbdGroup>\n            {keys.map((key) => (\n              <Kbd key={key}>{key}</Kbd>\n            ))}\n          </KbdGroup>\n        </li>\n      ))}\n    </ul>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -405,6 +405,22 @@
       ]
     },
     {
+      "name": "alert-dialog-06",
+      "type": "registry:component",
+      "title": "Unsaved Changes Alert Dialog",
+      "description": "A confirmation for leaving with unsaved changes",
+      "registryDependencies": [
+        "alert-dialog",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/alert-dialog/alert-dialog-06.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "avatar-01",
       "type": "registry:component",
       "title": "Default Avatar",
@@ -1012,6 +1028,42 @@
       ]
     },
     {
+      "name": "card-07",
+      "type": "registry:component",
+      "title": "Pricing Card",
+      "description": "A pricing plan card with features and a call to action",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "card",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/card/card-07.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "card-08",
+      "type": "registry:component",
+      "title": "Notifications Card",
+      "description": "A card listing recent notifications",
+      "registryDependencies": [
+        "card",
+        "button",
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/card/card-08.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "checkbox-01",
       "type": "registry:component",
       "title": "Checkbox with Text",
@@ -1226,6 +1278,142 @@
       ]
     },
     {
+      "name": "dropdown-menu-07",
+      "type": "registry:component",
+      "title": "Row Actions Dropdown Menu",
+      "description": "A more-actions menu for a list or table row",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "dropdown-menu",
+        "button",
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/dropdown-menu/dropdown-menu-07.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "empty-01",
+      "type": "registry:component",
+      "title": "Default Empty",
+      "description": "An empty state with an icon, description and actions",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "empty",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/empty/empty-01.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "empty-02",
+      "type": "registry:component",
+      "title": "Outline Empty",
+      "description": "An empty state with a dashed outline for uploads",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "empty",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/empty/empty-02.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "empty-03",
+      "type": "registry:component",
+      "title": "Empty with Avatar Group",
+      "description": "An empty state inviting people to a team",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "empty",
+        "avatar",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/empty/empty-03.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "empty-04",
+      "type": "registry:component",
+      "title": "Empty with Search",
+      "description": "A not found state with a search input",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "empty",
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/empty/empty-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "empty-05",
+      "type": "registry:component",
+      "title": "Muted Empty",
+      "description": "An empty state on a muted background",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "empty",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/empty/empty-05.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "empty-06",
+      "type": "registry:component",
+      "title": "Empty in Table",
+      "description": "A table showing an empty state when no rows match",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "empty",
+        "table",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/empty/empty-06.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "input-01",
       "type": "registry:component",
       "title": "Default Input",
@@ -1384,6 +1572,66 @@
       "files": [
         {
           "path": "src/components/customized/input/input-10.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-11",
+      "type": "registry:component",
+      "title": "Search Input with Shortcut",
+      "description": "A search input with a keyboard shortcut hint",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "input-group",
+        "kbd"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/input/input-11.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-12",
+      "type": "registry:component",
+      "title": "Number Input with Stepper",
+      "description": "A number input with increment and decrement buttons",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "button-group",
+        "field",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/input/input-12.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-13",
+      "type": "registry:component",
+      "title": "Tag Input",
+      "description": "An input that turns entries into removable tags",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "field",
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/input/input-13.tsx",
           "type": "registry:component"
         }
       ]
@@ -1606,6 +1854,25 @@
       ]
     },
     {
+      "name": "collapsible-04",
+      "type": "registry:component",
+      "title": "Collapsible Navigation Group",
+      "description": "A navigation section that expands to show its links",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "collapsible",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/collapsible/collapsible-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "input-otp-01",
       "type": "registry:component",
       "title": "Default OTP Input",
@@ -1680,6 +1947,222 @@
       "files": [
         {
           "path": "src/components/customized/input-otp/input-otp-05.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "item-01",
+      "type": "registry:component",
+      "title": "Default Item",
+      "description": "An item with a title, description and action",
+      "registryDependencies": [
+        "item",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/item/item-01.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "item-02",
+      "type": "registry:component",
+      "title": "Item Variants",
+      "description": "Default, outline and muted items",
+      "registryDependencies": [
+        "item"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/item/item-02.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "item-03",
+      "type": "registry:component",
+      "title": "Item Sizes",
+      "description": "Default and extra small items",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "item"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/item/item-03.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "item-04",
+      "type": "registry:component",
+      "title": "Item with Icon",
+      "description": "An item with an icon",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "item",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/item/item-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "item-05",
+      "type": "registry:component",
+      "title": "Item with Avatar",
+      "description": "An item with an avatar and actions",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "item",
+        "avatar",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/item/item-05.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "item-06",
+      "type": "registry:component",
+      "title": "Item with Image",
+      "description": "Items with image thumbnails",
+      "registryDependencies": [
+        "item"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/item/item-06.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "item-07",
+      "type": "registry:component",
+      "title": "Item Group",
+      "description": "A group of linked items with separators",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "item"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/item/item-07.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "kbd-01",
+      "type": "registry:component",
+      "title": "Default Kbd",
+      "description": "Keyboard keys",
+      "registryDependencies": [
+        "kbd"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/kbd/kbd-01.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "kbd-02",
+      "type": "registry:component",
+      "title": "Kbd Group",
+      "description": "A keyboard shortcut made of grouped keys",
+      "registryDependencies": [
+        "kbd"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/kbd/kbd-02.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "kbd-03",
+      "type": "registry:component",
+      "title": "Kbd in Button",
+      "description": "A button with a keyboard shortcut",
+      "registryDependencies": [
+        "kbd",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/kbd/kbd-03.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "kbd-04",
+      "type": "registry:component",
+      "title": "Kbd in Text",
+      "description": "Keyboard keys inline in a sentence",
+      "registryDependencies": [
+        "kbd"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/kbd/kbd-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "kbd-05",
+      "type": "registry:component",
+      "title": "Keyboard Shortcuts List",
+      "description": "A list of actions with their keyboard shortcuts",
+      "registryDependencies": [
+        "kbd"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/kbd/kbd-05.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "kbd-06",
+      "type": "registry:component",
+      "title": "Kbd in Input",
+      "description": "A search input with a keyboard shortcut",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "kbd",
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/kbd/kbd-06.tsx",
           "type": "registry:component"
         }
       ]
@@ -1841,6 +2324,22 @@
       "files": [
         {
           "path": "src/components/customized/progress/progress-04.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "progress-05",
+      "type": "registry:component",
+      "title": "Storage Usage Progress",
+      "description": "A storage usage meter with an upgrade action",
+      "registryDependencies": [
+        "progress",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/progress/progress-05.tsx",
           "type": "registry:component"
         }
       ]
@@ -2051,6 +2550,23 @@
       ]
     },
     {
+      "name": "select-09",
+      "type": "registry:component",
+      "title": "Select with Avatars",
+      "description": "A select for picking a person, with avatars",
+      "registryDependencies": [
+        "select",
+        "avatar",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/select/select-09.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "separator-01",
       "type": "registry:component",
       "title": "Default Separator",
@@ -2217,6 +2733,23 @@
       "files": [
         {
           "path": "src/components/customized/slider/slider-08.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "slider-09",
+      "type": "registry:component",
+      "title": "Price Range Slider",
+      "description": "A range slider synced with min and max inputs",
+      "registryDependencies": [
+        "slider",
+        "input-group",
+        "field"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/slider/slider-09.tsx",
           "type": "registry:component"
         }
       ]
@@ -2475,6 +3008,79 @@
       ]
     },
     {
+      "name": "table-06",
+      "type": "registry:component",
+      "title": "Sortable Table",
+      "description": "A table with sortable column headers",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "table",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/table/table-06.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "table-07",
+      "type": "registry:component",
+      "title": "Table with Sticky Header",
+      "description": "A scrollable table whose header row stays pinned",
+      "registryDependencies": [
+        "table"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/table/table-07.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "table-08",
+      "type": "registry:component",
+      "title": "Table with Expandable Rows",
+      "description": "A table with rows that expand to reveal details",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "table",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/table/table-08.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "table-09",
+      "type": "registry:component",
+      "title": "Table Empty State",
+      "description": "A table showing an empty state when no rows match",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "table",
+        "button",
+        "empty"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/table/table-09.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "tabs-01",
       "type": "registry:component",
       "title": "Default Tabs",
@@ -2573,6 +3179,22 @@
       ]
     },
     {
+      "name": "tabs-07",
+      "type": "registry:component",
+      "title": "Tabs in Card",
+      "description": "Tabs in a card header that switch the card content",
+      "registryDependencies": [
+        "tabs",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/tabs/tabs-07.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "textarea-01",
       "type": "registry:component",
       "title": "Default Textarea",
@@ -2665,6 +3287,40 @@
       "files": [
         {
           "path": "src/components/customized/textarea/textarea-06.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "textarea-07",
+      "type": "registry:component",
+      "title": "Auto-Growing Textarea",
+      "description": "A textarea that grows with its content",
+      "registryDependencies": [
+        "field",
+        "textarea"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/textarea/textarea-07.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "textarea-08",
+      "type": "registry:component",
+      "title": "Chat Composer Textarea",
+      "description": "A message composer with attach and send actions",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "input-group"
+      ],
+      "files": [
+        {
+          "path": "src/components/customized/textarea/textarea-08.tsx",
           "type": "registry:component"
         }
       ]

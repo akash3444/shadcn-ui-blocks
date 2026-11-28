@@ -6,7 +6,10 @@ import {
   CreditCardIcon,
   Ellipsis,
   GalleryThumbnails,
+  InboxIcon,
   InfoIcon,
+  KeyboardIcon,
+  ListIcon,
   LoaderCircleIcon,
   LoaderIcon,
   type LucideIcon,
@@ -140,6 +143,14 @@ export const componentsMap: ComponentsMap = {
     description:
       "Displays a menu to the user — such as a set of actions or functions — triggered by a button.",
   },
+  empty: {
+    title: "Empty",
+    url: "/components/empty",
+    icon: InboxIcon,
+    blockName: "empty",
+    columns: 3,
+    description: "Displays an empty state when there is no content to show.",
+  },
   input: {
     title: "Input",
     url: "/components/input",
@@ -157,6 +168,23 @@ export const componentsMap: ComponentsMap = {
     columns: 3,
     description:
       "Accessible one-time password component with copy paste functionality.",
+  },
+  item: {
+    title: "Item",
+    url: "/components/item",
+    icon: ListIcon,
+    blockName: "item",
+    columns: 3,
+    description:
+      "A versatile row for displaying content with media, a title, a description and actions.",
+  },
+  kbd: {
+    title: "Kbd",
+    url: "/components/kbd",
+    icon: KeyboardIcon,
+    blockName: "kbd",
+    columns: 3,
+    description: "Displays a keyboard key or shortcut.",
   },
   "navigation-menu": {
     title: "Navigation Menu",

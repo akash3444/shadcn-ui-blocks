@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "item-01",
+  "title": "Default Item",
+  "description": "An item with a title, description and action",
+  "registryDependencies": [
+    "item",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/item/item-01.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\";\nimport {\n  Item,\n  ItemActions,\n  ItemContent,\n  ItemDescription,\n  ItemTitle,\n} from \"@/registry/ui/item\";\n\nexport default function ItemDefaultDemo() {\n  return (\n    <div className=\"w-full max-w-md\">\n      <Item variant=\"outline\">\n        <ItemContent>\n          <ItemTitle>Two-factor authentication</ItemTitle>\n          <ItemDescription>\n            Add an extra layer of security by requiring a code when you sign\n            in.\n          </ItemDescription>\n        </ItemContent>\n        <ItemActions>\n          <Button size=\"sm\" variant=\"outline\">\n            Enable\n          </Button>\n        </ItemActions>\n      </Item>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

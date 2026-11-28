@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "item-02",
+  "title": "Item Variants",
+  "description": "Default, outline and muted items",
+  "registryDependencies": [
+    "item"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/item/item-02.tsx",
+      "content": "import {\n  Item,\n  ItemContent,\n  ItemDescription,\n  ItemTitle,\n} from \"@/registry/ui/item\";\n\nexport default function ItemVariantsDemo() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-4\">\n      <Item>\n        <ItemContent>\n          <ItemTitle>Weekly digest</ItemTitle>\n          <ItemDescription>\n            A summary of activity across your projects every Monday.\n          </ItemDescription>\n        </ItemContent>\n      </Item>\n      <Item variant=\"outline\">\n        <ItemContent>\n          <ItemTitle>Product updates</ItemTitle>\n          <ItemDescription>\n            New features and improvements, sent once a month.\n          </ItemDescription>\n        </ItemContent>\n      </Item>\n      <Item variant=\"muted\">\n        <ItemContent>\n          <ItemTitle>Security alerts</ItemTitle>\n          <ItemDescription>\n            Sign-ins from new devices and changes to your password.\n          </ItemDescription>\n        </ItemContent>\n      </Item>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

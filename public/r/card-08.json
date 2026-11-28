@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-08",
+  "title": "Notifications Card",
+  "description": "A card listing recent notifications",
+  "registryDependencies": [
+    "card",
+    "button",
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/card/card-08.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/registry/ui/avatar\";\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/ui/card\";\n\nconst initialNotifications = [\n  {\n    id: \"comment\",\n    name: \"Olivia Martin\",\n    initials: \"OM\",\n    image: \"https://randomuser.me/api/portraits/women/44.jpg\",\n    action: \"commented on\",\n    target: \"Onboarding checklist\",\n    time: \"2 min ago\",\n    unread: true,\n  },\n  {\n    id: \"invite\",\n    name: \"Ethan Brooks\",\n    initials: \"EB\",\n    image: \"https://randomuser.me/api/portraits/men/32.jpg\",\n    action: \"invited you to\",\n    target: \"Design team\",\n    time: \"1 hour ago\",\n    unread: true,\n  },\n  {\n    id: \"mention\",\n    name: \"Sofia Reyes\",\n    initials: \"SR\",\n    image: \"https://randomuser.me/api/portraits/women/68.jpg\",\n    action: \"mentioned you in\",\n    target: \"Q3 roadmap\",\n    time: \"Yesterday\",\n    unread: false,\n  },\n];\n\nexport default function CardNotificationsDemo() {\n  const [notifications, setNotifications] = useState(initialNotifications);\n  const unreadCount = notifications.filter(\n    (notification) => notification.unread\n  ).length;\n\n  const markAllAsRead = () => {\n    setNotifications((current) =>\n      current.map((notification) => ({ ...notification, unread: false }))\n    );\n  };\n\n  return (\n    <Card className=\"w-full max-w-sm gap-0\">\n      <CardHeader className=\"border-b\">\n        <CardTitle className=\"row-span-2 self-center\">\n          Notifications{\" \"}\n          {unreadCount > 0 ? (\n            <span className=\"text-muted-foreground\">({unreadCount})</span>\n          ) : null}\n        </CardTitle>\n        <CardAction className=\"self-center\">\n          <Button\n            disabled={unreadCount === 0}\n            onClick={markAllAsRead}\n            size=\"sm\"\n            variant=\"ghost\"\n          >\n            Mark all as read\n          </Button>\n        </CardAction>\n      </CardHeader>\n      <CardContent className=\"px-0\">\n        <ul className=\"divide-y\">\n          {notifications.map((notification) => (\n            <li className=\"flex gap-3 px-4 py-3\" key={notification.id}>\n              <Avatar>\n                <AvatarImage alt={notification.name} src={notification.image} />\n                <AvatarFallback>{notification.initials}</AvatarFallback>\n              </Avatar>\n              <div className=\"flex min-w-0 flex-1 flex-col gap-0.5\">\n                <p className=\"text-muted-foreground\">\n                  <span className=\"font-medium text-foreground\">\n                    {notification.name}\n                  </span>{\" \"}\n                  {notification.action}{\" \"}\n                  <span className=\"font-medium text-foreground\">\n                    {notification.target}\n                  </span>\n                </p>\n                <span className=\"text-muted-foreground text-xs\">\n                  {notification.time}\n                </span>\n              </div>\n              {notification.unread ? (\n                <span className=\"mt-1.5 size-2 shrink-0 rounded-full bg-primary\">\n                  <span className=\"sr-only\">Unread</span>\n                </span>\n              ) : null}\n            </li>\n          ))}\n        </ul>\n      </CardContent>\n    </Card>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

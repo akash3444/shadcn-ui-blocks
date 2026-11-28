@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty-05",
+  "title": "Muted Empty",
+  "description": "An empty state on a muted background",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "empty",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/empty/empty-05.tsx",
+      "content": "import { BellIcon, RefreshCwIcon } from \"lucide-react\";\n\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@/registry/ui/empty\";\n\nexport default function EmptyMutedDemo() {\n  return (\n    <Empty className=\"max-w-md bg-muted\">\n      <EmptyHeader>\n        <EmptyMedia className=\"bg-background\" variant=\"icon\">\n          <BellIcon />\n        </EmptyMedia>\n        <EmptyTitle>No notifications</EmptyTitle>\n        <EmptyDescription>\n          You're all caught up. New mentions, comments and updates will show\n          up here.\n        </EmptyDescription>\n      </EmptyHeader>\n      <EmptyContent>\n        <Button size=\"sm\" variant=\"outline\">\n          <RefreshCwIcon data-icon=\"inline-start\" />\n          Refresh\n        </Button>\n      </EmptyContent>\n    </Empty>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

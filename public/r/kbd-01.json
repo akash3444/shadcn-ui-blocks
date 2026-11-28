@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kbd-01",
+  "title": "Default Kbd",
+  "description": "Keyboard keys",
+  "registryDependencies": [
+    "kbd"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/kbd/kbd-01.tsx",
+      "content": "import { Kbd } from \"@/registry/ui/kbd\";\n\nconst keys = [\"⌘\", \"⇧\", \"⌥\", \"⌃\", \"⏎\", \"Esc\", \"K\"];\n\nexport default function KbdDefaultDemo() {\n  return (\n    <div className=\"flex flex-wrap items-center gap-2\">\n      {keys.map((key) => (\n        <Kbd key={key}>{key}</Kbd>\n      ))}\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

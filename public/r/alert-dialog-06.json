@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-06",
+  "title": "Unsaved Changes Alert Dialog",
+  "description": "A confirmation for leaving with unsaved changes",
+  "registryDependencies": [
+    "alert-dialog",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/alert-dialog/alert-dialog-06.tsx",
+      "content": "import {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@/registry/ui/alert-dialog\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport default function AlertDialogUnsavedChangesDemo() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger render={<Button variant=\"outline\" />}>\n        Close Editor\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogTitle>Save changes before closing?</AlertDialogTitle>\n          <AlertDialogDescription>\n            Your edits to Quarterly report haven't been saved. If you leave\n            now, they will be lost.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel className=\"sm:mr-auto\" variant=\"destructive\">\n            Discard\n          </AlertDialogCancel>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction>Save changes</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

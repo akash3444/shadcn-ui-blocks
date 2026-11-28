@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-05",
+  "title": "Storage Usage Progress",
+  "description": "A storage usage meter with an upgrade action",
+  "registryDependencies": [
+    "progress",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/progress/progress-05.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\";\nimport { Progress, ProgressLabel, ProgressValue } from \"@/registry/ui/progress\";\n\nconst usedGigabytes = 7.2;\nconst totalGigabytes = 10;\n\nexport default function ProgressStorageUsageDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <Progress max={totalGigabytes} value={usedGigabytes}>\n        <ProgressLabel>Storage</ProgressLabel>\n        <ProgressValue />\n      </Progress>\n      <div className=\"flex items-center justify-between gap-2\">\n        <span className=\"text-muted-foreground text-xs tabular-nums\">\n          {usedGigabytes} GB of {totalGigabytes} GB used\n        </span>\n        <Button size=\"xs\" variant=\"outline\">\n          Upgrade\n        </Button>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty-01",
+  "title": "Default Empty",
+  "description": "An empty state with an icon, description and actions",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "empty",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/empty/empty-01.tsx",
+      "content": "import { ArrowUpRightIcon, FolderKanbanIcon } from \"lucide-react\";\n\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@/registry/ui/empty\";\n\nexport default function EmptyDefaultDemo() {\n  return (\n    <Empty className=\"max-w-md\">\n      <EmptyHeader>\n        <EmptyMedia variant=\"icon\">\n          <FolderKanbanIcon />\n        </EmptyMedia>\n        <EmptyTitle>No projects yet</EmptyTitle>\n        <EmptyDescription>\n          Projects keep your tasks, files and conversations in one place.\n          Create your first one or import an existing board.\n        </EmptyDescription>\n      </EmptyHeader>\n      <EmptyContent>\n        <div className=\"flex gap-2\">\n          <Button>Create project</Button>\n          <Button variant=\"outline\">Import</Button>\n        </div>\n        <Button\n          className=\"text-muted-foreground\"\n          nativeButton={false}\n          render={<a href=\"#learn-more\" />}\n          size=\"sm\"\n          variant=\"link\"\n        >\n          Learn more\n          <ArrowUpRightIcon data-icon=\"inline-end\" />\n        </Button>\n      </EmptyContent>\n    </Empty>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

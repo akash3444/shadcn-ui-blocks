@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "item-07",
+  "title": "Item Group",
+  "description": "A group of linked items with separators",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "item"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/item/item-07.tsx",
+      "content": "import {\n  BellIcon,\n  ChevronRightIcon,\n  CreditCardIcon,\n  UserIcon,\n} from \"lucide-react\";\nimport { Fragment } from \"react\";\n\nimport {\n  Item,\n  ItemActions,\n  ItemContent,\n  ItemDescription,\n  ItemGroup,\n  ItemMedia,\n  ItemSeparator,\n  ItemTitle,\n} from \"@/registry/ui/item\";\n\nconst settings = [\n  {\n    id: \"profile\",\n    title: \"Profile\",\n    description: \"Name, photo and public details\",\n    icon: UserIcon,\n  },\n  {\n    id: \"notifications\",\n    title: \"Notifications\",\n    description: \"Email, push and in-app alerts\",\n    icon: BellIcon,\n  },\n  {\n    id: \"billing\",\n    title: \"Billing\",\n    description: \"Plan, payment method and invoices\",\n    icon: CreditCardIcon,\n  },\n];\n\nexport default function ItemGroupDemo() {\n  return (\n    <ItemGroup className=\"w-full max-w-md gap-0\">\n      {settings.map((setting, index) => (\n        <Fragment key={setting.id}>\n          {index > 0 && <ItemSeparator className=\"my-1\" />}\n          <Item render={<a href={`#${setting.id}`} />}>\n            <ItemMedia variant=\"icon\">\n              <setting.icon />\n            </ItemMedia>\n            <ItemContent>\n              <ItemTitle>{setting.title}</ItemTitle>\n              <ItemDescription>{setting.description}</ItemDescription>\n            </ItemContent>\n            <ItemActions>\n              <ChevronRightIcon className=\"size-4 text-muted-foreground\" />\n            </ItemActions>\n          </Item>\n        </Fragment>\n      ))}\n    </ItemGroup>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-07",
+  "title": "Tabs in Card",
+  "description": "Tabs in a card header that switch the card content",
+  "registryDependencies": [
+    "tabs",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/tabs/tabs-07.tsx",
+      "content": "import {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/ui/card\";\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/registry/ui/tabs\";\n\nconst stats = [\n  { label: \"Open tasks\", value: \"6\" },\n  { label: \"Completed\", value: \"8\" },\n  { label: \"Days left\", value: \"14\" },\n];\n\nconst activity = [\n  { id: \"a1\", text: \"Homepage hero copy approved\", time: \"2h ago\" },\n  { id: \"a2\", text: \"Pricing page moved to review\", time: \"Yesterday\" },\n  { id: \"a3\", text: \"New navigation spec shared\", time: \"Mon\" },\n];\n\nconst files = [\n  { id: \"f1\", name: \"wireframes-v3.fig\", size: \"18.4 MB\" },\n  { id: \"f2\", name: \"content-audit.xlsx\", size: \"640 KB\" },\n  { id: \"f3\", name: \"brand-guidelines.pdf\", size: \"4.1 MB\" },\n];\n\nexport default function TabsInCardDemo() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <Tabs className=\"gap-4\" defaultValue=\"overview\">\n        <CardHeader>\n          <CardTitle>Website redesign</CardTitle>\n          <CardDescription>\n            Marketing site refresh for Q1 launch.\n          </CardDescription>\n          <TabsList className=\"mt-2\">\n            <TabsTrigger value=\"overview\">Overview</TabsTrigger>\n            <TabsTrigger value=\"activity\">Activity</TabsTrigger>\n            <TabsTrigger value=\"files\">Files</TabsTrigger>\n          </TabsList>\n        </CardHeader>\n        <CardContent>\n          <TabsContent value=\"overview\">\n            <dl className=\"grid grid-cols-3 gap-3\">\n              {stats.map((stat) => (\n                <div className=\"flex flex-col gap-1\" key={stat.label}>\n                  <dt className=\"text-muted-foreground text-xs\">\n                    {stat.label}\n                  </dt>\n                  <dd className=\"font-medium text-lg tabular-nums\">\n                    {stat.value}\n                  </dd>\n                </div>\n              ))}\n            </dl>\n          </TabsContent>\n          <TabsContent value=\"activity\">\n            <ul className=\"flex flex-col gap-3\">\n              {activity.map((item) => (\n                <li\n                  className=\"flex items-center justify-between gap-3\"\n                  key={item.id}\n                >\n                  <span className=\"truncate\">{item.text}</span>\n                  <span className=\"shrink-0 text-muted-foreground text-xs\">\n                    {item.time}\n                  </span>\n                </li>\n              ))}\n            </ul>\n          </TabsContent>\n          <TabsContent value=\"files\">\n            <ul className=\"flex flex-col gap-3\">\n              {files.map((file) => (\n                <li\n                  className=\"flex items-center justify-between gap-3\"\n                  key={file.id}\n                >\n                  <span className=\"truncate\">{file.name}</span>\n                  <span className=\"shrink-0 text-muted-foreground text-xs tabular-nums\">\n                    {file.size}\n                  </span>\n                </li>\n              ))}\n            </ul>\n          </TabsContent>\n        </CardContent>\n      </Tabs>\n    </Card>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

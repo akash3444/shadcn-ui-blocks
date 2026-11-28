@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kbd-04",
+  "title": "Kbd in Text",
+  "description": "Keyboard keys inline in a sentence",
+  "registryDependencies": [
+    "kbd"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/kbd/kbd-04.tsx",
+      "content": "import { Kbd, KbdGroup } from \"@/registry/ui/kbd\";\n\nexport default function KbdInTextDemo() {\n  return (\n    <p className=\"max-w-sm text-center text-muted-foreground text-sm leading-relaxed\">\n      Press{\" \"}\n      <KbdGroup>\n        <Kbd>⌘</Kbd>\n        <Kbd>K</Kbd>\n      </KbdGroup>{\" \"}\n      to open the command menu, or <Kbd>/</Kbd> to jump straight to search.\n    </p>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

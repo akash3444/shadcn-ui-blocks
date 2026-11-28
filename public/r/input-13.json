@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-13",
+  "title": "Tag Input",
+  "description": "An input that turns entries into removable tags",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "badge",
+    "field",
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/input/input-13.tsx",
+      "content": "\"use client\";\n\nimport { XIcon } from \"lucide-react\";\nimport { type KeyboardEvent, useState } from \"react\";\nimport { Badge } from \"@/registry/ui/badge\";\nimport { Field, FieldLabel } from \"@/registry/ui/field\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@/registry/ui/input-group\";\n\nconst INITIAL_TAGS = [\"design\", \"research\", \"roadmap\"];\n\nexport default function InputTagDemo() {\n  const [tags, setTags] = useState(INITIAL_TAGS);\n  const [draft, setDraft] = useState(\"\");\n\n  const addTags = (entries: string[]) => {\n    const nextTags = [...tags];\n    for (const entry of entries) {\n      const tag = entry.trim().toLowerCase();\n      if (tag && !nextTags.includes(tag)) {\n        nextTags.push(tag);\n      }\n    }\n    setTags(nextTags);\n  };\n\n  const commitDraft = () => {\n    addTags([draft]);\n    setDraft(\"\");\n  };\n\n  const handleChange = (value: string) => {\n    if (!value.includes(\",\")) {\n      setDraft(value);\n      return;\n    }\n    const entries = value.split(\",\");\n    const remainder = entries.pop() ?? \"\";\n    addTags(entries);\n    setDraft(remainder);\n  };\n\n  const removeTag = (tagToRemove: string) => {\n    setTags(tags.filter((tag) => tag !== tagToRemove));\n  };\n\n  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {\n    if (event.key === \"Enter\") {\n      event.preventDefault();\n      commitDraft();\n      return;\n    }\n    if (event.key === \"Backspace\" && draft === \"\" && tags.length > 0) {\n      setTags(tags.slice(0, -1));\n    }\n  };\n\n  return (\n    <Field className=\"max-w-sm\">\n      <FieldLabel htmlFor=\"input-tags\">Topics</FieldLabel>\n      <InputGroup className=\"h-auto flex-wrap\">\n        {tags.length > 0 && (\n          <InputGroupAddon className=\"flex-wrap justify-start gap-1\">\n            {tags.map((tag) => (\n              <Badge key={tag} variant=\"secondary\">\n                {tag}\n                <button\n                  aria-label={`Remove ${tag}`}\n                  className=\"-mr-1 rounded-full text-muted-foreground hover:text-foreground\"\n                  onClick={() => removeTag(tag)}\n                  type=\"button\"\n                >\n                  <XIcon className=\"size-3\" />\n                </button>\n              </Badge>\n            ))}\n          </InputGroupAddon>\n        )}\n        <InputGroupInput\n          className=\"min-w-24\"\n          id=\"input-tags\"\n          onBlur={commitDraft}\n          onChange={(event) => handleChange(event.target.value)}\n          onKeyDown={handleKeyDown}\n          placeholder=\"Add a topic...\"\n          value={draft}\n        />\n      </InputGroup>\n    </Field>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

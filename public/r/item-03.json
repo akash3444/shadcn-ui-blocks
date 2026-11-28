@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "item-03",
+  "title": "Item Sizes",
+  "description": "Default and extra small items",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "item"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/item/item-03.tsx",
+      "content": "import { BadgeCheckIcon, ChevronRightIcon } from \"lucide-react\";\n\nimport {\n  Item,\n  ItemActions,\n  ItemContent,\n  ItemDescription,\n  ItemMedia,\n  ItemTitle,\n} from \"@/registry/ui/item\";\n\nexport default function ItemSizesDemo() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-4\">\n      <Item variant=\"outline\">\n        <ItemContent>\n          <ItemTitle>Storage almost full</ItemTitle>\n          <ItemDescription>\n            You have used 9.2 GB of your 10 GB plan. Free up space or upgrade.\n          </ItemDescription>\n        </ItemContent>\n      </Item>\n      <Item render={<a href=\"#profile\" />} size=\"xs\" variant=\"outline\">\n        <ItemMedia variant=\"icon\">\n          <BadgeCheckIcon />\n        </ItemMedia>\n        <ItemContent>\n          <ItemTitle>Your profile has been verified.</ItemTitle>\n        </ItemContent>\n        <ItemActions>\n          <ChevronRightIcon className=\"size-4 text-muted-foreground\" />\n        </ItemActions>\n      </Item>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

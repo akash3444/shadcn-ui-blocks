@@ -100,6 +100,11 @@ export const customizedComponents = {
       "title": "Confirm with input",
       "type": "alert-dialog",
       "name": "alert-dialog-05"
+    },
+    {
+      "title": "Unsaved changes",
+      "type": "alert-dialog",
+      "name": "alert-dialog-06"
     }
   ],
   "avatar": [
@@ -293,6 +298,16 @@ export const customizedComponents = {
       "title": "Stat card",
       "type": "card",
       "name": "card-06"
+    },
+    {
+      "title": "Pricing",
+      "type": "card",
+      "name": "card-07"
+    },
+    {
+      "title": "Notifications",
+      "type": "card",
+      "name": "card-08"
     }
   ],
   "checkbox": [
@@ -362,6 +377,43 @@ export const customizedComponents = {
       "title": "Account menu",
       "type": "dropdown-menu",
       "name": "dropdown-menu-06"
+    },
+    {
+      "title": "Row actions",
+      "type": "dropdown-menu",
+      "name": "dropdown-menu-07"
+    }
+  ],
+  "empty": [
+    {
+      "title": "Default",
+      "type": "empty",
+      "name": "empty-01"
+    },
+    {
+      "title": "Outline",
+      "type": "empty",
+      "name": "empty-02"
+    },
+    {
+      "title": "Avatar group",
+      "type": "empty",
+      "name": "empty-03"
+    },
+    {
+      "title": "With search",
+      "type": "empty",
+      "name": "empty-04"
+    },
+    {
+      "title": "Muted",
+      "type": "empty",
+      "name": "empty-05"
+    },
+    {
+      "title": "In table",
+      "type": "empty",
+      "name": "empty-06"
     }
   ],
   "input": [
@@ -414,6 +466,21 @@ export const customizedComponents = {
       "title": "Prefix and suffix",
       "type": "input",
       "name": "input-10"
+    },
+    {
+      "title": "Search with shortcut",
+      "type": "input",
+      "name": "input-11"
+    },
+    {
+      "title": "Number stepper",
+      "type": "input",
+      "name": "input-12"
+    },
+    {
+      "title": "Tag input",
+      "type": "input",
+      "name": "input-13"
     }
   ],
   "breadcrumb": [
@@ -485,6 +552,11 @@ export const customizedComponents = {
       "title": "File tree",
       "type": "collapsible",
       "name": "collapsible-03"
+    },
+    {
+      "title": "Navigation group",
+      "type": "collapsible",
+      "name": "collapsible-04"
     }
   ],
   "input-otp": [
@@ -512,6 +584,75 @@ export const customizedComponents = {
       "title": "Invalid",
       "type": "input-otp",
       "name": "input-otp-05"
+    }
+  ],
+  "item": [
+    {
+      "title": "Default",
+      "type": "item",
+      "name": "item-01"
+    },
+    {
+      "title": "Variants",
+      "type": "item",
+      "name": "item-02"
+    },
+    {
+      "title": "Sizes",
+      "type": "item",
+      "name": "item-03"
+    },
+    {
+      "title": "With icon",
+      "type": "item",
+      "name": "item-04"
+    },
+    {
+      "title": "With avatar",
+      "type": "item",
+      "name": "item-05"
+    },
+    {
+      "title": "With image",
+      "type": "item",
+      "name": "item-06"
+    },
+    {
+      "title": "Group",
+      "type": "item",
+      "name": "item-07"
+    }
+  ],
+  "kbd": [
+    {
+      "title": "Default",
+      "type": "kbd",
+      "name": "kbd-01"
+    },
+    {
+      "title": "Group",
+      "type": "kbd",
+      "name": "kbd-02"
+    },
+    {
+      "title": "In button",
+      "type": "kbd",
+      "name": "kbd-03"
+    },
+    {
+      "title": "In text",
+      "type": "kbd",
+      "name": "kbd-04"
+    },
+    {
+      "title": "Shortcuts list",
+      "type": "kbd",
+      "name": "kbd-05"
+    },
+    {
+      "title": "In input",
+      "type": "kbd",
+      "name": "kbd-06"
     }
   ],
   "navigation-menu": [
@@ -568,6 +709,11 @@ export const customizedComponents = {
       "title": "Steps",
       "type": "progress",
       "name": "progress-04"
+    },
+    {
+      "title": "Storage usage",
+      "type": "progress",
+      "name": "progress-05"
     }
   ],
   "radio-group": [
@@ -637,6 +783,11 @@ export const customizedComponents = {
       "title": "With label and description",
       "type": "select",
       "name": "select-08"
+    },
+    {
+      "title": "With avatars",
+      "type": "select",
+      "name": "select-09"
     }
   ],
   "separator": [
@@ -696,6 +847,11 @@ export const customizedComponents = {
       "title": "Audio player",
       "type": "slider",
       "name": "slider-08"
+    },
+    {
+      "title": "Price range",
+      "type": "slider",
+      "name": "slider-09"
     }
   ],
   "spinner": [
@@ -782,6 +938,26 @@ export const customizedComponents = {
       "title": "With status badges",
       "type": "table",
       "name": "table-05"
+    },
+    {
+      "title": "Sortable columns",
+      "type": "table",
+      "name": "table-06"
+    },
+    {
+      "title": "Sticky header",
+      "type": "table",
+      "name": "table-07"
+    },
+    {
+      "title": "Expandable rows",
+      "type": "table",
+      "name": "table-08"
+    },
+    {
+      "title": "Empty state",
+      "type": "table",
+      "name": "table-09"
     }
   ],
   "tabs": [
@@ -814,6 +990,11 @@ export const customizedComponents = {
       "title": "With badges",
       "type": "tabs",
       "name": "tabs-06"
+    },
+    {
+      "title": "In card",
+      "type": "tabs",
+      "name": "tabs-07"
     }
   ],
   "textarea": [
@@ -846,6 +1027,16 @@ export const customizedComponents = {
       "title": "With button",
       "type": "textarea",
       "name": "textarea-06"
+    },
+    {
+      "title": "Auto-grow",
+      "type": "textarea",
+      "name": "textarea-07"
+    },
+    {
+      "title": "Chat composer",
+      "type": "textarea",
+      "name": "textarea-08"
     }
   ],
   "tooltip": [

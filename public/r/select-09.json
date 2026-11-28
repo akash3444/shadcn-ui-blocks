@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select-09",
+  "title": "Select with Avatars",
+  "description": "A select for picking a person, with avatars",
+  "registryDependencies": [
+    "select",
+    "avatar",
+    "field"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/select/select-09.tsx",
+      "content": "\"use client\";\n\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/registry/ui/avatar\";\nimport { Field, FieldLabel } from \"@/registry/ui/field\";\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/registry/ui/select\";\n\nconst people = [\n  {\n    label: \"Olivia Martin\",\n    value: \"olivia\",\n    initials: \"OM\",\n    image: \"https://randomuser.me/api/portraits/women/44.jpg\",\n  },\n  {\n    label: \"Ethan Brooks\",\n    value: \"ethan\",\n    initials: \"EB\",\n    image: \"https://randomuser.me/api/portraits/men/32.jpg\",\n  },\n  {\n    label: \"Sofia Reyes\",\n    value: \"sofia\",\n    initials: \"SR\",\n    image: \"https://randomuser.me/api/portraits/women/68.jpg\",\n  },\n  {\n    label: \"Daniel Kim\",\n    value: \"daniel\",\n    initials: \"DK\",\n    image: \"https://randomuser.me/api/portraits/men/75.jpg\",\n  },\n];\n\ntype Person = (typeof people)[number];\n\nfunction PersonAvatar({ person }: { person: Person }) {\n  return (\n    <Avatar size=\"sm\">\n      <AvatarImage alt={person.label} src={person.image} />\n      <AvatarFallback>{person.initials}</AvatarFallback>\n    </Avatar>\n  );\n}\n\nexport default function SelectWithAvatarsDemo() {\n  return (\n    <Field className=\"max-w-xs\">\n      <FieldLabel htmlFor=\"select-assignee\">Assignee</FieldLabel>\n      <Select defaultValue=\"olivia\" items={people}>\n        <SelectTrigger className=\"w-full\" id=\"select-assignee\">\n          <SelectValue>\n            {(value: string) => {\n              const person = people.find((item) => item.value === value);\n              if (!person) {\n                return \"Select an assignee\";\n              }\n              return (\n                <span className=\"flex items-center gap-2\">\n                  <PersonAvatar person={person} />\n                  {person.label}\n                </span>\n              );\n            }}\n          </SelectValue>\n        </SelectTrigger>\n        <SelectContent>\n          <SelectGroup>\n            {people.map((person) => (\n              <SelectItem key={person.value} value={person.value}>\n                <PersonAvatar person={person} />\n                {person.label}\n              </SelectItem>\n            ))}\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n    </Field>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

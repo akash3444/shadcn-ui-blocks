@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "item-06",
+  "title": "Item with Image",
+  "description": "Items with image thumbnails",
+  "registryDependencies": [
+    "item"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/item/item-06.tsx",
+      "content": "import {\n  Item,\n  ItemContent,\n  ItemDescription,\n  ItemGroup,\n  ItemMedia,\n  ItemTitle,\n} from \"@/registry/ui/item\";\n\nconst tracks = [\n  {\n    id: \"midnight-drive\",\n    title: \"Midnight Drive\",\n    artist: \"Neon Harbor\",\n    duration: \"3:42\",\n    cover: \"https://www.fffuel.co/images/dddepth-preview/dddepth-248.jpg\",\n  },\n  {\n    id: \"paper-skies\",\n    title: \"Paper Skies\",\n    artist: \"Lumen & Vale\",\n    duration: \"4:05\",\n    cover: \"https://www.fffuel.co/images/dddepth-preview/dddepth-029.jpg\",\n  },\n  {\n    id: \"slow-tide\",\n    title: \"Slow Tide\",\n    artist: \"Marlow Coast\",\n    duration: \"2:58\",\n    cover: \"https://www.fffuel.co/images/dddepth-preview/dddepth-051.jpg\",\n  },\n];\n\nexport default function ItemWithImageDemo() {\n  return (\n    <ItemGroup className=\"w-full max-w-md gap-0\">\n      {tracks.map((track) => (\n        <Item key={track.id} render={<a href={`#${track.id}`} />}>\n          <ItemMedia variant=\"image\">\n            <img alt={`${track.title} cover`} src={track.cover} />\n          </ItemMedia>\n          <ItemContent>\n            <ItemTitle>{track.title}</ItemTitle>\n            <ItemDescription>{track.artist}</ItemDescription>\n          </ItemContent>\n          <ItemContent className=\"text-muted-foreground tabular-nums\">\n            {track.duration}\n          </ItemContent>\n        </Item>\n      ))}\n    </ItemGroup>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

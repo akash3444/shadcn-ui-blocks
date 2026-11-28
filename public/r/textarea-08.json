@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-08",
+  "title": "Chat Composer Textarea",
+  "description": "A message composer with attach and send actions",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/textarea/textarea-08.tsx",
+      "content": "\"use client\";\n\nimport { ArrowUpIcon, PaperclipIcon } from \"lucide-react\";\nimport { type FormEvent, type KeyboardEvent, useState } from \"react\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupTextarea,\n} from \"@/registry/ui/input-group\";\n\nexport default function TextareaChatComposerDemo() {\n  const [message, setMessage] = useState(\n    \"Hey team, the release notes are ready for review. Could you take a look before Friday?\"\n  );\n  const isEmpty = message.trim() === \"\";\n\n  const sendMessage = () => {\n    if (isEmpty) {\n      return;\n    }\n    setMessage(\"\");\n  };\n\n  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {\n    event.preventDefault();\n    sendMessage();\n  };\n\n  const handleKeyDown = (event: KeyboardEvent<HTMLTextAreaElement>) => {\n    if (event.key === \"Enter\" && !event.shiftKey) {\n      event.preventDefault();\n      sendMessage();\n    }\n  };\n\n  return (\n    <form className=\"w-full max-w-sm\" onSubmit={handleSubmit}>\n      <InputGroup>\n        <InputGroupTextarea\n          aria-label=\"Message\"\n          className=\"max-h-40\"\n          onChange={(event) => setMessage(event.target.value)}\n          onKeyDown={handleKeyDown}\n          placeholder=\"Write a message...\"\n          value={message}\n        />\n        <InputGroupAddon align=\"block-end\">\n          <InputGroupButton aria-label=\"Attach file\" size=\"icon-xs\">\n            <PaperclipIcon />\n          </InputGroupButton>\n          <InputGroupButton\n            aria-label=\"Send message\"\n            className=\"ml-auto\"\n            disabled={isEmpty}\n            size=\"icon-xs\"\n            type=\"submit\"\n            variant=\"default\"\n          >\n            <ArrowUpIcon />\n          </InputGroupButton>\n        </InputGroupAddon>\n      </InputGroup>\n    </form>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-04",
+  "title": "Collapsible Navigation Group",
+  "description": "A navigation section that expands to show its links",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "collapsible",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/collapsible/collapsible-04.tsx",
+      "content": "import { ChevronRightIcon, FolderKanbanIcon, SettingsIcon } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\nimport { Button, buttonVariants } from \"@/registry/ui/button\";\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@/registry/ui/collapsible\";\n\nconst navGroups = [\n  {\n    label: \"Projects\",\n    icon: FolderKanbanIcon,\n    defaultOpen: true,\n    links: [\n      { label: \"Overview\", href: \"#overview\" },\n      { label: \"Roadmap\", href: \"#roadmap\", active: true },\n      { label: \"Milestones\", href: \"#milestones\" },\n      { label: \"Archived\", href: \"#archived\" },\n    ],\n  },\n  {\n    label: \"Settings\",\n    icon: SettingsIcon,\n    defaultOpen: false,\n    links: [\n      { label: \"General\", href: \"#general\" },\n      { label: \"Members\", href: \"#members\" },\n      { label: \"Billing\", href: \"#billing\" },\n      { label: \"Integrations\", href: \"#integrations\" },\n    ],\n  },\n];\n\nexport default function CollapsibleNavigationGroupDemo() {\n  return (\n    <nav aria-label=\"Workspace\" className=\"flex w-60 flex-col gap-1\">\n      {navGroups.map((group) => (\n        <Collapsible defaultOpen={group.defaultOpen} key={group.label}>\n          <CollapsibleTrigger\n            render={<Button className=\"w-full justify-start\" variant=\"ghost\" />}\n          >\n            <group.icon className=\"text-muted-foreground\" />\n            {group.label}\n            <ChevronRightIcon className=\"ml-auto text-muted-foreground transition-transform group-data-panel-open/button:rotate-90\" />\n          </CollapsibleTrigger>\n          <CollapsibleContent>\n            <ul className=\"mt-1 ml-4 flex flex-col gap-0.5 border-l pl-2\">\n              {group.links.map((link) => (\n                <li key={link.label}>\n                  <a\n                    aria-current={link.active ? \"page\" : undefined}\n                    className={cn(\n                      buttonVariants({\n                        size: \"sm\",\n                        variant: link.active ? \"secondary\" : \"ghost\",\n                      }),\n                      \"w-full justify-start font-normal\"\n                    )}\n                    href={link.href}\n                  >\n                    {link.label}\n                  </a>\n                </li>\n              ))}\n            </ul>\n          </CollapsibleContent>\n        </Collapsible>\n      ))}\n    </nav>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

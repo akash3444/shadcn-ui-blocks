@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-11",
+  "title": "Search Input with Shortcut",
+  "description": "A search input with a keyboard shortcut hint",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "input-group",
+    "kbd"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/input/input-11.tsx",
+      "content": "\"use client\";\n\nimport { SearchIcon } from \"lucide-react\";\nimport { useEffect, useRef } from \"react\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@/registry/ui/input-group\";\nimport { Kbd } from \"@/registry/ui/kbd\";\n\nexport default function InputSearchShortcutDemo() {\n  const inputRef = useRef<HTMLInputElement>(null);\n\n  useEffect(() => {\n    const handleKeyDown = (event: KeyboardEvent) => {\n      const isShortcut =\n        (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === \"k\";\n      if (!isShortcut) {\n        return;\n      }\n      event.preventDefault();\n      inputRef.current?.focus();\n    };\n\n    document.addEventListener(\"keydown\", handleKeyDown);\n    return () => document.removeEventListener(\"keydown\", handleKeyDown);\n  }, []);\n\n  return (\n    <InputGroup className=\"max-w-xs\">\n      <InputGroupInput\n        aria-label=\"Search documentation\"\n        placeholder=\"Search documentation...\"\n        ref={inputRef}\n        type=\"search\"\n      />\n      <InputGroupAddon>\n        <SearchIcon />\n      </InputGroupAddon>\n      <InputGroupAddon align=\"inline-end\">\n        <Kbd>⌘K</Kbd>\n      </InputGroupAddon>\n    </InputGroup>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

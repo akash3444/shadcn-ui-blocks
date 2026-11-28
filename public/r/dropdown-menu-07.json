@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu-07",
+  "title": "Row Actions Dropdown Menu",
+  "description": "A more-actions menu for a list or table row",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "dropdown-menu",
+    "button",
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/dropdown-menu/dropdown-menu-07.tsx",
+      "content": "import {\n  EllipsisIcon,\n  MailIcon,\n  ShieldIcon,\n  Trash2Icon,\n  UserIcon,\n} from \"lucide-react\";\n\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/registry/ui/avatar\";\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/registry/ui/dropdown-menu\";\n\nconst members = [\n  {\n    id: \"olivia\",\n    name: \"Olivia Martin\",\n    email: \"olivia@acme.com\",\n    initials: \"OM\",\n    image: \"https://randomuser.me/api/portraits/women/44.jpg\",\n  },\n  {\n    id: \"ethan\",\n    name: \"Ethan Brooks\",\n    email: \"ethan@acme.com\",\n    initials: \"EB\",\n    image: \"https://randomuser.me/api/portraits/men/32.jpg\",\n  },\n];\n\nexport default function DropdownMenuRowActionsDemo() {\n  return (\n    <ul className=\"flex w-full max-w-sm flex-col divide-y rounded-lg border\">\n      {members.map((member) => (\n        <li className=\"flex items-center gap-3 px-3 py-2.5\" key={member.id}>\n          <Avatar>\n            <AvatarImage alt={member.name} src={member.image} />\n            <AvatarFallback>{member.initials}</AvatarFallback>\n          </Avatar>\n          <div className=\"flex min-w-0 flex-1 flex-col\">\n            <span className=\"truncate font-medium text-sm\">{member.name}</span>\n            <span className=\"truncate text-muted-foreground text-xs\">\n              {member.email}\n            </span>\n          </div>\n          <DropdownMenu>\n            <DropdownMenuTrigger\n              render={\n                <Button\n                  aria-label={`Actions for ${member.name}`}\n                  size=\"icon-sm\"\n                  variant=\"ghost\"\n                />\n              }\n            >\n              <EllipsisIcon />\n            </DropdownMenuTrigger>\n            <DropdownMenuContent align=\"end\" className=\"w-40\">\n              <DropdownMenuGroup>\n                <DropdownMenuItem>\n                  <UserIcon /> View profile\n                </DropdownMenuItem>\n                <DropdownMenuItem>\n                  <MailIcon /> Send message\n                </DropdownMenuItem>\n                <DropdownMenuItem>\n                  <ShieldIcon /> Change role\n                </DropdownMenuItem>\n              </DropdownMenuGroup>\n              <DropdownMenuSeparator />\n              <DropdownMenuItem variant=\"destructive\">\n                <Trash2Icon /> Remove\n              </DropdownMenuItem>\n            </DropdownMenuContent>\n          </DropdownMenu>\n        </li>\n      ))}\n    </ul>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

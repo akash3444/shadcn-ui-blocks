@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea-07",
+  "title": "Auto-Growing Textarea",
+  "description": "A textarea that grows with its content",
+  "registryDependencies": [
+    "field",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/textarea/textarea-07.tsx",
+      "content": "import { Field, FieldDescription, FieldLabel } from \"@/registry/ui/field\";\nimport { Textarea } from \"@/registry/ui/textarea\";\n\nexport default function TextareaAutoGrowDemo() {\n  return (\n    <Field className=\"max-w-sm\">\n      <FieldLabel htmlFor=\"textarea-auto-grow\">Release notes</FieldLabel>\n      <Textarea\n        className=\"max-h-40\"\n        id=\"textarea-auto-grow\"\n        placeholder=\"Summarize what changed in this release\"\n      />\n      <FieldDescription>\n        The field grows as you type, then scrolls.\n      </FieldDescription>\n    </Field>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

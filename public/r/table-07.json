@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-07",
+  "title": "Table with Sticky Header",
+  "description": "A scrollable table whose header row stays pinned",
+  "registryDependencies": [
+    "table"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/table/table-07.tsx",
+      "content": "import {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@/registry/ui/table\";\n\nconst events = [\n  { id: \"evt_01\", time: \"09:02\", actor: \"Maya Patel\", action: \"Signed in\" },\n  {\n    id: \"evt_02\",\n    time: \"09:05\",\n    actor: \"Maya Patel\",\n    action: \"Created project Atlas\",\n  },\n  {\n    id: \"evt_03\",\n    time: \"09:14\",\n    actor: \"Leo Fischer\",\n    action: \"Joined workspace\",\n  },\n  {\n    id: \"evt_04\",\n    time: \"09:21\",\n    actor: \"Leo Fischer\",\n    action: \"Uploaded brand-guide.pdf\",\n  },\n  {\n    id: \"evt_05\",\n    time: \"09:38\",\n    actor: \"Maya Patel\",\n    action: \"Invited Ana Souza\",\n  },\n  {\n    id: \"evt_06\",\n    time: \"09:47\",\n    actor: \"Ana Souza\",\n    action: \"Accepted invitation\",\n  },\n  {\n    id: \"evt_07\",\n    time: \"10:03\",\n    actor: \"Ana Souza\",\n    action: \"Commented on Homepage\",\n  },\n  {\n    id: \"evt_08\",\n    time: \"10:16\",\n    actor: \"Leo Fischer\",\n    action: \"Renamed board to Q3 Launch\",\n  },\n  {\n    id: \"evt_09\",\n    time: \"10:29\",\n    actor: \"Maya Patel\",\n    action: \"Changed plan to Team\",\n  },\n  {\n    id: \"evt_10\",\n    time: \"10:42\",\n    actor: \"Ana Souza\",\n    action: \"Exported report\",\n  },\n  {\n    id: \"evt_11\",\n    time: \"11:05\",\n    actor: \"Leo Fischer\",\n    action: \"Archived Old Assets\",\n  },\n  {\n    id: \"evt_12\",\n    time: \"11:18\",\n    actor: \"Maya Patel\",\n    action: \"Enabled two-factor auth\",\n  },\n  {\n    id: \"evt_13\",\n    time: \"11:34\",\n    actor: \"Ana Souza\",\n    action: \"Created API key\",\n  },\n  {\n    id: \"evt_14\",\n    time: \"11:52\",\n    actor: \"Leo Fischer\",\n    action: \"Updated billing email\",\n  },\n  { id: \"evt_15\", time: \"12:07\", actor: \"Maya Patel\", action: \"Signed out\" },\n];\n\nexport default function TableStickyHeaderDemo() {\n  return (\n    <div className=\"w-full overflow-hidden rounded-lg border *:data-[slot=table-container]:h-72\">\n      <Table>\n        <TableHeader className=\"sticky top-0 z-10 bg-background shadow-[inset_0_-1px_0_var(--border)] [&_tr]:border-b-0\">\n          <TableRow>\n            <TableHead className=\"w-20\">Time</TableHead>\n            <TableHead>User</TableHead>\n            <TableHead>Action</TableHead>\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {events.map((event) => (\n            <TableRow key={event.id}>\n              <TableCell className=\"text-muted-foreground tabular-nums\">\n                {event.time}\n              </TableCell>\n              <TableCell className=\"font-medium\">{event.actor}</TableCell>\n              <TableCell>{event.action}</TableCell>\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

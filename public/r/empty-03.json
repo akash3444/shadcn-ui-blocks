@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty-03",
+  "title": "Empty with Avatar Group",
+  "description": "An empty state inviting people to a team",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "empty",
+    "avatar",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/empty/empty-03.tsx",
+      "content": "import { UserPlusIcon } from \"lucide-react\";\n\nimport {\n  Avatar,\n  AvatarFallback,\n  AvatarGroup,\n  AvatarImage,\n} from \"@/registry/ui/avatar\";\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@/registry/ui/empty\";\n\nconst teammates = [\n  {\n    name: \"Maya Chen\",\n    initials: \"MC\",\n    image: \"https://randomuser.me/api/portraits/women/65.jpg\",\n  },\n  {\n    name: \"Daniel Okafor\",\n    initials: \"DO\",\n    image: \"https://randomuser.me/api/portraits/men/46.jpg\",\n  },\n  {\n    name: \"Sofia Alvarez\",\n    initials: \"SA\",\n    image: \"https://randomuser.me/api/portraits/women/22.jpg\",\n  },\n];\n\nexport default function EmptyAvatarGroupDemo() {\n  return (\n    <Empty className=\"max-w-md\">\n      <EmptyHeader>\n        <EmptyMedia>\n          <AvatarGroup>\n            {teammates.map((teammate) => (\n              <Avatar key={teammate.name} size=\"lg\">\n                <AvatarImage alt={teammate.name} src={teammate.image} />\n                <AvatarFallback>{teammate.initials}</AvatarFallback>\n              </Avatar>\n            ))}\n          </AvatarGroup>\n        </EmptyMedia>\n        <EmptyTitle>Invite your team</EmptyTitle>\n        <EmptyDescription>\n          This workspace only has you so far. Invite teammates to share\n          projects, assign tasks and review work together.\n        </EmptyDescription>\n      </EmptyHeader>\n      <EmptyContent>\n        <Button size=\"sm\">\n          <UserPlusIcon data-icon=\"inline-start\" />\n          Invite members\n        </Button>\n      </EmptyContent>\n    </Empty>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

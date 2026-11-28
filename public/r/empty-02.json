@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty-02",
+  "title": "Outline Empty",
+  "description": "An empty state with a dashed outline for uploads",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "empty",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/empty/empty-02.tsx",
+      "content": "import { UploadIcon } from \"lucide-react\";\n\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@/registry/ui/empty\";\n\nexport default function EmptyOutlineDemo() {\n  return (\n    <Empty className=\"max-w-md border border-dashed\">\n      <EmptyHeader>\n        <EmptyMedia variant=\"icon\">\n          <UploadIcon />\n        </EmptyMedia>\n        <EmptyTitle>Upload files</EmptyTitle>\n        <EmptyDescription>\n          Drag and drop files here, or browse your device. PDF, PNG, JPG and\n          DOCX up to 25 MB each.\n        </EmptyDescription>\n      </EmptyHeader>\n      <EmptyContent>\n        <Button size=\"sm\" variant=\"outline\">\n          Browse files\n        </Button>\n      </EmptyContent>\n    </Empty>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

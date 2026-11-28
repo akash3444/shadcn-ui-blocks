@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty-04",
+  "title": "Empty with Search",
+  "description": "A not found state with a search input",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "empty",
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/empty/empty-04.tsx",
+      "content": "import { SearchIcon } from \"lucide-react\";\n\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyTitle,\n} from \"@/registry/ui/empty\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@/registry/ui/input-group\";\n\nexport default function EmptyWithSearchDemo() {\n  return (\n    <Empty className=\"max-w-md\">\n      <EmptyHeader>\n        <EmptyTitle>404 - Page not found</EmptyTitle>\n        <EmptyDescription>\n          The page you're looking for doesn't exist or has been moved. Try\n          searching for what you need.\n        </EmptyDescription>\n      </EmptyHeader>\n      <EmptyContent>\n        <InputGroup className=\"sm:w-3/4\">\n          <InputGroupInput\n            aria-label=\"Search pages\"\n            placeholder=\"Search pages...\"\n          />\n          <InputGroupAddon>\n            <SearchIcon />\n          </InputGroupAddon>\n        </InputGroup>\n        <EmptyDescription>\n          Need help? <a href=\"#support\">Contact support</a>\n        </EmptyDescription>\n      </EmptyContent>\n    </Empty>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "table-09",
+  "title": "Table Empty State",
+  "description": "A table showing an empty state when no rows match",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "table",
+    "button",
+    "empty"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/table/table-09.tsx",
+      "content": "import { SearchXIcon } from \"lucide-react\";\n\nimport { Button } from \"@/registry/ui/button\";\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@/registry/ui/empty\";\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@/registry/ui/table\";\n\nexport default function TableEmptyStateDemo() {\n  return (\n    <Table>\n      <TableHeader>\n        <TableRow>\n          <TableHead>Customer</TableHead>\n          <TableHead>Plan</TableHead>\n          <TableHead>Status</TableHead>\n          <TableHead className=\"text-right\">MRR</TableHead>\n        </TableRow>\n      </TableHeader>\n      <TableBody>\n        <TableRow className=\"hover:bg-transparent\">\n          <TableCell className=\"whitespace-normal\" colSpan={4}>\n            <Empty>\n              <EmptyHeader>\n                <EmptyMedia variant=\"icon\">\n                  <SearchXIcon />\n                </EmptyMedia>\n                <EmptyTitle>No customers found</EmptyTitle>\n                <EmptyDescription>\n                  No customers match the current filters. Try a different\n                  plan or status.\n                </EmptyDescription>\n              </EmptyHeader>\n              <EmptyContent>\n                <Button size=\"sm\" variant=\"outline\">\n                  Clear filters\n                </Button>\n              </EmptyContent>\n            </Empty>\n          </TableCell>\n        </TableRow>\n      </TableBody>\n    </Table>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

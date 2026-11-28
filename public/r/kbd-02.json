@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kbd-02",
+  "title": "Kbd Group",
+  "description": "A keyboard shortcut made of grouped keys",
+  "registryDependencies": [
+    "kbd"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/kbd/kbd-02.tsx",
+      "content": "import { Kbd, KbdGroup } from \"@/registry/ui/kbd\";\n\nexport default function KbdGroupDemo() {\n  return (\n    <div className=\"flex flex-col items-center gap-4\">\n      <KbdGroup>\n        <Kbd>⌘</Kbd>\n        <Kbd>K</Kbd>\n      </KbdGroup>\n      <KbdGroup>\n        <Kbd>Ctrl</Kbd>\n        <span>+</span>\n        <Kbd>Shift</Kbd>\n        <span>+</span>\n        <Kbd>P</Kbd>\n      </KbdGroup>\n      <KbdGroup>\n        <Kbd>⌥</Kbd>\n        <Kbd>⇧</Kbd>\n        <Kbd>F</Kbd>\n      </KbdGroup>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

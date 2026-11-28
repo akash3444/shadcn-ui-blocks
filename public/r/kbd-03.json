@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kbd-03",
+  "title": "Kbd in Button",
+  "description": "A button with a keyboard shortcut",
+  "registryDependencies": [
+    "kbd",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/kbd/kbd-03.tsx",
+      "content": "import { Button } from \"@/registry/ui/button\";\nimport { Kbd, KbdGroup } from \"@/registry/ui/kbd\";\n\nexport default function KbdInButtonDemo() {\n  return (\n    <div className=\"flex flex-wrap items-center gap-2\">\n      <Button variant=\"outline\">\n        Search\n        <KbdGroup data-icon=\"inline-end\">\n          <Kbd>⌘</Kbd>\n          <Kbd>K</Kbd>\n        </KbdGroup>\n      </Button>\n      <Button variant=\"outline\">\n        Cancel\n        <Kbd data-icon=\"inline-end\">Esc</Kbd>\n      </Button>\n      <Button variant=\"outline\">\n        Save\n        <KbdGroup data-icon=\"inline-end\">\n          <Kbd>⌘</Kbd>\n          <Kbd>S</Kbd>\n        </KbdGroup>\n      </Button>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

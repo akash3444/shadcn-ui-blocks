@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-12",
+  "title": "Number Input with Stepper",
+  "description": "A number input with increment and decrement buttons",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "button-group",
+    "field",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/input/input-12.tsx",
+      "content": "\"use client\";\n\nimport { MinusIcon, PlusIcon } from \"lucide-react\";\nimport { type KeyboardEvent, useState } from \"react\";\nimport { Field, FieldDescription, FieldLabel } from \"@/registry/ui/field\";\nimport { Button } from \"@/registry/ui/button\";\nimport { ButtonGroup } from \"@/registry/ui/button-group\";\nimport { Input } from \"@/registry/ui/input\";\n\nconst MIN_GUESTS = 1;\nconst MAX_GUESTS = 8;\nconst NON_DIGITS = /\\D/g;\n\nconst clampGuests = (value: number) =>\n  Math.min(MAX_GUESTS, Math.max(MIN_GUESTS, value));\n\nexport default function InputNumberStepperDemo() {\n  const [guests, setGuests] = useState(2);\n  const [draft, setDraft] = useState(\"2\");\n\n  const updateGuests = (value: number) => {\n    const nextGuests = clampGuests(value);\n    setGuests(nextGuests);\n    setDraft(String(nextGuests));\n  };\n\n  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {\n    if (event.key === \"ArrowUp\") {\n      event.preventDefault();\n      updateGuests(guests + 1);\n    }\n    if (event.key === \"ArrowDown\") {\n      event.preventDefault();\n      updateGuests(guests - 1);\n    }\n  };\n\n  return (\n    <Field className=\"max-w-44\">\n      <FieldLabel htmlFor=\"input-guests\">Guests</FieldLabel>\n      <ButtonGroup className=\"w-full\">\n        <Button\n          aria-label=\"Remove a guest\"\n          disabled={guests <= MIN_GUESTS}\n          onClick={() => updateGuests(guests - 1)}\n          size=\"icon\"\n          variant=\"outline\"\n        >\n          <MinusIcon />\n        </Button>\n        <Input\n          aria-valuemax={MAX_GUESTS}\n          aria-valuemin={MIN_GUESTS}\n          aria-valuenow={guests}\n          className=\"text-center tabular-nums\"\n          id=\"input-guests\"\n          inputMode=\"numeric\"\n          onBlur={() => updateGuests(Number(draft) || MIN_GUESTS)}\n          onChange={(event) =>\n            setDraft(event.target.value.replace(NON_DIGITS, \"\"))\n          }\n          onKeyDown={handleKeyDown}\n          role=\"spinbutton\"\n          value={draft}\n        />\n        <Button\n          aria-label=\"Add a guest\"\n          disabled={guests >= MAX_GUESTS}\n          onClick={() => updateGuests(guests + 1)}\n          size=\"icon\"\n          variant=\"outline\"\n        >\n          <PlusIcon />\n        </Button>\n      </ButtonGroup>\n      <FieldDescription>\n        Up to {MAX_GUESTS} guests per table.\n      </FieldDescription>\n    </Field>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

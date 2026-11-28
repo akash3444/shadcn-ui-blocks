@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kbd-06",
+  "title": "Kbd in Input",
+  "description": "A search input with a keyboard shortcut",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "kbd",
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "src/components/customized/kbd/kbd-06.tsx",
+      "content": "import { SearchIcon } from \"lucide-react\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@/registry/ui/input-group\";\nimport { Kbd, KbdGroup } from \"@/registry/ui/kbd\";\n\nexport default function KbdInInputDemo() {\n  return (\n    <InputGroup className=\"max-w-xs\">\n      <InputGroupInput aria-label=\"Search\" placeholder=\"Search...\" />\n      <InputGroupAddon>\n        <SearchIcon />\n      </InputGroupAddon>\n      <InputGroupAddon align=\"inline-end\">\n        <KbdGroup>\n          <Kbd>⌘</Kbd>\n          <Kbd>K</Kbd>\n        </KbdGroup>\n      </InputGroupAddon>\n    </InputGroup>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}
