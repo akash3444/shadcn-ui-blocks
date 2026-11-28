@@ -1,5 +1,6 @@
 "use client";
 
+import { CodeIcon, EyeIcon } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { RegistryBlock } from "@/config/registry";
 import { capture } from "@/lib/analytics";
@@ -27,9 +28,21 @@ export function Block({ block }: { block: RegistryBlock }) {
               <div className="font-medium text-lg">{block.title}</div>
               <div className="flex items-end gap-3">
                 <BlockToolbar />
-                <TabsList className="h-8 bg-input/30 max-md:ms-auto max-md:hidden dark:*:data-[state=active]:border-transparent! dark:*:data-[state=active]:bg-foreground/10!">
-                  <TabsTrigger value="preview">Preview</TabsTrigger>
-                  <TabsTrigger value="code">Code</TabsTrigger>
+                <TabsList className="max-md:ms-auto max-md:hidden">
+                  <TabsTrigger
+                    className="px-2.5 has-data-[icon=inline-start]:pl-2"
+                    value="preview"
+                  >
+                    <EyeIcon data-icon="inline-start" />
+                    Preview
+                  </TabsTrigger>
+                  <TabsTrigger
+                    className="px-2.5 has-data-[icon=inline-start]:pl-2"
+                    value="code"
+                  >
+                    <CodeIcon data-icon="inline-start" />
+                    Code
+                  </TabsTrigger>
                 </TabsList>
               </div>
             </div>

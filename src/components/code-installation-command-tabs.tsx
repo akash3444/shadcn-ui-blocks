@@ -57,7 +57,7 @@ export const CodeInstallationCommandTabs = ({
     <Tabs className="gap-2" defaultValue={tabs[0].value}>
       <div className="flex items-center justify-between gap-4">
         <span className="font-medium text-sm">Install</span>
-        <TabsList className="h-7! p-0.5">
+        <TabsList className="h-7!">
           {tabs.map((tab) => (
             <TabsTrigger
               className="gap-1.5 px-2 font-mono font-normal text-xs"

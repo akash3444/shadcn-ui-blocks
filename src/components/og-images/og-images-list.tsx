@@ -8,7 +8,6 @@ import { ThemeToggleButton } from "@/components/og-images/theme-toggle-button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { RegistryOgImage } from "@/config/registry/og-images";
-import { cn } from "@/lib/utils";
 import { OGImageContextProvider } from "@/providers/og-image-provider";
 
 const INITIAL_BLOCK_COUNT = 5;
@@ -86,12 +85,7 @@ export function OgImagesList({ ogImages }: OgImagesListProps) {
               <div className="flex items-center gap-2">
                 <BlockInstallCommandCopyButton block={ogImage.name} />
                 <ThemeToggleButton />
-                <TabsList
-                  className={cn(
-                    "h-8 bg-foreground/5 dark:bg-background",
-                    "*:data-[state=active]:rounded-[7px] dark:*:data-[state=active]:bg-foreground/20"
-                  )}
-                >
+                <TabsList>
                   <TabsTrigger value="preview">Preview</TabsTrigger>
                   <TabsTrigger value="code">Code</TabsTrigger>
                 </TabsList>
